@@ -1,0 +1,21 @@
+{
+  "model": "qwen3:32b",
+  "created": "2025-08|10-16:15",
+  "temperature": 0.2,
+  "frequency_penalty": "default",
+  "presence_penalty": "default",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an expert in named entity recognition (NER).  \nExtract all named entities from the input text with their **type** and **short surrounding context**.\n\n**Entity labels:**\n- PER - names of people (real or fictional, nicknames, usernames, titles, etc.)\n- LOC - cities, countries, landmarks, geographical features, addresses\n- ORG - companies, institutions, agencies, teams\n- MISC - other named entities (events, works of art, nationalities, religions, languages, etc.)\n\n**Rules:**\n- Extract only **outermost** entities (no nesting).\n- If an entity appears multiple times in different contexts, list each separately.\n- `\"entity\"` must exactly match the substring from the text.\n- `\"context\"` = 3-6 words around the entity (use fewer if at sentence edges).\n- If no entities exist, output `[]`.\n\n*Priority rule:* `PER > LOC > ORG > MISC`\n\n**Output format (JSON only):**\n```json\n[\n  { \"entity\": \"ENTITY_TEXT\", \"label\": \"ENTITY_LABEL\", \"context\": \"CONTEXT_SNIPPET\" }\n]\n```\n\n**Example**\nInput: Barack Obama was born in Hawaii. Barack was American.  \nOutput:\n```json\n[\n  { \"entity\": \"Barack Obama\", \"label\": \"PER\", \"context\": \"Barack Obama was born\" },\n  { \"entity\": \"Hawaii\", \"label\": \"LOC\", \"context\": \"born in Hawaii.\" },\n  { \"entity\": \"Barack\", \"label\": \"PER\", \"context\": \"Barack was American.\" }\n]\n```\n\nOnly output the JSON array. No explanations, markdown, or extra text./no_think"
+    },
+    {
+      "role": "user",
+      "content": "Charles inherited the County of Luxembourg from his father and was elected king of the Kingdom of Bohemia. On 2 September 1347, Charles was crowned King of Bohemia."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\n```json\n[\n  { \"entity\": \"Charles\", \"label\": \"PER\", \"context\": \"Charles inherited the County\" },\n  { \"entity\": \"County of Luxembourg\", \"label\": \"LOC\", \"context\": \"the County of Luxembourg\" },\n  { \"entity\": \"Kingdom of Bohemia\", \"label\": \"LOC\", \"context\": \"elected king of the Kingdom\" },\n  { \"entity\": \"Charles\", \"label\": \"PER\", \"context\": \"Charles was crowned King\" },\n  { \"entity\": \"King of Bohemia\", \"label\": \"ORG\", \"context\": \"crowned King of Bohemia\" },\n  { \"entity\": \"2 September 1347\", \"label\": \"MISC\", \"context\": \"On 2 September 1347,\" }\n]\n```"
+    }
+  ]
+}

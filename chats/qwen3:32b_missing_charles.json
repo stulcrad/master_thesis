@@ -1,0 +1,29 @@
+{
+  "model": "qwen3:32b",
+  "created": "2025-08|10-16:14",
+  "temperature": 0.2,
+  "frequency_penalty": "default",
+  "presence_penalty": "default",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an expert in named entity recognition (NER).  \nExtract all named entities from the input text with their **type** and **short surrounding context**.\n\n**Entity labels:**\n- PER - names of people (real or fictional, nicknames, usernames, titles, etc.)\n- LOC - cities, countries, landmarks, geographical features, addresses\n- ORG - companies, institutions, agencies, teams\n- MISC - other named entities (events, works of art, nationalities, religions, languages, etc.)\n\n**Rules:**\n- Extract only **outermost** entities (no nesting).\n- If an entity appears multiple times in different contexts, list each separately.\n- `\"entity\"` must exactly match the substring from the text.\n- `\"context\"` = 3-6 words around the entity (use fewer if at sentence edges).\n- If no entities exist, output `[]`.\n\n*Priority rule:* `PER > LOC > ORG > MISC`\n\n**Output format (JSON only):**\n```json\n[\n  { \"entity\": \"ENTITY_TEXT\", \"label\": \"ENTITY_LABEL\", \"context\": \"CONTEXT_SNIPPET\" }\n]\n```\n\n**Example**\nInput: Barack Obama was born in Hawaii. Barack was American.  \nOutput:\n```json\n[\n  { \"entity\": \"Barack Obama\", \"label\": \"PER\", \"context\": \"Barack Obama was born\" },\n  { \"entity\": \"Hawaii\", \"label\": \"LOC\", \"context\": \"born in Hawaii.\" },\n  { \"entity\": \"Barack\", \"label\": \"PER\", \"context\": \"Barack was American.\" }\n]\n```\n\nOnly output the JSON array. No explanations, markdown, or extra text./no_think"
+    },
+    {
+      "role": "user",
+      "content": "He was the eldest son and heir of John of Bohemia, King of Bohemia and Count of Luxembourg, who died at the Battle of Crécy on 26 August 1346. His mother, Elizabeth, Queen of Bohemia, was the sister of Wenceslaus III, King of Bohemia and Poland, the last of the male Přemyslid rulers of Bohemia. Charles inherited the County of Luxembourg from his father and was elected king of the Kingdom of Bohemia. On 2 September 1347, Charles was crowned King of Bohemia."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\n```json\n[\n  { \"entity\": \"John of Bohemia\", \"label\": \"PER\", \"context\": \"eldest son and heir of John of Bohemia\" },\n  { \"entity\": \"King of Bohemia\", \"label\": \"ORG\", \"context\": \"John of Bohemia, King of Bohemia\" },\n  { \"entity\": \"Count of Luxembourg\", \"label\": \"ORG\", \"context\": \"King of Bohemia and Count of Luxembourg\" },\n  { \"entity\": \"Battle of Crécy\", \"label\": \"MISC\", \"context\": \"died at the Battle of Crécy\" },\n  { \"entity\": \"Elizabeth\", \"label\": \"PER\", \"context\": \"His mother, Elizabeth\" },\n  { \"entity\": \"Queen of Bohemia\", \"label\": \"ORG\", \"context\": \"Elizabeth, Queen of Bohemia\" },\n  { \"entity\": \"Wenceslaus III\", \"label\": \"PER\", \"context\": \"sister of Wenceslaus III\" },\n  { \"entity\": \"King of Bohemia and Poland\", \"label\": \"ORG\", \"context\": \"Wenceslaus III, King of Bohemia and Poland\" },\n  { \"entity\": \"Přemyslid\", \"label\": \"MISC\", \"context\": \"last of the male Přemyslid rulers\" },\n  { \"entity\": \"Charles\", \"label\": \"PER\", \"context\": \"Charles inherited the County of Luxembourg\" },\n  { \"entity\": \"County of Luxembourg\", \"label\": \"LOC\", \"context\": \"inherited the County of Luxembourg\" },\n  { \"entity\": \"Kingdom of Bohemia\", \"label\": \"LOC\", \"context\": \"elected king of the Kingdom of Bohemia\" },\n  { \"entity\": \"2 September 1347\", \"label\": \"MISC\", \"context\": \"On 2 September 1347\" },\n  { \"entity\": \"King of Bohemia\", \"label\": \"ORG\", \"context\": \"crowned King of Bohemia\" }\n]\n```"
+    },
+    {
+      "role": "user",
+      "content": "Charles was crowned King of Bohemia."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\n```json\n[\n  { \"entity\": \"Charles\", \"label\": \"PER\", \"context\": \"Charles was crowned\" },\n  { \"entity\": \"King of Bohemia\", \"label\": \"ORG\", \"context\": \"crowned King of Bohemia\" }\n]\n```"
+    }
+  ]
+}

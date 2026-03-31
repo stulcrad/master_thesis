@@ -1,0 +1,5 @@
+       system_prompt       model  precision  recall      f1  accuracy  elapsed_minute
+SYSTEM_PROMPT_ROBUST   gemma3:4b    0.40702 0.34434 0.37191   0.76140           3.244
+SYSTEM_PROMPT_ROBUST    qwen3:8b    0.59760 0.28992 0.38858   0.86281           4.599
+SYSTEM_PROMPT_ROBUST gpt-oss:20b    0.65058 0.62908 0.63952   0.91208           5.894
+SYSTEM_PROMPT_ROBUST llama3.1:8b    0.73755 0.35136 0.47394   0.88424           2.059

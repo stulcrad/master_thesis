@@ -1,0 +1,13 @@
+                 system_prompt       model  precision  recall      f1  accuracy  elapsed_minute
+         SYSTEM_PROMPT_CONTEXT   gemma3:4b    0.61658 0.45272 0.52146   0.87684           1.552
+         SYSTEM_PROMPT_CONTEXT    qwen3:8b    0.65780 0.28677 0.39900   0.86770           1.520
+         SYSTEM_PROMPT_CONTEXT gpt-oss:20b    0.69296 0.66634 0.67908   0.92488           2.973
+         SYSTEM_PROMPT_CONTEXT llama3.1:8b    0.77033 0.49476 0.60224   0.90916           1.344
+      SYSTEM_PROMPT_CONTEXT_MD   gemma3:4b    0.58558 0.40745 0.47972   0.85489           1.509
+      SYSTEM_PROMPT_CONTEXT_MD    qwen3:8b    0.68334 0.36772 0.47409   0.88460           1.536
+      SYSTEM_PROMPT_CONTEXT_MD gpt-oss:20b    0.68222 0.66072 0.67070   0.92369           4.121
+      SYSTEM_PROMPT_CONTEXT_MD llama3.1:8b    0.78185 0.40858 0.53652   0.89489           1.304
+SYSTEM_PROMPT_CONTEXT_MD_SHORT   gemma3:4b    0.58663 0.37051 0.45393   0.86179           1.405
+SYSTEM_PROMPT_CONTEXT_MD_SHORT    qwen3:8b    0.71132 0.32590 0.44398   0.88012           3.509
+SYSTEM_PROMPT_CONTEXT_MD_SHORT gpt-oss:20b    0.70252 0.65421 0.67714   0.93093           3.911
+SYSTEM_PROMPT_CONTEXT_MD_SHORT llama3.1:8b    0.79405 0.46588 0.58705   0.90754           1.217

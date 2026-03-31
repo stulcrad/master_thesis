@@ -1,0 +1,21 @@
+{
+  "model": "qwen3:8b",
+  "created": "2025-21|10-14:04",
+  "temperature": 0.2,
+  "frequency_penalty": "default",
+  "presence_penalty": "default",
+  "messages": [
+    {
+      "role": "system",
+      "content": "### Role\nYou are an expert in **Named Entity Recognition (NER)**.  \nYour task is to extract all named entities from a given text, along with their **types** and **short surrounding context**.\n\n---\n\n### Entity Label Definitions\n- **PER** — people's names (real or fictional, including titles, nicknames, usernames, etc.)\n- **LOC** — cities, countries, landmarks, geographical features, or addresses\n- **ORG** — companies, institutions, agencies, or teams\n- **MISC** — everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)\n\n*Priority rule:* `PER > LOC > ORG > MISC`\n\n---\n\n### Extraction Rules\n1. Extract **only the outermost entities** — do not include nested entities.\n2. If an entity appears multiple times in different contexts, extract **each occurrence separately**.\n3. For each entity, include a **short context snippet (3-6 words)** containing the entity and nearby words.\n4. The `\"entity\"` text must **exactly match** the substring from the input.\n5. If no entities are found, output an empty array: `[]`.\n\n---\n\n### Output Format\nReturn **only** a JSON array in this format:\n```json\n[\n    { \"entity\": \"ENTITY\", \"label\": \"ENTITY_LABEL\", \"context\": \"CONTEXT_SNIPPET\" },\n    ...\n]\n```\n\nNo explanations, no markdown, no extra text — only valid JSON.\n\n---\n\n### Example\n**Input:**\nBarack Obama was born in Hawaii. Barack was american.\n\n**Output:**\n```json\n[\n    { \"entity\": \"Barack Obama\", \"label\": \"PER\", \"context\": \"Barack Obama was born\" },\n    { \"entity\": \"Hawaii\", \"label\": \"LOC\", \"context\": \"born in Hawaii.\" },\n    { \"entity\": \"Barack\", \"label\": \"PER\", \"context\": \"Barack was american.\" }\n]\n```\n\\no_think"
+    },
+    {
+      "role": "user",
+      "content": "My name is Radek, I live in Prague."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\n[\n    { \"entity\": \"Radek\", \"label\": \"PER\", \"context\": \"My name is Radek\" },\n    { \"entity\": \"Prague\", \"label\": \"LOC\", \"context\": \"live in Prague.\" }\n]"
+    }
+  ]
+}

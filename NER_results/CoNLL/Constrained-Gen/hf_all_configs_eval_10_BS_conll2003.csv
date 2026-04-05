@@ -1,0 +1,10 @@
+model,sampling_strategy,do_sample,eval_mode,processor_class,batch_size,n_iters,precision,recall,f1,accuracy,wrong_text_count_avg,wrong_text_rate_avg,unaligned_entity_count_avg,unaligned_entity_rate_avg,elapsed_minute_avg
+google/gemma-3-4b-it,sampling,True,unconstrained,n/a,10,1,0.0,0.0,0.0,0.76707,2.0,1.0,42.0,1.0,0.759
+google/gemma-3-4b-it,sampling,True,constrained,whole_sequence,10,1,0.5,0.67568,0.57471,0.87149,0.0,0.0,0.0,0.0,0.902
+google/gemma-3-4b-it,sampling,True,constrained,token_aware,10,1,0.53333,0.64865,0.58537,0.88353,0.0,0.0,0.0,0.0,0.869
+Qwen/Qwen3-8B,sampling,True,unconstrained,n/a,10,1,0.53333,0.21622,0.30769,0.80321,1.0,0.5,19.0,0.55882,0.558
+Qwen/Qwen3-8B,sampling,True,constrained,whole_sequence,10,1,0.36,0.48649,0.41379,0.79116,0.0,0.0,0.0,0.0,0.656
+Qwen/Qwen3-8B,sampling,True,constrained,token_aware,10,1,0.46341,0.51351,0.48718,0.83133,0.0,0.0,0.0,0.0,0.605
+meta-llama/Llama-3.1-8B-Instruct,sampling,True,unconstrained,n/a,10,1,0.0,0.0,0.0,0.76707,2.0,1.0,38.0,1.0,0.353
+meta-llama/Llama-3.1-8B-Instruct,sampling,True,constrained,whole_sequence,10,1,0.64706,0.59459,0.61972,0.76707,0.0,0.0,0.0,0.0,0.369
+meta-llama/Llama-3.1-8B-Instruct,sampling,True,constrained,token_aware,10,1,0.65,0.7027,0.67532,0.88353,0.0,0.0,0.0,0.0,0.399

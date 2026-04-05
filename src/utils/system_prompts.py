@@ -56,7 +56,8 @@ IMPORTANT: Do not add any explanations, just output the tokenized text as list a
 """
 
 SYSTEM_PROMPT_CONTEXT = """
-You are an expert at named entity recognition. Given an input text, extract all named entities along with their types and surrounding context.
+You are an expert at named entity recognition. 
+Your task is to extract all named entities from a given text, along with their types and short surrounding context.
 Do not extract nested entities, only the outermost ones.
 
 IMPORTANT: If an entity appears multiple times, but with different surrounding context, extract each occurrence separately.
@@ -64,17 +65,11 @@ IMPORTANT: If an entity appears multiple times, but with different surrounding c
 The possible labels for named entities are:
 PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
 LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
-ORG: names of companies, institutions, agencies, teams, etc.
-MISC: everythin else that could be considered a named entity (languages, nationalities, etc.).
+ORG: names of companies, institutions, agencies, sport teams, etc.
+MISC: everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)
 
 The order of labeling is PER, LOC, ORG, MISC.
 
-Output format:
-Return a JSON array of objects:
-[
-    { "entity": "ENTITY", "label": "ENTITY_LABEL", "context": "SURROUNDING_CONTEXT" },
-    ...
-]
 
 Rules:
 - "entity" must exactly match the original substring from the input text.
@@ -84,14 +79,25 @@ Rules:
 - If the entity is at the beginning or end of the text, use only the available neighboring words.
 - If there are no named entities, output an empty JSON array [].
 
-Example:
-Input text: "Barack Obama was born in Hawaii. Barack was american."
+Output format:
+Return a JSON array of objects:
+[
+    { "entity": "ENTITY", "label": "ENTITY_LABEL", "context": "SURROUNDING_CONTEXT" },
+    ...
+]
+
+Examples:
+Input text:
+Barack Obama was born in Hawaii. Barack was american.
 Output:
 [
     { "entity": "Barack Obama", "label": "PER", "context": "Barack Obama was born" },
     { "entity": "Hawaii", "label": "LOC", "context": "born in Hawaii." },
     { "entity": "Barack", "label": "PER", "context": "Barack was american." }
 ]
+
+Input text:
+He ended the World Cup on the wrong note , Coste said .
 
 IMPORTANT: Only output the JSON array. DO NOT add any explanations. Follow the format exactly.
 """
@@ -105,8 +111,8 @@ IMPORTANT: If an entity appears multiple times, tag each occurrence.
 The possible labels for named entities are:
 PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
 LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
-ORG: names of companies, institutions, agencies, teams, etc.
-MISC: all names which are not already in the other categories. This includes adjectives, like Italian, and events, like 1000 Lakes Rally.
+ORG: names of companies, institutions, agencies, sport teams, etc.
+MISC: everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)
 
 The order of labeling is PER, LOC, ORG, MISC.
 
@@ -128,27 +134,23 @@ Output text:
 <SPAN><LABEL>PER</LABEL>Barack Obama</SPAN> was born in <SPAN><LABEL>LOC</LABEL>Hawaii</SPAN>. <SPAN><LABEL>PER</LABEL>Barack</SPAN> was american.
 
 Input text:
-SOCCER - JAPAN GET LUCKY WIN , CHINA IN SURPRISE DEFEAT .
+He ended the World Cup on the wrong note , Coste said .
 Output text:
-SOCCER - <SPAN><LABEL>LOC</LABEL>JAPAN</SPAN> GET LUCKY WIN , <SPAN><LABEL>LOC</LABEL>CHINA</SPAN> IN SURPRISE DEFEAT .
-
-Input text:
-" He ended the World Cup on the wrong note , " Coste said .
-Output text:
-" He ended the <SPAN><LABEL>MISC</LABEL>World Cup</SPAN> on the wrong note , " <SPAN><LABEL>PER</LABEL>Coste</SPAN> said .
+He ended the <SPAN><LABEL>MISC</LABEL>World Cup</SPAN> on the wrong note , <SPAN><LABEL>PER</LABEL>Coste</SPAN> said .
 """
 
 SYSTEM_PROMPT_CONTEXT_MD = """
 ### Role
 You are an expert in **Named Entity Recognition (NER)**.  
 Your task is to extract all named entities from a given text, along with their **types** and **short surrounding context**.
+Do not extract nested entities, only the outermost ones.
 
 ---
 
 ### Entity Label Definitions
-- **PER** — people's names (real or fictional, including titles, nicknames, usernames, etc.)
-- **LOC** — cities, countries, landmarks, geographical features, or addresses
-- **ORG** — companies, institutions, agencies, or teams
+- **PER** — names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
+- **LOC** — names of cities, countries, landmarks, geographical features, addresses, etc.
+- **ORG** — names of companies, institutions, agencies, sport teams, etc.
 - **MISC** — everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)
 
 *Priority rule:* `PER > LOC > ORG > MISC`
@@ -188,6 +190,17 @@ Barack Obama was born in Hawaii. Barack was american.
     { "entity": "Barack Obama", "label": "PER", "context": "Barack Obama was born" },
     { "entity": "Hawaii", "label": "LOC", "context": "born in Hawaii." },
     { "entity": "Barack", "label": "PER", "context": "Barack was american." }
+]
+```
+
+**Input:**
+He ended the World Cup on the wrong note , Coste said .
+
+**Output:**
+```json
+[
+    { "entity": "World Cup", "label": "MISC", "context": "ended the World Cup on" },
+    { "entity": "Coste", "label": "PER", "context": "note , Coste said" }
 ]
 ```
 """

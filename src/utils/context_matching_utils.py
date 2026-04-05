@@ -163,8 +163,9 @@ def find_best_fuzzy_match(context:str, full_text:str, threshold: float = 0.7, ma
     else:
         return (None, None, 0.0)
 
-def assign_entities_from_context(full_text_tokens: list, entities: list, fuzzy: bool, 
-                                 fuzzy_threshold: float = 0.7, matching_type:str = 'anchor') -> list:
+def assign_entities_from_context(full_text_tokens: list, entities: list, fuzzy: bool,
+                                 fuzzy_threshold: float = 0.7, matching_type:str = 'anchor',
+                                 return_stats: bool = False):
     """
     Assign BIO tags to tokens based on extracted entities with context.
 
@@ -177,39 +178,77 @@ def assign_entities_from_context(full_text_tokens: list, entities: list, fuzzy: 
         
     Returns:
         list: BIO tags corresponding to full_text_tokens.
+        tuple(list, dict): When return_stats=True, also returns matching outcome counters.
     """
     tags = ['O'] * len(full_text_tokens)
     full_text_str = " ".join(full_text_tokens)
 
+    stats = {
+        'processed_entities': 0,
+        'successful_entities': 0,
+        'invalid_entity_format': 0,
+        'context_not_in_input': 0,
+        'entity_not_in_context': 0,
+        'fuzzy_helped': 0,
+        'exact_match': 0,
+    }
+
     for ent in entities:
         if 'entity' not in ent or 'label' not in ent or 'context' not in ent:
             print(f"\nInvalid entity format: {ent}")
+            stats['invalid_entity_format'] += 1
             continue
+        stats['processed_entities'] += 1
+
         entity_text = ent['entity']
         entity_label = ent['label']
         context_text = ent['context']
+        fuzzy_used = False
 
         if fuzzy:
-            # Try to find exact match first, then fuzzy match (should not damage performance much)
+            # Try exact match first, then fuzzy context match.
             context_start = full_text_str.lower().find(context_text.lower())
-            if context_start == -1:
-                context_start, context_end, similarity = find_best_fuzzy_match(context_text, full_text_str, threshold=fuzzy_threshold, matching_type=matching_type)
+            if context_start != -1:
+                context_end = context_start + len(context_text)
+            else:
+                context_start, context_end, _ = find_best_fuzzy_match(
+                    context_text,
+                    full_text_str,
+                    threshold=fuzzy_threshold,
+                    matching_type=matching_type,
+                )
+                if context_start is not None:
+                    fuzzy_used = True
+
             if context_start is None:
+                stats['context_not_in_input'] += 1
                 continue
 
             matched_context = full_text_str[context_start:context_end]
             entity_start_in_context = matched_context.lower().find(entity_text.lower())
             if entity_start_in_context == -1:
-                entity_start_in_context, entity_end_in_context, ent_sim = find_best_fuzzy_match(entity_text, matched_context, fuzzy_threshold, matching_type=matching_type)
+                entity_start_in_context, _, _ = find_best_fuzzy_match(
+                    entity_text,
+                    matched_context,
+                    threshold=fuzzy_threshold,
+                    matching_type=matching_type,
+                )
                 if entity_start_in_context is None:
+                    stats['entity_not_in_context'] += 1
                     continue
+                fuzzy_used = True
         else:
             context_start = full_text_str.lower().find(context_text.lower())
             if context_start == -1:
+                stats['context_not_in_input'] += 1
                 continue
 
-            entity_start_in_context = context_text.lower().find(entity_text.lower())
+            context_end = context_start + len(context_text)
+            matched_context = full_text_str[context_start:context_end]
+
+            entity_start_in_context = matched_context.lower().find(entity_text.lower())
             if entity_start_in_context == -1:
+                stats['entity_not_in_context'] += 1
                 continue
 
         entity_char_start = context_start + entity_start_in_context
@@ -224,4 +263,12 @@ def assign_entities_from_context(full_text_tokens: list, entities: list, fuzzy: 
                 tags[i] = f"{tag_prefix}{entity_label}"
             char_idx += len(tok) + 1
 
+        stats['successful_entities'] += 1
+        if fuzzy and fuzzy_used:
+            stats['fuzzy_helped'] += 1
+        else:
+            stats['exact_match'] += 1
+
+    if return_stats:
+        return tags, stats
     return tags

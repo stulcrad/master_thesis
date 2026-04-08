@@ -50,6 +50,8 @@ seqeval = evaluate.load("seqeval")
 MAX_EXAMPLES = 250 # Full evaluation
 N_ITERS = 5
 EVAL_INTERVAL = 10 # Log after every 10 iterations
+if batch_size > 5:
+    EVAL_INTERVAL = 5
 BATCH_SIZES = [batch_size]
 FUZZY_MODES = [False, True]
 FUZZY_THRESHOLD = 0.6
@@ -75,8 +77,8 @@ for BATCH_SIZE in BATCH_SIZES:
         print(f"\nBATCH_SIZE: {BATCH_SIZE}")
         print(f"FUZZY mode: {FUZZY}, FUZZY_THRESHOLD: {FUZZY_THRESHOLD}\n")
 
-        txt_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Txt/ner_document_context_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt" if not FUZZY else \
-            f"/home/stulcrad/master_thesis/NER_results/CoNLL/Txt/ner_document_context_fuzzy_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt"
+        txt_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Context-Based/Txt/ner_document_context_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt" if not FUZZY else \
+            f"/home/stulcrad/master_thesis/NER_results/CoNLL/Context-Based/Txt/ner_document_context_fuzzy_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt"
 
         csv_path = txt_path.replace("/Txt/", "/Csv/").replace(".txt", ".csv")
 

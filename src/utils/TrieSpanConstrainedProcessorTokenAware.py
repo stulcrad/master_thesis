@@ -180,11 +180,17 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             space_match = any(block and token_id == block[0] for block in self.label_open_blocks.values())
             nospace_match = any(block and token_id == block[0] for block in self.label_open_blocks_nospace.values())
             if space_match:
-                if self._current_remaining_bytes().startswith(b" "):
+                remaining = self._current_remaining_bytes()
+                can_copy_after_space = bool(remaining[1:]) and bool(self.toktrie.prefix_search(remaining[1:]))
+                if remaining.startswith(b" ") and can_copy_after_space:
                     self.input_token_byte_ptr += 1
                     self._normalize_token_cursor()
                 else:
-                    print(f"Warning: space-prefixed block chosen but no space at current input token {self.input_token_ptr} byte offset {self.input_token_byte_ptr}")
+                    print(
+                        f"Warning: rejected space-prefixed block at token {self.input_token_ptr}, "
+                        f"byte {self.input_token_byte_ptr}; cannot continue copying after consuming leading space"
+                    )
+                    return
                 self.STATE = "TAG_BLOCK"
                 self.seq_pos = 1
                 self.selected_label = None
@@ -264,7 +270,9 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             allowed = self._allowed_copy_tokens()
             # Additionally, allow the tokens that can start any of the label blocks, unless the next part of the input text starts with '<'
             if not self._prefer_literal_angle_bracket():
-                if self._current_remaining_bytes().startswith(b" "):
+                remaining = self._current_remaining_bytes()
+                can_copy_after_space = bool(remaining[1:]) and bool(self.toktrie.prefix_search(remaining[1:]))
+                if remaining.startswith(b" ") and can_copy_after_space:
                     allowed.update(tok[0] for tok in self.label_open_blocks.values())
                     self._active_blocks = self.label_open_blocks # pre-set the active blocks so _advance_state sees the correct variant
                 else:

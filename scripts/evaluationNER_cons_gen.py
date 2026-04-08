@@ -19,24 +19,30 @@ from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
 # -------------------------
 # Evaluation configuration
 # -------------------------
-MAX_EXAMPLES = 250
+MAX_EXAMPLES = 1280
 N_ITERS = 5
 EVAL_INTERVAL = 10
 # Single batch size per run. You can override from CLI:
 # python evaluationNER_cons_gen.py 5
 BATCH_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 1
+if BATCH_SIZE > 5:
+    EVAL_INTERVAL = 5
 
-MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
+# MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
+MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B']
 
 DO_SAMPLES = [False, True]
+# DO_SAMPLES = [True]
 TEMPERATURE = 0.2
-MAX_NEW_TOKENS = 5000
+MAX_NEW_TOKENS = 32578
 
 # Evaluate both decoding modes in one run.
 EVAL_MODES = ["unconstrained", "constrained"]
+# EVAL_MODES = ["constrained"]
 
 # Processor class is only used for constrained mode.
 PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
+# PROCESSOR_CLASSES = ["token_aware"]
 
 # Load the seqeval metric for span-level evaluation
 seqeval = evaluate.load("seqeval")
@@ -95,6 +101,7 @@ for model_name in MODEL_NAMES:
                     gold_sequences: List[List[str]] = []
                     pred_sequences: List[List[str]] = []
                     wrong_text_count = 0
+                    all_entities_wrongly_unaligned = 0
                     unaligned_entity_count = 0
                     total_predictions = 0
                     total_batches = (len(sampled_dataset) + batch_size - 1) // batch_size
@@ -150,14 +157,20 @@ for model_name in MODEL_NAMES:
 
                         if not exact_copy_ok:
                             wrong_text_count += 1
+                            if eval_mode == "constrained":
+                                print(f"\n\n===== Warning in exp {exp_id + 1}, batch {batch_idx + 1} =====")
+                                print(f"Original text: \n{input_text}")
+                                print(f"Reconstructed text: \n{parsed['reconstructed_text']}")
+                                print(f"Generated markup: \n{generated}\n\n")
                             pred_tags = ["O"] * len(batch_tokens)
-                            unaligned_entity_count += parsed["span_count"]
+                            all_entities_wrongly_unaligned += parsed["span_count"]
                         else:
                             pred_tags, unalign_count = entities_to_bio_tags(
                                 tokens=batch_tokens,
                                 entities=parsed["entities"],
                             )
                             unaligned_entity_count += unalign_count
+                            all_entities_wrongly_unaligned += unalign_count
 
                         gold_sequences.append(batch_gold_tags)
                         pred_sequences.append(pred_tags)
@@ -195,6 +208,8 @@ for model_name in MODEL_NAMES:
                         "wrong_text_rate": wrong_text_count / max(total_batches, 1),
                         "unaligned_entity_count": unaligned_entity_count,
                         "unaligned_entity_rate": unaligned_entity_count / max(total_predictions, 1),
+                        "all_entities_wrongly_unaligned": all_entities_wrongly_unaligned,
+                        "all_entities_wrongly_unaligned_rate": all_entities_wrongly_unaligned / max(total_predictions, 1),
                         "elapsed_minute": elapsed_min,
                     })
 
@@ -214,6 +229,8 @@ for model_name in MODEL_NAMES:
                     "wrong_text_rate_avg": round(sum(m["wrong_text_rate"] for m in exp_metrics) / N_ITERS, 5),
                     "unaligned_entity_count_avg": round(sum(m['unaligned_entity_count'] for m in exp_metrics) / N_ITERS, 3),
                     "unaligned_entity_rate_avg": round(sum(m['unaligned_entity_rate'] for m in exp_metrics) / N_ITERS, 5),
+                    "all_entities_wrongly_unaligned_avg": round(sum(m['all_entities_wrongly_unaligned'] for m in exp_metrics) / N_ITERS, 3),
+                    "all_entities_wrongly_unaligned_rate_avg": round(sum(m['all_entities_wrongly_unaligned_rate'] for m in exp_metrics) / N_ITERS, 5),
                     "elapsed_minute_avg": round(sum(m["elapsed_minute"] for m in exp_metrics) / N_ITERS, 3),
                 })
 

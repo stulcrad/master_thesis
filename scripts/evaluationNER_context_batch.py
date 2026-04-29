@@ -1,8 +1,10 @@
 import sys, os, argparse
+import statistics
+from typing import List, Tuple
 import evaluate
 from tqdm import tqdm
 import pandas as pd
-from utils.system_prompts import *
+from utils.system_prompts import SYSTEM_PROMPT_CONTEXT, SYSTEM_PROMPT_CONTEXT_MD, SYSTEM_PROMPT_CONTEXT_MD_SHORT
 from openai import OpenAI
 from datasets import load_dataset
 import time
@@ -29,6 +31,19 @@ client = OpenAI(
 
 models = client.models.list()
 
+def mean_std(values: List[float]) -> Tuple[float, float]:
+    if not values:
+        return 0.0, 0.0
+    if len(values) == 1:
+        return values[0], 0.0
+    return statistics.mean(values), statistics.stdev(values)
+
+def to_pct(value: float) -> float:
+    return value * 100.0
+
+def format_pm(mean: float, std: float) -> str:
+    return f"{mean:.2f} ± {std:.2f}"
+
 # Define label mappings
 label2id = {
   'O': 0, 
@@ -47,7 +62,9 @@ id2label = {v: k for k, v in label2id.items()}
 seqeval = evaluate.load("seqeval")
 
 # Experiment parameters
-MAX_EXAMPLES = 250 # Full evaluation
+# MAX_EXAMPLES = 1280
+MAX_EXAMPLES = 250
+# N_ITERS = 1
 N_ITERS = 5
 EVAL_INTERVAL = 10 # Log after every 10 iterations
 if batch_size > 5:
@@ -60,6 +77,7 @@ FUZZY_THRESHOLD = 0.6
 prompts = {
     SYSTEM_PROMPT_CONTEXT: "SYSTEM_PROMPT_CONTEXT",
     SYSTEM_PROMPT_CONTEXT_MD: "SYSTEM_PROMPT_CONTEXT_MD",
+    SYSTEM_PROMPT_CONTEXT_MD_SHORT: "SYSTEM_PROMPT_CONTEXT_MD_SHORT",
 }
 
 # Load CoNLL-2003 dataset
@@ -226,25 +244,60 @@ for BATCH_SIZE in BATCH_SIZES:
                 avg_exact_match_rate = sum(m["exact_match_rate"] for m in exp_metrics) / N_ITERS
                 avg_elapsed = sum(m["elapsed_minute"] for m in exp_metrics) / N_ITERS
         
+                precision_mean, precision_std = mean_std([m["precision"] for m in exp_metrics])
+                recall_mean, recall_std = mean_std([m["recall"] for m in exp_metrics])
+                f1_mean, f1_std = mean_std([m["f1"] for m in exp_metrics])
+                accuracy_mean, accuracy_std = mean_std([m["accuracy"] for m in exp_metrics])
+                context_not_in_input_mean, context_not_in_input_std = mean_std([m["context_not_in_input"] for m in exp_metrics])
+                context_not_in_input_rate_mean, context_not_in_input_rate_std = mean_std([m["context_not_in_input_rate"] for m in exp_metrics])
+                entity_not_in_context_mean, entity_not_in_context_std = mean_std([m["entity_not_in_context"] for m in exp_metrics])
+                entity_not_in_context_rate_mean, entity_not_in_context_rate_std = mean_std([m["entity_not_in_context_rate"] for m in exp_metrics])
+                fuzzy_helped_mean, fuzzy_helped_std = mean_std([m["fuzzy_helped"] for m in exp_metrics])
+                fuzzy_helped_rate_mean, fuzzy_helped_rate_std = mean_std([m["fuzzy_helped_rate"] for m in exp_metrics])
+                exact_match_mean, exact_match_std = mean_std([m["exact_match"] for m in exp_metrics])
+                exact_match_rate_mean, exact_match_rate_std = mean_std([m["exact_match_rate"] for m in exp_metrics])
+                elapsed_mean, elapsed_std = mean_std([m["elapsed_minute"] for m in exp_metrics])
+
                 all_results.append({
                     "system_prompt": prompts[prompt],
                     "model": model_name,
                     "batch_size": BATCH_SIZE,
                     "fuzzy_mode": FUZZY,
                     "n_iters": N_ITERS,
-                    "precision": round(avg_precision, 5),
-                    "recall": round(avg_recall, 5),
-                    "f1": round(avg_f1, 5),
-                    "accuracy": round(avg_accuracy, 5),
-                    "context_not_in_input_avg": round(avg_context_not_in_input, 3),
-                    "context_not_in_input_rate_avg": round(avg_context_not_in_input_rate, 5),
-                    "entity_not_in_context_avg": round(avg_entity_not_in_context, 3),
-                    "entity_not_in_context_rate_avg": round(avg_entity_not_in_context_rate, 5),
-                    "fuzzy_helped_avg": round(avg_fuzzy_helped, 3),
-                    "fuzzy_helped_rate_avg": round(avg_fuzzy_helped_rate, 5),
-                    "exact_match_avg": round(avg_exact_match, 3),
-                    "exact_match_rate_avg": round(avg_exact_match_rate, 5),
-                    "elapsed_minute": round(avg_elapsed, 3)
+                    "precision_pct": round(to_pct(precision_mean), 2),
+                    "precision_std_pct": round(to_pct(precision_std), 2),
+                    "precision_report": format_pm(to_pct(precision_mean), to_pct(precision_std)),
+                    "recall_pct": round(to_pct(recall_mean), 2),
+                    "recall_std_pct": round(to_pct(recall_std), 2),
+                    "recall_report": format_pm(to_pct(recall_mean), to_pct(recall_std)),
+                    "f1_pct": round(to_pct(f1_mean), 2),
+                    "f1_std_pct": round(to_pct(f1_std), 2),
+                    "f1_report": format_pm(to_pct(f1_mean), to_pct(f1_std)),
+                    "accuracy_pct": round(to_pct(accuracy_mean), 2),
+                    "accuracy_std_pct": round(to_pct(accuracy_std), 2),
+                    "accuracy_report": format_pm(to_pct(accuracy_mean), to_pct(accuracy_std)),
+                    "context_not_in_input_avg": round(context_not_in_input_mean, 3),
+                    "context_not_in_input_std": round(context_not_in_input_std, 3),
+                    "context_not_in_input_rate_pct": round(to_pct(context_not_in_input_rate_mean), 2),
+                    "context_not_in_input_rate_std_pct": round(to_pct(context_not_in_input_rate_std), 2),
+                    "context_not_in_input_rate_report": format_pm(to_pct(context_not_in_input_rate_mean), to_pct(context_not_in_input_rate_std)),
+                    "entity_not_in_context_avg": round(entity_not_in_context_mean, 3),
+                    "entity_not_in_context_std": round(entity_not_in_context_std, 3),
+                    "entity_not_in_context_rate_pct": round(to_pct(entity_not_in_context_rate_mean), 2),
+                    "entity_not_in_context_rate_std_pct": round(to_pct(entity_not_in_context_rate_std), 2),
+                    "entity_not_in_context_rate_report": format_pm(to_pct(entity_not_in_context_rate_mean), to_pct(entity_not_in_context_rate_std)),
+                    "fuzzy_helped_avg": round(fuzzy_helped_mean, 3),
+                    "fuzzy_helped_std": round(fuzzy_helped_std, 3),
+                    "fuzzy_helped_rate_pct": round(to_pct(fuzzy_helped_rate_mean), 2),
+                    "fuzzy_helped_rate_std_pct": round(to_pct(fuzzy_helped_rate_std), 2),
+                    "fuzzy_helped_rate_report": format_pm(to_pct(fuzzy_helped_rate_mean), to_pct(fuzzy_helped_rate_std)),
+                    "exact_match_avg": round(exact_match_mean, 3),
+                    "exact_match_std": round(exact_match_std, 3),
+                    "exact_match_rate_pct": round(to_pct(exact_match_rate_mean), 2),
+                    "exact_match_rate_std_pct": round(to_pct(exact_match_rate_std), 2),
+                    "exact_match_rate_report": format_pm(to_pct(exact_match_rate_mean), to_pct(exact_match_rate_std)),
+                    "elapsed_minute_avg": round(elapsed_mean, 3),
+                    "elapsed_minute_std": round(elapsed_std, 3)
                 })
 
 

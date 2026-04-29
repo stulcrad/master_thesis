@@ -1,6 +1,7 @@
 import sys
 import time
-from typing import List
+import statistics
+from typing import List, Tuple
 import pandas as pd
 import evaluate
 from datasets import load_dataset
@@ -20,7 +21,9 @@ from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
 # Evaluation configuration
 # -------------------------
 MAX_EXAMPLES = 1280
-N_ITERS = 5
+N_ITERS = 1
+# MAX_EXAMPLES = 250
+# N_ITERS = 5
 EVAL_INTERVAL = 10
 # Single batch size per run. You can override from CLI:
 # python evaluationNER_cons_gen.py 5
@@ -32,17 +35,14 @@ if BATCH_SIZE > 5:
 MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B']
 
 DO_SAMPLES = [False, True]
-# DO_SAMPLES = [True]
 TEMPERATURE = 0.2
 MAX_NEW_TOKENS = 32578
 
 # Evaluate both decoding modes in one run.
 EVAL_MODES = ["unconstrained", "constrained"]
-# EVAL_MODES = ["constrained"]
 
 # Processor class is only used for constrained mode.
 PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
-# PROCESSOR_CLASSES = ["token_aware"]
 
 # Load the seqeval metric for span-level evaluation
 seqeval = evaluate.load("seqeval")
@@ -50,6 +50,19 @@ seqeval = evaluate.load("seqeval")
 dataset = load_dataset("lhoestq/conll2003", split="test")
 
 results = []
+
+def mean_std(values: List[float]) -> Tuple[float, float]:
+    if not values:
+        return 0.0, 0.0
+    if len(values) == 1:
+        return values[0], 0.0
+    return statistics.mean(values), statistics.stdev(values)
+
+def to_pct(value: float) -> float:
+    return value * 100.0
+
+def format_pm(mean: float, std: float) -> str:
+    return f"{mean:.2f} ± {std:.2f}"
 
 # Define label mappings
 label2id = {
@@ -213,6 +226,18 @@ for model_name in MODEL_NAMES:
                         "elapsed_minute": elapsed_min,
                     })
 
+                precision_mean, precision_std = mean_std([m["precision"] for m in exp_metrics])
+                recall_mean, recall_std = mean_std([m["recall"] for m in exp_metrics])
+                f1_mean, f1_std = mean_std([m["f1"] for m in exp_metrics])
+                accuracy_mean, accuracy_std = mean_std([m["accuracy"] for m in exp_metrics])
+                wrong_text_count_mean, wrong_text_count_std = mean_std([m["wrong_text_count"] for m in exp_metrics])
+                wrong_text_rate_mean, wrong_text_rate_std = mean_std([m["wrong_text_rate"] for m in exp_metrics])
+                unaligned_entity_count_mean, unaligned_entity_count_std = mean_std([m["unaligned_entity_count"] for m in exp_metrics])
+                unaligned_entity_rate_mean, unaligned_entity_rate_std = mean_std([m["unaligned_entity_rate"] for m in exp_metrics])
+                all_entities_wrongly_unaligned_mean, all_entities_wrongly_unaligned_std = mean_std([m["all_entities_wrongly_unaligned"] for m in exp_metrics])
+                all_entities_wrongly_unaligned_rate_mean, all_entities_wrongly_unaligned_rate_std = mean_std([m["all_entities_wrongly_unaligned_rate"] for m in exp_metrics])
+                elapsed_mean, elapsed_std = mean_std([m["elapsed_minute"] for m in exp_metrics])
+
                 results.append({
                     "model": model_name,
                     "sampling_strategy": sampling_strategy,
@@ -221,17 +246,35 @@ for model_name in MODEL_NAMES:
                     "processor_class": config_label,
                     "batch_size": batch_size,
                     "n_iters": N_ITERS,
-                    "precision": round(sum(m["precision"] for m in exp_metrics) / N_ITERS, 5),
-                    "recall": round(sum(m["recall"] for m in exp_metrics) / N_ITERS, 5),
-                    "f1": round(sum(m["f1"] for m in exp_metrics) / N_ITERS, 5),
-                    "accuracy": round(sum(m["accuracy"] for m in exp_metrics) / N_ITERS, 5),
-                    "wrong_text_count_avg": round(sum(m["wrong_text_count"] for m in exp_metrics) / N_ITERS, 3),
-                    "wrong_text_rate_avg": round(sum(m["wrong_text_rate"] for m in exp_metrics) / N_ITERS, 5),
-                    "unaligned_entity_count_avg": round(sum(m['unaligned_entity_count'] for m in exp_metrics) / N_ITERS, 3),
-                    "unaligned_entity_rate_avg": round(sum(m['unaligned_entity_rate'] for m in exp_metrics) / N_ITERS, 5),
-                    "all_entities_wrongly_unaligned_avg": round(sum(m['all_entities_wrongly_unaligned'] for m in exp_metrics) / N_ITERS, 3),
-                    "all_entities_wrongly_unaligned_rate_avg": round(sum(m['all_entities_wrongly_unaligned_rate'] for m in exp_metrics) / N_ITERS, 5),
-                    "elapsed_minute_avg": round(sum(m["elapsed_minute"] for m in exp_metrics) / N_ITERS, 3),
+                    "precision_pct": round(to_pct(precision_mean), 2),
+                    "precision_std_pct": round(to_pct(precision_std), 2),
+                    "precision_report": format_pm(to_pct(precision_mean), to_pct(precision_std)),
+                    "recall_pct": round(to_pct(recall_mean), 2),
+                    "recall_std_pct": round(to_pct(recall_std), 2),
+                    "recall_report": format_pm(to_pct(recall_mean), to_pct(recall_std)),
+                    "f1_pct": round(to_pct(f1_mean), 2),
+                    "f1_std_pct": round(to_pct(f1_std), 2),
+                    "f1_report": format_pm(to_pct(f1_mean), to_pct(f1_std)),
+                    "accuracy_pct": round(to_pct(accuracy_mean), 2),
+                    "accuracy_std_pct": round(to_pct(accuracy_std), 2),
+                    "accuracy_report": format_pm(to_pct(accuracy_mean), to_pct(accuracy_std)),
+                    "wrong_text_count_avg": round(wrong_text_count_mean, 3),
+                    "wrong_text_count_std": round(wrong_text_count_std, 3),
+                    "wrong_text_rate_pct": round(to_pct(wrong_text_rate_mean), 2),
+                    "wrong_text_rate_std_pct": round(to_pct(wrong_text_rate_std), 2),
+                    "wrong_text_rate_report": format_pm(to_pct(wrong_text_rate_mean), to_pct(wrong_text_rate_std)),
+                    "unaligned_entity_count_avg": round(unaligned_entity_count_mean, 3),
+                    "unaligned_entity_count_std": round(unaligned_entity_count_std, 3),
+                    "unaligned_entity_rate_pct": round(to_pct(unaligned_entity_rate_mean), 2),
+                    "unaligned_entity_rate_std_pct": round(to_pct(unaligned_entity_rate_std), 2),
+                    "unaligned_entity_rate_report": format_pm(to_pct(unaligned_entity_rate_mean), to_pct(unaligned_entity_rate_std)),
+                    "all_entities_wrongly_unaligned_avg": round(all_entities_wrongly_unaligned_mean, 3),
+                    "all_entities_wrongly_unaligned_std": round(all_entities_wrongly_unaligned_std, 3),
+                    "all_entities_wrongly_unaligned_rate_pct": round(to_pct(all_entities_wrongly_unaligned_rate_mean), 2),
+                    "all_entities_wrongly_unaligned_rate_std_pct": round(to_pct(all_entities_wrongly_unaligned_rate_std), 2),
+                    "all_entities_wrongly_unaligned_rate_report": format_pm(to_pct(all_entities_wrongly_unaligned_rate_mean), to_pct(all_entities_wrongly_unaligned_rate_std)),
+                    "elapsed_minute_avg": round(elapsed_mean, 3),
+                    "elapsed_minute_std": round(elapsed_std, 3),
                 })
 
     # Free GPU memory before loading next model
@@ -244,8 +287,8 @@ for model_name in MODEL_NAMES:
 results_df = pd.DataFrame(results)
 
 # Optional persistence
-results_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Constrained-Gen/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
-txt_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Constrained-Gen/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.txt"
+results_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Constrained-Gen/Csv/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
+txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
 import os
 os.makedirs(os.path.dirname(results_path), exist_ok=True)

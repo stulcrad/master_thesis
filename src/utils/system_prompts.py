@@ -98,6 +98,11 @@ Output:
 
 Input text:
 He ended the World Cup on the wrong note , Coste said .
+Output:
+[
+    { "entity": "World Cup", "label": "MISC", "context": "ended the World Cup on" },
+    { "entity": "Coste", "label": "PER", "context": "note , Coste said" }
+]
 
 IMPORTANT: Only output the JSON array. DO NOT add any explanations. Follow the format exactly.
 """

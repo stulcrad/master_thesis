@@ -8,8 +8,10 @@ from datasets import load_dataset
 from tqdm import tqdm
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from utils.constrained_decoding_utils import (
-    generate_markup, validate_reconstruction, entities_to_bio_tags, parse_entities_from_tagged_output
+from utils.utils_functions import (
+    generate_markup, validate_reconstruction, 
+    entities_to_bio_tags, parse_entities_from_tagged_output,
+    mean_std, to_pct, format_pm
 )
 from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
@@ -20,10 +22,10 @@ from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
 # -------------------------
 # Evaluation configuration
 # -------------------------
-MAX_EXAMPLES = 1280
-N_ITERS = 1
-# MAX_EXAMPLES = 250
-# N_ITERS = 5
+# MAX_EXAMPLES = 1280
+# N_ITERS = 1
+MAX_EXAMPLES = 250
+N_ITERS = 5
 EVAL_INTERVAL = 10
 # Single batch size per run. You can override from CLI:
 # python evaluationNER_cons_gen.py 5
@@ -31,8 +33,8 @@ BATCH_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 1
 if BATCH_SIZE > 5:
     EVAL_INTERVAL = 5
 
-# MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
-MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B']
+MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
+# MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B']
 
 DO_SAMPLES = [False, True]
 TEMPERATURE = 0.2
@@ -50,19 +52,6 @@ seqeval = evaluate.load("seqeval")
 dataset = load_dataset("lhoestq/conll2003", split="test")
 
 results = []
-
-def mean_std(values: List[float]) -> Tuple[float, float]:
-    if not values:
-        return 0.0, 0.0
-    if len(values) == 1:
-        return values[0], 0.0
-    return statistics.mean(values), statistics.stdev(values)
-
-def to_pct(value: float) -> float:
-    return value * 100.0
-
-def format_pm(mean: float, std: float) -> str:
-    return f"{mean:.2f} ± {std:.2f}"
 
 # Define label mappings
 label2id = {
@@ -164,7 +153,7 @@ for model_name in MODEL_NAMES:
                             temperature=TEMPERATURE,
                         )
 
-                        parsed = parse_entities_from_tagged_output(generated)
+                        parsed = parse_entities_from_tagged_output(generated, set(labels_for_constrained))
                         total_predictions += parsed["span_count"]
                         exact_copy_ok = validate_reconstruction(parsed["reconstructed_text"], input_text)
 
@@ -181,6 +170,7 @@ for model_name in MODEL_NAMES:
                             pred_tags, unalign_count = entities_to_bio_tags(
                                 tokens=batch_tokens,
                                 entities=parsed["entities"],
+                                valid_labels=set(labels_for_constrained),
                             )
                             unaligned_entity_count += unalign_count
                             all_entities_wrongly_unaligned += unalign_count

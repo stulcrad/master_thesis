@@ -1,45 +1,6 @@
 import json
 from rapidfuzz import fuzz
 
-
-def docred_to_bio_tags(example) -> list:
-    """
-    Convert DocRed vertexSet to BIO tags for all tokens in the document.
-
-    Args:
-        example: A single example from the DocRed dataset.
-
-    Returns:
-        list of BIO tags mathching the flattened token list
-    """
-    # Flatten all tokens in the document
-    all_tokens = [tok for sent in example['sents'] for tok in sent]
-    bio_tags = ['O'] * len(all_tokens)
-
-    # Calculate sentence offsets to map entity positions to flattened token list
-    global_offset = 0
-    sent_offsets = []
-    for sent in example['sents']:
-        sent_offsets.append(global_offset)
-        global_offset += len(sent)
-
-    # Iterate over each entity cluster
-    for entity_cluster in example['vertexSet']:
-        # All entities in the cluster share the same type
-        entity_type = entity_cluster[0]['type']
-
-        # Assign BIO tags for each entity in the cluster
-        for entity in entity_cluster:
-            sent_id = entity['sent_id']
-            start_pos, end_pos = entity['pos']
-
-            for i in range(start_pos, end_pos):
-                global_i = sent_offsets[sent_id] + i
-                prefix = 'B-' if i == start_pos else 'I-'
-                bio_tags[global_i] = f"{prefix}{entity_type}"
-
-    return bio_tags
-
 def json_safe_parse(text: str) -> list:
     """ Extract and parse JSON array safely from model output. """
     try:

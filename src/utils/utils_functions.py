@@ -1,10 +1,6 @@
 from typing import List, Dict, Tuple
-import re
-
-VALID_LABELS = {"PER", "LOC", "ORG", "MISC"}
-LABEL_PATTERN = "|".join(VALID_LABELS)
-# Create a regex pattern to extract the labeled spans from the generated text
-SPAN_RE = re.compile(rf"<SPAN><LABEL>({LABEL_PATTERN})</LABEL>(.*?)</SPAN>", re.DOTALL)
+import re, ast
+import statistics
 
 def generate_markup(
     model,
@@ -101,7 +97,7 @@ def generate_constrained_markup(
         clean_up_tokenization_spaces=False,
     )#.strip()
 
-def parse_entities_from_tagged_output(tagged_text: str) -> Dict:
+def parse_entities_from_tagged_output(tagged_text: str, valid_labels: set) -> Dict:
     """
     Parse <SPAN><LABEL>..</LABEL>entity</SPAN> blocks and return entities with char offsets,
     and the reconstructed text.
@@ -109,6 +105,10 @@ def parse_entities_from_tagged_output(tagged_text: str) -> Dict:
     cursor = 0
     plain_parts: List[str] = []
     entities: List[Dict] = []
+
+    # Create a regex pattern to extract the labeled spans from the generated text
+    LABEL_PATTERN = "|".join(valid_labels)
+    SPAN_RE = re.compile(rf"<SPAN><LABEL>({LABEL_PATTERN})</LABEL>(.*?)</SPAN>", re.DOTALL)
 
     for match in SPAN_RE.finditer(tagged_text):
         plain_parts.append(tagged_text[cursor:match.start()])
@@ -130,7 +130,7 @@ def parse_entities_from_tagged_output(tagged_text: str) -> Dict:
     plain_parts.append(tagged_text[cursor:])
     reconstructed_text = "".join(plain_parts)
 
-    invalid_labels = [ent for ent in entities if ent["label"] not in VALID_LABELS]
+    invalid_labels = [ent for ent in entities if ent["label"] not in valid_labels]
 
     return {
         "entities": entities,
@@ -152,7 +152,7 @@ def build_token_char_spans(tokens: List[str]) -> List[Tuple[int, int]]:
     return spans
 
 
-def entities_to_bio_tags(tokens: List[str], entities: List[Dict]) -> Tuple[List[str], int]:
+def entities_to_bio_tags(tokens: List[str], entities: List[Dict], valid_labels: set) -> Tuple[List[str], int]:
     """Convert entity char spans to token-level BIO tags for the same tokenization as input text."""
     token_spans = build_token_char_spans(tokens)
     tags = ["O"] * len(tokens)
@@ -161,7 +161,7 @@ def entities_to_bio_tags(tokens: List[str], entities: List[Dict]) -> Tuple[List[
     entities_sorted = sorted(entities, key=lambda x: (x["start"], x["end"]))
     for ent in entities_sorted:
         label = ent.get("label")
-        if label not in VALID_LABELS:
+        if label not in valid_labels:
             continue
 
         e_start = int(ent.get("start", -1))
@@ -197,3 +197,91 @@ def shorten_text(text: str, max_chars: int = 220) -> str:
     if len(text) <= max_chars:
         return text
     return text[: max_chars - 3] + "..."
+
+def tokenize_with_offsets(text: str) -> Tuple[List[int], List[Tuple[int, int]]]:
+    """Tokenize text by splitting on whitespace, and return both tokens and their character offsets."""
+    tokens, offsets = [] , []
+    i, n = 0, len(text)
+    while i < n:
+        if text[i].isspace():
+            i += 1
+            continue
+        j = i
+        while j < n and not text[j].isspace():
+            j += 1
+        tokens.append(text[i:j])
+        offsets.append((i, j))
+        i = j
+    return tokens, offsets
+
+def compute_character_f1(
+        gold_chars: set,
+        pred_chars: set,
+) -> Tuple[float, float, float]:
+    """Character-level precision, recall, and F1.
+
+    Follows Pavlopoulos et al. (ACL 2022):
+      P  = |pred ∩ gold| / |pred|
+      R  = |pred ∩ gold| / |gold|
+      F1 = 2·P·R / (P+R)
+
+    Special case (Pavlopoulos et al.): if gold is empty,
+      F1 = 1.0 when pred is also empty, F1 = 0.0 otherwise.
+
+    Returns (precision, recall, f1).
+    """
+    if not gold_chars:
+        return (1.0, 1.0, 1.0) if not pred_chars else (0.0, 0.0, 0.0)
+    if not pred_chars:
+        return (0.0, 0.0, 0.0)
+    inter = len(gold_chars & pred_chars)
+    p = inter / len(pred_chars)
+    r = inter / len(gold_chars)
+    f1 = 2 * p * r / (p + r) if (p + r) > 0 else 0.0
+    return p, r, f1
+
+def mean_std(values):
+    if not values:
+        return 0.0, 0.0
+    if len(values) == 1:
+        return values[0], 0.0
+    return statistics.mean(values), statistics.stdev(values)
+
+
+def to_pct(v): return v * 100.0
+def format_pm(m, s): return f"{m:.2f} ± {s:.2f}"
+
+# -------------------------
+# Span parsing helpers
+# -------------------------
+def parse_position(raw_position: str) -> List[int]:
+    """
+    Return a plain Python list of int char indices.
+    """
+    parsed = ast.literal_eval(raw_position)
+    return [int(x) for x in parsed]
+
+def chars_to_spans(char_indices: List[int]) -> List[Tuple[int, int]]:
+    """Merge sorted individual char indices into (start, end) tuples.
+
+    Examples:
+        [7, 8, 9, 10]           → [(7, 11)]
+        [0,1,2,3,4,5,15,16,17]  → [(0, 6), (15, 18)]
+    """
+    if not char_indices:
+        return []
+    indices = sorted(set(char_indices))
+    spans: List[Tuple[int, int]] = []
+    start = prev = indices[0]
+    for idx in indices[1:]:
+        if idx == prev + 1:
+            prev = idx
+        else:
+            spans.append((start, prev + 1))
+            start = prev = idx
+    spans.append((start, prev + 1))
+    return spans
+
+def example_to_tokens(text: str) -> List[str]:
+    tokens = text.split() if text else []
+    return tokens

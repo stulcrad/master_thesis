@@ -277,7 +277,7 @@ for model_name in MODEL_NAMES:
 results_df = pd.DataFrame(results)
 
 # Optional persistence
-results_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Constrained-Gen/Csv/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
+results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Constrained-Gen/Csv/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
 txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
 import os

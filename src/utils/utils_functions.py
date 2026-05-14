@@ -97,7 +97,7 @@ def generate_constrained_markup(
         clean_up_tokenization_spaces=False,
     )#.strip()
 
-def parse_entities_from_tagged_output(tagged_text: str, valid_labels: set) -> Dict:
+def parse_spans_from_tagged_output(tagged_text: str, valid_labels: set) -> Dict:
     """
     Parse <SPAN><LABEL>..</LABEL>entity</SPAN> blocks and return entities with char offsets,
     and the reconstructed text.
@@ -152,7 +152,7 @@ def build_token_char_spans(tokens: List[str]) -> List[Tuple[int, int]]:
     return spans
 
 
-def entities_to_bio_tags(tokens: List[str], entities: List[Dict], valid_labels: set) -> Tuple[List[str], int]:
+def spans_to_bio_tags(tokens: List[str], entities: List[Dict], valid_labels: set) -> Tuple[List[str], int]:
     """Convert entity char spans to token-level BIO tags for the same tokenization as input text."""
     token_spans = build_token_char_spans(tokens)
     tags = ["O"] * len(tokens)

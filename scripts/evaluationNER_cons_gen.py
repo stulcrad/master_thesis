@@ -10,7 +10,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from utils.utils_functions import (
     generate_markup, validate_reconstruction, 
-    entities_to_bio_tags, parse_entities_from_tagged_output,
+    spans_to_bio_tags, parse_spans_from_tagged_output,
     mean_std, to_pct, format_pm
 )
 from utils.TokTrie import build_toktrie_from_tokenizer
@@ -153,7 +153,7 @@ for model_name in MODEL_NAMES:
                             temperature=TEMPERATURE,
                         )
 
-                        parsed = parse_entities_from_tagged_output(generated, set(labels_for_constrained))
+                        parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
                         total_predictions += parsed["span_count"]
                         exact_copy_ok = validate_reconstruction(parsed["reconstructed_text"], input_text)
 
@@ -167,7 +167,7 @@ for model_name in MODEL_NAMES:
                             pred_tags = ["O"] * len(batch_tokens)
                             all_entities_wrongly_unaligned += parsed["span_count"]
                         else:
-                            pred_tags, unalign_count = entities_to_bio_tags(
+                            pred_tags, unalign_count = spans_to_bio_tags(
                                 tokens=batch_tokens,
                                 entities=parsed["entities"],
                                 valid_labels=set(labels_for_constrained),

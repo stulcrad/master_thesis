@@ -602,6 +602,7 @@ Only output the JSON array. No explanations, markdown, or extra text.
 
 SYSTEM_PROMPT_CONSTR_GEN_LEGALQA_TEMPLATE = """You are an expert at legal question answering. Given a legal passage, mark the span(s) that answer the following question and return the SAME passage text with inline span markup.
 
+You must answer the following question based on the passage sent to you as input.
 Question to answer: {question}
 
 There is one possible label:

@@ -124,7 +124,7 @@ def find_best_fuzzy_match(context:str, full_text:str, threshold: float = 0.7, ma
     else:
         return (None, None, 0.0)
 
-def assign_entities_from_context(full_text_tokens: list, entities: list, fuzzy: bool,
+def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: bool,
                                  fuzzy_threshold: float = 0.7, matching_type:str = 'anchor',
                                  return_stats: bool = False):
     """

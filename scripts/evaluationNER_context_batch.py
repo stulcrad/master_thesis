@@ -7,7 +7,7 @@ from openai import OpenAI
 from datasets import load_dataset
 import time
 from utils.context_matching_utils import (
-    json_safe_parse, assign_entities_from_context,
+    json_safe_parse, assign_spans_from_context,
 )
 from utils.utils_functions import (
     mean_std, to_pct, format_pm
@@ -157,7 +157,7 @@ for BATCH_SIZE in BATCH_SIZES:
                             print(f"Error processing batch: {e}")
                             pred_json = []
                         # Assign BIO tags based on predicted entities and contexts
-                        pred_tags, match_stats = assign_entities_from_context(
+                        pred_tags, match_stats = assign_spans_from_context(
                             batch_tokens,
                             pred_json,
                             fuzzy=FUZZY,

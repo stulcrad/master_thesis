@@ -32,14 +32,23 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
 
-        # Store the input text and its byte representation for tracking how much of the input has been copied so far.
-        self.input_text = input_text
-        self.input_bytes = input_text.encode("utf-8")
-        self.input_pos = 0 # to track the current byte position in the input text
 
         # Store the tokenizer and token trie for constraint logic.
         self.tokenizer = tokenizer
         self.toktrie = toktrie if toktrie is not None else build_toktrie_from_tokenizer(tokenizer)
+
+        # Store the input text and its byte representation for tracking how much of the input has been copied so far.
+        self.input_text = input_text
+        self.input_tokens = tokenizer.encode(input_text, add_special_tokens=False)
+        # Some input bytes may not be in the vocab, so we need to first encode the input text to tokens,
+        # then convert those tokens back to bytes and concatenate to get the full byte string of the input text.
+        self.input_bytes = b""
+        for token_id in self.input_tokens:
+            token_bytes = self.toktrie.token_id_to_bytes.get(token_id)
+            if token_bytes is not None:
+                self.input_bytes += token_bytes
+        # self.input_bytes = input_text.encode("utf-8")
+        self.input_pos = 0 # to track the current byte position in the input text
         
         # Runtime generation bookkeeping.
         self.STATE = "OUTSIDE"

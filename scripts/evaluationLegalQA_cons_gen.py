@@ -21,7 +21,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from utils.utils_functions import (
     generate_markup, validate_reconstruction,
-    entities_to_bio_tags, parse_entities_from_tagged_output,
+    spans_to_bio_tags, parse_spans_from_tagged_output,
     example_to_tokens,
     mean_std, to_pct, format_pm, compute_character_f1
 )
@@ -34,7 +34,7 @@ from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN_LEGALQA_TEMPLATE
 # Evaluation configuration
 # -------------------------
 MAX_EXAMPLES = 150
-N_ITERS = 5
+N_ITERS = 3
 EVAL_INTERVAL = 10
 BATCH_SIZE = 1
 
@@ -42,7 +42,7 @@ MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "meta-llama/Llama-3.1-8B
 
 DO_SAMPLES = [False, True]
 TEMPERATURE = 0.2
-MAX_NEW_TOKENS = 32578
+MAX_NEW_TOKENS = 30000
 
 EVAL_MODES = ["unconstrained", "constrained"]
 PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
@@ -152,7 +152,7 @@ for model_name in MODEL_NAMES:
                             temperature=TEMPERATURE,
                         )
 
-                        parsed = parse_entities_from_tagged_output(generated, set(labels_for_constrained))
+                        parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
                         total_predictions += parsed["span_count"]
                         exact_copy_ok = validate_reconstruction(
                             parsed["reconstructed_text"], input_text
@@ -165,12 +165,12 @@ for model_name in MODEL_NAMES:
                                     f"\n\n===== Warning in exp {exp_id+1}, "
                                     f"example {idx+1} ====="
                                 )
-                                print(f"Original:      {input_text[:120]!r}")
-                                print(f"Reconstructed: {parsed['reconstructed_text'][:120]!r}")
+                                print(f"Original:      {input_text}")
+                                print(f"Reconstructed: {parsed['reconstructed_text']}")
                             pred_tags = ["O"] * len(tokens)
                             all_entities_wrongly_unaligned += parsed["span_count"]
                         else:
-                            pred_tags, unalign_count = entities_to_bio_tags(
+                            pred_tags, unalign_count = spans_to_bio_tags(
                                 tokens=tokens,
                                 entities=parsed["entities"],
                                 valid_labels=set(labels_for_constrained),

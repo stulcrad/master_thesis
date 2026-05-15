@@ -34,7 +34,6 @@ if BATCH_SIZE > 5:
     EVAL_INTERVAL = 5
 
 MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
-# MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B']
 
 DO_SAMPLES = [False, True]
 TEMPERATURE = 0.2

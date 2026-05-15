@@ -266,7 +266,7 @@ for model_name in MODEL_NAMES:
 results_df = pd.DataFrame(results)
 
 results_path = (
-    f"/home/stulcrad/master_thesis/NER_results/ToxicSpans/Constrained-Gen/Csv/"
+    f"/home/stulcrad/master_thesis/Experiment_results/ToxicSpans/Constrained-Gen/Csv/"
     f"hf_all_configs_eval_{BATCH_SIZE}_BS_toxic_spans.csv"
 )
 txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")

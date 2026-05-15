@@ -80,8 +80,8 @@ for BATCH_SIZE in BATCH_SIZES:
         print(f"\nBATCH_SIZE: {BATCH_SIZE}")
         print(f"FUZZY mode: {FUZZY}, FUZZY_THRESHOLD: {FUZZY_THRESHOLD}\n")
 
-        txt_path = f"/home/stulcrad/master_thesis/NER_results/CoNLL/Context-Based/Txt/ner_document_context_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt" if not FUZZY else \
-            f"/home/stulcrad/master_thesis/NER_results/CoNLL/Context-Based/Txt/ner_document_context_fuzzy_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt"
+        txt_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Txt/ner_document_context_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt" if not FUZZY else \
+            f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Txt/ner_document_context_fuzzy_{BATCH_SIZE}_BATCHSZ_robust_prompt.txt"
 
         csv_path = txt_path.replace("/Txt/", "/Csv/").replace(".txt", ".csv")
 

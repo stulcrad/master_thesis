@@ -67,10 +67,10 @@ for FUZZY in FUZZY_MODES:
     print(f"\nFUZZY mode: {FUZZY}, threshold: {FUZZY_THRESHOLD}\n")
 
     txt_path = (
-        f"/home/stulcrad/master_thesis/NER_results/ToxicSpans/Context-Based/Txt/"
+        f"/home/stulcrad/master_thesis/Experiment_results/ToxicSpans/Context-Based/Txt/"
         f"toxic_spans_context_fuzzy.txt"
         if FUZZY else
-        f"/home/stulcrad/master_thesis/NER_results/ToxicSpans/Context-Based/Txt/"
+        f"/home/stulcrad/master_thesis/Experiment_results/ToxicSpans/Context-Based/Txt/"
         f"toxic_spans_context.txt"
     )
     csv_path = txt_path.replace("/Txt/", "/Csv/").replace(".txt", ".csv")

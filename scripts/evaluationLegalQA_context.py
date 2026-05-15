@@ -74,10 +74,10 @@ for FUZZY in FUZZY_MODES:
     print(f"\nFUZZY mode: {FUZZY}, FUZZY_THRESHOLD: {FUZZY_THRESHOLD}\n")
 
     txt_path = (
-        f"/home/stulcrad/master_thesis/NER_results/LegalQAEval/Context-Based/Txt/"
+        f"/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Context-Based/Txt/"
         f"legalqa_context_{BATCH_SIZE}_BATCHSZ.txt"
         if not FUZZY else
-        f"/home/stulcrad/master_thesis/NER_results/LegalQAEval/Context-Based/Txt/"
+        f"/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Context-Based/Txt/"
         f"legalqa_context_fuzzy_{BATCH_SIZE}_BATCHSZ.txt"
     )
     csv_path = txt_path.replace("/Txt/", "/Csv/").replace(".txt", ".csv")

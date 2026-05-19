@@ -44,8 +44,14 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
 
         # Runtime generation bookkeeping.
         self.STATE = "OUTSIDE"
-        self.seq_pos = 0 # to track which token in the current control block should come next
+        self.seq_pos = 0  # used only for SPAN_CLOSE sequencing
         self.prev_len = 0 # track the len of the generated seq
+
+        # Per-label position tracking for TAG_BLOCK disambiguation.
+        # Maps label -> current position within that label's open block token sequence.
+        # Blocks whose token doesn't match the emitted token are dropped immediately,
+        # preventing tokens from eliminated blocks from polluting the allowed set.
+        self.live_blocks: Optional[dict] = None
 
         # Tracks whether at least one copy token was emitted in the current span body.
         self.span_text_has_content = False
@@ -62,8 +68,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             label: tokenizer.encode(f"<SPAN><LABEL>{label}</LABEL>", add_special_tokens=False)
             for label in labels
         }
-        self.selected_label = None # to track which label block we are currently generating
-        self._active_blocks = self.label_open_blocks # to track which set of label blocks we are generating (with or without space)
+        self.selected_label = None  # set when entering SPAN_TEXT, not during TAG_BLOCK
+        self._active_blocks = self.label_open_blocks  # which variant (space / no-space) is active
 
         # End tokens accepted once all input tokens are fully consumed.
         self.eos_token_ids: Set[int] = set()
@@ -83,6 +89,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         self.input_token_ptr = 0
         self.input_token_byte_ptr = 0
         self.selected_label = None
+        self.live_blocks = None
         self.span_text_has_content = False
         self.prev_len = 0
         self._active_blocks = None
@@ -192,51 +199,39 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
                     )
                     return
                 self.STATE = "TAG_BLOCK"
-                self.seq_pos = 1
+                self.live_blocks = {label: 1 for label in self.labels}
                 self.selected_label = None
                 self._active_blocks = self.label_open_blocks
                 return
             if nospace_match:
                 self.STATE = "TAG_BLOCK"
-                self.seq_pos = 1
+                self.live_blocks = {label: 1 for label in self.labels}
                 self.selected_label = None
                 self._active_blocks = self.label_open_blocks_nospace
                 return
             return
 
         if self.STATE == "TAG_BLOCK":
-            # If the last emitted token matches exactly one token in all label blocks, we know that this block must be
-            # extended to the end of the block.
-            if self.selected_label is None:
-                matching_blocks = {
-                    label: block for label, block in self._active_blocks.items()
-                    if block and self.seq_pos < len(block) and token_id == block[self.seq_pos]
-                }
-                if len(matching_blocks) == 1:
-                    # Now we know which label block we are generating
-                    self.selected_label = next(iter(matching_blocks.keys()))
-                    self.seq_pos += 1
-                    return
-                else:
-                    # More matching blocks, so just advance the seq position
-                    self.seq_pos += 1
-            else:
-                # Should happen always since we only allow the next token in the selected block, but just in case we add this check
-                if token_id == self._active_blocks[self.selected_label][self.seq_pos]:
-                    self.seq_pos += 1
-                    if self.seq_pos == len(self._active_blocks[self.selected_label]):
-                        # We have reached the end of the selected block, so we start generating the span text
+            # Advance each live block if its next expected token matches the emitted token,
+            # and drop blocks that do not match. This prevents tokens from eliminated blocks
+            # (e.g. "ISC" from the MISC block after ">" was chosen instead of ">M") from
+            # appearing in the allowed set at subsequent steps.
+            new_live = {}
+            for label, pos in self.live_blocks.items():
+                block = self._active_blocks[label]
+                if pos < len(block) and block[pos] == token_id:
+                    new_pos = pos + 1
+                    if new_pos == len(block):
+                        # This label's open block is fully emitted: transition to SPAN_TEXT.
                         self.STATE = "SPAN_TEXT"
-                        self.selected_label = None
+                        self.selected_label = label
+                        self.live_blocks = None
                         self.seq_pos = 0
-                        # Spans must copy at least one token of content, so we can avoid loops
                         self.span_text_has_content = False
-                    return
-                else:
-                    # This should not happen in practice since we only allow the next token in the selected block,
-                    # but we add this check for safety to avoid index errors.
-                    print(f"Warning: {token_id} does not match expected token in selected block {self.selected_label} at position {self.seq_pos}")
-                    return
+                        return
+                    new_live[label] = new_pos
+            self.live_blocks = new_live
+            return
 
         if self.STATE == "SPAN_TEXT":
             # First check if the last emitted token is a copy token, and if so, consume it and advance the input position accordingly.
@@ -284,16 +279,13 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             return allowed
 
         if self.STATE == "TAG_BLOCK":
+            # Only allow the next token from blocks that are still live (consistent with
+            # tokens emitted so far). Eliminated blocks are already absent from live_blocks.
             allowed = set()
-            # If we have not yet disambiguated which label block we are generating, we allow any token that can be the next token in any of the label blocks
-            if self.selected_label is None:
-                for block in self._active_blocks.values():
-                    if block and self.seq_pos < len(block):
-                        allowed.add(block[self.seq_pos])
-            else:
-                # Now we know which label block we are generating, so only allow the next token in that specific block.
-                if self.seq_pos < len(self._active_blocks[self.selected_label]):
-                    allowed.add(self._active_blocks[self.selected_label][self.seq_pos])
+            for label, pos in self.live_blocks.items():
+                block = self._active_blocks[label]
+                if pos < len(block):
+                    allowed.add(block[pos])
             return allowed
 
         if self.STATE == "SPAN_TEXT":

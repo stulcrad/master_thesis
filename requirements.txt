@@ -1,0 +1,28 @@
+# Core ML / HuggingFace stack
+torch>=2.2.0
+transformers>=4.40.0
+datasets>=2.19.0
+huggingface_hub>=0.22.0
+evaluate>=0.4.0
+seqeval>=1.2.2
+
+# OpenAI-compatible client (used for Ollama API calls)
+openai>=1.25.0
+
+# Fuzzy string matching (context alignment)
+rapidfuzz>=3.6.0
+
+# Data / numerics
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Interactive notebooks
+jupyter>=1.0.0
+ipywidgets>=8.1.0
+
+# Plotting (Experiment_analysis notebook)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Utilities
+tqdm>=4.66.0

@@ -2,4 +2,5 @@ logs
 slurm
 thesis-latex
 .claude
+.vscode
 THESIS_REVIEW.md

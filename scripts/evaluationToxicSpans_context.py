@@ -104,6 +104,8 @@ for FUZZY in FUZZY_MODES:
                     entity_not_in_context_count = 0
                     fuzzy_helped_count = 0
                     exact_match_count = 0
+                    format_invalid_count = 0
+                    num_generations_count = 0
                     total_predictions = 0
 
                     for idx in tqdm(range(len(sampled)), file=sys.stdout,
@@ -119,6 +121,7 @@ for FUZZY in FUZZY_MODES:
                             char_r_per_post.append(cr)
                             continue
 
+                        num_generations_count += 1
                         post_text = " ".join(tokens)
 
                         try:
@@ -135,11 +138,11 @@ for FUZZY in FUZZY_MODES:
 
                             response = client.chat.completions.create(**req_kwargs)
                             content = response.choices[0].message.content.strip()
-                            pred_json = json_safe_parse(content)
+                            pred_json, json_parse_ok = json_safe_parse(content)
                             total_predictions += len(pred_json)
                         except Exception as e:
                             print(f"Error at example {idx}: {e}")
-                            pred_json = []
+                            pred_json, json_parse_ok = [], False
 
                         pred_tags, match_stats = assign_spans_from_context(
                             tokens,
@@ -147,6 +150,7 @@ for FUZZY in FUZZY_MODES:
                             fuzzy=FUZZY,
                             fuzzy_threshold=FUZZY_THRESHOLD,
                             matching_type="anchor",
+                            json_parse_ok=json_parse_ok,
                             return_stats=True,
                         )
 
@@ -154,6 +158,7 @@ for FUZZY in FUZZY_MODES:
                         entity_not_in_context_count += match_stats["entity_not_in_context"]
                         fuzzy_helped_count          += match_stats["fuzzy_helped"]
                         exact_match_count           += match_stats["exact_match"]
+                        format_invalid_count        += match_stats["format_invalid"]
 
                         # Character-level F1 (official metric)
                         _, orig_offsets = tokenize_with_offsets(example["text_of_post"])
@@ -185,7 +190,8 @@ for FUZZY in FUZZY_MODES:
                                 f"CtxMiss={context_not_in_input_count} "
                                 f"EntMiss={entity_not_in_context_count} "
                                 f"Fuzzy={fuzzy_helped_count} "
-                                f"Exact={exact_match_count} | "
+                                f"Exact={exact_match_count} "
+                                f"FmtInvalid={format_invalid_count} | "
                                 f"elapsed={elapsed/60:.1f}m",
                                 file=sys.stdout,
                             )
@@ -203,6 +209,8 @@ for FUZZY in FUZZY_MODES:
                         "fuzzy_helped_rate": fuzzy_helped_count / max(total_predictions, 1),
                         "exact_match":      exact_match_count,
                         "exact_match_rate": exact_match_count / max(total_predictions, 1),
+                        "format_invalid":      format_invalid_count,
+                        "format_invalid_rate": format_invalid_count / max(num_generations_count, 1),
                         "elapsed_minute": exp_duration,
                     })
             
@@ -217,6 +225,8 @@ for FUZZY in FUZZY_MODES:
                 fuz_rate_mean,fuz_rate_std= mean_std([m["fuzzy_helped_rate"] for m in exp_metrics])
                 exact_mean,   exact_std   = mean_std([m["exact_match"]      for m in exp_metrics])
                 exact_rate_mean,exact_rate_std = mean_std([m["exact_match_rate"] for m in exp_metrics])
+                fmt_invalid_mean,      fmt_invalid_std      = mean_std([m["format_invalid"]      for m in exp_metrics])
+                fmt_invalid_rate_mean, fmt_invalid_rate_std = mean_std([m["format_invalid_rate"] for m in exp_metrics])
                 elapsed_mean, elapsed_std = mean_std([m["elapsed_minute"]   for m in exp_metrics])
 
                 all_results.append({
@@ -249,6 +259,10 @@ for FUZZY in FUZZY_MODES:
                     "exact_match_std":      round(exact_std,   3),
                     "exact_match_rate_pct": round(to_pct(exact_rate_mean), 2),
                     "exact_match_rate_std": round(to_pct(exact_rate_std),  2),
+                    "format_invalid_avg":      round(fmt_invalid_mean,  3),
+                    "format_invalid_std":      round(fmt_invalid_std,   3),
+                    "format_invalid_rate_pct": round(to_pct(fmt_invalid_rate_mean), 2),
+                    "format_invalid_rate_std": round(to_pct(fmt_invalid_rate_std),  2),
                     "elapsed_minute_avg": round(elapsed_mean, 3),
                     "elapsed_minute_std": round(elapsed_std,  3),
                 })

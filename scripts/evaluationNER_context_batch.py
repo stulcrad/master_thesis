@@ -118,6 +118,8 @@ for BATCH_SIZE in BATCH_SIZES:
                     entity_not_in_context_count = 0
                     fuzzy_helped_count = 0
                     exact_match_count = 0
+                    format_invalid_count = 0
+                    num_generations_count = 0
                     total_predictions = 0
 
                     # Process dataset in batches
@@ -129,6 +131,8 @@ for BATCH_SIZE in BATCH_SIZES:
 
                         if len(batch) == 0:
                             continue
+
+                        num_generations_count += 1
 
                         batch_tokens = []
                         batch_gold_tags = []
@@ -151,11 +155,11 @@ for BATCH_SIZE in BATCH_SIZES:
 
                             response = client.chat.completions.create(**req_kwargs)
                             content = response.choices[0].message.content.strip()
-                            pred_json = json_safe_parse(content)
+                            pred_json, json_parse_ok = json_safe_parse(content)
                             total_predictions += len(pred_json)
                         except Exception as e:
                             print(f"Error processing batch: {e}")
-                            pred_json = []
+                            pred_json, json_parse_ok = [], False
                         # Assign BIO tags based on predicted entities and contexts
                         pred_tags, match_stats = assign_spans_from_context(
                             batch_tokens,
@@ -163,12 +167,14 @@ for BATCH_SIZE in BATCH_SIZES:
                             fuzzy=FUZZY,
                             fuzzy_threshold=FUZZY_THRESHOLD,
                             matching_type='anchor',
+                            json_parse_ok=json_parse_ok,
                             return_stats=True,
                         )
                         context_not_in_input_count += match_stats['context_not_in_input']
                         entity_not_in_context_count += match_stats['entity_not_in_context']
                         fuzzy_helped_count += match_stats['fuzzy_helped']
                         exact_match_count += match_stats['exact_match']
+                        format_invalid_count += match_stats['format_invalid']
 
                         # Collect true and predicted entities for evaluation
                         true_entities.append(batch_gold_tags)
@@ -189,7 +195,8 @@ for BATCH_SIZE in BATCH_SIZES:
                                 f"CtxMiss={context_not_in_input_count}, "
                                 f"EntMissInCtx={entity_not_in_context_count}, "
                                 f"FuzzyHelped={fuzzy_helped_count}, "
-                                f"Exact={exact_match_count} | "
+                                f"Exact={exact_match_count}, "
+                                f"FmtInvalid={format_invalid_count} | "
                                 f"Elapsed: {elapsed/60:.1f} min",
                                 file=sys.stdout,
                             )
@@ -211,6 +218,8 @@ for BATCH_SIZE in BATCH_SIZES:
                         "fuzzy_helped_rate": fuzzy_helped_count / max(total_predictions, 1),
                         "exact_match": exact_match_count,
                         "exact_match_rate": exact_match_count / max(total_predictions, 1),
+                        "format_invalid": format_invalid_count,
+                        "format_invalid_rate": format_invalid_count / max(num_generations_count, 1),
                         "elapsed_minute": exp_duration
                     })
 
@@ -241,6 +250,8 @@ for BATCH_SIZE in BATCH_SIZES:
                 fuzzy_helped_rate_mean, fuzzy_helped_rate_std = mean_std([m["fuzzy_helped_rate"] for m in exp_metrics])
                 exact_match_mean, exact_match_std =             mean_std([m["exact_match"] for m in exp_metrics])
                 exact_match_rate_mean, exact_match_rate_std =   mean_std([m["exact_match_rate"] for m in exp_metrics])
+                format_invalid_mean, format_invalid_std =             mean_std([m["format_invalid"] for m in exp_metrics])
+                format_invalid_rate_mean, format_invalid_rate_std =   mean_std([m["format_invalid_rate"] for m in exp_metrics])
                 elapsed_mean, elapsed_std =                     mean_std([m["elapsed_minute"] for m in exp_metrics])
 
                 all_results.append({
@@ -281,6 +292,11 @@ for BATCH_SIZE in BATCH_SIZES:
                     "exact_match_rate_pct":     round(to_pct(exact_match_rate_mean), 2),
                     "exact_match_rate_std_pct": round(to_pct(exact_match_rate_std), 2),
                     "exact_match_rate_report":  format_pm(to_pct(exact_match_rate_mean), to_pct(exact_match_rate_std)),
+                    "format_invalid_avg":          round(format_invalid_mean, 3),
+                    "format_invalid_std":          round(format_invalid_std, 3),
+                    "format_invalid_rate_pct":     round(to_pct(format_invalid_rate_mean), 2),
+                    "format_invalid_rate_std_pct": round(to_pct(format_invalid_rate_std), 2),
+                    "format_invalid_rate_report":  format_pm(to_pct(format_invalid_rate_mean), to_pct(format_invalid_rate_std)),
                     "elapsed_minute_avg":       round(elapsed_mean, 3),
                     "elapsed_minute_std":       round(elapsed_std, 3)
                 })

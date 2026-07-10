@@ -1,14 +1,29 @@
 import json
 from rapidfuzz import fuzz
 
-def json_safe_parse(text: str) -> list:
-    """ Extract and parse JSON array safely from model output. """
+def json_safe_parse(text: str) -> tuple:
+    """
+    Extract and parse a JSON array from model output.
+
+    Returns:
+        (parsed, ok): `parsed` is the parsed list (empty on failure, or when
+        the model validly predicted zero entities). `ok` is False only when
+        the output could not be parsed into a JSON list at all -- no `[...]`
+        array present, malformed JSON, or the parsed value isn't a list.
+        `ok=True, parsed=[]` means the model validly predicted zero entities;
+        this is NOT a format failure and must not be conflated with `ok=False`.
+    """
     try:
         start = text.find("[")
         end = text.rfind("]") + 1
-        return json.loads(text[start:end])
+        if start == -1 or end <= start:
+            return [], False
+        parsed = json.loads(text[start:end])
+        if not isinstance(parsed, list):
+            return [], False
+        return parsed, True
     except Exception:
-        return []
+        return [], False
 
 
 def find_best_fuzzy_match(context:str, full_text:str, threshold: float = 0.7, matching_type:str = 'anchor') -> tuple:
@@ -126,7 +141,7 @@ def find_best_fuzzy_match(context:str, full_text:str, threshold: float = 0.7, ma
 
 def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: bool,
                                  fuzzy_threshold: float = 0.7, matching_type:str = 'anchor',
-                                 return_stats: bool = False):
+                                 json_parse_ok: bool = True, return_stats: bool = False):
     """
     Assign BIO tags to tokens based on extracted entities with context.
 
@@ -136,10 +151,21 @@ def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: boo
         fuzzy (bool): Whether to use fuzzy matching for context.
         fuzzy_threshold (float): Similarity threshold for fuzzy matching.
         matching_type (str): Type of fuzzy matching to use: 'anchor', 'partial', 'full'.
-        
+        json_parse_ok (bool): Whether the raw model output parsed into a valid
+            JSON list at all (see json_safe_parse). Feeds into stats['format_invalid']
+            alongside per-entity key checks, so a fully unparseable generation is
+            distinguished from one that validly predicted zero entities.
+
     Returns:
         list: BIO tags corresponding to full_text_tokens.
         tuple(list, dict): When return_stats=True, also returns matching outcome counters.
+
+    stats['format_invalid'] is a single per-generation 0/1 flag (1 if the top-level
+    JSON failed to parse, OR at least one entity object was individually malformed),
+    directly comparable across methods -- e.g. against a grammar-constrained baseline
+    (xgrammar/Outlines), which should force this to 0 by construction, or against the
+    constrained-generation wrong-text rate. This is distinct from stats['invalid_entity_format'],
+    which counts individually malformed entity objects within an otherwise-parseable array.
     """
     tags = ['O'] * len(full_text_tokens)
     full_text_str = " ".join(full_text_tokens)
@@ -148,6 +174,7 @@ def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: boo
         'processed_entities': 0,
         'successful_entities': 0,
         'invalid_entity_format': 0,
+        'format_invalid': 0,
         'context_not_in_input': 0,
         'entity_not_in_context': 0,
         'fuzzy_helped': 0,
@@ -229,6 +256,8 @@ def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: boo
             stats['fuzzy_helped'] += 1
         else:
             stats['exact_match'] += 1
+
+    stats['format_invalid'] = 1 if (not json_parse_ok or stats['invalid_entity_format'] > 0) else 0
 
     if return_stats:
         return tags, stats

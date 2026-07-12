@@ -105,6 +105,7 @@ for FUZZY in FUZZY_MODES:
                     fuzzy_helped_count = 0
                     exact_match_count = 0
                     format_invalid_count = 0
+                    invalid_label_count = 0
                     num_generations_count = 0
                     total_predictions = 0
 
@@ -159,6 +160,7 @@ for FUZZY in FUZZY_MODES:
                         fuzzy_helped_count          += match_stats["fuzzy_helped"]
                         exact_match_count           += match_stats["exact_match"]
                         format_invalid_count        += match_stats["format_invalid"]
+                        invalid_label_count          += match_stats["invalid_label_count"]
 
                         # Character-level F1 (official metric)
                         _, orig_offsets = tokenize_with_offsets(example["text_of_post"])
@@ -211,6 +213,8 @@ for FUZZY in FUZZY_MODES:
                         "exact_match_rate": exact_match_count / max(total_predictions, 1),
                         "format_invalid":      format_invalid_count,
                         "format_invalid_rate": format_invalid_count / max(num_generations_count, 1),
+                        "invalid_label_count":      invalid_label_count,
+                        "invalid_label_rate": invalid_label_count / max(total_predictions, 1),
                         "elapsed_minute": exp_duration,
                     })
             
@@ -227,6 +231,8 @@ for FUZZY in FUZZY_MODES:
                 exact_rate_mean,exact_rate_std = mean_std([m["exact_match_rate"] for m in exp_metrics])
                 fmt_invalid_mean,      fmt_invalid_std      = mean_std([m["format_invalid"]      for m in exp_metrics])
                 fmt_invalid_rate_mean, fmt_invalid_rate_std = mean_std([m["format_invalid_rate"] for m in exp_metrics])
+                invalid_label_mean,      invalid_label_std      = mean_std([m["invalid_label_count"]      for m in exp_metrics])
+                invalid_label_rate_mean, invalid_label_rate_std = mean_std([m["invalid_label_rate"] for m in exp_metrics])
                 elapsed_mean, elapsed_std = mean_std([m["elapsed_minute"]   for m in exp_metrics])
 
                 all_results.append({
@@ -263,6 +269,10 @@ for FUZZY in FUZZY_MODES:
                     "format_invalid_std":      round(fmt_invalid_std,   3),
                     "format_invalid_rate_pct": round(to_pct(fmt_invalid_rate_mean), 2),
                     "format_invalid_rate_std": round(to_pct(fmt_invalid_rate_std),  2),
+                    "invalid_label_avg":      round(invalid_label_mean,  3),
+                    "invalid_label_std":      round(invalid_label_std,   3),
+                    "invalid_label_rate_pct": round(to_pct(invalid_label_rate_mean), 2),
+                    "invalid_label_rate_std": round(to_pct(invalid_label_rate_std),  2),
                     "elapsed_minute_avg": round(elapsed_mean, 3),
                     "elapsed_minute_std": round(elapsed_std,  3),
                 })

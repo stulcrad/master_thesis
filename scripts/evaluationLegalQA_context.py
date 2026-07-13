@@ -160,6 +160,7 @@ for FUZZY in FUZZY_MODES:
                         tokens,
                         pred_json,
                         fuzzy=FUZZY,
+                        valid_labels={"ANSWER"},
                         fuzzy_threshold=FUZZY_THRESHOLD,
                         matching_type="anchor",
                         json_parse_ok=json_parse_ok,

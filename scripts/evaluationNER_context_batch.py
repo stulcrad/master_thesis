@@ -166,6 +166,7 @@ for BATCH_SIZE in BATCH_SIZES:
                             batch_tokens,
                             pred_json,
                             fuzzy=FUZZY,
+                            valid_labels={"PER", "ORG", "LOC", "MISC"},
                             fuzzy_threshold=FUZZY_THRESHOLD,
                             matching_type='anchor',
                             json_parse_ok=json_parse_ok,

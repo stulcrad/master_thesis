@@ -149,6 +149,7 @@ def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: boo
         full_text_tokens (list): List of tokens from the full text.
         entities (list): List of dicts from LLM output {"entity": ..., "label": ..., "context": ...}
         fuzzy (bool): Whether to use fuzzy matching for context.
+        valid_labels (set): Set of valid entity labels.
         fuzzy_threshold (float): Similarity threshold for fuzzy matching.
         matching_type (str): Type of fuzzy matching to use: 'anchor', 'partial', 'full'.
         json_parse_ok (bool): Whether the raw model output parsed into a valid

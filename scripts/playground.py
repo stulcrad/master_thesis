@@ -22,9 +22,6 @@ from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
 from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN_TOXIC_SPANS
 
-from huggingface_hub import login
-login(token="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")
-
 N_ITERS = 1
 EVAL_INTERVAL = 10
 BATCH_SIZE = 1
@@ -206,7 +203,7 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                 )
 
-                        generated = generate_markup(
+                        generated, _num_output_tokens, _generation_seconds = generate_markup(
                             model=model,
                             tokenizer=tokenizer,
                             processor=processor,

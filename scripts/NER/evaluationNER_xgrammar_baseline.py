@@ -1,3 +1,17 @@
+"""
+Grammar-constrained baseline for the context-based approach (xgrammar).
+
+Reuses generate_markup() / generate_constrained_markup() completely unchanged:
+any HF-compatible LogitsProcessor can be passed as `processor` with
+eval_model="constrained"
+
+Isolate "format enforcement" from "verbatim grounding". The JSON schema below constrains
+`label` to an ENUM of the valid classes, so BOTH format_invalid and invalid_label_rate
+should be ~0 by construction.
+
+Logs JSONL per-example predictions (one line per generation) for paired significance tests
+and post-hoc metrics without re-running.
+"""
 import sys
 import time
 import json as json_module
@@ -9,25 +23,13 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig
 import xgrammar as xgr
 
-from utils.system_prompts import SYSTEM_PROMPT_CONTEXT
+from utils.system_prompts import SYSTEM_PROMPT_CONTEXT_MD
 from utils.context_matching_utils import json_safe_parse, assign_spans_from_context
-from utils.utils_functions import generate_markup, mean_std, to_pct, format_pm
+from utils.utils_functions import generate_markup, mean_std, to_pct, format_pm, open_jsonl_writer, log_jsonl
 
-# ---------------------------------------------------------------------------
-# Grammar-constrained baseline for the context-based approach (xgrammar).
-#
-# Reuses generate_markup() / generate_constrained_markup() completely unchanged:
-# any HF-compatible LogitsProcessor can be passed as `processor` with
-# eval_model="constrained"
-#
-# Purpose: isolate "format enforcement" from "verbatim grounding". The JSON
-# schema below constrains `label` to an ENUM of the valid classes, so BOTH
-# format_invalid and invalid_label_rate should be ~0 by construction.
-# context_not_in_input / entity_not_in_context are NOT constrained by any grammar
-# (a grammar cannot express "this string must be a substring of some other, externally supplied
-# text"), so those should still be nonzero whenever the model hallucinates
-# content. That contrast is the whole point of this baseline.
-# ---------------------------------------------------------------------------
+# Per-example predictions (JSONL, one line per generation) -- required for
+# paired significance tests and post-hoc metrics without re-running.
+PRED_DIR = "/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Predictions"
 
 id2label = {
     0: 'O', 1: 'B-PER', 2: 'I-PER', 3: 'B-ORG', 4: 'I-ORG',
@@ -40,22 +42,22 @@ seqeval = evaluate.load("seqeval")
 # Same sampling protocol as HF_context.ipynb, so the three context-based
 # variants (Ollama / HF unconstrained / HF+xgrammar) are directly comparable
 # on identical sampled sentences.
-MAX_EXAMPLES = 1280
+MAX_EXAMPLES = None
 N_ITERS = 1
 EVAL_INTERVAL = 10
 BATCH_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-if BATCH_SIZE > 5:
-    EVAL_INTERVAL = 5
+# if BATCH_SIZE > 5:
+#     EVAL_INTERVAL = 5
 FUZZY_THRESHOLD = 0.6
 
-DO_SAMPLE = True
+DO_SAMPLE = False
 TEMPERATURE = 0.2
 MAX_NEW_TOKENS = 32578
 
 MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
 
 # Single prompt variant
-SYSTEM_PROMPT = SYSTEM_PROMPT_CONTEXT
+SYSTEM_PROMPT = SYSTEM_PROMPT_CONTEXT_MD
 
 # JSON schema: same {entity, label, context} shape the free-form prompts
 # already ask for, with `label` constrained to an enum so format AND label
@@ -102,15 +104,19 @@ for model_name in MODEL_NAMES:
     compiled_grammar = grammar_compiler.compile_json_schema(ENTITY_LIST_SCHEMA)
 
     system_prompt = SYSTEM_PROMPT
-    if "qwen" in model_name.lower():
-        system_prompt += "\n\\no_think"
+
+    model_short = model_name.split("/")[-1]
+    pred_fh = open_jsonl_writer(f"{PRED_DIR}/grammar_xgrammar_{model_short}_bs{BATCH_SIZE}.jsonl")
 
     exp_metrics = []
 
     for exp_id in range(N_ITERS):
         print(f"\n--- Running experiment {exp_id + 1}/{N_ITERS} ---\n")
 
-        sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
+        if MAX_EXAMPLES is None:
+            sampled_dataset = dataset
+        else:
+            sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
 
         start_time = time.time()
 
@@ -150,7 +156,7 @@ for model_name in MODEL_NAMES:
             xgr_processor = xgr.contrib.hf.LogitsProcessor(compiled_grammar)
 
             try:
-                content = generate_markup(
+                content, num_output_tokens, generation_seconds = generate_markup(
                     model=model,
                     tokenizer=tokenizer,
                     processor=xgr_processor,
@@ -160,11 +166,14 @@ for model_name in MODEL_NAMES:
                     max_new_tokens=MAX_NEW_TOKENS,
                     do_sample=DO_SAMPLE,
                     temperature=TEMPERATURE,
-                ).strip()
+                )
+                content = content.strip()
                 pred_json, json_parse_ok = json_safe_parse(content)
                 total_predictions += len(pred_json)
             except Exception as e:
                 print(f"Error processing batch: {e}")
+                content = ""
+                num_output_tokens, generation_seconds = 0, 0.0
                 pred_json, json_parse_ok = [], False
 
             # Compute BOTH exact and fuzzy stats from this single generation (a paired comparison)
@@ -194,6 +203,25 @@ for model_name in MODEL_NAMES:
             invalid_label_count += match_stats['invalid_label_count']
 
             true_entities.append(batch_gold_tags)
+
+            log_jsonl(pred_fh, {
+                "key": f"{42 + exp_id}:{batch_idx}",
+                "dataset": "conll2003",
+                "method": "xgrammar_json_schema",
+                "model": model_name,
+                "batch_size": BATCH_SIZE,
+                "seed": 42 + exp_id,
+                "batch_idx": batch_idx,
+                "input_text": full_text,
+                "gold_tags": batch_gold_tags,
+                "pred_tags_exact": pred_entities_exact[-1],
+                "pred_tags_fuzzy": pred_entities_fuzzy[-1],
+                "raw_output": content,
+                "format_invalid": match_stats['format_invalid'],
+                "invalid_label_count": match_stats['invalid_label_count'],
+                "num_output_tokens": num_output_tokens,
+                "generation_seconds": generation_seconds,
+            })
 
             if (batch_idx + 1) % EVAL_INTERVAL == 0:
                 metrics_partial = seqeval.compute(
@@ -238,6 +266,8 @@ for model_name in MODEL_NAMES:
                 "invalid_label_rate": invalid_label_count / max(total_predictions, 1),
                 "elapsed_minute": exp_duration,
             })
+
+    pred_fh.close()
 
     del model
     if torch.cuda.is_available():

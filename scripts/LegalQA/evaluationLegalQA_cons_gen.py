@@ -1,5 +1,5 @@
 """
-Constrained generation evaluation on Toxic Spans dataset, with two types of constrained decoding:
+Constrained generation evaluation on isaacus/LegalQAEval dataset, with two types of constrained decoding:
 - "whole_sequence"
 - "token_aware"
 
@@ -20,45 +20,41 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from utils.utils_functions import (
-    generate_markup, validate_reconstruction, 
+    generate_markup, validate_reconstruction,
     spans_to_bio_tags, parse_spans_from_tagged_output,
-    mean_std, to_pct, format_pm,
-    compute_character_f1,
-    parse_position, example_to_tokens,
+    example_to_tokens,
+    mean_std, to_pct, format_pm, compute_character_f1,
+    chars_to_spans, open_jsonl_writer, log_jsonl,
 )
 from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
-from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN_TOXIC_SPANS
-
-from huggingface_hub import login
-login(token="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")
+from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN_LEGALQA_TEMPLATE
 
 # -------------------------
 # Evaluation configuration
 # -------------------------
-MAX_EXAMPLES = 150
-N_ITERS = 5
-EVAL_INTERVAL = 10
+MAX_EXAMPLES = None
+N_ITERS = 1
+EVAL_INTERVAL = 100
 BATCH_SIZE = 1
 
 MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "meta-llama/Llama-3.1-8B-Instruct"]
 
-DO_SAMPLES = [False, True]
+DO_SAMPLES = [False]
 TEMPERATURE = 0.2
-MAX_NEW_TOKENS = 32578
+MAX_NEW_TOKENS = 30000
 
 EVAL_MODES = ["unconstrained", "constrained"]
 PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
 
-# Single label for the constrained processor
-labels_for_constrained = ["TOXIC"]
+labels_for_constrained = ["ANSWER"]
 
 # -------------------------
 # Load dataset
 # -------------------------
-print("Loading heegyu/toxic-spans test split...")
-raw = load_dataset("heegyu/toxic-spans", split="test")
+print("Loading isaacus/LegalQAEval test split...")
+raw = load_dataset("isaacus/LegalQAEval", split="test")
 print(f"Examples in test split: {len(raw)}")
 
 print(f"Max examples per iteration: {MAX_EXAMPLES}")
@@ -71,11 +67,8 @@ for model_name in MODEL_NAMES:
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="auto",
-        torch_dtype="auto",
+        torch_dtype='auto',
     )
-
-    batch_size = BATCH_SIZE
-    print(f"Batch size: {batch_size}")
 
     for do_sample in DO_SAMPLES:
         sampling_strategy = 'sampling' if do_sample else 'greedy'
@@ -88,49 +81,66 @@ for model_name in MODEL_NAMES:
                 config_label = processor_class if processor_class is not None else "n/a"
                 print(
                     f"\nEvaluating model={model_name}, strategy={sampling_strategy}, "
-                    f"mode={eval_mode}, processor_class={config_label}, batch_size={batch_size}"
+                    f"mode={eval_mode}, processor_class={config_label}, "
+                    f"batch_size={BATCH_SIZE}"
+                )
+
+                model_short = model_name.split("/")[-1]
+                pred_fh = open_jsonl_writer(
+                    f"/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Constrained-Gen/Predictions/"
+                    f"legalqa_{model_short}_{sampling_strategy}_{eval_mode}_{config_label}.jsonl"
                 )
 
                 for exp_id in range(N_ITERS):
-                    sampled = raw.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
+                    if MAX_EXAMPLES is None:
+                        sampled = raw
+                    else:
+                        sampled = raw.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
 
                     start_time = time.time()
-                    # Metrics for counting generation errors
                     wrong_text_count = 0
                     all_entities_wrongly_unaligned = 0
                     unaligned_entity_count = 0
                     total_predictions = 0
-                    # Metrics per post
                     char_f1_per_post: List[float] = []
                     char_p_per_post:  List[float] = []
                     char_r_per_post:  List[float] = []
-                    
+
                     toktrie = None
                     if eval_mode == "constrained":
                         toktrie = build_toktrie_from_tokenizer(tokenizer)
 
                     for idx in tqdm(range(len(sampled)),
-                                          desc=f"exp {exp_id+1}/{N_ITERS}", file=sys.stdout):
+                                    desc=f"exp {exp_id+1}/{N_ITERS}", file=sys.stdout):
                         example = sampled[idx]
-                        tokens = example_to_tokens(example['text_of_post'])
+                        tokens = example_to_tokens(example['text'])
 
-                        # Handle edge case of empty input text (all spaces or empty string)
                         if not tokens:
-                            gold_chars = set(parse_position(example["position"]))
+                            gold_chars: set = set()
+                            for a in example["answers"]:
+                                gold_chars.update(range(a["start"], a["end"]))
                             cp, cr, cf = compute_character_f1(gold_chars, set())
                             char_f1_per_post.append(cf)
                             char_p_per_post.append(cp)
                             char_r_per_post.append(cr)
                             continue
 
+                        # passage text fed to the constrained processor / model
                         input_text = " ".join(tokens)
 
+                        # Build per-example system prompt embedding the question
+                        system_prompt = SYSTEM_PROMPT_CONSTR_GEN_LEGALQA_TEMPLATE.format(
+                            question=example["question"]
+                        )
+
                         processor = None
-                        if eval_mode == 'constrained':
-                            if processor_class == 'token_aware':
+                        if eval_mode == "constrained":
+                            if processor_class == "token_aware":
                                 processor = TrieSpanConstrainedProcessorTokenAware(
-                                    labels_for_constrained, input_text,
-                                    tokenizer, toktrie
+                                    labels_for_constrained,
+                                    input_text,
+                                    tokenizer,
+                                    toktrie,
                                 )
                             else:
                                 processor = TrieSpanConstrainedProcessor(
@@ -140,48 +150,81 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                 )
 
-                        generated = generate_markup(
+                        generated, num_output_tokens, generation_seconds = generate_markup(
                             model=model,
                             tokenizer=tokenizer,
                             processor=processor,
                             eval_model=eval_mode,
                             input_text=input_text,
-                            system_prompt=SYSTEM_PROMPT_CONSTR_GEN_TOXIC_SPANS,
+                            system_prompt=system_prompt,
                             max_new_tokens=MAX_NEW_TOKENS,
                             do_sample=do_sample,
                             temperature=TEMPERATURE,
                         )
-                        
+
                         parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
-                        total_predictions += parsed['span_count']
-                        exact_copy_ok = validate_reconstruction(parsed['reconstructed_text'], input_text)
+                        total_predictions += parsed["span_count"]
+                        exact_copy_ok = validate_reconstruction(
+                            parsed["reconstructed_text"], input_text
+                        )
 
                         if not exact_copy_ok:
                             wrong_text_count += 1
-                            if eval_mode == 'constrained':
-                                print(f"\n\n===== Warning in exp {exp_id+1}, example {idx+1} =====")
-                                print(f"Original:      {input_text[:120]!r}")
-                                print(f"Reconstructed: {parsed['reconstructed_text'][:120]!r}")
+                            if eval_mode == "constrained":
+                                print(
+                                    f"\n\n===== Warning in exp {exp_id+1}, "
+                                    f"example {idx+1} ====="
+                                )
+                                print(f"Original:      {input_text}")
+                                print(f"Reconstructed: {parsed['reconstructed_text']}")
                             pred_tags = ["O"] * len(tokens)
                             all_entities_wrongly_unaligned += parsed["span_count"]
                         else:
                             pred_tags, unalign_count = spans_to_bio_tags(
                                 tokens=tokens,
-                                entities=parsed['entities'],
+                                entities=parsed["entities"],
                                 valid_labels=set(labels_for_constrained),
                             )
                             unaligned_entity_count += unalign_count
                             all_entities_wrongly_unaligned += unalign_count
-
+                        
+                        
+                        # Character-level F1 (primary metric)
                         pred_chars: set = set()
                         if exact_copy_ok:
                             for ent in parsed['entities']:
-                                pred_chars.update(range(ent["start"], ent["end"]))
-                        gold_chars = set(parse_position(example["position"]))
+                                pred_chars.update(range(ent['start'], ent['end']))
+                        gold_chars = set()
+                        for a in example["answers"]:
+                            gold_chars.update(range(a["start"], a["end"]))
                         cp, cr, cf = compute_character_f1(gold_chars, pred_chars)
                         char_f1_per_post.append(cf)
                         char_p_per_post.append(cp)
                         char_r_per_post.append(cr)
+
+                        log_jsonl(pred_fh, {
+                            "key": f"{42 + exp_id}:{idx}",
+                            "dataset": "legalqa_eval",
+                            "method": "constrained_gen",
+                            "model": model_name,
+                            "sampling_strategy": sampling_strategy,
+                            "eval_mode": eval_mode,
+                            "processor_class": config_label,
+                            "seed": 42 + exp_id,
+                            "example_idx": idx,
+                            "question": example["question"],
+                            "input_text": input_text,
+                            "gold_spans": chars_to_spans(sorted(gold_chars)),
+                            "pred_spans": chars_to_spans(sorted(pred_chars)),
+                            "char_precision": cp,
+                            "char_recall": cr,
+                            "char_f1": cf,
+                            "raw_output": generated,
+                            "wrong_text": 0 if exact_copy_ok else 1,
+                            "span_count": parsed["span_count"],
+                            "num_output_tokens": num_output_tokens,
+                            "generation_seconds": generation_seconds,
+                        })
 
                         if (idx + 1) % EVAL_INTERVAL == 0:
                             elapsed = (time.time() - start_time) / 60.0
@@ -212,6 +255,9 @@ for model_name in MODEL_NAMES:
                         "elapsed_minute": elapsed_min,
                     })
 
+                # Aggregate metrics across iterations
+                pred_fh.close()
+
                 char_f1_mean, char_f1_std = mean_std([m["char_f1"]        for m in exp_metrics])
                 char_p_mean,  char_p_std  = mean_std([m["char_precision"]  for m in exp_metrics])
                 char_r_mean,  char_r_std  = mean_std([m["char_recall"]     for m in exp_metrics])
@@ -231,29 +277,17 @@ for model_name in MODEL_NAMES:
                     "processor_class":    config_label,
                     "batch_size":         BATCH_SIZE,
                     "n_iters":            N_ITERS,
-                    "char_f1_pct":              round(to_pct(char_f1_mean), 2),
-                    "char_f1_std_pct":          round(to_pct(char_f1_std),  2),
                     "char_f1_report":           format_pm(to_pct(char_f1_mean), to_pct(char_f1_std)),
-                    "char_precision_pct":       round(to_pct(char_p_mean), 2),
-                    "char_precision_std_pct":   round(to_pct(char_p_std),  2),
                     "char_precision_report":    format_pm(to_pct(char_p_mean), to_pct(char_p_std)),
-                    "char_recall_pct":          round(to_pct(char_r_mean), 2),
-                    "char_recall_std_pct":      round(to_pct(char_r_std),  2),
                     "char_recall_report":       format_pm(to_pct(char_r_mean), to_pct(char_r_std)),
                     "wrong_text_count_avg":     round(wt_mean,  3),
                     "wrong_text_count_std":     round(wt_std,   3),
-                    "wrong_text_rate_pct":      round(to_pct(wt_rate_mean), 2),
-                    "wrong_text_rate_std_pct":  round(to_pct(wt_rate_std),  2),
                     "wrong_text_rate_report":   format_pm(to_pct(wt_rate_mean), to_pct(wt_rate_std)),
                     "unaligned_entity_count_avg":    round(ua_mean,  3),
                     "unaligned_entity_count_std":    round(ua_std,   3),
-                    "unaligned_entity_rate_pct":     round(to_pct(ua_rate_mean), 2),
-                    "unaligned_entity_rate_std_pct": round(to_pct(ua_rate_std),  2),
                     "unaligned_entity_rate_report":  format_pm(to_pct(ua_rate_mean), to_pct(ua_rate_std)),
                     "all_entities_wrongly_unaligned_avg":     round(aau_mean,  3),
                     "all_entities_wrongly_unaligned_std":     round(aau_std,   3),
-                    "all_entities_wrongly_unaligned_rate_pct":     round(to_pct(aau_rate_mean), 2),
-                    "all_entities_wrongly_unaligned_rate_std_pct": round(to_pct(aau_rate_std),  2),
                     "all_entities_wrongly_unaligned_rate_report":  format_pm(to_pct(aau_rate_mean), to_pct(aau_rate_std)),
                     "elapsed_minute_avg": round(elapsed_mean, 3),
                     "elapsed_minute_std": round(elapsed_std,  3),
@@ -263,11 +297,12 @@ for model_name in MODEL_NAMES:
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
+
 results_df = pd.DataFrame(results)
 
 results_path = (
-    f"/home/stulcrad/master_thesis/Experiment_results/ToxicSpans/Constrained-Gen/Csv/"
-    f"hf_all_configs_eval_{BATCH_SIZE}_BS_toxic_spans.csv"
+    f"/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Constrained-Gen/Csv/"
+    f"hf_all_configs_eval_{BATCH_SIZE}_BS_legalqa.csv"
 )
 txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 

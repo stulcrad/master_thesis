@@ -1,6 +1,26 @@
 from typing import List, Dict, Tuple
 import re, ast
+import json
+import os
 import statistics
+import time
+
+
+def open_jsonl_writer(path: str):
+    """Open a per-example predictions JSONL file (one line per generation).
+
+    Truncates any existing file: one file corresponds to one full run of one
+    experiment config (all seeds; the per-line `seed` field disambiguates).
+    """
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    return open(path, "w", encoding="utf-8")
+
+
+def log_jsonl(fh, record: dict) -> None:
+    """Write one prediction record and flush immediately, so a crashed run
+    keeps every example logged up to the crash."""
+    fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+    fh.flush()
 
 def generate_markup(
     model,
@@ -12,8 +32,16 @@ def generate_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
-) -> str:
-    """Generate tagged text using either constrained or unconstrained decoding."""
+) -> Tuple[str, int, float]:
+    """Generate tagged text using either constrained or unconstrained decoding.
+
+    Returns (text, num_output_tokens, generation_seconds). num_output_tokens
+    is the exact count of newly generated token ids (from the same slice used
+    to decode `text`), not a re-tokenization of the returned string -- decode
+    then re-encode can drift by a token or two on some tokenizers, so this
+    counts the ids actually produced by generate(). generation_seconds times
+    only the model.generate() call itself, excluding tokenization/templating.
+    """
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": input_text},
@@ -54,22 +82,25 @@ def generate_unconstrained_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
-) -> str:
+) -> Tuple[str, int, float]:
     """Generate unconstrained tagged text using a HF model + tokenizer."""
 
+    start = time.perf_counter()
     outputs = model.generate(
         **inputs,
         max_new_tokens=max_new_tokens,
         do_sample=do_sample,
         temperature=temperature,
     )
+    generation_seconds = time.perf_counter() - start
     new_ids = outputs[0][inputs["input_ids"].shape[1]:]#.tolist()
 
-    return tokenizer.decode(
+    text = tokenizer.decode(
         new_ids,
         skip_special_tokens=True,
         clean_up_tokenization_spaces=False,
     )#.strip()
+    return text, new_ids.shape[0], generation_seconds
 
 def generate_constrained_markup(
     model,
@@ -79,8 +110,9 @@ def generate_constrained_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
-) -> str:
+) -> Tuple[str, int, float]:
     """Generate constrained tagged text using the trie processor."""
+    start = time.perf_counter()
     outputs = model.generate(
         **inputs,
         logits_processor=[processor],
@@ -88,14 +120,16 @@ def generate_constrained_markup(
         do_sample=do_sample,
         temperature=temperature,
     )
+    generation_seconds = time.perf_counter() - start
 
     new_ids = outputs[0][inputs["input_ids"].shape[1]:]#.tolist()
 
-    return tokenizer.decode(
+    text = tokenizer.decode(
         new_ids,
         skip_special_tokens=True,
         clean_up_tokenization_spaces=False,
     )#.strip()
+    return text, new_ids.shape[0], generation_seconds
 
 def parse_spans_from_tagged_output(tagged_text: str, valid_labels: set) -> Dict:
     """

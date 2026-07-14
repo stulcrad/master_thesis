@@ -1,7 +1,6 @@
 import sys
 import time
-import statistics
-from typing import List, Tuple
+from typing import List
 import pandas as pd
 import evaluate
 from datasets import load_dataset
@@ -9,38 +8,43 @@ from tqdm import tqdm
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from utils.utils_functions import (
-    generate_markup, validate_reconstruction, 
+    generate_markup, validate_reconstruction,
     spans_to_bio_tags, parse_spans_from_tagged_output,
-    mean_std, to_pct, format_pm
+    mean_std, to_pct, format_pm,
+    open_jsonl_writer, log_jsonl,
 )
 from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
 
-from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
+from utils.system_prompts import SYSTEM_PROMPT_CONTEXT_MD
 
 # -------------------------
 # Evaluation configuration
 # -------------------------
 # MAX_EXAMPLES = 1280
 # N_ITERS = 1
-MAX_EXAMPLES = 250
-N_ITERS = 5
+MAX_EXAMPLES = None
+N_ITERS = 1
 EVAL_INTERVAL = 10
 # Single batch size per run. You can override from CLI:
 # python evaluationNER_cons_gen.py 5
 BATCH_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-if BATCH_SIZE > 5:
-    EVAL_INTERVAL = 5
+# if BATCH_SIZE > 5:
+#     EVAL_INTERVAL = 5
 
 MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
 
-DO_SAMPLES = [False, True]
+DO_SAMPLES = [False]
 TEMPERATURE = 0.2
 MAX_NEW_TOKENS = 32578
 
 # Evaluate both decoding modes in one run.
 EVAL_MODES = ["unconstrained", "constrained"]
+
+# Per-example predictions (JSONL, one line per generation) -- required for
+# paired significance tests and post-hoc metrics without re-running.
+PRED_DIR = "/home/stulcrad/master_thesis/Experiment_results/CoNLL/Constrained-Gen/Predictions"
 
 # Processor class is only used for constrained mode.
 PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
@@ -75,7 +79,6 @@ for model_name in MODEL_NAMES:
         model_name,
         device_map="auto",
         torch_dtype="auto",
-        # quantization_config=quantization_config,
     )
 
     batch_size = BATCH_SIZE
@@ -95,8 +98,16 @@ for model_name in MODEL_NAMES:
                     f"mode={eval_mode}, processor_class={config_label}, batch_size={batch_size}"
                 )
 
+                model_short = model_name.split("/")[-1]
+                pred_fh = open_jsonl_writer(
+                    f"{PRED_DIR}/conll_{model_short}_{sampling_strategy}_{eval_mode}_{config_label}_bs{batch_size}.jsonl"
+                )
+
                 for exp_id in range(N_ITERS):
-                    sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
+                    if MAX_EXAMPLES is None:
+                        sampled_dataset = dataset
+                    else:
+                        sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
 
                     start_time = time.time()
                     gold_sequences: List[List[str]] = []
@@ -140,13 +151,13 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                 )
 
-                        generated = generate_markup(
+                        generated, num_output_tokens, generation_seconds = generate_markup(
                             model=model,
                             tokenizer=tokenizer,
                             processor=processor,
                             eval_model=eval_mode,
                             input_text=input_text,
-                            system_prompt=SYSTEM_PROMPT_CONSTR_GEN,
+                            system_prompt=SYSTEM_PROMPT_CONTEXT_MD,
                             max_new_tokens=MAX_NEW_TOKENS,
                             do_sample=do_sample,
                             temperature=TEMPERATURE,
@@ -176,6 +187,28 @@ for model_name in MODEL_NAMES:
 
                         gold_sequences.append(batch_gold_tags)
                         pred_sequences.append(pred_tags)
+
+                        log_jsonl(pred_fh, {
+                            "key": f"{42 + exp_id}:{batch_idx}",
+                            "dataset": "conll2003",
+                            "method": "constrained_gen",
+                            "model": model_name,
+                            "sampling_strategy": sampling_strategy,
+                            "eval_mode": eval_mode,
+                            "processor_class": config_label,
+                            "batch_size": batch_size,
+                            "seed": 42 + exp_id,
+                            "batch_idx": batch_idx,
+                            "example_ids": [ex["id"] for ex in batch] if "id" in batch.column_names else list(range(start_idx, end_idx)),
+                            "input_text": input_text,
+                            "gold_tags": batch_gold_tags,
+                            "pred_tags": pred_tags,
+                            "raw_output": generated,
+                            "wrong_text": 0 if exact_copy_ok else 1,
+                            "span_count": parsed["span_count"],
+                            "num_output_tokens": num_output_tokens,
+                            "generation_seconds": generation_seconds,
+                        })
 
                         if (batch_idx + 1) % EVAL_INTERVAL == 0:
                             partial = seqeval.compute(
@@ -215,6 +248,8 @@ for model_name in MODEL_NAMES:
                         "elapsed_minute": elapsed_min,
                     })
 
+                pred_fh.close()
+
                 precision_mean, precision_std = mean_std([m["precision"] for m in exp_metrics])
                 recall_mean, recall_std = mean_std([m["recall"] for m in exp_metrics])
                 f1_mean, f1_std = mean_std([m["f1"] for m in exp_metrics])
@@ -235,32 +270,18 @@ for model_name in MODEL_NAMES:
                     "processor_class": config_label,
                     "batch_size": batch_size,
                     "n_iters": N_ITERS,
-                    "precision_pct": round(to_pct(precision_mean), 2),
-                    "precision_std_pct": round(to_pct(precision_std), 2),
                     "precision_report": format_pm(to_pct(precision_mean), to_pct(precision_std)),
-                    "recall_pct": round(to_pct(recall_mean), 2),
-                    "recall_std_pct": round(to_pct(recall_std), 2),
                     "recall_report": format_pm(to_pct(recall_mean), to_pct(recall_std)),
-                    "f1_pct": round(to_pct(f1_mean), 2),
-                    "f1_std_pct": round(to_pct(f1_std), 2),
                     "f1_report": format_pm(to_pct(f1_mean), to_pct(f1_std)),
-                    "accuracy_pct": round(to_pct(accuracy_mean), 2),
-                    "accuracy_std_pct": round(to_pct(accuracy_std), 2),
                     "accuracy_report": format_pm(to_pct(accuracy_mean), to_pct(accuracy_std)),
                     "wrong_text_count_avg": round(wrong_text_count_mean, 3),
                     "wrong_text_count_std": round(wrong_text_count_std, 3),
-                    "wrong_text_rate_pct": round(to_pct(wrong_text_rate_mean), 2),
-                    "wrong_text_rate_std_pct": round(to_pct(wrong_text_rate_std), 2),
                     "wrong_text_rate_report": format_pm(to_pct(wrong_text_rate_mean), to_pct(wrong_text_rate_std)),
                     "unaligned_entity_count_avg": round(unaligned_entity_count_mean, 3),
                     "unaligned_entity_count_std": round(unaligned_entity_count_std, 3),
-                    "unaligned_entity_rate_pct": round(to_pct(unaligned_entity_rate_mean), 2),
-                    "unaligned_entity_rate_std_pct": round(to_pct(unaligned_entity_rate_std), 2),
                     "unaligned_entity_rate_report": format_pm(to_pct(unaligned_entity_rate_mean), to_pct(unaligned_entity_rate_std)),
                     "all_entities_wrongly_unaligned_avg": round(all_entities_wrongly_unaligned_mean, 3),
                     "all_entities_wrongly_unaligned_std": round(all_entities_wrongly_unaligned_std, 3),
-                    "all_entities_wrongly_unaligned_rate_pct": round(to_pct(all_entities_wrongly_unaligned_rate_mean), 2),
-                    "all_entities_wrongly_unaligned_rate_std_pct": round(to_pct(all_entities_wrongly_unaligned_rate_std), 2),
                     "all_entities_wrongly_unaligned_rate_report": format_pm(to_pct(all_entities_wrongly_unaligned_rate_mean), to_pct(all_entities_wrongly_unaligned_rate_std)),
                     "elapsed_minute_avg": round(elapsed_mean, 3),
                     "elapsed_minute_std": round(elapsed_std, 3),

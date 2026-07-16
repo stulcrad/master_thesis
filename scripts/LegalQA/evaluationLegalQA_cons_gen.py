@@ -78,7 +78,7 @@ for model_name in MODEL_NAMES:
 
             for processor_class in processor_class_options:
                 exp_metrics = []
-                config_label = processor_class if processor_class is not None else "n/a"
+                config_label = processor_class if processor_class is not None else "n|a"
                 print(
                     f"\nEvaluating model={model_name}, strategy={sampling_strategy}, "
                     f"mode={eval_mode}, processor_class={config_label}, "

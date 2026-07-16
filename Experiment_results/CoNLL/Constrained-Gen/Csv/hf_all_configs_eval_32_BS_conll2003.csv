@@ -1,0 +1,10 @@
+model,sampling_strategy,do_sample,eval_mode,processor_class,batch_size,n_iters,precision_report,recall_report,f1_report,accuracy_report,wrong_text_count_avg,wrong_text_count_std,wrong_text_rate_report,unaligned_entity_count_avg,unaligned_entity_count_std,unaligned_entity_rate_report,all_entities_wrongly_unaligned_avg,all_entities_wrongly_unaligned_std,all_entities_wrongly_unaligned_rate_report,elapsed_minute_avg,elapsed_minute_std
+google/gemma-3-4b-it,greedy,False,unconstrained,n|a,32,1,42.78 ± 0.00,2.67 ± 0.00,5.03 ± 0.00,82.92 ± 0.00,96,0.0,88.89 ± 0.00,0,0.0,0.00 ± 0.00,2932,0.0,89.25 ± 0.00,82.579,0.0
+google/gemma-3-4b-it,greedy,False,constrained,whole_sequence,32,1,45.41 ± 0.00,50.35 ± 0.00,47.75 ± 0.00,85.58 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,126.384,0.0
+google/gemma-3-4b-it,greedy,False,constrained,token_aware,32,1,54.40 ± 0.00,51.06 ± 0.00,52.68 ± 0.00,88.20 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,122.963,0.0
+Qwen/Qwen3-8B,greedy,False,unconstrained,n|a,32,1,78.72 ± 0.00,17.81 ± 0.00,29.05 ± 0.00,85.53 ± 0.00,68,0.0,62.96 ± 0.00,0,0.0,0.00 ± 0.00,3018,0.0,70.22 ± 0.00,68.642,0.0
+Qwen/Qwen3-8B,greedy,False,constrained,whole_sequence,32,1,60.07 ± 0.00,57.10 ± 0.00,58.55 ± 0.00,89.76 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,78.195,0.0
+Qwen/Qwen3-8B,greedy,False,constrained,token_aware,32,1,70.94 ± 0.00,57.58 ± 0.00,63.57 ± 0.00,91.46 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,73.231,0.0
+meta-llama/Llama-3.1-8B-Instruct,greedy,False,unconstrained,n|a,32,1,31.60 ± 0.00,1.82 ± 0.00,3.45 ± 0.00,82.70 ± 0.00,100,0.0,92.59 ± 0.00,0,0.0,0.00 ± 0.00,7152,0.0,95.64 ± 0.00,63.955,0.0
+meta-llama/Llama-3.1-8B-Instruct,greedy,False,constrained,whole_sequence,32,1,25.46 ± 0.00,47.04 ± 0.00,33.04 ± 0.00,72.18 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,80.382,0.0
+meta-llama/Llama-3.1-8B-Instruct,greedy,False,constrained,token_aware,32,1,32.40 ± 0.00,53.61 ± 0.00,40.39 ± 0.00,77.82 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,0,0.0,0.00 ± 0.00,74.511,0.0

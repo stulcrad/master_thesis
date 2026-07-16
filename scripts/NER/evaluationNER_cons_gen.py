@@ -17,7 +17,7 @@ from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
 
-from utils.system_prompts import SYSTEM_PROMPT_CONTEXT_MD
+from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
 
 # -------------------------
 # Evaluation configuration
@@ -92,7 +92,7 @@ for model_name in MODEL_NAMES:
 
             for processor_class in processor_class_options:
                 exp_metrics = []
-                config_label = processor_class if processor_class is not None else "n/a"
+                config_label = processor_class if processor_class is not None else "n|a"
                 print(
                     f"\nEvaluating model={model_name}, strategy={sampling_strategy}, "
                     f"mode={eval_mode}, processor_class={config_label}, batch_size={batch_size}"
@@ -157,7 +157,7 @@ for model_name in MODEL_NAMES:
                             processor=processor,
                             eval_model=eval_mode,
                             input_text=input_text,
-                            system_prompt=SYSTEM_PROMPT_CONTEXT_MD,
+                            system_prompt=SYSTEM_PROMPT_CONSTR_GEN,
                             max_new_tokens=MAX_NEW_TOKENS,
                             do_sample=do_sample,
                             temperature=TEMPERATURE,

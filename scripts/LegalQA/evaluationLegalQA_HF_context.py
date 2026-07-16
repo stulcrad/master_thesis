@@ -42,7 +42,7 @@ DO_SAMPLE = False
 TEMPERATURE = 0.2
 MAX_NEW_TOKENS = 32578
 
-MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "meta-llama/Llama-3.1-8B-Instruct"]
+MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "openai/gpt-oss-20b", "meta-llama/Llama-3.1-8B-Instruct"]
 
 # Define system prompts to evaluate
 prompts = {
@@ -89,6 +89,8 @@ for model_name in MODEL_NAMES:
                 else:
                     sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
 
+                reasoning_effort = "low" if "gpt-oss" in model_name.lower() else None
+
                 start_time = time.time()
 
                 char_f1_per_post: List[float] = []
@@ -134,6 +136,7 @@ for model_name in MODEL_NAMES:
                             max_new_tokens=MAX_NEW_TOKENS,
                             do_sample=DO_SAMPLE,
                             temperature=TEMPERATURE,
+                            reasoning_effort=reasoning_effort,
                         )
                         content = content.strip()
                         pred_json, json_parse_ok = json_safe_parse(content)

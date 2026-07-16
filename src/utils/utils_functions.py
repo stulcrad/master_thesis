@@ -22,6 +22,28 @@ def log_jsonl(fh, record: dict) -> None:
     fh.write(json.dumps(record, ensure_ascii=False) + "\n")
     fh.flush()
 
+def extract_harmony_final_channel(text: str) -> str:
+    """Isolate GPT-OSS's harmony 'final' channel from its raw decoded output.
+
+    Harmony wraps the answer as `...<|channel|>final<|message|>ANSWER<|return|>`,
+    preceded by an 'analysis' channel carrying the chain-of-thought. Without
+    this, the reasoning trace (plus the literal channel-name text left behind
+    once special tokens are stripped) would be handed to json_safe_parse()
+    ahead of the actual JSON. Falls back to the untouched text if no 'final'
+    channel marker is present (e.g. generation was truncated mid-reasoning).
+    """
+    marker = "<|channel|>final<|message|>"
+    idx = text.rfind(marker)
+    if idx == -1:
+        return text
+    tail = text[idx + len(marker):]
+    for end_marker in ("<|return|>", "<|end|>", "<|call|>", "<|start|>"):
+        end_idx = tail.find(end_marker)
+        if end_idx != -1:
+            tail = tail[:end_idx]
+    return tail.strip()
+
+
 def generate_markup(
     model,
     tokenizer,
@@ -32,6 +54,7 @@ def generate_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
+    reasoning_effort: str = None,
 ) -> Tuple[str, int, float]:
     """Generate tagged text using either constrained or unconstrained decoding.
 
@@ -41,23 +64,43 @@ def generate_markup(
     then re-encode can drift by a token or two on some tokenizers, so this
     counts the ids actually produced by generate(). generation_seconds times
     only the model.generate() call itself, excluding tokenization/templating.
+    num_output_tokens/generation_seconds cover the FULL generation (including
+    GPT-OSS's analysis/reasoning channel), since that is real generation cost;
+    only the returned `text` is trimmed down to the final-channel answer.
+
+    reasoning_effort: only meaningful for GPT-OSS's harmony chat template
+    ("low"/"medium"/"high"); omitted from the template call for every other
+    model so behavior there is unchanged. When set, special tokens are kept
+    in the decoded text just long enough to isolate the 'final' channel (see
+    extract_harmony_final_channel), then stripped from the returned text.
     """
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": input_text},
     ]
 
+    template_kwargs = {}
+    if reasoning_effort is not None:
+        template_kwargs["reasoning_effort"] = reasoning_effort
+
     prompt = tokenizer.apply_chat_template(
         messages,
         tokenize=False,
         add_generation_prompt=True,
         enable_thinking=False,
+        **template_kwargs,
     )
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
+    # GPT-OSS's harmony channels ("analysis" vs "final") are only
+    # distinguishable via the special-token delimiters, so keep them in the
+    # decoded text for this one model family; every other model keeps the
+    # prior skip_special_tokens=True behavior untouched.
+    skip_special_tokens = reasoning_effort is None
+
     if eval_model == "constrained":
-        return generate_constrained_markup(
+        text, num_output_tokens, generation_seconds = generate_constrained_markup(
             model=model,
             tokenizer=tokenizer,
             processor=processor,
@@ -65,15 +108,23 @@ def generate_markup(
             max_new_tokens=max_new_tokens,
             do_sample=do_sample,
             temperature=temperature,
+            skip_special_tokens=skip_special_tokens,
         )
-    return generate_unconstrained_markup(
-        model=model,
-        tokenizer=tokenizer,
-        inputs=inputs,
-        max_new_tokens=max_new_tokens,
-        do_sample=do_sample,
-        temperature=temperature,
-    )
+    else:
+        text, num_output_tokens, generation_seconds = generate_unconstrained_markup(
+            model=model,
+            tokenizer=tokenizer,
+            inputs=inputs,
+            max_new_tokens=max_new_tokens,
+            do_sample=do_sample,
+            temperature=temperature,
+            skip_special_tokens=skip_special_tokens,
+        )
+
+    if reasoning_effort is not None:
+        text = extract_harmony_final_channel(text)
+
+    return text, num_output_tokens, generation_seconds
 
 def generate_unconstrained_markup(
     model,
@@ -82,6 +133,7 @@ def generate_unconstrained_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
+    skip_special_tokens: bool = True,
 ) -> Tuple[str, int, float]:
     """Generate unconstrained tagged text using a HF model + tokenizer."""
 
@@ -97,7 +149,7 @@ def generate_unconstrained_markup(
 
     text = tokenizer.decode(
         new_ids,
-        skip_special_tokens=True,
+        skip_special_tokens=skip_special_tokens,
         clean_up_tokenization_spaces=False,
     )#.strip()
     return text, new_ids.shape[0], generation_seconds
@@ -110,6 +162,7 @@ def generate_constrained_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
+    skip_special_tokens: bool = True,
 ) -> Tuple[str, int, float]:
     """Generate constrained tagged text using the trie processor."""
     start = time.perf_counter()
@@ -126,7 +179,7 @@ def generate_constrained_markup(
 
     text = tokenizer.decode(
         new_ids,
-        skip_special_tokens=True,
+        skip_special_tokens=skip_special_tokens,
         clean_up_tokenization_spaces=False,
     )#.strip()
     return text, new_ids.shape[0], generation_seconds

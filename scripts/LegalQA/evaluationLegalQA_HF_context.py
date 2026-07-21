@@ -42,7 +42,8 @@ DO_SAMPLE = False
 TEMPERATURE = 0.2
 MAX_NEW_TOKENS = 32578
 
-MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "openai/gpt-oss-20b", "meta-llama/Llama-3.1-8B-Instruct"]
+# MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "openai/gpt-oss-20b", "meta-llama/Llama-3.1-8B-Instruct"]
+MODEL_NAMES = ["openai/gpt-oss-20b"]
 
 # Define system prompts to evaluate
 prompts = {
@@ -304,7 +305,7 @@ for model_name in MODEL_NAMES:
 # Save results to CSV
 results_df = pd.DataFrame(all_results)
 
-results_path = "/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Context-Based/Csv/HF_context_results_LegalQA.csv"
+results_path = "/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Context-Based/Csv/HF_context_results_LegalQA_GPT_OSS.csv"
 txt_path = results_path.replace(".csv", ".txt").replace("Csv", "Txt")
 
 os.makedirs(os.path.dirname(results_path), exist_ok=True)

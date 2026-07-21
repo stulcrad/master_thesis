@@ -176,6 +176,5 @@ def main() -> None:
     else:
         print("=> NOT significant at the 0.05 level (CI includes zero)")
 
-
 if __name__ == "__main__":
     main()

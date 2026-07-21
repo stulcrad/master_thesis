@@ -7,7 +7,8 @@ import time
 
 
 def open_jsonl_writer(path: str):
-    """Open a per-example predictions JSONL file (one line per generation).
+    """
+    Open a per-example predictions JSONL file (one line per generation).
 
     Truncates any existing file: one file corresponds to one full run of one
     experiment config (all seeds; the per-line `seed` field disambiguates).
@@ -25,12 +26,8 @@ def log_jsonl(fh, record: dict) -> None:
 def extract_harmony_final_channel(text: str) -> str:
     """Isolate GPT-OSS's harmony 'final' channel from its raw decoded output.
 
-    Harmony wraps the answer as `...<|channel|>final<|message|>ANSWER<|return|>`,
-    preceded by an 'analysis' channel carrying the chain-of-thought. Without
-    this, the reasoning trace (plus the literal channel-name text left behind
-    once special tokens are stripped) would be handed to json_safe_parse()
-    ahead of the actual JSON. Falls back to the untouched text if no 'final'
-    channel marker is present (e.g. generation was truncated mid-reasoning).
+    Harmony wraps the answer as `...<|channel|>final<|message|>ANSWER<|return|>`, extract
+    this answer to skip any preceding 'analysis' channel content.
     """
     marker = "<|channel|>final<|message|>"
     idx = text.rfind(marker)
@@ -56,23 +53,10 @@ def generate_markup(
     temperature: float,
     reasoning_effort: str = None,
 ) -> Tuple[str, int, float]:
-    """Generate tagged text using either constrained or unconstrained decoding.
+    """
+    Generate tagged text using either constrained or unconstrained decoding.
 
-    Returns (text, num_output_tokens, generation_seconds). num_output_tokens
-    is the exact count of newly generated token ids (from the same slice used
-    to decode `text`), not a re-tokenization of the returned string -- decode
-    then re-encode can drift by a token or two on some tokenizers, so this
-    counts the ids actually produced by generate(). generation_seconds times
-    only the model.generate() call itself, excluding tokenization/templating.
-    num_output_tokens/generation_seconds cover the FULL generation (including
-    GPT-OSS's analysis/reasoning channel), since that is real generation cost;
-    only the returned `text` is trimmed down to the final-channel answer.
-
-    reasoning_effort: only meaningful for GPT-OSS's harmony chat template
-    ("low"/"medium"/"high"); omitted from the template call for every other
-    model so behavior there is unchanged. When set, special tokens are kept
-    in the decoded text just long enough to isolate the 'final' channel (see
-    extract_harmony_final_channel), then stripped from the returned text.
+    Returns (text, num_output_tokens, generation_seconds)
     """
     messages = [
         {"role": "system", "content": system_prompt},

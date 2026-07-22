@@ -4,6 +4,7 @@ import json
 import os
 import statistics
 import time
+from utils.model_reasoning_utils import extract_harmony_final_channel
 
 # -------------------------
 # File I/O helpers
@@ -24,23 +25,6 @@ def log_jsonl(fh, record: dict) -> None:
     keeps every example logged up to the crash."""
     fh.write(json.dumps(record, ensure_ascii=False) + "\n")
     fh.flush()
-
-def extract_harmony_final_channel(text: str) -> str:
-    """Isolate GPT-OSS's harmony 'final' channel from its raw decoded output.
-
-    Harmony wraps the answer as `...<|channel|>final<|message|>ANSWER<|return|>`, extract
-    this answer to skip any preceding 'analysis' channel content.
-    """
-    marker = "<|channel|>final<|message|>"
-    idx = text.rfind(marker)
-    if idx == -1:
-        return text
-    tail = text[idx + len(marker):]
-    for end_marker in ("<|return|>", "<|end|>", "<|call|>", "<|start|>"):
-        end_idx = tail.find(end_marker)
-        if end_idx != -1:
-            tail = tail[:end_idx]
-    return tail.strip()
 
 # -------------------------
 # Generation helpers

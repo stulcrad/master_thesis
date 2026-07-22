@@ -5,7 +5,9 @@ import os
 import statistics
 import time
 
-
+# -------------------------
+# File I/O helpers
+# -------------------------
 def open_jsonl_writer(path: str):
     """
     Open a per-example predictions JSONL file (one line per generation).
@@ -40,7 +42,9 @@ def extract_harmony_final_channel(text: str) -> str:
             tail = tail[:end_idx]
     return tail.strip()
 
-
+# -------------------------
+# Generation helpers
+# -------------------------
 def generate_markup(
     model,
     tokenizer,
@@ -168,6 +172,9 @@ def generate_constrained_markup(
     )#.strip()
     return text, new_ids.shape[0], generation_seconds
 
+# -------------------------
+# Evaluation helpers for text
+# -------------------------
 def parse_spans_from_tagged_output(tagged_text: str, valid_labels: set) -> Dict:
     """
     Parse <SPAN><LABEL>..</LABEL>entity</SPAN> blocks and return entities with char offsets,
@@ -285,6 +292,9 @@ def tokenize_with_offsets(text: str) -> Tuple[List[int], List[Tuple[int, int]]]:
         i = j
     return tokens, offsets
 
+# -------------------------
+# Evaluation helpers for entity-level metrics
+# -------------------------
 def compute_character_f1(
         gold_chars: set,
         pred_chars: set,

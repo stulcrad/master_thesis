@@ -1,5 +1,5 @@
 from transformers import LogitsProcessor, AutoTokenizer
-from typing import List, Set, Optional
+from typing import List, Set, Optional, Callable
 import torch
 from utils.TokTrie import TokTrie, build_toktrie_from_tokenizer
 
@@ -21,7 +21,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
     """
 
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
-                 toktrie: Optional[TokTrie] = None):
+                 toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
+                 reasoning_ended: Optional[Callable[[torch.LongTensor], bool]] = None):
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
 

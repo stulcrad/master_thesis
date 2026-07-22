@@ -22,7 +22,9 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
 
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
                  toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
-                 reasoning_ended: Optional[Callable[[torch.LongTensor], bool]] = None):
+                 reasoning_ended: Optional[Callable[[torch.LongTensor, str, bool], bool]] = None,
+                 reasoning_end_marker: Optional[torch.LongTensor] = None
+                ):
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
 
@@ -42,6 +44,12 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         # Pointers to track how much of the input has been copied so far at the token level.
         self.input_token_ptr = 0
         self.input_token_byte_ptr = 0
+
+        self.reasoning_model = reasoning_model
+        if reasoning_model:
+            self.reasoning_ended = reasoning_ended
+            self.found_reasoning_end = False
+            self.reasoning_end_marker = reasoning_end_marker
 
         # Runtime generation bookkeeping.
         self.STATE = "OUTSIDE"
@@ -307,6 +315,11 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         """
         Apply the constrained generation logic to the scores.
         """
+        # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original scores.
+        if self.reasoning_model and not self.reasoning_ended(input_ids, self.reasoning_end_marker, self.found_reasoning_end):
+            # If the reasoning has not ended, do not apply any constraints and return the original scores.
+            return scores
+        
         # Get the last generated token ID from input_ids and advance the FSM state
         last_token_id = int(input_ids[0, -1])
         curr_len = input_ids.shape[1]

@@ -22,8 +22,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
 
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
                  toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
-                 reasoning_ended: Optional[Callable[[torch.LongTensor, str, bool], bool]] = None,
-                 reasoning_end_marker: Optional[torch.LongTensor] = None
+                 reasoning_ended: Optional[Callable[[torch.LongTensor, List[int], bool], bool]] = None,
+                 reasoning_end_marker: Optional[List[int]] = None
                 ):
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
@@ -50,6 +50,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             self.reasoning_ended = reasoning_ended
             self.found_reasoning_end = False
             self.reasoning_end_marker = reasoning_end_marker
+
+        self.prompt_len = None # will be set to the length of the prompt (input_ids) when generation starts
 
         # Runtime generation bookkeeping.
         self.STATE = "OUTSIDE"
@@ -84,7 +86,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         self.eos_token_ids: Set[int] = set()
         if tokenizer.eos_token_id is not None:
             self.eos_token_ids.add(tokenizer.eos_token_id)
-        for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>"] :
+        for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>", "<|return|>", "<turn|>"] :
             tok_id = tokenizer.convert_tokens_to_ids(tok)
             if tok_id is not None and tok_id != tokenizer.unk_token_id:
                 self.eos_token_ids.add(tok_id)
@@ -315,11 +317,18 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         """
         Apply the constrained generation logic to the scores.
         """
+        if self.prompt_len is None:
+            self.prompt_len = input_ids.shape[1] # Set the prompt length on the first call
+
         # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original scores.
-        if self.reasoning_model and not self.reasoning_ended(input_ids, self.reasoning_end_marker, self.found_reasoning_end):
+        if self.reasoning_model and not self.reasoning_ended(input_ids[:, self.prompt_len:], self.reasoning_end_marker, self.found_reasoning_end):
             # If the reasoning has not ended, do not apply any constraints and return the original scores.
             return scores
-        
+
+        if self.reasoning_model and not self.found_reasoning_end:
+            # If reasoning has just ended, set the flag to True to avoid checking again in future calls.
+            self.found_reasoning_end = True
+            
         # Get the last generated token ID from input_ids and advance the FSM state
         last_token_id = int(input_ids[0, -1])
         curr_len = input_ids.shape[1]

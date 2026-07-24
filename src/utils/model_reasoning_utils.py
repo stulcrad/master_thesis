@@ -23,7 +23,7 @@ def extract_harmony_final_channel(text: str) -> str:
             tail = tail[:end_idx]
     return tail.strip()
 
-def reasoning_ended(input_ids: torch.LongTensor, reasoning_end_marker: torch.LongTensor, found_reasoning_end: bool) -> bool:
+def reasoning_ended(input_ids: torch.LongTensor, reasoning_end_marker: List[int], found_reasoning_end: bool) -> bool:
     """
     Determine if the model has finished reasoning based on the presence of a reasoning marker in the text.
 
@@ -36,22 +36,14 @@ def reasoning_ended(input_ids: torch.LongTensor, reasoning_end_marker: torch.Lon
         return True
 
     # Check if the reasoning end marker is present in the input_ids
-    if reasoning_end_marker is not None and reasoning_end_marker.numel() > 0:
+    if not reasoning_end_marker:
         # Convert input_ids to a list for easier searching
         input_ids_list = input_ids.squeeze().tolist()
-        reasoning_end_marker_list = reasoning_end_marker.squeeze().tolist()
 
         # Check if the reasoning end marker is a subsequence of input_ids
-        for i in range(len(input_ids_list) - len(reasoning_end_marker_list) + 1):
-            if input_ids_list[i:i + len(reasoning_end_marker_list)] == reasoning_end_marker_list:
+        for i in range(len(input_ids_list) - len(reasoning_end_marker) + 1):
+            if input_ids_list[i:i + len(reasoning_end_marker)] == reasoning_end_marker:
                 return True
 
     return False
-
-    # if found_reasoning_end:
-    #         return True
-    #     if reasoning_end_marker in text:
-    #         found_reasoning_end = True
-    #         return True
-    #     return False
     

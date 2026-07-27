@@ -1,5 +1,5 @@
 from transformers import LogitsProcessor, AutoTokenizer
-from typing import Optional, Set
+from typing import Optional, Set, Callable, List
 import torch
 from utils.TokTrie import TokTrie, build_toktrie_from_tokenizer
 
@@ -18,7 +18,10 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
     original input text exactly.
     """
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
-                 toktrie: Optional[TokTrie] = None):
+                 toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
+                 reasoning_ended: Optional[Callable[[torch.LongTensor, List[int], bool], bool]] = None,
+                 reasoning_end_marker: Optional[List[int]] = None
+                ):
         """
         Initialize the processor.
         
@@ -28,6 +31,9 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         - input_text: str -> the input text to be classified; used for building the token trie constraints
         - tokenizer: AutoTokenizer -> the tokenizer corresponding to the model being used; needed to build the token trie
         - toktrie: TokTrie -> pre-built token trie for the tokenizer; if not provided, it will be built from the tokenizer
+        - reasoning_model: bool -> whether the model is a reasoning model that may emit reasoning tokens
+        - reasoning_ended: Callable[[torch.LongTensor, List[int], bool], bool] -> a function that determines if reasoning has ended based on the input_ids, reasoning_end_marker, and found_reasoning_end flag
+        - reasoning_end_marker: List[int] -> the token IDs that indicate the end of reasoning; used by the reasoning_ended function
         """
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
@@ -49,6 +55,15 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
                 self.input_bytes += token_bytes
         # self.input_bytes = input_text.encode("utf-8")
         self.input_pos = 0 # to track the current byte position in the input text
+
+        self.reasoning_model = reasoning_model
+        if reasoning_model:
+            self.reasoning_ended = reasoning_ended
+            self.found_reasoning_end = False
+            self.reasoning_end_marker = reasoning_end_marker
+            self.output_start_index = None # will be set to the index of the first output token after reasoning
+
+        self.prompt_len = None # will be set to the length of the prompt (input_ids) when generation starts
         
         # Runtime generation bookkeeping.
         self.STATE = "OUTSIDE"
@@ -83,7 +98,7 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         self.eos_token_ids: Set[int] = set()
         if self.tokenizer.eos_token_id is not None:
             self.eos_token_ids.add(self.tokenizer.eos_token_id)
-        for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>"]:
+        for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>", "<|return|>", "<turn|>"]:
             tok_id = tokenizer.convert_tokens_to_ids(tok)
             if tok_id is not None and tok_id != tokenizer.unk_token_id:
                 self.eos_token_ids.add(tok_id)
@@ -278,6 +293,20 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         """
         Apply the constrained generation logic to the scores.
         """
+        if self.prompt_len is None:
+            self.prompt_len = input_ids.shape[1] # Set the prompt length on the first call
+
+        # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original scores.
+        if self.reasoning_model and not self.reasoning_ended(
+            input_ids[:, self.prompt_len:], self.reasoning_end_marker, self.found_reasoning_end
+            ):
+            return scores
+
+        if self.reasoning_model and not self.found_reasoning_end:
+            # If reasoning has just ended, set the flag to True to avoid checking again in future calls.
+            self.found_reasoning_end = True
+            self.output_start_index = input_ids.shape[1] # Set the output start index to the current length of input_ids
+        
         # Get the last generated token ID from input_ids and advance the FSM state
         last_token_id = int(input_ids[0, -1])
         curr_len = input_ids.shape[1]

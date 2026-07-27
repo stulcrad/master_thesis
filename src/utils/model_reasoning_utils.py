@@ -37,13 +37,15 @@ def reasoning_ended(input_ids: torch.LongTensor, reasoning_end_marker: List[int]
 
     # Check if the reasoning end marker is present in the input_ids
     if not reasoning_end_marker:
-        # Convert input_ids to a list for easier searching
-        input_ids_list = input_ids.squeeze().tolist()
+        return False  # No reasoning end marker provided, cannot determine if reasoning has ended
 
-        # Check if the reasoning end marker is a subsequence of input_ids
-        for i in range(len(input_ids_list) - len(reasoning_end_marker) + 1):
-            if input_ids_list[i:i + len(reasoning_end_marker)] == reasoning_end_marker:
-                return True
+    # Convert input_ids to a list for easier searching
+    input_ids_list = input_ids.squeeze(0).tolist()
+
+    # Check if the reasoning end marker is a subsequence of input_ids
+    for i in range(len(input_ids_list) - len(reasoning_end_marker) + 1):
+        if input_ids_list[i:i + len(reasoning_end_marker)] == reasoning_end_marker:
+            return True
 
     return False
     

@@ -39,6 +39,7 @@ def generate_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
+    reasoning_model: bool = False,
     reasoning_effort: str = None,
 ) -> Tuple[str, int, float]:
     """
@@ -59,7 +60,7 @@ def generate_markup(
         messages,
         tokenize=False,
         add_generation_prompt=True,
-        enable_thinking=False,
+        enable_thinking=reasoning_model,
         **template_kwargs,
     )
 
@@ -148,6 +149,10 @@ def generate_constrained_markup(
     generation_seconds = time.perf_counter() - start
 
     new_ids = outputs[0][inputs["input_ids"].shape[1]:]#.tolist()
+
+    if processor.reasoning_model:
+        reasoning_part = new_ids[:processor.output_start_index]
+        output_part = new_ids[processor.output_start_index:]
 
     text = tokenizer.decode(
         new_ids,

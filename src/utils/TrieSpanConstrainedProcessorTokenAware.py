@@ -50,6 +50,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             self.reasoning_ended = reasoning_ended
             self.found_reasoning_end = False
             self.reasoning_end_marker = reasoning_end_marker
+            self.output_start_index = None # will be set to the index of the first output token after reasoning
 
         self.prompt_len = None # will be set to the length of the prompt (input_ids) when generation starts
 
@@ -86,7 +87,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         self.eos_token_ids: Set[int] = set()
         if tokenizer.eos_token_id is not None:
             self.eos_token_ids.add(tokenizer.eos_token_id)
-        for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>", "<|return|>", "<turn|>"] :
+        for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>", "<|return|>", "<turn|>"]:
             tok_id = tokenizer.convert_tokens_to_ids(tok)
             if tok_id is not None and tok_id != tokenizer.unk_token_id:
                 self.eos_token_ids.add(tok_id)
@@ -321,13 +322,16 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             self.prompt_len = input_ids.shape[1] # Set the prompt length on the first call
 
         # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original scores.
-        if self.reasoning_model and not self.reasoning_ended(input_ids[:, self.prompt_len:], self.reasoning_end_marker, self.found_reasoning_end):
+        if self.reasoning_model and not self.reasoning_ended(
+            input_ids[:, self.prompt_len:], self.reasoning_end_marker, self.found_reasoning_end
+            ):
             # If the reasoning has not ended, do not apply any constraints and return the original scores.
             return scores
 
         if self.reasoning_model and not self.found_reasoning_end:
             # If reasoning has just ended, set the flag to True to avoid checking again in future calls.
             self.found_reasoning_end = True
+            self.output_start_index = input_ids.shape[1] # Set the output start index to the current length of input_ids
             
         # Get the last generated token ID from input_ids and advance the FSM state
         last_token_id = int(input_ids[0, -1])

@@ -1,5 +1,6 @@
 import sys
 import time
+import os
 from typing import List
 import pandas as pd
 import evaluate
@@ -19,6 +20,8 @@ from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProc
 
 from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
 
+from utils.model_reasoning_utils import reasoning_ended
+
 # -------------------------
 # Evaluation configuration
 # -------------------------
@@ -33,7 +36,25 @@ BATCH_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 1
 # if BATCH_SIZE > 5:
 #     EVAL_INTERVAL = 5
 
-MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
+# MODEL_NAMES = ['google/gemma-3-4b-it', 'Qwen/Qwen3-8B', 'meta-llama/Llama-3.1-8B-Instruct']
+
+# MODEL_NAMES = ['Qwen/Qwen3.5-27B']
+MODEL_NAMES = ['google/gemma-4-26B-A4B-it', 'openai/gpt-oss-20b']
+
+REASONING_END_MARKER = {
+    'google/gemma-4-26B-A4B-it': "<channel|>",
+    'openai/gpt-oss-20b': "<|channel|>final<|message|>",
+    'Qwen/Qwen3-8B': "</think>",
+    'Qwen/Qwen3.5-27B': "</think>",
+}
+REASONING_MODEL = {
+    'google/gemma-3-4b-it': False,
+    'google/gemma-4-26B-A4B-it': True,
+    'openai/gpt-oss-20b': True,
+    'Qwen/Qwen3-8B': True,
+    'Qwen/Qwen3.5-27B': True,
+    'meta-llama/Llama-3.1-8B-Instruct': False,
+}
 
 DO_SAMPLES = [False]
 TEMPERATURE = 0.2
@@ -83,6 +104,10 @@ for model_name in MODEL_NAMES:
 
     batch_size = BATCH_SIZE
     print(f"Batch size: {batch_size}")
+
+    reasoning_model = REASONING_MODEL.get(model_name, False)
+    reasoning_end_marker_str = REASONING_END_MARKER.get(model_name, None)
+    reasoning_end_marker = tokenizer(reasoning_end_marker_str, add_special_tokens=False).input_ids
 
     for do_sample in DO_SAMPLES:
         sampling_strategy = "sampling" if do_sample else "greedy"
@@ -142,6 +167,9 @@ for model_name in MODEL_NAMES:
                                     input_text,
                                     tokenizer,
                                     toktrie,
+                                    reasoning_model=reasoning_model,
+                                    reasoning_end_marker=reasoning_end_marker,
+                                    reasoning_ended_fn=reasoning_ended
                                 )
                             else:
                                 processor = TrieSpanConstrainedProcessor(
@@ -149,6 +177,9 @@ for model_name in MODEL_NAMES:
                                     input_text,
                                     tokenizer,
                                     toktrie,
+                                    reasoning_model=reasoning_model,
+                                    reasoning_end_marker=reasoning_end_marker,
+                                    reasoning_ended_fn=reasoning_ended
                                 )
 
                         generated, num_output_tokens, generation_seconds = generate_markup(
@@ -161,6 +192,8 @@ for model_name in MODEL_NAMES:
                             max_new_tokens=MAX_NEW_TOKENS,
                             do_sample=do_sample,
                             temperature=TEMPERATURE,
+                            reasoning_model=reasoning_model,
+                            reasoning_effort='low',
                         )
 
                         parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
@@ -269,6 +302,7 @@ for model_name in MODEL_NAMES:
                     "eval_mode": eval_mode,
                     "processor_class": config_label,
                     "batch_size": batch_size,
+                    "max_examples": MAX_EXAMPLES,
                     "n_iters": N_ITERS,
                     "precision_report": format_pm(to_pct(precision_mean), to_pct(precision_std)),
                     "recall_report": format_pm(to_pct(recall_mean), to_pct(recall_std)),
@@ -287,26 +321,41 @@ for model_name in MODEL_NAMES:
                     "elapsed_minute_std": round(elapsed_std, 3),
                 })
 
+    # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
+    intermediate_results_df = pd.DataFrame(results)
+    intermediate_results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Constrained-Gen/Csv/{model_name.split('/')[-1]}_eval_{BATCH_SIZE}_BS_conll2003.csv"
+    intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
+
+    os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)
+    os.makedirs(os.path.dirname(intermediate_results_txt_path), exist_ok=True)
+
+    intermediate_results_df.to_csv(intermediate_results_path, index=False)
+
+    with open(intermediate_results_txt_path, "w") as f:
+        f.write(intermediate_results_df.to_string(index=False))
+
+    print(f"\nIntermediate results saved to {intermediate_results_path} and {intermediate_results_txt_path}")
+
     # Free GPU memory before loading next model
     del model
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
 
-# Save results to a DataFrame and CSV
-results_df = pd.DataFrame(results)
+# # Save results to a DataFrame and CSV
+# results_df = pd.DataFrame(results)
 
-# Optional persistence
-results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Constrained-Gen/Csv/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
-txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
+# # Optional persistence
+# results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Constrained-Gen/Csv/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
+# txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
-import os
-os.makedirs(os.path.dirname(results_path), exist_ok=True)
-os.makedirs(os.path.dirname(txt_path), exist_ok=True)
+# import os
+# os.makedirs(os.path.dirname(results_path), exist_ok=True)
+# os.makedirs(os.path.dirname(txt_path), exist_ok=True)
 
-results_df.to_csv(results_path, index=False)
+# results_df.to_csv(results_path, index=False)
 
-with open(txt_path, "w") as f:
-    f.write(results_df.to_string(index=False))
+# with open(txt_path, "w") as f:
+#     f.write(results_df.to_string(index=False))
 
-print(f"\nResults saved to {results_path} and {txt_path}")
+# print(f"\nResults saved to {results_path} and {txt_path}")

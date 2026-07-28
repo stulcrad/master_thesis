@@ -13,6 +13,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
     2. For the current input token remainder (e.g. b"ade"), allowed copy tokens are all trie prefixes
        (e.g. b"a", b"ad", b"ade").
     3. If model emits b"a", we stay in the same input token and continue with b"de".
+    4. For reasoning models, the processor can optionally allow unconstrained reasoning tokens to be emitted before
+       the first output token, and then enforce the span constraints after reasoning has ended.
 
     Tagging behavior:
     -----------------
@@ -25,6 +27,18 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
                  reasoning_ended: Optional[Callable[[torch.LongTensor, List[int], bool], bool]] = None,
                  reasoning_end_marker: Optional[List[int]] = None
                 ):
+        """
+        Initialize the TrieSpanConstrainedProcessorTokenAware processor.
+
+        Args:
+            labels (list[str]): List of label strings for span classification.
+            input_text (str): The input text to be copied and tagged.
+            tokenizer (AutoTokenizer): The tokenizer used for encoding the input text and labels.
+            toktrie (Optional[TokTrie]): Optional token trie for efficient prefix search of token bytes. If not provided, it will be built from the tokenizer.
+            reasoning_model (bool): Whether the model is a reasoning model that allows unconstrained reasoning tokens before the first output token.
+            reasoning_ended (Optional[Callable[[torch.LongTensor, List[int], bool], bool]]): Optional callable to determine if reasoning has ended based on the generated tokens.
+            reasoning_end_marker (Optional[List[int]]): Optional list of token IDs that mark the end of reasoning.
+        """
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
 
@@ -98,13 +112,22 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         """
         self.STATE = "OUTSIDE"
         self.seq_pos = 0
+
         self.input_token_ptr = 0
         self.input_token_byte_ptr = 0
+
         self.selected_label = None
         self.live_blocks = None
+        
         self.span_text_has_content = False
+        
         self.prev_len = 0
         self._active_blocks = None
+
+        self.prompt_len = None
+        if self.reasoning_model:
+            self.found_reasoning_end = False
+            self.output_start_index = None
 
     def _mask_except(self, scores: torch.FloatTensor, allowed_tokens: Set[int]) -> torch.FloatTensor:
         """
@@ -325,7 +348,6 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         if self.reasoning_model and not self.reasoning_ended(
             input_ids[:, self.prompt_len:], self.reasoning_end_marker, self.found_reasoning_end
             ):
-            # If the reasoning has not ended, do not apply any constraints and return the original scores.
             return scores
 
         if self.reasoning_model and not self.found_reasoning_end:

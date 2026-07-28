@@ -13,6 +13,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
     to find all possible prefix tokens for the remaining byte suffix of the now generated token.
     2. The model may open a span and emit <SPAN><LABEL>...</LABEL>...</SPAN>.
     3. Text inside the spans is still constrained to copy the input text exactly.
+    4. For reasoning models, the processor can optionally allow unconstrained reasoning tokens to be emitted before 
+       the first output token, and then enforce the span constraints after reasoning has ended.
 
     This gives probabilistic token choices while guaranteeing that removing tags reconstructs the 
     original input text exactly.
@@ -109,12 +111,20 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         """
         self.STATE = "OUTSIDE"
         self.seq_pos = 0
+
         self.input_pos = 0
         self.selected_label = None
         self.live_blocks = None
+
         self.span_text_has_content = False
+
         self.prev_len = 0
         self._active_blocks = None
+
+        self.prompt_len = None
+        if self.reasoning_model:
+            self.found_reasoning_end = False
+            self.output_start_index = None
 
     def _mask_except(self, scores: torch.FloatTensor, allowed_tokens: Set[int]) -> torch.FloatTensor:
         """

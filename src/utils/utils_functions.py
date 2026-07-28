@@ -4,7 +4,7 @@ import json
 import os
 import statistics
 import time
-from utils.model_reasoning_utils import extract_harmony_final_channel
+from utils.model_reasoning_utils import extract_harmony_final_channel, find_answer_start
 
 # -------------------------
 # File I/O helpers
@@ -41,11 +41,24 @@ def generate_markup(
     temperature: float,
     reasoning_model: bool = False,
     reasoning_effort: str = None,
+    reasoning_end_marker=None,
+    stats_out: dict = None,
 ) -> Tuple[str, int, float]:
     """
     Generate tagged text using either constrained or unconstrained decoding.
 
-    Returns (text, num_output_tokens, generation_seconds)
+    Returns (text, num_output_tokens, generation_seconds), where num_output_tokens
+    is the TOTAL generated tokens (reasoning + answer). For a reasoning model the
+    returned `text` is the ANSWER segment only (reasoning stripped), so downstream
+    parsing sees just the constrained/answer output.
+
+    Reasoning/answer split (two-phase reporting):
+      - constrained: taken from processor.output_start_index (recorded at the boundary).
+      - unconstrained: found by locating `reasoning_end_marker` (a list of token ids)
+        in the generated ids.
+    If `stats_out` (a dict) is passed, it is filled with num_reasoning_tokens,
+    num_answer_tokens, reasoning_text, answer_text, found_reasoning_end. Callers that
+    don't pass it get the unchanged 3-tuple behavior.
     """
     messages = [
         {"role": "system", "content": system_prompt},
@@ -61,19 +74,13 @@ def generate_markup(
         tokenize=False,
         add_generation_prompt=True,
         enable_thinking=reasoning_model,
-        **template_kwargs,
+        reasoning_effort=reasoning_effort,
     )
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-    # GPT-OSS's harmony channels ("analysis" vs "final") are only
-    # distinguishable via the special-token delimiters, so keep them in the
-    # decoded text for this one model family; every other model keeps the
-    # prior skip_special_tokens=True behavior untouched.
-    skip_special_tokens = reasoning_effort is None
-
     if eval_model == "constrained":
-        text, num_output_tokens, generation_seconds = generate_constrained_markup(
+        full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text = generate_constrained_markup(
             model=model,
             tokenizer=tokenizer,
             processor=processor,
@@ -81,23 +88,72 @@ def generate_markup(
             max_new_tokens=max_new_tokens,
             do_sample=do_sample,
             temperature=temperature,
-            skip_special_tokens=skip_special_tokens,
+            reasoning_model=reasoning_model,
         )
     else:
-        text, num_output_tokens, generation_seconds = generate_unconstrained_markup(
+        full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text = generate_unconstrained_markup(
             model=model,
             tokenizer=tokenizer,
             inputs=inputs,
             max_new_tokens=max_new_tokens,
             do_sample=do_sample,
             temperature=temperature,
-            skip_special_tokens=skip_special_tokens,
+            reasoning_model=reasoning_model,
+            reasoning_end_marker=reasoning_end_marker,
         )
 
-    if reasoning_effort is not None:
-        text = extract_harmony_final_channel(text)
+    if reasoning_model:
+        # Answer segment only (reasoning stripped via the boundary split).
+        text = answer_text
+    else:
+        text = full_text
 
-    return text, num_output_tokens, generation_seconds
+    if stats_out is not None:
+        stats_out["num_reasoning_tokens"] = n_reason
+        stats_out["num_answer_tokens"] = n_answer
+        stats_out["reasoning_text"] = reasoning_text
+        stats_out["answer_text"] = answer_text
+        # answer produced => the end marker/boundary was actually found this run.
+        stats_out["found_reasoning_end"] = bool(reasoning_model and n_answer > 0)
+
+    return text, total_tokens, generation_seconds
+
+
+def _split_reasoning_answer(tokenizer, new_ids, generation_seconds, boundary, is_reasoning):
+    """Split generated ids into (reasoning, answer) at `boundary` (an index into
+    new_ids, or None). Returns
+    (full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text).
+
+    - not a reasoning model: everything is the answer (n_reason=0).
+    - reasoning model, boundary is None: the end marker never appeared (truncated
+      mid-reasoning) -> no valid answer; everything counts as reasoning, answer empty.
+    - reasoning model, boundary found: split there; the answer is decoded WITHOUT
+      special tokens (drops </think> / <|return|> / EOS), leaving clean tagged text.
+    """
+    total_tokens = int(new_ids.shape[0])
+    full_text = tokenizer.decode(
+        new_ids, 
+        skip_special_tokens=True, 
+        clean_up_tokenization_spaces=False,
+    )
+
+    if not is_reasoning:
+        return full_text, total_tokens, generation_seconds, 0, total_tokens, "", full_text
+
+    if boundary is None:
+        return full_text, total_tokens, generation_seconds, total_tokens, 0, full_text, ""
+
+    boundary = int(boundary)
+    reasoning_ids = new_ids[:boundary]
+    answer_ids = new_ids[boundary:]
+    reasoning_text = tokenizer.decode(
+        reasoning_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False,
+    )
+    answer_text = tokenizer.decode(
+        answer_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False,
+    )
+    return full_text, total_tokens, generation_seconds, boundary, total_tokens - boundary, reasoning_text, answer_text
+
 
 def generate_unconstrained_markup(
     model,
@@ -106,10 +162,13 @@ def generate_unconstrained_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
-    skip_special_tokens: bool = True,
-) -> Tuple[str, int, float]:
-    """Generate unconstrained tagged text using a HF model + tokenizer."""
+    reasoning_model: bool = False,
+    reasoning_end_marker=None,
+):
+    """Generate unconstrained tagged text using a HF model + tokenizer.
 
+    Returns the 7-tuple produced by _split_reasoning_answer (see generate_markup).
+    """
     start = time.perf_counter()
     outputs = model.generate(
         **inputs,
@@ -118,14 +177,17 @@ def generate_unconstrained_markup(
         temperature=temperature,
     )
     generation_seconds = time.perf_counter() - start
-    new_ids = outputs[0][inputs["input_ids"].shape[1]:]#.tolist()
+    new_ids = outputs[0][inputs["input_ids"].shape[1]:]
 
-    text = tokenizer.decode(
-        new_ids,
-        skip_special_tokens=skip_special_tokens,
-        clean_up_tokenization_spaces=False,
-    )#.strip()
-    return text, new_ids.shape[0], generation_seconds
+    boundary = None
+    if reasoning_model and reasoning_end_marker:
+        # No processor here, so locate the reasoning-end marker in the generated ids.
+        boundary = find_answer_start(new_ids.tolist(), list(reasoning_end_marker))
+
+    return _split_reasoning_answer(
+        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+    )
+
 
 def generate_constrained_markup(
     model,
@@ -135,9 +197,12 @@ def generate_constrained_markup(
     max_new_tokens: int,
     do_sample: bool,
     temperature: float,
-    skip_special_tokens: bool = True,
-) -> Tuple[str, int, float]:
-    """Generate constrained tagged text using the trie processor."""
+    reasoning_model: bool = False,
+):
+    """Generate constrained tagged text using the trie processor.
+
+    Returns the 7-tuple produced by _split_reasoning_answer (see generate_markup).
+    """
     start = time.perf_counter()
     outputs = model.generate(
         **inputs,
@@ -148,18 +213,21 @@ def generate_constrained_markup(
     )
     generation_seconds = time.perf_counter() - start
 
-    new_ids = outputs[0][inputs["input_ids"].shape[1]:]#.tolist()
+    prompt_len = inputs["input_ids"].shape[1]
+    new_ids = outputs[0][prompt_len:]
 
-    if processor.reasoning_model:
-        reasoning_part = new_ids[:processor.output_start_index]
-        output_part = new_ids[processor.output_start_index:]
+    boundary = None
+    if reasoning_model:
+        # output_start_index is absolute (prompt-inclusive); make it relative to new_ids.
+        # getattr guards the non-trie / non-reasoning processors (e.g. xgrammar) that
+        # never set it.
+        osi = getattr(processor, "output_start_index", None)
+        if osi is not None:
+            boundary = osi - prompt_len
 
-    text = tokenizer.decode(
-        new_ids,
-        skip_special_tokens=skip_special_tokens,
-        clean_up_tokenization_spaces=False,
-    )#.strip()
-    return text, new_ids.shape[0], generation_seconds
+    return _split_reasoning_answer(
+        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+    )
 
 # -------------------------
 # Evaluation helpers for text

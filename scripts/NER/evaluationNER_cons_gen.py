@@ -1,12 +1,13 @@
 import sys
 import time
 import os
-from typing import List
-import pandas as pd
 import evaluate
+import torch
+import pandas as pd
+
+from typing import List
 from datasets import load_dataset
 from tqdm import tqdm
-import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from utils.utils_functions import (
     generate_markup, validate_reconstruction,
@@ -17,9 +18,7 @@ from utils.utils_functions import (
 from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
-
 from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
-
 from utils.model_reasoning_utils import reasoning_ended
 
 # -------------------------
@@ -27,12 +26,16 @@ from utils.model_reasoning_utils import reasoning_ended
 # -------------------------
 # MAX_EXAMPLES = 1280
 # N_ITERS = 1
+
 MAX_EXAMPLES = None
 N_ITERS = 1
+
 EVAL_INTERVAL = 10
+
 # Single batch size per run. You can override from CLI:
 # python evaluationNER_cons_gen.py 5
 BATCH_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 1
+
 # if BATCH_SIZE > 5:
 #     EVAL_INTERVAL = 5
 
@@ -169,7 +172,7 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                     reasoning_model=reasoning_model,
                                     reasoning_end_marker=reasoning_end_marker,
-                                    reasoning_ended_fn=reasoning_ended
+                                    reasoning_ended=reasoning_ended
                                 )
                             else:
                                 processor = TrieSpanConstrainedProcessor(
@@ -179,9 +182,10 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                     reasoning_model=reasoning_model,
                                     reasoning_end_marker=reasoning_end_marker,
-                                    reasoning_ended_fn=reasoning_ended
+                                    reasoning_ended=reasoning_ended
                                 )
 
+                        gen_stats = {}
                         generated, num_output_tokens, generation_seconds = generate_markup(
                             model=model,
                             tokenizer=tokenizer,
@@ -194,7 +198,12 @@ for model_name in MODEL_NAMES:
                             temperature=TEMPERATURE,
                             reasoning_model=reasoning_model,
                             reasoning_effort='low',
+                            reasoning_end_marker=reasoning_end_marker,
+                            stats_out=gen_stats,
                         )
+                        # Reasoning/answer token split (0 / total for non-reasoning models).
+                        num_reasoning_tokens = gen_stats.get("num_reasoning_tokens", 0)
+                        num_answer_tokens = gen_stats.get("num_answer_tokens", num_output_tokens)
 
                         parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
                         total_predictions += parsed["span_count"]
@@ -240,6 +249,9 @@ for model_name in MODEL_NAMES:
                             "wrong_text": 0 if exact_copy_ok else 1,
                             "span_count": parsed["span_count"],
                             "num_output_tokens": num_output_tokens,
+                            "num_reasoning_tokens": num_reasoning_tokens,
+                            "num_answer_tokens": num_answer_tokens,
+                            "reasoning_text": gen_stats.get("reasoning_text", ""),
                             "generation_seconds": generation_seconds,
                         })
 

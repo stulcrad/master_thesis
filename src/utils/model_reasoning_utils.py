@@ -23,6 +23,24 @@ def extract_harmony_final_channel(text: str) -> str:
             tail = tail[:end_idx]
     return tail.strip()
 
+def find_answer_start(token_ids: List[int], reasoning_end_marker: List[int]) -> "int | None":
+    """Index in `token_ids` where the answer begins, i.e. right AFTER the first full
+    occurrence of the reasoning-end marker subsequence. Returns None if the marker
+    never appears (reasoning was truncated before it ended).
+
+    The marker tokens themselves are attributed to the reasoning side (the answer
+    starts strictly after them), matching where the constrained processor records
+    `output_start_index`, so the constrained and unconstrained paths split identically.
+    """
+    if not reasoning_end_marker:
+        return None
+    m = len(reasoning_end_marker)
+    for i in range(len(token_ids) - m + 1):
+        if token_ids[i:i + m] == reasoning_end_marker:
+            return i + m
+    return None
+
+
 def reasoning_ended(input_ids: torch.LongTensor, reasoning_end_marker: List[int], found_reasoning_end: bool) -> bool:
     """
     Determine if the model has finished reasoning based on the presence of a reasoning marker in the text.

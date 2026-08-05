@@ -30,6 +30,7 @@ from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
 from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN_LEGALQA_TEMPLATE
+from utils.model_reasoning_utils import reasoning_ended
 
 # -------------------------
 # Evaluation configuration
@@ -40,6 +41,15 @@ EVAL_INTERVAL = 100
 BATCH_SIZE = 1
 
 MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "meta-llama/Llama-3.1-8B-Instruct"]
+
+REASONING_END_MARKER = {
+    'Qwen/Qwen3-8B': "</think>",
+}
+REASONING_MODEL = {
+    'google/gemma-3-4b-it': False,
+    'Qwen/Qwen3-8B': True,
+    'meta-llama/Llama-3.1-8B-Instruct': False,
+}
 
 DO_SAMPLES = [False]
 TEMPERATURE = 0.2
@@ -68,6 +78,13 @@ for model_name in MODEL_NAMES:
         model_name,
         device_map="auto",
         torch_dtype='auto',
+    )
+
+    reasoning_model = REASONING_MODEL.get(model_name, False)
+    reasoning_end_marker_str = REASONING_END_MARKER.get(model_name, None)
+    reasoning_end_marker = (
+        tokenizer(reasoning_end_marker_str, add_special_tokens=False).input_ids
+        if reasoning_end_marker_str else None
     )
 
     for do_sample in DO_SAMPLES:
@@ -141,6 +158,11 @@ for model_name in MODEL_NAMES:
                                     input_text,
                                     tokenizer,
                                     toktrie,
+                                    reasoning_model=reasoning_model,
+                                    reasoning_end_marker=reasoning_end_marker,
+                                    reasoning_ended=reasoning_ended,
+                                    model_eos_token_id=model.generation_config.eos_token_id,
+                                    tokenizer_eos_token_id=tokenizer.eos_token_id,
                                 )
                             else:
                                 processor = TrieSpanConstrainedProcessor(
@@ -148,8 +170,14 @@ for model_name in MODEL_NAMES:
                                     input_text,
                                     tokenizer,
                                     toktrie,
+                                    reasoning_model=reasoning_model,
+                                    reasoning_end_marker=reasoning_end_marker,
+                                    reasoning_ended=reasoning_ended,
+                                    model_eos_token_id=model.generation_config.eos_token_id,
+                                    tokenizer_eos_token_id=tokenizer.eos_token_id,
                                 )
 
+                        gen_stats = {}
                         generated, num_output_tokens, generation_seconds = generate_markup(
                             model=model,
                             tokenizer=tokenizer,
@@ -160,7 +188,15 @@ for model_name in MODEL_NAMES:
                             max_new_tokens=MAX_NEW_TOKENS,
                             do_sample=do_sample,
                             temperature=TEMPERATURE,
+                            reasoning_model=reasoning_model,
+                            reasoning_effort='low',
+                            reasoning_end_marker=reasoning_end_marker,
+                            stats_out=gen_stats,
+                            repetition_penalty=1.3 if reasoning_model else None,
                         )
+                        # Reasoning/answer token split (0 / total for non-reasoning models).
+                        num_reasoning_tokens = gen_stats.get("num_reasoning_tokens", 0)
+                        num_answer_tokens = gen_stats.get("num_answer_tokens", num_output_tokens)
 
                         parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
                         total_predictions += parsed["span_count"]
@@ -207,6 +243,7 @@ for model_name in MODEL_NAMES:
                             "dataset": "legalqa_eval",
                             "method": "constrained_gen",
                             "model": model_name,
+                            "reasoning_enabled": reasoning_model,
                             "sampling_strategy": sampling_strategy,
                             "eval_mode": eval_mode,
                             "processor_class": config_label,
@@ -223,6 +260,9 @@ for model_name in MODEL_NAMES:
                             "wrong_text": 0 if exact_copy_ok else 1,
                             "span_count": parsed["span_count"],
                             "num_output_tokens": num_output_tokens,
+                            "num_reasoning_tokens": num_reasoning_tokens,
+                            "num_answer_tokens": num_answer_tokens,
+                            "reasoning_text": gen_stats.get("reasoning_text", ""),
                             "generation_seconds": generation_seconds,
                         })
 
@@ -271,11 +311,13 @@ for model_name in MODEL_NAMES:
 
                 results.append({
                     "model":              model_name,
+                    "reasoning_enabled": reasoning_model,
                     "sampling_strategy":  sampling_strategy,
                     "do_sample":          do_sample,
                     "eval_mode":          eval_mode,
                     "processor_class":    config_label,
                     "batch_size":         BATCH_SIZE,
+                    "max_examples":        MAX_EXAMPLES,
                     "n_iters":            N_ITERS,
                     "char_f1_report":           format_pm(to_pct(char_f1_mean), to_pct(char_f1_std)),
                     "char_precision_report":    format_pm(to_pct(char_p_mean), to_pct(char_p_std)),
@@ -293,25 +335,22 @@ for model_name in MODEL_NAMES:
                     "elapsed_minute_std": round(elapsed_std,  3),
                 })
 
+    # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
+    intermediate_results_df = pd.DataFrame(results)
+    intermediate_results_path = f"/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Constrained-Gen/Csv/{model_name.split('/')[-1]}_eval_{BATCH_SIZE}_BS_legalqa.csv"
+    intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
+
+    os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)
+    os.makedirs(os.path.dirname(intermediate_results_txt_path), exist_ok=True)
+
+    intermediate_results_df.to_csv(intermediate_results_path, index=False)
+
+    with open(intermediate_results_txt_path, "w") as f:
+        f.write(intermediate_results_df.to_string(index=False))
+
+    print(f"\nIntermediate results saved to {intermediate_results_path} and {intermediate_results_txt_path}")
+
+    # Free GPU memory before loading next model
     del model
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
-
-
-results_df = pd.DataFrame(results)
-
-results_path = (
-    f"/home/stulcrad/master_thesis/Experiment_results/LegalQAEval/Constrained-Gen/Csv/"
-    f"hf_all_configs_eval_{BATCH_SIZE}_BS_legalqa.csv"
-)
-txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
-
-os.makedirs(os.path.dirname(results_path), exist_ok=True)
-os.makedirs(os.path.dirname(txt_path), exist_ok=True)
-
-results_df.to_csv(results_path, index=False)
-
-with open(txt_path, "w") as f:
-    f.write(results_df.to_string(index=False))
-
-print(f"\nResults saved to {results_path} and {txt_path}")

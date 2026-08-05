@@ -172,7 +172,9 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                     reasoning_model=reasoning_model,
                                     reasoning_end_marker=reasoning_end_marker,
-                                    reasoning_ended=reasoning_ended
+                                    reasoning_ended=reasoning_ended,
+                                    model_eos_token_id=model.generation_config.eos_token_id,
+                                    tokenizer_eos_token_id=tokenizer.eos_token_id,
                                 )
                             else:
                                 processor = TrieSpanConstrainedProcessor(
@@ -182,7 +184,9 @@ for model_name in MODEL_NAMES:
                                     toktrie,
                                     reasoning_model=reasoning_model,
                                     reasoning_end_marker=reasoning_end_marker,
-                                    reasoning_ended=reasoning_ended
+                                    reasoning_ended=reasoning_ended,
+                                    model_eos_token_id=model.generation_config.eos_token_id,
+                                    tokenizer_eos_token_id=tokenizer.eos_token_id,
                                 )
 
                         gen_stats = {}
@@ -200,6 +204,7 @@ for model_name in MODEL_NAMES:
                             reasoning_effort='low',
                             reasoning_end_marker=reasoning_end_marker,
                             stats_out=gen_stats,
+                            repetition_penalty=1.3 if reasoning_model else None,
                         )
                         # Reasoning/answer token split (0 / total for non-reasoning models).
                         num_reasoning_tokens = gen_stats.get("num_reasoning_tokens", 0)
@@ -235,6 +240,7 @@ for model_name in MODEL_NAMES:
                             "dataset": "conll2003",
                             "method": "constrained_gen",
                             "model": model_name,
+                            "reasoning_enabled": reasoning_model,
                             "sampling_strategy": sampling_strategy,
                             "eval_mode": eval_mode,
                             "processor_class": config_label,
@@ -309,6 +315,7 @@ for model_name in MODEL_NAMES:
 
                 results.append({
                     "model": model_name,
+                    "reasoning_enabled": reasoning_model,
                     "sampling_strategy": sampling_strategy,
                     "do_sample": do_sample,
                     "eval_mode": eval_mode,
@@ -352,22 +359,3 @@ for model_name in MODEL_NAMES:
     del model
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
-
-
-# # Save results to a DataFrame and CSV
-# results_df = pd.DataFrame(results)
-
-# # Optional persistence
-# results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Constrained-Gen/Csv/hf_all_configs_eval_{BATCH_SIZE}_BS_conll2003.csv"
-# txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
-
-# import os
-# os.makedirs(os.path.dirname(results_path), exist_ok=True)
-# os.makedirs(os.path.dirname(txt_path), exist_ok=True)
-
-# results_df.to_csv(results_path, index=False)
-
-# with open(txt_path, "w") as f:
-#     f.write(results_df.to_string(index=False))
-
-# print(f"\nResults saved to {results_path} and {txt_path}")

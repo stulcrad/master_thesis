@@ -4,7 +4,7 @@ import json
 import os
 import statistics
 import time
-from utils.model_reasoning_utils import extract_harmony_final_channel, find_answer_start
+from utils.model_reasoning_utils import find_answer_start
 
 # -------------------------
 # File I/O helpers
@@ -43,6 +43,7 @@ def generate_markup(
     reasoning_effort: str = None,
     reasoning_end_marker=None,
     stats_out: dict = None,
+    repetition_penalty: float = None,
 ) -> Tuple[str, int, float]:
     """
     Generate tagged text using either constrained or unconstrained decoding.
@@ -74,7 +75,7 @@ def generate_markup(
         tokenize=False,
         add_generation_prompt=True,
         enable_thinking=reasoning_model,
-        reasoning_effort=reasoning_effort,
+        **template_kwargs
     )
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
@@ -89,6 +90,7 @@ def generate_markup(
             do_sample=do_sample,
             temperature=temperature,
             reasoning_model=reasoning_model,
+            repetition_penalty=repetition_penalty,
         )
     else:
         full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text = generate_unconstrained_markup(
@@ -100,6 +102,7 @@ def generate_markup(
             temperature=temperature,
             reasoning_model=reasoning_model,
             reasoning_end_marker=reasoning_end_marker,
+            repetition_penalty=repetition_penalty,
         )
 
     if reasoning_model:
@@ -148,10 +151,10 @@ def _split_reasoning_answer(tokenizer, new_ids, generation_seconds, boundary, is
     answer_ids = new_ids[boundary:]
     reasoning_text = tokenizer.decode(
         reasoning_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False,
-    )
+    ).strip()
     answer_text = tokenizer.decode(
         answer_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False,
-    )
+    ).strip()
     return full_text, total_tokens, generation_seconds, boundary, total_tokens - boundary, reasoning_text, answer_text
 
 
@@ -164,17 +167,20 @@ def generate_unconstrained_markup(
     temperature: float,
     reasoning_model: bool = False,
     reasoning_end_marker=None,
+    repetition_penalty: float = None,
 ):
     """Generate unconstrained tagged text using a HF model + tokenizer.
 
     Returns the 7-tuple produced by _split_reasoning_answer (see generate_markup).
     """
+    gen_kwargs = dict(max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=temperature)
+    if repetition_penalty is not None:
+        gen_kwargs["repetition_penalty"] = repetition_penalty
+
     start = time.perf_counter()
     outputs = model.generate(
         **inputs,
-        max_new_tokens=max_new_tokens,
-        do_sample=do_sample,
-        temperature=temperature,
+        **gen_kwargs,
     )
     generation_seconds = time.perf_counter() - start
     new_ids = outputs[0][inputs["input_ids"].shape[1]:]
@@ -198,18 +204,21 @@ def generate_constrained_markup(
     do_sample: bool,
     temperature: float,
     reasoning_model: bool = False,
+    repetition_penalty: float = None,
 ):
     """Generate constrained tagged text using the trie processor.
 
     Returns the 7-tuple produced by _split_reasoning_answer (see generate_markup).
     """
+    gen_kwargs = dict(max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=temperature)
+    if repetition_penalty is not None:
+        gen_kwargs["repetition_penalty"] = repetition_penalty
+
     start = time.perf_counter()
     outputs = model.generate(
         **inputs,
         logits_processor=[processor],
-        max_new_tokens=max_new_tokens,
-        do_sample=do_sample,
-        temperature=temperature,
+        **gen_kwargs,
     )
     generation_seconds = time.perf_counter() - start
 

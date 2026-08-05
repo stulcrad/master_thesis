@@ -25,7 +25,9 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
                  toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
                  reasoning_ended: Optional[Callable[[torch.LongTensor, List[int], bool], bool]] = None,
-                 reasoning_end_marker: Optional[List[int]] = None
+                 reasoning_end_marker: Optional[List[int]] = None,
+                 model_eos_token_id=None,
+                 tokenizer_eos_token_id=None,
                 ):
         """
         Initialize the TrieSpanConstrainedProcessorTokenAware processor.
@@ -38,6 +40,9 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             reasoning_model (bool): Whether the model is a reasoning model that allows unconstrained reasoning tokens before the first output token.
             reasoning_ended (Optional[Callable[[torch.LongTensor, List[int], bool], bool]]): Optional callable to determine if reasoning has ended based on the generated tokens.
             reasoning_end_marker (Optional[List[int]]): Optional list of token IDs that mark the end of reasoning.
+            model_eos_token_id (int | list[int] | None): The model's own generation_config.eos_token_id(s)
+            tokenizer_eos_token_id (int | list[int] | None): The tokenizer's own eos_token_id(s), passed in
+                explicitly by the caller (e.g. tokenizer.eos_token_id).
         """
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
@@ -99,8 +104,15 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
 
         # End tokens accepted once all input tokens are fully consumed.
         self.eos_token_ids: Set[int] = set()
-        if tokenizer.eos_token_id is not None:
-            self.eos_token_ids.add(tokenizer.eos_token_id)
+        if tokenizer_eos_token_id is None:
+            tokenizer_eos_token_id = tokenizer.eos_token_id
+        for eos_ids in (tokenizer_eos_token_id, model_eos_token_id):
+            if eos_ids is None:
+                continue
+            if isinstance(eos_ids, (list, tuple, set)):
+                self.eos_token_ids.update(eos_ids)
+            else:
+                self.eos_token_ids.add(eos_ids)
         for tok in ["<end_of_turn>", "<|im_end|>", "<|eot_id|>", "<|return|>", "<turn|>"]:
             tok_id = tokenizer.convert_tokens_to_ids(tok)
             if tok_id is not None and tok_id != tokenizer.unk_token_id:

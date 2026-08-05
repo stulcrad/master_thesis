@@ -55,6 +55,21 @@ MAX_NEW_TOKENS = 32578
 # MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "openai/gpt-oss-20b", "meta-llama/Llama-3.1-8B-Instruct"]
 MODEL_NAMES = ["openai/gpt-oss-20b"]
 
+REASONING_END_MARKER = {
+    'google/gemma-4-26B-A4B-it': "<channel|>",
+    'openai/gpt-oss-20b': "<|channel|>final<|message|>",
+    'Qwen/Qwen3-8B': "</think>",
+    'Qwen/Qwen3.5-27B': "</think>",
+}
+REASONING_MODEL = {
+    'google/gemma-3-4b-it': False,
+    'google/gemma-4-26B-A4B-it': True,
+    'openai/gpt-oss-20b': True,
+    'Qwen/Qwen3-8B': True,
+    'Qwen/Qwen3.5-27B': True,
+    'meta-llama/Llama-3.1-8B-Instruct': False,
+}
+
 # Define system prompts to evaluate
 prompts = {
     SYSTEM_PROMPT_CONTEXT_MD: "SYSTEM_PROMPT_CONTEXT_MD"
@@ -101,9 +116,13 @@ for model_name in MODEL_NAMES:
                     sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
 
                 system_prompt = prompt
-                if "qwen" in model_name.lower():
-                    system_prompt += "\n\\no_think"
                 reasoning_effort = "low" if "gpt-oss" in model_name.lower() else None
+                reasoning_model = REASONING_MODEL.get(model_name, False)
+                reasoning_end_marker_str = REASONING_END_MARKER.get(model_name, None)
+                reasoning_end_marker = (
+                    tokenizer(reasoning_end_marker_str, add_special_tokens=False).input_ids
+                    if reasoning_end_marker_str else None
+                )
 
                 start_time = time.time()
 
@@ -142,6 +161,7 @@ for model_name in MODEL_NAMES:
                     # the newly generated tokens (output[len(prompt_tokens):]),
                     # exactly like generate_unconstrained_markup() does for the
                     # constrained-generation track.
+                    gen_stats = {}
                     try:
                         content, num_output_tokens, generation_seconds = generate_markup(
                             model=model,
@@ -154,6 +174,9 @@ for model_name in MODEL_NAMES:
                             do_sample=DO_SAMPLE,
                             temperature=TEMPERATURE,
                             reasoning_effort=reasoning_effort,
+                            reasoning_model=reasoning_model,
+                            reasoning_end_marker=reasoning_end_marker,
+                            stats_out=gen_stats,
                         )
                         content = content.strip()
                         pred_json, json_parse_ok = json_safe_parse(content)
@@ -163,6 +186,9 @@ for model_name in MODEL_NAMES:
                         content = ""
                         num_output_tokens, generation_seconds = 0, 0.0
                         pred_json, json_parse_ok = [], False
+
+                    num_reasoning_tokens = gen_stats.get("num_reasoning_tokens", 0)
+                    num_answer_tokens = gen_stats.get("num_answer_tokens", num_output_tokens)
 
                     # Assign BIO tags based on predicted entities and contexts
                     pred_tags, match_stats = assign_spans_from_context(
@@ -187,6 +213,7 @@ for model_name in MODEL_NAMES:
                         "dataset": "conll2003",
                         "method": "context_hf",
                         "model": model_name,
+                        "reasoning_enabled": reasoning_model,
                         "system_prompt": prompts[prompt],
                         "fuzzy_mode": FUZZY,
                         "batch_size": BATCH_SIZE,
@@ -198,6 +225,9 @@ for model_name in MODEL_NAMES:
                         "raw_output": content,
                         "match_stats": match_stats,
                         "num_output_tokens": num_output_tokens,
+                        "num_reasoning_tokens": num_reasoning_tokens,
+                        "num_answer_tokens": num_answer_tokens,
+                        "reasoning_text": gen_stats.get("reasoning_text", ""),
                         "generation_seconds": generation_seconds,
                     })
 
@@ -276,6 +306,7 @@ for model_name in MODEL_NAMES:
             all_results.append({
                 "system_prompt": prompts[prompt],
                 "model": model_name,
+                "reasoning_enabled": reasoning_model,
                 "batch_size": BATCH_SIZE,
                 "fuzzy_mode": FUZZY,
                 "n_iters": N_ITERS,
@@ -305,23 +336,23 @@ for model_name in MODEL_NAMES:
                 "elapsed_minute_std": round(elapsed_std, 3),
             })
 
+    # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
+    model_short = model_name.split("/")[-1]
+    intermediate_results_df = pd.DataFrame(all_results)
+    intermediate_results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Csv/HF_context_results_{model_short}_bs{BATCH_SIZE}_conll2003.csv"
+    intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
+
+    os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)
+    os.makedirs(os.path.dirname(intermediate_results_txt_path), exist_ok=True)
+
+    intermediate_results_df.to_csv(intermediate_results_path, index=False)
+
+    with open(intermediate_results_txt_path, "w") as f:
+        f.write(intermediate_results_df.to_string(index=False))
+
+    print(f"\nIntermediate results saved to {intermediate_results_path} and {intermediate_results_txt_path}")
+
     # Free GPU memory before loading the next model
     del model
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
-
-# Save results to CSV
-results_df = pd.DataFrame(all_results)
-
-results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Csv/HF_context_results_GPT_OSS.csv"
-txt_path = results_path.replace(".csv", ".txt").replace("Csv", "Txt")
-
-os.makedirs(os.path.dirname(results_path), exist_ok=True)
-os.makedirs(os.path.dirname(txt_path), exist_ok=True)
-
-results_df.to_csv(results_path, index=False)
-
-with open(txt_path, "w") as f:
-    f.write(results_df.to_string(index=False))
-
-print(f"\nResults saved to {results_path} and {txt_path}")

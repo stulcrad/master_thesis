@@ -19,7 +19,11 @@ from utils.utils_functions import generate_markup, mean_std, to_pct, format_pm, 
 
 # Per-example predictions (JSONL, one line per generation) -- required for
 # paired significance tests and post-hoc metrics without re-running.
-PRED_DIR = "/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Predictions"
+# Results root. Thesis runs live in Experiment_results/ and are FROZEN (cited in the
+# thesis); publication runs go here so the two are trivially separable by eye.
+RESULTS_ROOT = "/home/stulcrad/master_thesis/Experiment_results_publication"
+
+PRED_DIR = f"{RESULTS_ROOT}/CoNLL/Context-Based/Predictions"
 
 # Define label mappings
 label2id = {
@@ -339,7 +343,7 @@ for model_name in MODEL_NAMES:
     # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
     model_short = model_name.split("/")[-1]
     intermediate_results_df = pd.DataFrame(all_results)
-    intermediate_results_path = f"/home/stulcrad/master_thesis/Experiment_results/CoNLL/Context-Based/Csv/HF_context_results_{model_short}_bs{BATCH_SIZE}_conll2003.csv"
+    intermediate_results_path = f"{RESULTS_ROOT}/CoNLL/Context-Based/Csv/HF_context_results_{model_short}_bs{BATCH_SIZE}_conll2003.csv"
     intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
     os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)

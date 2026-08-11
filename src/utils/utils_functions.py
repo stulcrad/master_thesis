@@ -38,12 +38,15 @@ def generate_markup(
     system_prompt: str,
     max_new_tokens: int,
     do_sample: bool,
-    temperature: float,
     reasoning_model: bool = False,
     reasoning_effort: str = None,
     reasoning_end_marker=None,
     stats_out: dict = None,
     repetition_penalty: float = None,
+    temperature: float = None,
+    top_p: float = None,
+    top_k: int = None,
+    min_p: float = None,
 ) -> Tuple[str, int, float]:
     """
     Generate tagged text using either constrained or unconstrained decoding.
@@ -57,10 +60,16 @@ def generate_markup(
       - constrained: taken from processor.output_start_index (recorded at the boundary).
       - unconstrained: found by locating `reasoning_end_marker` (a list of token ids)
         in the generated ids.
+
+    Sampling kwargs (`top_p`, `top_k`, `min_p`, `repetition_penalty`) follow a
+    "None means do not pass" convention, so leaving one unset lets the model's own
+    generation_config.json apply instead of being overridden with a null.
+
     If `stats_out` (a dict) is passed, it is filled with num_reasoning_tokens,
-    num_answer_tokens, reasoning_text, answer_text, found_reasoning_end. Callers that
-    don't pass it get the unchanged 3-tuple behavior.
+    num_answer_tokens, reasoning_text, answer_text, found_reasoning_end and
+    reasoning_marker_seen. Callers that don't pass it get the unchanged 3-tuple behavior.
     """
+
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": input_text},
@@ -80,8 +89,16 @@ def generate_markup(
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
+    sampling_kwargs = dict(
+        repetition_penalty=repetition_penalty,
+        top_p=top_p,
+        top_k=top_k,
+        min_p=min_p,
+    )
+
     if eval_model == "constrained":
-        full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text = generate_constrained_markup(
+        (full_text, total_tokens, generation_seconds, n_reason, n_answer,
+         reasoning_text, answer_text, marker_seen) = generate_constrained_markup(
             model=model,
             tokenizer=tokenizer,
             processor=processor,
@@ -90,10 +107,12 @@ def generate_markup(
             do_sample=do_sample,
             temperature=temperature,
             reasoning_model=reasoning_model,
-            repetition_penalty=repetition_penalty,
+            reasoning_end_marker=reasoning_end_marker,
+            **sampling_kwargs,
         )
     else:
-        full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text = generate_unconstrained_markup(
+        (full_text, total_tokens, generation_seconds, n_reason, n_answer,
+         reasoning_text, answer_text, marker_seen) = generate_unconstrained_markup(
             model=model,
             tokenizer=tokenizer,
             inputs=inputs,
@@ -102,7 +121,7 @@ def generate_markup(
             temperature=temperature,
             reasoning_model=reasoning_model,
             reasoning_end_marker=reasoning_end_marker,
-            repetition_penalty=repetition_penalty,
+            **sampling_kwargs,
         )
 
     if reasoning_model:
@@ -118,8 +137,36 @@ def generate_markup(
         stats_out["answer_text"] = answer_text
         # answer produced => the end marker/boundary was actually found this run.
         stats_out["found_reasoning_end"] = bool(reasoning_model and n_answer > 0)
+        stats_out["reasoning_marker_seen"] = marker_seen
 
     return text, total_tokens, generation_seconds
+
+
+def _build_gen_kwargs(max_new_tokens, do_sample, temperature,
+                      repetition_penalty=None, top_p=None, top_k=None, min_p=None) -> dict:
+    """Assemble model.generate() kwargs, omitting anything unset.
+
+    Two conventions matter here:
+    - `None` means "do not pass the kwarg", so the model's own generation_config.json
+      applies rather than being overwritten with a null.
+    - Sampling-only knobs (temperature/top_p/top_k/min_p) are dropped entirely under
+      greedy decoding. HF would otherwise warn "The following generation flags are not
+      valid and may be ignored" and silently discard them, which makes a run look
+      configured when it is not.
+    """
+    gen_kwargs = {"max_new_tokens": max_new_tokens, "do_sample": do_sample}
+
+    if do_sample:
+        for name, value in (("temperature", temperature), ("top_p", top_p),
+                            ("top_k", top_k), ("min_p", min_p)):
+            if value is not None:
+                gen_kwargs[name] = value
+
+    # repetition_penalty is valid under both greedy and sampling.
+    if repetition_penalty is not None:
+        gen_kwargs["repetition_penalty"] = repetition_penalty
+
+    return gen_kwargs
 
 
 def _split_reasoning_answer(tokenizer, new_ids, generation_seconds, boundary, is_reasoning):
@@ -168,14 +215,18 @@ def generate_unconstrained_markup(
     reasoning_model: bool = False,
     reasoning_end_marker=None,
     repetition_penalty: float = None,
+    top_p: float = None,
+    top_k: int = None,
+    min_p: float = None,
 ):
     """Generate unconstrained tagged text using a HF model + tokenizer.
 
-    Returns the 7-tuple produced by _split_reasoning_answer (see generate_markup).
+    Returns the 7-tuple produced by _split_reasoning_answer, plus an 8th element:
+    `reasoning_marker_seen` (see generate_markup).
     """
-    gen_kwargs = dict(max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=temperature)
-    if repetition_penalty is not None:
-        gen_kwargs["repetition_penalty"] = repetition_penalty
+    gen_kwargs = _build_gen_kwargs(
+        max_new_tokens, do_sample, temperature, repetition_penalty, top_p, top_k, min_p,
+    )
 
     start = time.perf_counter()
     outputs = model.generate(
@@ -185,14 +236,18 @@ def generate_unconstrained_markup(
     generation_seconds = time.perf_counter() - start
     new_ids = outputs[0][inputs["input_ids"].shape[1]:]
 
-    boundary = None
-    if reasoning_model and reasoning_end_marker:
-        # No processor here, so locate the reasoning-end marker in the generated ids.
-        boundary = find_answer_start(new_ids.tolist(), list(reasoning_end_marker))
-
-    return _split_reasoning_answer(
-        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+    # Marker scan is done unconditionally (whenever a marker exists) and is independent
+    # of whether we split on it, so the reasoning-OFF arm can be checked for leakage.
+    marker_at = (
+        find_answer_start(new_ids.tolist(), list(reasoning_end_marker))
+        if reasoning_end_marker else None
     )
+    # Split only when this is being treated as a reasoning run.
+    boundary = marker_at if reasoning_model else None
+
+    return (*_split_reasoning_answer(
+        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+    ), marker_at is not None)
 
 
 def generate_constrained_markup(
@@ -204,15 +259,20 @@ def generate_constrained_markup(
     do_sample: bool,
     temperature: float,
     reasoning_model: bool = False,
+    reasoning_end_marker=None,
     repetition_penalty: float = None,
+    top_p: float = None,
+    top_k: int = None,
+    min_p: float = None,
 ):
     """Generate constrained tagged text using the trie processor.
 
-    Returns the 7-tuple produced by _split_reasoning_answer (see generate_markup).
+    Returns the 7-tuple produced by _split_reasoning_answer, plus an 8th element:
+    `reasoning_marker_seen` (see generate_markup).
     """
-    gen_kwargs = dict(max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=temperature)
-    if repetition_penalty is not None:
-        gen_kwargs["repetition_penalty"] = repetition_penalty
+    gen_kwargs = _build_gen_kwargs(
+        max_new_tokens, do_sample, temperature, repetition_penalty, top_p, top_k, min_p,
+    )
 
     start = time.perf_counter()
     outputs = model.generate(
@@ -234,9 +294,15 @@ def generate_constrained_markup(
         if osi is not None:
             boundary = osi - prompt_len
 
-    return _split_reasoning_answer(
-        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+    # Leakage check for the reasoning-OFF arm, independent of the split above.
+    marker_seen = (
+        find_answer_start(new_ids.tolist(), list(reasoning_end_marker)) is not None
+        if reasoning_end_marker else False
     )
+
+    return (*_split_reasoning_answer(
+        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+    ), marker_seen)
 
 # -------------------------
 # Evaluation helpers for text

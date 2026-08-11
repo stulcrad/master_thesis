@@ -43,6 +43,10 @@ BATCH_SIZE = 1
 
 MODEL_NAMES = ["google/gemma-3-4b-it", "Qwen/Qwen3-8B", "meta-llama/Llama-3.1-8B-Instruct"]
 
+# Results root. Thesis runs live in Experiment_results/ and are FROZEN (cited in the
+# thesis); publication runs go here so the two are trivially separable by eye.
+RESULTS_ROOT = "/home/stulcrad/master_thesis/Experiment_results_publication"
+
 REASONING_END_MARKER = {
     'Qwen/Qwen3-8B': "</think>",
 }
@@ -50,6 +54,16 @@ REASONING_MODEL = {
     'google/gemma-3-4b-it': False,
     'Qwen/Qwen3-8B': True,
     'meta-llama/Llama-3.1-8B-Instruct': False,
+}
+
+# Per-model repetition penalty, applied only to reasoning models to curb runaway
+# self-verification loops in the reasoning phase (Qwen loops harder than Gemma).
+# None => the kwarg is not passed to generate() at all (HF default behavior).
+REPETITION_PENALTY = {
+    'google/gemma-4-26B-A4B-it': 1.15,
+    'openai/gpt-oss-20b': None,
+    'Qwen/Qwen3-8B': 1.3,
+    'Qwen/Qwen3.5-27B': 1.3,
 }
 
 DO_SAMPLES = [False]
@@ -91,6 +105,7 @@ for model_name in MODEL_NAMES:
         tokenizer(reasoning_end_marker_str, add_special_tokens=False).input_ids
         if reasoning_end_marker_str else None
     )
+    repetition_penalty = REPETITION_PENALTY.get(model_name, None) if reasoning_model else None
 
     for do_sample in DO_SAMPLES:
         sampling_strategy = 'sampling' if do_sample else 'greedy'
@@ -108,7 +123,7 @@ for model_name in MODEL_NAMES:
 
                 model_short = model_name.split("/")[-1]
                 pred_fh = open_jsonl_writer(
-                    f"/home/stulcrad/master_thesis/Experiment_results/ToxicSpans/Constrained-Gen/Predictions/"
+                    f"{RESULTS_ROOT}/ToxicSpans/Constrained-Gen/Predictions/"
                     f"toxic_{model_short}_{sampling_strategy}_{eval_mode}_{config_label}.jsonl"
                 )
 
@@ -189,7 +204,7 @@ for model_name in MODEL_NAMES:
                             reasoning_effort='low',
                             reasoning_end_marker=reasoning_end_marker,
                             stats_out=gen_stats,
-                            repetition_penalty=1.3 if reasoning_model else None,
+                            repetition_penalty=repetition_penalty,
                         )
                         # Reasoning/answer token split (0 / total for non-reasoning models).
                         num_reasoning_tokens = gen_stats.get("num_reasoning_tokens", 0)
@@ -232,6 +247,7 @@ for model_name in MODEL_NAMES:
                             "method": "constrained_gen",
                             "model": model_name,
                             "reasoning_enabled": reasoning_model,
+                            "repetition_penalty": repetition_penalty,
                             "sampling_strategy": sampling_strategy,
                             "eval_mode": eval_mode,
                             "processor_class": config_label,
@@ -298,6 +314,7 @@ for model_name in MODEL_NAMES:
                 results.append({
                     "model":              model_name,
                     "reasoning_enabled": reasoning_model,
+                    "repetition_penalty": repetition_penalty,
                     "sampling_strategy":  sampling_strategy,
                     "do_sample":          do_sample,
                     "eval_mode":          eval_mode,
@@ -323,7 +340,7 @@ for model_name in MODEL_NAMES:
 
     # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
     intermediate_results_df = pd.DataFrame(results)
-    intermediate_results_path = f"/home/stulcrad/master_thesis/Experiment_results/ToxicSpans/Constrained-Gen/Csv/{model_name.split('/')[-1]}_eval_{BATCH_SIZE}_BS_toxic_spans.csv"
+    intermediate_results_path = f"{RESULTS_ROOT}/ToxicSpans/Constrained-Gen/Csv/{model_name.split('/')[-1]}_eval_{BATCH_SIZE}_BS_toxic_spans.csv"
     intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
     os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)

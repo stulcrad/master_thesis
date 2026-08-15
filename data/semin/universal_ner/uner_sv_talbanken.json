@@ -1,0 +1,1783 @@
+[
+  {
+    "text": "Enligt avtal med vissa länder kan i Sverige bosatta medborgare från dessa länder få folkpension , om de vistas här viss angiven tid .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 36,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Ibland nämns 2000 kronor som gräns ; länder ovanför detta genomsnittstal skulle inte vara u-länder ( i Sverige är BNP / person ca 13000 kronor ) .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 103,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Ett exempel : enbart i USA ökar BNP varje år med ett belopp , som är ungefär lika stort som den totala bruttonationalprodukten i hela Afrika eller Indien !",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 23,
+        "end": 26
+      },
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 134,
+        "end": 140
+      },
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 147,
+        "end": 153
+      }
+    ]
+  },
+  {
+    "text": "Men dessa länder - där tre fjärdedelar av jordens befolkning bor - skiljer sig naturligtvis starkt från varandra .",
+    "spans": [
+      {
+        "text": "jordens",
+        "label": "LOC",
+        "start": 42,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Peru har inte samma klimat , geografi eller kultur som Tanzania .",
+    "spans": [
+      {
+        "text": "Peru",
+        "label": "LOC",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Tanzania",
+        "label": "LOC",
+        "start": 55,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Indien brottas med helt andra svårigheter än Kenya .",
+    "spans": [
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Kenya",
+        "label": "LOC",
+        "start": 45,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "text": "I världens totalt sett rikaste land , USA , finns utbredd svår fattigdom .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 38,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "I oljeländer som Saudi-Arabien lever en del i ofattbart överflöd .",
+    "spans": [
+      {
+        "text": "Saudi-Arabien",
+        "label": "LOC",
+        "start": 17,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Invånarna i Kenyas huvudstad Nairobi kan ha ännu svårare att finna sig tillrätta i isolerade byar på den kenyanska landsbygden än en stockholmare att klara sig i lappmarken .",
+    "spans": [
+      {
+        "text": "Kenyas",
+        "label": "LOC",
+        "start": 12,
+        "end": 18
+      },
+      {
+        "text": "Nairobi",
+        "label": "LOC",
+        "start": 29,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "I Indien finns 845 skilda språk och dialekter .",
+    "spans": [
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 2,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "För 6000 år sedan fanns det städer i Egypten , i Mesopotamien och i Indusdalen - 5000 år innan stadskulturen började utvecklas i Sverige .",
+    "spans": [
+      {
+        "text": "Egypten",
+        "label": "LOC",
+        "start": 37,
+        "end": 44
+      },
+      {
+        "text": "Mesopotamien",
+        "label": "LOC",
+        "start": 49,
+        "end": 61
+      },
+      {
+        "text": "Indusdalen",
+        "label": "LOC",
+        "start": 68,
+        "end": 78
+      },
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 129,
+        "end": 136
+      }
+    ]
+  },
+  {
+    "text": "I Latinamerika , Afrika och Asien fanns vid europeernas ankomst ofta högt utvecklade samhällen .",
+    "spans": [
+      {
+        "text": "Latinamerika",
+        "label": "LOC",
+        "start": 2,
+        "end": 14
+      },
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 17,
+        "end": 23
+      },
+      {
+        "text": "Asien",
+        "label": "LOC",
+        "start": 28,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "När dagens 30-åringar gick i skolan var Afrikas och Asiens kartor i huvudsak indelade i några få färgfält - för att utmärka de olika områden , som tillhörde England , Frankrike , Holland , Belgien eller Portugal .",
+    "spans": [
+      {
+        "text": "Afrikas",
+        "label": "LOC",
+        "start": 40,
+        "end": 47
+      },
+      {
+        "text": "Asiens",
+        "label": "LOC",
+        "start": 52,
+        "end": 58
+      },
+      {
+        "text": "England",
+        "label": "LOC",
+        "start": 157,
+        "end": 164
+      },
+      {
+        "text": "Frankrike",
+        "label": "LOC",
+        "start": 167,
+        "end": 176
+      },
+      {
+        "text": "Holland",
+        "label": "LOC",
+        "start": 179,
+        "end": 186
+      },
+      {
+        "text": "Belgien",
+        "label": "LOC",
+        "start": 189,
+        "end": 196
+      },
+      {
+        "text": "Portugal",
+        "label": "LOC",
+        "start": 203,
+        "end": 211
+      }
+    ]
+  },
+  {
+    "text": "1700- och 1800-talens industrialisering i England , Frankrike , Tyskland , Holland o s v förutsatte en ordnad försörjning med råvaror för industrin ( bomull , jute , hampa , metaller , gummi ) .",
+    "spans": [
+      {
+        "text": "England",
+        "label": "LOC",
+        "start": 42,
+        "end": 49
+      },
+      {
+        "text": "Frankrike",
+        "label": "LOC",
+        "start": 52,
+        "end": 61
+      },
+      {
+        "text": "Tyskland",
+        "label": "LOC",
+        "start": 64,
+        "end": 72
+      },
+      {
+        "text": "Holland",
+        "label": "LOC",
+        "start": 75,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Härigenom fick den engelska textilindustrin avsättning för sina produkter också i Indien .",
+    "spans": [
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 82,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Jordens befolkning : i dag 3,6 miljarder , om 30 år dubbelt så många ?",
+    "spans": [
+      {
+        "text": "Jordens",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Tvärtemot vad man kunde tro är Europa den mest tättbebodda - men också vad beträffar jordbruk och industri den bäst utnyttjade - världsdelen med i genomsnitt 92 invånare per kvardratkilometer .",
+    "spans": [
+      {
+        "text": "Europa",
+        "label": "LOC",
+        "start": 31,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Därefter följer Asien med 69 invånare per kvkm .",
+    "spans": [
+      {
+        "text": "Asien",
+        "label": "LOC",
+        "start": 16,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Jordens sammanlagda befolkning ökar f n med 70-80 miljoner människor om året , och ökningen är störst där människorna är fattigast .",
+    "spans": [
+      {
+        "text": "Jordens",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Olika former av inälvsmask härjar stora delar av Afrika , Asien och Latinamerika och nedsätter starkt arbetsförmågan .",
+    "spans": [
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 49,
+        "end": 55
+      },
+      {
+        "text": "Asien",
+        "label": "LOC",
+        "start": 58,
+        "end": 63
+      },
+      {
+        "text": "Latinamerika",
+        "label": "LOC",
+        "start": 68,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "Barndödligheten beräknas - trots den minskning som skett - i Indien vara tio gånger så hög som i Sverige , i Peru och Tunisien sex gånger så hög .",
+    "spans": [
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 61,
+        "end": 67
+      },
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 97,
+        "end": 104
+      },
+      {
+        "text": "Peru",
+        "label": "LOC",
+        "start": 109,
+        "end": 113
+      },
+      {
+        "text": "Tunisien",
+        "label": "LOC",
+        "start": 118,
+        "end": 126
+      }
+    ]
+  },
+  {
+    "text": "I Sverige och andra länder , där de flesta lever i materiell välfärd , har vi mer än vad vi behöver av bådadera .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Kvinnan på bilden har själv vuxit upp i den här byn i den västafrikanska staten Dahomey .",
+    "spans": [
+      {
+        "text": "Dahomey",
+        "label": "LOC",
+        "start": 80,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Hon har fått utbildning i näringslära ( nutrition ) inom ramen för ett FAO-projekt ( FAO = FNs livsmedelsorganisation ) .",
+    "spans": [
+      {
+        "text": "FNs",
+        "label": "ORG",
+        "start": 91,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "Eller som professor Göran Löfroth har formulerat det :",
+    "spans": [
+      {
+        "text": "Göran Löfroth",
+        "label": "PER",
+        "start": 20,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Den brittiske författaren Gordon Rattray Taylor har i ' Domedagsboken ' ( Forum , cirkapris 49:50 ) samlat alla den globala miljöförstöringens argument till en förkrossande anklagelseskrift mot teknokraterna och politikerna .",
+    "spans": [
+      {
+        "text": "Gordon Rattray Taylor",
+        "label": "PER",
+        "start": 26,
+        "end": 47
+      },
+      {
+        "text": "Forum",
+        "label": "ORG",
+        "start": 74,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "text": "Det är uppenbart att USA ligger närmast till denna framtidsvision .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 21,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Men invånarna i hela Nordamerika , som utgör 7,5 procent av jordens befolkning , använder redan nu hälften av avkastningen av världens alla råvarutillgångar .",
+    "spans": [
+      {
+        "text": "Nordamerika",
+        "label": "LOC",
+        "start": 21,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Om alla världens resurser skulle fördelas rättvist och upp till USA:s nuvarande förbrukning , skulle de bara räcka för en halv miljard människor .",
+    "spans": [
+      {
+        "text": "USA:s",
+        "label": "LOC",
+        "start": 64,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "text": "Ändå talar utvecklingsoptimisterna i USA om att tre- eller fyrdubbla den nuvarande konsumtionsstandarden och även utvidga den till u-länderna .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 37,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Taylor tar Turkiet som exempel .",
+    "spans": [
+      {
+        "text": "Taylor",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Turkiet",
+        "label": "LOC",
+        "start": 11,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Turkiet har f n en lantbefolkning på 27 miljoner och en stadsbefolkning på 7 miljoner .",
+    "spans": [
+      {
+        "text": "Turkiet",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Ett annat exempel är Kalkutta , låt vara det extremaste av alla .",
+    "spans": [
+      {
+        "text": "Kalkutta",
+        "label": "LOC",
+        "start": 21,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Städer som Kalkutta kan näppeligen bli annat än djungler , där brottsligheten inte kan bekämpas , farsoterna får fritt spelrum och folk ligger och dör på gatorna utan att någon bryr sig om det .",
+    "spans": [
+      {
+        "text": "Kalkutta",
+        "label": "LOC",
+        "start": 11,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Slumstäderna kring den ' fina ' stadskärnan är sedan länge ett faktum i Asien , Afrika och Sydamerika , och de fortsätter att breda ut sig med en förfärande fart .",
+    "spans": [
+      {
+        "text": "Asien",
+        "label": "LOC",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 80,
+        "end": 86
+      },
+      {
+        "text": "Sydamerika",
+        "label": "LOC",
+        "start": 91,
+        "end": 101
+      }
+    ]
+  },
+  {
+    "text": "Sao Paulo i Brasilien hade 900000 invånare 1930 , har 7 miljoner nu och omkring 20 miljoner år 2000 .",
+    "spans": [
+      {
+        "text": "Sao Paulo",
+        "label": "LOC",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Brasilien",
+        "label": "LOC",
+        "start": 12,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Taylor visar med många exempel hur myndigheterna viftar bort alla vetenskapligt grundade farhågor , sedan tvingas tillbaka steg för steg allt eftersom skadorna börjar kristallisera sig i statistik .",
+    "spans": [
+      {
+        "text": "Taylor",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Om det skulle visa sig att den godtagbara dosen är opraktisk för atomkraftindustrin , så är Taylor övertygad om att myndigheterna , de opportunistiska politikerna , är kapabla att höja den utan vidare med motiveringen :",
+    "spans": [
+      {
+        "text": "Taylor",
+        "label": "PER",
+        "start": 92,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "De innehåller över 10 milligram DDT per kilo , vilket är mer än dubbla tillåtna kvantiteten i USA .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 94,
+        "end": 97
+      }
+    ]
+  },
+  {
+    "text": "I industriländer bor fyra av fem i städer år 2000 enligt FN:s ( osäkra ) beräkningar .",
+    "spans": [
+      {
+        "text": "FN:s",
+        "label": "ORG",
+        "start": 57,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Detta enligt FN:s beräkningar .",
+    "spans": [
+      {
+        "text": "FN:s",
+        "label": "ORG",
+        "start": 13,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "FN har döpt sitt jubileumsår till ' internationella utbildningsåret ' - ett försök att sporra till nationella ansträngningar på undervisningens område .",
+    "spans": [
+      {
+        "text": "FN",
+        "label": "ORG",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "Artikeln bygger främst på Unesco Courier , January 1970 ; Världshorisont 1 , 1970 ; och Svenska FN-förbundets och skolöverstyrelsens studiehäfte ' Undervisning eller undergång ' .",
+    "spans": [
+      {
+        "text": "Unesco Courier",
+        "label": "ORG",
+        "start": 26,
+        "end": 40
+      },
+      {
+        "text": "Svenska FN-förbundets",
+        "label": "ORG",
+        "start": 88,
+        "end": 109
+      }
+    ]
+  },
+  {
+    "text": "Det har länder som Sovjet , Japan , Kina och Kuba visat .",
+    "spans": [
+      {
+        "text": "Sovjet",
+        "label": "LOC",
+        "start": 19,
+        "end": 25
+      },
+      {
+        "text": "Japan",
+        "label": "LOC",
+        "start": 28,
+        "end": 33
+      },
+      {
+        "text": "Kina",
+        "label": "LOC",
+        "start": 36,
+        "end": 40
+      },
+      {
+        "text": "Kuba",
+        "label": "LOC",
+        "start": 45,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Sådana reformer har Kina och Tanzania just genomfört .",
+    "spans": [
+      {
+        "text": "Kina",
+        "label": "LOC",
+        "start": 20,
+        "end": 24
+      },
+      {
+        "text": "Tanzania",
+        "label": "LOC",
+        "start": 29,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Tanzania tog nyligen det svåra beslutet att bara låta vartannat barn gå i skola .",
+    "spans": [
+      {
+        "text": "Tanzania",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Andra länder som fattat liknande fast mindre drastiska beslut är Marocko , Algeriet och Nigeria .",
+    "spans": [
+      {
+        "text": "Marocko",
+        "label": "LOC",
+        "start": 65,
+        "end": 72
+      },
+      {
+        "text": "Algeriet",
+        "label": "LOC",
+        "start": 75,
+        "end": 83
+      },
+      {
+        "text": "Nigeria",
+        "label": "LOC",
+        "start": 88,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Vissa länder i Afrika har alltså övergivit målsättningen om allmän skolgång .",
+    "spans": [
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 15,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "I Sydasien , Mellanöstern och Latinamerika har de flesta länder aldrig försökt genomföra den målsättningen .",
+    "spans": [
+      {
+        "text": "Sydasien",
+        "label": "LOC",
+        "start": 2,
+        "end": 10
+      },
+      {
+        "text": "Mellanöstern",
+        "label": "LOC",
+        "start": 13,
+        "end": 25
+      },
+      {
+        "text": "Latinamerika",
+        "label": "LOC",
+        "start": 30,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Industriländerna ( USA , Sovjet , Sverige etc ) använder en mycket större del av sin nationalprodukt på utbildning ( fem procent ) än u-länderna ( tre procent ) .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 19,
+        "end": 22
+      },
+      {
+        "text": "Sovjet",
+        "label": "LOC",
+        "start": 25,
+        "end": 31
+      },
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 34,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "I stora delar av Afrika och Latinamerika slutar mer än varannan elev efter två år .",
+    "spans": [
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 17,
+        "end": 23
+      },
+      {
+        "text": "Latinamerika",
+        "label": "LOC",
+        "start": 28,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Bara 38 procent av skolbarnen i Afrika och Asien är flickor ( 1967 ) .",
+    "spans": [
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 32,
+        "end": 38
+      },
+      {
+        "text": "Asien",
+        "label": "LOC",
+        "start": 43,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Miljöhotet mot Östersjön har resulterat i nästan totalstopp för strömmingsförsäljningen .",
+    "spans": [
+      {
+        "text": "Östersjön",
+        "label": "LOC",
+        "start": 15,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "I dag garanterar Folkhälsan och Naturvårdsverket att larmrapporten om gifthalten fått överdrivna proportioner - strömming , lax och ål är helt riskfritt att äta .",
+    "spans": [
+      {
+        "text": "Folkhälsan",
+        "label": "ORG",
+        "start": 17,
+        "end": 27
+      },
+      {
+        "text": "Naturvårdsverket",
+        "label": "ORG",
+        "start": 32,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Så säger i dag Folkhälsan och Naturvårdsverket .",
+    "spans": [
+      {
+        "text": "Folkhälsan",
+        "label": "ORG",
+        "start": 15,
+        "end": 25
+      },
+      {
+        "text": "Naturvårdsverket",
+        "label": "ORG",
+        "start": 30,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "- Rubrikerna om gifthalterna i bland annat strömming har resulterat i nästan totalstopp för strömmingsförsäljningen i större delen av Sverige , säger direktör John Erik Boork , direktör i Ostkustfisk Centralförening till Aftonbladet .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 134,
+        "end": 141
+      },
+      {
+        "text": "John Erik Boork",
+        "label": "PER",
+        "start": 159,
+        "end": 174
+      },
+      {
+        "text": "Ostkustfisk Centralförening",
+        "label": "ORG",
+        "start": 188,
+        "end": 215
+      },
+      {
+        "text": "Aftonbladet",
+        "label": "ORG",
+        "start": 221,
+        "end": 232
+      }
+    ]
+  },
+  {
+    "text": "- Visserligen anser vi att miljöhotet mot Östersjön är oroande men ännu så länge finns det garantier för att både strömming , lax och ål är helt ofarliga .",
+    "spans": [
+      {
+        "text": "Östersjön",
+        "label": "LOC",
+        "start": 42,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Rapporten om gifthalterna i de här fisksorterna kommer från en omfattande undersökning som gjorts av en forskargrupp på Riksmuseet .",
+    "spans": [
+      {
+        "text": "Riksmuseet",
+        "label": "ORG",
+        "start": 120,
+        "end": 130
+      }
+    ]
+  },
+  {
+    "text": "Under sommaren har man bedrivit vetenskapligt provfiske på ett 40-tal stationer i både Bottenhavet och Östersjön .",
+    "spans": [
+      {
+        "text": "Östersjön",
+        "label": "LOC",
+        "start": 103,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "Resultatet av detta fiske visar att södra Östersjön drabbats av oroväckande stora mängder DDT och PCB .",
+    "spans": [
+      {
+        "text": "Östersjön",
+        "label": "LOC",
+        "start": 42,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "- Situationen kan bli besvärlig men ännu så länge är det ingen fara , påpekar både Statens institut för Folkhälsan och Naturvårdsverket .",
+    "spans": [
+      {
+        "text": "Statens institut för Folkhälsan",
+        "label": "ORG",
+        "start": 83,
+        "end": 114
+      },
+      {
+        "text": "Naturvårdsverket",
+        "label": "ORG",
+        "start": 119,
+        "end": 135
+      }
+    ]
+  },
+  {
+    "text": "En sån här sak gör den inte bättre , säger ombudsman Gösta Lindebo i Svenska ostkustfiskarnas centralförbund .",
+    "spans": [
+      {
+        "text": "Gösta Lindebo",
+        "label": "PER",
+        "start": 53,
+        "end": 66
+      },
+      {
+        "text": "Svenska ostkustfiskarnas centralförbund",
+        "label": "ORG",
+        "start": 69,
+        "end": 108
+      }
+    ]
+  },
+  {
+    "text": "- Därför är det viktigt att svenska folket nu får reda på att Östersjöfisken fortfarande är perfekt som föda , förklarar Gösta Lindebo .",
+    "spans": [
+      {
+        "text": "Gösta Lindebo",
+        "label": "PER",
+        "start": 121,
+        "end": 134
+      }
+    ]
+  },
+  {
+    "text": "- Vi är naturligtvis medvetna om att Östersjön innehåller olika sorters miljögifter .",
+    "spans": [
+      {
+        "text": "Östersjön",
+        "label": "LOC",
+        "start": 37,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Vi kräver att Naturvårdsverket med kraft tar itu med den här saken .",
+    "spans": [
+      {
+        "text": "Naturvårdsverket",
+        "label": "ORG",
+        "start": 14,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "- Ett sånt löfte har vi också fått av jordbrukminister Ingemund Bengtsson , säger Gösta Lindebo .",
+    "spans": [
+      {
+        "text": "Ingemund Bengtsson",
+        "label": "PER",
+        "start": 55,
+        "end": 73
+      },
+      {
+        "text": "Gösta Lindebo",
+        "label": "PER",
+        "start": 82,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Detta är några av alla de data som med lic Åke Nilsson vid psykiatriska kliniken i Lund fått fram i en undersökning av 165 gravida kvinnor .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "text": "Lund",
+        "label": "LOC",
+        "start": 83,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "På fredagen disputerar Åke Nilsson på avhandlingen .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 23,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "I den första och tredje undersökningen deltog också psykolog Per-Erik Almgren .",
+    "spans": [
+      {
+        "text": "Per-Erik Almgren",
+        "label": "PER",
+        "start": 61,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Vissa lättare psykiska symptom anses normala under en graviditet , säger Åke Nilsson .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 73,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "text": "- Traditionellt anses ju att det är under tiden efter förlossningen man finner de flesta psykiska störningarna , säger Åke Nilsson .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 119,
+        "end": 130
+      }
+    ]
+  },
+  {
+    "text": "Frånvaron av besvär kan vara ett uttryck för en förträngning av graviditeten , säger Åke Nilsson .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 85,
+        "end": 96
+      }
+    ]
+  },
+  {
+    "text": "Jag har funnit att man inte kan betrakta själva förlossningen som en fristående företeelse , säger Åke Nilsson .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 99,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "- Jag är själv inte särskilt villig att dra långtgående slutsatser ur materialet , säger Åke Nilsson .",
+    "spans": [
+      {
+        "text": "Åke Nilsson",
+        "label": "PER",
+        "start": 89,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "text": "Det är framför allt i USA som man tillämpat denna behandlingsmetod på äldre patienter med nedsatt hjärnfunktion .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 22,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "De rapporter som föreligger har trots detta motiverat en planmässig forskning , bl a på lasarettet i Lund , ett projekt där både psykiater , neurologer , neurokirurger och röntgenologer är engagerade .",
+    "spans": [
+      {
+        "text": "Lund",
+        "label": "LOC",
+        "start": 101,
+        "end": 105
+      }
+    ]
+  },
+  {
+    "text": "SDS har talat med en av deltagarna i den vetenskapliga undersökningen , röntgenologen dr Sten Cronqvist i Lund .",
+    "spans": [
+      {
+        "text": "SDS",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Sten Cronqvist",
+        "label": "PER",
+        "start": 89,
+        "end": 103
+      },
+      {
+        "text": "Lund",
+        "label": "LOC",
+        "start": 106,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Det är emellertid å andra sidan i grunden fel att bunta ihop gamla människor på institutioner bara för att de är gamla , säger dr Cronqvist .",
+    "spans": [
+      {
+        "text": "Cronqvist",
+        "label": "PER",
+        "start": 130,
+        "end": 139
+      }
+    ]
+  },
+  {
+    "text": "På S:t Lars sjukhus i Lund tillhör mer än hälften av de patienter som årligen intas , gruppen åldringar .",
+    "spans": [
+      {
+        "text": "S:t Lars sjukhus",
+        "label": "LOC",
+        "start": 3,
+        "end": 19
+      },
+      {
+        "text": "Lund",
+        "label": "LOC",
+        "start": 22,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "Genom den utrustning som finns på röntgendiagnostiska avdelningen vid lasarettet i Lund , en s k gammakamera , finns nu möjligheter att studera dessa cirkulationsförhållanden .",
+    "spans": [
+      {
+        "text": "Lund",
+        "label": "LOC",
+        "start": 83,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Professor Ragnar Muller vid neurologiska kliniken har gjort ett försiktigt överslag på de besparingar som kan göras genom att bedriva utredningsarbetet polikliniskt på detta sätt .",
+    "spans": [
+      {
+        "text": "Ragnar Muller",
+        "label": "PER",
+        "start": 10,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Dr Sten Cronqvist förordar en ' storstädning ' på mentalsjukhusen .",
+    "spans": [
+      {
+        "text": "Sten Cronqvist",
+        "label": "PER",
+        "start": 3,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Undersökningen med gammakameran i Lund tar inte längre tid än cirka tjugo minuter och sker fullständigt smärtfritt för patienten",
+    "spans": [
+      {
+        "text": "Lund",
+        "label": "LOC",
+        "start": 34,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Pavlov kunde vid sina försök med hundar framkalla psykiska besvär hos försöksdjuren .",
+    "spans": [
+      {
+        "text": "Pavlov",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "I Sverige vårdas 15000-20000 personer på mentalsjukhus för schizofreni .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Dessvärre är de vanebildande och har särskilt i Sverige kommit att missbrukas i stor omfattning .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 48,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "I Mellanamerika användes de långt före Columbus' dagar av indianerna , särskilt i samband med religiösa ceremonier .",
+    "spans": [
+      {
+        "text": "Mellanamerika",
+        "label": "LOC",
+        "start": 2,
+        "end": 15
+      },
+      {
+        "text": "Columbus'",
+        "label": "PER",
+        "start": 39,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "I USA har entusiastiska skildringar av kända författare och konstnärer väckt ett stort intresse för hallucinogenerna .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 2,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Bostadspolitiken i Sverige har varit mycket omdiskuterad .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 19,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "I Sverige fungerar bostadsförmedlingar , som fördelar lägenheter efter speciella principer .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Så här bor Svenskson enligt den senaste bostadsräkningen .",
+    "spans": [
+      {
+        "text": "Svenskson",
+        "label": "PER",
+        "start": 11,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "( Källa : Veckans affärer 9 oktober 1969 . )",
+    "spans": [
+      {
+        "text": "Veckans affärer",
+        "label": "ORG",
+        "start": 10,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Jordens befolkning ökar med mer än 50 miljoner människor om året .",
+    "spans": [
+      {
+        "text": "Jordens",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "De rikaste av dem finns i Nordamerika , i Nord- och Västeuropa samt i Australien och på Nya Zeeland .",
+    "spans": [
+      {
+        "text": "Nordamerika",
+        "label": "LOC",
+        "start": 26,
+        "end": 37
+      },
+      {
+        "text": "Nord-",
+        "label": "LOC",
+        "start": 42,
+        "end": 47
+      },
+      {
+        "text": "Västeuropa",
+        "label": "LOC",
+        "start": 52,
+        "end": 62
+      },
+      {
+        "text": "Australien",
+        "label": "LOC",
+        "start": 70,
+        "end": 80
+      },
+      {
+        "text": "Nya Zeeland",
+        "label": "LOC",
+        "start": 88,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "text": "Bistånd har givits genom internationella organ och främst då FN .",
+    "spans": [
+      {
+        "text": "FN",
+        "label": "ORG",
+        "start": 61,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Sålunda satsade Förenta staterna under femårsperioden 1955-1960 sammanlagt 81 miljarder svenska kronor , varvid de största beloppen gick till Sydvietnam , Sydkorea och Indien .",
+    "spans": [
+      {
+        "text": "Förenta staterna",
+        "label": "LOC",
+        "start": 16,
+        "end": 32
+      },
+      {
+        "text": "Sydvietnam",
+        "label": "LOC",
+        "start": 142,
+        "end": 152
+      },
+      {
+        "text": "Sydkorea",
+        "label": "LOC",
+        "start": 155,
+        "end": 163
+      },
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 168,
+        "end": 174
+      }
+    ]
+  },
+  {
+    "text": "Under samma period lämnade Sovjetunionen 15 miljarder mätt i svenska kronor med Indien som störste mottagaren .",
+    "spans": [
+      {
+        "text": "Sovjetunionen",
+        "label": "LOC",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 80,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Storbritannien , Frankrike och Västtyskland bidrog under samma tid med omkring 10 miljarder vardera .",
+    "spans": [
+      {
+        "text": "Storbritannien",
+        "label": "LOC",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "Frankrike",
+        "label": "LOC",
+        "start": 17,
+        "end": 26
+      },
+      {
+        "text": "Västtyskland",
+        "label": "LOC",
+        "start": 31,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Sverige har visat intresse för att ge sitt bidrag till utvecklingssamarbetet .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Ungefär 40 procent av anslaget går till FN och dess fackorgan för vidare utdelning .",
+    "spans": [
+      {
+        "text": "FN",
+        "label": "ORG",
+        "start": 40,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Den övriga delen , det direkta svenska biståndet till u-länderna , förvaltas av SIDA ( Swedish International Development Authority ) , som är ett statligt ämbetsverk under utrikesdepartementet .",
+    "spans": [
+      {
+        "text": "SIDA ( Swedish International Development Authority )",
+        "label": "ORG",
+        "start": 80,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "WHO:s uppgift är att förebygga sjukdomar .",
+    "spans": [
+      {
+        "text": "WHO:s",
+        "label": "ORG",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "FAO är FN:s organisation för närings- och jordbruksfrågor .",
+    "spans": [
+      {
+        "text": "FAO",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "FN:s",
+        "label": "ORG",
+        "start": 7,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Här en veterinärstation i Afganistan , där bönderna får sin boskap vaccinerad .",
+    "spans": [
+      {
+        "text": "Afganistan",
+        "label": "LOC",
+        "start": 26,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Undervisning i alla former ingår i FN:s u-landshjälp .",
+    "spans": [
+      {
+        "text": "FN:s",
+        "label": "ORG",
+        "start": 35,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "Tidningsklipp DN 30 jan. 1968",
+    "spans": [
+      {
+        "text": "DN",
+        "label": "ORG",
+        "start": 14,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "I I-länderna de industrialiserade länderna , bor något över 1 miljard människor , 30 procent av jordens befolkning .",
+    "spans": [
+      {
+        "text": "jordens",
+        "label": "LOC",
+        "start": 96,
+        "end": 103
+      }
+    ]
+  },
+  {
+    "text": "I USA ökar nationalinkomsten varje år med ett belopp som är jämförbart med den totala nationalinkomsten i Indien eller Afrika .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 2,
+        "end": 5
+      },
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 106,
+        "end": 112
+      },
+      {
+        "text": "Afrika",
+        "label": "LOC",
+        "start": 119,
+        "end": 125
+      }
+    ]
+  },
+  {
+    "text": "Sverige tillhör de rikaste bland de rika .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Nationalinkomsten är nästan dubbelt så stor som Pakistans - Pakistan har över 105 miljoner invånare .",
+    "spans": [
+      {
+        "text": "Pakistans",
+        "label": "LOC",
+        "start": 48,
+        "end": 57
+      },
+      {
+        "text": "Pakistan",
+        "label": "LOC",
+        "start": 60,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "text": "Med ett par promille av världens befolkning svarar Sverige för dryga två procent av världshandeln .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 51,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "I Indien går det nära 6000 människor på varje läkare , i Etiopien nära 100000 , i Ruanda nära 150000 - i Sverige under 1000 , i USA under 700 .",
+    "spans": [
+      {
+        "text": "Indien",
+        "label": "LOC",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "text": "Etiopien",
+        "label": "LOC",
+        "start": 57,
+        "end": 65
+      },
+      {
+        "text": "Ruanda",
+        "label": "LOC",
+        "start": 82,
+        "end": 88
+      },
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 105,
+        "end": 112
+      },
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 128,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "Jo , ett uttalande i Expressen av Rose Kennedy .",
+    "spans": [
+      {
+        "text": "Expressen",
+        "label": "ORG",
+        "start": 21,
+        "end": 30
+      },
+      {
+        "text": "Rose Kennedy",
+        "label": "PER",
+        "start": 34,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Han räckte mig tidningarna , så att jag kunde leta fram Rose Kennedys ord .",
+    "spans": [
+      {
+        "text": "Rose Kennedys",
+        "label": "PER",
+        "start": 56,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "text": "Hennes berömmelse beror på att hon har fött ett antal barn och att två av dem i sin tur har gjort namnet Kennedy känt i hela världen .",
+    "spans": [
+      {
+        "text": "Kennedy",
+        "label": "PER",
+        "start": 105,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "Industritjänstemannaförbundet har ställt samman en upplysande tabell över ' hur manliga och kvinnliga medlemmar fördelar sig på olika s.k. befattningsskikt inom företagen ' .",
+    "spans": [
+      {
+        "text": "Industritjänstemannaförbundet",
+        "label": "ORG",
+        "start": 0,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Ingrid Sjöstrand vill ha flera alternativ till den gamla storfamiljen och den moderna lilla familjen .",
+    "spans": [
+      {
+        "text": "Ingrid Sjöstrand",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Vårt hemliga ideal är fortfarande Sörgårdsfamiljen åtminstone byggs lägenheterna , fast ytan har krympt , fortfarande för fullt självhushåll .",
+    "spans": [
+      {
+        "text": "Sörgårdsfamiljen",
+        "label": "PER",
+        "start": 34,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "text": "Då är erfarenheterna från helt annorlunda kulturer intressantare , t ex Margaret Meads från arapeshfolket där pappan hade det huvudsakliga ansvaret för barnavården , men där alla barn kunde söka hjälp hos alla vuxna om pappan eller mamman inte fanns till hands .",
+    "spans": [
+      {
+        "text": "Margaret Meads",
+        "label": "PER",
+        "start": 72,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Teol dr Tom Hardt skrev i denna tidskrift en artikel : ' Till storms mot äktenskapet ' där han kommenterade den svenska regeringens rapport i kvinnofrågan till FN .",
+    "spans": [
+      {
+        "text": "Tom Hardt",
+        "label": "PER",
+        "start": 8,
+        "end": 17
+      },
+      {
+        "text": "FN",
+        "label": "ORG",
+        "start": 160,
+        "end": 162
+      }
+    ]
+  },
+  {
+    "text": "' Äktenskapet är av Gud instiftat ' heter det i vigselformuläret , och för de flesta människor innebär äktenskapets ingående ett allvarligt och noga övervägt ställningstagande .",
+    "spans": [
+      {
+        "text": "Gud",
+        "label": "PER",
+        "start": 20,
+        "end": 23
+      }
+    ]
+  }
+]

@@ -1,0 +1,850 @@
+[
+  {
+    "source": "My wife wanted to do them as a starting off point. Without getting too into her business, she has reason to doubt that some of her ancestors are actually her ancestors. In my case, it's to support her and see the effect of genetic drift on a tiny sample size, we have pretty extensive family records.",
+    "text": "Mi esposa quería hacer las pruebas como punto de partida. Sin entrar demasiado en sus asuntos personales, ella tiene razones para dudar que algunos de sus antepasados sean realmente sus antepasados. En mi caso, es para apoyarla y ver el efecto de la deriva genética en una muestra muy pequeña, ya que tenemos registros familiares bastante extensos.",
+    "spans": [
+      {
+        "text": "las pruebas",
+        "label": "MINOR",
+        "start": 23,
+        "end": 34
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "Moon landing time (about an hour to go) https://plus.nasa.gov/scheduled-video/intuitive-machines-1-lunar-landing/",
+    "text": "Hora de aterrizaje en la luna (aproximadamente una hora más) <https://plus.nasa.gov/scheduled-video/intuitive-machines-1-lunar-landing/>",
+    "spans": [
+      {
+        "text": "<",
+        "label": "MAJOR",
+        "start": 61,
+        "end": 62
+      },
+      {
+        "text": ">",
+        "label": "MAJOR",
+        "start": 135,
+        "end": 136
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "They had to patch some extra lasers into the landing system, hence the earlier delay: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "text": "Tuvieron que conectar algunos láseres adicionales al sistema de aterrizaje, lo que causó el retraso anterior: <https://twitter.com/SciGuySpace/status/1760800168473928104>",
+    "spans": [
+      {
+        "text": ">",
+        "label": "MAJOR",
+        "start": 169,
+        "end": 170
+      },
+      {
+        "text": "<",
+        "label": "MAJOR",
+        "start": 110,
+        "end": 111
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "So, apparently the ghost image my left eye sees isn’t too much of a concern. But I need basically varifocals too. So the lenses have a combo of those. Not the full on varifocals but something in between those and ”normal” glasses (no idea of the terminology in English).",
+    "text": "Así que, al parecer, la imagen fantasma que ve mi ojo izquierdo no es un gran problema. Pero necesito básicamente lentes progresivas también. Así que los lentes tienen una combinación de esas. No las lentes progresivas completas, sino algo entre ellas y los \"gafas normales\" (no tengo idea de la terminología en inglés).",
+    "spans": [
+      {
+        "text": "progresivas ",
+        "label": "MAJOR",
+        "start": 121,
+        "end": 133
+      },
+      {
+        "text": "progresivas",
+        "label": "MAJOR",
+        "start": 207,
+        "end": 218
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "They had to patch some extra lasers into the landing system, hence the earlier delay: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "text": "Tuvieron que parchear algunos láseres adicionales en el sistema de aterrizaje, de ahí el retraso anterior: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "spans": [
+      {
+        "text": "parchear",
+        "label": "MAJOR",
+        "start": 13,
+        "end": 21
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "So, apparently the ghost image my left eye sees isn’t too much of a concern. But I need basically varifocals too. So the lenses have a combo of those. Not the full on varifocals but something in between those and ”normal” glasses (no idea of the terminology in English).",
+    "text": "Por lo tanto, aparentemente la imagen fantasma que mi ojo izquierdo ve no es demasiado preocupante. Pero también necesito básicamente varifocales. Por lo tanto, las lentes tienen un combo de las mismas. No lo completo de los varifocales, sino algo entre éstos y gafas \"normales\" (sin idea de la terminología en inglés).",
+    "spans": [
+      {
+        "text": "varifocales",
+        "label": "MINOR",
+        "start": 134,
+        "end": 145
+      },
+      {
+        "text": "combo",
+        "label": "MAJOR",
+        "start": 182,
+        "end": 187
+      },
+      {
+        "text": "s",
+        "label": "MAJOR",
+        "start": 200,
+        "end": 201
+      },
+      {
+        "text": "de",
+        "label": "MAJOR",
+        "start": 188,
+        "end": 190
+      },
+      {
+        "text": "la",
+        "label": "MAJOR",
+        "start": 191,
+        "end": 193
+      },
+      {
+        "text": "s m",
+        "label": "MAJOR",
+        "start": 193,
+        "end": 196
+      },
+      {
+        "text": "ma",
+        "label": "MAJOR",
+        "start": 198,
+        "end": 200
+      },
+      {
+        "text": "is",
+        "label": "MAJOR",
+        "start": 196,
+        "end": 198
+      },
+      {
+        "text": "No lo completo de los varifocales",
+        "label": "MINOR",
+        "start": 203,
+        "end": 236
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "They had to patch some extra lasers into the landing system, hence the earlier delay: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "text": "Tuvieron que colocar algunos láseres adicionales en el sistema de aterrizaje, de ahí el retraso anterior: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "spans": [
+      {
+        "text": "que colocar",
+        "label": "MAJOR",
+        "start": 9,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "Moon landing time (about an hour to go) https://plus.nasa.gov/scheduled-video/intuitive-machines-1-lunar-landing/",
+    "text": "Tiempo de aterrizaje (unas horas para ir) https://plus.nasa.gov/scheduled-video/intuitive-machines-1-lunar-landing/",
+    "spans": [
+      {
+        "text": "unas horas para ir",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 40
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "So, apparently the ghost image my left eye sees isn’t too much of a concern. But I need basically varifocals too. So the lenses have a combo of those. Not the full on varifocals but something in between those and ”normal” glasses (no idea of the terminology in English).",
+    "text": "Al parecer, la imagen fantasma que ve mi ojo izquierdo no es muy preocupante. Pero también necesito lentes progresivos. Así que los lentes son una combinación de ambos. No son progresivos completos, sino algo intermedio entre esos y los lentes \"normales\" (no sé la terminología en español).",
+    "spans": [
+      {
+        "text": "español",
+        "label": "MINOR",
+        "start": 281,
+        "end": 288
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "@user7 quién le da una broma, ¡siga el hockey femenino de Badgers! Hahaha",
+    "spans": [
+      {
+        "text": "quién le da una broma",
+        "label": "MINOR",
+        "start": 7,
+        "end": 28
+      },
+      {
+        "text": "siga",
+        "label": "MINOR",
+        "start": 31,
+        "end": 35
+      },
+      {
+        "text": "Hahaha",
+        "label": "MAJOR",
+        "start": 67,
+        "end": 73
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "A quarter of the way through the year update... well ahead of pace!",
+    "text": "Actualización a un cuarto del año... ¡muy por delante del ritmo!",
+    "spans": [
+      {
+        "text": "a un cuarto del año",
+        "label": "MAJOR",
+        "start": 14,
+        "end": 33
+      },
+      {
+        "text": "del ritmo",
+        "label": "MAJOR",
+        "start": 54,
+        "end": 63
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "Celeste es mi corrupción de \"pequeño buen juego gratuito a gran juego comercial inflado y abultado con un arte absurdamente detallado\" porque en el original, obtener el doble dash es una mejora de contexto en un cofre del tesoro y en el juego comercial me hace llorar.",
+    "spans": [
+      {
+        "text": "corrupción de",
+        "label": "MAJOR",
+        "start": 14,
+        "end": 27
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "i do not like this",
+    "text": "No me gusta esto.",
+    "spans": [
+      {
+        "text": "N",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      },
+      {
+        "text": "esto",
+        "label": "MAJOR",
+        "start": 12,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "celeste es mi favorito \"pequeño buen juego gratuito a gran juego inflado comercial con arte estúpido detallado\" corrupción arco porque en el original, el doble salto es un poderup sin contexto en una caja de tesoro y en el comercial, me hace llorar",
+    "spans": [
+      {
+        "text": "corrupción arco",
+        "label": "MINOR",
+        "start": 112,
+        "end": 127
+      },
+      {
+        "text": "poderup",
+        "label": "MINOR",
+        "start": 172,
+        "end": 179
+      },
+      {
+        "text": "caja",
+        "label": "MAJOR",
+        "start": 200,
+        "end": 204
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "@ usuario7 a quien le importa un carajo, ¡vaya al hockey femenino Badgers! jajaja",
+    "spans": [
+      {
+        "text": "vaya",
+        "label": "MINOR",
+        "start": 42,
+        "end": 46
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "Celeste es mi arco de corrupción favorito de \"juego gratuito pequeño y bueno a juego comercial grande y abotagado con arte detallado de manera estúpida\" porque en el original obtener el doble dash es un powerup sin contexto en un cofre del tesoro y en el juego comercial Me hace llorar.",
+    "spans": [
+      {
+        "text": "abotagado",
+        "label": "MAJOR",
+        "start": 104,
+        "end": 113
+      },
+      {
+        "text": "doble dash",
+        "label": "MINOR",
+        "start": 186,
+        "end": 196
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "Celeste es mi arco de corrupción favorito del tipo «pequeño buen juego gratuito convertido en un juego comercial grande y aburrido con arte excesivamente detallado» porque en el original conseguir el salto doble es un powerup sin contexto en un cofre del tesoro y en el juego comercial me hace llorar.",
+    "spans": [
+      {
+        "text": "powerup",
+        "label": "MINOR",
+        "start": 218,
+        "end": 225
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "celeste es mi arco de corrupción favorito desde &quot;un pequeño juego gratuito bueno hasta un gran juego comercial inflado con un arte estúpidamente detallado&quot; porque en el original obtener el doble guión es un potenciador sin contexto en un cofre del tesoro y en el juego comercial me hace llorar.",
+    "spans": [
+      {
+        "text": "&quot",
+        "label": "MINOR",
+        "start": 48,
+        "end": 53
+      },
+      {
+        "text": "&quot",
+        "label": "MINOR",
+        "start": 159,
+        "end": 164
+      },
+      {
+        "text": "guión",
+        "label": "MINOR",
+        "start": 205,
+        "end": 210
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "A quarter of the way through the year update... well ahead of pace!",
+    "text": "Una cuarta parte del camino a lo largo del año se actualiza... mucho antes del ritmo.",
+    "spans": [
+      {
+        "text": "se actualiza",
+        "label": "MAJOR",
+        "start": 47,
+        "end": 59
+      },
+      {
+        "text": "mucho antes",
+        "label": "MINOR",
+        "start": 63,
+        "end": 74
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "this is why we have such strong ties to nostalgia.",
+    "text": "Esta es la razón por la que tenemos fuertes lazos con la nostalgia.",
+    "spans": [
+      {
+        "text": "E",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "celeste es mi arco de corrupción favorito de \"juego pequeño y gratuito a juego comercial grande y abultado con arte detallado de manera estúpida\" porque en el original obtener el doble dash es un power-up sin contexto en un cofre de tesoro y en el juego comercial me hace llorar",
+    "spans": [
+      {
+        "text": "juego pequeño y gratuito a juego comercial grande y abultado con arte detallado de manera estúpida",
+        "label": "MAJOR",
+        "start": 46,
+        "end": 144
+      },
+      {
+        "text": "el doble dash es un power-up",
+        "label": "MAJOR",
+        "start": 176,
+        "end": 204
+      },
+      {
+        "text": "en un cofre de tesoro y en el juego comercial me hace llorar",
+        "label": "MAJOR",
+        "start": 218,
+        "end": 278
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "this is why we have such strong ties to nostalgia.",
+    "text": "Esta es la razón por la que tenemos vínculos tan fuertes con la nostalgia.",
+    "spans": [
+      {
+        "text": "E",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "@user7 a quién le importa, ¡vamos Badgers hockey femenino! Jajaja",
+    "spans": [
+      {
+        "text": " ",
+        "label": "MAJOR",
+        "start": 26,
+        "end": 27
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "Celeste es mi favorito arco de \"pequeño y buen juego gratuito a gran juego comercial inflado con arte ridículamente detallado\" porque en el original, obtener el dash doble es una mejora sin contexto en un cofre del tesoro, y en el juego comercial me hace llorar.",
+    "spans": [
+      {
+        "text": "dash",
+        "label": "MINOR",
+        "start": 161,
+        "end": 165
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "@user7 ¿A quién le importa? ¡Vamos Badgers! ¡Que gane el hockey femenino! Jajaja",
+    "spans": [
+      {
+        "text": "! ¡Que gane el",
+        "label": "MAJOR",
+        "start": 42,
+        "end": 56
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "i do not like this",
+    "text": "No me gusta esto",
+    "spans": [
+      {
+        "text": "N",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "this is why we have such strong ties to nostalgia.",
+    "text": "esta es la razón por la que tenemos vínculos tan fuertes con la nostalgia.",
+    "spans": [
+      {
+        "text": "esta es la razón",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "this is why we have such strong ties to nostalgia.",
+    "text": "Esta es la razón por la que tenemos lazos tan fuertes con la nostalgia.",
+    "spans": [
+      {
+        "text": "E",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "A quarter of the way through the year update... well ahead of pace!",
+    "text": "Un cuarto del camino por recorrer en la actualización anual... ¡muy por delante del ritmo!",
+    "spans": [
+      {
+        "text": "Un cuarto del camino por recorrer",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 33
+      },
+      {
+        "text": "del ritmo",
+        "label": "MINOR",
+        "start": 80,
+        "end": 89
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "@user7, que da una mierda, vayan a la selección femenina de hockey sobre hielo de los Badgers! ¡Hahaha!",
+    "spans": [
+      {
+        "text": "que da",
+        "label": "MINOR",
+        "start": 8,
+        "end": 14
+      },
+      {
+        "text": "una mierda",
+        "label": "MAJOR",
+        "start": 15,
+        "end": 25
+      },
+      {
+        "text": "vayan a la selección",
+        "label": "MINOR",
+        "start": 27,
+        "end": 47
+      },
+      {
+        "text": "femenina de hockey",
+        "label": "MAJOR",
+        "start": 48,
+        "end": 66
+      },
+      {
+        "text": "sobre hielo",
+        "label": "MINOR",
+        "start": 67,
+        "end": 78
+      },
+      {
+        "text": "¡Hahaha",
+        "label": "MINOR",
+        "start": 95,
+        "end": 102
+      },
+      {
+        "text": "!",
+        "label": "MINOR",
+        "start": 102,
+        "end": 103
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "Celeste es mi favorito “pequeño juego bueno de software libre a gran juego comercial con arte estúpidamente detallado” porque en el original conseguir el doble guión es un powerup sin contexto en un cofre y en el juego comercial me hace llorar",
+    "spans": [
+      {
+        "text": "guión",
+        "label": "MINOR",
+        "start": 160,
+        "end": 165
+      },
+      {
+        "text": "powerup",
+        "label": "MINOR",
+        "start": 172,
+        "end": 179
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "Celeste es mi arco de corrupción favorito de \"pequeño juego gratuito bueno a gran juego comercial inflado con arte estúpidamente detallado\" porque en el original, obtener el doble de rayas es un poder sin contexto en una caja de tesoros y en el juego comercial me hace llorar.",
+    "spans": [
+      {
+        "text": "inflado",
+        "label": "MINOR",
+        "start": 98,
+        "end": 105
+      },
+      {
+        "text": "arte",
+        "label": "MINOR",
+        "start": 110,
+        "end": 114
+      },
+      {
+        "text": "estúpidamente detallado",
+        "label": "MAJOR",
+        "start": 115,
+        "end": 138
+      },
+      {
+        "text": ",",
+        "label": "MINOR",
+        "start": 161,
+        "end": 162
+      },
+      {
+        "text": "obtener",
+        "label": "MAJOR",
+        "start": 163,
+        "end": 170
+      },
+      {
+        "text": "poder",
+        "label": "MINOR",
+        "start": 195,
+        "end": 200
+      },
+      {
+        "text": "una caja",
+        "label": "MINOR",
+        "start": 217,
+        "end": 225
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "i do not like this",
+    "text": "No me gusta",
+    "spans": [
+      {
+        "text": "N",
+        "label": "MINOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "A quarter of the way through the year update... well ahead of pace!",
+    "text": "¡Ya hemos avanzado una cuarta parte del año!... ¡y nuestro progreso está muy por delante del ritmo estimado!",
+    "spans": [
+      {
+        "text": "y nuestro progreso está",
+        "label": "MINOR",
+        "start": 49,
+        "end": 72
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "¡@user7, que no le importa nada! Vayan a ver el hockey femenino de los Badgers. ¡Jajaja!",
+    "spans": [
+      {
+        "text": "¡",
+        "label": "MINOR",
+        "start": 0,
+        "end": 1
+      },
+      {
+        "text": "que no le importa nada!",
+        "label": "MINOR",
+        "start": 9,
+        "end": 32
+      },
+      {
+        "text": "Vayan a ver",
+        "label": "MINOR",
+        "start": 33,
+        "end": 44
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "@user7 who give a crap, go Badgers Women’s hockey! Hahaha",
+    "text": "@user7 ¿quién diablos se importa, ¡vamos Badgers hockey femenino! ¡Jajaja!",
+    "spans": [
+      {
+        "text": "se",
+        "label": "MINOR",
+        "start": 22,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "A quarter of the way through the year update... well ahead of pace!",
+    "text": "Una cuarta parte de la actualización anual... ¡muy por delante del ritmo!",
+    "spans": [
+      {
+        "text": "Una cuarta parte de la actualización anual.",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 43
+      },
+      {
+        "text": "muy por delante del ritmo",
+        "label": "MAJOR",
+        "start": 47,
+        "end": 72
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "celeste is my favorite \"tiny good freeware game to big bloated commercial game with stupidly detailed art\" corruption arc because in the original getting the double dash is a contextless powerup in a treasure chest and in the commercial game it Makes Me Cry",
+    "text": "celeste es mi favorito \"diminuto juego de freeware bueno a un gran juego comercial bloteado con estúpido arte detallado\" arco de corrupción porque en el original obtener el doble guion es una potenciación sin contexto en un pecho de tesoro y en el juego comercial Makes Me Cry",
+    "spans": [
+      {
+        "text": "favorito",
+        "label": "MINOR",
+        "start": 14,
+        "end": 22
+      },
+      {
+        "text": "bueno",
+        "label": "MINOR",
+        "start": 51,
+        "end": 56
+      },
+      {
+        "text": "bloteado",
+        "label": "MINOR",
+        "start": 83,
+        "end": 91
+      },
+      {
+        "text": "guion",
+        "label": "MINOR",
+        "start": 179,
+        "end": 184
+      },
+      {
+        "text": "pecho",
+        "label": "MINOR",
+        "start": 224,
+        "end": 229
+      },
+      {
+        "text": "Makes Me Cry",
+        "label": "MINOR",
+        "start": 264,
+        "end": 276
+      },
+      {
+        "text": "potenciación",
+        "label": "MINOR",
+        "start": 192,
+        "end": 204
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "i do not like this",
+    "text": "i no le guste",
+    "spans": [
+      {
+        "text": "i no le guste",
+        "label": "MINOR",
+        "start": 0,
+        "end": 13
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "A quarter of the way through the year update... well ahead of pace!",
+    "text": "Una cuarta parte del camino a través de la actualización del año... ¡muy adelantado con respecto al ritmo!",
+    "spans": [
+      {
+        "text": "Una cuarta parte del camino",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 27
+      },
+      {
+        "text": "a través",
+        "label": "MINOR",
+        "start": 28,
+        "end": 36
+      },
+      {
+        "text": "muy adelantado con respecto al ritmo",
+        "label": "MAJOR",
+        "start": 69,
+        "end": 105
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  }
+]

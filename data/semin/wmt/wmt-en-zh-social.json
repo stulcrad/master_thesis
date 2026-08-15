@@ -1,0 +1,258 @@
+[
+  {
+    "source": "They had to patch some extra lasers into the landing system, hence the earlier delay: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "text": "他们不得不在降落系统中添加一些额外的激光，因此导致了早些时候的延迟：https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "spans": [
+      {
+        "text": "激光",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "It feels uncomfortably passive aggressive turning up my air purifier to max, but I can smell the wood dust, so it would be justified even if he weren't an anti-masker. And I do actually need to protect myself??",
+    "text": "我觉得很不舒服地把我的空气净化器调到最大，但我可以闻到木屑味，所以即使他不是反口罩者，我也需要保护自己？",
+    "spans": [
+      {
+        "text": "我觉得很不舒服地把我的空气净化器调到最大",
+        "label": "MINOR",
+        "start": 0,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "@user32 I could perform a liver transplant thanks to Hospital Playlist.",
+    "text": "@user32 多亏了《医院 Playlist》，我才能进行肝脏移植。",
+    "spans": [
+      {
+        "text": "user32",
+        "label": "MINOR",
+        "start": 1,
+        "end": 7
+      },
+      {
+        "text": "医院 Playlist",
+        "label": "MINOR",
+        "start": 12,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "“brb just updating the padding on paragraphs boss”",
+    "text": "“稍等一下，我正在为段落添加填充内容，老板。”",
+    "spans": [
+      {
+        "text": "添加填充",
+        "label": "MAJOR",
+        "start": 12,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "Well it looks like I have a GDPR complaint to file",
+    "text": "嗯，看起来我要提交一份 GDPR 投诉了",
+    "spans": [
+      {
+        "text": "提交一份 GDPR 投诉了",
+        "label": "MAJOR",
+        "start": 7,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "“brb just updating the padding on paragraphs boss”",
+    "text": "“老板，我 vừa更新段落的填充”",
+    "spans": [
+      {
+        "text": "我 vừa",
+        "label": "MINOR",
+        "start": 4,
+        "end": 9
+      },
+      {
+        "text": "老板",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 3
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "“brb just updating the padding on paragraphs boss”",
+    "text": "“brb 只是更新段落上的填充老板”",
+    "spans": [
+      {
+        "text": "brb",
+        "label": "MINOR",
+        "start": 1,
+        "end": 4
+      },
+      {
+        "text": "填充老板”",
+        "label": "MINOR",
+        "start": 13,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "It feels uncomfortably passive aggressive turning up my air purifier to max, but I can smell the wood dust, so it would be justified even if he weren't an anti-masker. And I do actually need to protect myself??",
+    "text": "把空气净化器调到最大感觉有点消极攻击，但我能闻到木屑的味道，所以就算他不是反口罩者，这也是正当的。而且我确实需要保护自己??",
+    "spans": [
+      {
+        "text": "有点消极攻击",
+        "label": "MAJOR",
+        "start": 12,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "@user32 I could perform a liver transplant thanks to Hospital Playlist.",
+    "text": "@user32 我可以thanks to 《Hospital Playlist》进行肝移植。",
+    "spans": [
+      {
+        "text": "进行肝移植。",
+        "label": "MINOR",
+        "start": 40,
+        "end": 46
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "@user32 I could perform a liver transplant thanks to Hospital Playlist.",
+    "text": "@user32 是《医院歌曲清单》让我的肝脏移植手术得以顺利进行。",
+    "spans": [
+      {
+        "text": "让我的肝脏移植手术得以顺利进行。",
+        "label": "MAJOR",
+        "start": 17,
+        "end": 33
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "It feels uncomfortably passive aggressive turning up my air purifier to max, but I can smell the wood dust, so it would be justified even if he weren't an anti-masker. And I do actually need to protect myself??",
+    "text": "把空气净化器调到最大感觉有点不舒服的被动攻击，但我能闻到木屑的味道，所以即使他不是反口罩者，这也是合理的。而且，我确实需要保护自己？？",
+    "spans": [
+      {
+        "text": "被动攻击",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 22
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "It feels uncomfortably passive aggressive turning up my air purifier to max, but I can smell the wood dust, so it would be justified even if he weren't an anti-masker. And I do actually need to protect myself??",
+    "text": "把空气净化器开到最大，这种消极被动的态度让人很不舒服，但我能闻到木屑的味道，所以即使他不戴口罩，这也是合理的。我真的需要保护自己吗？",
+    "spans": [
+      {
+        "text": "我真的需要保护自己吗？",
+        "label": "MINOR",
+        "start": 55,
+        "end": 66
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "They had to patch some extra lasers into the landing system, hence the earlier delay: https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "text": "他们不得不将一些额外的激光器.patch到着陆系统中，因此出现了早前的延迟：https://twitter.com/SciGuySpace/status/1760800168473928104",
+    "spans": [
+      {
+        "text": "patch",
+        "label": "MAJOR",
+        "start": 15,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "@user32 I could perform a liver transplant thanks to Hospital Playlist.",
+    "text": "@user32 感谢《医院playlist》，我能进行肝脏移植。",
+    "spans": [
+      {
+        "text": "playlist",
+        "label": "MAJOR",
+        "start": 13,
+        "end": 21
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "It feels uncomfortably passive aggressive turning up my air purifier to max, but I can smell the wood dust, so it would be justified even if he weren't an anti-masker. And I do actually need to protect myself??",
+    "text": "我感觉很被动地攻击性地把我的空气净化器调到最大，但我闻到了木屑，所以即使他不是反口罩者，也是合理的。我真的需要保护自己吗？？",
+    "spans": [
+      {
+        "text": "地攻击性地把我的",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "Well it looks like I have a GDPR complaint to file",
+    "text": "看起来我需要提交一份GDPR投诉",
+    "spans": [
+      {
+        "text": "GDPR",
+        "label": "MAJOR",
+        "start": 10,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "@user32 I could perform a liver transplant thanks to Hospital Playlist.",
+    "text": "@user32 医院播放列表让我做了肝移植手术。",
+    "spans": [
+      {
+        "text": "医院播放列表让我做了肝移植手术",
+        "label": "MINOR",
+        "start": 8,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  }
+]

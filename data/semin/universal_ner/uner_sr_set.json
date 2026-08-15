@@ -1,0 +1,7044 @@
+[
+  {
+    "text": "Beograd i Priština postigli dogovor o slobodi kretanja",
+    "spans": [
+      {
+        "text": "Beograd",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Priština",
+        "label": "LOC",
+        "start": 10,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Pregovarački timovi Beograda i Prištine postigli su u Briselu dogovore o slobodi kretanja i matičnim knjigama rođenih .",
+    "spans": [
+      {
+        "text": "Beograda",
+        "label": "LOC",
+        "start": 20,
+        "end": 28
+      },
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 31,
+        "end": 39
+      },
+      {
+        "text": "Briselu",
+        "label": "LOC",
+        "start": 54,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Neki sugerišu da su sporazumi korak ka konačnom priznavanju Kosova od strane Srbije .",
+    "spans": [
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 60,
+        "end": 66
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 77,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Dok vlasti u Beogradu pokušavaju da predstave prve dogovore sa Prištinom kao uspeh koji će doneti poboljšanje u životima kosovskih Srba , opozicija ih je opisala kao štetne po nacionalne interese i prvi korak ka priznavanju nezavisnosti Kosova .",
+    "spans": [
+      {
+        "text": "Beogradu",
+        "label": "LOC",
+        "start": 13,
+        "end": 21
+      },
+      {
+        "text": "Prištinom",
+        "label": "LOC",
+        "start": 63,
+        "end": 72
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 237,
+        "end": 243
+      }
+    ]
+  },
+  {
+    "text": "Posle završetka razgovora u Briselu šef delegacije Vlade Srbije Borislav Stefanović insistirao je da rezultati dijaloga ne znače \" ni eksplicitno ni implicitno priznavanje nezavisnosti Kosova \" .",
+    "spans": [
+      {
+        "text": "Briselu",
+        "label": "LOC",
+        "start": 28,
+        "end": 35
+      },
+      {
+        "text": "Vlade Srbije",
+        "label": "ORG",
+        "start": 51,
+        "end": 63
+      },
+      {
+        "text": "Borislav Stefanović",
+        "label": "PER",
+        "start": 64,
+        "end": 83
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 185,
+        "end": 191
+      }
+    ]
+  },
+  {
+    "text": "Komentarišući izjavu šefice prištinske delegacije Edite Tahiri da je rezultat iz Brisela \" prvi korak Srbije ka priznavanju Kosova \" , on je rekao da je reč o netačnim tvrdnjama .",
+    "spans": [
+      {
+        "text": "Edite Tahiri",
+        "label": "PER",
+        "start": 50,
+        "end": 62
+      },
+      {
+        "text": "Brisela",
+        "label": "LOC",
+        "start": 81,
+        "end": 88
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 102,
+        "end": 108
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 124,
+        "end": 130
+      }
+    ]
+  },
+  {
+    "text": "\" Edita Tahiri je to izjavila iz unutarpolitičkih razloga i usled velikog pritiska kosovske opozicije \" , rekao je Stefanović novinarima , dodajući da će Srbija nastaviti da izdaje identifikaciona dokumenta i registarske tablice građanima sa Kosova .",
+    "spans": [
+      {
+        "text": "Edita Tahiri",
+        "label": "PER",
+        "start": 2,
+        "end": 14
+      },
+      {
+        "text": "Stefanović",
+        "label": "PER",
+        "start": 115,
+        "end": 125
+      },
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 154,
+        "end": 160
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 242,
+        "end": 248
+      }
+    ]
+  },
+  {
+    "text": "Prema sporazumu , građani Kosova će moći da ulaze u Srbiju sa kosovskim ličnim kartama , ali će im srpska policija pritom izdavati specijalni sertifikat .",
+    "spans": [
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 26,
+        "end": 32
+      },
+      {
+        "text": "Srbiju",
+        "label": "LOC",
+        "start": 52,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Isto će biti učinjeno sa vozačkim dozvolama , jer Beograd odbija da prizna kosovska dokumenta .",
+    "spans": [
+      {
+        "text": "Beograd",
+        "label": "LOC",
+        "start": 50,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Vozači sa Kosova moraće da uzimaju privremene registarske tablice srpske policije prilikom ulaska u Srbiju , ako na svojim vozilima imaju tablice sa kosovskim grbom .",
+    "spans": [
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 10,
+        "end": 16
+      },
+      {
+        "text": "Srbiju",
+        "label": "LOC",
+        "start": 100,
+        "end": 106
+      }
+    ]
+  },
+  {
+    "text": "Odluke o sprovođenju dogovora , koji nisu potpisivani , sada treba da usvoje vlade u Beogradu i Prištini .",
+    "spans": [
+      {
+        "text": "Beogradu",
+        "label": "LOC",
+        "start": 85,
+        "end": 93
+      },
+      {
+        "text": "Prištini",
+        "label": "LOC",
+        "start": 96,
+        "end": 104
+      }
+    ]
+  },
+  {
+    "text": "Njihovo sprovođenje , koje bi moglo da počne 1. novembra , pratiće grupa u kojoj će biti predstavnici EU , Srbije i Kosova .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 102,
+        "end": 104
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 107,
+        "end": 113
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 116,
+        "end": 122
+      }
+    ]
+  },
+  {
+    "text": "Iako je Stefanović pokušao da predstavi sporazume kao put ka poboljšanju života kosovskih Srba , opozicija ga je žestoko optužila za kršenje državnih interesa .",
+    "spans": [
+      {
+        "text": "Stefanović",
+        "label": "PER",
+        "start": 8,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "\" Sporazum sa predstavnicima nelegalne države Kosovo je kršenje Ustava Srbije i Rezolucije 1244 Saveta bezbednosti UN i rušenje pravnih dokumenata na kojima počiva suverenitet Srbije \" , rekao je za SETimes Slobodan Samardžić , potpredsednik opozicione Demokratske stranke Srbije .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 46,
+        "end": 52
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 176,
+        "end": 182
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 199,
+        "end": 206
+      },
+      {
+        "text": "Slobodan Samardžić",
+        "label": "PER",
+        "start": 207,
+        "end": 225
+      },
+      {
+        "text": "Demokratske stranke Srbije",
+        "label": "ORG",
+        "start": 253,
+        "end": 279
+      }
+    ]
+  },
+  {
+    "text": "Profesor Fakulteta političkih nauka Beogradskog univerziteta Predrag Simić izjavio je za SETimes da je dobro što su dogovori postignuti i da će EU \" sigurno sa odobravanjem primiti potez Beograda i Prištine \" .",
+    "spans": [
+      {
+        "text": "Fakulteta političkih nauka Beogradskog univerziteta",
+        "label": "ORG",
+        "start": 9,
+        "end": 60
+      },
+      {
+        "text": "Predrag Simić",
+        "label": "PER",
+        "start": 61,
+        "end": 74
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 89,
+        "end": 96
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 144,
+        "end": 146
+      },
+      {
+        "text": "Beograda",
+        "label": "LOC",
+        "start": 187,
+        "end": 195
+      },
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 198,
+        "end": 206
+      }
+    ]
+  },
+  {
+    "text": "Na pitanje da li sporazumi predstavljaju indirektno priznavanje Kosova , Simić je rekao da \" Beograd veoma dobro zna šta su crvene linije u dijalogu sa Prištinom i da ih Vlada Srbije neće preći \" .",
+    "spans": [
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 64,
+        "end": 70
+      },
+      {
+        "text": "Simić",
+        "label": "PER",
+        "start": 73,
+        "end": 78
+      },
+      {
+        "text": "Beograd",
+        "label": "LOC",
+        "start": 93,
+        "end": 100
+      },
+      {
+        "text": "Prištinom",
+        "label": "LOC",
+        "start": 152,
+        "end": 161
+      },
+      {
+        "text": "Vlada Srbije",
+        "label": "ORG",
+        "start": 170,
+        "end": 182
+      }
+    ]
+  },
+  {
+    "text": "Međutim , direktor projekta Kompromis za Kosovo Aleksandar Mitić izjavio je SETimesu da je to korak ka konačnom priznanju .",
+    "spans": [
+      {
+        "text": "Aleksandar Mitić",
+        "label": "PER",
+        "start": 48,
+        "end": 64
+      },
+      {
+        "text": "SETimesu",
+        "label": "ORG",
+        "start": 76,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "text": "\" Od hapšenja Ratka Mladića svedoci smo sve većeg pritiska Vašingtona i Brisela da se konkretnije uslovi integracija Srbije u EU kroz uspostavljanje dobrosusedskih odnosa sa Kosovom .",
+    "spans": [
+      {
+        "text": "Ratka Mladića",
+        "label": "PER",
+        "start": 14,
+        "end": 27
+      },
+      {
+        "text": "Vašingtona",
+        "label": "LOC",
+        "start": 59,
+        "end": 69
+      },
+      {
+        "text": "Brisela",
+        "label": "LOC",
+        "start": 72,
+        "end": 79
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 117,
+        "end": 123
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 126,
+        "end": 128
+      },
+      {
+        "text": "Kosovom",
+        "label": "LOC",
+        "start": 174,
+        "end": 181
+      }
+    ]
+  },
+  {
+    "text": "Dogovori su tako logičan korak u procesu puzajućeg priznavanja nezavisnosti Prištine \" , rekao je Mitić .",
+    "spans": [
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 76,
+        "end": 84
+      },
+      {
+        "text": "Mitić",
+        "label": "PER",
+        "start": 98,
+        "end": 103
+      }
+    ]
+  },
+  {
+    "text": "Milan Ivanović , jedan od predstavnika Srba sa severa Kosova , gde ne deluju kosovske institucije , ocenio je da su sporazumi štetni za srpsko stanovništvo i da učvršćuju državnost Prištine .",
+    "spans": [
+      {
+        "text": "Milan Ivanović",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 54,
+        "end": 60
+      },
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 181,
+        "end": 189
+      }
+    ]
+  },
+  {
+    "text": "\" Očigledno je da Srbija odustaje od Kosova , ovo znači predavanje Kosova zarad kandidature za Evropsku uniju \" , rekao je Ivanović za beogradske medije .",
+    "spans": [
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 18,
+        "end": 24
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 37,
+        "end": 43
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 67,
+        "end": 73
+      },
+      {
+        "text": "Evropsku uniju",
+        "label": "ORG",
+        "start": 95,
+        "end": 109
+      },
+      {
+        "text": "Ivanović",
+        "label": "PER",
+        "start": 123,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "Međutim , Rada Trajković , predstavnica Srba koji žive u enklavama u albanskom okruženju , rekla je da će sporazumi pomoći njenim sunarodnicima na Kosovu .",
+    "spans": [
+      {
+        "text": "Rada Trajković",
+        "label": "PER",
+        "start": 10,
+        "end": 24
+      },
+      {
+        "text": "Kosovu",
+        "label": "LOC",
+        "start": 147,
+        "end": 153
+      }
+    ]
+  },
+  {
+    "text": "\" Nakon dogovora , Srbija ima veći kredibilitet da se , uz podršku međunarodne zajednice , bavi pitanjem Kosova i unapređivanjem uslova života tamošnjih Srba \" , rekla je ona .",
+    "spans": [
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 19,
+        "end": 25
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 105,
+        "end": 111
+      }
+    ]
+  },
+  {
+    "text": "Šef EU za borbu protiv terorizma : Al Kaida oslabljena , ali opasnosti ostaju",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 4,
+        "end": 6
+      },
+      {
+        "text": "Al Kaida",
+        "label": "ORG",
+        "start": 35,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Smrt Osame bin Ladena i eliminisanje drugih ključnih operativaca Al Kaide oslabili su organizaciju , ali opasnosti su i dalje prisutne .",
+    "spans": [
+      {
+        "text": "Osame bin Ladena",
+        "label": "PER",
+        "start": 5,
+        "end": 21
+      },
+      {
+        "text": "Al Kaide",
+        "label": "ORG",
+        "start": 65,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "U kule Svetskog trgovinskog centra udarili su oteti putnički avioni 11. septembra 2001. godine .",
+    "spans": [
+      {
+        "text": "Svetskog trgovinskog centra",
+        "label": "LOC",
+        "start": 7,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Teroristički napadi slični onima u Sjedinjenim Državama pre jedne decenije danas su malo verovatni , rekao je koordinator EU za borbu protiv terorizma Žil de Keršov u ponedeljak ( 5. septembra ) .",
+    "spans": [
+      {
+        "text": "Sjedinjenim Državama",
+        "label": "LOC",
+        "start": 35,
+        "end": 55
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 122,
+        "end": 124
+      },
+      {
+        "text": "Žil de Keršov",
+        "label": "PER",
+        "start": 151,
+        "end": 164
+      }
+    ]
+  },
+  {
+    "text": "Međutim , borba protiv Al Kaide i organizacija tog tipa i dalje se suočava sa rizicima , upozorio je on , navodeći kao jedan od njih mogućnost da terorističke grupe koriste prednosti vakuuma u vlasti posle Arapskog proleća .",
+    "spans": [
+      {
+        "text": "Al Kaide",
+        "label": "ORG",
+        "start": 23,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "\" Danas napad veličine i sofisticiranosti onih od 11.9. više nije moguć \" , rekao je de Keršov na konferenciji za novinare u Briselu povodom 10. godišnjice napada 11. septembra 2001. godine u Sjedinjenim Državama .",
+    "spans": [
+      {
+        "text": "de Keršov",
+        "label": "PER",
+        "start": 85,
+        "end": 94
+      },
+      {
+        "text": "Briselu",
+        "label": "LOC",
+        "start": 125,
+        "end": 132
+      },
+      {
+        "text": "Sjedinjenim Državama",
+        "label": "LOC",
+        "start": 192,
+        "end": 212
+      }
+    ]
+  },
+  {
+    "text": "Al Kaida je znatno oslabljena ubistvom svog lidera Osame bin Ladena početkom maja , eliminacijom drugih istaknutih članova mreže i finansijskim problemima sa kojima se , kako se smatra , ta organizacija suočava , rekao je ovaj zvaničnik EU .",
+    "spans": [
+      {
+        "text": "Al Kaida",
+        "label": "ORG",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Osame bin Ladena",
+        "label": "PER",
+        "start": 51,
+        "end": 67
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 237,
+        "end": 239
+      }
+    ]
+  },
+  {
+    "text": "Rat koji je vodio NATO u Avganistanu i pojačana međunarodna saradnja posle napada 11.9. takođe su doprineli tome , rekao je de Keršov , belgijski naučni radnik i bivši zvaničnik vlade .",
+    "spans": [
+      {
+        "text": "NATO",
+        "label": "ORG",
+        "start": 18,
+        "end": 22
+      },
+      {
+        "text": "Avganistanu",
+        "label": "LOC",
+        "start": 25,
+        "end": 36
+      },
+      {
+        "text": "de Keršov",
+        "label": "PER",
+        "start": 124,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "„ Interno smo mnogo bolje opremljeni danas nego što smo bili pre deset godina “ , rekao je on novinarima u Briselu , prenosi Rojters .",
+    "spans": [
+      {
+        "text": "Briselu",
+        "label": "LOC",
+        "start": 107,
+        "end": 114
+      },
+      {
+        "text": "Rojters",
+        "label": "ORG",
+        "start": 125,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "Vest o novom udaru nanetom nekada moćnoj organizaciji došla je i u ponedeljak , iz Pakistana .",
+    "spans": [
+      {
+        "text": "Pakistana",
+        "label": "LOC",
+        "start": 83,
+        "end": 92
+      }
+    ]
+  },
+  {
+    "text": "Vojska te zemlje saopštila je da je uhapsila tri operativca Al Kaide visokog ranga u gradu Kueta na jugozapadu zemlje .",
+    "spans": [
+      {
+        "text": "Al Kaide",
+        "label": "ORG",
+        "start": 60,
+        "end": 68
+      },
+      {
+        "text": "Kueta",
+        "label": "LOC",
+        "start": 91,
+        "end": 96
+      }
+    ]
+  },
+  {
+    "text": "Među osobama koje su uhapsili pakistanski agenti , koji su delovali u saradnji sa CIA , bio je i Junis Al Mauritani , čija je glavna dužnost bila da planira napade na interese zapadnih zemalja širom sveta .",
+    "spans": [
+      {
+        "text": "CIA",
+        "label": "ORG",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "text": "Junis Al Mauritani",
+        "label": "PER",
+        "start": 97,
+        "end": 115
+      }
+    ]
+  },
+  {
+    "text": "\" Al Mauritani je lično od Osame bin Ladena dobio zadatak da se fokusira na napadanje ciljeva od ekonomskog značaja u Sjedinjenim Američkim Državama , Evropi i Australiji \" , navodi se u saopštenju pakistanske vojske , piše bostonski Global post .",
+    "spans": [
+      {
+        "text": "Al Mauritani",
+        "label": "PER",
+        "start": 2,
+        "end": 14
+      },
+      {
+        "text": "Osame bin Ladena",
+        "label": "PER",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "text": "Sjedinjenim Američkim Državama",
+        "label": "LOC",
+        "start": 118,
+        "end": 148
+      },
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 151,
+        "end": 157
+      },
+      {
+        "text": "Australiji",
+        "label": "LOC",
+        "start": 160,
+        "end": 170
+      },
+      {
+        "text": "Global post",
+        "label": "ORG",
+        "start": 234,
+        "end": 245
+      }
+    ]
+  },
+  {
+    "text": "\" On je planirao udare na ekonomske interese u Sjedinjenim Državama , uključujući gasovode i naftovode , hidroelektrane , kao i napade na brodove i tankere nafte u međunarodnim vodama , uz pomoć glisera napunjenih eksplozivom . \"",
+    "spans": [
+      {
+        "text": "Sjedinjenim Državama",
+        "label": "LOC",
+        "start": 47,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Mada Al Kaida više nema sposobnost da izvodi napade koji bi po obimu bili slični onima od 11.9 , i dalje je u stanju da izvodi \" oportunističke \" akcije malog obima , rekao je de Keršov u ponedeljak .",
+    "spans": [
+      {
+        "text": "Al Kaida",
+        "label": "ORG",
+        "start": 5,
+        "end": 13
+      },
+      {
+        "text": "Keršov",
+        "label": "PER",
+        "start": 179,
+        "end": 185
+      }
+    ]
+  },
+  {
+    "text": "Teroristička pretnja sa kojom se svet suočava danas postala je \" puno kompleksnija i diversifikovanija \" , rekao je on novinarima u Briselu .",
+    "spans": [
+      {
+        "text": "Briselu",
+        "label": "LOC",
+        "start": 132,
+        "end": 139
+      }
+    ]
+  },
+  {
+    "text": "Koordinator EU protiv terorizma izrazio je zabrinutost da je trenutni bezbednosni vakuum u Libiji možda omogućio članovima severnoafričkog ogranka Al Kaide da povećaju svoj arsenal oružja pljačkanjem , uključujući rakete zemlja-vazduh , čime se potencijalno dovodi u opasnost putovanje avionima .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 12,
+        "end": 14
+      },
+      {
+        "text": "Libiji",
+        "label": "LOC",
+        "start": 91,
+        "end": 97
+      },
+      {
+        "text": "Al Kaide",
+        "label": "ORG",
+        "start": 147,
+        "end": 155
+      }
+    ]
+  },
+  {
+    "text": "\" Oni su imali mogućnost da dođu do oružja , uključujući malo oružje i puškomitraljeze ili određene rakete zemlja-vazduh , koje su izuzetno opasne \" , rekao je de Keršov .",
+    "spans": [
+      {
+        "text": "de Keršov",
+        "label": "PER",
+        "start": 160,
+        "end": 169
+      }
+    ]
+  },
+  {
+    "text": "Drugo pitanje koje , prema njegovim rečima , zabrinjava , kako piše AFP , jeste \" raspuštanje bezbednosnih službi u Tunisu i Egiptu \" , posle antivladinih protesta koji su pogodili dve zemlje ranije ove godine .",
+    "spans": [
+      {
+        "text": "AFP",
+        "label": "ORG",
+        "start": 68,
+        "end": 71
+      },
+      {
+        "text": "Tunisu",
+        "label": "LOC",
+        "start": 116,
+        "end": 122
+      },
+      {
+        "text": "Egiptu",
+        "label": "LOC",
+        "start": 125,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "\" Ne može da postoji bezbednosni vakuum \" , rekao je de Keršov , pozivajući da se pomogne u procesu tranzicije u takvim zemljama .",
+    "spans": [
+      {
+        "text": "de Keršov",
+        "label": "PER",
+        "start": 53,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Završen samit NATO-a u Istanbulu",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 14,
+        "end": 20
+      },
+      {
+        "text": "Istanbulu",
+        "label": "LOC",
+        "start": 23,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Ključni dogovori postignuti tokom dvodnevnog samita NATO-a u Istanbulu uključuju i odluku o pokretanju programa obuke iračkih snaga bezbednosti i obećanje da će biti povećan broj vojnika u Avganistanu .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 52,
+        "end": 58
+      },
+      {
+        "text": "Istanbulu",
+        "label": "LOC",
+        "start": 61,
+        "end": 70
+      },
+      {
+        "text": "Avganistanu",
+        "label": "LOC",
+        "start": 189,
+        "end": 200
+      }
+    ]
+  },
+  {
+    "text": "Sedamnaesti samit NATO-a održan je u Istanbulu u ponedeljak i utorak ( 28. i 29. juna ) , a okupio je 46 šefova država i vlada .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 18,
+        "end": 24
+      },
+      {
+        "text": "Istanbulu",
+        "label": "LOC",
+        "start": 37,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Sedamnaesti samit šefova država i vlada zemalja članica NATO-a u Istanbulu završen je u utorak ( 29. juna ) .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 56,
+        "end": 62
+      },
+      {
+        "text": "Istanbulu",
+        "label": "LOC",
+        "start": 65,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "text": "Među najvažnijim dogovorima postignutim tokom dvodnevnog samita su odluka o pokretanju programa obuke iračkih snaga bezbednosti i obećanje da će biti povećan obim vojnih snaga u Avganistanu .",
+    "spans": [
+      {
+        "text": "Avganistanu",
+        "label": "LOC",
+        "start": 178,
+        "end": 189
+      }
+    ]
+  },
+  {
+    "text": "Lideri 26-člane Alijanse pozdravili su prenos ovlašćenja u Iraku sa koalicionih snaga predvođenih Sjedinjenim Državama na lokalne vlasti , koji je obavljen u ponedeljak , dva dana ranije nego što se očekivalo .",
+    "spans": [
+      {
+        "text": "Alijanse",
+        "label": "ORG",
+        "start": 16,
+        "end": 24
+      },
+      {
+        "text": "Iraku",
+        "label": "LOC",
+        "start": 59,
+        "end": 64
+      },
+      {
+        "text": "Sjedinjenim Državama",
+        "label": "LOC",
+        "start": 98,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "Oni su se složili da pomognu iračkoj vladi u obuci snaga bezbednosti i ponudili saradnju celokupnom regionu Bliskog istoka .",
+    "spans": [
+      {
+        "text": "Bliskog istoka",
+        "label": "LOC",
+        "start": 108,
+        "end": 122
+      }
+    ]
+  },
+  {
+    "text": "Sporazum je postignut uprkos kontinuiranim razmimoilaženjima oko uloge NATO-a .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 71,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Francuski predsednik Žak Širak insistira na tome da članovi Alijanse vrše obuku pod sopstvenim zastavama , a ne pod zastavom NATO-a .",
+    "spans": [
+      {
+        "text": "Žak Širak",
+        "label": "PER",
+        "start": 21,
+        "end": 30
+      },
+      {
+        "text": "Alijanse",
+        "label": "ORG",
+        "start": 60,
+        "end": 68
+      },
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 125,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "Nisu nestali \" , rekao je britanski premijer Toni Bler .",
+    "spans": [
+      {
+        "text": "Toni Bler",
+        "label": "PER",
+        "start": 45,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Uprkos tome , samit je otvorio put prvoj misiji NATO-a u Iraku .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 48,
+        "end": 54
+      },
+      {
+        "text": "Iraku",
+        "label": "LOC",
+        "start": 57,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Lideri Alijanse takođe su se složili da obezbede dodatnih 3.500 vojnika za Međunarodne bezbednosne snage za podršku u Avganistanu , koje trenutno broje 6.500 pripadnika .",
+    "spans": [
+      {
+        "text": "Alijanse",
+        "label": "ORG",
+        "start": 7,
+        "end": 15
+      },
+      {
+        "text": "Međunarodne bezbednosne snage",
+        "label": "ORG",
+        "start": 75,
+        "end": 104
+      },
+      {
+        "text": "Avganistanu",
+        "label": "LOC",
+        "start": 118,
+        "end": 129
+      }
+    ]
+  },
+  {
+    "text": "Predsednik Avganistana Hamid Karzai prisustvovao je poslednjoj sesiji samita i pozvao NATO da odmah uputi dodatne mirovne snage kako bi pomogao da se unapredi bezbednost u njegovoj zemlji uoči septembarskih predsedničkih i lokalnih izbora .",
+    "spans": [
+      {
+        "text": "Avganistana",
+        "label": "LOC",
+        "start": 11,
+        "end": 22
+      },
+      {
+        "text": "Hamid Karzai",
+        "label": "PER",
+        "start": 23,
+        "end": 35
+      },
+      {
+        "text": "NATO",
+        "label": "ORG",
+        "start": 86,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "\" Narodu Avganistana ta bezbednost je potrebna danas , ne sutra \" , rekao je on .",
+    "spans": [
+      {
+        "text": "Avganistana",
+        "label": "LOC",
+        "start": 9,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Tokom boravka u Istanbulu američki predsednik Džordž V. Buš obratio se studentima Univerziteta Galatasaraj .",
+    "spans": [
+      {
+        "text": "Istanbulu",
+        "label": "LOC",
+        "start": 16,
+        "end": 25
+      },
+      {
+        "text": "Džordž V. Buš",
+        "label": "PER",
+        "start": 46,
+        "end": 59
+      },
+      {
+        "text": "Univerziteta Galatasaraj",
+        "label": "ORG",
+        "start": 82,
+        "end": 106
+      }
+    ]
+  },
+  {
+    "text": "Dok je Buš odgovarao na kritike u vezi sa svojom politikom i pokušavao da umiri muslimanske nacije , u pozadini su se mogli videti džamija Ortakoj i Bosforski most , koji povezuje Evropu i Aziju .",
+    "spans": [
+      {
+        "text": "Buš",
+        "label": "PER",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "text": "Ortakoj",
+        "label": "LOC",
+        "start": 139,
+        "end": 146
+      },
+      {
+        "text": "Bosforski most",
+        "label": "LOC",
+        "start": 149,
+        "end": 163
+      },
+      {
+        "text": "Evropu",
+        "label": "LOC",
+        "start": 180,
+        "end": 186
+      },
+      {
+        "text": "Aziju",
+        "label": "LOC",
+        "start": 189,
+        "end": 194
+      }
+    ]
+  },
+  {
+    "text": "Ne postoji ništa nekompatibilno između demokratskih vrednosti i visokih standarda pristojnosti \" , rekao je Buš .",
+    "spans": [
+      {
+        "text": "Buš",
+        "label": "PER",
+        "start": 108,
+        "end": 111
+      }
+    ]
+  },
+  {
+    "text": "On je takođe čvrsto podržao kandidaturu Turske za prijem u EU .",
+    "spans": [
+      {
+        "text": "Turske",
+        "label": "LOC",
+        "start": 40,
+        "end": 46
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 59,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "\" Turskoj je kao evropskoj sili mesto u Uniji \" , rekao je Buš .",
+    "spans": [
+      {
+        "text": "Turskoj",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      },
+      {
+        "text": "Uniji",
+        "label": "ORG",
+        "start": 40,
+        "end": 45
+      },
+      {
+        "text": "Buš",
+        "label": "PER",
+        "start": 59,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "\" Vaše učlanjenje takođe bi bilo od presudnog značaja za odnose između muslimanskog sveta i Zapada , zato što ste vi deo oba sveta \" .",
+    "spans": [
+      {
+        "text": "Zapada",
+        "label": "LOC",
+        "start": 92,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Lideri NATO-a su tokom samita takođe postigli dogovor da misija SFOR-a u Bosni i Hercegovini do kraja godine bude preneta na snage EU .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 7,
+        "end": 13
+      },
+      {
+        "text": "SFOR-a",
+        "label": "ORG",
+        "start": 64,
+        "end": 70
+      },
+      {
+        "text": "Bosni i Hercegovini",
+        "label": "LOC",
+        "start": 73,
+        "end": 92
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 131,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Pored toga , tri zemlje koje se nadaju prijemu u Alijansu -- Albanija , Hrvatska i Makedonija -- pohvaljene su za napredak koji su nedavno postigle , ali im nije upućen signal kada bi mogle da postanu članice NATO-a .",
+    "spans": [
+      {
+        "text": "Alijansu",
+        "label": "ORG",
+        "start": 49,
+        "end": 57
+      },
+      {
+        "text": "Albanija",
+        "label": "LOC",
+        "start": 61,
+        "end": 69
+      },
+      {
+        "text": "Hrvatska",
+        "label": "LOC",
+        "start": 72,
+        "end": 80
+      },
+      {
+        "text": "Makedonija",
+        "label": "LOC",
+        "start": 83,
+        "end": 93
+      },
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 209,
+        "end": 215
+      }
+    ]
+  },
+  {
+    "text": "Širom Rumunije trenutno je na raspolaganju oko 3.100 bankomata , u poređenju sa 2.165 koliko ih je bilo pre dve godine .",
+    "spans": [
+      {
+        "text": "Rumunije",
+        "label": "LOC",
+        "start": 6,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Pre deset godina , kada je jedna lokalna banka uvela prvu kreditnu karticu u Rumuniji , samo je jedna prodavnica u centru Bukurešta mogla da prihvata elektronsko plaćanje .",
+    "spans": [
+      {
+        "text": "Rumuniji",
+        "label": "LOC",
+        "start": 77,
+        "end": 85
+      },
+      {
+        "text": "Bukurešta",
+        "label": "LOC",
+        "start": 122,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "Prema statističkim podacima Rumunske narodne banke ( BNR ) , u proteklih 12 meseci izdato je oko 1,2 miliona novih kartica .",
+    "spans": [
+      {
+        "text": "Rumunske narodne banke",
+        "label": "ORG",
+        "start": 28,
+        "end": 50
+      },
+      {
+        "text": "BNR",
+        "label": "ORG",
+        "start": 53,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Sveukupna stopa rasta iznosila je oko 25 procenata ; u Bukureštu je bila još veća , dostigavši 40 odsto .",
+    "spans": [
+      {
+        "text": "Bukureštu",
+        "label": "LOC",
+        "start": 55,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "Eksperti kažu da bi , ukoliko se ovakav tempo nastavi , Rumunija do kraja godine mogla imati 7 miliona validnih kartica u opticaju .",
+    "spans": [
+      {
+        "text": "Rumunija",
+        "label": "LOC",
+        "start": 56,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "Danas one čine samo 5 odsto od ukupnog broja kartica u Rumuniji , ali bi se taj odnos mogao udvostručiti do decembra , kažu zvaničnici banke .",
+    "spans": [
+      {
+        "text": "Rumuniji",
+        "label": "LOC",
+        "start": 55,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Trenutno postoji oko 3.100 bankomata širom Rumunije , u poređenju sa 2.165 koliko ih je bilo pre dve godine .",
+    "spans": [
+      {
+        "text": "Rumunije",
+        "label": "LOC",
+        "start": 43,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Mada međunarodni giganti Visa i MasterCard dominiraju rumunskim tržištem , i druge kompanije počinju da izdaju svoje kartice .",
+    "spans": [
+      {
+        "text": "Visa",
+        "label": "ORG",
+        "start": 25,
+        "end": 29
+      },
+      {
+        "text": "MasterCard",
+        "label": "ORG",
+        "start": 32,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Pokrenuta pre više od godinu dana , kroz platformu 3 D Secure već je prošlo 4 miliona dolara u transakcijama , čime je Rumunija postala pionir u jugoistočnoj Evropi .",
+    "spans": [
+      {
+        "text": "Rumunija",
+        "label": "LOC",
+        "start": 119,
+        "end": 127
+      },
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 158,
+        "end": 164
+      }
+    ]
+  },
+  {
+    "text": "Neki predviđaju rast od oko 500 procenata do kraja godine za transakcije obavljene unutar Rumunije .",
+    "spans": [
+      {
+        "text": "Rumunije",
+        "label": "LOC",
+        "start": 90,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Jednostavno ne verujem mašinama \" , objašnjava Dumitru Purčelea , 53-godišnji električar .",
+    "spans": [
+      {
+        "text": "Dumitru Purčelea",
+        "label": "PER",
+        "start": 47,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Ako odem u samoposlugu ili u restoran i moja kartica ne radi , kako bi to izgledalo \" , kaže Tina Manesku , 26-godišnja sekretarica .",
+    "spans": [
+      {
+        "text": "Tina Manesku",
+        "label": "PER",
+        "start": 93,
+        "end": 105
+      }
+    ]
+  },
+  {
+    "text": "Takva mišljenja su potkrepljena krivičnim delima vezanim za platne kartice , uključujući postavljanje lažnog bankomata u jednom delu Bukurešta , koji je čitao informacije sa kartica korisnika .",
+    "spans": [
+      {
+        "text": "Bukurešta",
+        "label": "LOC",
+        "start": 133,
+        "end": 142
+      }
+    ]
+  },
+  {
+    "text": "To je znak da su se rumunske kriminalne grupe koje su praznile bankovne račune hiljada ljudi na Zapadu kloniranjem njihovih kartica sada okrenule sopstvenoj zemlji .",
+    "spans": [
+      {
+        "text": "Zapadu",
+        "label": "LOC",
+        "start": 96,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "Makedonija sa manjinskom vladom do samita NATO-a",
+    "spans": [
+      {
+        "text": "Makedonija",
+        "label": "LOC",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 42,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Manje od mesec dana uoči sastanka lidera NATO-a u Bukureštu , parlamentarne stranke složile su se da podrže premijera Nikolu Gruevskog .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 41,
+        "end": 47
+      },
+      {
+        "text": "Bukureštu",
+        "label": "LOC",
+        "start": 50,
+        "end": 59
+      },
+      {
+        "text": "Nikolu Gruevskog",
+        "label": "PER",
+        "start": 118,
+        "end": 134
+      }
+    ]
+  },
+  {
+    "text": "Međutim , nova kriza izbila je u ponedeljak kada su članovi Demokratske partije Albanaca zapretili bojkotom .",
+    "spans": [
+      {
+        "text": "Demokratske partije Albanaca",
+        "label": "ORG",
+        "start": 60,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Premijer Nikola Gruevski stiže na hitan sastanak sa liderima najvećih političkih stranaka u Skoplju .",
+    "spans": [
+      {
+        "text": "Nikola Gruevski",
+        "label": "PER",
+        "start": 9,
+        "end": 24
+      },
+      {
+        "text": "Skoplju",
+        "label": "LOC",
+        "start": 92,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "text": "Glavne makedonske političke stranke složile su se u subotu ( 15. marta ) da bi premijer Nikola Gruevski trebalo da vodi manjinsku vladu do samita NATO-a u Bukureštu , koji počinje 2. aprila .",
+    "spans": [
+      {
+        "text": "Nikola Gruevski",
+        "label": "PER",
+        "start": 88,
+        "end": 103
+      },
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 146,
+        "end": 152
+      },
+      {
+        "text": "Bukureštu",
+        "label": "LOC",
+        "start": 155,
+        "end": 164
+      }
+    ]
+  },
+  {
+    "text": "Međutim , u ponedeljak je izbio novi sukob kada su članovi Demokratske partije Albanaca ( DPA ) zapretili bojkotom vladinih institucija .",
+    "spans": [
+      {
+        "text": "Demokratske partije Albanaca",
+        "label": "ORG",
+        "start": 59,
+        "end": 87
+      },
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 90,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "text": "DPA je napustila vladajuću koaliciju prošle nedelje , ukazujući da je Gruevski odbio zahteve stranke .",
+    "spans": [
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Gruevski",
+        "label": "PER",
+        "start": 70,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Međutim , sve makedonske parlamentarne stranke -- uključujući DPA -- složile su se u subotu da bi sadašnja administracija trebalo da nastavi sa radom , s obzirom na kritičnu situaciju sa kojom se Makedonija suočava u vezi sa svojim nastojanjima za članstvo u NATO-u .",
+    "spans": [
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 62,
+        "end": 65
+      },
+      {
+        "text": "Makedonija",
+        "label": "LOC",
+        "start": 196,
+        "end": 206
+      },
+      {
+        "text": "NATO-u",
+        "label": "ORG",
+        "start": 259,
+        "end": 265
+      }
+    ]
+  },
+  {
+    "text": "Ta nastojanja su u opasnosti zbog tekućeg spora oko imena sa Grčkom , koja je članica Alijase .",
+    "spans": [
+      {
+        "text": "Grčkom",
+        "label": "LOC",
+        "start": 61,
+        "end": 67
+      },
+      {
+        "text": "Alijase",
+        "label": "ORG",
+        "start": 86,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "text": "Atina je rekla da će iskoristiti svoje pravo veta da spreči da se Makedoniji uruči poziv za članstvo , osim ako se do samita ne pronađe prihvatljiva formula .",
+    "spans": [
+      {
+        "text": "Atina",
+        "label": "LOC",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Makedoniji",
+        "label": "LOC",
+        "start": 66,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Vlada Gruevskog suočava se još jednom rundom pregovora ove nedelje u Beču , gde se specijalni izaslanik UN-a Metju Nimic sastaje sa pregovaračima obe strane .",
+    "spans": [
+      {
+        "text": "Gruevskog",
+        "label": "PER",
+        "start": 6,
+        "end": 15
+      },
+      {
+        "text": "Beču",
+        "label": "LOC",
+        "start": 69,
+        "end": 73
+      },
+      {
+        "text": "UN-a",
+        "label": "ORG",
+        "start": 104,
+        "end": 108
+      },
+      {
+        "text": "Metju Nimic",
+        "label": "PER",
+        "start": 109,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "text": "\" U naredne dve ili tri nedelje funkcionisaćemo kao manjinska vlada , sa širokom političkom podrškom , i nadamo se da će takvi odnosi biti demonstrirani u parlamentu \" , izjavio je u subotu ministar inostranih poslova Antonio Milošoski .",
+    "spans": [
+      {
+        "text": "Antonio Milošoski",
+        "label": "PER",
+        "start": 218,
+        "end": 235
+      }
+    ]
+  },
+  {
+    "text": "Jani Makraduli , potpredsednik najveće opozicione partije -- Socijaldemokratskog saveza Makedonije ( SDSM ) -- izjavio je da će kao odgovorna stranka SDSM podržati vladu do aprila .",
+    "spans": [
+      {
+        "text": "Jani Makraduli",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "Socijaldemokratskog saveza Makedonije",
+        "label": "ORG",
+        "start": 61,
+        "end": 98
+      },
+      {
+        "text": "SDSM",
+        "label": "ORG",
+        "start": 101,
+        "end": 105
+      },
+      {
+        "text": "SDSM",
+        "label": "ORG",
+        "start": 150,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "DPA je prošle nedelje raskinula sa vladajućom koalicijom zašto što nije dobila podršku za neke od svojih predloga , uključujući širu upotrebu albanskog jezika i zastave i veće beneficije za etničke Albance , veterane sukoba iz 2001. godine .",
+    "spans": [
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "DPA takođe želi da Makedonija prizna novu nezavisnu državu Kosovo .",
+    "spans": [
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Makedonija",
+        "label": "LOC",
+        "start": 19,
+        "end": 29
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 59,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Međutim , njen ključni član , potpredsednik vlade Imer Aliju , izjavio je u ponedeljak da DPA ne može dalje da radi sa Gruevskim .",
+    "spans": [
+      {
+        "text": "Imer Aliju",
+        "label": "PER",
+        "start": 50,
+        "end": 60
+      },
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 90,
+        "end": 93
+      },
+      {
+        "text": "Gruevskim",
+        "label": "PER",
+        "start": 119,
+        "end": 128
+      }
+    ]
+  },
+  {
+    "text": "Izjava Alijua je izgleda bila isprovocirana intervjuom koji je Gruevski dao tokom vikenda , a u kojem je sugerisao da DPA radi u ime stranih interesa .",
+    "spans": [
+      {
+        "text": "Alijua",
+        "label": "PER",
+        "start": 7,
+        "end": 13
+      },
+      {
+        "text": "Gruevski",
+        "label": "PER",
+        "start": 63,
+        "end": 71
+      },
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 118,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "text": "Čak i sa bojkotom DPA , administracija Gruevskog još uvek će biti u mogućnosti da funkcioniše , s obzirom da i dalje ima dovoljnu parlamentarnu podršku .",
+    "spans": [
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "text": "Gruevskog",
+        "label": "PER",
+        "start": 39,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Predsednik Branko Crvenkovski , član SDSM-a , rekao je da su , s obzirom da je ostalo samo 20 dana do aprilskog samita , razgovori sa Grčkom u \" najdelikatnijoj fazi \" .",
+    "spans": [
+      {
+        "text": "Branko Crvenkovski",
+        "label": "PER",
+        "start": 11,
+        "end": 29
+      },
+      {
+        "text": "SDSM-a",
+        "label": "ORG",
+        "start": 37,
+        "end": 43
+      },
+      {
+        "text": "Grčkom",
+        "label": "LOC",
+        "start": 134,
+        "end": 140
+      }
+    ]
+  },
+  {
+    "text": "Njegova izjava očigledno odstupa od prethodnog stava Makedonije , prema kojem je svaka modifikacija imena zemlje bila isključena .",
+    "spans": [
+      {
+        "text": "Makedonije",
+        "label": "LOC",
+        "start": 53,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Borba između turskih sekularista i vlade premijera Redžepa Tajipa Erdogana ponovo se rasplamsala dok glavni tužilac Abdurahman Jalčinkaja traži da se premijeru i još 70 drugih zabrani bavljenje politikom .",
+    "spans": [
+      {
+        "text": "Redžepa Tajipa Erdogana",
+        "label": "PER",
+        "start": 51,
+        "end": 74
+      },
+      {
+        "text": "Abdurahman Jalčinkaja",
+        "label": "PER",
+        "start": 116,
+        "end": 137
+      }
+    ]
+  },
+  {
+    "text": "Turski premijer Redžep Tajip Erdogan .",
+    "spans": [
+      {
+        "text": "Redžep Tajip Erdogan",
+        "label": "PER",
+        "start": 16,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Turski glavni tužilac Abdurahman Jalčinkaja podneo je optužnicu ustavnom sudu zemlje tražeći da zabrani vladajuću stranku .",
+    "spans": [
+      {
+        "text": "Abdurahman Jalčinkaja",
+        "label": "PER",
+        "start": 22,
+        "end": 43
+      },
+      {
+        "text": "ustavnom sudu",
+        "label": "ORG",
+        "start": 64,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "On tvrdi da je Partija pravde i razvoja ( AKP ) postala \" žarište \" aktivnosti kojima se podriva sekularizam , kao i da stranka ima \" skrivenu nameru \" usmerenu na pretvaranje Turske u islamsku državu .",
+    "spans": [
+      {
+        "text": "Partija pravde i razvoja",
+        "label": "ORG",
+        "start": 15,
+        "end": 39
+      },
+      {
+        "text": "AKP",
+        "label": "ORG",
+        "start": 42,
+        "end": 45
+      },
+      {
+        "text": "Turske",
+        "label": "LOC",
+        "start": 176,
+        "end": 182
+      }
+    ]
+  },
+  {
+    "text": "Tužilac je tražio da se 71 članu stranke , uključujući premijera Redžepa Tajipa Erdogana , zabrani bavljenje politikom na pet godina .",
+    "spans": [
+      {
+        "text": "Redžepa Tajipa Erdogana",
+        "label": "PER",
+        "start": 65,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Odluka Jalčinkaje je najnovija runda žestoke borbe između vlade na čelu sa AKP i sekularnih snaga u zemlji , koje uključuju vojsku , pravosuđe i akademske radnike .",
+    "spans": [
+      {
+        "text": "Jalčinkaje",
+        "label": "PER",
+        "start": 7,
+        "end": 17
+      },
+      {
+        "text": "AKP",
+        "label": "ORG",
+        "start": 75,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Osam od 11 sudija postavio je bivši predsednik Ahmet Nedždet Sezer , nepokolebljivi sekularista .",
+    "spans": [
+      {
+        "text": "Ahmet Nedždet Sezer",
+        "label": "PER",
+        "start": 47,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "AKP opisuje sebe kao konzervativnu demokratsku stranku .",
+    "spans": [
+      {
+        "text": "AKP",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "U optužnici na 162 strane Jalčinkaja je rekao da je ukidanje zabrane ključni korak kojem teže politički islamisti .",
+    "spans": [
+      {
+        "text": "Jalčinkaja",
+        "label": "PER",
+        "start": 26,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "On je takođe naveo razne Erdoganove izjave u kojima se pominju islam i islamski zakon .",
+    "spans": [
+      {
+        "text": "Erdoganove",
+        "label": "PER",
+        "start": 25,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Te izjave , rekao je tužilac , razotkrivaju planiranu strategiju AKP-a da se Turska pretvori u teokratsku državu .",
+    "spans": [
+      {
+        "text": "AKP-a",
+        "label": "ORG",
+        "start": 65,
+        "end": 70
+      },
+      {
+        "text": "Turska",
+        "label": "LOC",
+        "start": 77,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Jalčinkaja je takođe ukazao na napore vlade da zabrani prodaju alkohola u restoranima i barovima u vlasništvu sportskih klubova .",
+    "spans": [
+      {
+        "text": "Jalčinkaja",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Međutim , ubrzo nakon podizanja optužnice , ministar iz Erdoganove vlade rekao je da će zabrana biti odložena na godinu dana .",
+    "spans": [
+      {
+        "text": "Erdoganove",
+        "label": "PER",
+        "start": 56,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "U svom obraćanju u nedelju Erdogan je izneo svoju privrženost sekularizmu .",
+    "spans": [
+      {
+        "text": "Erdogan",
+        "label": "PER",
+        "start": 27,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Pišući u Hurijetu , vodećem dnevniku zemlje , kolumnista Enis Berberoglu rekao je da se politika vlade AKP od kada je reizabrana puno razlikuje od one u prvom mandatu .",
+    "spans": [
+      {
+        "text": "Hurijetu",
+        "label": "ORG",
+        "start": 9,
+        "end": 17
+      },
+      {
+        "text": "Enis Berberoglu",
+        "label": "PER",
+        "start": 57,
+        "end": 72
+      },
+      {
+        "text": "AKP",
+        "label": "ORG",
+        "start": 103,
+        "end": 106
+      }
+    ]
+  },
+  {
+    "text": "Kada su birači podržali Erdogana na izborima , piše Berberoglu , to su učinili zato što su očekivali da će nastaviti čvrstu ekonomsku politiku i političke reforme inspirisane pridruživanjem EU .",
+    "spans": [
+      {
+        "text": "Erdogana",
+        "label": "PER",
+        "start": 24,
+        "end": 32
+      },
+      {
+        "text": "Berberoglu",
+        "label": "PER",
+        "start": 52,
+        "end": 62
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 190,
+        "end": 192
+      }
+    ]
+  },
+  {
+    "text": "\" Da je Tajip Erdogan nastavio putem na koji su usmeravali ti glasovi , ubrzao svoje korake na putu ka Evropi i globalnoj ekonomiji , ne bi se suočio sa takvim postupkom \" , napisao je taj kolumnista tvrdeći da je AKP sada zainteresovanija da debatuje da li bi za tinejdžere trebalo da bude obavezno učenje Kurana .",
+    "spans": [
+      {
+        "text": "Tajip Erdogan",
+        "label": "PER",
+        "start": 8,
+        "end": 21
+      },
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 103,
+        "end": 109
+      },
+      {
+        "text": "AKP",
+        "label": "ORG",
+        "start": 214,
+        "end": 217
+      }
+    ]
+  },
+  {
+    "text": "Drugi istaknuti autor , Hasan Džemal iz Milijeta , snažno se protivi postupku .",
+    "spans": [
+      {
+        "text": "Hasan Džemal",
+        "label": "PER",
+        "start": 24,
+        "end": 36
+      },
+      {
+        "text": "Milijeta",
+        "label": "LOC",
+        "start": 40,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "\" Ustavni sud trebalo bi da odbaci zahtev za zatvaranje stranke i treba da stavi tačku na proces kojim se Turska pretvara u groblje političkih partija .",
+    "spans": [
+      {
+        "text": "Ustavni sud",
+        "label": "ORG",
+        "start": 2,
+        "end": 13
+      },
+      {
+        "text": "Turska",
+        "label": "LOC",
+        "start": 106,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "EU je tokom vikenda izrazila zabrinutost oko novih događaja .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "\" U normalnoj evropskoj demokratiji politička pitanja se raspravljaju u parlamentu i odlučuju kroz glasačke kutije , a ne u sudnici \" , rekao je komesar za proširenje EU Oli Ren .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 167,
+        "end": 169
+      },
+      {
+        "text": "Oli Ren",
+        "label": "PER",
+        "start": 170,
+        "end": 177
+      }
+    ]
+  },
+  {
+    "text": "Srbija obeležila treću godišnjicu od ubistva premijera Đinđića",
+    "spans": [
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Đinđića",
+        "label": "PER",
+        "start": 55,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Tri godine od kada je atentator ubio prvog premijera Srbije nakon Miloševićeve ere mnoga pitanja o zaveri za ubistvo i dalje su bez odgovora .",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 53,
+        "end": 59
+      },
+      {
+        "text": "Miloševićeve",
+        "label": "PER",
+        "start": 66,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Srbi čekaju u redu da odaju poštu ubijenom premijeru Zoranu Đinđiću tokom memorijalne službe u Aleji velikana na beogradskom centralnom groblju .",
+    "spans": [
+      {
+        "text": "Zoranu Đinđiću",
+        "label": "PER",
+        "start": 53,
+        "end": 67
+      },
+      {
+        "text": "Aleji velikana",
+        "label": "LOC",
+        "start": 95,
+        "end": 109
+      }
+    ]
+  },
+  {
+    "text": "Predsednik Srbije Boris Tadić , zvaničnici Demokratske stranke i hiljade građana u nedelju ( 12. mart ) su odali poštu pokojnom premijeru Zoranu Đinđiću na treću godišnjicu njegovog ubistva .",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 11,
+        "end": 17
+      },
+      {
+        "text": "Boris Tadić",
+        "label": "PER",
+        "start": 18,
+        "end": 29
+      },
+      {
+        "text": "Demokratske stranke",
+        "label": "ORG",
+        "start": 43,
+        "end": 62
+      },
+      {
+        "text": "Zoranu Đinđiću",
+        "label": "PER",
+        "start": 138,
+        "end": 152
+      }
+    ]
+  },
+  {
+    "text": "Tadić se pridružio članovima Đinđićeve porodice , prijateljima i političkim saradnicima , koji su polagali cveće na njegov grob i palili sveće .",
+    "spans": [
+      {
+        "text": "Tadić",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Đinđićeve",
+        "label": "PER",
+        "start": 29,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Premijer Vojislav Koštunica takođe je obeležio godišnjicu Đinđićeve smrti na ceremoniji koja je održana na mestu gde je ubijen .",
+    "spans": [
+      {
+        "text": "Vojislav Koštunica",
+        "label": "PER",
+        "start": 9,
+        "end": 27
+      },
+      {
+        "text": "Đinđićeve",
+        "label": "PER",
+        "start": 58,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Đinđić je ubijen pre tri godine ispred zgrade Vlade Srbije , samo nekoliko nedelja nakon prethodnog pokušaja atentata na njega .",
+    "spans": [
+      {
+        "text": "Đinđić",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Vlade Srbije",
+        "label": "ORG",
+        "start": 46,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Bivšem komandantu policijske Jedinice za specijalne operacije Miloradu Ulemeku i članovima Zemunskog klana -- organizovane kriminalne bande -- sudi se za ubistvo premijera .",
+    "spans": [
+      {
+        "text": "Jedinice za specijalne operacije",
+        "label": "ORG",
+        "start": 29,
+        "end": 61
+      },
+      {
+        "text": "Miloradu Ulemeku",
+        "label": "PER",
+        "start": 62,
+        "end": 78
+      },
+      {
+        "text": "Zemunskog klana",
+        "label": "ORG",
+        "start": 91,
+        "end": 106
+      }
+    ]
+  },
+  {
+    "text": "Memorijalni skup pod nazivom \" Vidimo se u budućnosti \" održan je u beogradskom Sava centru .",
+    "spans": [
+      {
+        "text": "Sava centru",
+        "label": "LOC",
+        "start": 80,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "text": "Prikazan je kratak dokumentarni film o Đinđićevoj političkoj karijeri , a posetiocima je pušten i video zapis ubistva .",
+    "spans": [
+      {
+        "text": "Đinđićevoj",
+        "label": "PER",
+        "start": 39,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Zemunski klan se dovodi u vezu sa Miloševićevim režimom i napadima na njegove političke protivnike .",
+    "spans": [
+      {
+        "text": "Zemunski klan",
+        "label": "ORG",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "text": "Miloševićevim",
+        "label": "PER",
+        "start": 34,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Nakon što se Ulemek sam predao vlastima 2. maja 2004. godine porasle su nade da će se otkriti cela istina .",
+    "spans": [
+      {
+        "text": "Ulemek",
+        "label": "PER",
+        "start": 13,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Te nade dodatno je podgrejalo hapšenje ključnog člana Zemunskog klana Dejana Milenkovića u Solunu 16. jula 2004. godine .",
+    "spans": [
+      {
+        "text": "Zemunskog klana",
+        "label": "ORG",
+        "start": 54,
+        "end": 69
+      },
+      {
+        "text": "Dejana Milenkovića",
+        "label": "PER",
+        "start": 70,
+        "end": 88
+      },
+      {
+        "text": "Solunu",
+        "label": "LOC",
+        "start": 91,
+        "end": 97
+      }
+    ]
+  },
+  {
+    "text": "Međutim , Ulemek negira bilo kakvu umešanost u ubistvo ističući da ga koriste kao žrtvenog jarca .",
+    "spans": [
+      {
+        "text": "Ulemek",
+        "label": "PER",
+        "start": 10,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Pojavljujući se pred Specijalnim sudom u Beogradu , Milenković je jednostavno tvrdio da \" zna mnogo \" o ubistvu dodajući da će govoriti o tome \" kada dođe vreme \" .",
+    "spans": [
+      {
+        "text": "Specijalnim sudom u Beogradu",
+        "label": "ORG",
+        "start": 21,
+        "end": 49
+      },
+      {
+        "text": "Milenković",
+        "label": "PER",
+        "start": 52,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Umešani su moćni ljudi , ukazao je Milenković , odbijajući da ulazi u detalje .",
+    "spans": [
+      {
+        "text": "Milenković",
+        "label": "PER",
+        "start": 35,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "Đinđićevi saradnici , poput Vladimira Popovića , optužili su moćne snage u zemlji , uključujući delove Vojske Srbije i Crne Gore , Pravoslavne crkve i Akademije nauka i umetnosti , da stoje iza ubistva .",
+    "spans": [
+      {
+        "text": "Đinđićevi",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Vladimira Popovića",
+        "label": "PER",
+        "start": 28,
+        "end": 46
+      },
+      {
+        "text": "Vojske Srbije i Crne Gore",
+        "label": "ORG",
+        "start": 103,
+        "end": 128
+      },
+      {
+        "text": "Pravoslavne crkve",
+        "label": "ORG",
+        "start": 131,
+        "end": 148
+      },
+      {
+        "text": "Akademije nauka i umetnosti",
+        "label": "ORG",
+        "start": 151,
+        "end": 178
+      }
+    ]
+  },
+  {
+    "text": "Čak se i Koštunica , koji se često sukobljavao sa Đinđićem u poslednjim godinama njegovog života , našao na udaru optužbi .",
+    "spans": [
+      {
+        "text": "Koštunica",
+        "label": "PER",
+        "start": 9,
+        "end": 18
+      },
+      {
+        "text": "Đinđićem",
+        "label": "PER",
+        "start": 50,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Kancelarija beogradskog tužioca ispitala je nekoliko osoba koje je imenovao Popović , ali zvaničnici -- uključujući bivšeg ministra unutrašnjih poslova Dušana Mihajlovića -- kažu da te tvrdnje nisu potkrepljene dokazima policije .",
+    "spans": [
+      {
+        "text": "Popović",
+        "label": "PER",
+        "start": 76,
+        "end": 83
+      },
+      {
+        "text": "Dušana Mihajlovića",
+        "label": "PER",
+        "start": 152,
+        "end": 170
+      }
+    ]
+  },
+  {
+    "text": "\" Nije bilo spoljnih finansijera ili organizatora \" , kaže novinar Miloš Vasić , autor knjige o ubistvu .",
+    "spans": [
+      {
+        "text": "Miloš Vasić",
+        "label": "PER",
+        "start": 67,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Međutim , on dodaje da je moguće da su ubice bile povezane sa širokom mrežom organizovanih kriminalnih grupa širom jugoistočne Evrope .",
+    "spans": [
+      {
+        "text": "Evrope",
+        "label": "LOC",
+        "start": 127,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Sud sada čeka rezultate analize Kriminološkog instituta iz Visbadena , u Nemačkoj .",
+    "spans": [
+      {
+        "text": "Kriminološkog instituta iz Visbadena",
+        "label": "ORG",
+        "start": 32,
+        "end": 68
+      },
+      {
+        "text": "Nemačkoj",
+        "label": "LOC",
+        "start": 73,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Posle toga zamenik specijalnog tužioca Jovan Prijić , advokati i optuženi daće svoje završne reči .",
+    "spans": [
+      {
+        "text": "Jovan Prijić",
+        "label": "PER",
+        "start": 39,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Nauka i tehnologija : Crnogorski IN kanal tužiće lokalne kablovske operatere",
+    "spans": [
+      {
+        "text": "IN kanal",
+        "label": "ORG",
+        "start": 33,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Zvanični crnogorski emiter Evropskog fudbalskog prevenstva Euro 2008 , IN kanal , tužiće kablovske operatere zbog prenosa utakmica .",
+    "spans": [
+      {
+        "text": "IN kanal",
+        "label": "ORG",
+        "start": 71,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "text": "Takođe u vestima : Grčka pokrenula Helenski nacionalni katastar .",
+    "spans": [
+      {
+        "text": "Grčka",
+        "label": "LOC",
+        "start": 19,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Crnogorski TV kanal IN , zvanični emiter Evropskog fudbalskog prvenstva Euro 2008 u Crnoj Gori , namerava da tuži lokalne kablovske operatere zbog prenošenja utakmica .",
+    "spans": [
+      {
+        "text": "IN",
+        "label": "ORG",
+        "start": 20,
+        "end": 22
+      },
+      {
+        "text": "Crnoj Gori",
+        "label": "LOC",
+        "start": 84,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "Prema televiziji IN , UEFA je potpisala ekskluzivan ugovor dajući IN-u prava prenosa , koja su lokalni kablovski operateri narušili time što nisu skremblovali emitovanje utakmica .",
+    "spans": [
+      {
+        "text": "IN",
+        "label": "ORG",
+        "start": 17,
+        "end": 19
+      },
+      {
+        "text": "UEFA",
+        "label": "ORG",
+        "start": 22,
+        "end": 26
+      },
+      {
+        "text": "IN-u",
+        "label": "ORG",
+        "start": 66,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Grčka je u utorak ( 17. jun ) pokrenula istraživanje za Helenski nacionalni katastar .",
+    "spans": [
+      {
+        "text": "Grčka",
+        "label": "LOC",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Grci mogu da registruju vlasništvo nad zemljištem u tom sistemu do 30. septembra .",
+    "spans": [
+      {
+        "text": "Grci",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "Iseljenici mogu da registruju svoju imovinu u Grčkoj do 30. decembra .",
+    "spans": [
+      {
+        "text": "Grčkoj",
+        "label": "LOC",
+        "start": 46,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Turski naučnici sa Univerziteta Balikesir su , u saradnji sa predstavnicima industrije i ministarstva poljoprivrede , razvili projekat za korišćenje maslinovog lišća , šišarki , semena grožđa i ljuske od paradajza , koji se trenutno sagorevaju kao otpad .",
+    "spans": [
+      {
+        "text": "Univerziteta Balikesir",
+        "label": "ORG",
+        "start": 19,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Oko 70.000 naučnika i studenata deo su grčke dijaspore , izvestio je u utorak ( 17. jun ) grčki list Kerdos .",
+    "spans": [
+      {
+        "text": "Kerdos",
+        "label": "ORG",
+        "start": 101,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "Pema pisanju lista , Grčka pati od \" odliva mozgova \" , kao i region jugoistočne Evrope .",
+    "spans": [
+      {
+        "text": "Grčka",
+        "label": "LOC",
+        "start": 21,
+        "end": 26
+      },
+      {
+        "text": "Evrope",
+        "label": "LOC",
+        "start": 81,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Prve novine za slepe i osobe sa poremećenim vidom u Srbiji dostigle su u petak ( 20. jun ) u Novom Sadu prvi tiraž od 200 čitalaca .",
+    "spans": [
+      {
+        "text": "Srbiji",
+        "label": "LOC",
+        "start": 52,
+        "end": 58
+      },
+      {
+        "text": "Novom Sadu",
+        "label": "LOC",
+        "start": 93,
+        "end": 103
+      }
+    ]
+  },
+  {
+    "text": "Novine se štampaju u Brajovoj azbuci .",
+    "spans": [
+      {
+        "text": "Brajovoj",
+        "label": "PER",
+        "start": 21,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Sponzor publikacije je Rotari klub u Novom Sadu .",
+    "spans": [
+      {
+        "text": "Rotari klub",
+        "label": "ORG",
+        "start": 23,
+        "end": 34
+      },
+      {
+        "text": "Novom Sadu",
+        "label": "LOC",
+        "start": 37,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Regionalna konferencija \" Čista energija i transparentna energetska politika \" održana je u četvrtak ( 19. jun ) u Sarajevu .",
+    "spans": [
+      {
+        "text": "Sarajevu",
+        "label": "LOC",
+        "start": 115,
+        "end": 123
+      }
+    ]
+  },
+  {
+    "text": "Konferenciju su organizovali fondacija Otvoreno društvo , fondacija Hajnrih Bol i Centar za ekologiju i energiju iz Tuzle .",
+    "spans": [
+      {
+        "text": "Otvoreno društvo",
+        "label": "ORG",
+        "start": 39,
+        "end": 55
+      },
+      {
+        "text": "Hajnrih Bol",
+        "label": "ORG",
+        "start": 68,
+        "end": 79
+      },
+      {
+        "text": "Centar za ekologiju i energiju",
+        "label": "ORG",
+        "start": 82,
+        "end": 112
+      },
+      {
+        "text": "Tuzle",
+        "label": "LOC",
+        "start": 116,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "text": "Diplomatija : Papandreu kaže da region treba da gleda u budućnost",
+    "spans": [
+      {
+        "text": "Papandreu",
+        "label": "PER",
+        "start": 14,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Tokom posete Beogradu grčki premijer ponovio je uslove za članstvo u EU i pozvao zemlje zapadnog Balkana da ostave sukobe iza sebe .",
+    "spans": [
+      {
+        "text": "Beogradu",
+        "label": "LOC",
+        "start": 13,
+        "end": 21
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 69,
+        "end": 71
+      },
+      {
+        "text": "Balkana",
+        "label": "LOC",
+        "start": 97,
+        "end": 104
+      }
+    ]
+  },
+  {
+    "text": "Takođe ove nedelje : makedonski premijer Nikola Gruevski boravio u poseti Tel Avivu kako bi promovisao poslovne mogućnosti .",
+    "spans": [
+      {
+        "text": "Nikola Gruevski",
+        "label": "PER",
+        "start": 41,
+        "end": 56
+      },
+      {
+        "text": "Tel Avivu",
+        "label": "LOC",
+        "start": 74,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Grčki premijer Jorgos Papandreu ( levo ) pozira sa svojim srpskim kolegom Mirkom Cvetkovićem uoči njihovog sastanka u Beogradu u ponedeljak ( 4. januara ) .",
+    "spans": [
+      {
+        "text": "Jorgos Papandreu",
+        "label": "PER",
+        "start": 15,
+        "end": 31
+      },
+      {
+        "text": "Mirkom Cvetkovićem",
+        "label": "PER",
+        "start": 74,
+        "end": 92
+      },
+      {
+        "text": "Beogradu",
+        "label": "LOC",
+        "start": 118,
+        "end": 126
+      }
+    ]
+  },
+  {
+    "text": "Papandreu je izjavio da je 2014. ciljna godina za pridruživanje svih zemalja zapadnog Balkana EU .",
+    "spans": [
+      {
+        "text": "Papandreu",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Balkana",
+        "label": "LOC",
+        "start": 86,
+        "end": 93
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 94,
+        "end": 96
+      }
+    ]
+  },
+  {
+    "text": "Grčki premijer Jorgos Papandreu doputovao je u ponedeljak ( 4. januara ) u Beograd da bi prisustvovao ambasadorskoj konferenciji koju je organizovalo ministarstvo inostranih poslova Srbije .",
+    "spans": [
+      {
+        "text": "Jorgos Papandreu",
+        "label": "PER",
+        "start": 15,
+        "end": 31
+      },
+      {
+        "text": "Beograd",
+        "label": "LOC",
+        "start": 75,
+        "end": 82
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 182,
+        "end": 188
+      }
+    ]
+  },
+  {
+    "text": "On se takođe sastao sa premijerom Mirkom Cvetkovićem , predsednikom Borisom Tadićem i ministrom inostranih poslova Vukom Jeremićem .",
+    "spans": [
+      {
+        "text": "Mirkom Cvetkovićem",
+        "label": "PER",
+        "start": 34,
+        "end": 52
+      },
+      {
+        "text": "Borisom Tadićem",
+        "label": "PER",
+        "start": 68,
+        "end": 83
+      },
+      {
+        "text": "Vukom Jeremićem",
+        "label": "PER",
+        "start": 115,
+        "end": 130
+      }
+    ]
+  },
+  {
+    "text": "Govoreći na konferenciji , Papandreu je pozvao zemlje zapadnog Balkana da ostave sukobe iza sebe .",
+    "spans": [
+      {
+        "text": "Papandreu",
+        "label": "PER",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "text": "Balkana",
+        "label": "LOC",
+        "start": 63,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "On je ukazao da uslovi za članstvo u EU uključuju poštovanje ljudskih i manjinskih prava , kao i napore u borbi protiv ilegalne imigracije , organizovanog kriminala i korupcije .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 37,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "Makedonski premijer Nikola Gruevski boravio je u ponedeljak ( 4. januara ) u Tel Avivu da bi promovisao ekonomske mogućnosti u svojoj zemlji .",
+    "spans": [
+      {
+        "text": "Nikola Gruevski",
+        "label": "PER",
+        "start": 20,
+        "end": 35
+      },
+      {
+        "text": "Tel Avivu",
+        "label": "LOC",
+        "start": 77,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Govoreći na poslovnom forumu , on je istakao da je Makedonija potpisala tri multilateralna sporazuma o slobodnoj trgovini i stvorila povoljne uslove za strane investitore u zonama tehnološko-industrijskog razvoja .",
+    "spans": [
+      {
+        "text": "Makedonija",
+        "label": "LOC",
+        "start": 51,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Potpredsednik vlade i ministar za ekonomske poslove Vladimir Peševski i direktor Agencije za strana ulaganja Viktor Mizo takođe su se obratili učesnicima foruma .",
+    "spans": [
+      {
+        "text": "Vladimir Peševski",
+        "label": "PER",
+        "start": 52,
+        "end": 69
+      },
+      {
+        "text": "Agencije za strana ulaganja",
+        "label": "ORG",
+        "start": 81,
+        "end": 108
+      },
+      {
+        "text": "Viktor Mizo",
+        "label": "PER",
+        "start": 109,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "text": "Predsednici zemalja regiona neće se sastati na Kosovu 8. januara kao što je bilo prvobitno planirano , izvestio je u utorak ( 5. januara ) Info Pres , navodeći da je samit odložen do februara ili početka marta .",
+    "spans": [
+      {
+        "text": "Kosovu",
+        "label": "LOC",
+        "start": 47,
+        "end": 53
+      },
+      {
+        "text": "Info Pres",
+        "label": "ORG",
+        "start": 139,
+        "end": 148
+      }
+    ]
+  },
+  {
+    "text": "Učešće na sastanku već su bili potvrdili predsednik Albanije Bamir Topi , predsednik Makedonije Đorđe Ivanov i predsednik Crne Gore Filip Vujanović .",
+    "spans": [
+      {
+        "text": "Albanije",
+        "label": "LOC",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "text": "Bamir Topi",
+        "label": "PER",
+        "start": 61,
+        "end": 71
+      },
+      {
+        "text": "Makedonije",
+        "label": "LOC",
+        "start": 85,
+        "end": 95
+      },
+      {
+        "text": "Đorđe Ivanov",
+        "label": "PER",
+        "start": 96,
+        "end": 108
+      },
+      {
+        "text": "Crne Gore",
+        "label": "LOC",
+        "start": 122,
+        "end": 131
+      },
+      {
+        "text": "Filip Vujanović",
+        "label": "PER",
+        "start": 132,
+        "end": 147
+      }
+    ]
+  },
+  {
+    "text": "Iz kancelarije predsednika Fatmira Sejdiua potvrđeno je da je jedini predsednik koji će posetiti Kosovo ove nedelje odlazeći hrvatski predsednik Stipe Mesić .",
+    "spans": [
+      {
+        "text": "Fatmira Sejdiua",
+        "label": "PER",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 97,
+        "end": 103
+      },
+      {
+        "text": "Stipe Mesić",
+        "label": "PER",
+        "start": 145,
+        "end": 156
+      }
+    ]
+  },
+  {
+    "text": "Saudijski kralj Abdulah bin Abdulaziz sastao se u nedelju ( 3. januara ) sa turskim ministrom inostranih poslova Ahmetom Davutogluom .",
+    "spans": [
+      {
+        "text": "Abdulah bin Abdulaziz",
+        "label": "PER",
+        "start": 16,
+        "end": 37
+      },
+      {
+        "text": "Ahmetom Davutogluom",
+        "label": "PER",
+        "start": 113,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "Razgovori su bili usmereni na bilateralne veze i situaciju na Bliskom istoku .",
+    "spans": [
+      {
+        "text": "Bliskom istoku",
+        "label": "LOC",
+        "start": 62,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Davutoglu se u subotu sastao sa kolegom Saudom Al Fajsalom kako bi razmotrili niz pitanja , uključujući saradnju u politici , ekonomiji , trgovini , kulturi i diplomatiji .",
+    "spans": [
+      {
+        "text": "Davutoglu",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Saudom Al Fajsalom",
+        "label": "PER",
+        "start": 40,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Hrvatski predsednik Stipe Mesić primio je u utorak ( 29. decembra ) akreditive prvog kosovskog ambasadora u Hrvatskoj Valdeta Sadikua .",
+    "spans": [
+      {
+        "text": "Stipe Mesić",
+        "label": "PER",
+        "start": 20,
+        "end": 31
+      },
+      {
+        "text": "Hrvatskoj",
+        "label": "LOC",
+        "start": 108,
+        "end": 117
+      },
+      {
+        "text": "Valdeta Sadikua",
+        "label": "PER",
+        "start": 118,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Taj diplomata se zahvalio Hrvatskoj na podršci .",
+    "spans": [
+      {
+        "text": "Hrvatskoj",
+        "label": "LOC",
+        "start": 26,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Zagreb je priznao nezavisnost Kosova u martu 2008. i uspostavio diplomatske odnose sa Prištinom u junu iste godine .",
+    "spans": [
+      {
+        "text": "Zagreb",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 30,
+        "end": 36
+      },
+      {
+        "text": "Prištinom",
+        "label": "LOC",
+        "start": 86,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Novoizabrani kosovski ambasador u Sloveniji Anton Beriša sastao se u utorak ( 5. januara ) sa predsednikom Danilom Turkom u Ljubljani .",
+    "spans": [
+      {
+        "text": "Sloveniji",
+        "label": "LOC",
+        "start": 34,
+        "end": 43
+      },
+      {
+        "text": "Anton Beriša",
+        "label": "PER",
+        "start": 44,
+        "end": 56
+      },
+      {
+        "text": "Danilom Turkom",
+        "label": "PER",
+        "start": 107,
+        "end": 121
+      },
+      {
+        "text": "Ljubljani",
+        "label": "LOC",
+        "start": 124,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Slovenija je priznala Kosovo 2008. godine .",
+    "spans": [
+      {
+        "text": "Slovenija",
+        "label": "LOC",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 22,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Izveštaj UN : Balkan među najbezbednijim regionima u Evropi",
+    "spans": [
+      {
+        "text": "UN",
+        "label": "ORG",
+        "start": 9,
+        "end": 11
+      },
+      {
+        "text": "Balkan",
+        "label": "LOC",
+        "start": 14,
+        "end": 20
+      },
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 53,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Stereotip Balkana kao gangsterskog raja više ne važi , sudeći po izveštaju Kancelarije UN za borbu protiv narkotika i kriminala .",
+    "spans": [
+      {
+        "text": "Balkana",
+        "label": "LOC",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "text": "Kancelarije UN za borbu protiv narkotika i kriminala",
+        "label": "ORG",
+        "start": 75,
+        "end": 127
+      }
+    ]
+  },
+  {
+    "text": "\" Koliko god iznenađujuće to bilo , balkanski region je jedan od najbezbednijih u Evropi \" , napisao je u izveštaju izvršni direktor UNODC-a Antonio Maria Kosta .",
+    "spans": [
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 82,
+        "end": 88
+      },
+      {
+        "text": "UNODC-a",
+        "label": "ORG",
+        "start": 133,
+        "end": 140
+      },
+      {
+        "text": "Antonio Maria Kosta",
+        "label": "PER",
+        "start": 141,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "text": "Nedavni nagli pad kriminala širom Balkana pretvorio je taj region u jedan od najsigurnijih u Evropi , navodi se u izveštaju Kancelarije UN za borbu protiv narkotika i kriminala ( UNODC ) objavljenom ranije ovog leta .",
+    "spans": [
+      {
+        "text": "Balkana",
+        "label": "LOC",
+        "start": 34,
+        "end": 41
+      },
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 93,
+        "end": 99
+      },
+      {
+        "text": "Kancelarije UN za borbu protiv narkotika i kriminala",
+        "label": "ORG",
+        "start": 124,
+        "end": 176
+      },
+      {
+        "text": "UNODC",
+        "label": "ORG",
+        "start": 179,
+        "end": 184
+      }
+    ]
+  },
+  {
+    "text": "Stopa krivičnih dela protiv ljudi , kao što su ubistvo , silovanja i napadi , kao i imovinskih krivičnih dela poput pljačke i provale , sada je niža u balkanskim zemljama nego u zapadnoj Evropi , navodi se u izveštaju UNODC-a od 29. maja .",
+    "spans": [
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 187,
+        "end": 193
+      },
+      {
+        "text": "UNODC-a",
+        "label": "ORG",
+        "start": 218,
+        "end": 225
+      }
+    ]
+  },
+  {
+    "text": "\" Koliko god iznenađujuće to bilo , balkanski region je jedan od najbezbednijih u Evropi \" , napisao je izvršni direktor UNODC-a Antonio Maria Kosta u uvodu izveštaja .",
+    "spans": [
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 82,
+        "end": 88
+      },
+      {
+        "text": "UNODC-a",
+        "label": "ORG",
+        "start": 121,
+        "end": 128
+      },
+      {
+        "text": "Antonio Maria Kosta",
+        "label": "PER",
+        "start": 129,
+        "end": 148
+      }
+    ]
+  },
+  {
+    "text": "Pozitivna situacija navodno proizlazi iz veće političke stabilnosti i demokratizacije koja je usledila posle prvobitnog haotičnog raspada Jugoslavije .",
+    "spans": [
+      {
+        "text": "Jugoslavije",
+        "label": "LOC",
+        "start": 138,
+        "end": 149
+      }
+    ]
+  },
+  {
+    "text": "Međunarodna pomoć , posebno od EU , olakšala je posleratni oporavak regiona , dok je proces izgradnje bliskijih veza sa Unijom otvorio granice i umanjio primamljivost krijumčarenja .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 31,
+        "end": 33
+      },
+      {
+        "text": "Unijom",
+        "label": "ORG",
+        "start": 120,
+        "end": 126
+      }
+    ]
+  },
+  {
+    "text": "\" Balkan se udaljava od ere u kojoj su demagozi , tajna policija i razbojnici profitirali od kršenja sankcija i krijumčarenja ljudi , oružja , cigareta i narkotika \" , navodi se u izveštaju .",
+    "spans": [
+      {
+        "text": "Balkan",
+        "label": "LOC",
+        "start": 2,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Prema UNODC-u , stanovnici regiona sada su bezbedni kao , ili čak i bezbedniji , od onih koji žive na skoro bilo kom drugom mestu .",
+    "spans": [
+      {
+        "text": "UNODC-u",
+        "label": "ORG",
+        "start": 6,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "\" Začarani krug političke nestabilnosti koji je vodio kriminalu i obrnuto , a koji je snašao Balkan devedesetih godina , je prekinut \" , rekao je Kosta u Briselu .",
+    "spans": [
+      {
+        "text": "Balkan",
+        "label": "LOC",
+        "start": 93,
+        "end": 99
+      },
+      {
+        "text": "Kosta",
+        "label": "PER",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "text": "Briselu",
+        "label": "LOC",
+        "start": 154,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Organizovani kriminal takođe iščezava kao velika pretnja , navodi UNODC .",
+    "spans": [
+      {
+        "text": "UNODC",
+        "label": "ORG",
+        "start": 66,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "Međutim \" stalna veza [ između ] biznisa , politike i organizovanog kriminala \" ostaje ozbiljan izazov za region , upozorio je Kosta .",
+    "spans": [
+      {
+        "text": "Kosta",
+        "label": "PER",
+        "start": 127,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "U izveštaju se Albanija navodi kao zemlja sa najvećim brojem slučajeva podmićivanja ( 66 odsto ispitanika platilo je mito u 2006 ) među 57 zemalja u kojima je istraživanje sprovedeno , što je znatno iznad regionalnog proseka od 9 odsto .",
+    "spans": [
+      {
+        "text": "Albanija",
+        "label": "LOC",
+        "start": 15,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Kosta je upozorio da je korupcija \" javni neprijatelj broj jedan \" na Balkanu .",
+    "spans": [
+      {
+        "text": "Kosta",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Balkanu",
+        "label": "LOC",
+        "start": 70,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Ahtisari kaže da je predlog statusa Kosova usredsređen na zaštitu prava manjina",
+    "spans": [
+      {
+        "text": "Ahtisari",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 36,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Specijalni izaslanik UN-a Marti Ahtisari rekao je u sredu u Parlamentarnoj skupštini Saveta Evrope da je glavni cilj njegovog plana za Kosovo da se osigura miroljubiva koegzistencija svih etničkih zajednica .",
+    "spans": [
+      {
+        "text": "UN-a",
+        "label": "ORG",
+        "start": 21,
+        "end": 25
+      },
+      {
+        "text": "Marti Ahtisari",
+        "label": "PER",
+        "start": 26,
+        "end": 40
+      },
+      {
+        "text": "Parlamentarnoj skupštini Saveta Evrope",
+        "label": "ORG",
+        "start": 60,
+        "end": 98
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 135,
+        "end": 141
+      }
+    ]
+  },
+  {
+    "text": "Očekuje se da izaslanik UN-a Marti Ahtisari predstavi svoj predlog statusa Kosova u petak ( 26. januara ) u Beču .",
+    "spans": [
+      {
+        "text": "UN-a",
+        "label": "ORG",
+        "start": 24,
+        "end": 28
+      },
+      {
+        "text": "Marti Ahtisari",
+        "label": "PER",
+        "start": 29,
+        "end": 43
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 75,
+        "end": 81
+      },
+      {
+        "text": "Beču",
+        "label": "LOC",
+        "start": 108,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "Opisujući svoj predlog za rešenje pitanja statusa Kosova kao \" fer i izbalansiran \" , specijalni izaslanik UN-a Marti Ahtisari rekao je u sredu ( 24. januara ) da je njegov glavni cilj bio da obezbedi da sve zajednice u pokrajini žive zajedno u miru .",
+    "spans": [
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 50,
+        "end": 56
+      },
+      {
+        "text": "UN-a",
+        "label": "ORG",
+        "start": 107,
+        "end": 111
+      },
+      {
+        "text": "Marti Ahtisari",
+        "label": "PER",
+        "start": 112,
+        "end": 126
+      }
+    ]
+  },
+  {
+    "text": "Obraćajući se Parlamentarnoj skupštini Saveta Evrope ( PSSE ) u Strazburu , u Francuskoj , Ahtisari je rekao da su njegove preporuke odraz ishoda prošlogodišnjih direktnih razgovora između Beograda i Prištine , koji su doneli malo toga u smislu saglasnosti .",
+    "spans": [
+      {
+        "text": "Parlamentarnoj skupštini Saveta Evrope",
+        "label": "ORG",
+        "start": 14,
+        "end": 52
+      },
+      {
+        "text": "PSSE",
+        "label": "ORG",
+        "start": 55,
+        "end": 59
+      },
+      {
+        "text": "Strazburu",
+        "label": "LOC",
+        "start": 64,
+        "end": 73
+      },
+      {
+        "text": "Francuskoj",
+        "label": "LOC",
+        "start": 78,
+        "end": 88
+      },
+      {
+        "text": "Ahtisari",
+        "label": "PER",
+        "start": 91,
+        "end": 99
+      },
+      {
+        "text": "Beograda",
+        "label": "LOC",
+        "start": 189,
+        "end": 197
+      },
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 200,
+        "end": 208
+      }
+    ]
+  },
+  {
+    "text": "Ahtisari je rekao da njegov predlog pruža odgovore na nerešena pitanja .",
+    "spans": [
+      {
+        "text": "Ahtisari",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "\" On pruža osnovu za demokratsko i multietničko Kosovo u kojem su prava i interesi svih zajednica čvrsto zagarantovani i zaštićeni od strane institucija zasnovanih na vladavini zakona .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 48,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Njime je takođe predviđeno snažno međunarodno civilno i vojno prisustvo u sklopu šireg budućeg međunarodnog angažmana na Kosovu . \"",
+    "spans": [
+      {
+        "text": "Kosovu",
+        "label": "LOC",
+        "start": 121,
+        "end": 127
+      }
+    ]
+  },
+  {
+    "text": "Pravno još uvek deo Srbije , Kosovo je pod upravom UNMIK-a od okončanja sukoba u pokrajini 1998 - 1999.",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 20,
+        "end": 26
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 29,
+        "end": 35
+      },
+      {
+        "text": "UNMIK-a",
+        "label": "ORG",
+        "start": 51,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Kosovski Albanci , koji čine oko 90 procenata od ukupno oko 2 miliona stanovnika pokrajine , traže punu nezavisnost od Srbije .",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 119,
+        "end": 125
+      }
+    ]
+  },
+  {
+    "text": "Opisujući Kosovo kao integralni deo teritorije svoje zemlje , srpske vlasti insistiraju da je jedino na šta mogu da pristanu suštinska autonomija .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 10,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Mnogi očekuju da će Ahtisarijevim planom biti predložen neki oblik nezavisnosti nadzirane od strane EU .",
+    "spans": [
+      {
+        "text": "Ahtisarijevim",
+        "label": "PER",
+        "start": 20,
+        "end": 33
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 100,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "\" Jedan od ključnih izazova u našem predlogu bio je da se definiše obim i stepen buduće angažovanosti međunarodne zajednice na Kosovu \" , rekao je on članovima PSSE .",
+    "spans": [
+      {
+        "text": "Kosovu",
+        "label": "LOC",
+        "start": 127,
+        "end": 133
+      },
+      {
+        "text": "PSSE",
+        "label": "ORG",
+        "start": 160,
+        "end": 164
+      }
+    ]
+  },
+  {
+    "text": "\" Budući međunarodni civilni predstavnik … je predviđen , čiji će mandat biti da nadgleda sprovođenje rešenja , a obavljaće i funkciju specijalnog predstavnika EU . \"",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 160,
+        "end": 162
+      }
+    ]
+  },
+  {
+    "text": "Iako će buduće međunarodno angažovanje imati kritičnu ulogu u sprovođenju rešenja , glavna odgovornost za to biće na kosovskim vlastima , istakao je Ahtisari .",
+    "spans": [
+      {
+        "text": "Ahtisari",
+        "label": "PER",
+        "start": 149,
+        "end": 157
+      }
+    ]
+  },
+  {
+    "text": "\" Biće veoma važno da se Priština u potpunosti i formalno posveti sprovođenju svih elemenata konačnog rešenja \" , ukazao je on .",
+    "spans": [
+      {
+        "text": "Priština",
+        "label": "LOC",
+        "start": 25,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Priština takođe mora da ima neophodna sredstva i institucionalni kapacitet za sprovođenje odredbi . \"",
+    "spans": [
+      {
+        "text": "Priština",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Izaslanik UN-a predstaviće u petak svoj predlog rešenja za Kosovo visokim zvaničnicima šestočlane Kontakt grupe , koju čine Britanija , Francuska , Nemačka , Italija , Rusija i Sjedinjene Države .",
+    "spans": [
+      {
+        "text": "UN-a",
+        "label": "ORG",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 59,
+        "end": 65
+      },
+      {
+        "text": "Kontakt grupe",
+        "label": "ORG",
+        "start": 98,
+        "end": 111
+      },
+      {
+        "text": "Britanija",
+        "label": "LOC",
+        "start": 124,
+        "end": 133
+      },
+      {
+        "text": "Francuska",
+        "label": "LOC",
+        "start": 136,
+        "end": 145
+      },
+      {
+        "text": "Nemačka",
+        "label": "LOC",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "text": "Italija",
+        "label": "LOC",
+        "start": 158,
+        "end": 165
+      },
+      {
+        "text": "Rusija",
+        "label": "LOC",
+        "start": 168,
+        "end": 174
+      },
+      {
+        "text": "Sjedinjene Države",
+        "label": "LOC",
+        "start": 177,
+        "end": 194
+      }
+    ]
+  },
+  {
+    "text": "Nedelju dana kasnije on će doneti plan Beogradu i Prištini , čiji će se pregovarači , kako se očekuje , sastati na novim razgovorima kasnije tog meseca .",
+    "spans": [
+      {
+        "text": "Beogradu",
+        "label": "LOC",
+        "start": 39,
+        "end": 47
+      },
+      {
+        "text": "Prištini",
+        "label": "LOC",
+        "start": 50,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "\" Moja ideja je da uključim obe strane u konsultativni proces , da vidim da li imaju neke nove ideje \" , izjavio je u sredu Ahtisari , a prenosi novinska agencija AP .",
+    "spans": [
+      {
+        "text": "Ahtisari",
+        "label": "PER",
+        "start": 124,
+        "end": 132
+      },
+      {
+        "text": "AP",
+        "label": "ORG",
+        "start": 163,
+        "end": 165
+      }
+    ]
+  },
+  {
+    "text": "Posle ovog perioda angažovanja nameravam da završim moj izveštaj i predam ga Savetu bezbednosti UN-a , gde u stvari počinje prava završnica ovog procesa . \"",
+    "spans": [
+      {
+        "text": "Savetu bezbednosti UN-a",
+        "label": "ORG",
+        "start": 77,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "text": "Potpredsednik SAD pozvao lidere BiH da prekinu etničke prepirke",
+    "spans": [
+      {
+        "text": "SAD",
+        "label": "LOC",
+        "start": 14,
+        "end": 17
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 32,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Potpredsednik SAD Džo Bajden upozorio je u utorak političare u Bosni i Hercegovini da će zemlja zapasti u etnički haos ako ne okončaju zapaljivu nacionalističku retoriku .",
+    "spans": [
+      {
+        "text": "SAD",
+        "label": "LOC",
+        "start": 14,
+        "end": 17
+      },
+      {
+        "text": "Džo Bajden",
+        "label": "PER",
+        "start": 18,
+        "end": 28
+      },
+      {
+        "text": "Bosni i Hercegovini",
+        "label": "LOC",
+        "start": 63,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Potpredsednik SAD Džo Bajden posetio je u utorak Sarajevo .",
+    "spans": [
+      {
+        "text": "SAD",
+        "label": "LOC",
+        "start": 14,
+        "end": 17
+      },
+      {
+        "text": "Džo Bajden",
+        "label": "PER",
+        "start": 18,
+        "end": 28
+      },
+      {
+        "text": "Sarajevo",
+        "label": "LOC",
+        "start": 49,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Bosna i Hercegovina ( BiH ) suočava se sa opasnošću od povratka nasilja ukoliko lideri zemlje ne prestanu da igraju na etničke tenzije , izjavio je u utorak ( 19. maj ) potpredsednik SAD Džo Bajden u Sarajevu , koje je prva destinacija njegove trodnevne turneje na Balkanu .",
+    "spans": [
+      {
+        "text": "Bosna i Hercegovina",
+        "label": "LOC",
+        "start": 0,
+        "end": 19
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "text": "SAD",
+        "label": "LOC",
+        "start": 183,
+        "end": 186
+      },
+      {
+        "text": "Džo Bajden",
+        "label": "PER",
+        "start": 187,
+        "end": 197
+      },
+      {
+        "text": "Sarajevu",
+        "label": "LOC",
+        "start": 200,
+        "end": 208
+      },
+      {
+        "text": "Balkanu",
+        "label": "LOC",
+        "start": 265,
+        "end": 272
+      }
+    ]
+  },
+  {
+    "text": "\" Danas smo zabrinuti u pogledu smera kojim idu vaša zemlja , vaša budućnost i budućnost vaše dece \" , rekao je on u obraćanju etnički mešovitom parlamentu BiH .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 156,
+        "end": 159
+      }
+    ]
+  },
+  {
+    "text": "\" Kada ćete se umoriti od te retorike ? \" , pitao je Bajden .",
+    "spans": [
+      {
+        "text": "Bajden",
+        "label": "PER",
+        "start": 53,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Nacionalistička politika i nesuglasice između političara te zemlje uticali su na napredak u smislu Sporazuma o stabilizaciji i pridruživanju koji je potpisala sa EU u junu 2008.",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 162,
+        "end": 164
+      }
+    ]
+  },
+  {
+    "text": "\" Možete pratiti ovaj put ka Evropi ili krenuti alternativnim putem ...",
+    "spans": [
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 29,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "U najboljem slučaju ostaćete među najsiromašnijim zemljama u Evropi .",
+    "spans": [
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 61,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "U najgorem slučaju zapašćete u etnički haos \" , upozorio je Bajden .",
+    "spans": [
+      {
+        "text": "Bajden",
+        "label": "PER",
+        "start": 60,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "On je takođe pozvao političare BiH da se dogovore oko ustavnih reformi kako bi osigurali bolju budućnost za zemlju kroz evroatlantsku integraciju .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 31,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Dejtonskim sporazumom BiH je uspostavljena kao država dva poluautonomna entiteta -- Republike Srpske ( RS ) , koju vode bosanski Srbi , i Federacije BiH , u kojoj dominiraju Bošnjaci i Hrvati -- povezana slabim centralnim institucijama .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "text": "Republike Srpske",
+        "label": "LOC",
+        "start": 84,
+        "end": 100
+      },
+      {
+        "text": "RS",
+        "label": "LOC",
+        "start": 103,
+        "end": 105
+      },
+      {
+        "text": "Federacije BiH",
+        "label": "LOC",
+        "start": 138,
+        "end": 152
+      }
+    ]
+  },
+  {
+    "text": "Političari bosanski Srbi pretili su da će insistirati na secesiji RS , dok su neki bošnjački lideri pozivali na ukidanje tog entiteta .",
+    "spans": [
+      {
+        "text": "RS",
+        "label": "LOC",
+        "start": 66,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "text": "\" Napraviti pravi izbor znači da lideri ove zemlje moraju da prestanu da slede uske etničke i političke interese \" , rekao je Bajden .",
+    "spans": [
+      {
+        "text": "Bajden",
+        "label": "PER",
+        "start": 126,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "On je takođe izrazio posvećenost Vašingtona da pomogne BiH da napreduje na svom putu pridruživanja .",
+    "spans": [
+      {
+        "text": "Vašingtona",
+        "label": "LOC",
+        "start": 33,
+        "end": 43
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 55,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "\" Vrata su otvorena za zemlje ovog regiona da prvi put u istoriji budu integralni deo slobodne Evrope \" , rekao je Bajden .",
+    "spans": [
+      {
+        "text": "Evrope",
+        "label": "LOC",
+        "start": 95,
+        "end": 101
+      },
+      {
+        "text": "Bajden",
+        "label": "PER",
+        "start": 115,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "text": "\" SAD će vam pomoći da prođete kroz ta vrata \" .",
+    "spans": [
+      {
+        "text": "SAD",
+        "label": "LOC",
+        "start": 2,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Na sastancima koje je imao sa tročlanim predsedništvom BiH i drugim visokim zvaničnicima u Sarajevu sa Bajdenom su bili visoki predstavnik EU za spoljnu politiku i bezbednost Havijer Solana i visoki predstavnik i specijalni predstavnik EU Valentin Inzko .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 55,
+        "end": 58
+      },
+      {
+        "text": "Sarajevu",
+        "label": "LOC",
+        "start": 91,
+        "end": 99
+      },
+      {
+        "text": "Bajdenom",
+        "label": "PER",
+        "start": 103,
+        "end": 111
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 139,
+        "end": 141
+      },
+      {
+        "text": "Havijer Solana",
+        "label": "PER",
+        "start": 175,
+        "end": 189
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 236,
+        "end": 238
+      },
+      {
+        "text": "Valentin Inzko",
+        "label": "PER",
+        "start": 239,
+        "end": 253
+      }
+    ]
+  },
+  {
+    "text": "Najviši američki zvaničnik koji je posetio BiH od kada je to učinio predsednik Bil Klinton 1999. godine , Bajden će otputovati i u Prištinu posle posete Beogradu u sredu .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 43,
+        "end": 46
+      },
+      {
+        "text": "Bil Klinton",
+        "label": "PER",
+        "start": 79,
+        "end": 90
+      },
+      {
+        "text": "Bajden",
+        "label": "PER",
+        "start": 106,
+        "end": 112
+      },
+      {
+        "text": "Prištinu",
+        "label": "LOC",
+        "start": 131,
+        "end": 139
+      },
+      {
+        "text": "Beogradu",
+        "label": "LOC",
+        "start": 153,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Čeku predlaže datum za proglašenje nezavisnosti",
+    "spans": [
+      {
+        "text": "Čeku",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "Nekoliko sati pre nego što je Savet bezbednosti UN trebalo da raspravlja o najnovijem nacrtu rezolucije o Kosovu , kosovski premijer izjavio je da bi Kosovo moglo jednostrano da proglasi nezavisnost 28. novembra .",
+    "spans": [
+      {
+        "text": "Savet bezbednosti UN",
+        "label": "ORG",
+        "start": 30,
+        "end": 50
+      },
+      {
+        "text": "Kosovu",
+        "label": "LOC",
+        "start": 106,
+        "end": 112
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 150,
+        "end": 156
+      }
+    ]
+  },
+  {
+    "text": "\" Mi podržavamo nezavisno Kosovo , \" rekla je američki državni sekretar Kondoliza Rajs .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 26,
+        "end": 32
+      },
+      {
+        "text": "Kondoliza Rajs",
+        "label": "PER",
+        "start": 72,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Kosovo bi trebalo da jednostrano proglasi nezavisnost od Srbije 28. novembra , najavio je premijer Agim Čeku u petak ( 20. jula ) , tvrdeći da napori zapadnih zemalja da pokrajinu stave na put državnosti putem UN nisu uspeli .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 57,
+        "end": 63
+      },
+      {
+        "text": "Agim Čeku",
+        "label": "PER",
+        "start": 99,
+        "end": 108
+      },
+      {
+        "text": "UN",
+        "label": "ORG",
+        "start": 210,
+        "end": 212
+      }
+    ]
+  },
+  {
+    "text": "Čeku je svoj predlog izneo samo nekoliko sati pre nego što je Savet bezbednosti UN trebalo da raspravlja o najnovijem zapadnom predlogu rezolucije o Kosovu , koja predviđa nove pregovore Beograda i Prištine .",
+    "spans": [
+      {
+        "text": "Čeku",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Savet bezbednosti UN",
+        "label": "ORG",
+        "start": 62,
+        "end": 82
+      },
+      {
+        "text": "Kosovu",
+        "label": "LOC",
+        "start": 149,
+        "end": 155
+      },
+      {
+        "text": "Beograda",
+        "label": "LOC",
+        "start": 187,
+        "end": 195
+      },
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 198,
+        "end": 206
+      }
+    ]
+  },
+  {
+    "text": "Međutim , predstavnici šest zemalja koje su predložile nacrt rezolucije - Belgije , Velike Britanije , Francuske , Nemačke , Italije i Sjedinjenih Država - izgledali su nesigurno u četvrtak u pogledu toga da li će taj nacrt staviti na glasanje , imajući u vidu pretnju Rusije da će uložiti veto .",
+    "spans": [
+      {
+        "text": "Belgije",
+        "label": "LOC",
+        "start": 74,
+        "end": 81
+      },
+      {
+        "text": "Velike Britanije",
+        "label": "LOC",
+        "start": 84,
+        "end": 100
+      },
+      {
+        "text": "Francuske",
+        "label": "LOC",
+        "start": 103,
+        "end": 112
+      },
+      {
+        "text": "Nemačke",
+        "label": "LOC",
+        "start": 115,
+        "end": 122
+      },
+      {
+        "text": "Italije",
+        "label": "LOC",
+        "start": 125,
+        "end": 132
+      },
+      {
+        "text": "Sjedinjenih Država",
+        "label": "LOC",
+        "start": 135,
+        "end": 153
+      },
+      {
+        "text": "Rusije",
+        "label": "LOC",
+        "start": 269,
+        "end": 275
+      }
+    ]
+  },
+  {
+    "text": "\" Još uvek postoji neslaganje u pogledu nacrta rezolucije i neke članice smatraju da je verovatnoća njenog usvajanja ravna nuli , \" rekao je britanski ambasador Emir Džons Peri .",
+    "spans": [
+      {
+        "text": "Emir Džons Peri",
+        "label": "PER",
+        "start": 161,
+        "end": 176
+      }
+    ]
+  },
+  {
+    "text": "\" Mogu samo da zaključim da nećemo postići napredak pred Savetom .",
+    "spans": [
+      {
+        "text": "Savetom",
+        "label": "ORG",
+        "start": 57,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "Ipak , mislim da je veoma neodgovorno zamišljati da Savet neće nastaviti da pokušava da reši ovo pitanje , zato što je ono izvor napetosti u regionu , ali i poslednji deo balkanske slagalice . \"",
+    "spans": [
+      {
+        "text": "Savet",
+        "label": "ORG",
+        "start": 52,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Rusija je odbacila sve prethodne verzije koje su sastavile Sjedinjene Države i njihovi evropski saveznici proteklih nekoliko nedelja .",
+    "spans": [
+      {
+        "text": "Rusija",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Sjedinjene Države",
+        "label": "LOC",
+        "start": 59,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Moskva tvrdi da poslednji predlog rezolucije praktično podržava plan specijalnog izaslanika UN Martija Ahtisarija , po kome bi Kosovo dobilo nadziranu nezavisnost .",
+    "spans": [
+      {
+        "text": "Moskva",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "UN",
+        "label": "ORG",
+        "start": 92,
+        "end": 94
+      },
+      {
+        "text": "Martija Ahtisarija",
+        "label": "PER",
+        "start": 95,
+        "end": 113
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 127,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Insistirajući da mora da zadrži određeni suverenitet nad pokrajinom , Srbija izričito odbacuje nezavisnost kao mogućnost .",
+    "spans": [
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 70,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Moskva je zapretila da će blokirati svaku rezoluciju koja je neprihvatljiva za Srbiju .",
+    "spans": [
+      {
+        "text": "Moskva",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Srbiju",
+        "label": "LOC",
+        "start": 79,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "text": "Kako javlja agencija Rojters , novi nacrt uvodi period od 120 dana za pregovore Beograda i Prištine , posle čega bi Savet bezbednosti preuzeo čitav slučaj .",
+    "spans": [
+      {
+        "text": "Rojters",
+        "label": "ORG",
+        "start": 21,
+        "end": 28
+      },
+      {
+        "text": "Beograda",
+        "label": "LOC",
+        "start": 80,
+        "end": 88
+      },
+      {
+        "text": "Prištine",
+        "label": "LOC",
+        "start": 91,
+        "end": 99
+      },
+      {
+        "text": "Savet bezbednosti",
+        "label": "ORG",
+        "start": 116,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Rezolucija bi takođe omogućila da EU odmah postavi međunarodnog civilnog predstavnika da upravlja pokrajinom tokom četvoromesečnog perioda pregovora .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 34,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Kosovo , koje je tehnički još uvek deo Srbije , u stvarnosti je pod protektoratom UN od kraja sukoba 1998-1999. godine .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 39,
+        "end": 45
+      },
+      {
+        "text": "UN",
+        "label": "ORG",
+        "start": 82,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "text": "Visoki predstavnik EU za spoljnu politiku Havijer Solana početkom nedelje je rekao da ako se Rusija i dalje bude protivila odluci , Kontakt grupa sastavljena od Velike Britanije , Nemačke , Francuske , Italije , Rusije i Sjedinjenih Država verovatno će preuzeti inicijativu u pronalaženju kompromisa .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 19,
+        "end": 21
+      },
+      {
+        "text": "Havijer Solana",
+        "label": "PER",
+        "start": 42,
+        "end": 56
+      },
+      {
+        "text": "Rusija",
+        "label": "LOC",
+        "start": 93,
+        "end": 99
+      },
+      {
+        "text": "Kontakt grupa",
+        "label": "ORG",
+        "start": 132,
+        "end": 145
+      },
+      {
+        "text": "Velike Britanije",
+        "label": "LOC",
+        "start": 161,
+        "end": 177
+      },
+      {
+        "text": "Nemačke",
+        "label": "LOC",
+        "start": 180,
+        "end": 187
+      },
+      {
+        "text": "Francuske",
+        "label": "LOC",
+        "start": 190,
+        "end": 199
+      },
+      {
+        "text": "Italije",
+        "label": "LOC",
+        "start": 202,
+        "end": 209
+      },
+      {
+        "text": "Rusije",
+        "label": "LOC",
+        "start": 212,
+        "end": 218
+      },
+      {
+        "text": "Sjedinjenih Država",
+        "label": "LOC",
+        "start": 221,
+        "end": 239
+      }
+    ]
+  },
+  {
+    "text": "\" Siguran sam da će biti postignut dogovor u Kontakt grupi da se otvori proces pregovaranja , \" rekao je Solana u utorak , a prenela agencija DPA .",
+    "spans": [
+      {
+        "text": "Kontakt grupi",
+        "label": "ORG",
+        "start": 45,
+        "end": 58
+      },
+      {
+        "text": "Solana",
+        "label": "PER",
+        "start": 105,
+        "end": 111
+      },
+      {
+        "text": "DPA",
+        "label": "ORG",
+        "start": 142,
+        "end": 145
+      }
+    ]
+  },
+  {
+    "text": "\" Moramo da idemo napred i otvorimo pregovore dveju strana bez rezolucije UN i vidimo kako će se stvar razvijati na kraju tog procesa . \"",
+    "spans": [
+      {
+        "text": "UN",
+        "label": "ORG",
+        "start": 74,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Kontakt grupa bi trebalo da se sastane u sredu .",
+    "spans": [
+      {
+        "text": "Kontakt grupa",
+        "label": "ORG",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "U međuvremenu , američki državni sekretar Kondoliza Rajs , čija je zemlja čvrsto podržala Ahtisarijev plan , bila je u četvrtak uverena da će Kosovo na kraju ipak uspeti da dobije nezavisnost .",
+    "spans": [
+      {
+        "text": "Kondoliza Rajs",
+        "label": "PER",
+        "start": 42,
+        "end": 56
+      },
+      {
+        "text": "Ahtisarijev",
+        "label": "PER",
+        "start": 90,
+        "end": 101
+      },
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 142,
+        "end": 148
+      }
+    ]
+  },
+  {
+    "text": "\" Mi podržavamo nezavisno Kosovo , \" rekla je ona novinarima tokom leta za Lisabon .",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 26,
+        "end": 32
+      },
+      {
+        "text": "Lisabon",
+        "label": "LOC",
+        "start": 75,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Čeku bi trebalo da se sastane sa Rajsovom u ponedeljak u Vašingtonu , u situaciji kada su Albanci sve nezadovoljniji zbog zastoja procesa određivanja konačnog statusa .",
+    "spans": [
+      {
+        "text": "Čeku",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Rajsovom",
+        "label": "PER",
+        "start": 33,
+        "end": 41
+      },
+      {
+        "text": "Vašingtonu",
+        "label": "LOC",
+        "start": 57,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "\" Najvažnije bi bilo da se odredi datum za nezavisnost Kosova , \" rekao je bivši kosovski premijer Bajram Kosumi .",
+    "spans": [
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 55,
+        "end": 61
+      },
+      {
+        "text": "Bajram Kosumi",
+        "label": "PER",
+        "start": 99,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "\" Ako ne bude rezolucije , Kosovo bi ove godine trebalo da proglasi nezavisnost . \"",
+    "spans": [
+      {
+        "text": "Kosovo",
+        "label": "LOC",
+        "start": 27,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Veton Suroi , lider opozicione partije ORA i član kosovskog pregovaračkog tima , ponovio je taj stav u četvrtak , rekavši da bi skupština Kosova trebalo da \" ispuni svoju obavezu prema građanima Kosova i proglasi nezavisnost do Božića . \"",
+    "spans": [
+      {
+        "text": "Veton Suroi",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "ORA",
+        "label": "ORG",
+        "start": 39,
+        "end": 42
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 138,
+        "end": 144
+      },
+      {
+        "text": "Kosova",
+        "label": "LOC",
+        "start": 195,
+        "end": 201
+      }
+    ]
+  },
+  {
+    "text": "Nauka i tehnologija : Turska domaćin konferencije o NLO",
+    "spans": [
+      {
+        "text": "Turska",
+        "label": "LOC",
+        "start": 22,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Četvrti kongres o NLO i Novom dobu biće održan u Istanbulu .",
+    "spans": [
+      {
+        "text": "Istanbulu",
+        "label": "LOC",
+        "start": 49,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Takođe u vestima iz nauke : grčko ostrvo Naksos bilo je domaćin kongresa o vodi za piće , a u Srbiji je otkriven skelet praistorijskog mamuta .",
+    "spans": [
+      {
+        "text": "Naksos",
+        "label": "LOC",
+        "start": 41,
+        "end": 47
+      },
+      {
+        "text": "Srbiji",
+        "label": "LOC",
+        "start": 94,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "text": "Istanbul će biti domaćin Međunarodnog kongresa o NLO i Novom dobu .",
+    "spans": [
+      {
+        "text": "Istanbul",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Istanbul , u Turskoj , biće 13. i 14. juna domaćin četvrtog Međunarodnog kongresa o NLO i Novom dobu , izvestila je u sredu ( 3. jun ) novinska agencija Anadolu .",
+    "spans": [
+      {
+        "text": "Istanbul",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Turskoj",
+        "label": "LOC",
+        "start": 13,
+        "end": 20
+      },
+      {
+        "text": "Anadolu",
+        "label": "ORG",
+        "start": 153,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "text": "Evropska komisija zatražila je podršku Rumunije u pronalaženju vakcine protiv virusa gripa H1N1 , saopštilo je u utorak ( 2. jun ) rumunsko ministarstvo zdravstva .",
+    "spans": [
+      {
+        "text": "Evropska komisija",
+        "label": "ORG",
+        "start": 0,
+        "end": 17
+      },
+      {
+        "text": "Rumunije",
+        "label": "LOC",
+        "start": 39,
+        "end": 47
+      },
+      {
+        "text": "rumunsko ministarstvo zdravstva",
+        "label": "ORG",
+        "start": 131,
+        "end": 162
+      }
+    ]
+  },
+  {
+    "text": "U pismu , komesarka EU za zdravstvo Andrula Vasiliju zatražila je pomoć zemlje u ubrzavanju nastojanja EU da se pronađe delotvorna vakcina .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 20,
+        "end": 22
+      },
+      {
+        "text": "Andrula Vasiliju",
+        "label": "PER",
+        "start": 36,
+        "end": 52
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 103,
+        "end": 105
+      }
+    ]
+  },
+  {
+    "text": "Rumunski Institut Kantakuzino zadužen je da potvrđuje slučajeve virusa H1N1 za pacijente iz devet država u regionu .",
+    "spans": [
+      {
+        "text": "Kantakuzino",
+        "label": "ORG",
+        "start": 18,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Grčko ostrvo Naksos bilo je od 1. juna do subote ( 6. jun ) domaćin naučnog kongresa o vodi za piće , izvestio je SKAI radio .",
+    "spans": [
+      {
+        "text": "Naksos",
+        "label": "LOC",
+        "start": 13,
+        "end": 19
+      },
+      {
+        "text": "SKAI radio",
+        "label": "ORG",
+        "start": 114,
+        "end": 124
+      }
+    ]
+  },
+  {
+    "text": "Naučnici iz celog sveta prisustvovali su forumu , najvećem skupu za tu oblast koji je ikada održan u Grčkoj .",
+    "spans": [
+      {
+        "text": "Grčkoj",
+        "label": "LOC",
+        "start": 101,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "Među temama o kojima se razgovaralo bili su zagađenje vode i zakonodavstvo EU vezano za pijaću vodu .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 75,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Skelet praistorijskog mamuta pronađen je u blizini jedne arheološke lokacije u Srbiji .",
+    "spans": [
+      {
+        "text": "Srbiji",
+        "label": "LOC",
+        "start": 79,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "text": "Prema rečima eksperata , to je jedan od najstarijih mamuta u Evropi .",
+    "spans": [
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 61,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Hrvatski grad Split bio je 1. juna domaćin Međunarodnog kongresa forenzičkih nauka .",
+    "spans": [
+      {
+        "text": "Split",
+        "label": "LOC",
+        "start": 14,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Učenica 11. razreda Američkog univerziteta u Sofiji osvojila je prvu nagradu na bugarskom Nacionalnom takmičenju za mlade naučne talente .",
+    "spans": [
+      {
+        "text": "Američkog univerziteta u Sofiji",
+        "label": "ORG",
+        "start": 20,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Vasilina Tatarlijeva impresionirala je sudije svojim projektom izrade temperaturne mape putem digitalnih fotografija .",
+    "spans": [
+      {
+        "text": "Vasilina Tatarlijeva",
+        "label": "PER",
+        "start": 0,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Ona će sada predstavljati Bugarsku na Evropskom takmičenju za mlade talente koje se održava u Parizu .",
+    "spans": [
+      {
+        "text": "Bugarsku",
+        "label": "LOC",
+        "start": 26,
+        "end": 34
+      },
+      {
+        "text": "Parizu",
+        "label": "LOC",
+        "start": 94,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "text": "Bosna i Hercegovina upozorena da je potrebno završiti ključne reforme",
+    "spans": [
+      {
+        "text": "Bosna i Hercegovina",
+        "label": "LOC",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Jačanje centralnih institucija i reforme u sektoru odbrane su od presudnog značaja za težnje Bosne i Hercegovine u pogledu pridruživanja transatlantskim strukturama , upozorili su najviši međunarodni zvaničnici .",
+    "spans": [
+      {
+        "text": "Bosne i Hercegovine",
+        "label": "LOC",
+        "start": 93,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "Bosna i Hercegovina ( BiH ) mora da završi sprovođenje ključnih reformi , uključujući i sektor odbrane , ako želi da krene putem integracije u NATO i EU , poručili su međunarodni zvaničnici .",
+    "spans": [
+      {
+        "text": "Bosna i Hercegovina",
+        "label": "LOC",
+        "start": 0,
+        "end": 19
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "text": "NATO",
+        "label": "ORG",
+        "start": 143,
+        "end": 147
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 150,
+        "end": 152
+      }
+    ]
+  },
+  {
+    "text": "\" Sledećih nekoliko dana , čak i sati , biće od presudnog značaja za budućnost BiH \" , ukazuje se u poruci Kancelarije visokog predstavnika objavljenoj u sredu ( 24. septembra ) i dodaje da najviši međunarodni predstavnik u BiH , Pedi Ešdaun , \" snažno veruje da članstvo u PfP , a zatim u NATO-u , nudi najbolju garanciju BiH za dugoročan mir i stabilnost \" .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 79,
+        "end": 82
+      },
+      {
+        "text": "Kancelarije visokog predstavnika",
+        "label": "ORG",
+        "start": 107,
+        "end": 139
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 224,
+        "end": 227
+      },
+      {
+        "text": "Pedi Ešdaun",
+        "label": "PER",
+        "start": 230,
+        "end": 241
+      },
+      {
+        "text": "PfP",
+        "label": "ORG",
+        "start": 274,
+        "end": 277
+      },
+      {
+        "text": "NATO-u",
+        "label": "ORG",
+        "start": 290,
+        "end": 296
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 323,
+        "end": 326
+      }
+    ]
+  },
+  {
+    "text": "\" Oči Evrope i sveta sada su uprte u BiH , čiji bi lideri trebalo da odluče da li će iskoristiti priliku da načine istorijski korak ka NATO-u i evropskim bezbednosnim strukturama \" , navodi se u poruci .",
+    "spans": [
+      {
+        "text": "Evrope",
+        "label": "LOC",
+        "start": 6,
+        "end": 12
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 37,
+        "end": 40
+      },
+      {
+        "text": "NATO-u",
+        "label": "ORG",
+        "start": 135,
+        "end": 141
+      }
+    ]
+  },
+  {
+    "text": "U EU je u toku izrada studije izvodljivosti kojom se utvrđuje spremnost BiH za otvaranje pregovora o sporazumu o stabilizaciji i pridruživanju sa Unijom , koji predstavlja prvi korak ka mogućem članstvu .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 2,
+        "end": 4
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 72,
+        "end": 75
+      },
+      {
+        "text": "Unijom",
+        "label": "ORG",
+        "start": 146,
+        "end": 152
+      }
+    ]
+  },
+  {
+    "text": "Planirano je da se ambasadori EU u sredu sastanu sa članovima tročlanog predsedništva BiH i apeluju na njih da nastave sa sprovođenjem reformi u sektoru odbrane .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 30,
+        "end": 32
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 86,
+        "end": 89
+      }
+    ]
+  },
+  {
+    "text": "Visoki predstavnik EU za spoljnu politiku i bezbednost Havijer Solana izjavio je da je jačanje centralnih institucija od presudnog značaja kada su u pitanju izgledi BiH za pridruživanje Uniji .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 19,
+        "end": 21
+      },
+      {
+        "text": "Havijer Solana",
+        "label": "PER",
+        "start": 55,
+        "end": 69
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 165,
+        "end": 168
+      },
+      {
+        "text": "Uniji",
+        "label": "ORG",
+        "start": 186,
+        "end": 191
+      }
+    ]
+  },
+  {
+    "text": "\" Evropa će pažljivo posmatrati BiH ove jeseni \" , rekao je Solana u intervjuu sarajevskom dnevniku Dnevni avaz , prenosi agencija Frans pres .",
+    "spans": [
+      {
+        "text": "Evropa",
+        "label": "LOC",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 32,
+        "end": 35
+      },
+      {
+        "text": "Solana",
+        "label": "PER",
+        "start": 60,
+        "end": 66
+      },
+      {
+        "text": "Dnevni avaz",
+        "label": "ORG",
+        "start": 100,
+        "end": 111
+      },
+      {
+        "text": "Frans pres",
+        "label": "ORG",
+        "start": 131,
+        "end": 141
+      }
+    ]
+  },
+  {
+    "text": "\" Ako izaberete reforme , vrata EU biće otvorena .",
+    "spans": [
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 32,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Ako odbacite reforme , suočićete se sa opasnošću da BiH bude izostavljena iz evropske porodice , u stagnaciji i siromaštvu \" , istakao je Solana .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 52,
+        "end": 55
+      },
+      {
+        "text": "Solana",
+        "label": "PER",
+        "start": 138,
+        "end": 144
+      }
+    ]
+  },
+  {
+    "text": "Izražavajući veliku zabrinutost oko mogućeg neuspeha razgovora političkih snaga u BiH o reformama u sektoru odbrane , Solana je upozorio \" da će u tom slučaju reputacija BiH biti opasno i ozbiljno ugrožena \" .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "text": "Solana",
+        "label": "PER",
+        "start": 118,
+        "end": 124
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 170,
+        "end": 173
+      }
+    ]
+  },
+  {
+    "text": "Cilj reformi je da se vojske dva entiteta u BiH stave pod državnu kontrolu , uspostavljanjem centralnog odbrambenog i komandnog štaba .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 44,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Parlament BiH dobio bi isključivo ovlašćenje da uvodi vanredno i ratno stanje .",
+    "spans": [
+      {
+        "text": "Parlament BiH",
+        "label": "ORG",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Prvi put od okončanja rata u BiH 1992 - 1995 , vojnici dve vojske u zemlji nosili bi iste uniforme i polagali istu zakletvu pod jednim grbom , zastavom i himnom .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 29,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Ranije ove nedelje Ešdaun i komandant SFOR-a , general-pukovnik Vilijam Vord , ukazali su da je reforma sektora odbrane ključni uslov za pristupanje BiH programu NATO-a Partnerstvo za mir ove godine , što predstavlja prvi korak ka pridruživanju Alijansi .",
+    "spans": [
+      {
+        "text": "Ešdaun",
+        "label": "PER",
+        "start": 19,
+        "end": 25
+      },
+      {
+        "text": "SFOR-a",
+        "label": "ORG",
+        "start": 38,
+        "end": 44
+      },
+      {
+        "text": "Vilijam Vord",
+        "label": "PER",
+        "start": 64,
+        "end": 76
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 149,
+        "end": 152
+      },
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 162,
+        "end": 168
+      },
+      {
+        "text": "Alijansi",
+        "label": "ORG",
+        "start": 245,
+        "end": 253
+      }
+    ]
+  },
+  {
+    "text": "Prema izveštaju Komisije za reformu odbrane u BiH to bi se moglo dogoditi 2007. godine .",
+    "spans": [
+      {
+        "text": "Komisije za reformu odbrane u BiH",
+        "label": "ORG",
+        "start": 16,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Vladajuća muslimanska Stranka demokratske akcije protivi se reformama , tvrdeći da se njima ne planira ujedinjenje dve entitetske vojske .",
+    "spans": [
+      {
+        "text": "Stranka demokratske akcije",
+        "label": "ORG",
+        "start": 22,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "U međuvremenu , delegacija NATO-a trebalo bi u četvrtak da doputuje u BiH kako bi se informisala o procesu reforme odbrane .",
+    "spans": [
+      {
+        "text": "NATO-a",
+        "label": "ORG",
+        "start": 27,
+        "end": 33
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 70,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "Savet za implementaciju mira takođe bi trebalo da održi dvodnevni sastanak na kojem će -- prema Ešdaunovim rečima -- \" proceniti da li su politički lideri u BiH spremni da pokažu političku zrelost i državničku mudrost i podrže reforme neophodne kako bi se ova zemlja povela u pravcu transatlantskih struktura \" .",
+    "spans": [
+      {
+        "text": "Savet za implementaciju mira",
+        "label": "ORG",
+        "start": 0,
+        "end": 28
+      },
+      {
+        "text": "Ešdaunovim",
+        "label": "PER",
+        "start": 96,
+        "end": 106
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 157,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "text": "S obzirom na porast troškova , stagnaciju plata i usporavanje stranih investicija , ekonomska situacija u Crnoj Gori se konstantno pogoršava .",
+    "spans": [
+      {
+        "text": "Crnoj Gori",
+        "label": "LOC",
+        "start": 106,
+        "end": 116
+      }
+    ]
+  },
+  {
+    "text": "Gradilište u Budvi stoji nedovršeno .",
+    "spans": [
+      {
+        "text": "Budvi",
+        "label": "LOC",
+        "start": 13,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Prema crnogorskom ministarstvu finansija , BDP zemlje opao je za 5,3 odsto u 2009. godini , ali je prema proceni MMF-a pad iznosio 7 odsto .",
+    "spans": [
+      {
+        "text": "MMF-a",
+        "label": "ORG",
+        "start": 113,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "U međuvremenu , troškovi života su porasli : kirija za mali stan u Podgorici iznosi oko 200 evra mesečno -- što mnogima otežava da spoje kraj sa krajem .",
+    "spans": [
+      {
+        "text": "Podgorici",
+        "label": "LOC",
+        "start": 67,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Specijalan tretman u bliskoj budućnosti treba da [ uključuje ] turistički sektor , sa pomorskim biznisom radi multiplikativnih efekata na duge staze \" , kaže predsednik Fonda za investicije i razvoj Dragan Lajović .",
+    "spans": [
+      {
+        "text": "Fonda za investicije i razvoj",
+        "label": "ORG",
+        "start": 169,
+        "end": 198
+      },
+      {
+        "text": "Dragan Lajović",
+        "label": "PER",
+        "start": 199,
+        "end": 213
+      }
+    ]
+  },
+  {
+    "text": "Fond je osnovala vlada prošle godine kako bi podstakla ekonomski razvoj .",
+    "spans": [
+      {
+        "text": "Fond",
+        "label": "ORG",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "Od 2006. do 2008. postojala je ogromna potražnja među ljudima u Rusiji i Velikoj Britaniji za imovinom na crnogorskoj obali -- ali to više nije slučaj .",
+    "spans": [
+      {
+        "text": "Rusiji",
+        "label": "LOC",
+        "start": 64,
+        "end": 70
+      },
+      {
+        "text": "Velikoj Britaniji",
+        "label": "LOC",
+        "start": 73,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "\" Izlaz iz krize uključuje … paket , koji bi trebalo da bude zasnovan na otvaranju ekonomije za strane investicije , čime bi se stvorili pozitivni multiplikativni efekti \" , rekao je Lajović , uključujući stvaranje radnih mesta .",
+    "spans": [
+      {
+        "text": "Lajović",
+        "label": "PER",
+        "start": 183,
+        "end": 190
+      }
+    ]
+  },
+  {
+    "text": "On upozorava da strani kapital zahteva plodno tlo , a Crna Gora nije jedina odgovarajuća destinacija .",
+    "spans": [
+      {
+        "text": "Crna Gora",
+        "label": "LOC",
+        "start": 54,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "\" Trenutno postoji samo 59 kompanija kojima bi crnogorske banke dale kreditnu podršku , što je devastirajuća činjenica \" , rekla je glavni ekonomista Centralne banke Zorica Kalezić za SETimes .",
+    "spans": [
+      {
+        "text": "Centralne banke",
+        "label": "ORG",
+        "start": 150,
+        "end": 165
+      },
+      {
+        "text": "Zorica Kalezić",
+        "label": "PER",
+        "start": 166,
+        "end": 180
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 184,
+        "end": 191
+      }
+    ]
+  },
+  {
+    "text": "Crnogorski Centralni registar pokazao je da je u zemlji krajem aprila postojalo 51.505 kompanija .",
+    "spans": [
+      {
+        "text": "Crnogorski Centralni registar",
+        "label": "ORG",
+        "start": 0,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "\" Neto profit ekonomije , sudeći po trenutnim podacima , bio je samo 12 miliona evra na kraju 2009. godine -- a na kraju 2007. iznosio je 270 miliona evra \" , rekla je Kalezić .",
+    "spans": [
+      {
+        "text": "Kalezić",
+        "label": "PER",
+        "start": 168,
+        "end": 175
+      }
+    ]
+  },
+  {
+    "text": "Ukazujući da je Crna Gora prošle godine nagomilala trgovinski deficit od 1,36 milijardi evra , direktor kompanije Aktiva Mladen Bojanić pretpostavlja da se ekonomska politika zemlje oslanjala više na improvizaciju nego na dobro osmišljenu strategiju .",
+    "spans": [
+      {
+        "text": "Crna Gora",
+        "label": "LOC",
+        "start": 16,
+        "end": 25
+      },
+      {
+        "text": "Aktiva",
+        "label": "ORG",
+        "start": 114,
+        "end": 120
+      },
+      {
+        "text": "Mladen Bojanić",
+        "label": "PER",
+        "start": 121,
+        "end": 135
+      }
+    ]
+  },
+  {
+    "text": "Vlada mora jasno da definiše strategiju izlaska iz krize i konačno odluči da li će njen prioritet biti socijalna politika , očuvanje vlade ili ekonomski razvoj \" , rekao je Bojanić za SETimes .",
+    "spans": [
+      {
+        "text": "Bojanić",
+        "label": "PER",
+        "start": 173,
+        "end": 180
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 184,
+        "end": 191
+      }
+    ]
+  },
+  {
+    "text": "Težnja Bugarske za smanjenjem energetske zavisnosti zabrinjava eko-aktiviste",
+    "spans": [
+      {
+        "text": "Bugarske",
+        "label": "LOC",
+        "start": 7,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Novi Pazar je navodno najplodnija poljoprivredna oblast u Bugarskoj .",
+    "spans": [
+      {
+        "text": "Novi Pazar",
+        "label": "LOC",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Bugarskoj",
+        "label": "LOC",
+        "start": 58,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Oblast predviđena za istraživanja je na severoistoku , u Novom Pazaru , i možda sadrži obilje naslaga uljanog škriljca predviđenog za eksploataciju po najavljenom potpisivanju ugovora sa američkim energetskim gigantom , kompanijom Ševron .",
+    "spans": [
+      {
+        "text": "Novom Pazaru",
+        "label": "LOC",
+        "start": 57,
+        "end": 69
+      },
+      {
+        "text": "Ševron",
+        "label": "ORG",
+        "start": 231,
+        "end": 237
+      }
+    ]
+  },
+  {
+    "text": "Prema tom ugovoru , Bugarska bi dobila 30 miliona evra za prava na istraživanja i eksploataciju u toj oblasti .",
+    "spans": [
+      {
+        "text": "Bugarska",
+        "label": "LOC",
+        "start": 20,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Oni koji to podržavaju kažu da bi ova mera smanjila cene energenata i smanjila zavisnost od Rusije .",
+    "spans": [
+      {
+        "text": "Rusije",
+        "label": "LOC",
+        "start": 92,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Region predviđen za bušenje je poznat kao žitnica Bugarske i verovatno je najplodnija oblast u zemlji .",
+    "spans": [
+      {
+        "text": "Bugarske",
+        "label": "LOC",
+        "start": 50,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "\" Ova zemlja će praktično postati neupotrebljiva \" , kaže Petko Kovačev , aktivista partije Zelenih , za SETimes .",
+    "spans": [
+      {
+        "text": "Petko Kovačev",
+        "label": "PER",
+        "start": 58,
+        "end": 71
+      },
+      {
+        "text": "Zelenih",
+        "label": "ORG",
+        "start": 92,
+        "end": 99
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 105,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "\" Problem je u tome što oni [ vlast ] pokušavaju da reše jedan problem [ energetska zavisnost Bugarske ] stvaranjem još većeg problema zagađenja životne sredine \" , kaže on .",
+    "spans": [
+      {
+        "text": "Bugarske",
+        "label": "LOC",
+        "start": 94,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "Glavna opoziciona Bugarska socijalistička partija ( BSP ) takođe je glasno izrazila svoje neslaganje sa projektom istraživanja i proizvodnje gasa iz uljanog škriljca .",
+    "spans": [
+      {
+        "text": "Bugarska socijalistička partija",
+        "label": "ORG",
+        "start": 18,
+        "end": 49
+      },
+      {
+        "text": "BSP",
+        "label": "ORG",
+        "start": 52,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "BSP insistira na proceni uticaja na životnu sredinu pre početka samih istraživanja , umesto posle toga , a pre početka proizvodnje , što je plan vlade .",
+    "spans": [
+      {
+        "text": "BSP",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "\" Istraživanje gasa iz uljanog škriljca , nasuprot istraživanju i eksploataciji prirodnog gasa , predstavlja jedinstveni tehnološki pokušaj proizvodnje , što znači da se bušenje u cilju proizvodnje gasa iz uljanog škriljca nimalo ne razlikuje od bušenja u fazi istraživanja \" , kaže poslanik BSP i član parlamentarnog odbora za zaštitu životne sredine Georgi Božinov za SETimes .",
+    "spans": [
+      {
+        "text": "BSP",
+        "label": "ORG",
+        "start": 292,
+        "end": 295
+      },
+      {
+        "text": "parlamentarnog odbora za zaštitu životne sredine",
+        "label": "ORG",
+        "start": 303,
+        "end": 351
+      },
+      {
+        "text": "Georgi Božinov",
+        "label": "PER",
+        "start": 352,
+        "end": 366
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 370,
+        "end": 377
+      }
+    ]
+  },
+  {
+    "text": "\" Predlažemo održavanje ozbiljne naučne diskusije o metodi , konkretnim uslovima u Bugarskoj , utvrđivanju preventivnih mera kao i načinu za smanjenje rizika .",
+    "spans": [
+      {
+        "text": "Bugarskoj",
+        "label": "LOC",
+        "start": 83,
+        "end": 92
+      }
+    ]
+  },
+  {
+    "text": "A ako je sve u redu , mogu da otpočnu projekat \" , kaže Božinov .",
+    "spans": [
+      {
+        "text": "Božinov",
+        "label": "PER",
+        "start": 56,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Kao komentar u vezi sa svojim planovima u Bugarskoj , Ševron je za SETimes u imejlu izjavio da zvaničnici \" sa zadovoljstvom očekuju saradnju sa bugarskim vlastima i deljenje svojih iskustava u istraživanju i zaštiti životne sredine , a u cilju ostvarivanja ove poslovne prilike \" .",
+    "spans": [
+      {
+        "text": "Bugarskoj",
+        "label": "LOC",
+        "start": 42,
+        "end": 51
+      },
+      {
+        "text": "Ševron",
+        "label": "ORG",
+        "start": 54,
+        "end": 60
+      },
+      {
+        "text": "SETimes",
+        "label": "ORG",
+        "start": 67,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "text": "Kompanija je osvojila licence za istraživanje nekonvencionalnih izvora gasa u Poljskoj u decembru 2009. i planira početak aktivnosti istraživanja u poslednjem kvartalu ove godine .",
+    "spans": [
+      {
+        "text": "Poljskoj",
+        "label": "LOC",
+        "start": 78,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Ševron je 2010. i 2011. stekao više od 4 miliona jutara zemljišta u Poljskoj , Rumuniji i Bugarskoj za istraživanje i procenu nalazišta uljanog škriljca .",
+    "spans": [
+      {
+        "text": "Ševron",
+        "label": "ORG",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Poljskoj",
+        "label": "LOC",
+        "start": 68,
+        "end": 76
+      },
+      {
+        "text": "Rumuniji",
+        "label": "LOC",
+        "start": 79,
+        "end": 87
+      },
+      {
+        "text": "Bugarskoj",
+        "label": "LOC",
+        "start": 90,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "text": "Pretpostavlja se da se u Poljskoj nalaze neka od najvećih nalazišta uljanog škriljca u Evropi .",
+    "spans": [
+      {
+        "text": "Poljskoj",
+        "label": "LOC",
+        "start": 25,
+        "end": 33
+      },
+      {
+        "text": "Evropi",
+        "label": "LOC",
+        "start": 87,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "text": "Ukupne rezerve gasa iz škriljca na kontinentu , bez Rusije , procenjuju se na 18 biliona kubnih metara .",
+    "spans": [
+      {
+        "text": "Rusije",
+        "label": "LOC",
+        "start": 52,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Osim u Poljskoj , razne kompanije vrše istraživanja u Austriji , Mađarskoj , Irskoj , Švedskoj i Velikoj Britaniji .",
+    "spans": [
+      {
+        "text": "Poljskoj",
+        "label": "LOC",
+        "start": 7,
+        "end": 15
+      },
+      {
+        "text": "Austriji",
+        "label": "LOC",
+        "start": 54,
+        "end": 62
+      },
+      {
+        "text": "Mađarskoj",
+        "label": "LOC",
+        "start": 65,
+        "end": 74
+      },
+      {
+        "text": "Irskoj",
+        "label": "LOC",
+        "start": 77,
+        "end": 83
+      },
+      {
+        "text": "Švedskoj",
+        "label": "LOC",
+        "start": 86,
+        "end": 94
+      },
+      {
+        "text": "Velikoj Britaniji",
+        "label": "LOC",
+        "start": 97,
+        "end": 114
+      }
+    ]
+  },
+  {
+    "text": "Francuska , za koju se pretpostavlja da leži na ogromnim rezervama gasa iz uljanog škriljca , zabranila je bušenja usled potencijalnih ekoloških problema .",
+    "spans": [
+      {
+        "text": "Francuska",
+        "label": "LOC",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Eksplozija potresla američku ambasadu u Atini",
+    "spans": [
+      {
+        "text": "Atini",
+        "label": "LOC",
+        "start": 40,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "Smatra se da iza napada na američku ambasadu u Atini , koji se dogodio u petak rano ujutru , stoje militantni levičari .",
+    "spans": [
+      {
+        "text": "Atini",
+        "label": "LOC",
+        "start": 47,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Pripadnici odreda za uklanjanje bombi prikupljaju dokaze na gradilištu preko puta američke ambasade u Atini .",
+    "spans": [
+      {
+        "text": "Atini",
+        "label": "LOC",
+        "start": 102,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "Snažna eksplozija potresla je Ambasadu Sjedinjenih Država u Atini nekoliko sati pre početka radnog dana u petak ( 12. januara ) .",
+    "spans": [
+      {
+        "text": "Ambasadu Sjedinjenih Država",
+        "label": "ORG",
+        "start": 30,
+        "end": 57
+      },
+      {
+        "text": "Atini",
+        "label": "LOC",
+        "start": 60,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Napad , opisan kao najozbiljniji na misiju Sjedinjenih Država u poslednjih skoro 11 godina , pripisuje se levičarskoj grupi koja sebe naziva Revolucionarna borba .",
+    "spans": [
+      {
+        "text": "Sjedinjenih Država",
+        "label": "LOC",
+        "start": 43,
+        "end": 61
+      },
+      {
+        "text": "Revolucionarna borba",
+        "label": "ORG",
+        "start": 141,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Veruje se da Revolucionarna borba stoji i iza niza drugih napada , uključujući pokušaj ubistva grčkog ministra kulture Jorgosa Vulgarakisa prošlog maja i bombu u ministarstvu ekonomije krajem 2005. godine .",
+    "spans": [
+      {
+        "text": "Revolucionarna borba",
+        "label": "ORG",
+        "start": 13,
+        "end": 33
+      },
+      {
+        "text": "Jorgosa Vulgarakisa",
+        "label": "PER",
+        "start": 119,
+        "end": 138
+      }
+    ]
+  },
+  {
+    "text": "Ova grupa postala je najozbiljnija unutrašnja pretnja za Grčku posle sada raspuštene terorističke organizacije 17. novembar , koja je ubila veliki broj ljudi tokom dve decenije svog delovanja , pre nego što je razotkrivena i rasturena .",
+    "spans": [
+      {
+        "text": "Grčku",
+        "label": "LOC",
+        "start": 57,
+        "end": 62
+      },
+      {
+        "text": "17. novembar",
+        "label": "ORG",
+        "start": 111,
+        "end": 123
+      }
+    ]
+  },
+  {
+    "text": "Među žrtvama 17. novembra nalazi se nekoliko oficira SAD , druge strane diplomate i suprug grčkog ministra inostranih poslova Dore Bakojanis .",
+    "spans": [
+      {
+        "text": "17. novembra",
+        "label": "ORG",
+        "start": 13,
+        "end": 25
+      },
+      {
+        "text": "SAD",
+        "label": "LOC",
+        "start": 53,
+        "end": 56
+      },
+      {
+        "text": "Dore Bakojanis",
+        "label": "PER",
+        "start": 126,
+        "end": 140
+      }
+    ]
+  },
+  {
+    "text": "Potvrđujući da niko nije povređen u \" vrlo ozbiljnom napadu \" u petak ujutru , američki ambasador u Grčkoj Čarls Ris rekao je da ne može da postoji \" opravdanje za takav bezuman čin nasilja \" .",
+    "spans": [
+      {
+        "text": "Grčkoj",
+        "label": "LOC",
+        "start": 100,
+        "end": 106
+      },
+      {
+        "text": "Čarls Ris",
+        "label": "PER",
+        "start": 107,
+        "end": 116
+      }
+    ]
+  },
+  {
+    "text": "Kompleks američke ambasade , koji se proteže duž celog jednog bloka u centru Atine , i okružen je čeličnom ogradom , jedan je od najčuvanijih objekata u prestonici .",
+    "spans": [
+      {
+        "text": "Atine",
+        "label": "LOC",
+        "start": 77,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "AP je izvestio da su vlasti , u potrazi za dokazima , pretraživale obližnju bolnicu i stambene zgrade .",
+    "spans": [
+      {
+        "text": "AP",
+        "label": "ORG",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "Bakojanis je u petak ujutru posetila ambasadu i osudila napad .",
+    "spans": [
+      {
+        "text": "Bakojanis",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "\" Incidenti kao što je ovaj puno su koštali [ Grčku ] u političkom i ekonomskom pogledu i u smislu prestiža \" , ukazala je ministar inostranih poslova .",
+    "spans": [
+      {
+        "text": "Grčku",
+        "label": "LOC",
+        "start": 46,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Predstavljena prva zajednička jedinica Oružanih snaga BiH",
+    "spans": [
+      {
+        "text": "Oružanih snaga BiH",
+        "label": "ORG",
+        "start": 39,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Novu počasnu jedinicu Oružanih snaga Bosne i Hercegovine čine vodovi tri konstitutivne etničke zajednice u BiH .",
+    "spans": [
+      {
+        "text": "Oružanih snaga Bosne i Hercegovine",
+        "label": "ORG",
+        "start": 22,
+        "end": 56
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 107,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Prema rečima državnog ministra odbrane Nikole Radovanovića , očekuje se da će Počasna jedinica sledeće godine biti korišćena 60 puta .",
+    "spans": [
+      {
+        "text": "Nikole Radovanovića",
+        "label": "PER",
+        "start": 39,
+        "end": 58
+      },
+      {
+        "text": "Počasna jedinica",
+        "label": "ORG",
+        "start": 78,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "U prisustvu visokih zvaničnika , lokalnih i SFOR-ovih generala i generala iz EU , Ministarstvo odbrane Bosne i Hercegovine ( BiH ) predstavilo je u petak ( 26. novembra ) u Sarajevu prvu zajedničku jedinicu oružanih snaga BiH .",
+    "spans": [
+      {
+        "text": "SFOR-ovih",
+        "label": "ORG",
+        "start": 44,
+        "end": 53
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 77,
+        "end": 79
+      },
+      {
+        "text": "Ministarstvo odbrane Bosne i Hercegovine",
+        "label": "ORG",
+        "start": 82,
+        "end": 122
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 125,
+        "end": 128
+      },
+      {
+        "text": "Sarajevu",
+        "label": "LOC",
+        "start": 173,
+        "end": 181
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 222,
+        "end": 225
+      }
+    ]
+  },
+  {
+    "text": "Počasna jedinica Oružanih snaga BiH je formacija veličine čete koju čine tri voda , barjaktari i vojni orkestar iz sve tri konstitutivne etničke grupe BiH .",
+    "spans": [
+      {
+        "text": "Oružanih snaga BiH",
+        "label": "ORG",
+        "start": 17,
+        "end": 35
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 151,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "Prema rečima državnog ministra za odbranu BiH Nikole Radovanovića , očekuje se da će Počasna jedinica biti korišćena 60 puta sledeće godine .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 42,
+        "end": 45
+      },
+      {
+        "text": "Nikole Radovanovića",
+        "label": "PER",
+        "start": 46,
+        "end": 65
+      },
+      {
+        "text": "Počasna jedinica",
+        "label": "ORG",
+        "start": 85,
+        "end": 101
+      }
+    ]
+  },
+  {
+    "text": "U sastavu Oružanih snaga BiH nalaze se Vojska Republike Srpske ( VRS ) i Vojska Federacije ( VF ) sa svoje dve komponente -- bosansko-muslimanskom ( bošnjačkom ) i hrvatskom .",
+    "spans": [
+      {
+        "text": "Oružanih snaga BiH",
+        "label": "ORG",
+        "start": 10,
+        "end": 28
+      },
+      {
+        "text": "Vojska Republike Srpske",
+        "label": "ORG",
+        "start": 39,
+        "end": 62
+      },
+      {
+        "text": "VRS",
+        "label": "ORG",
+        "start": 65,
+        "end": 68
+      },
+      {
+        "text": "Vojska Federacije",
+        "label": "ORG",
+        "start": 73,
+        "end": 90
+      },
+      {
+        "text": "VF",
+        "label": "ORG",
+        "start": 93,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "U okviru najnovije reforme odbrane , koja se sprovodi ove godine , entitetske vojske spojene su jednim državnim lancem komande pod zajedničkim Ministarstvom odbrane BiH i tročlanim predsedništvom BiH .",
+    "spans": [
+      {
+        "text": "Ministarstvom odbrane BiH",
+        "label": "ORG",
+        "start": 143,
+        "end": 168
+      },
+      {
+        "text": "predsedništvom BiH",
+        "label": "ORG",
+        "start": 181,
+        "end": 199
+      }
+    ]
+  },
+  {
+    "text": "Počasnu gardu čini sedam oficira , deset podoficira i 54 vojnika , koji su prekomandovani iz svojih jedinica u VF i VRS .",
+    "spans": [
+      {
+        "text": "VF",
+        "label": "ORG",
+        "start": 111,
+        "end": 113
+      },
+      {
+        "text": "VRS",
+        "label": "ORG",
+        "start": 116,
+        "end": 119
+      }
+    ]
+  },
+  {
+    "text": "Tokom predstavljanja jedinice na međunarodnom aerodromu u Sarajevu , gardisti su nosili različite kamuflažne uniforme svojih entitetskih armija , ali sa grbom BiH na desnom ramenu .",
+    "spans": [
+      {
+        "text": "Sarajevu",
+        "label": "LOC",
+        "start": 58,
+        "end": 66
+      },
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 159,
+        "end": 162
+      }
+    ]
+  },
+  {
+    "text": "Zvanično predstavljanje na aerodromu počelo je kada je brigadni general VRS Mirko Tepšić , šef radne grupe koja je formirala jedinicu , zatražio od bošnjačkog člana predsedništva BiH , Sulejmana Tihića , da da zeleno svetlo za početak ceremonije .",
+    "spans": [
+      {
+        "text": "VRS",
+        "label": "ORG",
+        "start": 72,
+        "end": 75
+      },
+      {
+        "text": "Mirko Tepšić",
+        "label": "PER",
+        "start": 76,
+        "end": 88
+      },
+      {
+        "text": "predsedništva BiH",
+        "label": "ORG",
+        "start": 165,
+        "end": 182
+      },
+      {
+        "text": "Sulejmana Tihića",
+        "label": "PER",
+        "start": 185,
+        "end": 201
+      }
+    ]
+  },
+  {
+    "text": "Kada mu je Tihić naložio da otvori svečanost , Tepšić je izdao naređenje majoru VRS Miloradu Krajšumoviću , komandantu Počasne jedinice .",
+    "spans": [
+      {
+        "text": "Tihić",
+        "label": "PER",
+        "start": 11,
+        "end": 16
+      },
+      {
+        "text": "Tepšić",
+        "label": "PER",
+        "start": 47,
+        "end": 53
+      },
+      {
+        "text": "VRS",
+        "label": "ORG",
+        "start": 80,
+        "end": 83
+      },
+      {
+        "text": "Miloradu Krajšumoviću",
+        "label": "PER",
+        "start": 84,
+        "end": 105
+      },
+      {
+        "text": "Počasne jedinice",
+        "label": "ORG",
+        "start": 119,
+        "end": 135
+      }
+    ]
+  },
+  {
+    "text": "To je prvi put od sukoba u BiH da je oficir VRS javno ispunio direktno naređenje bošnjačkog zvaničnika .",
+    "spans": [
+      {
+        "text": "BiH",
+        "label": "LOC",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "text": "VRS",
+        "label": "ORG",
+        "start": 44,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "\" Mi do sada nismo imali zajedničku počasnu jedinicu zbog činjenice da nije postojao politički konsenzus oko njenog sastava i procedura u takvoj jedinici \" , rekao je Radovanović .",
+    "spans": [
+      {
+        "text": "Radovanović",
+        "label": "PER",
+        "start": 167,
+        "end": 178
+      }
+    ]
+  },
+  {
+    "text": "MMF odobrio zadnju reviziju stendbaj aranžmana sa Rumunijom",
+    "spans": [
+      {
+        "text": "MMF",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Rumunijom",
+        "label": "LOC",
+        "start": 50,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "BUKUREŠT , Rumunija -- Upravni odbor MMF-a odobrio je u petak ( 25. mart ) sedmu i poslednju reviziju stendbaj aranžmana sa Rumunijom .",
+    "spans": [
+      {
+        "text": "BUKUREŠT",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Rumunija",
+        "label": "LOC",
+        "start": 11,
+        "end": 19
+      },
+      {
+        "text": "Upravni odbor MMF-a",
+        "label": "ORG",
+        "start": 23,
+        "end": 42
+      },
+      {
+        "text": "Rumunijom",
+        "label": "LOC",
+        "start": 124,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Prema rečima Mihaja Tanaseskua , predstavnika zemlje u Fondu , odbor je utvrdio da je Rumunija ispunila svoje obaveze .",
+    "spans": [
+      {
+        "text": "Mihaja Tanaseskua",
+        "label": "PER",
+        "start": 13,
+        "end": 30
+      },
+      {
+        "text": "Fondu",
+        "label": "ORG",
+        "start": 55,
+        "end": 60
+      },
+      {
+        "text": "odbor",
+        "label": "ORG",
+        "start": 63,
+        "end": 68
+      },
+      {
+        "text": "Rumunija",
+        "label": "LOC",
+        "start": 86,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "Rumunija je do sada od MMF-a dobila 11,3 milijarde evra , u sklopu paketa finansijske pomoći u iznosu od 20 milijardi evra , koji je obezbeđen 2009. godine .",
+    "spans": [
+      {
+        "text": "Rumunija",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "MMF-a",
+        "label": "ORG",
+        "start": 23,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Titova luksuzna jahta ide na remont nakon prodaje gradu u Hrvatskoj .",
+    "spans": [
+      {
+        "text": "Titova",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Hrvatskoj",
+        "label": "LOC",
+        "start": 58,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Jahta Galeb nekadašnjeg jugoslovenskog diktatora Josipa Broza Tita godinama je stajala neupotrebljena u brodogradilištu Viktor Lenac na severnoj obali Hrvatske .",
+    "spans": [
+      {
+        "text": "Josipa Broza Tita",
+        "label": "PER",
+        "start": 49,
+        "end": 66
+      },
+      {
+        "text": "Viktor Lenac",
+        "label": "ORG",
+        "start": 120,
+        "end": 132
+      },
+      {
+        "text": "Hrvatske",
+        "label": "LOC",
+        "start": 151,
+        "end": 159
+      }
+    ]
+  },
+  {
+    "text": "Od prošlog meseca , međutim , takvo se stanje promenilo , kada je brod kupio grad Rijeka .",
+    "spans": [
+      {
+        "text": "Rijeka",
+        "label": "LOC",
+        "start": 82,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Napravljen da bude brod jugoslovenske mornarice u Đenovi 1938 , 117 metara dugi Galeb zaplenili su Nemci 1943.",
+    "spans": [
+      {
+        "text": "Đenovi",
+        "label": "LOC",
+        "start": 50,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Saveznici su ga potopili 1944. u blizini Rijeke .",
+    "spans": [
+      {
+        "text": "Saveznici",
+        "label": "ORG",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Rijeke",
+        "label": "LOC",
+        "start": 41,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Tito je koristio brod do svoje smrti 1980. i plovio nekih 160.000 km na političkim putovanjima .",
+    "spans": [
+      {
+        "text": "Tito",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "Koristio je Galeb i kao mesto za zabavu političara i poznatih ličnosti , poput britanskog premijera Vinstona Čerčila , libijskog vođe Moamera el Gadafija , bivšeg egipatskog predsednika Abdela Nasera , bivšeg indijskog premijera Džavaharlala Nehrua i holivudskih zvezda Elizabet Tejlor i Ričarda Bartona .",
+    "spans": [
+      {
+        "text": "Vinstona Čerčila",
+        "label": "PER",
+        "start": 100,
+        "end": 116
+      },
+      {
+        "text": "Moamera el Gadafija",
+        "label": "PER",
+        "start": 134,
+        "end": 153
+      },
+      {
+        "text": "Abdela Nasera",
+        "label": "PER",
+        "start": 186,
+        "end": 199
+      },
+      {
+        "text": "Džavaharlala Nehrua",
+        "label": "PER",
+        "start": 229,
+        "end": 248
+      },
+      {
+        "text": "Elizabet Tejlor",
+        "label": "PER",
+        "start": 270,
+        "end": 285
+      },
+      {
+        "text": "Ričarda Bartona",
+        "label": "PER",
+        "start": 288,
+        "end": 303
+      }
+    ]
+  },
+  {
+    "text": "Rijeka ga je kupila za 107.000 evra .",
+    "spans": [
+      {
+        "text": "Rijeka",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Rekonstrukcija će se odvijati pod nadzorom stručnjaka \" , rekao je gradonačelnik Vojko Obersnel .",
+    "spans": [
+      {
+        "text": "Vojko Obersnel",
+        "label": "PER",
+        "start": 81,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Jahta je zaplenjena i stavljena na aukciju pošto vlasnik , brodovlasnički magnat Džon Pol Papanikolau , nije platio lučku naknadu brodogradilištu Lenac , gde je planirao da bude renovirana .",
+    "spans": [
+      {
+        "text": "Džon Pol Papanikolau",
+        "label": "PER",
+        "start": 81,
+        "end": 101
+      },
+      {
+        "text": "brodogradilištu Lenac",
+        "label": "ORG",
+        "start": 130,
+        "end": 151
+      }
+    ]
+  },
+  {
+    "text": "Advokat Papanikolaua podneo je tužbu 2006. da bi zaustavio prodaju , a spor je još uvek u toku .",
+    "spans": [
+      {
+        "text": "Papanikolaua",
+        "label": "PER",
+        "start": 8,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Srbija je u stanju hipnoze na kraju 2016. godine .",
+    "spans": [
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "U centru Beograda je u 2016. godini organizovana izložba „ Necenzurisane laži ” po uzoru na izložbu „ Degenerisana umetnost ” , koja je pre Drugog svetskog rata putovala po jednoj drugoj zemlji .",
+    "spans": [
+      {
+        "text": "Beograda",
+        "label": "LOC",
+        "start": 9,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Počelo je i takmičenje novih vođa sa starim vođom Josipom Brozom Titom .",
+    "spans": [
+      {
+        "text": "Josipom Brozom Titom",
+        "label": "PER",
+        "start": 50,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Ponosni smo na stopu ekonomskog rasta od 2,8 % , manju od stope rasta u Crnoj Gori , Albaniji i Bosni i Hercegovini .",
+    "spans": [
+      {
+        "text": "Crnoj Gori",
+        "label": "LOC",
+        "start": 72,
+        "end": 82
+      },
+      {
+        "text": "Albaniji",
+        "label": "LOC",
+        "start": 85,
+        "end": 93
+      },
+      {
+        "text": "Bosni i Hercegovini",
+        "label": "LOC",
+        "start": 96,
+        "end": 115
+      }
+    ]
+  },
+  {
+    "text": "Akademska zajednica Srbije je i dalje , pri kraju 2016. godine , odraz društva .",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 20,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "Nekrunisani kralj srpskih kvaziuniverziteta ponovo ima svoje đake na visokim funkcijama u Ministarstvu prosvete i nauke .",
+    "spans": [
+      {
+        "text": "Ministarstvu prosvete i nauke",
+        "label": "ORG",
+        "start": 90,
+        "end": 119
+      }
+    ]
+  },
+  {
+    "text": "Srbija je postala prva zemlja u svetu u kojoj je predsednik parlamentarnog odbora za nauku , obrazovanje , tehnološki razvoj i informatičko društvo bio , do pre nekoliko meseci , verski vođa .",
+    "spans": [
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Sve nacionalne institucije i svi državni univerziteti , fakulteti i instituti Srbije su oćutali muftijino postavljenje .",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 78,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "text": "To , i ćutanje na mnoge druge teme u srpskom obrazovanju je moje razočaranje , a muk akademske zajednice Srbije je obeležio moju 2016. godinu .",
+    "spans": [
+      {
+        "text": "Srbije",
+        "label": "LOC",
+        "start": 105,
+        "end": 111
+      }
+    ]
+  },
+  {
+    "text": "Da li su oni koji su oćutali nedavne šamare profesorki u Mladenovcu i sve druge šamare srpskoj nauci i obrazovanju mogli svojim jasnim i hrabrim „ ne ” da bar malo prosvetle zbunjen , uplašen i apatični narod ?",
+    "spans": [
+      {
+        "text": "Mladenovcu",
+        "label": "LOC",
+        "start": 57,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Nije bilo lako rektoru Univerziteta u Beogradu profesoru Rajku Vračaru da početkom devedesetih zatraži u ime Univerziteta u Beogradu ostavku Slobodana Miloševića .",
+    "spans": [
+      {
+        "text": "Univerziteta u Beogradu",
+        "label": "ORG",
+        "start": 23,
+        "end": 46
+      },
+      {
+        "text": "Rajku Vračaru",
+        "label": "PER",
+        "start": 57,
+        "end": 70
+      },
+      {
+        "text": "Univerziteta u Beogradu",
+        "label": "ORG",
+        "start": 109,
+        "end": 132
+      },
+      {
+        "text": "Slobodana Miloševića",
+        "label": "PER",
+        "start": 141,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Milošević je nastavio da vlada , Srbija je otišla u sunovrat , a Vračar je bio smenjen i upisan u velika imena srpske nauke i prosvete .",
+    "spans": [
+      {
+        "text": "Milošević",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Srbija",
+        "label": "LOC",
+        "start": 33,
+        "end": 39
+      },
+      {
+        "text": "Vračar",
+        "label": "PER",
+        "start": 65,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "Osam od ovih četrdeset bilo je na univerzitetima Evrope i Amerike .",
+    "spans": [
+      {
+        "text": "Evrope",
+        "label": "LOC",
+        "start": 49,
+        "end": 55
+      },
+      {
+        "text": "Amerike",
+        "label": "LOC",
+        "start": 58,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Za one mlađe koji ne znaju , mnogi đaci koji su se sa srpskom vojskom u Prvom svetskom ratu našli u Grčkoj , upućeni su u Francusku na dalje školovanje .",
+    "spans": [
+      {
+        "text": "Grčkoj",
+        "label": "LOC",
+        "start": 100,
+        "end": 106
+      },
+      {
+        "text": "Francusku",
+        "label": "LOC",
+        "start": 122,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "Ovi „ francuski đaci ” , vrhunski profesionalci , čvrstih moralnih stavova i gospodstvenog ponašanja dali su docnije veliki doprinos Kraljevini Srba , Hrvata i Slovenaca .",
+    "spans": [
+      {
+        "text": "Kraljevini Srba , Hrvata i Slovenaca",
+        "label": "LOC",
+        "start": 133,
+        "end": 169
+      }
+    ]
+  },
+  {
+    "text": "Harvard , Stenford , Oksford ili Sorbona mogu da ih nauče da obrazovanje obavezuje .",
+    "spans": [
+      {
+        "text": "Harvard",
+        "label": "ORG",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Stenford",
+        "label": "ORG",
+        "start": 10,
+        "end": 18
+      },
+      {
+        "text": "Oksford",
+        "label": "ORG",
+        "start": 21,
+        "end": 28
+      },
+      {
+        "text": "Sorbona",
+        "label": "ORG",
+        "start": 33,
+        "end": 40
+      }
+    ]
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "在街区层面，我们只需以悉尼中央商务区为例，它从最初的定居前景观发展成为一个两层城市，从最高150英尺的高度发展到今天耸立的塔楼。在更小的规模上，同样的情况也可能发生在悉尼围绕交通节点的城镇中心。内城郊区也必须发展，转向在关键地点的树顶以下建造更经济实惠的公寓生活。当然，新的住房增长需要精心设计，树木、景观和公园需要与其它基本基础设施一起纳入规划。",
+    "spans": [
+      {
+        "text": "它从最初的定居前景观发展成为一个两层城市，",
+        "label": "MINOR",
+        "start": 21,
+        "end": 42
+      },
+      {
+        "text": "从最高150英尺的高度发展到今天耸立的塔楼。",
+        "label": "MINOR",
+        "start": 42,
+        "end": 64
+      },
+      {
+        "text": "树顶以下建",
+        "label": "MINOR",
+        "start": 115,
+        "end": 120
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "\"One of Greggs' key strengths is offering a lower-value treat and keeping that proposition intact is key, especially when consumer incomes are stretched. The most important thing is to see volumes trend higher, and that remains the case. The job's not done. Expect to see more progress over 2024 as investment continues into the digital offering, delivery partnerships and expanding the store estate.\"",
+    "text": "“格雷格斯的核心竞争力之一是提供低价值的零食，而保持这一点是至关重要的，尤其是在消费者收入受挤压的情况下。最重要的是要看到销售量上升的趋势，而这一点仍然是这样。工作还没有完成。预计到2024年之前会有更多的进展，因为投资将继续投入数字化服务、快递合作伙伴关系和扩大商店地产。”",
+    "spans": [
+      {
+        "text": "低价值",
+        "label": "MAJOR",
+        "start": 16,
+        "end": 19
+      },
+      {
+        "text": "受挤压",
+        "label": "MAJOR",
+        "start": 45,
+        "end": 48
+      },
+      {
+        "text": "工作还没有完成",
+        "label": "MAJOR",
+        "start": 80,
+        "end": 87
+      },
+      {
+        "text": "地产",
+        "label": "MINOR",
+        "start": 134,
+        "end": 136
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "Both the Czech and Belgian ministers immediately expressed reservations at the 18 December summit about the unequal treatment for brewers, but acquiesced. Belgium, which now chairs the rotating EU Council presidency and is therefore in principle neutral in terms of inter-governmental negotiations, hopes to clinch a deal with the parliament by early March.",
+    "text": "捷克和比利时的部长们在12月18日的峰会上立即表达了对酿酒商不平等待遇的顾虑，但表示同意。比利时目前担任欧盟轮值主席国，原则上在政府间谈判中保持中立，希望在3月初与议会达成协议。",
+    "spans": [
+      {
+        "text": "顾虑",
+        "label": "MAJOR",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "text": "同意",
+        "label": "MAJOR",
+        "start": 42,
+        "end": 44
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "Both the Czech and Belgian ministers immediately expressed reservations at the 18 December summit about the unequal treatment for brewers, but acquiesced. Belgium, which now chairs the rotating EU Council presidency and is therefore in principle neutral in terms of inter-governmental negotiations, hopes to clinch a deal with the parliament by early March.",
+    "text": "捷克和比利时部长在12月18日的峰会上立即对酿酒商的不平等待遇表示保留意见，但表示同意。目前担任轮值欧盟理事会主席国的比利时在政府间谈判原则上保持中立，希望在3月初与议会达成协议。",
+    "spans": [
+      {
+        "text": "意见",
+        "label": "MAJOR",
+        "start": 35,
+        "end": 37
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "在警署级别，我们只需要以悉尼CBD为例，看看这个地区是如何从原始景观发展成今天的双层城市的，从150英尺的最高高度到今天的高耸塔楼。在一个缩小的水平上，悉尼周围交通节点的城镇中心也可以发生同样的变化。内城郊区也必须演变，更多的平价公寓生活将在关键地点的树顶以下高度出现。当然，新的住房增长需要良好的设计，树木、景观和公园需要与其他基本设施一起包含。",
+    "spans": [
+      {
+        "text": "警署级",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 4
+      },
+      {
+        "text": "在一个缩小的水平上",
+        "label": "MAJOR",
+        "start": 66,
+        "end": 75
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "Both the Czech and Belgian ministers immediately expressed reservations at the 18 December summit about the unequal treatment for brewers, but acquiesced. Belgium, which now chairs the rotating EU Council presidency and is therefore in principle neutral in terms of inter-governmental negotiations, hopes to clinch a deal with the parliament by early March.",
+    "text": "捷克和比利时部长在12月18日峰会上立即对酿酒商的不平等待遇表示保留，但最终同意。比利时目前担任欧盟理事会轮值主席国，因此在政府间谈判中原则上保持中立，希望在三月初与议会达成协议。",
+    "spans": [
+      {
+        "text": "同意",
+        "label": "MAJOR",
+        "start": 38,
+        "end": 40
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "在分区层面，我们只需看看悉尼中央商务区作为一个例子，这个地区从其定居前的景观发展成为一个两层楼的城市，从最高150英尺到今天高耸的塔楼。在更小的层面上，整个悉尼的交通枢纽周围的城镇中心也可以这样做。内城郊区也必须发展，转向更便宜的公寓生活，高度低于关键网站的树顶。当然，住房的新增长需要设计良好，树木、景观和公园需要与其他基本基础设施一起纳入。",
+    "spans": [
+      {
+        "text": "键网站的",
+        "label": "MAJOR",
+        "start": 125,
+        "end": 129
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "在街区层面，我们只需要以悉尼中央商务区为例，说明一个从未定居的原始景观发展成为一座两层城市的过程，从150英尺的最高点上升到今天的巍峨摩天大楼。在规模更小的水平上，同样可以在悉尼市中心的交通枢纽周围发生，从最大高度的150英尺上升到今天的巍峨摩天大楼。内郊地区也需要发展，以便在关键地点提供更便宜的公寓式住房。当然，新的住房需求必须设计得很好，并包括树木、绿化和公园。",
+    "spans": [
+      {
+        "text": "街区",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 3
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "The protests were ostensibly set off by the government's decision to end subsidies for diesel fuel used in agriculture and to cut an exemption from car tax for farm vehicles. These measures pushed farmers over the edge. It also mobilised other angry workers, already straining under the pressure of inflation, recession and the government's self-imposed austerity. On January 9th drivers of freight and passenger trains at Deutsche Bahn, the national railway, began a strike over working hours and pay.",
+    "text": "抗议表面上是因为政府决定停止对农业柴油燃料的补贴，并取消了对农用车辆的汽车税的豁免。这些措施让农民们不堪重负。它也动员了其他愤怒的工人，他们已经在通货膨胀、经济衰退和政府自我施加的紧缩政策下苦苦挣扎。1月9日，德意志铁路公司（Deutsche Bahn）的货运和客运列车司机开始罢工，抗议工作时间和工资。",
+    "spans": [
+      {
+        "text": "的豁免",
+        "label": "MAJOR",
+        "start": 38,
+        "end": 41
+      },
+      {
+        "text": "对",
+        "label": "MAJOR",
+        "start": 29,
+        "end": 30
+      },
+      {
+        "text": "1月9日，德意志铁路公司",
+        "label": "MAJOR",
+        "start": 100,
+        "end": 112
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "Determining which aircraft models are the safest is less straightforward. The National Transportation Safety Board maintains comprehensive databases of information about accidents and incidents. The Federal Aviation Administration also provides preliminary accident and incident reports, which include the manufacturer of the aircraft involved, from the past 10 days on its Aviation Safety Information Analysis and Sharing page.",
+    "text": "确定哪些飞机型号最安全并不是一件简单的事情。国家运输安全委员会（NTSB）维护着关于事故和事件的全面数据库。联邦航空管理局（FAA）也提供初步的事故和事件报告，其中包括涉及的飞机制造商在过去10天的Aviation Safety Information Analysis and Sharing页面上。",
+    "spans": [
+      {
+        "text": "维护着关于事故和事件的全面数据库",
+        "label": "MAJOR",
+        "start": 37,
+        "end": 53
+      },
+      {
+        "text": "Aviation Safety Information Analysis and Sharing",
+        "label": "MINOR",
+        "start": 99,
+        "end": 147
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "The protests were ostensibly set off by the government's decision to end subsidies for diesel fuel used in agriculture and to cut an exemption from car tax for farm vehicles. These measures pushed farmers over the edge. It also mobilised other angry workers, already straining under the pressure of inflation, recession and the government's self-imposed austerity. On January 9th drivers of freight and passenger trains at Deutsche Bahn, the national railway, began a strike over working hours and pay.",
+    "text": "抗议活动表面上是由政府决定终止对农业用柴油的补贴并削减农用车辆的汽车税豁免而引发的。这些措施将农民逼入绝境。它还动员了其他愤怒的工人，这些工人已经在通货膨胀、经济衰退和政府自我实施的紧缩政策的压力下不堪重负。1 月 9 日，德国国家铁路公司 (Deutsche Bahn) 的货运和客运列车司机开始罢工，抗议工作时间和工资。",
+    "spans": [
+      {
+        "text": "抗议活动表面上是由政府决定终止对农业用柴油的补贴并削减农用车辆的汽车税豁免而引发的。",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 42
+      },
+      {
+        "text": "抗议工作时间和工资",
+        "label": "MAJOR",
+        "start": 152,
+        "end": 161
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  },
+  {
+    "source": "The protests were ostensibly set off by the government's decision to end subsidies for diesel fuel used in agriculture and to cut an exemption from car tax for farm vehicles. These measures pushed farmers over the edge. It also mobilised other angry workers, already straining under the pressure of inflation, recession and the government's self-imposed austerity. On January 9th drivers of freight and passenger trains at Deutsche Bahn, the national railway, began a strike over working hours and pay.",
+    "text": "抗议活动表面上是由政府决定取消对农业使用的柴油燃料的补贴并削减农用车辆的汽车税豁免引发的。这些措施将农民推向了边缘。它还动员了其他愤怒的工人，他们已经在通货膨胀、经济衰退和政府自我实施的紧缩政策的压力下不堪重负。1月9日，国家铁路德国铁路的货运和客运列车司机开始就工作时间和工资问题举行罢工。",
+    "spans": [
+      {
+        "text": "抗议活动表面上是由政府决定取消对农业使用的柴油燃料的补贴并削减农用车辆的汽车税豁免引发的",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 44
+      }
+    ],
+    "source_language": "en",
+    "target_language": "zh"
+  }
+]

@@ -1,0 +1,470 @@
+[
+  {
+    "source": "The Ice King looked down at his queen, disgust from his eyes. Maybe, just maybe, he would have mercy on her. The woman who he had been with for twenty-two years, the one who always cared for him at his lowest times, the one who had given birth to his sons.",
+    "text": "आइस किंग अपनी रानी की ओर नीचे देखते हुए, अपनी आँखों से घृणा व्यक्त करते हुए। शायद, बस शायद, उसके पास उसके लिए कृपा होगी। वह महिला जिसके साथ उसने बीती हुई बाईस साल बिताई थी, वह जो हमेशा उसके सबसे कमजोर समय में उसकी देखभाल करती थी, वह जिसने उसके बेटों को जन्म दिया था।",
+    "spans": [
+      {
+        "text": "आइ",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "text": "स ",
+        "label": "MAJOR",
+        "start": 2,
+        "end": 4
+      },
+      {
+        "text": "किंग अपनी रानी की ओर नीचे देखते हुए,",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 40
+      },
+      {
+        "text": "बिताई",
+        "label": "MAJOR",
+        "start": 163,
+        "end": 168
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The Ice King looked down at his queen, disgust from his eyes. Maybe, just maybe, he would have mercy on her. The woman who he had been with for twenty-two years, the one who always cared for him at his lowest times, the one who had given birth to his sons.",
+    "text": "आइस किंग ने अपनी रानी की ओर नीचे देखा, उसकी आँखों से घृणा निकल रही थी। शायद, बस शायद, वह उसके ऊपर दया करेगा। उस औरत को, जिसके साथ वह बीस-दो सालों से था, उस समय की देखभाल करने वाली, जिसने उसके बेटों को जन्म दिया था।",
+    "spans": [
+      {
+        "text": "बीस-",
+        "label": "MAJOR",
+        "start": 133,
+        "end": 137
+      },
+      {
+        "text": " ",
+        "label": "MAJOR",
+        "start": 139,
+        "end": 140
+      },
+      {
+        "text": "द",
+        "label": "MAJOR",
+        "start": 137,
+        "end": 138
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "A shared look of horror came from the advisor and Queen Eirwen herself. She slowly looked down at the floor. “Yes, my king.” She bowed.",
+    "text": "सलाहकार और रानी इर्वेन खुद के एक साझा भयानक दिखने के बाद। उसने धीरे से फर्श की ओर देखा। “हाँ, मेरे राजा।” उसने झुककर नमस्कार किया।",
+    "spans": [
+      {
+        "text": "द के एक साझा ",
+        "label": "MAJOR",
+        "start": 25,
+        "end": 38
+      },
+      {
+        "text": "ख",
+        "label": "MAJOR",
+        "start": 23,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "\"मेरी अपनी उड़ान अचानक एक विशाल, गुलाबी ड्रैगन द्वारा खींचे जाने से बहुत अलग है!\"",
+    "spans": [
+      {
+        "text": "उड़ान",
+        "label": "MAJOR",
+        "start": 11,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "मैं धीरे से स्टोर के पीछे की ओर चला गया, धातु की जाली के पार कुछ फुसफुसाहट और बातचीत सुनाई दी, जिसे कुछ खींचकर हटाने के बाद मैंने हटा दिया। इस समय के लिए वेंट में चढ़ना मेरे लिए सबसे सुरक्षित और शांत विकल्प था; मैं अपने रास्ते से ऊपर चढ़ गया, मैं अजीब तरह से कपड़े पहने हुए पुरुषों के बीच बातचीत और बातचीत को पकड़ने लगा। मैंने अंदर अल को देखा, जंजीरों में बंद। अंततः पकड़े जाने की उम्मीद थी।",
+    "spans": [
+      {
+        "text": "अल",
+        "label": "MAJOR",
+        "start": 332,
+        "end": 334
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "With a quick jolt, I felt a shiver enthrall its way down my spine as I made my way out of the apartment; weird. Ignoring the feeling, I urged myself to head towards Al’s to investigate a little, but my legs moved towards Anton’s small bar – it was a pretty calm place, and I definitely needed to talk to someone. Who better than a bartender who owes you something?",
+    "text": "अचानक एक झटके से, मैंने अपनी रीढ़ में एक सनसनी महसूस की, जैसे मैं अपार्टमेंट से बाहर निकल रहा था; अजीब। इस महसूस को नजरअंदाज करते हुए, मैंने खुद को थोड़ी देर के लिए अल की जांच करने के लिए प्रेरित किया, लेकिन मेरे पैर एंटन के छोटे बार की ओर बढ़ गए - यह एक काफी शांत जगह थी, और मुझे निश्चित रूप से किसी से बात करने की ज़रूरत थी। कौन बारटेंडर से बेहतर हो सकता है जो आपको कुछ देयता है?",
+    "spans": [
+      {
+        "text": "देयत",
+        "label": "MAJOR",
+        "start": 372,
+        "end": 376
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "“I beg you, my king, in return for the safety of my child, do whatever you want to me, lock me up, banish me, or even kill me.” Queen Eirwen pleaded, holding her child tightly in her arms.",
+    "text": "किंग ईरविफ़न ने कहा, \"मेरे राजा, मेरे बच्चे की सुरक्षा के लिए, आप जो चाहें मुझ पर कर सकते हैं, मुझे कैद कर सकते हैं, निकाल सकते हैं, या यहां तक कि मार भी सकते हैं।\"",
+    "spans": [
+      {
+        "text": "किंग",
+        "label": "MINOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "ईरविफ़न",
+        "label": "MINOR",
+        "start": 5,
+        "end": 12
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The Ice King looked down at his queen, disgust from his eyes. Maybe, just maybe, he would have mercy on her. The woman who he had been with for twenty-two years, the one who always cared for him at his lowest times, the one who had given birth to his sons.",
+    "text": "आकाश राजा अपनी रानी को देखता है, उसकी आँखों से घृणा। शायद, शायद, वह उसके लिए दयालु हो सकता है। वह महिला जिसके साथ उसने 22 साल बिताए थे, वह जिसने हमेशा उसके सबसे कमजोर समय में उसकी देखभाल की थी, वह जिसने उसके बेटों को जन्म दिया था।",
+    "spans": [
+      {
+        "text": "आकाश",
+        "label": "MINOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "स",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 45
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "A shared look of horror came from the advisor and Queen Eirwen herself. She slowly looked down at the floor. “Yes, my king.” She bowed.",
+    "text": "एडवाइजर और क्वीन इरविंडन ने एक-दूसरे को डरावनी नज़रों से देखा। धीरे-धीरे उसने नीचे देखा। \"हां, मेरे राजा।\" उसने सिर झुकाया।",
+    "spans": [
+      {
+        "text": "इरविंडन",
+        "label": "MAJOR",
+        "start": 17,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "छिपकर मैं दुकान के पिछले हिस्से की ओर बढ़ा, जहाँ एक धातु की जाली के पार बातचीत और बातें सुनाई दे रही थीं, जिसे तोड़ने में कुछ जोर लगाना पड़ा। वेंट में चढ़ना मेरे लिए अभी सबसे सुरक्षित और शांत विकल्प था; अपने रास्ते से चढ़ते हुए, मैं अजीब तरह से कपड़े पहने आदमियों की बातचीत और बातों को सुन लेता। मैंने अंदर अल को देखा, जंजीरों से बंधा हुआ। यह सोचकर कि वह अंततः पकड़ा जाएगा।",
+    "spans": [
+      {
+        "text": "अल",
+        "label": "MAJOR",
+        "start": 307,
+        "end": 309
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "“You mean his chicken he stole?” Cohren remembered the morning they had stolen him from a farm. “Yeah, i'm pretty sure”",
+    "text": "“आप उसके चिकन का मतलब है जो उसने चुराया था?” कोहरेन ने उस सुबह को याद किया जब उन्होंने उसे एक फ़ार्म से चुराया था। “हाँ, मुझे काफ़ी यक़ीन है”",
+    "spans": [
+      {
+        "text": "आप उसके चिकन का मतलब ह",
+        "label": "MINOR",
+        "start": 1,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "“You mean his chicken he stole?” Cohren remembered the morning they had stolen him from a farm. “Yeah, i'm pretty sure”",
+    "text": "\"क्या आप उसकी चिकन की बात कर रहे हैं जिसे उसने चुराया था?\" कोहरेन ने उस सुबह को याद किया जब उन्होंने उसे एक खेत से चुराया था। \"हाँ, मुझे पूरा यकीन है\"",
+    "spans": [
+      {
+        "text": "उसक",
+        "label": "MINOR",
+        "start": 9,
+        "end": 12
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "“You mean his chicken he stole?” Cohren remembered the morning they had stolen him from a farm. “Yeah, i'm pretty sure”",
+    "text": "&quot;तुम्हारा मतलब है कि उसने मुर्गी चुराई थी?&quot; कोहरेन को वह सुबह याद आई जब उन्होंने उसे खेत से चुराया था। &quot;हाँ, मुझे पूरा यकीन है&quot;",
+    "spans": [
+      {
+        "text": "&quot;त",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "?&quot;",
+        "label": "MAJOR",
+        "start": 46,
+        "end": 53
+      },
+      {
+        "text": "&quot",
+        "label": "MAJOR",
+        "start": 113,
+        "end": 118
+      },
+      {
+        "text": "&quot",
+        "label": "MAJOR",
+        "start": 141,
+        "end": 146
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "“I beg you, my king, in return for the safety of my child, do whatever you want to me, lock me up, banish me, or even kill me.” Queen Eirwen pleaded, holding her child tightly in her arms.",
+    "text": "&quot;मैं आपसे विनती करती हूँ, मेरे राजा, मेरे बच्चे की सुरक्षा के बदले में, आप मेरे साथ जो चाहें करें, मुझे जेल में बंद कर दें, मुझे निर्वासित कर दें, या मुझे मार भी डालें।&quot; रानी इरवेन ने अपने बच्चे को अपनी बाहों में कसकर पकड़ते हुए विनती की।",
+    "spans": [
+      {
+        "text": "&quot;",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "&quot;",
+        "label": "MAJOR",
+        "start": 173,
+        "end": 179
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "मैंने धीरे-धीरे स्टोर के पीछे की ओर अपना रास्ता बना लिया, एक मेटल ग्रैट के पीछे से आवाज़ें सुनीं और बातें सुनीं। मेटल ग्रैट को थोड़ा सा हिलाने पर वह टूट गया। वेंट में जाना मेरे लिए सबसे सुरक्षित और शांत विकल्प था। वेंट में जाने के लिए मैंने अपना रास्ता बनाया, मैंने अजीब कपड़े पहने पुरुषों के बीच बातचीत और बातचीत सुनी। मैंने देखा कि अल अंदर था, बंधा हुआ। शायद वह अंततः पकड़ा गया होगा।",
+    "spans": [
+      {
+        "text": "मेटल",
+        "label": "MAJOR",
+        "start": 61,
+        "end": 65
+      },
+      {
+        "text": "ग्रैट",
+        "label": "MAJOR",
+        "start": 66,
+        "end": 71
+      },
+      {
+        "text": " वेंट",
+        "label": "MAJOR",
+        "start": 155,
+        "end": 160
+      },
+      {
+        "text": "मेटल ग्रैट",
+        "label": "MAJOR",
+        "start": 112,
+        "end": 122
+      },
+      {
+        "text": "वेंट",
+        "label": "MAJOR",
+        "start": 212,
+        "end": 216
+      },
+      {
+        "text": "बातचीत ",
+        "label": "MAJOR",
+        "start": 304,
+        "end": 311
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "With a quick jolt, I felt a shiver enthrall its way down my spine as I made my way out of the apartment; weird. Ignoring the feeling, I urged myself to head towards Al’s to investigate a little, but my legs moved towards Anton’s small bar – it was a pretty calm place, and I definitely needed to talk to someone. Who better than a bartender who owes you something?",
+    "text": "एक तेज झटके के साथ, मैंने महसूस किया कि एक ठंडक अपने आप को मेरी रीढ़ की हड्डी के नीचे बहा रही है जब मैं अपार्टमेंट से बाहर निकल रहा था; अजीब। इस भावना को नजरअंदाज करते हुए, मैंने अपने आप को अल की ओर जाने के लिए उत्साहित किया ताकि थोड़ी जांच कर सकूं, लेकिन मेरे पैर एंटन की छोटी सी बार की ओर चले गए - यह एक काफी शांत जगह थी, और मुझे निश्चित रूप से किसी से बात करने की जरूरत थी। और कौन बेहतर हो सकता है एक बारटेंडर से जो आपको कुछ चुकाना चाहता है?",
+    "spans": [
+      {
+        "text": "बहा रही ह",
+        "label": "MAJOR",
+        "start": 86,
+        "end": 95
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "With a quick jolt, I felt a shiver enthrall its way down my spine as I made my way out of the apartment; weird. Ignoring the feeling, I urged myself to head towards Al’s to investigate a little, but my legs moved towards Anton’s small bar – it was a pretty calm place, and I definitely needed to talk to someone. Who better than a bartender who owes you something?",
+    "text": "एक तेज झटके के साथ, मैंने अपनी रीढ़ की हड्डी में एक सिहरन महसूस की क्योंकि मैं अपार्टमेंट से बाहर निकला; अजीब. उस احساس को नजरअंदाज करते हुए, मैंने खुद को अल के पास जाने के लिए प्रेरित किया ताकि थोड़ा जांच कर सकूं, लेकिन मेरे पैर एंटन के छोटे से बार की ओर बढ़े - यह एक काफी शांत जगह थी, और मुझे जरूर किसी से बात करने की जरूरत थी. कौन बेहतर होगा एक बारटेंडर से जिसका तुम पर कुछ कर्ज हो?",
+    "spans": [
+      {
+        "text": "क्योंक",
+        "label": "MAJOR",
+        "start": 67,
+        "end": 73
+      },
+      {
+        "text": "اس",
+        "label": "MINOR",
+        "start": 117,
+        "end": 119
+      },
+      {
+        "text": "س",
+        "label": "MINOR",
+        "start": 116,
+        "end": 117
+      },
+      {
+        "text": "ا",
+        "label": "MINOR",
+        "start": 114,
+        "end": 115
+      },
+      {
+        "text": "ح",
+        "label": "MINOR",
+        "start": 115,
+        "end": 116
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "“You mean his chicken he stole?” Cohren remembered the morning they had stolen him from a farm. “Yeah, i'm pretty sure”",
+    "text": "“तुमने उसका चिकन चुराया है?” कोह्र ने उस सुबह को याद किया जब उन्होंने उसे एक खेत से चुराया था। “हाँ, मैं पूरी तरह से निश्चित हूँ”",
+    "spans": [
+      {
+        "text": "तुमन",
+        "label": "MINOR",
+        "start": 1,
+        "end": 5
+      },
+      {
+        "text": "उसक",
+        "label": "MINOR",
+        "start": 7,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Snarling and hissing, the creature flew upwards, spitting into the air. Everything suddenly went dark, as if the monster was sucking the light from the sky itself, replacing it with a cloud of perpetual night.",
+    "text": "स्नेलिंग और हसिंग, यह प्राणी ऊपर की ओर उड़ गया और हवा में थूकने लगा। सब कुछ अचानक अंधेरा हो गया, जैसे कि शैतान ने स्वयं ही आकाश से प्रकाश चुरा लिया हो और इसे हमेशा के अँधेरे में बदल दिया हो।",
+    "spans": [
+      {
+        "text": "स्नेलिंग और हसिंग",
+        "label": "MINOR",
+        "start": 0,
+        "end": 17
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Snarling and hissing, the creature flew upwards, spitting into the air. Everything suddenly went dark, as if the monster was sucking the light from the sky itself, replacing it with a cloud of perpetual night.",
+    "text": "चिल्लाते और हिस करते हुए, प्राणी ऊपर की ओर उड़ गया, हवा में थूक रहा था। अचानक सब कुछ अंधेरा हो गया, जैसे कि राक्षस स्वयं आकाश से प्रकाश को चूस रहा हो, और इसके स्थान पर एक प्रायः रात का बादल बना रहा।",
+    "spans": [
+      {
+        "text": "हिस ",
+        "label": "MAJOR",
+        "start": 12,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "अच्छा हुआ",
+    "spans": [
+      {
+        "text": "हुआ",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 9
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "गुड रिडेंस (GOOD RIDDANCE)",
+    "spans": [
+      {
+        "text": "गुड रिडेंस (GOOD RIDDANCE)",
+        "label": "MINOR",
+        "start": 0,
+        "end": 26
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Snarling and hissing, the creature flew upwards, spitting into the air. Everything suddenly went dark, as if the monster was sucking the light from the sky itself, replacing it with a cloud of perpetual night.",
+    "text": "कराहने और फुफकारने की आवाज के साथ जानवर आसमान की ओर उड़ गया, उसने हवा में थूक दिया. अचानक सब कुछ अंधेरा हो गया, जैसे कि राक्षस ही खुद आकाश की रोशनी को चूस रहा हो, और उसे अनंत रात के बादल से बदल रहा हो.",
+    "spans": [
+      {
+        "text": "राक्षस",
+        "label": "MAJOR",
+        "start": 120,
+        "end": 126
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "अच्छी छुट्टी",
+    "spans": [
+      {
+        "text": "अच्छी छुट",
+        "label": "MINOR",
+        "start": 0,
+        "end": 9
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  }
+]

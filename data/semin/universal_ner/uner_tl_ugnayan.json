@@ -1,0 +1,310 @@
+[
+  {
+    "text": "Ngumiti siya sa mga kasakay niya sabay - labas ng lima -ng bola mula sa kaniya -ng bulsa .",
+    "spans": [
+      {
+        "text": "kasakay",
+        "label": "PER",
+        "start": 20,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "\" Wow ! Ang galing ! \" sabi ng mga kasakay at pumalakpak kami -ng lahat .",
+    "spans": [
+      {
+        "text": "kasakay",
+        "label": "PER",
+        "start": 35,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Alamin natin ang mga anyong - tubig sa Pilipinas !",
+    "spans": [
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 39,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Ang Pilipinas ay binubuo ng marami -ng isla .",
+    "spans": [
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 4,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Alamin natin ang iba 't iba -ng anyong - tubig sa Pilipinas !",
+    "spans": [
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 50,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Ganito ang Lawa ng Taal sa probinsya ng Batangas .",
+    "spans": [
+      {
+        "text": "Taal",
+        "label": "LOC",
+        "start": 19,
+        "end": 23
+      },
+      {
+        "text": "Batangas",
+        "label": "LOC",
+        "start": 40,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Sa gitna ng lawa nito ay ang Bulkang Taal .",
+    "spans": [
+      {
+        "text": "Bulkang Taal",
+        "label": "LOC",
+        "start": 29,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Alam ba ninyo -ng may isa pa -ng lawa sa loob ng Bulkang Taal ?",
+    "spans": [
+      {
+        "text": "Bulkang Taal",
+        "label": "LOC",
+        "start": 49,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Marami -ng turista -ng pumupunta sa Lawa ng Taal at sa Bulkang Taal .",
+    "spans": [
+      {
+        "text": "Taal",
+        "label": "LOC",
+        "start": 44,
+        "end": 48
+      },
+      {
+        "text": "Bulkang Taal",
+        "label": "LOC",
+        "start": 55,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Bukod sa mga nakikinabang sa turismo , marami ang nag-aalaga ng bangus at tilapia sa Lawa ng Taal .",
+    "spans": [
+      {
+        "text": "Taal",
+        "label": "LOC",
+        "start": 93,
+        "end": 97
+      }
+    ]
+  },
+  {
+    "text": "Alam mo ba kung ano ang pinakamahaba -ng ilog sa Pilipinas ?",
+    "spans": [
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 49,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Ang Cagayan River ang pinakamahaba at pinakamalaki -ng ilog sa Pilipinas .",
+    "spans": [
+      {
+        "text": "Cagayan River",
+        "label": "LOC",
+        "start": 4,
+        "end": 17
+      },
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 63,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "Ito ang Nueva Vizcaya , Quirino , Isabela , at Cagayan .",
+    "spans": [
+      {
+        "text": "Nueva Vizcaya",
+        "label": "LOC",
+        "start": 8,
+        "end": 21
+      },
+      {
+        "text": "Quirino",
+        "label": "LOC",
+        "start": 24,
+        "end": 31
+      },
+      {
+        "text": "Isabela",
+        "label": "LOC",
+        "start": 34,
+        "end": 41
+      },
+      {
+        "text": "Cagayan",
+        "label": "LOC",
+        "start": 47,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Ang mga probinsya -ng ito ay matatagpuan sa Hilaga -ng Luzon .",
+    "spans": [
+      {
+        "text": "Luzon",
+        "label": "LOC",
+        "start": 55,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "Dinaraanan rin ng Cagayan River ang ilan -ng natitira -ng kakahuyan sa Pilipinas .",
+    "spans": [
+      {
+        "text": "Cagayan River",
+        "label": "LOC",
+        "start": 18,
+        "end": 31
+      },
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 71,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "Dapat mo -ng makita ang Maria Cristina Falls sa lungsod ng Iligan sa Lanao del Norte .",
+    "spans": [
+      {
+        "text": "Maria Cristina Falls",
+        "label": "LOC",
+        "start": 24,
+        "end": 44
+      },
+      {
+        "text": "Iligan",
+        "label": "LOC",
+        "start": 59,
+        "end": 65
+      },
+      {
+        "text": "Lanao del Norte",
+        "label": "LOC",
+        "start": 69,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "text": "Ang Maria Cristina Falls ay kilala rin bilang kambal na talon .",
+    "spans": [
+      {
+        "text": "Maria Cristina Falls",
+        "label": "LOC",
+        "start": 4,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Napakahalaga ng Maria Cristina Falls sa Mindanao .",
+    "spans": [
+      {
+        "text": "Maria Cristina Falls",
+        "label": "LOC",
+        "start": 16,
+        "end": 36
+      },
+      {
+        "text": "Mindanao",
+        "label": "LOC",
+        "start": 40,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Isa sa kilala -ng bukal ay ang Tiwi Hot Springs sa Bikol .",
+    "spans": [
+      {
+        "text": "Tiwi Hot Springs",
+        "label": "LOC",
+        "start": 31,
+        "end": 47
+      },
+      {
+        "text": "Bikol",
+        "label": "LOC",
+        "start": 51,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Matatagpuan ito malapit sa Bulkang Mayon .",
+    "spans": [
+      {
+        "text": "Bulkang Mayon",
+        "label": "LOC",
+        "start": 27,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Marami ang pumupunta sa Tiwi Hot Springs dahil nakagagaling daw ng sakit ng kalamnan ang maglublob sa mainit nito -ng tubig .",
+    "spans": [
+      {
+        "text": "Tiwi Hot Springs",
+        "label": "LOC",
+        "start": 24,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Pambihira talaga ang mga anyong - tubig sa Pilipinas !",
+    "spans": [
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 43,
+        "end": 52
+      }
+    ]
+  }
+]

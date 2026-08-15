@@ -1,0 +1,790 @@
+[
+  {
+    "source": "“All tanks were moving out” The commander started calmly but clearly into his headset. The engines of a platoon of tanks and Strykers roared to life as they started moving forward. The Kronos Cohren was on jolted as its break released and moved forward, getting into formation. The tanks took up a wedge formation as they moved across the Itania plains. The winter storms had frozen over the wetlands and forests, but the mud always remained.",
+    "text": "«Усі танки вирушають», — спокійно, але чітко сказав командир у мікрофон. Двигуни взводу танків і Сトライкерів загуркотіли, і вони рушили вперед. «Кронос Кохрен» здригнувся, коли відпустили гальма, і він рушив уперед, займаючи своє місце у формуванні. Танки вишикувалися клином і рушили через Ітанійські рівнини. Зимові бурі перетворили болота і ліси на суцільну кригу, але бруд завжди лишався.",
+    "spans": [
+      {
+        "text": "сказав",
+        "label": "MAJOR",
+        "start": 45,
+        "end": 51
+      },
+      {
+        "text": "Сトライкерів",
+        "label": "MINOR",
+        "start": 97,
+        "end": 106
+      },
+      {
+        "text": "загуркотіли",
+        "label": "MAJOR",
+        "start": 107,
+        "end": 118
+      },
+      {
+        "text": "у формуванні",
+        "label": "MAJOR",
+        "start": 234,
+        "end": 246
+      },
+      {
+        "text": "Ітанійські рівнини",
+        "label": "MAJOR",
+        "start": 289,
+        "end": 307
+      },
+      {
+        "text": "клином ",
+        "label": "MAJOR",
+        "start": 267,
+        "end": 274
+      },
+      {
+        "text": "бруд ",
+        "label": "MINOR",
+        "start": 370,
+        "end": 375
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Він дістав з кишені піджака запальничку та цигарку з іншої. Запаливши її, він зробив невелику затяжку перед тим, як трохи відчинити двері. За останню тиждень йому довелося бути винахідливим, щоб розбудити під його командою чоловіків і жінок. Він перестав використовувати попередньо встановлений будильник, половина разів він не працював, коли з динаміків лунав лише слабкий шипіння.",
+    "spans": [
+      {
+        "text": "слабкий",
+        "label": "MINOR",
+        "start": 366,
+        "end": 373
+      },
+      {
+        "text": "під його командою",
+        "label": "MINOR",
+        "start": 205,
+        "end": 222
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Waking them up” Cohren turned to see 2nd Lieutenant Nemic walking up.",
+    "text": "Кохрен прокинувся, коли до нього підійшов 2-й лейтенант Немік.",
+    "spans": [
+      {
+        "text": "Кохрен прокинувся, коли до нього підійшов 2-й лейтенант Немік.",
+        "label": "MINOR",
+        "start": 0,
+        "end": 62
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "\"Did you have to drag us along as well?\" Tenuk snapped as he climbed off Thassalin's back, sliding down his tail. \"And we left Retvik behind! We abandoned our big, strong, fighty guy! How is he going to get to us?\"",
+    "text": "«Чи мусили ви тягнути нас теж?» — різко запитав Тенук, коли зісковзував з спини Тассаліна, спускаючись по його хвосту. «І ми залишили Ретвіка! Ми покинули нашого великого, сильного, бійцівського хлопця! Як він до нас дістанеться?»",
+    "spans": [
+      {
+        "text": "ви ",
+        "label": "MAJOR",
+        "start": 11,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Він дістав із кишені куртки запальничку та сигарету, а потім запалив її й зробив короткий затяг перед тим, як злегка відчинити двері. Протягом останнього тижня він постійно вигадував щось нове, щоб розбудити підлеглих — чоловіків і жінок. Він перестав користуватися будильником, тому що половину часу він не працював, а з гучномовців лунало лише легке шипіння.",
+    "spans": [
+      {
+        "text": "та",
+        "label": "MINOR",
+        "start": 40,
+        "end": 42
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Він дістав з кишені піджака запальничку, а з іншої - сигарету. Прикуривши, він зробив невелику затяжку, перш ніж злегка відчинив двері. За останній тиждень йому довелося проявити винахідливість, будячи чоловіків і жінок, які перебували під його командуванням. Він перестав користуватися попередньо встановленим будильником, оскільки в половині випадків він не спрацьовував, а з динаміків лунало лише легке шипіння.",
+    "spans": [
+      {
+        "text": "піджака",
+        "label": "MINOR",
+        "start": 20,
+        "end": 27
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Waking them up” Cohren turned to see 2nd Lieutenant Nemic walking up.",
+    "text": "\"Розбудити їх\", - обернувся Кохрен і побачив, що підійшов 2-й лейтенант Немік.",
+    "spans": [
+      {
+        "text": "обернувся Кохрен",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 34
+      },
+      {
+        "text": "2-й",
+        "label": "MAJOR",
+        "start": 58,
+        "end": 61
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Do you want to celebrate?” They asked, reflecting on the last time she answered it.",
+    "text": "«Ви хочете відсвяткувати?» — запитали вони, згадуючи останній раз, коли вона відповіла так.",
+    "spans": [
+      {
+        "text": "так",
+        "label": "MINOR",
+        "start": 87,
+        "end": 90
+      },
+      {
+        "text": "останній раз, коли вона відповіла",
+        "label": "MAJOR",
+        "start": 53,
+        "end": 86
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“All tanks were moving out” The commander started calmly but clearly into his headset. The engines of a platoon of tanks and Strykers roared to life as they started moving forward. The Kronos Cohren was on jolted as its break released and moved forward, getting into formation. The tanks took up a wedge formation as they moved across the Itania plains. The winter storms had frozen over the wetlands and forests, but the mud always remained.",
+    "text": "«Усі танки виїжджають» — командир спокійно, але чітко сказав у своєму гарнітуру. Двигуни взводу танків і Стрікерів розігналися, коли вони почали рухатися вперед. Кронос Кохрен розірвався, коли його гальмо відпустило, і він рушив вперед, утворюючи колону. Танки утворили клиноподібну форму, коли рухалися через рівнини Ітанії. Зимові шторми заморозили болота і ліси, але бруд завжди залишався.",
+    "spans": [
+      {
+        "text": "своєму",
+        "label": "MAJOR",
+        "start": 63,
+        "end": 69
+      },
+      {
+        "text": "Стрікерів",
+        "label": "MAJOR",
+        "start": 105,
+        "end": 114
+      },
+      {
+        "text": "розігналися",
+        "label": "MAJOR",
+        "start": 115,
+        "end": 126
+      },
+      {
+        "text": "розірвався",
+        "label": "MAJOR",
+        "start": 176,
+        "end": 186
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Він витягнув запальничку з кишені куртки, а з іншої - сигарету. Запаливши її, він зробив невеликий надих перед тим, як трохи відкрити двері. Протягом останнього тижня йому доводилося вдаватися до винахідливості, щоб розбудити чоловіків і жінок під своїм командуванням. Він перестав використовувати вбудований будильник, бо він працював лише наполовину, коли з динаміків лунало лише легке шипіння.",
+    "spans": [
+      {
+        "text": "надих",
+        "label": "MINOR",
+        "start": 99,
+        "end": 104
+      },
+      {
+        "text": "працював лише наполовину",
+        "label": "MAJOR",
+        "start": 327,
+        "end": 351
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Він витягнув з кишені куртки запальничку, а з іншої — цигарку. Запаливши її, він затягнувся, а потім трохи відчинив двері. Минулого тижня йому довелося проявити кмітливість, щоб розбудити чоловіків і жінок, які перебували під його командуванням. Він перестав користуватися вбудованим будильником, адже він працював лише половину часу, а з динаміків лунало лише легке шелестіння.",
+    "spans": [
+      {
+        "text": "Він перестав користуватися вбудованим будильником, адже він працював лише половину часу",
+        "label": "MAJOR",
+        "start": 246,
+        "end": 333
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Waking them up” Cohren turned to see 2nd Lieutenant Nemic walking up.",
+    "text": "«Пробуджуючи їх», Кохрен обернувся, щоб побачити, як підходить молодший лейтенант Немік.",
+    "spans": [
+      {
+        "text": "Пробуджуючи їх",
+        "label": "MINOR",
+        "start": 1,
+        "end": 15
+      },
+      {
+        "text": "молодший",
+        "label": "MAJOR",
+        "start": 63,
+        "end": 71
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "\"Did you have to drag us along as well?\" Tenuk snapped as he climbed off Thassalin's back, sliding down his tail. \"And we left Retvik behind! We abandoned our big, strong, fighty guy! How is he going to get to us?\"",
+    "text": "«Вам дійсно треба було забрати нас із собою?» — сердито запитав Тенук, зіскакуючи з спини Тассаліна, сповзаючи по його хвості. «А ми залишили Ретвіка! Ми кинули нашого великого, сильного, войовничого хлопця! Як він тепер до нас добереться?»",
+    "spans": [
+      {
+        "text": "А",
+        "label": "MAJOR",
+        "start": 128,
+        "end": 129
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Waking them up” Cohren turned to see 2nd Lieutenant Nemic walking up.",
+    "text": "«Пробудити їх?» — звернувся Кохрен і побачив, як підійшов другий лейтенант Немік.",
+    "spans": [
+      {
+        "text": "звернувся",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 27
+      },
+      {
+        "text": "?",
+        "label": "MAJOR",
+        "start": 13,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“All tanks were moving out” The commander started calmly but clearly into his headset. The engines of a platoon of tanks and Strykers roared to life as they started moving forward. The Kronos Cohren was on jolted as its break released and moved forward, getting into formation. The tanks took up a wedge formation as they moved across the Itania plains. The winter storms had frozen over the wetlands and forests, but the mud always remained.",
+    "text": "«Усі танки почали рухатися», – спокійно, але чітко сказав командир у мікрофон. Двигуни взводу танків та «Страйкерів» загуркотіли й почали рухатися вперед. «Кронос Когрен» здригнувся, коли його гальма спрацювали, і він почав рухатися вперед, вишикувавшись у бойовий порядок. Танки вишикувалися клином, рухаючись долиною Ітанії. Зимові бурі заморозили болота та ліси, але бруд завжди залишався.",
+    "spans": [
+      {
+        "text": "«Кронос Когрен»",
+        "label": "MAJOR",
+        "start": 155,
+        "end": 170
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“All tanks were moving out” The commander started calmly but clearly into his headset. The engines of a platoon of tanks and Strykers roared to life as they started moving forward. The Kronos Cohren was on jolted as its break released and moved forward, getting into formation. The tanks took up a wedge formation as they moved across the Itania plains. The winter storms had frozen over the wetlands and forests, but the mud always remained.",
+    "text": "«Усі танки рухалися вперед» Командир спокійно, але чітко говорив у навушник. Двигуни батальйону танків і Стрікерів завелися, коли вони почали рухатися вперед. Кронос Кохен був у шоці, коли його розрив вивільнився, і танки почали рухатися вперед, утворивши колону. Танки утворили колону, коли вони рухалися через Ітанію. Зимові шторми замерзли на болотах і лісах, але бруд завжди залишався.",
+    "spans": [
+      {
+        "text": "Стрікерів",
+        "label": "MAJOR",
+        "start": 105,
+        "end": 114
+      },
+      {
+        "text": "утворивши колону",
+        "label": "MINOR",
+        "start": 246,
+        "end": 262
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "\"Did you have to drag us along as well?\" Tenuk snapped as he climbed off Thassalin's back, sliding down his tail. \"And we left Retvik behind! We abandoned our big, strong, fighty guy! How is he going to get to us?\"",
+    "text": "\"Чи дійсно потрібно було тягнути нас з собою?\" - обурено вигукнув Тенук, злізаючи зі спини Тассаліна, струмуючи по його хвосту. \"І ми залишили Ретвіка позаду! Ми покинули нашого великого, сильного, бойового хлопця! Як він до нас дістанеться?\"",
+    "spans": [
+      {
+        "text": "струмуючи",
+        "label": "MINOR",
+        "start": 102,
+        "end": 111
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Waking them up” Cohren turned to see 2nd Lieutenant Nemic walking up.",
+    "text": "\"Розбудивши їх\", Кохрен обернувся і побачив, як наближається 2-й лейтенант неміч.",
+    "spans": [
+      {
+        "text": "\"Розбудивши їх\"",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 15
+      },
+      {
+        "text": "неміч",
+        "label": "MAJOR",
+        "start": 75,
+        "end": 80
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Do you want to celebrate?” They asked, reflecting on the last time she answered it.",
+    "text": "\"Хочете відсвяткувати?\" — запитали вони, згадавши, як вона відповіла на це востаннє.",
+    "spans": [
+      {
+        "text": "Хочете",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 7
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“Do you want to celebrate?” They asked, reflecting on the last time she answered it.",
+    "text": "«Ви хочете святкувати?» – спитали вони, пригадуючи, як вона відповіла на те запитання востаннє.",
+    "spans": [
+      {
+        "text": "востаннє.",
+        "label": "MAJOR",
+        "start": 86,
+        "end": 95
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "“All tanks were moving out” The commander started calmly but clearly into his headset. The engines of a platoon of tanks and Strykers roared to life as they started moving forward. The Kronos Cohren was on jolted as its break released and moved forward, getting into formation. The tanks took up a wedge formation as they moved across the Itania plains. The winter storms had frozen over the wetlands and forests, but the mud always remained.",
+    "text": "\"Всі танки висуваються\", - спокійно, але чітко вимовив командир в навушники. Двигуни взводу танків і\" страйкерів \" заревіли, оживаючи, і почали рух вперед. \"Кронос Кохрен\" здригнувся, коли його\" Брейк \" звільнився і рушив вперед, вибудовуючись в бойовий порядок. Рухаючись по рівнинах Ітанії, танки вишикувалися клином. Зимові шторми заморозили болота і ліси, але бруд залишалася завжди.",
+    "spans": [
+      {
+        "text": "коли його\" Брейк \" звільнився",
+        "label": "MINOR",
+        "start": 184,
+        "end": 213
+      },
+      {
+        "text": "вибудовуючись",
+        "label": "MAJOR",
+        "start": 230,
+        "end": 243
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "JANUARY 14th, 10:26 PM, 2543.",
+    "text": "14 СІЧНЯ, 22:26, 2543 РІК.",
+    "spans": [
+      {
+        "text": " РІК",
+        "label": "MINOR",
+        "start": 21,
+        "end": 25
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Ніяк немає! Звір просто загримів і спробував прямо впасти на Тассалін. На щасття через його розміру ТАСсалІйн був досить гнучким щоб ухилитися від цього звуку але Нюссі так покричала тому дуже близько її вислизнев контроль над шкірою тассалина яка була більш гладкою ніж вона саме",
+    "spans": [
+      {
+        "text": "Ніяк немає!",
+        "label": "MINOR",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "загримів",
+        "label": "MINOR",
+        "start": 24,
+        "end": 32
+      },
+      {
+        "text": "впасти",
+        "label": "MINOR",
+        "start": 51,
+        "end": 57
+      },
+      {
+        "text": "його розміру",
+        "label": "MAJOR",
+        "start": 87,
+        "end": 99
+      },
+      {
+        "text": "ТАСсалІйн",
+        "label": "MINOR",
+        "start": 100,
+        "end": 109
+      },
+      {
+        "text": "звуку",
+        "label": "MAJOR",
+        "start": 153,
+        "end": 158
+      },
+      {
+        "text": "вислизнев",
+        "label": "MINOR",
+        "start": 204,
+        "end": 213
+      },
+      {
+        "text": "тассалина",
+        "label": "MINOR",
+        "start": 234,
+        "end": 243
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Below, Nyssi scrambled to her feet. She was pretty sure she had broken something, but her weird, unnatural healing powers had already kicked in. The same couldn't have been said for Thassalin, who was lying in a lump, resting against the one tree that hadn't collapsed under his weight. Nyssi did her best to try and reach Thassalin but she could barely see more than a couple of meters in front of her. Everything was pitch black and engulfed in unholy shadows. And in said shadows, something was screaming and screeching.",
+    "text": "Нисси поспішала до своїх ніг. Вона була впевнена, що щось зламала, але її дивні, неприродні зцілювальні сили вже почали діяти. Те саме не можна було сказати про Тассаліна, який лежав у купці, притулившись до одного дерева, яке не впало під його вагою. Нисси намагалася якомога сильніше спробувати доторкнутися до Тассаліна, але вона бачила лише кілька метрів перед собою. Все було повністю в темряві і оточене неприродними тінями. А в цих тінях щось кричало і скрипіло.",
+    "spans": [
+      {
+        "text": "Нисси",
+        "label": "MINOR",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "поспішала до своїх ніг",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 28
+      },
+      {
+        "text": "купці",
+        "label": "MAJOR",
+        "start": 185,
+        "end": 190
+      },
+      {
+        "text": "Нисси",
+        "label": "MINOR",
+        "start": 252,
+        "end": 257
+      },
+      {
+        "text": "намагалася якомога сильніше спробувати",
+        "label": "MAJOR",
+        "start": 258,
+        "end": 296
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "JANUARY 14th, 10:26 PM, 2543.",
+    "text": "14 січня, 10:26, 2543.",
+    "spans": [
+      {
+        "text": "10:26",
+        "label": "MAJOR",
+        "start": 10,
+        "end": 15
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A click. It had been reruns of this same stream, the day the world was ruined. Dad always found himself turning the channel off when I was unable to tear my eyes away. The somber face he gave me ensured a gut-wrenching feeling transpiring from deep within – I always feel bad when it plays, but it opens the floodgates to so many memories; granted they weren't very good ones. Letting out a sigh, I slowly rose to my feet, gotta get my mind off things. His saddened mood remained, and regularly I’d try to help ease his mood and at least give him a little bit of joy, but today; I’m tired.",
+    "text": "Натиснути. Це були повтори того самого потоку, в день, коли світ був зруйнований. Тато завжди знаходив себе, вимикаючи канал, коли я не могла відірвати очей. Його сумне обличчя гарантувало мені неймовірне відчуття – я завжди відчуваю себе погано, коли він грає, але це відкриває завісу до багатьох спогадів, навіть якщо вони були не дуже хорошими. Видихнувши, я повільно піднімаюся на ноги, мені потрібно відволіктися від усього цього. Його сумний настрій залишився, і часто я намагався допомогти йому покращити настрій і принаймні дати йому трохи радості, але сьогодні – я втомився.",
+    "spans": [
+      {
+        "text": "Натиснути.",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A click. It had been reruns of this same stream, the day the world was ruined. Dad always found himself turning the channel off when I was unable to tear my eyes away. The somber face he gave me ensured a gut-wrenching feeling transpiring from deep within – I always feel bad when it plays, but it opens the floodgates to so many memories; granted they weren't very good ones. Letting out a sigh, I slowly rose to my feet, gotta get my mind off things. His saddened mood remained, and regularly I’d try to help ease his mood and at least give him a little bit of joy, but today; I’m tired.",
+    "text": "Клацання. Це були повтори одного й того ж відеопотоку, того дня, коли світ був зруйнований. Тато завжди вимикав канал, коли я не могла відірвати очей. Сумний вираз його обличчя викликав жахливе відчуття в моїй душі – це завжди мене засмучує, але це відкриває потік спогадів; правда, вони не дуже хороші. Зітхнувши, я повільно піднялася на ноги, треба відволіктися. Його сумний настрій залишався, і я регулярно намагалася допомогти йому підняти настрій і принаймні додати йому трохи радості, але сьогодні… я втомилася.",
+    "spans": [
+      {
+        "text": "Клацання",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A click. It had been reruns of this same stream, the day the world was ruined. Dad always found himself turning the channel off when I was unable to tear my eyes away. The somber face he gave me ensured a gut-wrenching feeling transpiring from deep within – I always feel bad when it plays, but it opens the floodgates to so many memories; granted they weren't very good ones. Letting out a sigh, I slowly rose to my feet, gotta get my mind off things. His saddened mood remained, and regularly I’d try to help ease his mood and at least give him a little bit of joy, but today; I’m tired.",
+    "text": "Клацання. Це був повтор того самого потоку, того дня, коли світ був зруйнований. Тато завжди вимикав канал, коли я не міг відірвати очей. Похмуре обличчя, на яке він дивився, викликало відчуття, що виривалося з глибини душі - мені завжди погано, коли він грає, але він відкриває шлюзи до стількох спогадів; звісно, вони не були дуже хорошими. Зітхнувши, я повільно піднялася на ноги, щоб відволіктися від думок. Його сумний настрій залишався, і зазвичай я намагалася допомогти полегшити його настрій і хоча б подарувати йому трохи радості, але сьогодні я втомилася.",
+    "spans": [
+      {
+        "text": "потоку",
+        "label": "MINOR",
+        "start": 36,
+        "end": 42
+      },
+      {
+        "text": "на яке він дивився",
+        "label": "MINOR",
+        "start": 155,
+        "end": 173
+      },
+      {
+        "text": "він грає",
+        "label": "MINOR",
+        "start": 251,
+        "end": 259
+      },
+      {
+        "text": "він",
+        "label": "MINOR",
+        "start": 265,
+        "end": 268
+      },
+      {
+        "text": "олегшити його настрій",
+        "label": "MAJOR",
+        "start": 478,
+        "end": 499
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Below, Nyssi scrambled to her feet. She was pretty sure she had broken something, but her weird, unnatural healing powers had already kicked in. The same couldn't have been said for Thassalin, who was lying in a lump, resting against the one tree that hadn't collapsed under his weight. Nyssi did her best to try and reach Thassalin but she could barely see more than a couple of meters in front of her. Everything was pitch black and engulfed in unholy shadows. And in said shadows, something was screaming and screeching.",
+    "text": "Низсі швидко піднялася на ноги. Вона була майже впевнена, що зламала щось, але її дивні, незвичайні лікувальні здібності вже почали діяти. Це не можна було сказати про Тассаліна, який лежав у купі, спираючись на єдине дерево, яке не впало під його вагою. Низсі намагалася зробити все можливе, щоб дістатися до Тассаліна, але вона могла побачити лише кілька метрів попереду себе. Все було повністю темним і окутаним похмурими тінями. І в цих тінях щось кричало і скреготіло.",
+    "spans": [
+      {
+        "text": "Низсі",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Низсі",
+        "label": "MAJOR",
+        "start": 255,
+        "end": 260
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Ні, явно ні. Істота лише зашипіла і спробувала полетіти прямо на Тассаліна. На щастя, незважаючи на свої розміри, Тассалін був достатньо спритним, щоб ухилитися, але Ніссі не змогла стримати крик, коли ледь не втратила хватку на надто гладкій лусці Тассаліна.",
+    "spans": [
+      {
+        "text": "втратила хватку",
+        "label": "MAJOR",
+        "start": 210,
+        "end": 225
+      },
+      {
+        "text": " на надто гладкій лусці",
+        "label": "MAJOR",
+        "start": 225,
+        "end": 248
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Below, Nyssi scrambled to her feet. She was pretty sure she had broken something, but her weird, unnatural healing powers had already kicked in. The same couldn't have been said for Thassalin, who was lying in a lump, resting against the one tree that hadn't collapsed under his weight. Nyssi did her best to try and reach Thassalin but she could barely see more than a couple of meters in front of her. Everything was pitch black and engulfed in unholy shadows. And in said shadows, something was screaming and screeching.",
+    "text": "Внизу Ніссі насилу піднялася на ноги. Вона була майже впевнена, що щось зламала, але її дивні, неприродні цілющі здібності вже проявилися. Чого не можна було сказати про Тассаліна, який лежав, скрутившись у клубок, притулившись до єдиного дерева, яке не звалилося під його вагою. Ніссі з усіх сил намагалася дотягнутися до Тассаліна, але навряд чи могла бачити далі, ніж на пару метрів перед собою. Все було оповите непроглядною темрявою і зловісними тінями. І в цих тінях щось кричало і верещало.",
+    "spans": [
+      {
+        "text": "неприродні",
+        "label": "MAJOR",
+        "start": 95,
+        "end": 105
+      },
+      {
+        "text": "пару метрів",
+        "label": "MAJOR",
+        "start": 374,
+        "end": 385
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Ні, звісно ж, ні. Істота лише шипіла і намагалася летіти прямо на Тассаліна. На щастя, незважаючи на свої розміри, Тассалін був досить спритним, щоб зійти з дороги, але Ніссі не могла втриматися від крику, коли вона ледь не втратила контроль над надто гладкою лускою Тассаліна.",
+    "spans": [
+      {
+        "text": "щоб зійти з дороги",
+        "label": "MAJOR",
+        "start": 145,
+        "end": 163
+      },
+      {
+        "text": "втратила контроль над надто гладкою лускою",
+        "label": "MAJOR",
+        "start": 224,
+        "end": 266
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Below, Nyssi scrambled to her feet. She was pretty sure she had broken something, but her weird, unnatural healing powers had already kicked in. The same couldn't have been said for Thassalin, who was lying in a lump, resting against the one tree that hadn't collapsed under his weight. Nyssi did her best to try and reach Thassalin but she could barely see more than a couple of meters in front of her. Everything was pitch black and engulfed in unholy shadows. And in said shadows, something was screaming and screeching.",
+    "text": "Внизу Ніссі схопилася на ноги. Вона була майже впевнена, що зламала щось, але її дивні, неприродні зцілювальні сили вже почали діяти. Чого не можна було сказати про Тассаліна, який лежав, згорнувшись калачиком, притулившись до єдиного дерева, яке не завалилося під його вагою. Ніссі з усіх сил намагалася дотягнутися до Тассаліна, але вона ледве могла бачити перед собою більше, ніж пару метрів. Навколо була непроглядна темрява і поглинута нечестивими тінями. І в цих тінях щось кричало і верещало.",
+    "spans": [
+      {
+        "text": "неприродні",
+        "label": "MAJOR",
+        "start": 88,
+        "end": 98
+      },
+      {
+        "text": "калачиком",
+        "label": "MAJOR",
+        "start": 200,
+        "end": 209
+      },
+      {
+        "text": "більше, ніж пару метрів",
+        "label": "MAJOR",
+        "start": 371,
+        "end": 394
+      },
+      {
+        "text": "темрява і поглинута нечестивими тінями",
+        "label": "MAJOR",
+        "start": 421,
+        "end": 459
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Зрозуміло, що ні. Ця тварина просто шипіла і намагалася полетіти прямо на Тассаліна. На щастя, незважаючи на свій розмір, Тассалін був достатньо спритним, щоб ухилитися, але Ніссі все ж не втрималася від крику, бо ледве не втратила хватку на надто гладких лусках Тассаліна.",
+    "spans": [
+      {
+        "text": "втратила хватку",
+        "label": "MAJOR",
+        "start": 223,
+        "end": 238
+      },
+      {
+        "text": "Зрозуміло, що ні",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "text": "на надто гладких лусках",
+        "label": "MAJOR",
+        "start": 239,
+        "end": 262
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Below, Nyssi scrambled to her feet. She was pretty sure she had broken something, but her weird, unnatural healing powers had already kicked in. The same couldn't have been said for Thassalin, who was lying in a lump, resting against the one tree that hadn't collapsed under his weight. Nyssi did her best to try and reach Thassalin but she could barely see more than a couple of meters in front of her. Everything was pitch black and engulfed in unholy shadows. And in said shadows, something was screaming and screeching.",
+    "text": "Ниші кинулася на ноги. Вона була майже впевнена, що зламала щось, але її дивні, нелюдські здібності до зцілення вже почали діяти. Те саме не можна було сказати про Тассаліна, який лежав нерухомо, спираючись на єдине дерево, яке не впало під його вагою. Ниші намагалася дістатися до Тассаліна, але ледве могла бачити більше, ніж пару метрів перед собою. Все було в повній темряві, оповите нечестивими тінями. І в тих тінях щось кричало та верещало.",
+    "spans": [
+      {
+        "text": "Ниші",
+        "label": "MINOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Те саме не можна було сказати",
+        "label": "MAJOR",
+        "start": 130,
+        "end": 159
+      },
+      {
+        "text": "Ниші",
+        "label": "MINOR",
+        "start": 253,
+        "end": 257
+      },
+      {
+        "text": "оповите нечестивими тінями",
+        "label": "MAJOR",
+        "start": 380,
+        "end": 406
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Ні, зовсім ні. Створіння просто засичало і намагалося вилетіти прямо на Тассаліна. На щастя, незважаючи на свій розмір, Тассалін був достатньо спритним, щоб уникнути зіткнення, але Ніссі не могла не закричати, майже втративши свій хват на надто гладких лусках Тассаліна.",
+    "spans": [
+      {
+        "text": "засичало",
+        "label": "MINOR",
+        "start": 32,
+        "end": 40
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A click. It had been reruns of this same stream, the day the world was ruined. Dad always found himself turning the channel off when I was unable to tear my eyes away. The somber face he gave me ensured a gut-wrenching feeling transpiring from deep within – I always feel bad when it plays, but it opens the floodgates to so many memories; granted they weren't very good ones. Letting out a sigh, I slowly rose to my feet, gotta get my mind off things. His saddened mood remained, and regularly I’d try to help ease his mood and at least give him a little bit of joy, but today; I’m tired.",
+    "text": "Клік. Це були повтори цього самого потоку, коли світ був зруйнований. Тато завжди вимикав канал, коли я не могла відірвати від нього очей. Його сумне обличчя гарантувало, що я переживала сильні емоції, що виходили з глибини душі – я завжди відчуваю себе погано, коли він транслюється, але він відкриває двері до безлічі спогадів; хоча вони не були дуже хорошими. Зітхнувши, я повільно піднялася на ноги, мені потрібно було відволіктися. Його настрій залишався сумним, і я регулярно намагалася допомогти йому поліпшити настрій і принаймні дати йому трохи радості, але сьогодні я втомилася.",
+    "spans": [
+      {
+        "text": "гарантувало,",
+        "label": "MINOR",
+        "start": 158,
+        "end": 170
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  }
+]

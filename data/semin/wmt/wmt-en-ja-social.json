@@ -1,0 +1,202 @@
+[
+  {
+    "source": "@user38 heard this essay was good and it is",
+    "text": "@user38さんはこのエッセイが良いと聞いていて、その通りです。",
+    "spans": [
+      {
+        "text": "さんは",
+        "label": "MINOR",
+        "start": 7,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Easter weekend: Eastercon 2024 at Telford.",
+    "text": "イースターウィークエンド：テルフォードでのイースターコン2024。",
+    "spans": [
+      {
+        "text": "ウィークエンド",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 12
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "If I can get the file to fucking open. (Fuck One Drive.)",
+    "text": "ファイルがくそったれな開け方をすればいいんだけど。（ファックワンドライブ。）",
+    "spans": [
+      {
+        "text": "が",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 5
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Edit: is now down to 1. Just \"Trimming The Herbs\" left and omg I genuinely don't know if anyone will ever beat it legitimately. It is a ridiculous level.",
+    "text": "編集：今は1つだけになった。「Trimming The Herbs」だけが残っていて、_OMG_本当に誰かが正当にクリアできるのか疑問です。那はただのばかげたレベルです。",
+    "spans": [
+      {
+        "text": "OMG",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 47
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "and sure, these other sources are AWARE that \"war is bad\", but then you're still selling the killing machines as figures and merch. So, like, what are we doing?",
+    "text": "それに、もちろん、この他の情報源は「戦争は悪である」ことを認識しているが、それでも殺戮機器を人形やグッズとして売っている。だから、例えば、私たちは何をすべきなのか？",
+    "spans": [
+      {
+        "text": "悪である",
+        "label": "MAJOR",
+        "start": 21,
+        "end": 25
+      },
+      {
+        "text": "例えば",
+        "label": "MAJOR",
+        "start": 65,
+        "end": 68
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Edit: is now down to 1. Just \"Trimming The Herbs\" left and omg I genuinely don't know if anyone will ever beat it legitimately. It is a ridiculous level.",
+    "text": "現在は1.0となっています「ハーブをトリミング」だけが残っており、本当にこれを正当に打ち負かす者がいるかどうかは本当にわからない。それはとんでもないレベルです。",
+    "spans": [
+      {
+        "text": "現在は1.0",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 6
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Edit: is now down to 1. Just \"Trimming The Herbs\" left and omg I genuinely don't know if anyone will ever beat it legitimately. It is a ridiculous level.",
+    "text": "編集: 残りは 1 つになりました。あとは「ハーブのトリミング」だけですが、本当に誰もこれを正当にクリアできるかどうかわかりません。とんでもないレベルです。",
+    "spans": [
+      {
+        "text": "ハーブのトリミング",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 31
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "If I can get the file to fucking open. (Fuck One Drive.)",
+    "text": "ファイルを開くことができればいいのに。 (One Drive はクソだ。)",
+    "spans": [
+      {
+        "text": "クソ",
+        "label": "MAJOR",
+        "start": 32,
+        "end": 34
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Stumpy gets a stay of coronation.",
+    "text": "スタンピーの戴冠は延期になった。",
+    "spans": [
+      {
+        "text": "戴冠",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Stumpy gets a stay of coronation.",
+    "text": "スタンピーは戴冠式が延期された。",
+    "spans": [
+      {
+        "text": "スタンピーは戴冠式が延期された",
+        "label": "MINOR",
+        "start": 0,
+        "end": 15
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "In general I really like the interplay between the two games. The advantage of shortform stories is that you can \"skip to the good part\", they can be more immediately engrossing and satisfying. The advantage of longform stories is that you can imbue whatever happens with way more emotional weight, you lose the immediacy in exchange for stronger payoffs.",
+    "text": "一般的に、私は2つの試合の相互作用がとても気に入っています。短編小説の利点は、「良い部分にスキップ」できることであり、すぐに夢中にさせて満足させることができます。長編小説の利点は、何が起こってもはるかに感情的な重みを与えることができるということです。より強い見返りと引き換えに即時性を失います。",
+    "spans": [
+      {
+        "text": "試合",
+        "label": "MINOR",
+        "start": 10,
+        "end": 12
+      },
+      {
+        "text": "小説",
+        "label": "MINOR",
+        "start": 32,
+        "end": 34
+      },
+      {
+        "text": "小説",
+        "label": "MINOR",
+        "start": 83,
+        "end": 85
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Stumpy gets a stay of coronation.",
+    "text": "スタンピー君は王冠をかぶる期間が延長される。",
+    "spans": [
+      {
+        "text": "王冠をかぶる期間",
+        "label": "MAJOR",
+        "start": 7,
+        "end": 15
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Stumpy gets a stay of coronation.",
+    "text": "スタンピーは戴冠式の延期を得る。",
+    "spans": [
+      {
+        "text": "戴冠式の",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  }
+]

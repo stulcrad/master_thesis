@@ -1,0 +1,2356 @@
+[
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt konungsríki. Það var skipt í tvennt, Norður og Suður. Norður var konungsríkið án töfrakrafta. Suður var konungsríki fullt af dásamlegum sýnum af mátt og megni. Vegna græðgi Norðurs steyptust konungsríkin í endalausan stríð, þar til Suður bauð upp á friðarsamning.",
+    "spans": [
+      {
+        "text": "Það",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 47
+      },
+      {
+        "text": "mátt og megni",
+        "label": "MAJOR",
+        "start": 176,
+        "end": 189
+      },
+      {
+        "text": "Norðurs",
+        "label": "MAJOR",
+        "start": 204,
+        "end": 211
+      },
+      {
+        "text": "endalausan stríð",
+        "label": "MAJOR",
+        "start": 237,
+        "end": 253
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Ítalskt tími. Cohren hataði að vakna svona snemma. Aðallega vegna þess að það var hans ábyrgð að vekja alla aðra í fyrirtækinu sínu. Hann fór ósýnilega úr rúminu sínu, klæddist bardagafötum sínum, setti á sig árásarvestið sitt og pakkaði sínum eignum úr skápnum sínum, en var varkár með sérstaka litla kassa. Hann bar riffilinn sinn og setti hettuna sína á litla hengi sem tengdist belti hans. Það hafði allt sem þurfti, andlitsgrímur, gleraugu, allt sem þurfti. Eftir að hafa skoðað skotfærin sín, fór hann rólega út úr herberginu, með mýri og ís undir skónum sínum.",
+    "spans": [
+      {
+        "text": "Ítalskt tími",
+        "label": "MINOR",
+        "start": 5,
+        "end": 17
+      },
+      {
+        "text": "fyrirtækinu",
+        "label": "MAJOR",
+        "start": 120,
+        "end": 131
+      },
+      {
+        "text": "ósýnilega",
+        "label": "MINOR",
+        "start": 147,
+        "end": 156
+      },
+      {
+        "text": "sínum eignum",
+        "label": "MAJOR",
+        "start": 243,
+        "end": 255
+      },
+      {
+        "text": "sérstaka litla kassa",
+        "label": "MAJOR",
+        "start": 292,
+        "end": 312
+      },
+      {
+        "text": "hettuna",
+        "label": "MINOR",
+        "start": 347,
+        "end": 354
+      },
+      {
+        "text": "litla hengi",
+        "label": "MINOR",
+        "start": 362,
+        "end": 373
+      },
+      {
+        "text": "andlitsgrímur",
+        "label": "MINOR",
+        "start": 426,
+        "end": 439
+      },
+      {
+        "text": "allt sem þurfti",
+        "label": "MAJOR",
+        "start": 409,
+        "end": 424
+      },
+      {
+        "text": "herberginu",
+        "label": "MINOR",
+        "start": 526,
+        "end": 536
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók léttara úr jakkafötunum sínum og sígarettu úr öðrum. Hann kveikti á henni og tók litla drögin áður en hann opnaði dyrnar aðeins. Á síðustu viku hafði hann að verða skapandi þegar hann vakti karla og konur undir sínu stjórn. Hann hætti að nota fyrirfram stillta vekjarann, helmingurinn af tímanum sem hann aldrei virkaði, þegar allt sem kom úr hátölurunum var létt hiss.",
+    "spans": [
+      {
+        "text": "léttara",
+        "label": "MINOR",
+        "start": 9,
+        "end": 16
+      },
+      {
+        "text": "jakkafötunum",
+        "label": "MINOR",
+        "start": 20,
+        "end": 32
+      },
+      {
+        "text": "drögin",
+        "label": "MINOR",
+        "start": 96,
+        "end": 102
+      },
+      {
+        "text": "Á síðustu viku",
+        "label": "MAJOR",
+        "start": 138,
+        "end": 152
+      },
+      {
+        "text": "skapand",
+        "label": "MAJOR",
+        "start": 173,
+        "end": 180
+      },
+      {
+        "text": "sínu stjórn",
+        "label": "MAJOR",
+        "start": 220,
+        "end": 231
+      },
+      {
+        "text": "helmingurinn ",
+        "label": "MAJOR",
+        "start": 281,
+        "end": 294
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel var greinilega ekki sammála Nyssi, hann leit síður út fyrir að vera svartur en venjulega og klærnar höfðu grafið sig í bakið á Þassalín þannig að honum hafði blætt úr Þrakí en Þassalín virtist greinilega vera alveg sama. Að því sögðu hafði Þassalín áttað sig á að hann hafði hrætt nýju vini sína og fundið rjóður til að lenda í.",
+    "spans": [
+      {
+        "text": "síður út fyrir að",
+        "label": "MAJOR",
+        "start": 51,
+        "end": 68
+      },
+      {
+        "text": "grafið sig ",
+        "label": "MAJOR",
+        "start": 112,
+        "end": 123
+      },
+      {
+        "text": "afði blætt úr Þrakí",
+        "label": "MAJOR",
+        "start": 159,
+        "end": 178
+      },
+      {
+        "text": "fundið",
+        "label": "MAJOR",
+        "start": 305,
+        "end": 311
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "04.30 að ítölskum tíma. Cohren hataði að vakna svona snemma. Aðallega vegna þess að það var á hans ábyrgð að vekja alla aðra í herfylkinu. Hann steig hljóðlega úr kojunni, klæddi sig í hermannafötin, setti á sig hjálminn og pakkaði niður eigum sínum úr skápnum, passaði sig að fara varlega með litla kassa. Hann hengdi riffilinn yfir axlirnar og setti hjálminn á lítið krók sem var festur við beltið. Á honum var allur búnaðurinn, öndunargríman, hlífðargleraugun, allt sem til þurfti. Eftir að hafa athugað skotfærapokana, fór hann hljóðlega út úr herstöðinni, þar sem drulla og ís kraumaði undir skónum hans.",
+    "spans": [
+      {
+        "text": "ítölskum",
+        "label": "MINOR",
+        "start": 9,
+        "end": 17
+      },
+      {
+        "text": "herfylkinu",
+        "label": "MAJOR",
+        "start": 127,
+        "end": 137
+      },
+      {
+        "text": "litla kassa",
+        "label": "MAJOR",
+        "start": 294,
+        "end": 305
+      },
+      {
+        "text": "axlirnar",
+        "label": "MAJOR",
+        "start": 334,
+        "end": 342
+      },
+      {
+        "text": "lítið ",
+        "label": "MAJOR",
+        "start": 363,
+        "end": 369
+      },
+      {
+        "text": "herstöðinni",
+        "label": "MINOR",
+        "start": 548,
+        "end": 559
+      },
+      {
+        "text": "kraumaði ",
+        "label": "MINOR",
+        "start": 582,
+        "end": 591
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók eldspýtu úr vasa á jakka sínum og sígarettu úr hinum. Hann kveikti í henni, tók djúpan smók áður en hann opnaði dyrnar örlítið. Síðastliðna viku hafði hann þurft að vera hugmyndaríkur við að vekja karlmennina og konurnar sem voru undir hans stjórn. Hann hætti að nota fyrirfram stillta vekjaraklukku sína, hún virkaði ekki helming tímans og allt sem heyrðist úr hátalarunum var lítilsháttar suð.",
+    "spans": [
+      {
+        "text": "eldspýtu",
+        "label": "MINOR",
+        "start": 9,
+        "end": 17
+      },
+      {
+        "text": "sína",
+        "label": "MINOR",
+        "start": 309,
+        "end": 313
+      },
+      {
+        "text": "allt sem ",
+        "label": "MAJOR",
+        "start": 350,
+        "end": 359
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt ríki. Það var skipt í tvennt, norður og suður. Í norðri var ríki án galdra. Í suðri var ríki fullt af stórkostlegum kraftasýningum. Vegna græðgi norðursins lentu ríkin tvö í endalausu stríði, þar til suðrið bauð vopnahlé.",
+    "spans": [
+      {
+        "text": "Það",
+        "label": "MAJOR",
+        "start": 37,
+        "end": 40
+      },
+      {
+        "text": "kraftasýningum",
+        "label": "MINOR",
+        "start": 147,
+        "end": 161
+      },
+      {
+        "text": "bauð vopnahlé.",
+        "label": "MAJOR",
+        "start": 238,
+        "end": 252
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Itania tími. Cohren hataði að vakna svona snemma. Aðallega vegna þess að það var á hans ábyrgð að vekja alla aðra í fyrirtækinu sínu. Hann steig hljóðlega upp úr kojunni sinni, klæddi sig í bardagaþreyturnar, fór í árásarvestið og pakkaði saman eigur sínar úr skápnum sínum, og fór varlega með sérstakan lítinn kassa. Hann greip riffilinn og setti hjálminn á lítinn krók sem tengdur var við beltið. Það var með alla festingu, öndunarvél, hlífðargleraugu, allt sem þurfti. Eftir að hafa skoðað ammo pokana sína, gekk hann hljóðlega út úr herberginu, leðja og ís squelching undir stígvélum hans.",
+    "spans": [
+      {
+        "text": " Itania tími",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 16
+      },
+      {
+        "text": "fyrirtækinu",
+        "label": "MAJOR",
+        "start": 121,
+        "end": 132
+      },
+      {
+        "text": "bardagaþreyturnar",
+        "label": "MINOR",
+        "start": 195,
+        "end": 212
+      },
+      {
+        "text": "árásarvestið",
+        "label": "MAJOR",
+        "start": 220,
+        "end": 232
+      },
+      {
+        "text": "eigur",
+        "label": "MAJOR",
+        "start": 250,
+        "end": 255
+      },
+      {
+        "text": "sínar",
+        "label": "MAJOR",
+        "start": 256,
+        "end": 261
+      },
+      {
+        "text": "varlega með sérstakan",
+        "label": "MAJOR",
+        "start": 287,
+        "end": 308
+      },
+      {
+        "text": "Það ",
+        "label": "MAJOR",
+        "start": 404,
+        "end": 408
+      },
+      {
+        "text": "alla festingu",
+        "label": "MAJOR",
+        "start": 416,
+        "end": 429
+      },
+      {
+        "text": "öndunarvél",
+        "label": "MINOR",
+        "start": 431,
+        "end": 441
+      },
+      {
+        "text": "ammo pokana",
+        "label": "MAJOR",
+        "start": 498,
+        "end": 509
+      },
+      {
+        "text": "squelching",
+        "label": "MINOR",
+        "start": 566,
+        "end": 576
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók kveikjara úr jakkavasanum og vindil úr hinum. Þegar hann kveikti í því tók hann smá tog áður en hann opnaði hurðina örlítið. Síðustu vikuna þurfti hann að vera skapandi þegar hann vakti menn og konur undir hans stjórn. Hann hætti að nota forstilltu vekjaraklukkuna, helminginn af þeim tíma sem hún virkaði aldrei, þegar allt sem kom frá hátölurunum var létt hvæs.",
+    "spans": [
+      {
+        "text": "vindil",
+        "label": "MAJOR",
+        "start": 38,
+        "end": 44
+      },
+      {
+        "text": " því ",
+        "label": "MAJOR",
+        "start": 75,
+        "end": 80
+      },
+      {
+        "text": "tog",
+        "label": "MINOR",
+        "start": 93,
+        "end": 96
+      },
+      {
+        "text": "þurfti hann",
+        "label": "MAJOR",
+        "start": 149,
+        "end": 160
+      },
+      {
+        "text": "menn og konur",
+        "label": "MAJOR",
+        "start": 195,
+        "end": 208
+      },
+      {
+        "text": "helminginn af þeim tíma sem hún virkaði aldrei",
+        "label": "MAJOR",
+        "start": 275,
+        "end": 321
+      },
+      {
+        "text": "létt",
+        "label": "MAJOR",
+        "start": 362,
+        "end": 366
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "\"Flugið mitt er mjög mismunandi frá því að vera skyndilega dreginn burt af risastórum, bleikum dreka!\"",
+    "spans": [
+      {
+        "text": "Flugið mitt er mjög mismunandi",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 31
+      },
+      {
+        "text": "frá því",
+        "label": "MAJOR",
+        "start": 32,
+        "end": 39
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel var greinilega ekki sammála Nyssi, hann lét minna svart út en venjulega og klórnar hans höfðu grafið sig svo djúpt í bakið á Thassalin að hann hafði látið Thraki blæða, en Thassalin virtist greinilega ekki hafa áhuga á því. Það að segja, Thassalin hafði tekið eftir að hann hafði hrætt nýju vinina sína og fann sér ljóst svæði til að lendingu.",
+    "spans": [
+      {
+        "text": "lét minna svart út ",
+        "label": "MINOR",
+        "start": 46,
+        "end": 65
+      },
+      {
+        "text": "klórna",
+        "label": "MAJOR",
+        "start": 81,
+        "end": 87
+      },
+      {
+        "text": "Thraki ",
+        "label": "MAJOR",
+        "start": 161,
+        "end": 168
+      },
+      {
+        "text": "hafa áhuga á því",
+        "label": "MINOR",
+        "start": 212,
+        "end": 228
+      },
+      {
+        "text": "Það að segja",
+        "label": "MINOR",
+        "start": 230,
+        "end": 242
+      },
+      {
+        "text": "jóst",
+        "label": "MINOR",
+        "start": 322,
+        "end": 326
+      },
+      {
+        "text": "l",
+        "label": "MINOR",
+        "start": 321,
+        "end": 322
+      },
+      {
+        "text": "að lending",
+        "label": "MAJOR",
+        "start": 337,
+        "end": 347
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "Klukkan 0430 að Itania-tíma. Cohren hataði að vakna svona snemma. Aðallega vegna þess að það var hans ábyrgð að vekja alla hina í fyrirtækinu. Hann stígur hljóðlega út úr rúminu, klæddist bardagafötunum, kastaði yfir sig árásarvestinu og pakkadi saman eigur sínar úr skápnum, sérstaklega varlegur með einn litinn kassa. Hann setti byssuna yfir öxlina og festi hjálminn á litinn krók sem tengdist belti hans. Allt var á honum, andgríman, gleraugun, allt sem þurfti. Eftir að hafa athugað skotfærahylkina, gekk hann hljóðlega út úr hermannakofanum, leir og ís skvettu undan stígvélunum.",
+    "spans": [
+      {
+        "text": "var hans á",
+        "label": "MAJOR",
+        "start": 93,
+        "end": 103
+      },
+      {
+        "text": "fyrirtækinu",
+        "label": "MAJOR",
+        "start": 130,
+        "end": 141
+      },
+      {
+        "text": "stígur ",
+        "label": "MAJOR",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "text": "rúminu,",
+        "label": "MAJOR",
+        "start": 171,
+        "end": 178
+      },
+      {
+        "text": "pakkadi ",
+        "label": "MAJOR",
+        "start": 238,
+        "end": 246
+      },
+      {
+        "text": "eigur sínar",
+        "label": "MAJOR",
+        "start": 252,
+        "end": 263
+      },
+      {
+        "text": "sérstaklega varlegu",
+        "label": "MINOR",
+        "start": 276,
+        "end": 295
+      },
+      {
+        "text": " litinn",
+        "label": "MAJOR",
+        "start": 305,
+        "end": 312
+      },
+      {
+        "text": "litinn ",
+        "label": "MAJOR",
+        "start": 371,
+        "end": 378
+      },
+      {
+        "text": "tengdist",
+        "label": "MAJOR",
+        "start": 387,
+        "end": 395
+      },
+      {
+        "text": "andgríman",
+        "label": "MINOR",
+        "start": 426,
+        "end": 435
+      },
+      {
+        "text": "skotfærahylkina",
+        "label": "MINOR",
+        "start": 487,
+        "end": 502
+      },
+      {
+        "text": "hermannakofanum",
+        "label": "MAJOR",
+        "start": 530,
+        "end": 545
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók kveikjara úr vasanum á jakkanum og sígarettu úr hinum. Hann kveikti á henni, tók lítinn dragaður áður en hann opnaði dyrnar aðeins. Yfir síðustu viku þurfti hann að vera frumlegur þegar hann vakti karlmenn og konur undir stjórn sinni. Hann hætti að nota forstillta vökuvekjarann, hann virkaði hálfum sinnum ekki, þegar eina sem kom úr hátölurunum var létt suð.",
+    "spans": [
+      {
+        "text": "dragaður",
+        "label": "MINOR",
+        "start": 97,
+        "end": 105
+      },
+      {
+        "text": " Yfir síðustu viku",
+        "label": "MAJOR",
+        "start": 140,
+        "end": 158
+      },
+      {
+        "text": "karlmenn og konu",
+        "label": "MAJOR",
+        "start": 206,
+        "end": 222
+      },
+      {
+        "text": "vökuvekjarann,",
+        "label": "MINOR",
+        "start": 274,
+        "end": 288
+      },
+      {
+        "text": "hálfum sinnum ekk",
+        "label": "MINOR",
+        "start": 302,
+        "end": 319
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "„Já, aðgerðin Eldstormur,“ svaraði Cohren. „Við héldum að þetta yrði búið í nokkra vikur, en… við undumetum þá.“",
+    "spans": [
+      {
+        "text": " í nokkra ",
+        "label": "MAJOR",
+        "start": 73,
+        "end": 83
+      },
+      {
+        "text": "undumetum ",
+        "label": "MINOR",
+        "start": 98,
+        "end": 108
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "„Já, Firestorm-aðgerðin,“ svaraði Cohren. „Við héldum að þetta myndi klárast eftir nokkrar vikur, en...við vanmetum þá“",
+    "spans": [
+      {
+        "text": "Firestorm-",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 15
+      },
+      {
+        "text": "eftir nokkrar vikur,",
+        "label": "MAJOR",
+        "start": 77,
+        "end": 97
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 ítalíutíma. Cohren hafði óráttað sig við að vakna svona snemma. Aðallega því að hann var ábyrgðarþoli fyrir að vekja alla aðra í fyrirtækinu sínu. Hann gekk út úr rúminu sínu á hljóðlausan hátt, hann klæddi sig í herklæði, hann setti á sig árásarvesti, og pakkaði saman eigur sínar úr skáp sínum, var varkár um sérstakan litla kassa. Hann setti riffla sína á herbergi og setti hjálman á smá hök á belti sínu. Það hafði allt sitt, andhlutfall, goggil, allt það sem þurfti. Eftir að hafa skoðað byssupokana sína, hann gekk út úr barakkinn, mýr og ís kvökuðu undir stígvélum hans.",
+    "spans": [
+      {
+        "text": " ítalíut",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 12
+      },
+      {
+        "text": "óráttað sig",
+        "label": "MINOR",
+        "start": 30,
+        "end": 41
+      },
+      {
+        "text": "þoli ",
+        "label": "MINOR",
+        "start": 102,
+        "end": 107
+      },
+      {
+        "text": "fyrirtækinu",
+        "label": "MINOR",
+        "start": 134,
+        "end": 145
+      },
+      {
+        "text": "gekk út úr r",
+        "label": "MINOR",
+        "start": 157,
+        "end": 169
+      },
+      {
+        "text": "herklæði",
+        "label": "MINOR",
+        "start": 218,
+        "end": 226
+      },
+      {
+        "text": "aman eigur sínar",
+        "label": "MAJOR",
+        "start": 270,
+        "end": 286
+      },
+      {
+        "text": "úr skáp",
+        "label": "MAJOR",
+        "start": 287,
+        "end": 294
+      },
+      {
+        "text": "varkár um sérstakan",
+        "label": "MAJOR",
+        "start": 306,
+        "end": 325
+      },
+      {
+        "text": "setti riffla sína á herbergi ",
+        "label": "MINOR",
+        "start": 344,
+        "end": 373
+      },
+      {
+        "text": " hjálman ",
+        "label": "MAJOR",
+        "start": 381,
+        "end": 390
+      },
+      {
+        "text": "hök",
+        "label": "MAJOR",
+        "start": 396,
+        "end": 399
+      },
+      {
+        "text": "andhlutfa",
+        "label": "MINOR",
+        "start": 435,
+        "end": 444
+      },
+      {
+        "text": "oggi",
+        "label": "MINOR",
+        "start": 449,
+        "end": 453
+      },
+      {
+        "text": "byssupokana",
+        "label": "MINOR",
+        "start": 498,
+        "end": 509
+      },
+      {
+        "text": "mýr",
+        "label": "MINOR",
+        "start": 543,
+        "end": 546
+      },
+      {
+        "text": "kvökuðu ",
+        "label": "MINOR",
+        "start": 553,
+        "end": 561
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók ljósari úr vinstri vasaflokki jakkaföt og sígarettu úr hinni. Þegar hann hafði lýst henni, tók hann smá drag áður en hann opnaði dyrnar létt. Undanfarin viku hafði hann þurft að finna upp nýjar leiðir til að vekja mennina og konurnar undir sér. Hann hætti að nota forskilgreindan víkuróf, þar sem hann fékk aldrei neitt annað en léttan hvess í hljóðtækjum, og það var því aðeins hálftíma að því virkaði.",
+    "spans": [
+      {
+        "text": "ljósari úr vinstri vasaflokk",
+        "label": "MINOR",
+        "start": 9,
+        "end": 37
+      },
+      {
+        "text": "jakkaföt",
+        "label": "MINOR",
+        "start": 39,
+        "end": 47
+      },
+      {
+        "text": "i.",
+        "label": "MAJOR",
+        "start": 68,
+        "end": 70
+      },
+      {
+        "text": "hi",
+        "label": "MAJOR",
+        "start": 64,
+        "end": 66
+      },
+      {
+        "text": "ýst henni",
+        "label": "MINOR",
+        "start": 89,
+        "end": 98
+      },
+      {
+        "text": "drag á",
+        "label": "MINOR",
+        "start": 113,
+        "end": 119
+      },
+      {
+        "text": "lét",
+        "label": "MINOR",
+        "start": 145,
+        "end": 148
+      },
+      {
+        "text": "ndir sér",
+        "label": "MAJOR",
+        "start": 244,
+        "end": 252
+      },
+      {
+        "text": "Undanfarin viku",
+        "label": "MAJOR",
+        "start": 151,
+        "end": 166
+      },
+      {
+        "text": "orskilgreindan víkuróf,",
+        "label": "MINOR",
+        "start": 274,
+        "end": 297
+      },
+      {
+        "text": "hvess",
+        "label": "MINOR",
+        "start": 345,
+        "end": 350
+      },
+      {
+        "text": "ðeins hálftíma ",
+        "label": "MINOR",
+        "start": 382,
+        "end": 397
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt ríki. Það var skipt í tvennt, Norður og Suður. Í Norðri, ómagískt ríki. Í Suðri, ríki fullt af fantasískum sýningum á valdi. Vegna græðginnar Norðurs stríddust ríkin í óendanlegri stríði, þangað til Suður bauð frið.",
+    "spans": [
+      {
+        "text": "Það",
+        "label": "MAJOR",
+        "start": 37,
+        "end": 40
+      },
+      {
+        "text": "ómagískt ",
+        "label": "MINOR",
+        "start": 88,
+        "end": 97
+      },
+      {
+        "text": "fantasískum",
+        "label": "MINOR",
+        "start": 126,
+        "end": 137
+      },
+      {
+        "text": "sýningum á valdi",
+        "label": "MINOR",
+        "start": 138,
+        "end": 154
+      },
+      {
+        "text": "græðginnar Norðurs",
+        "label": "MAJOR",
+        "start": 162,
+        "end": 180
+      },
+      {
+        "text": "stríddust",
+        "label": "MINOR",
+        "start": 181,
+        "end": 190
+      },
+      {
+        "text": "óendanlegri stríð",
+        "label": "MAJOR",
+        "start": 199,
+        "end": 216
+      },
+      {
+        "text": "bauð",
+        "label": "MAJOR",
+        "start": 236,
+        "end": 240
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt ríki. Það var skipt í tvennt, norður og suður. Í norðri, hið töfralausa ríki. Í suðrinu, ríki fullt af ævintýralegum valdasýningum. Vegna græðgi norðursins tókust ríkin á í stríðsátökum þar til suðurhlutinn bauð vopnahlé.",
+    "spans": [
+      {
+        "text": "Það var ",
+        "label": "MAJOR",
+        "start": 37,
+        "end": 45
+      },
+      {
+        "text": "valdasýningum",
+        "label": "MINOR",
+        "start": 148,
+        "end": 161
+      },
+      {
+        "text": "tókust ríkin á í stríðsátökum",
+        "label": "MAJOR",
+        "start": 187,
+        "end": 216
+      },
+      {
+        "text": "bauð",
+        "label": "MAJOR",
+        "start": 238,
+        "end": 242
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel virtist ekki vera sammála Nyssi, hann leit minna út fyrir að vera svartur en venjulega og klær hans höfðu stungið sig í bakið á Thassalin þannig að hann blæddi, en Thassalin virtist ekki hafa tekið eftir þessu. Þrátt fyrir það hafði Thassalin áttað sig á því að hann hafði hrætt nýja vini sína og fundið skjól til að lenda í.",
+    "spans": [
+      {
+        "text": "virtist ekki vera ",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 24
+      },
+      {
+        "text": "hann leit minna út fyrir að vera svartur en venjulega",
+        "label": "MAJOR",
+        "start": 39,
+        "end": 92
+      },
+      {
+        "text": "stungið sig",
+        "label": "MAJOR",
+        "start": 112,
+        "end": 123
+      },
+      {
+        "text": "hann blæddi",
+        "label": "MAJOR",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "text": "ekki hafa tekið eftir þessu",
+        "label": "MAJOR",
+        "start": 188,
+        "end": 215
+      },
+      {
+        "text": " nýja vini",
+        "label": "MAJOR",
+        "start": 284,
+        "end": 294
+      },
+      {
+        "text": "skjól",
+        "label": "MAJOR",
+        "start": 310,
+        "end": 315
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ívórí var líka, á sérstakan hátt þeirra. Þegar Ívórí komst út sem nonbinary, þótti heimurinn breytast líka. Þeim var gefið vinnsla sem myndi þurfa að eyða mestum tíma einmana, sem refsing fyrir að vera ólíkt.",
+    "spans": [
+      {
+        "text": "Ívórí var líka, á sérstakan hátt þeirra",
+        "label": "MINOR",
+        "start": 0,
+        "end": 39
+      },
+      {
+        "text": "í komst út",
+        "label": "MINOR",
+        "start": 51,
+        "end": 61
+      },
+      {
+        "text": "þótti heimurinn breytas",
+        "label": "MINOR",
+        "start": 77,
+        "end": 100
+      },
+      {
+        "text": "vinnsla",
+        "label": "MINOR",
+        "start": 123,
+        "end": 130
+      },
+      {
+        "text": "a mestum tíma einmana",
+        "label": "MINOR",
+        "start": 153,
+        "end": 174
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Ítalíutími. Cohren hataði að vakna svona snemma. Aðallega vegna þess að það var hans ábyrgð að vekja aðra í fyrirtækinu. Hann gekk hljóðlega út úr herberginu sínu og klæddi sig í bardagabúninginn, setti á sig skotvopnsvestið og pakkaði eigum sínum úr skápnum, gaf sér góðan tíma með sérstaka litla kassa. Hann bar riffilinn sinn og setti hjálm sinn á lítinn krók sem var tengdur við beltið. Það hafði allt sitt festingar, andlitsgrímu, gleraugu, allt sem þurfti. Eftir að hafa athugað skammbyssupokana sína gekk hann hljóðlega út úr herbúðunum, drullu og ís skvamlaði undir skónum hans.",
+    "spans": [
+      {
+        "text": " fyrirtækinu",
+        "label": "MINOR",
+        "start": 112,
+        "end": 124
+      },
+      {
+        "text": "sérstaka litla kassa",
+        "label": "MAJOR",
+        "start": 288,
+        "end": 308
+      },
+      {
+        "text": "bar",
+        "label": "MINOR",
+        "start": 315,
+        "end": 318
+      },
+      {
+        "text": "sitt f",
+        "label": "MINOR",
+        "start": 411,
+        "end": 417
+      },
+      {
+        "text": "skammbyssupokana ",
+        "label": "MINOR",
+        "start": 490,
+        "end": 507
+      },
+      {
+        "text": "drullu og ís skvamlaði",
+        "label": "MINOR",
+        "start": 550,
+        "end": 572
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Úr jakkavasanum tók hann sígarettu og úr hinni sígarettupakka. Hann kveikti á henni og tók litla tuggu áður en hann opnaði hurðina örlítið. Í síðustu viku hafði hann þurft að hugsa upp nýjar leiðir til að vekja menn og konur undir hans stjórn. Hann hætti að nota vekjaraklukkuna, helmingurinn af tímanum virkaði aldrei, því það sem kom frá hátölurunum var bara létt hvísl.",
+    "spans": [
+      {
+        "text": "ígarettupakka",
+        "label": "MINOR",
+        "start": 48,
+        "end": 61
+      },
+      {
+        "text": "sígarettu ",
+        "label": "MINOR",
+        "start": 25,
+        "end": 35
+      },
+      {
+        "text": " tuggu á",
+        "label": "MINOR",
+        "start": 96,
+        "end": 104
+      },
+      {
+        "text": "hurðina",
+        "label": "MAJOR",
+        "start": 123,
+        "end": 130
+      },
+      {
+        "text": "helmingurinn af tímanum virkaði aldrei,",
+        "label": "MINOR",
+        "start": 280,
+        "end": 319
+      },
+      {
+        "text": "hvísl",
+        "label": "MAJOR",
+        "start": 366,
+        "end": 371
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt konungsríki. Það var skipt í tvennt, norður og suður. Norðurríkið var án galdra en suðurríkið var fullt af ótrúlegum máttarsýningum. Vegna ágirndar norðurríkisins háðu ríkin endalaust stríð, þar til suðurríkið bauð fram friðarsamning.",
+    "spans": [
+      {
+        "text": "Það ",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 48
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "Klukkan 04:30 að Itania tíma. Cohren hataði að vakna svona snemma. Aðallega vegna þess að það var á hans ábyrgð að vekja alla aðra í herdeildinni sinni. Hann steig hljóðlega út úr kojunni, klæddist bardagabúningnum, fór í árásarvestið og pakkaði saman eigum sínum úr skápnum, og gætti sérstaklega að litlum kassa. Hann hengdi riffilinn á öxlina og festi hjálminn á krók á beltinu. Hann var með öllum fylgihlutum, öndunargrímunni, hlífðargleraugunum, öllu sem þurfti. Eftir að hafa athugað skotfæravasana gekk hann hljóðlega út úr herberginu, leðja og ís slettist undir stígvélunum.",
+    "spans": [
+      {
+        "text": "Hann",
+        "label": "MAJOR",
+        "start": 381,
+        "end": 385
+      },
+      {
+        "text": "slettis",
+        "label": "MAJOR",
+        "start": 554,
+        "end": 561
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók kveikjara úr jakkavasanum og sígarettu úr hinum. Hann kveikti í henni og tók stutt drag áður en hann opnaði hurðina aðeins. Síðustu vikuna hafði hann þurft að vera skapandi þegar kom að því að vekja hermennina undir sinni stjórn. Hann hætti að nota forstillta vekjaraklukkuna, sem virkaði varla helminginn af tímanum, þegar eina hljóðið úr hátölurunum var létt hvæs.",
+    "spans": [
+      {
+        "text": "utt drag",
+        "label": "MAJOR",
+        "start": 88,
+        "end": 96
+      },
+      {
+        "text": " hurðina",
+        "label": "MAJOR",
+        "start": 116,
+        "end": 124
+      },
+      {
+        "text": "helminginn af tímanum",
+        "label": "MAJOR",
+        "start": 304,
+        "end": 325
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "\"Flugið mitt er alveg öðruvísi en að vera skyndilega dreginn af stórum, rauðum dráki!\"",
+    "spans": [
+      {
+        "text": " alveg öðruvís",
+        "label": "MINOR",
+        "start": 15,
+        "end": 29
+      },
+      {
+        "text": "áki",
+        "label": "MINOR",
+        "start": 81,
+        "end": 84
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel var greinilega ekki sammála Nyssi, hann leit minna út fyrir að vera svartur en venjulega og klórnir hans höfðu grafið í bakið á Thassalin að því marki að hann hafði látið Thraki blæða, en Thassalin virðist greinilega ekki hafa haft áhyggjur af því. Það sem sagt er, Thassalin hafði áttað sig á að hann hafði hrætt nýja vini sína og fundið opna rými til að landa í.",
+    "spans": [
+      {
+        "text": "klórni",
+        "label": "MAJOR",
+        "start": 98,
+        "end": 104
+      },
+      {
+        "text": "grafið í bakið á Thassalin",
+        "label": "MAJOR",
+        "start": 117,
+        "end": 143
+      },
+      {
+        "text": "aft áhyggjur af því",
+        "label": "MAJOR",
+        "start": 234,
+        "end": 253
+      },
+      {
+        "text": "Það sem sagt er,",
+        "label": "MAJOR",
+        "start": 255,
+        "end": 271
+      },
+      {
+        "text": "nýja vini s",
+        "label": "MAJOR",
+        "start": 320,
+        "end": 331
+      },
+      {
+        "text": "opna rými til að landa í",
+        "label": "MAJOR",
+        "start": 345,
+        "end": 369
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt konungsríki. Það var skipt í tvennt, Norður og Suður. Í Norðurríkinu var konungsríkið án yfirnáttúrulegs valds. Í Suðurríkinu var konungsríki fullt af undarlegum töfrum valds. Sökum græðgi Norðurríkisins áttu ríkin í stöðugum stríðsátökum, þar til Suðurríkið boðaði vopnahlé.",
+    "spans": [
+      {
+        "text": "Það va",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 50
+      },
+      {
+        "text": "yfirnáttúrulegs valds",
+        "label": "MAJOR",
+        "start": 120,
+        "end": 141
+      },
+      {
+        "text": "undarlegum ",
+        "label": "MAJOR",
+        "start": 182,
+        "end": 193
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory var það líka, á sinn sérstaka hátt. Þegar Ivory kom út sem kynsegin virtist heimurinn líka breytast. Þeir fengu störf sem myndu gera þeim kleift að eyða tíma einn í mestum tíma, sem refsingu fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": " Þeir",
+        "label": "MAJOR",
+        "start": 106,
+        "end": 111
+      },
+      {
+        "text": "einn í mestum tíma",
+        "label": "MAJOR",
+        "start": 164,
+        "end": 182
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Í Frostfell var ekki alltaf eitt konungdæmi. Það var skipt í tvennt, Norður og Suður. Í Norðri var ókunnugt konungdæmi. Í Suðri var konungdæmi fullt af furðulegum sýningum á valdi. Vegna græðgi Norðursins skullu konungdæmin tvö saman í stöðugri styrjöld, þar til Suðrið bauð upp á vopnahlé.",
+    "spans": [
+      {
+        "text": "ókunnugt ",
+        "label": "MINOR",
+        "start": 99,
+        "end": 108
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ívó var það líka, á sinn hátt. Þegar Ívó kom út sem tvíkynhneigður virtist heimurinn breytast líka. Þeim voru gefin störf sem gerðu það að verkum að þau eyddu mestum tíma í einrúmi, sem refsing fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "Ívó",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Ívó ",
+        "label": "MAJOR",
+        "start": 37,
+        "end": 41
+      },
+      {
+        "text": "tvíkynhneigður",
+        "label": "MINOR",
+        "start": 52,
+        "end": 66
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt konungsríki. Það var skipt í tvennt, Norður og Suður. Í Norðri, konungsríkið án máttar. Suður, konungsríki fullt af fjölkynngjum sýningum af mátt. Vegna girndar Norðurs, klásuðu tveimur ríkjunum í óendanlegri stríði, þar til Suður bauð upp á vopnahlé.",
+    "spans": [
+      {
+        "text": "Það",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 47
+      },
+      {
+        "text": "máttar",
+        "label": "MAJOR",
+        "start": 111,
+        "end": 117
+      },
+      {
+        "text": "fjölkynngjum sýningum af mátt",
+        "label": "MAJOR",
+        "start": 147,
+        "end": 176
+      },
+      {
+        "text": "klásuðu tveimur ríkjunum í óendanlegri stríði",
+        "label": "MAJOR",
+        "start": 201,
+        "end": 246
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel var greinilega ekki sammála Nyssi, hann leit minna svartur út en venjulega og klærnar hans höfðu grafið í bakið á Thassalin að því marki að hann hafði látið Thraki blæða, en Thassalin virtist greinilega vera sama. Sem sagt, Thassalin hafði áttað sig á að hann hafði hrædd nýju vini sína og fundið rjóður til að lenda í.",
+    "spans": [
+      {
+        "text": "leit minna svartur ú",
+        "label": "MAJOR",
+        "start": 46,
+        "end": 66
+      },
+      {
+        "text": "grafið",
+        "label": "MAJOR",
+        "start": 103,
+        "end": 109
+      },
+      {
+        "text": "að því marki að hann hafði látið Thraki blæða",
+        "label": "MAJOR",
+        "start": 130,
+        "end": 175
+      },
+      {
+        "text": "hrædd",
+        "label": "MAJOR",
+        "start": 272,
+        "end": 277
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory var líka á sinn sérstaka hátt. Þegar Ivory kom út sem tvíkynhneigð, virtist heimurinn líka breytast. Þau fengu störfin sem myndu gera þeim kleift að eyða mestum tíma sínum einir, sem refsingu fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "Ivory var líka á sinn sérstaka hátt",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 35
+      },
+      {
+        "text": "tvíkynhneigð",
+        "label": "MINOR",
+        "start": 60,
+        "end": 72
+      },
+      {
+        "text": "gera þeim kleif",
+        "label": "MINOR",
+        "start": 135,
+        "end": 150
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "„Já, Operation Firestorm,“ svaraði Cohren. „Við héldum að þetta yrði búið á nokkrum vikum, en…við vanmetum þá“",
+    "spans": [
+      {
+        "text": "Operation Firestorm",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "04:30 Ítalskur tími. Cohren hataði að vakna svona snemma. Meginlega vegna þess að það var hans ábyrgð að vekja alla hina í hópnum. Hljóðlaust gekk hann út úr herberginu sínu, setti á sig bardagafatigues, setti á sig herta vesti og pakkaði dótinu sínu úr skápnum, með sérstökum litlum kassa. Hann setti riffilinn sinn á herðapinn og setti hjálm sinn á lítinn hring sem var tengdur belti hans. Það hafði allt sitt festingar, andardráttarvél, græjur, allt sem þurfti. Eftir að hafa skoðað skotfærapoka sína gekk hann hljóðlega út úr herberginu, vatn og ís skríkjandi undir skónum hans.",
+    "spans": [
+      {
+        "text": "Ítalskur",
+        "label": "MINOR",
+        "start": 6,
+        "end": 14
+      },
+      {
+        "text": "Meginlega",
+        "label": "MAJOR",
+        "start": 58,
+        "end": 67
+      },
+      {
+        "text": "r h",
+        "label": "MAJOR",
+        "start": 88,
+        "end": 91
+      },
+      {
+        "text": "bardagafatigues",
+        "label": "MINOR",
+        "start": 187,
+        "end": 202
+      },
+      {
+        "text": "herta vesti",
+        "label": "MINOR",
+        "start": 216,
+        "end": 227
+      },
+      {
+        "text": "herðapin",
+        "label": "MINOR",
+        "start": 319,
+        "end": 327
+      },
+      {
+        "text": "ar tengdur be",
+        "label": "MAJOR",
+        "start": 369,
+        "end": 382
+      },
+      {
+        "text": "t sitt",
+        "label": "MAJOR",
+        "start": 405,
+        "end": 411
+      },
+      {
+        "text": "andardráttarvé",
+        "label": "MINOR",
+        "start": 423,
+        "end": 437
+      },
+      {
+        "text": "græju",
+        "label": "MINOR",
+        "start": 440,
+        "end": 445
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók sígarettu úr jakkavasanum og sígarettu úr hinum vasanum og kveikti á henni. Síðan opnaði hann dyrnar örlítið. Í síðustu viku hafði hann þurft að hugsa út fyrir kassann þegar hann vakti mennina og konurnar undir sinni stjórn. Hann hafði hætt að nota vakningarklukkuna, sem virkaði sjaldnast, og í staðinn notaði hann hljóðmerki í talstöð.",
+    "spans": [
+      {
+        "text": "sígarettu",
+        "label": "MINOR",
+        "start": 9,
+        "end": 18
+      },
+      {
+        "text": "vakningarklukkuna",
+        "label": "MAJOR",
+        "start": 258,
+        "end": 275
+      },
+      {
+        "text": " og í staðinn notaði hann hljóðmerki í talstöð",
+        "label": "MINOR",
+        "start": 299,
+        "end": 345
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "„Flugferðin mín er allt öðruvísi en að vera skyndilega dregin niður af risastórri, bleikri dreku!“",
+    "spans": [
+      {
+        "text": "risastórri, bleikri dreku",
+        "label": "MAJOR",
+        "start": 71,
+        "end": 96
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel var greinilega ekki sammála Nyssi, hann leit minna svartur út en venjulega og klær hans höfðu grafið sig inn í bakið á Thassalin það djúpt að hann hafði látið Thraki blæða, en Thassalin virtist greinilega ekki hafa áhyggjur af því. Thassalin hafði hins vegar áttað sig á því að hann hafði hrætt nýju vinina sína og fundið skjólgott svæði til að lenda á.",
+    "spans": [
+      {
+        "text": "leit minna svartur ú",
+        "label": "MAJOR",
+        "start": 46,
+        "end": 66
+      },
+      {
+        "text": "og fundið",
+        "label": "MAJOR",
+        "start": 318,
+        "end": 327
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory var það líka, á sinn sérstaka hátt. Þegar Ivory kom út sem tvíundarlegt virtist sem heimurinn breyttist líka. Þeir fengu þau störf sem myndu gera það að verkum að þeir eyða tíma einir að mestu leyti, sem refsingu fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "tvíundarlegt",
+        "label": "MINOR",
+        "start": 65,
+        "end": 77
+      },
+      {
+        "text": "Þeir",
+        "label": "MINOR",
+        "start": 116,
+        "end": 120
+      },
+      {
+        "text": "þeir",
+        "label": "MINOR",
+        "start": 169,
+        "end": 173
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory var líka, á sinn sérstaka hátt. Þegar Ivory kom út sem kynsegin, þótti heiminum breytast líka. Þau fengu verkefni sem þau myndu eyða mestum tíma ein, sem refsing fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "þótti ",
+        "label": "MINOR",
+        "start": 71,
+        "end": 77
+      },
+      {
+        "text": "verkefni ",
+        "label": "MAJOR",
+        "start": 111,
+        "end": 120
+      },
+      {
+        "text": "yða mestum tíma ein",
+        "label": "MAJOR",
+        "start": 135,
+        "end": 154
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "\"Jú, Aðgerð Eldstormur,\" svaraði Cohren. \"Við héldum að þetta yrði búið á nokkrum vikum, en...við vanmátum þá.\"",
+    "spans": [
+      {
+        "text": "vanmátum",
+        "label": "MAJOR",
+        "start": 98,
+        "end": 106
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 að ítölskum tíma. Cohren þoldi ekki að vakna svona snemma. Aðallega vegna þess að það var á hans ábyrgð að vekja alla aðra í fyrirtækinu sínu. Hljóðlega steig hann út úr koju sinni, klæddi sig í bardagafötin, kastaði á árásarvestið sitt og pakkaði saman eigum sínum úr skápnum sínum og fór varlega með tiltekinn lítinn kassa. Hann axlaði riffilinn og setti hjálminn á lítinn krók sem tengdur var við beltið. Það var allt í lagi, öndunarvél, hlífðargleraugu og allt sem þurfti. Eftir að hafa skoðað skotfærin sín gekk hann hljóðlega út úr herbúðunum, leðja og ís kreisti undir stígvélunum.",
+    "spans": [
+      {
+        "text": "ítölskum t",
+        "label": "MINOR",
+        "start": 8,
+        "end": 18
+      },
+      {
+        "text": "fyrirtækinu sí",
+        "label": "MAJOR",
+        "start": 130,
+        "end": 144
+      },
+      {
+        "text": "bardagafötin",
+        "label": "MAJOR",
+        "start": 200,
+        "end": 212
+      },
+      {
+        "text": "kastaði á árásarvestið",
+        "label": "MINOR",
+        "start": 214,
+        "end": 236
+      },
+      {
+        "text": "eigum sínum",
+        "label": "MAJOR",
+        "start": 259,
+        "end": 270
+      },
+      {
+        "text": "Það var allt í lagi",
+        "label": "MAJOR",
+        "start": 413,
+        "end": 432
+      },
+      {
+        "text": " öndunarvé",
+        "label": "MINOR",
+        "start": 433,
+        "end": 443
+      },
+      {
+        "text": "skotfærin",
+        "label": "MAJOR",
+        "start": 503,
+        "end": 512
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "He took a lighter from his jacket pocket and a cig from the other. Lighting it, he took a small drag before opening the door slightly. Over the last week he had to get creative when waking the men and women under his command. He stopped using the preset wake up alarm, half the time it never worked, when all that came from the speakers was a light hiss.",
+    "text": "Hann tók kveikjara úr jakkavasanum og vindil úr hinum. Þegar hann kveikti í því dró hann aðeins frá áður en hann opnaði hurðina. Síðustu vikuna þurfti hann að verða skapandi þegar hann vakti karla og konur undir stjórn sinni. Hann hætti að nota forstillta vekjaraklukkuna, helmingi oftar en hún virkaði aldrei, þegar allt sem kom frá hátölurunum var létt hvæs.",
+    "spans": [
+      {
+        "text": " því",
+        "label": "MAJOR",
+        "start": 75,
+        "end": 79
+      },
+      {
+        "text": "ró hann aðeins frá áð",
+        "label": "MINOR",
+        "start": 81,
+        "end": 102
+      },
+      {
+        "text": "karla og konur undir stjórn sinni.",
+        "label": "MAJOR",
+        "start": 191,
+        "end": 225
+      },
+      {
+        "text": "helmingi oftar ",
+        "label": "MINOR",
+        "start": 273,
+        "end": 288
+      },
+      {
+        "text": "n virkaði aldrei, þegar allt sem kom frá hátölurunum var létt hv",
+        "label": "MAJOR",
+        "start": 293,
+        "end": 357
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "\"Mitt eigið flug er allt öðruvísi en að vera skyndilega dreginn burt af risastórum, bleikum dreka!\"",
+    "spans": [
+      {
+        "text": "Mitt eigið flug er al",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 22
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel var greinilega ekki sammála Nyssi, hann var fölari en venjulega og klærnar hans höfðu grafist í bak Thassalins svo djúpt að hann hafði látið drekann blæða, en Thassalin virtist ekki kippa sér upp við það. Það sem meira var, Thassalin hafði áttað sig á að hann hafði hrætt nýju vini sína og fundið rjóður til að lenda í.",
+    "spans": [
+      {
+        "text": "ð drekann ",
+        "label": "MAJOR",
+        "start": 145,
+        "end": 155
+      },
+      {
+        "text": "fundið",
+        "label": "MAJOR",
+        "start": 296,
+        "end": 302
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "„Flugið mitt er mjög ólíkt því að vera ráðbráðum dregið af í þakkastórum, bleiku dreka!“",
+    "spans": [
+      {
+        "text": "ráðbráðum dregið af í þakkastórum, bleiku ",
+        "label": "MINOR",
+        "start": 39,
+        "end": 81
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel hafði ljóst og ljóst ekki samið við Nyssi, hann lítandi svartari en venjulega og klær hans höfðu grafið sig í bakið á Thassalin til þess að hann hefði látið Thrakka blóða, en Thassalin lítandi virðist ekki hafa áhuga. Það sagt, Thassalin hafði komist að þeirri niðurstöðu að hann hafði hrætt við sína nýja viná og fann laufsléttu til að lenda í.",
+    "spans": [
+      {
+        "text": "ljóst og ljós",
+        "label": "MINOR",
+        "start": 12,
+        "end": 25
+      },
+      {
+        "text": " samið vi",
+        "label": "MINOR",
+        "start": 31,
+        "end": 40
+      },
+      {
+        "text": "n lítandi svartar",
+        "label": "MINOR",
+        "start": 52,
+        "end": 69
+      },
+      {
+        "text": "að hann hefði látið Thrakka blóða",
+        "label": "MINOR",
+        "start": 143,
+        "end": 176
+      },
+      {
+        "text": "salin lítandi virðist ekki hafa áhuga",
+        "label": "MINOR",
+        "start": 185,
+        "end": 222
+      },
+      {
+        "text": "ann hafði hrætt við sína nýja viná og fann lau",
+        "label": "MINOR",
+        "start": 282,
+        "end": 328
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory var líka, á sína eigin sérstaka hátt. Þegar Ivory kom út sem ókynja, virtist heimurinn breytast líka. Þeim var gefin vinnan sem myndi láta þau eyða mestum tímanum ein, sem refsing fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "ókynja",
+        "label": "MINOR",
+        "start": 67,
+        "end": 73
+      },
+      {
+        "text": "sína",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 22
+      },
+      {
+        "text": "Þeim",
+        "label": "MINOR",
+        "start": 108,
+        "end": 112
+      },
+      {
+        "text": "þau",
+        "label": "MINOR",
+        "start": 145,
+        "end": 148
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "„Já, Operation Firestorm,“ svaraði Cohren. „Við héldum að þetta væri búið á nokkrum vikum, en... við vanmetum þau.“",
+    "spans": [
+      {
+        "text": "þetta væri bú",
+        "label": "MAJOR",
+        "start": 58,
+        "end": 71
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory var það líka, á sinn sérstaka hátt. Þegar Ivory kom út sem kynsegin virtist heimurinn breytast líka. Þau fengu störf sem gerðu það að verkum að þau eyddu mestum tíma ein, sem refsingu fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "ein,",
+        "label": "MAJOR",
+        "start": 172,
+        "end": 176
+      },
+      {
+        "text": "u",
+        "label": "MAJOR",
+        "start": 188,
+        "end": 189
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "„Jú, Árekstur Eldur“, svaraði Cohren. „Vér hugsuðum að það yrði búið í nokkrum vikum, en…við undirmettum þá“",
+    "spans": [
+      {
+        "text": "Árekstur Eldu",
+        "label": "MINOR",
+        "start": 5,
+        "end": 18
+      },
+      {
+        "text": "Vér ",
+        "label": "MINOR",
+        "start": 39,
+        "end": 43
+      },
+      {
+        "text": " undirmettum þ",
+        "label": "MINOR",
+        "start": 92,
+        "end": 106
+      },
+      {
+        "text": "ð í nokkrum vikum",
+        "label": "MAJOR",
+        "start": 67,
+        "end": 84
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"My own flight is very different from being abruptly dragged off by a massive, pink dragon!\"",
+    "text": "„Mín eigin flugferð er allt önnur en að vera skyndilega dregin af miklum, bleikum dreka!“",
+    "spans": [
+      {
+        "text": "a dregin ",
+        "label": "MAJOR",
+        "start": 54,
+        "end": 63
+      },
+      {
+        "text": "klum, bleikum dreka",
+        "label": "MAJOR",
+        "start": 68,
+        "end": 87
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "Kayel virtist ekki vera sammála Nyssi, hann virtist vera minna svartur en venjulega og klær hans höfðu grafið í bakið á Thassalin, sem hafði valdið því að Thassalin blæddi, en Thassalin virtist ekki sýna því mikinn áhuga. Þrátt fyrir það hafði Thassalin áttað sig á því að hann hefði hrætt nýju vini sína og fundið sér stað til að lenda.",
+    "spans": [
+      {
+        "text": " virtist ekki",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 18
+      },
+      {
+        "text": "grafið ",
+        "label": "MAJOR",
+        "start": 103,
+        "end": 110
+      },
+      {
+        "text": "aldið því að Thassalin blædd",
+        "label": "MAJOR",
+        "start": 142,
+        "end": 170
+      },
+      {
+        "text": "a og fundið sér s",
+        "label": "MAJOR",
+        "start": 303,
+        "end": 320
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Frostfell was not always one kingdom. It was split in two, the North and the South. In the North, the non magical kingdom. To the South, a kingdom full of fantastical displays of power. Due to the North’s greed, the two kingdoms clashed in a never ending war, until the South offered a truce.",
+    "text": "Frostfell var ekki alltaf eitt ríki. Það var skipt í tvennt, norður og suður. Í norðri, hið ekki töfrandi ríki. Í suðri, ríki fullt af frábærum kraftasýningum. Vegna græðgi norðursins lentu konungsríkin tvö í átökum í endalausu stríði, þar til suðurið bauð vopnahlé.",
+    "spans": [
+      {
+        "text": "Það",
+        "label": "MAJOR",
+        "start": 37,
+        "end": 40
+      },
+      {
+        "text": "kraftasýningum",
+        "label": "MAJOR",
+        "start": 144,
+        "end": 158
+      },
+      {
+        "text": "suðurið",
+        "label": "MAJOR",
+        "start": 244,
+        "end": 251
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "Ivory was too, in their own special way. When Ivory came out as nonbinary, it seemed like the world changed too. They were given the jobs that would make them spend time alone for most of the time, as a punishment for being different.",
+    "text": "Ivory upplifði það líka á sinn einstaka hátt. Þegar Ivory kom út sem einhver sem er hvorki karlkyns né kvenkyns virtist heimurinn einnig taka breytingum. Þeim voru falin störf þar sem þeir yrðu að vera einir mestan hluta dagsins, sem refsing fyrir að vera öðruvísi.",
+    "spans": [
+      {
+        "text": "Þeim",
+        "label": "MAJOR",
+        "start": 154,
+        "end": 158
+      },
+      {
+        "text": "einir",
+        "label": "MAJOR",
+        "start": 202,
+        "end": 207
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "“Yup, Operation Firestorm,” Cohren answered. “We thought it would be over in a few weeks, but…we underestimate them”",
+    "text": "\"Já, Operation Firestorm,\" svaraði Cohren. \"Við héldum að það myndi vera búið eftir nokkrar vikur, en... við vanmetum þá.\"",
+    "spans": [
+      {
+        "text": "Operation Firestor",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, ljóst er að nei. Sköpunin hvíslaði og reyndi að fljúga beint á Thassalin. Gott að þakka, þótt hann væri stór, var Thassalin ágjörlíkur nokkur til að komast úr veg, en Nyssi gat ekki hjálpað að hrópa þegar hún náði nærri að týna gripi sínu á ofurgljúpu skjöldunum Thassalins.",
+    "spans": [
+      {
+        "text": "ljóst er að nei",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 20
+      },
+      {
+        "text": "Sköpunin",
+        "label": "MINOR",
+        "start": 22,
+        "end": 30
+      },
+      {
+        "text": "hvíslaði o",
+        "label": "MINOR",
+        "start": 31,
+        "end": 41
+      },
+      {
+        "text": "Gott að þakka",
+        "label": "MINOR",
+        "start": 79,
+        "end": 92
+      },
+      {
+        "text": "gjörlíkur nokku",
+        "label": "MINOR",
+        "start": 130,
+        "end": 145
+      },
+      {
+        "text": "gat ekki hjálpað að hróp",
+        "label": "MINOR",
+        "start": 178,
+        "end": 202
+      },
+      {
+        "text": "týna gripi",
+        "label": "MINOR",
+        "start": 228,
+        "end": 238
+      },
+      {
+        "text": " ofurgljúpu",
+        "label": "MINOR",
+        "start": 245,
+        "end": 256
+      },
+      {
+        "text": "skjöldunum Thassalins",
+        "label": "MAJOR",
+        "start": 257,
+        "end": 278
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"THAT'S GONNA BE TRICKY!\"",
+    "text": "ÞESSA MUN VERÐA ERFIÐLEGA!",
+    "spans": [
+      {
+        "text": "ÞESSA MUN VERÐA ERFIÐLEGA",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 25
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, greinilega ekki. Veran hvæsti bara og reyndi að fljúga beint í Thassalin. Sem betur fer, þrátt fyrir stærð sína, var Thassalin nógu fljótur til að komast í burtu, en Nyssi gat ekki annað en hrópað þegar hún nær misti gripinn á of glöðu skeljum Thassalins.",
+    "spans": [
+      {
+        "text": "í ",
+        "label": "MAJOR",
+        "start": 66,
+        "end": 68
+      },
+      {
+        "text": " í burt",
+        "label": "MAJOR",
+        "start": 158,
+        "end": 165
+      },
+      {
+        "text": "gripinn",
+        "label": "MINOR",
+        "start": 222,
+        "end": 229
+      },
+      {
+        "text": "næ",
+        "label": "MAJOR",
+        "start": 212,
+        "end": 214
+      },
+      {
+        "text": "glöð",
+        "label": "MINOR",
+        "start": 235,
+        "end": 239
+      },
+      {
+        "text": "hrópað",
+        "label": "MAJOR",
+        "start": 195,
+        "end": 201
+      },
+      {
+        "text": "skeljum",
+        "label": "MAJOR",
+        "start": 241,
+        "end": 248
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"THAT'S GONNA BE TRICKY!\"",
+    "text": "\"ÞAÐ VERÐUR FLÓKIÐ!\"",
+    "spans": [
+      {
+        "text": "R FLÓKIÐ",
+        "label": "MAJOR",
+        "start": 10,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, greinilega ekki, skepnan hvæsti bara og reyndi að fljúga beint inn í Þassalín. Sem betur fer, þrátt fyrir stærð sína, var Thassalin nógu fimur til að komast í burtu, en Nyssi gat ekki annað en öskrað þegar hún missti næstum takið á of sléttum vogum Thassalins.",
+    "spans": [
+      {
+        "text": "inn í",
+        "label": "MAJOR",
+        "start": 68,
+        "end": 73
+      },
+      {
+        "text": "vogum",
+        "label": "MAJOR",
+        "start": 248,
+        "end": 253
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "JANUARY 14th, 10:26 PM, 2543.",
+    "text": "14. JANÚAR 10:26, 2543.",
+    "spans": [
+      {
+        "text": "10:26",
+        "label": "MAJOR",
+        "start": 11,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, augljóslega ekki. Dýrið hissaði og reyndi að fljúga beint í Thassalin. Það var gott að Thassalin var nógu hraustur til að komast út úr vegi, en Nyssi gat ekki annað en skriðið sem hún missti nánast grip á of sléttum skeljum Thassalins.",
+    "spans": [
+      {
+        "text": "f sléttum skeljum T",
+        "label": "MINOR",
+        "start": 211,
+        "end": 230
+      },
+      {
+        "text": "Nei, augljóslega ekki. Dýrið hissaði og reyndi að fljúga beint í Thassalin. Það var gott að Thassalin var nógu hraustur til að komast út úr vegi, en Nyssi gat ekki annað en skriðið sem hún missti nánast grip á ",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 210
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, greinilega ekki. Dýrið bara öskraði og reyndi að fljúga beint í Thassalin. Þakka guði að þrátt fyrir stærð sína var Thassalin nægilega lipur til að komast undan en Nyssi gat ekki annað en öskrað þegar hún var næstum búin að missa tökin á ofsléttu skinni Thassalins.",
+    "spans": [
+      {
+        "text": "ofsléttu ",
+        "label": "MAJOR",
+        "start": 243,
+        "end": 252
+      },
+      {
+        "text": "Þakka guði a",
+        "label": "MAJOR",
+        "start": 80,
+        "end": 92
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"THAT'S GONNA BE TRICKY!\"",
+    "text": "„ÞETTA VERÐUR AÐ VERA LEIÐINLEGT!“",
+    "spans": [
+      {
+        "text": "VERÐUR",
+        "label": "MINOR",
+        "start": 7,
+        "end": 13
+      },
+      {
+        "text": "LEIÐINLEGT",
+        "label": "MINOR",
+        "start": 22,
+        "end": 32
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, svo sannarlega ekki. Dýrið gargaði bara og reyndi að fljúga beint í Thassalin. Hins vegar var Thassalin nógu sveigjanlegur til að komast undan, en Nyssi gat ekki hjálpað sér að öskra þegar hún næstum því missti takið á ofsléttu skeljunum á Thassalin.",
+    "spans": [
+      {
+        "text": "sveigjanlegur ",
+        "label": "MINOR",
+        "start": 114,
+        "end": 128
+      },
+      {
+        "text": "fsléttu",
+        "label": "MINOR",
+        "start": 225,
+        "end": 232
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"THAT'S GONNA BE TRICKY!\"",
+    "text": "„ÞETTA VERÐUR ERFIÐT!“",
+    "spans": [
+      {
+        "text": "RFIÐT",
+        "label": "MINOR",
+        "start": 15,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "\"THAT'S GONNA BE TRICKY!\"",
+    "text": "&quot;ÞETTA VERÐUR FLJÓTT!&quot;",
+    "spans": [
+      {
+        "text": "&quot;ÞETTA VERÐUR FLJÓTT!&quot",
+        "label": "MINOR",
+        "start": 0,
+        "end": 31
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, greinilega ekki. Veran hvæsti bara og reyndi að fljúga beint inn í Thassalin. Sem betur fer, þrátt fyrir stærð sína, var Thassalin nógu lipur til að komast úr vegi, en Nyssi gat ekki annað en öskrað þar sem hún missti næstum tökin á of sléttum vogum Thassalins.",
+    "spans": [
+      {
+        "text": "inn í",
+        "label": "MAJOR",
+        "start": 66,
+        "end": 71
+      },
+      {
+        "text": "komast úr vegi,",
+        "label": "MAJOR",
+        "start": 154,
+        "end": 169
+      },
+      {
+        "text": "vogum",
+        "label": "MINOR",
+        "start": 249,
+        "end": 254
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "JANUARY 14th, 10:26 PM, 2543.",
+    "text": "14. janúar, kl. 10:26 2543.",
+    "spans": [
+      {
+        "text": "10:26",
+        "label": "MAJOR",
+        "start": 16,
+        "end": 21
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "Nei, alls ekki. Skepnan hvæsti bara og reyndi að fljúga beint í Thassalin. Sem betur fer var Thassalin nógu liðugur til að komast undan, þrátt fyrir stærð sína, en Nyssi gat ekki annað en öskrað þar sem hún nánast missti takið á of sléttum vogum Thassalins.",
+    "spans": [
+      {
+        "text": "í",
+        "label": "MAJOR",
+        "start": 62,
+        "end": 63
+      },
+      {
+        "text": "vogum",
+        "label": "MINOR",
+        "start": 240,
+        "end": 245
+      }
+    ],
+    "source_language": "en",
+    "target_language": "is"
+  }
+]

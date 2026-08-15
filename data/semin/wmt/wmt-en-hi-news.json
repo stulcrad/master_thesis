@@ -1,0 +1,516 @@
+[
+  {
+    "source": "Rosendale, a member of the hard-right Freedom Caucus, was one of the individuals who derailed the Wednesday votes. He views the top line number in Johnson's deal as being too high and as doing too little to cut the $34 trillion national debt.",
+    "text": "रोसेंडेल, फ्रीडम कॉक्स के एक सदस्य, जो बुधवार के मतों को निष्क्रिय करने वाले व्यक्तियों में से एक थे, उनके अनुसार जॉनसन के सौदे में शीर्ष रेखा का आंकड़ा बहुत अधिक है और यह $34 ट्रिलियन के राष्ट्रीय कर्ज को कम करने के लिए बहुत कम करता है।",
+    "spans": [
+      {
+        "text": ", ",
+        "label": "MAJOR",
+        "start": 8,
+        "end": 10
+      },
+      {
+        "text": "बहुत कम करता ह",
+        "label": "MINOR",
+        "start": 221,
+        "end": 235
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Rosendale, a member of the hard-right Freedom Caucus, was one of the individuals who derailed the Wednesday votes. He views the top line number in Johnson's deal as being too high and as doing too little to cut the $34 trillion national debt.",
+    "text": "रोसेंडेल, फ्रीडम कॉकस के हार्ड-राइट सदस्य, वे व्यक्ति थे जिन्होंने बुधवार के वोटों को विफल कर दिया। वह जॉनसन के सौदे में शीर्ष रेखा संख्या को बहुत अधिक मानते हैं और $34 ट्रिलियन राष्ट्रीय ऋण को कम करने के लिए पर्याप्त नहीं करते हैं।",
+    "spans": [
+      {
+        "text": "करते ",
+        "label": "MAJOR",
+        "start": 223,
+        "end": 228
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The number of complaints to authorities in Ukraine of a person speaking in Russian increased by 30% last year. Kiev actively encourages the population to report such cases in a bid to allegedly 'protect' the country from Russian influence.",
+    "text": "उक्रेन में रूसी भाषा में बात करने वाले व्यक्ति की शिकायतों की संख्या पिछले साल 30% बढ़ गई। कियेव सक्रिय रूप से जनता को ऐसे मामलों की रिपोर्ट करने के लिए प्रोत्साहित करता है, ताकि दावा किया जा सके कि वे देश को रूसी प्रभाव से 'सुरक्षित' रखने के लिए काम कर रहे हैं।",
+    "spans": [
+      {
+        "text": "उक्रेन",
+        "label": "MINOR",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "दावा किया जा सक",
+        "label": "MAJOR",
+        "start": 179,
+        "end": 194
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Moscow maintains that such laws violate the rights of Russian-speaking people, who make up around half of Ukraine's population. Russian Foreign Ministry spokeswoman Maria Zakharova said in February that Kiev's \"discriminatory campaign\" against the language was growing more and more \"indignant.\" In a survey conducted last September by the Kiev International Institute of Sociology, respondents cited language discrimination as the most common type of prejudice in Ukraine, with 45% saying it was a problem.",
+    "text": "मॉस्को का यह कहना है कि ऐसे कानून रूसी भाषा बोलने वाले लोगों के अधिकारों का उल्लंघन करते हैं, जो यूक्रेन की आबादी का लगभग आधा हिस्सा होते हैं। रूसी विदेश मंत्रालय की प्रवक्ता मारिया ज़ाखारोवा ने फरवरी में कहा था कि कियेव की भाषा के खिलाफ \"भेदभावपूर्ण अभियान\" दिन-ब-दिन और अधिक \"अभिमानी\" हो रहा है। कियेव अंतर्राष्ट्रीय समाजशास्त्र संस्थान द्वारा पिछले सितंबर में किए गए एक सर्वेक्षण में, प्रतिसादकर्ताओं ने यूक्रेन में सबसे आम प्रकार की पक्षपात के रूप में भाषा भेदभाव का उल्लेख किया, 45% लोगों ने कहा कि यह एक समस्या है।",
+    "spans": [
+      {
+        "text": "होत",
+        "label": "MAJOR",
+        "start": 133,
+        "end": 136
+      },
+      {
+        "text": "क",
+        "label": "MINOR",
+        "start": 221,
+        "end": 222
+      },
+      {
+        "text": "अभ",
+        "label": "MINOR",
+        "start": 278,
+        "end": 280
+      },
+      {
+        "text": "मान",
+        "label": "MINOR",
+        "start": 281,
+        "end": 284
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "More than 130,000 people were booked into a Washington jail in 2022, and yet there is startlingly little information about what occurs once they get there. Washington has no statewide office responsible for monitoring jails and reporting data to the public. Some of the only information available relates to deaths in custody.",
+    "text": "2022 में वाशिंगटन की जेल में 130,000 से ज़्यादा लोगों को रखा गया था, लेकिन फिर भी इस बारे में बहुत कम जानकारी है कि वहां पहुंचने के बाद क्या होता है। वाशिंगटन में जेलों की निगरानी और जनता को डेटा रिपोर्ट करने के लिए कोई राज्यव्यापी कार्यालय नहीं है। उपलब्ध एकमात्र जानकारी हिरासत में मौतों से संबंधित है।",
+    "spans": [
+      {
+        "text": "एक",
+        "label": "MAJOR",
+        "start": 257,
+        "end": 259
+      },
+      {
+        "text": "मात",
+        "label": "MAJOR",
+        "start": 259,
+        "end": 262
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "An independent jail oversight office can monitor conditions in jails, meet with staff and incarcerated people, report on conditions that they have witnessed firsthand, and even communicate concerns before people are hurt. A jail oversight office can also collect and report data, helping administrators, policymakers, and the public understand our jail system and advocate for data-driven solutions to jail deaths and other problems relating to jails.",
+    "text": "एक स्वतंत्र जेल निरीक्षण कार्यालय जेलों में स्थितियों की निगरानी कर सकता है, कर्मचारियों और कैदियों से मिल सकता है, उन स्थितियों पर रिपोर्ट कर सकता है जो उन्होंने प्रत्यक्ष रूप से देखी हैं, और यहां तक ​​कि लोगों को चोट लगने से पहले चिंताओं को भी बता सकता है। एक जेल निरीक्षण कार्यालय डेटा एकत्र और रिपोर्ट भी कर सकता है, जिससे प्रशासकों, नीति निर्माताओं और जनता को हमारी जेल प्रणाली को समझने में मदद मिलती है और जेल में होने वाली मौतों और जेलों से संबंधित अन्य समस्याओं के लिए डेटा-संचालित समाधानों की वकालत की जाती है।",
+    "spans": [
+      {
+        "text": "की ज",
+        "label": "MAJOR",
+        "start": 508,
+        "end": 512
+      },
+      {
+        "text": "ती ह",
+        "label": "MAJOR",
+        "start": 513,
+        "end": 517
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Rosendale, a member of the hard-right Freedom Caucus, was one of the individuals who derailed the Wednesday votes. He views the top line number in Johnson's deal as being too high and as doing too little to cut the $34 trillion national debt.",
+    "text": "रोसेन्डेल, कट्टर दक्षिणपंथी फ्रीडम कॉकस के सदस्य हैं, बुधवार को वोटों को पटरी से उतारने वाले व्यक्तियों में से एक थे। उनका मानना है कि जॉनसन के सौदे में शीर्ष पंक्ति की संख्या बहुत अधिक है और 34 ट्रिलियन डॉलर के राष्ट्रीय ऋण को कम करने के लिए बहुत कम है।",
+    "spans": [
+      {
+        "text": "शीर्ष पंक्ति की संख",
+        "label": "MAJOR",
+        "start": 153,
+        "end": 172
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "While the root cause of their problems was the flawed Horizon computer system, Post Office minister Kevin Hollinrake told MPs yesterday that the evidence showed \"not only incompetence but malevolence\" by the Post Office. He lamented that just 95 out of more than 900 convictions had been overturned. Now, a new law is to be introduced in England and Wales to exonerate the scandal's victims, with Downing Street saying it will work with the Scottish Government on similar steps.",
+    "text": "जबकि उनके समस्याओं के मूल कारण खराब हार्मोन्स कंप्यूटर सिस्टम था, तो पोस्ट ऑफिस मंत्री केविन होलिनरेक ने सांसदों से कहा कि सबूतों से पता चलता है कि \"क्षमताहीनता के साथ-साथ अराजकता\" पोस्ट ऑफिस द्वारा की गई थी। उन्होंने कहा कि केवल 95 में से 900 से अधिक मामलों को पलट दिया गया है। अब, इंग्लैंड और वेल्स में एक नया कानून लाया जा रहा है ताकि इस विवाद के पीड़ितों को बरी किया जा सके, जिसमें डाउनिंग स्ट्रीट ने कहा है कि यह स्कॉटलैंड सरकार के समान कदमों के साथ काम करेगा।",
+    "spans": [
+      {
+        "text": "हार्मोन",
+        "label": "MINOR",
+        "start": 36,
+        "end": 43
+      },
+      {
+        "text": "95",
+        "label": "MINOR",
+        "start": 230,
+        "end": 232
+      },
+      {
+        "text": "में स",
+        "label": "MINOR",
+        "start": 233,
+        "end": 238
+      },
+      {
+        "text": "90",
+        "label": "MINOR",
+        "start": 240,
+        "end": 242
+      },
+      {
+        "text": "0",
+        "label": "MINOR",
+        "start": 242,
+        "end": 243
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The number of complaints to authorities in Ukraine of a person speaking in Russian increased by 30% last year. Kiev actively encourages the population to report such cases in a bid to allegedly 'protect' the country from Russian influence.",
+    "text": "पिछले साल यूक्रेन में रूसी भाषा बोलने वाले किसी व्यक्ति के खिलाफ अधिकारियों को की गई शिकायतों की संख्या में 30% की वृद्धि हुई है। कीव सक्रिय रूप से लोगों को ऐसे मामलों की रिपोर्ट करने के लिए प्रोत्साहित करता है, ताकि कथित तौर पर देश को रूसी प्रभाव से &#39;बचाया&#39; जा सके।",
+    "spans": [
+      {
+        "text": "&#39;",
+        "label": "MAJOR",
+        "start": 261,
+        "end": 266
+      },
+      {
+        "text": "&#39;",
+        "label": "MAJOR",
+        "start": 251,
+        "end": 256
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "While the root cause of their problems was the flawed Horizon computer system, Post Office minister Kevin Hollinrake told MPs yesterday that the evidence showed \"not only incompetence but malevolence\" by the Post Office. He lamented that just 95 out of more than 900 convictions had been overturned. Now, a new law is to be introduced in England and Wales to exonerate the scandal's victims, with Downing Street saying it will work with the Scottish Government on similar steps.",
+    "text": "जबकि उनकी समस्याओं का मूल कारण खराब होराइजन कंप्यूटर सिस्टम था, पोस्ट ऑफिस मंत्री केविन होलिन्रेक ने कल सांसदों को बताया कि सबूत दिखाते हैं कि पोस्ट ऑफिस में \"न केवल अक्षमता बल्कि दुष्टता\" भी थी। उन्होंने यह भी कहा कि सिर्फ 95 में से अधिक 900 दोषी ठहराए गए थे। अब इंग्लैंड और वेल्स में एक नया कानून पेश किया जाएगा ताकि इस घोटाले के पीड़ितों को क्षमा किया जा सके, डाउनिंग स्ट्रीट ने कहा कि वह इसी तरह के कदमों के लिए स्कॉटिश सरकार के साथ काम करेगा।",
+    "spans": [
+      {
+        "text": "95 में से अधिक 900 दोषी ठहराए गए थ",
+        "label": "MINOR",
+        "start": 224,
+        "end": 258
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Rosendale, a member of the hard-right Freedom Caucus, was one of the individuals who derailed the Wednesday votes. He views the top line number in Johnson's deal as being too high and as doing too little to cut the $34 trillion national debt.",
+    "text": "रोसेन्डेल, कट्टर दक्षिणपंथी फ्रीडम कॉकस के सदस्य हैं, बुधवार को वोटों को पटरी से उतारने वाले व्यक्तियों में से एक थे। उनका मानना ​​है कि जॉनसन के सौदे में शीर्ष पंक्ति की संख्या बहुत अधिक है और 34 ट्रिलियन डॉलर के राष्ट्रीय ऋण को कम करने के लिए बहुत कम है।",
+    "spans": [
+      {
+        "text": "34",
+        "label": "MAJOR",
+        "start": 194,
+        "end": 196
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "An independent jail oversight office can monitor conditions in jails, meet with staff and incarcerated people, report on conditions that they have witnessed firsthand, and even communicate concerns before people are hurt. A jail oversight office can also collect and report data, helping administrators, policymakers, and the public understand our jail system and advocate for data-driven solutions to jail deaths and other problems relating to jails.",
+    "text": "एक स्वतंत्र जेल निरीक्षण कार्यालय जेल की स्थितियों की निगरानी कर सकता है, स्टाफ और कैदियों से मिल सकता है, उन स्थितियों के बारे में रिपोर्ट कर सकता है जिनका वे स्वयं अनुभव कर चुके हैं, और यहां तक कि लोगों को चोट पहुँचाए जाने से पहले ही चिंताओं की रिपोर्ट कर सकता है। एक जेल निरीक्षण कार्यालय यह भी डेटा एकत्र कर सकता है और रिपोर्ट कर सकता है, जिससे प्रशासनिक अधिकारियों, नीति निर्माताओं, और जनता को यह समझने में मदद मिलती है कि हमारी जेल प्रणाली क्या है और जेल की मौतों और अन्य जेल संबंधी समस्याओं के लिए डेटा-आधारित समाधानों को बढ़ावा देने के लिए।",
+    "spans": [
+      {
+        "text": "डेट",
+        "label": "MAJOR",
+        "start": 298,
+        "end": 301
+      },
+      {
+        "text": "डेट",
+        "label": "MAJOR",
+        "start": 505,
+        "end": 508
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "More than 130,000 people were booked into a Washington jail in 2022, and yet there is startlingly little information about what occurs once they get there. Washington has no statewide office responsible for monitoring jails and reporting data to the public. Some of the only information available relates to deaths in custody.",
+    "text": "2022 में, वाशिंगटन जेल में 1,30,000 से अधिक लोगों को बुक किया गया था, और फिर भी वहां पहुंचने के बाद क्या होता है, इसके बारे में चौंकाने वाली कम जानकारी है। वाशिंगटन में जेलों की निगरानी और सार्वजनिक रिपोर्टिंग के लिए कोई राज्यव्यापी कार्यालय नहीं है। हिरासत में मौतों से संबंधित कुछ जानकारी ही उपलब्ध है।",
+    "spans": [
+      {
+        "text": "1,30,000",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "text": "2022 ",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "बुक",
+        "label": "MAJOR",
+        "start": 53,
+        "end": 56
+      },
+      {
+        "text": "रिपोर्टिंग",
+        "label": "MAJOR",
+        "start": 199,
+        "end": 209
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "An independent jail oversight office can monitor conditions in jails, meet with staff and incarcerated people, report on conditions that they have witnessed firsthand, and even communicate concerns before people are hurt. A jail oversight office can also collect and report data, helping administrators, policymakers, and the public understand our jail system and advocate for data-driven solutions to jail deaths and other problems relating to jails.",
+    "text": "एक स्वतंत्र जेल निगरानी कार्यालय जेलों में स्थितियों की निगरानी कर सकता है, स्टाफ और कैदियों से मिल सकता है, वे जिन स्थितियों को स्वयं देखा है उनकी रिपोर्ट कर सकता है, और यहां तक कि लोगों के घायल होने से पहले चिंताओं को व्यक्त कर सकता है। एक जेल निगरानी कार्यालय डेटा एकत्र और रिपोर्ट भी कर सकता है, प्रशासकों, नीति निर्माताओं और सार्वजनिक को हमारे जेल प्रणाली को समझने और जेल मौतों और जेल से संबंधित अन्य समस्याओं के लिए डेटा-चालित समाधानों की वकालत करने में मदद कर सकता है।",
+    "spans": [
+      {
+        "text": "रिपोर",
+        "label": "MAJOR",
+        "start": 148,
+        "end": 153
+      },
+      {
+        "text": "स्टाफ",
+        "label": "MAJOR",
+        "start": 76,
+        "end": 81
+      },
+      {
+        "text": " डेट",
+        "label": "MAJOR",
+        "start": 421,
+        "end": 425
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The FTSE 250 firm is to open between 140 and 160 outlets on a net basis in 2024 as it looks to give customers more convenient access to its stores. It will keep looking at expanding across retail parks, travel sites, and roadside locations, plus industrial estates. Currie said: \"Where there's any location where you can't currently access a Greggs easily, we want to try and get into that location.\"",
+    "text": "FTSE 250 की यह कंपनी 2024 में शुद्ध आधार पर 140 से 160 आउटलेट खोलने की योजना बना रही है, क्योंकि वह ग्राहकों को अपनी दुकानों तक आसानी से पहुँच प्रदान करना चाहती है। यह रिटेल पार्क, यात्रा स्थलों, रोडसाइड स्थानों और औद्योगिक एस्टेट्स में विस्तार करना जारी रखेगी। करी ने कहा: \"जहाँ भी कोई स्थान है जहाँ आप वर्तमान में आसानी से ग्रेग्स तक नहीं पहुँच सकते हैं, हम उस स्थान में प्रवेश करने की कोशिश करना चाहते हैं।\"",
+    "spans": [
+      {
+        "text": " 2024 ",
+        "label": "MAJOR",
+        "start": 20,
+        "end": 26
+      },
+      {
+        "text": "FTSE 250",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "आउटलेट",
+        "label": "MAJOR",
+        "start": 55,
+        "end": 61
+      },
+      {
+        "text": "रोडसाइड",
+        "label": "MAJOR",
+        "start": 196,
+        "end": 203
+      },
+      {
+        "text": "एस्टेट",
+        "label": "MAJOR",
+        "start": 224,
+        "end": 230
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "While the root cause of their problems was the flawed Horizon computer system, Post Office minister Kevin Hollinrake told MPs yesterday that the evidence showed \"not only incompetence but malevolence\" by the Post Office. He lamented that just 95 out of more than 900 convictions had been overturned. Now, a new law is to be introduced in England and Wales to exonerate the scandal's victims, with Downing Street saying it will work with the Scottish Government on similar steps.",
+    "text": "जबकि उनकी समस्याओं की जड़ खराब होराइज़न कंप्यूटर सिस्टम था, पोस्ट ऑफिस मंत्री केविन हॉलिनरेक ने कल सांसदों को बताया कि साक्ष्य ने \"न केवल अक्षमता बल्कि दुर्भावना\" पोस्ट ऑफिस द्वारा दिखाया है। उन्होंने अफसोस जताया कि 900 से अधिक दोषसिद्धि में से केवल 95 को पलट दिया गया है। अब, इंग्लैंड और वेल्स में एक नया कानून पेश किया जाएगा जिससे घोटाले के पीड़ितों को बरी किया जा सके, डाउनिंग स्ट्रीट ने कहा कि वह स्कॉटिश सरकार के साथ समान कदम उठाएगी।",
+    "spans": [
+      {
+        "text": "दुर्भावन",
+        "label": "MINOR",
+        "start": 152,
+        "end": 160
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "As per the leaked memo dated 20 December 2023, Edu directed the Accountant-General to transfer the funds from the account of the National Social Investment Office to the private account of Bridget Oniyelu, the accountant of a Federal Government poverty intervention project called \"Grants for Vulnerable Groups,\" a project under Mrs. Edu's ministry.",
+    "text": "20 दिसंबर 2023 के लीक हुए ज्ञापन के अनुसार, श्रीमती Edu ने महालेखा परीक्षक को राष्ट्रीय सामाजिक निवेश कार्यालय के खाते से धनराशि स्थानांतरित करने का निर्देश दिया, जिसका उद्देश्य संघ सरकार की गरीबी हस्तक्षेप परियोजना \"असहाय समूहों के लिए अनुदान\" की लेखाकार ब्रिजेट ओनियेलु के निजी खाते में स्थानांतरित करना था, जो श्रीमती Edu के मंत्रालय के तहत एक परियोजना है।",
+    "spans": [
+      {
+        "text": "श्रीमत",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 50
+      },
+      {
+        "text": "Edu",
+        "label": "MAJOR",
+        "start": 52,
+        "end": 55
+      },
+      {
+        "text": "Edu",
+        "label": "MAJOR",
+        "start": 321,
+        "end": 324
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The bank's plan would target norms and institutions that may still require generational shifts. It has taken Rwanda more than two decades to establish itself as a model for land reforms that boost economic empowerment for women.\"No one benefits if women are held back,\" Rwanda President Paul Kagame said, arguing for land reform in 2015. \"We have to change mindsets, not just the laws.\"",
+    "text": "बैंक की योजना उन मानदंडों और संस्थानों को लक्षित करेगी जिनमें अभी भी पीढ़ीगत बदलाव की आवश्यकता हो सकती है। रवांडा को भूमि सुधारों के लिए एक मॉडल के रूप में खुद को स्थापित करने में दो दशक से अधिक का समय लगा है जो महिलाओं के लिए आर्थिक सशक्तीकरण को बढ़ावा देता है। रवांडा के राष्ट्रपति पॉल कागमे ने 2015 में भूमि सुधार के लिए तर्क देते हुए कहा, &quot;अगर महिलाओं को रोका जाता है तो किसी को भी लाभ नहीं होता है।&quot; &quot;हमें केवल कानून ही नहीं, बल्कि मानसिकता भी बदलनी होगी।&quot;",
+    "spans": [
+      {
+        "text": "&quot;",
+        "label": "MAJOR",
+        "start": 343,
+        "end": 349
+      },
+      {
+        "text": "&quot; &quot;",
+        "label": "MAJOR",
+        "start": 408,
+        "end": 421
+      },
+      {
+        "text": "&quot;",
+        "label": "MAJOR",
+        "start": 475,
+        "end": 481
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "As per the leaked memo dated 20 December 2023, Edu directed the Accountant-General to transfer the funds from the account of the National Social Investment Office to the private account of Bridget Oniyelu, the accountant of a Federal Government poverty intervention project called \"Grants for Vulnerable Groups,\" a project under Mrs. Edu's ministry.",
+    "text": "20 दिसंबर 2023 के लीक हुए ज्ञापन के अनुसार, एडू ने महालेखाकार को राष्ट्रीय सामाजिक निवेश कार्यालय के खाते से धनराशि को ब्रिजेट ओनियेलु के निजी खाते में स्थानांतरित करने का निर्देश दिया, जो कि श्रीमती एडू के मंत्रालय के तहत एक परियोजना &quot;कमजोर समूहों के लिए अनुदान&quot; नामक संघीय सरकार की गरीबी हस्तक्षेप परियोजना की लेखाकार हैं।",
+    "spans": [
+      {
+        "text": "&quot",
+        "label": "MAJOR",
+        "start": 235,
+        "end": 240
+      },
+      {
+        "text": "&quot",
+        "label": "MAJOR",
+        "start": 267,
+        "end": 272
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The bank's plan would target norms and institutions that may still require generational shifts. It has taken Rwanda more than two decades to establish itself as a model for land reforms that boost economic empowerment for women.\"No one benefits if women are held back,\" Rwanda President Paul Kagame said, arguing for land reform in 2015. \"We have to change mindsets, not just the laws.\"",
+    "text": "बैंक की योजना उन मानदंडों और संस्थानों को लक्षित करेगी जिनमें अभी भी पीढ़ीगत बदलाव की आवश्यकता है। रวांडा को दो दशकों से अधिक समय लगा है ताकि वह एक मॉडल के रूप में स्थापित हो सके जो आर्थिक रूप से सशक्त महिलाओं के लिए भूमि सुधारों को बढ़ावा देता है।\\\"कोई भी व्यक्ति पीछे नहीं छूट सकता है,\\\" र्वांडा के राष्ट्रपति पॉल कागाम ने 2015 में भूमि सुधार के लिए तर्क देते हुए कहा। \\\"हमें सोच बदलनी होगी, न कि सिर्फ कानून।\\\"",
+    "spans": [
+      {
+        "text": "रวांड",
+        "label": "MINOR",
+        "start": 99,
+        "end": 104
+      },
+      {
+        "text": "आर्थिक रूप से सशक्त महिलाओं के लिए भूमि सुधारों को बढ़ावा देता ह",
+        "label": "MINOR",
+        "start": 182,
+        "end": 246
+      },
+      {
+        "text": "कोई भी व्यक्ति पीछे नहीं छूट सकता ह",
+        "label": "MINOR",
+        "start": 250,
+        "end": 285
+      },
+      {
+        "text": "र्वांड",
+        "label": "MINOR",
+        "start": 290,
+        "end": 296
+      },
+      {
+        "text": "कागाम",
+        "label": "MAJOR",
+        "start": 316,
+        "end": 321
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "As per the leaked memo dated 20 December 2023, Edu directed the Accountant-General to transfer the funds from the account of the National Social Investment Office to the private account of Bridget Oniyelu, the accountant of a Federal Government poverty intervention project called \"Grants for Vulnerable Groups,\" a project under Mrs. Edu's ministry.",
+    "text": "20 दिसंबर 2023 के लीक हुए ज्ञापन के अनुसार, एडू ने महालेखाकार को राष्ट्रीय सामाजिक निवेश कार्यालय के खाते से धनराशि को ब्रिजेट ओनियेलु के निजी खाते में स्थानांतरित करने का निर्देश दिया, जो कि श्रीमती एडू के मंत्रालय के तहत एक परियोजना \"कमजोर समूहों के लिए अनुदान\" नामक संघीय सरकार की गरीबी हस्तक्षेप परियोजना की लेखाकार हैं।",
+    "spans": [
+      {
+        "text": "20 दिसंबर 2023 के लीक हुए ज्ञापन के अनुसार",
+        "label": "MINOR",
+        "start": 0,
+        "end": 42
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The bank's plan would target norms and institutions that may still require generational shifts. It has taken Rwanda more than two decades to establish itself as a model for land reforms that boost economic empowerment for women.\"No one benefits if women are held back,\" Rwanda President Paul Kagame said, arguing for land reform in 2015. \"We have to change mindsets, not just the laws.\"",
+    "text": "बैंक की योजना उन मानदंडों और संस्थानों पर लक्ष्य रखेगी जिन्हें अभी भी पीढ़ीगत परिवर्तन की आवश्यकता है। र्वांडा ने महिलाओं के लिए आर्थिक सशक्तिकरण को बढ़ावा देने वाले भूमि सुधारों के लिए एक मॉडल के रूप में स्थापित होने में दो दशक से अधिक समय लिया है। \"कोई लाभ नहीं होता है अगर महिलाओं को पीछे रखा जाता है,\" र्वांडा के राष्ट्रपति पॉल कगामे ने 2015 में भूमि सुधार के लिए तर्क दिया। \"हमें मानसिकता बदलनी होगी, न केवल कानूनों को।\"",
+    "spans": [
+      {
+        "text": "र्वांड",
+        "label": "MINOR",
+        "start": 103,
+        "end": 109
+      },
+      {
+        "text": "र्वांड",
+        "label": "MINOR",
+        "start": 306,
+        "end": 312
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The bank's plan would target norms and institutions that may still require generational shifts. It has taken Rwanda more than two decades to establish itself as a model for land reforms that boost economic empowerment for women.\"No one benefits if women are held back,\" Rwanda President Paul Kagame said, arguing for land reform in 2015. \"We have to change mindsets, not just the laws.\"",
+    "text": "रवांडा के राष्ट्रपति पॉल कगामे ने 2015 में भूमि सुधारों के पक्ष में तर्क देते हुए कहा, \"यदि महिलाओं को आगे नहीं बढ़ाया जाता है, तो कोई लाभ नहीं होता है।\"",
+    "spans": [
+      {
+        "text": "2015 ",
+        "label": "MAJOR",
+        "start": 34,
+        "end": 39
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  }
+]

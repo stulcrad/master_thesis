@@ -1,0 +1,506 @@
+[
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Відкритий анархіст, який не приховує своєї особи, передає свою ДНК біотехнологічній компанії заради сумнівного аналізу моєї «спадковості». Що може піти не так?",
+    "spans": [
+      {
+        "text": "Відкрит",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "ий",
+        "label": "MAJOR",
+        "start": 7,
+        "end": 9
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Bc the figures do look cool, and I like they way they're constructed, and how the design reflects certain characteristics, but then every set is like \"oh by the way here's your laser sword and (at minimum one) gun!\"",
+    "text": "Тому що фігурки дійсно виглядають круто, і мені подобається, як вони сконструйовані, і як дизайн відображає певні характеристики, але потім кожен набір мов \"о, до речі, ось твій лазерний меч і (як мінімум одна) зброя!\"",
+    "spans": [
+      {
+        "text": "зброя",
+        "label": "MAJOR",
+        "start": 211,
+        "end": 216
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Гучний анархіст, який нічого не тямить у приховуванні своєї ідентичності, віддав свою ДНК біотехнологічній компанії за сумнівний роздruk мого \"Родоводу\". Що може піти не так?",
+    "spans": [
+      {
+        "text": "ідентичності",
+        "label": "MAJOR",
+        "start": 60,
+        "end": 72
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "data from flightaware.",
+    "text": "дані з flightaware.",
+    "spans": [
+      {
+        "text": "e",
+        "label": "MINOR",
+        "start": 17,
+        "end": 18
+      },
+      {
+        "text": " f",
+        "label": "MINOR",
+        "start": 6,
+        "end": 8
+      },
+      {
+        "text": "lightawar",
+        "label": "MINOR",
+        "start": 8,
+        "end": 17
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Затятий анархіст, який не хоче приховувати свою особистість, віддає свою ДНК біотехнологічній компанії для сумнівної роздруківки мого \"Родоводу\". Що може піти не так?",
+    "spans": [
+      {
+        "text": "не хоче",
+        "label": "MAJOR",
+        "start": 23,
+        "end": 30
+      },
+      {
+        "text": "роздруківки",
+        "label": "MAJOR",
+        "start": 117,
+        "end": 128
+      },
+      {
+        "text": "може ",
+        "label": "MINOR",
+        "start": 149,
+        "end": 154
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Bc the figures do look cool, and I like they way they're constructed, and how the design reflects certain characteristics, but then every set is like \"oh by the way here's your laser sword and (at minimum one) gun!\"",
+    "text": "Бо фігури виглядають круто, і мені подобається, як вони складені, і як дизайн відображає певні характеристики, але потім кожен набір такий: \"о, до речі, ось тобі лазерний меч і (як мінімум одна) рушниця!\"",
+    "spans": [
+      {
+        "text": "складені",
+        "label": "MINOR",
+        "start": 56,
+        "end": 64
+      },
+      {
+        "text": "рушниця",
+        "label": "MINOR",
+        "start": 195,
+        "end": 202
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "data from flightaware.",
+    "text": "дані з flightaware.",
+    "spans": [
+      {
+        "text": " flightaware.",
+        "label": "MINOR",
+        "start": 6,
+        "end": 19
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Голосний анархіст, який не соромиться приховувати свою ідентичність, дає свою ДНК біотехнологічній компанії для сумнівного друкованого варіанту мого \"Походження\". Що може піти не так?",
+    "spans": [
+      {
+        "text": "не соромиться",
+        "label": "MINOR",
+        "start": 24,
+        "end": 37
+      },
+      {
+        "text": " приховувати",
+        "label": "MINOR",
+        "start": 37,
+        "end": 49
+      },
+      {
+        "text": "друкованого варіанту ",
+        "label": "MINOR",
+        "start": 123,
+        "end": 144
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Bc the figures do look cool, and I like they way they're constructed, and how the design reflects certain characteristics, but then every set is like \"oh by the way here's your laser sword and (at minimum one) gun!\"",
+    "text": "Бо цифри виглядають круто, і мені подобається, як вони сконструйовані, і як дизайн відображає певні характеристики, але потім кожен набір такий: «О, до речі, ось ваш лазерний меч і (щонайменше одна) зброя!»",
+    "spans": [
+      {
+        "text": "Бо цифри",
+        "label": "MINOR",
+        "start": 0,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "data from flightaware.",
+    "text": "дані з flightaware.",
+    "spans": [
+      {
+        "text": "flightaware",
+        "label": "MINOR",
+        "start": 7,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Голосний анархіст, який не любить приховувати свою особу, давав ДНК біотехнологічній компанії для сумнівної друкованої копії мого \"Ancestry\". Що могло піти не так?",
+    "spans": [
+      {
+        "text": "Голосни",
+        "label": "MINOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "який не любит",
+        "label": "MINOR",
+        "start": 19,
+        "end": 32
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "data from flightaware.",
+    "text": "дані flightaware.",
+    "spans": [
+      {
+        "text": "flightawar",
+        "label": "MINOR",
+        "start": 5,
+        "end": 15
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Затятий анархіст, який паршиво приховує свою особистість, віддає свою ДНК біотехнологічній компанії за сумнівну роздруківку мого \"родоводу\". Що може піти не так?",
+    "spans": [
+      {
+        "text": "родоводу",
+        "label": "MAJOR",
+        "start": 130,
+        "end": 138
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Голосний анархіст, який не піклується про те, щоб приховати свою ідентичність, віддаючи свою ДНК біотехнологічній компанії для сумнівного друкованого видання мого «Ancestry». Що може піти не так?",
+    "spans": [
+      {
+        "text": "не піклується про те, щоб",
+        "label": "MAJOR",
+        "start": 24,
+        "end": 49
+      },
+      {
+        "text": "ідентичність",
+        "label": "MAJOR",
+        "start": 65,
+        "end": 77
+      },
+      {
+        "text": "друкованого видання",
+        "label": "MAJOR",
+        "start": 138,
+        "end": 157
+      },
+      {
+        "text": "Ancestry",
+        "label": "MINOR",
+        "start": 164,
+        "end": 172
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The lander is about the size of old UK telephone box...",
+    "text": "Розмір посадкового модуля приблизно такий самий, як старий британський телефонний ящик...",
+    "spans": [
+      {
+        "text": "телефонний ящик...",
+        "label": "MAJOR",
+        "start": 71,
+        "end": 89
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "A vocal anarchist who's shit about hiding his identity giving his DNA to a biotechnology company for a dubiouse printout of my \"Ancestry.\" What could go wrong?",
+    "text": "Гучний анархіст, який нехтує приховуванням своєї особистості, віддає свою ДНК біотехнологічній компанії для сумнівного відтворення мого \"походження\". Що може піти не так?",
+    "spans": [
+      {
+        "text": "Гучний",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 6
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The lander is about the size of old UK telephone box...",
+    "text": "Десантник розміром зі стару британську телефонну будку...",
+    "spans": [
+      {
+        "text": "Десантник",
+        "label": "MINOR",
+        "start": 0,
+        "end": 9
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "That is to say, it is a delight, she employed all of this excellent skill in a service of a larger social point this week.",
+    "text": "Тобто, це було насолодою, вона використала всі ці чудові навички на службі більшої соціальної мети цього тижня.",
+    "spans": [
+      {
+        "text": "це було насолодою",
+        "label": "MAJOR",
+        "start": 7,
+        "end": 24
+      },
+      {
+        "text": "більшої соціальної мети",
+        "label": "MAJOR",
+        "start": 75,
+        "end": 98
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The lander is about the size of old UK telephone box...",
+    "text": "Ландер має розміри старого британського телефонного боксу...",
+    "spans": [
+      {
+        "text": "Ландер",
+        "label": "MINOR",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "британського телефонного боксу",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 57
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "That is to say, it is a delight, she employed all of this excellent skill in a service of a larger social point this week.",
+    "text": "Тобто це задоволення, цього тижня вона застосувала всі свої чудові вміння на користь більшої соціальної мети.",
+    "spans": [
+      {
+        "text": "ня",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 20
+      },
+      {
+        "text": "Тобт",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "о це зад",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 12
+      },
+      {
+        "text": "оволен",
+        "label": "MAJOR",
+        "start": 12,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "data from flightaware.",
+    "text": "дані від FlightAware.",
+    "spans": [
+      {
+        "text": "FlightAware",
+        "label": "MINOR",
+        "start": 9,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "In general I really like the interplay between the two games. The advantage of shortform stories is that you can \"skip to the good part\", they can be more immediately engrossing and satisfying. The advantage of longform stories is that you can imbue whatever happens with way more emotional weight, you lose the immediacy in exchange for stronger payoffs.",
+    "text": "Загалом мені дуже подобається взаємодія між двома іграми. Перевага коротких історій у тому, що ви можете «перейти до хорошої частини», вони можуть бути більш негайно захоплюючими та задовольняючими. Перевага довгих історій у тому, що ви можете наділити все, що відбувається, набагато більшою емоційною вагою, ви втрачаєте негайність на користь сильніших винагород.",
+    "spans": [
+      {
+        "text": "більш негайно",
+        "label": "MAJOR",
+        "start": 152,
+        "end": 165
+      },
+      {
+        "text": "задовольняючими",
+        "label": "MAJOR",
+        "start": 182,
+        "end": 197
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Celeste isn't \"the good version\" or \"the finished version\" of the pico-8 game, it's just a different approach to the same core story. As someone that loves both shortform and longform stuff, seeing the connection laid bare this way is really interesting and delightful.",
+    "text": "Целье не «краща версія» або «завершена версія» гри в піко-8, це просто інший підхід до однієї й тієї ж основної історії. Як людина, яка любить як короткі, так і довгі формати, бачити зв'язок відкритим таким чином – це дійсно цікаво і захоплююче.",
+    "spans": [
+      {
+        "text": "Целье",
+        "label": "MINOR",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Як людина, яка любить",
+        "label": "MAJOR",
+        "start": 121,
+        "end": 142
+      },
+      {
+        "text": "завершена версія",
+        "label": "MAJOR",
+        "start": 29,
+        "end": 45
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "We always start with a rough pencil sketch…",
+    "text": "Завжди починаємо з грубого олівцевого начерку...",
+    "spans": [
+      {
+        "text": "олівцевого начерку",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 45
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Celeste isn't \"the good version\" or \"the finished version\" of the pico-8 game, it's just a different approach to the same core story. As someone that loves both shortform and longform stuff, seeing the connection laid bare this way is really interesting and delightful.",
+    "text": "Celeste не є «доброю версією» або «фінальною версією» гри pico-8, це просто інший підхід до однієї й тієї самої основної історії. Оскільки я люблю як короткі, так і довгі формати, побачити цей зв’язок у такому вигляді справді цікаво та приємно.",
+    "spans": [
+      {
+        "text": "Celeste",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Celeste isn't \"the good version\" or \"the finished version\" of the pico-8 game, it's just a different approach to the same core story. As someone that loves both shortform and longform stuff, seeing the connection laid bare this way is really interesting and delightful.",
+    "text": "Celeste — це не «хороша версія» чи «завершена версія» гри pico-8, це просто інший підхід до тієї самої основної історії. Як людина, яка любить і короткі, і довгі формати, я з захопленням спостерігаю за таким чином встановленим зв'язком, це дійсно цікаво і приємно.",
+    "spans": [
+      {
+        "text": "Celeste",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "pico-8",
+        "label": "MAJOR",
+        "start": 58,
+        "end": 64
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "We always start with a rough pencil sketch…",
+    "text": "Ми завжди починаємо з грубого олівцевого ескізу...",
+    "spans": [
+      {
+        "text": "грубого олівцевого ескізу",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 47
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  }
+]

@@ -1,0 +1,268 @@
+[
+  {
+    "source": "“You mean his chicken he stole?” Cohren remembered the morning they had stolen him from a farm. “Yeah, i'm pretty sure”",
+    "text": "「彼が盗んだ鶏ってこと？」コーレンは彼らが農場から彼を盗んだ朝を思い出しました。「うん、たぶんそうだね」",
+    "spans": [
+      {
+        "text": "彼",
+        "label": "MAJOR",
+        "start": 25,
+        "end": 26
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "ケイエルは明らかにニッシに同意していなかった。彼はいつもより黒く見えず、爪はサッサリンの背中に食い込んで、サッスランを血が出るほど傷つけていた。しかし、サッサリンは明らかに気にしていないようだった。とはいえ、サッサリンは自分が新しい友達を怖がらせたことに気づき、着陸するのにちょうどいい空き地を見つけた。",
+    "spans": [
+      {
+        "text": "サッ",
+        "label": "MAJOR",
+        "start": 53,
+        "end": 55
+      },
+      {
+        "text": "ス",
+        "label": "MAJOR",
+        "start": 55,
+        "end": 56
+      },
+      {
+        "text": "ラ",
+        "label": "MAJOR",
+        "start": 56,
+        "end": 57
+      },
+      {
+        "text": "ン",
+        "label": "MAJOR",
+        "start": 57,
+        "end": 58
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "“Do you want to celebrate?” They asked, reflecting on the last time she answered it.",
+    "text": "「祝いたい？」と彼らは尋ねた、あの時彼女が同じ質問に答えたことを反芻しながら。",
+    "spans": [
+      {
+        "text": "反芻",
+        "label": "MAJOR",
+        "start": 32,
+        "end": 34
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "“Where are moving out to FOB I-131, fifty miles outside of Ianlos. We are to support the ongoing siege and later attack of Ianlos to flush out the insurgency there. From there we will have a foothold and the base of the mountains” Shaw explained. “Get with your squads and mount up”",
+    "text": "「ＦＯＢ Ｉ－１３１に向かって５０マイル外のアイアンロスにいる反乱兵を追い出すための攻撃を支援することになりました。そこからは拠点と山の根城になります」とシャワ氏は説明した。「隊と一緒に集まれ、馬に乗りなさい」",
+    "spans": [
+      {
+        "text": "馬に乗りなさい",
+        "label": "MINOR",
+        "start": 97,
+        "end": 104
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "“You mean his chicken he stole?” Cohren remembered the morning they had stolen him from a farm. “Yeah, i'm pretty sure”",
+    "text": "「あなたはその鶏を盗んだってことですか？」コーレンは牧場から彼を盗んだ朝を思い出した。「そうだね、俺はかなり確信している」",
+    "spans": [
+      {
+        "text": "彼を",
+        "label": "MINOR",
+        "start": 30,
+        "end": 32
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "The walk home was quiet, but so loud. The thoughts infecting my brain were booming, and the regret of not having stayed to help flashed over multiple times. I finally arrived home, almost brought to tears by the dreadful walk in the burst of sounds from the clouds above, the thunderous booms were enough to frighten any person sometimes. Dad was already passed out on the couch, some rerun of an older movie, probably 10-12 years old; sighing, I quietly crept my way back to my room. Flopping in the bed, I wasn’t able to keep my eyes open for long. Before long, slumber crept up on me.",
+    "text": "帰り道は静かだったけどとても騒がしかった。脳にこびりついた思いが爆発し、助けに行かなかったことへの後悔が何度も頭をよぎった。私はついに家に到着し、上空の雲からの破裂音の中での恐ろしい歩行に涙が出そうになりました、雷のような轟音は時々人を怖がらせるのに十分でした。お父さんはすでにソファで気を失っていて、おそらく10〜12年前の古い映画の再放送を見ていました。ため息をつきながら、私は静かに自分の部屋に戻りました。ベッドに倒れ込むと、私は長い間目を開けておくことができませんでした。やがて、眠りが私の上に忍び寄ってきた。",
+    "spans": [
+      {
+        "text": "轟",
+        "label": "MAJOR",
+        "start": 111,
+        "end": 112
+      },
+      {
+        "text": "音",
+        "label": "MAJOR",
+        "start": 112,
+        "end": 113
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "ケイエルは明らかにニッシとは同意見ではなかった、彼は通常よりも黒さが少なく、爪はタサリンの背中に深く突き刺さり、タサリンを出血させていたが、タサリンは明らかに気にしていなかった。那曰く、タサリンは新しい友達を怖がらせたと気づき、着陸するための空き地を見つけた。",
+    "spans": [
+      {
+        "text": "那曰く",
+        "label": "MAJOR",
+        "start": 89,
+        "end": 92
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "“So… whatcha wanna do?” They asked. Kari looked up at them, teeming with excitement. She handed Ivory a paper. When they looked down at it however…",
+    "text": "「じゃあ・・・何したい？」彼らは尋ねました。カリは彼らを見上げ、興奮にあふれていた。彼女は紙をイボリーに渡しましたしかし、彼らがそれを見下ろしたとき…",
+    "spans": [
+      {
+        "text": "ました",
+        "label": "MAJOR",
+        "start": 54,
+        "end": 57
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "The walk home was quiet, but so loud. The thoughts infecting my brain were booming, and the regret of not having stayed to help flashed over multiple times. I finally arrived home, almost brought to tears by the dreadful walk in the burst of sounds from the clouds above, the thunderous booms were enough to frighten any person sometimes. Dad was already passed out on the couch, some rerun of an older movie, probably 10-12 years old; sighing, I quietly crept my way back to my room. Flopping in the bed, I wasn’t able to keep my eyes open for long. Before long, slumber crept up on me.",
+    "text": "家への帰り道は静かだったのに、とても騒がしくもあった。頭の中を駆け巡る考えの嵐が轟いていて、残って手伝わなかった後悔が何度も押し寄せてきた。ついに家に着いたときには、頭上から聞こえる雲の破裂した音の恐ろしさに涙が出そうだった。雷のような轟音は、時に人を怖がらせるのに十分だった。父はもうソファで寝落ちしていた。10年から12年ほど前の古い映画の再放送だっただろう。ため息をつきながら、私はそっと自分の部屋に戻った。ベッドに倒れ込むと、目を開けたままいられるのは長くなかった。すぐにまどろみが私を襲った。",
+    "spans": [
+      {
+        "text": "手伝わなかった",
+        "label": "MAJOR",
+        "start": 49,
+        "end": 56
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "The walk home was quiet, but so loud. The thoughts infecting my brain were booming, and the regret of not having stayed to help flashed over multiple times. I finally arrived home, almost brought to tears by the dreadful walk in the burst of sounds from the clouds above, the thunderous booms were enough to frighten any person sometimes. Dad was already passed out on the couch, some rerun of an older movie, probably 10-12 years old; sighing, I quietly crept my way back to my room. Flopping in the bed, I wasn’t able to keep my eyes open for long. Before long, slumber crept up on me.",
+    "text": "帰り道は静かだったが、何とも騒々しい気分だった。頭の中をぐるぐる回る考えは爆発していたようで、手伝うために残らなかったことを後悔した思いが何度もよみがえってきた。私はやっと家に到着したが、上空からの音に圧倒され、悲しい気持ちで涙が出そうになっていた。時折、どんな人も怖気づかせてしまうほどの轟音が雷となって響いた。父は既にソファの上でぐっすり寝ていて、10〜12年前の映画の再放送を見ていたのだろう。ため息をつきながら、私は静かに自分の部屋に戻った。ベッドに倒れ込むと、長く目を開けたままにすることができなかった。まもなく眠りに落ちた。",
+    "spans": [
+      {
+        "text": "折",
+        "label": "MAJOR",
+        "start": 126,
+        "end": 127
+      },
+      {
+        "text": "時",
+        "label": "MAJOR",
+        "start": 125,
+        "end": 126
+      },
+      {
+        "text": "轟音",
+        "label": "MAJOR",
+        "start": 145,
+        "end": 147
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "カイエルはニッシーの意見には全く賛同しておらず、普段よりも黒ずんでおり、爪がタッサリンの背中に突き刺さって血を流していたが、タッサリンは全く気にしていなかった。そうは言っても、タサリンは自分が新しい友人を怖がらせてしまったことに気づき、着陸できるような場所を見つけた。",
+    "spans": [
+      {
+        "text": "黒ずんでおり",
+        "label": "MINOR",
+        "start": 29,
+        "end": 35
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Kayel clearly didn't agree with Nyssi, he looked less black than normal and his claws had dug into Thassalin's back to the point that he'd made the Thraki bleed, but Thassalin clearly didn't seem to care. That being said, Thassalin had realized he had scared his new friends and found a clearing to land in.",
+    "text": "カイルはニシーと違って黒く見え、爪がタサリンの背中に突き刺さり、タサリンが血を流したが、タサリンはまったく気にしていなかった。タサリンは、自分が新しい友達を怖がらせてしまったことに気づき、落ち着いた場所を見つけた。",
+    "spans": [
+      {
+        "text": "カイル",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 3
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "The South was desperate, and their royal family would do anything to stop the bloodshed. They offered their only princess to be queen of the North and bear a son to be the future king. Then, the South would join with the North to make one kingdom. The North accepted, and Princess Eirwen married Prince Akull.",
+    "text": "南は絶望的で、王室は血腥を止めるために何でもした。彼らは唯一の王女を北の女王に据え、将来の王となる息子を生むことを提案した。すると、南は北と合併して一つの王国を作ることになった。北はこれを受け入れ、エイアウェン王女はアクル王子と結婚した。",
+    "spans": [
+      {
+        "text": "血腥",
+        "label": "MAJOR",
+        "start": 10,
+        "end": 12
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "\"Kayel!\" Tenuk exclaimed as he glided out of the cloud and began circling, trying to spot Nyssi and Thassalin in the darkness below. \"What do we do? Kayel..? Kayel, where are you?\"",
+    "text": "\"Kayel!\"テヌクは雲から滑り降り、暗闇の下でニシーとタサリンを見つけようと旋回し始めた。「どうするの？カイエル……カイエル、どこにいるの？」",
+    "spans": [
+      {
+        "text": "Kayel",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 6
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "\"Kayel!\" Tenuk exclaimed as he glided out of the cloud and began circling, trying to spot Nyssi and Thassalin in the darkness below. \"What do we do? Kayel..? Kayel, where are you?\"",
+    "text": "「カイエル!」テヌクは雲から滑り出て旋回を始め、下の暗闇でニッシーとタサリンを見つけようとしながら叫んだ。「どうする? ケイエル・・・? カイエル、今どこにいるの?」",
+    "spans": [
+      {
+        "text": "ケイエル",
+        "label": "MAJOR",
+        "start": 60,
+        "end": 64
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "\"Kayel!\" Tenuk exclaimed as he glided out of the cloud and began circling, trying to spot Nyssi and Thassalin in the darkness below. \"What do we do? Kayel..? Kayel, where are you?\"",
+    "text": "「ケイエル！」とテヌクは叫びながら雲から飛び出し、下の暗闇の中でニッシーとタッサリンを見つけようと旋回し始めた。「どうする？ケイエル・・・？ケイエル、どこにいるの？」",
+    "spans": [
+      {
+        "text": "」",
+        "label": "MAJOR",
+        "start": 82,
+        "end": 83
+      },
+      {
+        "text": "旋回し",
+        "label": "MAJOR",
+        "start": 49,
+        "end": 52
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  }
+]

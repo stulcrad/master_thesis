@@ -1,0 +1,1270 @@
+[
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z tlam Thassalina vyrazil prudký plamen, když obrovský Thraki zapálil velmi specifickou část lesa, pak kroužil nad ním, pozoruje chvíli. Podivně, když se zpomalil, podivný křiklavý zvuk zezadu za ním přestal. Thassalin zapomněl, že má pasažéry na zádech.",
+    "spans": [
+      {
+        "text": "kroužil nad ním",
+        "label": "MAJOR",
+        "start": 103,
+        "end": 118
+      },
+      {
+        "text": "pozoruje chvíli.",
+        "label": "MAJOR",
+        "start": 120,
+        "end": 136
+      },
+      {
+        "text": "Podivně,",
+        "label": "MAJOR",
+        "start": 137,
+        "end": 145
+      },
+      {
+        "text": "se zpomalil",
+        "label": "MAJOR",
+        "start": 151,
+        "end": 162
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "\"Come on, Tenuk, you've shapeshifted into a Thraki before!\"",
+    "text": "„Takhle, Tenuku, už jsi se jednou přeměnil v Thrakia!“",
+    "spans": [
+      {
+        "text": "Takhle,",
+        "label": "MINOR",
+        "start": 1,
+        "end": 8
+      },
+      {
+        "text": "jsi se",
+        "label": "MAJOR",
+        "start": 20,
+        "end": 26
+      },
+      {
+        "text": "přeměnil v Thrakia",
+        "label": "MAJOR",
+        "start": 34,
+        "end": 52
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Plížil jsem se ke zadní části obchodu, šepot a mluvení se ozývaly za kovovým mřížemi, které se podařilo po několika pokusech strhnout. Vlézt do větrací šachty byla pro mě v tuto chvíli nejbezpečnější a nejtišší možnost; když jsem se tam dostal, naslouchal jsem rozhovorům a rozhovorům mezi podivně oblečenými muži. Všiml jsem si Ala uvnitř, v řetězech. Je jasné, že se nakonec chytil.",
+    "spans": [
+      {
+        "text": "že se nakonec chytil",
+        "label": "MAJOR",
+        "start": 363,
+        "end": 383
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The girl in question looked a lot like her mother; pale blue eyes and white hair decorated with blue strands. The Ice King thought a daughter made him look weak. After all, he had only had sons up until this point.",
+    "text": "Dotyčná dívka se hodně podobala své matce; měla světle modré oči a vlasy obarvené na modro. Ledový král si myslel, že dcera ho činí slabším. Koneckonců do té doby měl jenom syny.",
+    "spans": [
+      {
+        "text": "obarvené na modro",
+        "label": "MAJOR",
+        "start": 73,
+        "end": 90
+      },
+      {
+        "text": "činí",
+        "label": "MAJOR",
+        "start": 127,
+        "end": 131
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Itania čas. Cohren nenáviděl vstávat tak brzy. Hlavně proto, že bylo jeho zodpovědností vzbudit všechny ostatní ve své společnosti. Ticho krok z jeho lůžka, oblékl si bojové uniformy, hodil na sebe útočnou vestu a zabalil si své věci z jeho skříňky, dával si pozor na malou krabičku. Naložil svou pušku a nasadil si přilbu na malý háček připojený k jeho pásu. Měl všechny potřebné věci. Po kontrole nábojových kapes vyšel potichu z kasáren, bláto a led praskaly pod jeho botami.",
+    "spans": [
+      {
+        "text": "Itania ",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 12
+      },
+      {
+        "text": " Ticho krok",
+        "label": "MAJOR",
+        "start": 136,
+        "end": 147
+      },
+      {
+        "text": "Naložil",
+        "label": "MAJOR",
+        "start": 289,
+        "end": 296
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z Thassalinových čelistí vyšlehly plameny, když kolosální Thraki zapálil určitý kousek lesa, pak zakroužil nad ním a chvíli ho pozoroval. Podivné bylo, že když zpomalil, podivný ječivý zvuk zpoza jeho zad ustal. Thassalin zapomněl, že má na zádech pasažéry.",
+    "spans": [
+      {
+        "text": "zakroužil nad ním",
+        "label": "MAJOR",
+        "start": 97,
+        "end": 114
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Nenápadně jsem zamířil k zadní části obchodu, za kovovou mříží, kterou bylo třeba několika škubnutí utrhnout, se ozývalo mumlání a hovory. Vlézt do ventilace byla pro mě momentálně nejbezpečnější a nejtišší možnost; když jsem lezl dovnitř, zachytával jsem hovory a rozhovory mezi podivně oblečenými muži. Uvnitř jsem si všiml Ala, spoutaného řetězy. Počítal jsem s tím, že ho nakonec chytí.",
+    "spans": [
+      {
+        "text": "škubnutí",
+        "label": "MAJOR",
+        "start": 91,
+        "end": 99
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z Thassalinovy tlamy vyrazil plamen, kterým kolosální Thraki zapálil velmi specifický úsek lesa a pak kroužil nad ním a pozoroval situaci. Jakmile zpomalil, tak podivný řev zpoza něj ztichl. Thassalin zapomněl, že má na zádech pasažéry.",
+    "spans": [
+      {
+        "text": "zpoza něj ",
+        "label": "MAJOR",
+        "start": 173,
+        "end": 183
+      },
+      {
+        "text": "ztich",
+        "label": "MAJOR",
+        "start": 183,
+        "end": 188
+      },
+      {
+        "text": "na zádech",
+        "label": "MAJOR",
+        "start": 217,
+        "end": 226
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Potichu jsem se vydal směrem k zadní části obchodu, za kovovou mříží jsem slyšel mumlání a mluvení, kterou jsem musel několikrát zatáhnout, abych ji strhl. Vylézt do ventilačního otvoru byla pro mě teď nejbezpečnější a nejtišší možnost; cestou jsem zachytil rozhovory a hovory mezi podivně oblečenými muži. Všiml jsem si Al uvnitř, připoutaný. Bylo jasné, že ho nakonec chytí.",
+    "spans": [
+      {
+        "text": "si Al uvnitř, připoutaný",
+        "label": "MAJOR",
+        "start": 318,
+        "end": 342
+      },
+      {
+        "text": "o jasné, že ho nakonec chytí",
+        "label": "MINOR",
+        "start": 347,
+        "end": 375
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Italský čas. Kohren nesnášel vstávat tak brzy. Hlavně proto, že byl zodpovědný za to, aby vzbudil všechny ostatní v jeho skupině. Tichým krokem opustil své skladiště, oblékl si bojové kalhoty, nasadil si výstroj a sbalil si své věci z šatny, přičemž si dal pozor na jednu malou krabici. Vzal si zbraň a nasadil si helmu na malý háček připevněný k opasku. Měl všechno, co potřeboval. Zkontroloval pouzdra na náboje a tichým krokem opustil kasárna. Pod jeho botami se mísily bláto a led.",
+    "spans": [
+      {
+        "text": "Italský",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 12
+      },
+      {
+        "text": "skladiště",
+        "label": "MINOR",
+        "start": 161,
+        "end": 170
+      },
+      {
+        "text": "opustil ",
+        "label": "MAJOR",
+        "start": 149,
+        "end": 157
+      },
+      {
+        "text": "Měl",
+        "label": "MAJOR",
+        "start": 360,
+        "end": 363
+      },
+      {
+        "text": "kasárna",
+        "label": "MAJOR",
+        "start": 443,
+        "end": 450
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z Thassalinových čelistí se vydral plamen a kolosální Thraki zapálil velmi konkrétní úsek lesa, poté kroužil nahoře a pozoroval. Zvláštně, jakmile zpomalil, zvláštní křik za ním ustal. Thassalin zapomněl, že na zádech má pasažéry.",
+    "spans": [
+      {
+        "text": "vydral",
+        "label": "MAJOR",
+        "start": 28,
+        "end": 34
+      },
+      {
+        "text": "a",
+        "label": "MAJOR",
+        "start": 42,
+        "end": 43
+      },
+      {
+        "text": "Zvláštně",
+        "label": "MAJOR",
+        "start": 129,
+        "end": 137
+      },
+      {
+        "text": "za",
+        "label": "MAJOR",
+        "start": 171,
+        "end": 173
+      },
+      {
+        "text": "ním",
+        "label": "MAJOR",
+        "start": 174,
+        "end": 177
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The girl in question looked a lot like her mother; pale blue eyes and white hair decorated with blue strands. The Ice King thought a daughter made him look weak. After all, he had only had sons up until this point.",
+    "text": "Dotčená dívka vypadala dost jako její matka; bledě modré oči a bílé vlasy ozdobené modrými prameny. Ledový král si myslel, že dcera ho dělá slabým. Vždyť do té doby měl jen syny.",
+    "spans": [
+      {
+        "text": "Vždyť",
+        "label": "MAJOR",
+        "start": 148,
+        "end": 153
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Very well. The child may live in the palace.” He started, earning a sigh from the queen. “But,” he added. “You will be executed.”",
+    "text": "„Velmi dobře. Dítě může žít v paláci.“ Začal a získal od královny povzdech. „Ale,“ dodal. „Budete popraveni.“",
+    "spans": [
+      {
+        "text": "Velmi dobře",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 12
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Tichounce jsem se prodrala směrem k zadní části obchodu. Slyšela jsem mumlání a mluvící hlasy za kovovou mřížkou, kterou bylo nutné několikrát odtrhnout. Nejbezpečnějším a nejtišším způsobem pro mě bylo vylézt do větrací štoly. Slyšela jsem konverzace a rozhovory mezi zvláštně oblečenými muži. Viděla jsem Ala uvnitř, spoutaného. Myslela jsem si, že ho nakonec chytí.",
+    "spans": [
+      {
+        "text": "Tichounce",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "nutné několikrá",
+        "label": "MAJOR",
+        "start": 126,
+        "end": 141
+      },
+      {
+        "text": "t",
+        "label": "MAJOR",
+        "start": 141,
+        "end": 142
+      },
+      {
+        "text": " štoly.",
+        "label": "MAJOR",
+        "start": 220,
+        "end": 227
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Potichu jsem se vydal směrem k zadní části obchodu, kde jsem zaslechl mumlání a rozhovory za kovovou mříží, kterou jsem musel několikrát trhnout, než se mi podařilo ji odtrhnout. Pro mě bylo nejbezpečnější a nejtišší možností vylézt do ventilační šachty; když jsem se prodíral, slyšel jsem rozhovory a hovory mezi podivně oblečenými muži. Uvnitř jsem si všiml Ala, který byl přivázaný. Je jasné, že ho nakonec chytili.",
+    "spans": [
+      {
+        "text": "kterou jsem musel několikrát trhnout, než se mi podařilo ji odtrhnout",
+        "label": "MAJOR",
+        "start": 108,
+        "end": 177
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "DETONATION",
+    "text": "detonace",
+    "spans": [
+      {
+        "text": "detonac",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "e",
+        "label": "MAJOR",
+        "start": 7,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 itánský čas. Cohren nesnášel takto brzké vstávání. Hlavně proto, že byla jeho odpovědnost probudit všechny ostatní ve své společnosti. Potichu vystoupil z palandy, oblékl si bojovou uniformu, přehodil si přes sebe útočnou vestu a zabalil své věci ze skříňky, přičemž byl opatrný s jedním malým krabičkou. Přes rameno si přehodil pušku a přilbu zavěsil na malý háček na svém opasku. Měla všechny své úchyty, dýchací přístroj, brýle, vše potřebné. Po zkontrolování svých nábojových pouzder tiše vyšel z kasáren, bahno a led pod jeho botami se rozmačkávalo.",
+    "spans": [
+      {
+        "text": "že byla jeho odpovědnost",
+        "label": "MAJOR",
+        "start": 70,
+        "end": 94
+      },
+      {
+        "text": "jedním malým",
+        "label": "MAJOR",
+        "start": 286,
+        "end": 298
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z Thassalinových tlam vybuchla ohnivá exploze, když kolosální Thraki zapálil velmi konkrétní část lesa, pak se vznášel nad ním a sledoval, co se děje. Zajímavé bylo, že jak zpomalil, podivné ječení, které se ozývalo za ním, ustalo. Thassalin na chvíli zapomněl, že na jeho zádech sedí pasažéři.",
+    "spans": [
+      {
+        "text": "vybuchla",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 30
+      },
+      {
+        "text": "tlam",
+        "label": "MAJOR",
+        "start": 17,
+        "end": 21
+      },
+      {
+        "text": "sledoval, co se děje",
+        "label": "MAJOR",
+        "start": 129,
+        "end": 149
+      },
+      {
+        "text": "na chvíli",
+        "label": "MAJOR",
+        "start": 242,
+        "end": 251
+      },
+      {
+        "text": "Zajímavé bylo",
+        "label": "MAJOR",
+        "start": 151,
+        "end": 164
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "\"Come on, Tenuk, you've shapeshifted into a Thraki before!\"",
+    "text": "„Pojď, Tenuku, ty ses přece už jednou proměnil v Thraka!““",
+    "spans": [
+      {
+        "text": "Thraka",
+        "label": "MAJOR",
+        "start": 49,
+        "end": 55
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Itanijského času. Cohren nerad vstával takhle brzo. Hlavně proto, že jeho povinností bylo probudit všechny ostatní ve své rotě. Tiše vykročil z kavalce, oblékl si bojovou uniformu, oblékl si útočnou vestu a sbalil si věci ze skříňky, přičemž si dával pozor na určitou malou krabičku. Pušku si hodil na rameno a přilbu si nasadil na malý háček, který měl připevněný k opasku. Měla všechny své upevňovací prostředky, respirátor, brýle, všechno potřebné. Když zkontroloval své vaky s municí, potichu vyšel z kasáren, bláto a led mu čvachtaly pod botami.",
+    "spans": [
+      {
+        "text": "kavalce",
+        "label": "MAJOR",
+        "start": 149,
+        "end": 156
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "Bylo 4:30 italského času. Cohren nesnášel to vstávání. Hlavně proto, že to byl právě on, kdo byl zodpovědný za vzbuzení ostatních členů své jednotky. Tichými kroky vystoupil ze své postele, oblékl si bojový oděv, hodil si na sebe taktickou vestu a začal balit si věci ze své skříňky. S jednou malou krabičkou byl velmi opatrný. Do ruky si vzal pušku, helmu pověsil na malý háček připevněný k opasku. Na helmě bylo všechno, čeho by mohl potřebovat. Dýchačka, brýle, všechno potřebné. Po kontrole nábojů tiše vyšel z kasáren, kde bláto a led pod nohama skřípaly.",
+    "spans": [
+      {
+        "text": "zodpovědný za vzbuzení",
+        "label": "MAJOR",
+        "start": 97,
+        "end": 119
+      },
+      {
+        "text": "bojový oděv",
+        "label": "MAJOR",
+        "start": 200,
+        "end": 211
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Potichu jsem se plížil směrem k zadní části obchodu, bylo slyšet mumlání a hovor za kovovou mříží, která trvala několik tahů, než byla stržena. Lezení do vzduchovodu bylo pro mě v tuto chvíli nejbezpečnější a nejtišší možností, lezením bych se dostal k rozhovorům a hovorům mezi podivně oblečenými muži. Všiml jsem si, že Al je uvnitř, připoutaný řetězy. Předpokládal jsem, že bude nakonec chycen.",
+    "spans": [
+      {
+        "text": "trvala několik tahů,",
+        "label": "MAJOR",
+        "start": 105,
+        "end": 125
+      },
+      {
+        "text": "lezením bych se dostal k rozhovorům a hovorům",
+        "label": "MINOR",
+        "start": 228,
+        "end": 273
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Nenápadně jsem se vydala k zadní části obchodu, za kovovou mříží, kterou bylo třeba několika škubnutí odtrhnout, bylo slyšet šramot a hovor. Vlézt do ventilace pro mě teď byla nejbezpečnější a nejtišší varianta; prolézala jsem skrz a zachytávala rozhovory a hovory mezi podivně oblečenými muži. Uvnitř jsem si všiml spoutaného Ala. Počítal jsem, že ho nakonec chytí.",
+    "spans": [
+      {
+        "text": "řeba několika škubnutí",
+        "label": "MAJOR",
+        "start": 79,
+        "end": 101
+      },
+      {
+        "text": " spoutaného Ala",
+        "label": "MAJOR",
+        "start": 315,
+        "end": 330
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Nenápadně jsem zamířil k zadní stěně obchodu a za kovovou mříží šum kterou stačilo za pár škubnutí odtrhnout, bylo slyšet šepot a hovor. Vylézt do větracího otvoru byla pro mě právě teď ta nejbezpečnější a nejtišší možnost; při šplhání jím jsem zachytila hovory a konverzaci mezi podivně oblečenými muži. Uvnitř si všiml Ala, spoutaného řetězem. Počítal s tím, že ho chytí.",
+    "spans": [
+      {
+        "text": "šum",
+        "label": "MINOR",
+        "start": 64,
+        "end": 67
+      },
+      {
+        "text": "bylo",
+        "label": "MAJOR",
+        "start": 110,
+        "end": 114
+      },
+      {
+        "text": "Vylézt",
+        "label": "MAJOR",
+        "start": 137,
+        "end": 143
+      },
+      {
+        "text": "jím",
+        "label": "MINOR",
+        "start": 236,
+        "end": 239
+      },
+      {
+        "text": "zachytila",
+        "label": "MAJOR",
+        "start": 245,
+        "end": 254
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "DETONATION",
+    "text": "DETONOVÁNÍ",
+    "spans": [
+      {
+        "text": "DETONOVÁNÍ",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z Thassalinových úst se zřítila vlna plamene, když gigantická Thrákie zapálila konkrétní lesní plochu, pak se nad ní chvíli otáčel a pozoroval. Podivně, když zpomalil, zvláštní křičivý zvuk za ním ustal. Thassalin zapomněl, že má na zádech cestující.",
+    "spans": [
+      {
+        "text": "Thrákie",
+        "label": "MAJOR",
+        "start": 62,
+        "end": 69
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "\"Come on, Tenuk, you've shapeshifted into a Thraki before!\"",
+    "text": "„Ty jo, Tenuk, už ses proměnil v Thraka!“",
+    "spans": [
+      {
+        "text": "Ty jo",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 6
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 italského času. Cohren nenáviděl vstávat tak brzy. Hlavně proto, že byla jeho odpovědností vzbudit všechny ostatní v jeho jednotce. Tichounce vystoupil z své palandy, oblékl si bojové uniformy, hodil si na sebe útočný vestu a sbalil si své věci z šatníku, dbaje o malé krabičce. Přendal si pušku a nasadil si přilbu na malé háčku připojeném k jeho opasku. Měla všechno, co bylo potřeba, respirátor, brýle, všechno. Po kontrole svých nábojových pouzder tichounce vyšel z kasáren, bláto a led pod jeho botami čvachtaly.",
+    "spans": [
+      {
+        "text": "0430",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "byla",
+        "label": "MAJOR",
+        "start": 73,
+        "end": 77
+      },
+      {
+        "text": "útočn",
+        "label": "MAJOR",
+        "start": 216,
+        "end": 221
+      },
+      {
+        "text": "dbaje",
+        "label": "MAJOR",
+        "start": 261,
+        "end": 266
+      },
+      {
+        "text": "Přenda",
+        "label": "MAJOR",
+        "start": 284,
+        "end": 290
+      },
+      {
+        "text": "l",
+        "label": "MAJOR",
+        "start": 290,
+        "end": 291
+      },
+      {
+        "text": "Měla",
+        "label": "MAJOR",
+        "start": 361,
+        "end": 365
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Plížil jsem se k zadní části obchodu, za kovovou mříží jsem slyšel šepot a hlasy. Trvalo mi několik pokusů, než jsem mříž vytrhl. Vlézt do větrací šachty bylo v tuhle chvíli nejbezpečnější a nejtišší řešení. Když jsem se protahoval šachtou, zachytil jsem útržky rozhovorů podivně oblečených mužů. Uvnitř jsem uviděl spoutaného Ala. No jo, nakonec ho chytili.",
+    "spans": [
+      {
+        "text": "o jo",
+        "label": "MAJOR",
+        "start": 333,
+        "end": 337
+      },
+      {
+        "text": "N",
+        "label": "MAJOR",
+        "start": 332,
+        "end": 333
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The girl in question looked a lot like her mother; pale blue eyes and white hair decorated with blue strands. The Ice King thought a daughter made him look weak. After all, he had only had sons up until this point.",
+    "text": "Ta dívka vypadala hodně jako její matka; bledě modré oči a bílé vlasy ozdobené modrými prameny. Ledový král si myslel, že dcera ho dělá slabým. Koneckonců, až dosud měl jen syny.",
+    "spans": [
+      {
+        "text": "ozdobené modrými prameny",
+        "label": "MAJOR",
+        "start": 70,
+        "end": 94
+      },
+      {
+        "text": "dcera ho dělá slabým",
+        "label": "MAJOR",
+        "start": 122,
+        "end": 142
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Very well. The child may live in the palace.” He started, earning a sigh from the queen. “But,” he added. “You will be executed.”",
+    "text": "„Dobře. Dítě může žít v paláci.“ Začal, což u královny vyvolalo povzdech. „Ale,“ dodal. „Vy budete popraven.“",
+    "spans": [
+      {
+        "text": "což u královny vyvolalo povzdech",
+        "label": "MAJOR",
+        "start": 40,
+        "end": 72
+      },
+      {
+        "text": "popraven",
+        "label": "MAJOR",
+        "start": 99,
+        "end": 107
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Very well. The child may live in the palace.” He started, earning a sigh from the queen. “But,” he added. “You will be executed.”",
+    "text": "“Výborně Dítě může žít v paláci.“ Trhl sebou a vysloužil si povzdech od královny. „Ale,“ dodal. „Budete popraven.“",
+    "spans": [
+      {
+        "text": " ",
+        "label": "MAJOR",
+        "start": 8,
+        "end": 9
+      },
+      {
+        "text": "Trhl sebou",
+        "label": "MAJOR",
+        "start": 34,
+        "end": 44
+      },
+      {
+        "text": "Budete",
+        "label": "MAJOR",
+        "start": 97,
+        "end": 103
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Very well. The child may live in the palace.” He started, earning a sigh from the queen. “But,” he added. “You will be executed.”",
+    "text": "„Velmi dobře. Dítě může žít v paláci.“ Začal, čímž vyvolal výdech královny. „Ale,“ dodal. „Budete popraveni.“",
+    "spans": [
+      {
+        "text": "popraveni",
+        "label": "MAJOR",
+        "start": 98,
+        "end": 107
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The girl in question looked a lot like her mother; pale blue eyes and white hair decorated with blue strands. The Ice King thought a daughter made him look weak. After all, he had only had sons up until this point.",
+    "text": "Dívka v úvahu vypadala hodně jako její matka; bledě modré oči a bílé vlasy ozdobené modrými prameny. Král ledu si myslel, že dcera by ho dělala vypadat slabě. Vždyť až dosud měl pouze syny.",
+    "spans": [
+      {
+        "text": "úvahu",
+        "label": "MAJOR",
+        "start": 8,
+        "end": 13
+      },
+      {
+        "text": "dcera by ho dělala vypadat slabě",
+        "label": "MAJOR",
+        "start": 125,
+        "end": 157
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Chapter 1",
+    "text": "Hlava 1",
+    "spans": [
+      {
+        "text": "Hlava",
+        "label": "MINOR",
+        "start": 0,
+        "end": 5
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Italský čas. Coheren nesnášel vstávat tak brzy. Hlavně proto, že byl zodpovědný za probuzení všech ostatních v jeho společnosti. Tichým krokem opustil svůj bunkr, oblékl se do bojových uniforem, hodil si přes rameno obrněnou vestu a zabalil si své věci ze skříňky, být opatrný při zacházení s určitou malou krabičkou. Vzal si do ruky pušku a nasadil si helmu na malé háčky připojené k opasku. Měl vše potřebné, respirátor, brýle, všechno potřebné. Zkontroloval si své zásobníky a tichým krokem opustil kasárna, bahno a led pod jeho botami.",
+    "spans": [
+      {
+        "text": "Italský",
+        "label": "MINOR",
+        "start": 5,
+        "end": 12
+      },
+      {
+        "text": "společnosti",
+        "label": "MINOR",
+        "start": 121,
+        "end": 132
+      },
+      {
+        "text": "bunkr",
+        "label": "MAJOR",
+        "start": 161,
+        "end": 166
+      },
+      {
+        "text": "bojových uniforem",
+        "label": "MAJOR",
+        "start": 181,
+        "end": 198
+      },
+      {
+        "text": "obrněnou",
+        "label": "MAJOR",
+        "start": 221,
+        "end": 229
+      },
+      {
+        "text": "být",
+        "label": "MAJOR",
+        "start": 270,
+        "end": 273
+      },
+      {
+        "text": "určitou",
+        "label": "MAJOR",
+        "start": 298,
+        "end": 305
+      },
+      {
+        "text": "do ruky",
+        "label": "MAJOR",
+        "start": 331,
+        "end": 338
+      },
+      {
+        "text": "kasárna",
+        "label": "MAJOR",
+        "start": 507,
+        "end": 514
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "Cohren nesnášel vstávat takhle brzy ráno. Hlavně proto, že to bylo jeho povinností vzbudit všechny ostatní ve své společnosti. Potichu vstal z postele, oblékl si bojové oblečení, přes rameno si hodil útočnou vestu a sbalil si věci ze své skříňky, opatrně s jednou malou krabičkou. Přes rameno si hodil pušku a na malý hák na pásku připevnil helmu. Měla všechna svá upevnění, dýchací přístroj, brýle, vše potřebné. Poté, co zkontroloval zásobníky, tiše vyšel z kasáren, bláto a led pod jeho botami křupaly.",
+    "spans": [
+      {
+        "text": "to",
+        "label": "MAJOR",
+        "start": 59,
+        "end": 61
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Potichu jsem se vydal směrem ke dveřím na konci obchodu, slyšel jsem šepot a rozhovory za železnou mřížkou, kterou jsem po několika pokusech strhl. Pro mě bylo zrovna teď lezení do větracích otvorů tou nejbezpečnější a nejtišší možností. Jakmile jsem se tam dostal, zaslechl jsem rozhovory mezi podivně oblečenými muži. Uvnitř jsem zahlédl Alana, kterého drželi v řetězech. Sám jsem si myslel, že ho nakonec chytí.",
+    "spans": [
+      {
+        "text": "Sám jsem",
+        "label": "MAJOR",
+        "start": 374,
+        "end": 382
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Potichu jsem se vydal směrem k zadní části obchodu, za kovovou mříží jsem slyšel mumlání a hovor, kterému stačilo pár zatáhnutí, aby se roztrhlo. Vlezl jsem do ventilace, což byla pro mě v této chvíli nejbezpečnější a nejtišší možnost. Když jsem se proplétal mezi věcmi, zaslechl jsem rozhovory a hovory mezi podivně oblečenými muži. Všiml jsem si, že uvnitř je Al, připoutaný řetězem. Všiml jsem si, že nakonec bude chycen.",
+    "spans": [
+      {
+        "text": "roztrhlo",
+        "label": "MAJOR",
+        "start": 136,
+        "end": 144
+      },
+      {
+        "text": "Všiml jsem si,",
+        "label": "MAJOR",
+        "start": 386,
+        "end": 400
+      },
+      {
+        "text": "ventilace",
+        "label": "MAJOR",
+        "start": 160,
+        "end": 169
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "DETONATION",
+    "text": "DETONACE",
+    "spans": [
+      {
+        "text": "DETONACE",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430: 30 Itánijského času.. Cohren hrozně nesnášel, že musel vstávat tak brzy. Hlavně proto, že bylo jeho povinností, vzbudit všechny ostatní v jeho společnosti. Tiše vystoupil z palandy, oblékl si bojovou uniformu, oblékl si útočnou vestu a sbalil si věci z skříňky, přičemž si dával pozor na jednu malou krabičku. Položil si pušku na rameno, a přilbu pověsil na malý háček, který měl připevněný na opasku. Měl všechno vybavení, co bylo potřeba, respirátor, dýchací brýle, všechno, co bylo potřebné. Zkontroloval si váčky s municí a potichu tiše vyšel z kasáren, pod botami mu čvachtalo bláto a led.",
+    "spans": [
+      {
+        "text": "0430: 30 Itánij",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 15
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Stealthily I made my way towards the back of the store, murmurs and talking heard beyond a metal grate which took a few yanks to tear off. Climbing into the vent was the safest and quietest option for me right now; climbing my way through, I’d pick up on conversations and talks between strangely dressed men. I noticed Al inside, chained. Figures he’d get caught eventually.",
+    "text": "Přikradl jsem se k zadní části obchodu, slyšel jsem šeptání a řeči za kovovým mřížkem, které se podařilo strhnout po několika úsilných trhnutí. Prolezet se ventilačním šachtem bylo pro mě teď nejbezpečnější a nejtišší variantou; prolezl bych se tím a naslouchal bych rozhovorům a hovorům mezi podivně oblečenými muži. Zaznamenal jsem Alův vnitřek, přikovaný řetězy. Figuroval jsem, že se nakonec chytí.",
+    "spans": [
+      {
+        "text": "Figuroval jsem, že se nakonec chytí.",
+        "label": "MAJOR",
+        "start": 366,
+        "end": 402
+      },
+      {
+        "text": "Prolezet",
+        "label": "MAJOR",
+        "start": 144,
+        "end": 152
+      },
+      {
+        "text": "prolezl bych se tím",
+        "label": "MAJOR",
+        "start": 229,
+        "end": 248
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Very well. The child may live in the palace.” He started, earning a sigh from the queen. “But,” he added. “You will be executed.”",
+    "text": "„Velmi dobře. Dítě může žít v paláci.“ Začal a královna si oddechla. „Ale,“ dodal. „Budeš popravena.“",
+    "spans": [
+      {
+        "text": "l. „B",
+        "label": "MAJOR",
+        "start": 80,
+        "end": 85
+      },
+      {
+        "text": ".“ Z",
+        "label": "MAJOR",
+        "start": 36,
+        "end": 40
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "04:30 itanského času. Cohren nesnášel vstávání takhle brzy. Hlavně proto, že bylo jeho zodpovědností vzbudit všechny ostatní ve své jednotce. Potichu vystoupil z palandy, oblékl si svůj maskovací oděv, navlékl si taktickou vestu a sbalil své věci z uzamykatelné skříňky, přičemž byl opatrný na malou krabičku. Přehodil si pušku přes rameno a pověsil si přilbu na malý háček připojený k opasku. Byla na ní veškerá její příslušenství - respirátor, brýle, všechno, co by mohl potřebovat. Po kontrole nábojnic se tiše vydal ven z kasáren, přičemž bláto a led pod jeho botami vydávaly typické squelchingové zvuky.",
+    "spans": [
+      {
+        "text": "squelchingové",
+        "label": "MAJOR",
+        "start": 588,
+        "end": 601
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Morning,” Craith said.",
+    "text": "„Dobré ráno,“ řekla Craithová.",
+    "spans": [
+      {
+        "text": "ová",
+        "label": "MAJOR",
+        "start": 26,
+        "end": 29
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 italského času. Cohren nesnášel, když se musel tak brzy probudit. Hlavně proto, že byl zodpovědný za probuzení všech ostatních ve své jednotce. Tichounce vystoupil z paluby, oblékl si bojové oblečení, oblékl si útočný vestu a sbalil si věci ze své skříňky, opatrně s jednou malou krabičkou. Přehodil si pušku přes rameno a helmu pověsil na malý háček připevněný k jeho opasku. Měl všechno, co potřeboval, respirátor, ochranné brýle, všechno. Po kontrole svých nábojových pouzder tiše vyšel z kasáren, bláto a led pod jeho botami praskalo.",
+    "spans": [
+      {
+        "text": "0430",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "musel tak brzy probudit",
+        "label": "MAJOR",
+        "start": 46,
+        "end": 69
+      },
+      {
+        "text": "útočný",
+        "label": "MAJOR",
+        "start": 216,
+        "end": 222
+      },
+      {
+        "text": "nábojových pouzde",
+        "label": "MAJOR",
+        "start": 465,
+        "end": 482
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "0430 Itania time. Cohren hated waking up this early. Mainly because it was his responsibility to wake everyone else up in his company. Silently stepping out of his bunk, he put on his combat fatigues, throwing on his assault vest, and packed up his belongings from his locker, being careful with a particular small box. He shoulded his rifle and put his helmet on a small hook connected to his belt. It had all its fixing, respirator, goggles, everything needed. After checking his ammo pouches, he quietly walked out of the barracks, mud and ice squelching under his boots.",
+    "text": "0430 Hodina podle itanijského času. Cohren nesnášel probouzení takhle brzy ráno, hlavně proto, že měl na starosti probudit všechny ostatní ve své rotě. Tiše vstal z postele, oblékl si bojovou uniformu, přehodil přes sebe útočnou vestu a z kufru ve skříni si vybalil věci, přičemž si dával pozor na jednu malou krabičku. Přehodil si přes rameno pušku a připevnil si helmu na malý háček připevněný k opasku. Všechno měla v pořádku, včetně dýchacího přístroje, brýlí, všeho, co potřeboval. Poté, co zkontroloval zásobníky s municí, tiše vyšel z kasáren a pod nohama mu podupávala blátovito-ledová břečka.",
+    "spans": [
+      {
+        "text": "Hodina podle",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 17
+      },
+      {
+        "text": "měla",
+        "label": "MAJOR",
+        "start": 414,
+        "end": 418
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The girl in question looked a lot like her mother; pale blue eyes and white hair decorated with blue strands. The Ice King thought a daughter made him look weak. After all, he had only had sons up until this point.",
+    "text": "Dívka, o níž mluvíme, byla hodně podobná své matce. Měla modré oči a bílé vlasy ozdobené modrými proužky. Král ledu si myslel, že mu dcera dělá ostudu. Vždyť dosud měl jenom syny.",
+    "spans": [
+      {
+        "text": "ozdobené",
+        "label": "MAJOR",
+        "start": 80,
+        "end": 88
+      },
+      {
+        "text": "proužky",
+        "label": "MAJOR",
+        "start": 97,
+        "end": 104
+      },
+      {
+        "text": "Král ledu",
+        "label": "MAJOR",
+        "start": 106,
+        "end": 115
+      },
+      {
+        "text": "ostudu",
+        "label": "MINOR",
+        "start": 144,
+        "end": 150
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "“Very well. The child may live in the palace.” He started, earning a sigh from the queen. “But,” he added. “You will be executed.”",
+    "text": "„Velmi dobře. Dítě může žít v paláci.“ Začal, a královna vydechla. „Ale,“ dodal. „Budete popraveni.“",
+    "spans": [
+      {
+        "text": "Budete",
+        "label": "MINOR",
+        "start": 82,
+        "end": 88
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Z Thassalinových tlam vystřelily plameny, když kolosální Thraki zapálil velmi specifický kus lesa, pak se nad ním vznášel a chvíli pozoroval. Zvláštní bylo, že když se zpomalil, zvláštní křiklavý zvuk za ním ustal. Thassalin zapomněl, že má na zádech pasažéry.",
+    "spans": [
+      {
+        "text": "kolosální",
+        "label": "MAJOR",
+        "start": 47,
+        "end": 56
+      },
+      {
+        "text": "s",
+        "label": "MAJOR",
+        "start": 165,
+        "end": 166
+      },
+      {
+        "text": "e",
+        "label": "MAJOR",
+        "start": 166,
+        "end": 167
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A burst of flames erupted from Thassalin's jaws as the colossal Thraki set fire to a very specific patch of forest, then circled above, watching for moment. Weirdly, as he had slowed down, the weird screaming noise from behind him had stopped. Thassalin had forgotten he had passengers on his back.",
+    "text": "Thassalinovi vyšlehly z čelistí plameny, když kolosální Thraki zapálil velmi specifický kus lesa, pak nad ním zakroužil a chvíli ho pozoroval. Zvláštní bylo, že když zpomalil, podivný ječivý zvuk za ním ustal. Thassalin zapomněl, že má na zádech pasažéry.",
+    "spans": [
+      {
+        "text": "specifický ",
+        "label": "MAJOR",
+        "start": 77,
+        "end": 88
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "NÁZEV FILMU: Good Riddance",
+    "spans": [
+      {
+        "text": "NÁZEV FILMU: Good Riddance",
+        "label": "MINOR",
+        "start": 0,
+        "end": 26
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "DOBRÁ RIDDANCE",
+    "spans": [
+      {
+        "text": "RIDDANCE",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "GOOD RIDDANCE",
+    "spans": [
+      {
+        "text": "GOOD RIDDANCE",
+        "label": "MINOR",
+        "start": 0,
+        "end": 13
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "DOBRÁ RIDDANCE",
+    "spans": [
+      {
+        "text": "DOBRÁ RIDDANCE",
+        "label": "MINOR",
+        "start": 0,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "DOBŘE, ŽE JE PRYČ",
+    "spans": [
+      {
+        "text": "ŽE JE PRYČ",
+        "label": "MINOR",
+        "start": 7,
+        "end": 17
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "Sbohem a šáteček",
+    "spans": [
+      {
+        "text": "Sbohem a šáteček",
+        "label": "MINOR",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "JEN TAK DOBRÉ, ŽE JSTE ODŠEL",
+    "spans": [
+      {
+        "text": "EN TAK DOBRÉ, ŽE JSTE ODŠEL",
+        "label": "MINOR",
+        "start": 1,
+        "end": 28
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "DOBŘE SE DEJ",
+    "spans": [
+      {
+        "text": "SE DEJ",
+        "label": "MINOR",
+        "start": 6,
+        "end": 12
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "GOOD RIDDANCE",
+    "spans": [
+      {
+        "text": "GOOD RIDDANCE",
+        "label": "MINOR",
+        "start": 0,
+        "end": 13
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "GOOD RIDDANCE",
+    "text": "NA NICH NEZÁLEŽÍ.",
+    "spans": [
+      {
+        "text": "NA NICH NEZÁLEŽÍ.",
+        "label": "MINOR",
+        "start": 0,
+        "end": 17
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  }
+]

@@ -1,0 +1,8277 @@
+[
+  {
+    "text": "Napriek nezáujmu o západ sa aj Zenón snažil zachovať ideu jednotnej Rímskej ríše , aj keď jej polovica sa momentálne nachádzala pod kontrolou Germánov .",
+    "spans": [
+      {
+        "text": "Zenón",
+        "label": "PER",
+        "start": 31,
+        "end": 36
+      },
+      {
+        "text": "Rímskej ríše",
+        "label": "ORG",
+        "start": 68,
+        "end": 80
+      },
+      {
+        "text": "Germánov",
+        "label": "PER",
+        "start": 142,
+        "end": 150
+      }
+    ]
+  },
+  {
+    "text": "Zenón zomrel 9 . apríla 491 a prežil tak obidvoch svojich synov .",
+    "spans": [
+      {
+        "text": "Zenón",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "V cirkevných dejinách je Zenón významný kvôli Henotikonu , ktorý dočasne uvoľnil napätie medzi monofyzitmi a oficiálnou cirkvou , ale vyvolal akakiánsku schizmu .",
+    "spans": [
+      {
+        "text": "Zenón",
+        "label": "PER",
+        "start": 25,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Bitka pri Zente",
+    "spans": [
+      {
+        "text": "Zente",
+        "label": "LOC",
+        "start": 10,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Sultán Mustafa II . vytiahol po pozdĺž Dunaja na sever .",
+    "spans": [
+      {
+        "text": "Mustafa II",
+        "label": "PER",
+        "start": 7,
+        "end": 17
+      },
+      {
+        "text": "Dunaja",
+        "label": "LOC",
+        "start": 39,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "O rok neskôr potom Turci pristúpili na rokovania mieri , ktoré vyústili do tzv . Karlovackého mieru .",
+    "spans": [
+      {
+        "text": "Turci",
+        "label": "PER",
+        "start": 19,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Krátko na to sa narodil P . J . Šafárik .",
+    "spans": [
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 24,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "Mali spolu 5 detí , a to už spomenutých súrodencov P . J . , a tiež „ prvého \" Pavla Jozefa narodeného 1791 , ktorý ale po roku umrel .",
+    "spans": [
+      {
+        "text": "P . J .",
+        "label": "PER",
+        "start": 51,
+        "end": 58
+      },
+      {
+        "text": "Pavla Jozefa",
+        "label": "PER",
+        "start": 79,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "text": "V životopisoch P . J . Šafárika sa uvádza , že na jeho národné povedomie vplýval v Kobeliarove jeden z tamojších písmakov menom Novák , ktorý mu požičiaval na čítanie české knihy .",
+    "spans": [
+      {
+        "text": "P . J . Šafárika",
+        "label": "PER",
+        "start": 15,
+        "end": 31
+      },
+      {
+        "text": "Kobeliarove",
+        "label": "LOC",
+        "start": 83,
+        "end": 94
+      },
+      {
+        "text": "Novák",
+        "label": "PER",
+        "start": 128,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "S najväčšou pravdepodobnosťou ide o tamojšieho učiteľa , „ ludimagistra \" Tomáša Nováka .",
+    "spans": [
+      {
+        "text": "Tomáša Nováka",
+        "label": "PER",
+        "start": 74,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Dôležitejším faktorom ale , ktorý vplýval na Šafárikovo národné povedomie bolo prostredie v ktorom žil .",
+    "spans": [
+      {
+        "text": "Šafárikovo",
+        "label": "PER",
+        "start": 45,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "O hĺbke a intenzite vplyvu kobeliarovského prostredia na Šafárika , svedčia jeho spomienky na detstvo .",
+    "spans": [
+      {
+        "text": "Šafárika",
+        "label": "PER",
+        "start": 57,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "V rokoch 1805 - 1908 študoval v Rožňave .",
+    "spans": [
+      {
+        "text": "Rožňave",
+        "label": "LOC",
+        "start": 32,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "Na jeseň roku 1808 odišiel P . J . Šafárik na štúdium humaniora do Dobšinej , hoci mohol pokračovať v syntaxi a rétorike .",
+    "spans": [
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "text": "Dobšinej",
+        "label": "LOC",
+        "start": 67,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "text": "P . J . Šafárik študoval v Dobšinej 2 roky , a to v školských rokoch 1808 / 1809 a 1809 / 1810 .",
+    "spans": [
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      },
+      {
+        "text": "Dobšinej",
+        "label": "LOC",
+        "start": 27,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "V štúdiu na dobšinskej škole dosiahol ešte väčšie úspechy než v Rožňave .",
+    "spans": [
+      {
+        "text": "Rožňave",
+        "label": "LOC",
+        "start": 64,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "Šafárik si dokonale osvojil nemčinu a klasické jazyky .",
+    "spans": [
+      {
+        "text": "Šafárik",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Po ročnom vychovávateľskom pôsobení pokračoval v štúdiu na Univerzite v Jene .",
+    "spans": [
+      {
+        "text": "Univerzite v Jene",
+        "label": "ORG",
+        "start": 59,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Žil veľmi skromne , o čom svedčí jeho rozprávanie synovi Vojtechovi .",
+    "spans": [
+      {
+        "text": "Vojtechovi",
+        "label": "PER",
+        "start": 57,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "V Jene strávil P . J . Šafárik dva roky , čím skončil tri semestre .",
+    "spans": [
+      {
+        "text": "Jene",
+        "label": "LOC",
+        "start": 2,
+        "end": 6
+      },
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 15,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Dňa 16 . mája 1816 sa stal členom Societas latina Jenensis .",
+    "spans": [
+      {
+        "text": "Societas latina Jenensis",
+        "label": "ORG",
+        "start": 34,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Výsledkom Šafárikovej básnickej činnosti v Jene je sedemnásť básní , napísaných prevažne od októbra 1815 do mája 1816 .",
+    "spans": [
+      {
+        "text": "Šafárikovej",
+        "label": "PER",
+        "start": 10,
+        "end": 21
+      },
+      {
+        "text": "Jene",
+        "label": "LOC",
+        "start": 43,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "V Jene si osvojil kritické metódy vedeckého bádania .",
+    "spans": [
+      {
+        "text": "Jene",
+        "label": "LOC",
+        "start": 2,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Príčiny jeho predčasného odchodu sa vysvetľujú rozdielne : administratívnych zásahom rakúskej vlády , ktorá nedovolila mladíkom z Uhorska študovať v Nemecku , Šafárikovou obozretnosťou , ale aj finančnou tiesňou .",
+    "spans": [
+      {
+        "text": "Uhorska",
+        "label": "LOC",
+        "start": 130,
+        "end": 137
+      },
+      {
+        "text": "Nemecku",
+        "label": "LOC",
+        "start": 149,
+        "end": 156
+      },
+      {
+        "text": "Šafárikovou",
+        "label": "PER",
+        "start": 159,
+        "end": 170
+      }
+    ]
+  },
+  {
+    "text": "Vychovával syna Ladislava .",
+    "spans": [
+      {
+        "text": "Ladislava",
+        "label": "PER",
+        "start": 16,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Rok 1819 znamenal rozhodujúci obrat v živote a povolaní P . J . Šafárika .",
+    "spans": [
+      {
+        "text": "P . J . Šafárika",
+        "label": "PER",
+        "start": 56,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "S pomocou , a odporúčaním Jána Blahoslava Benediktiho ho dostal dňa 5 . apríla 1819 .",
+    "spans": [
+      {
+        "text": "Jána Blahoslava Benediktiho",
+        "label": "PER",
+        "start": 26,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "text": "Nový riaditeľ zapôsobil na Srbov veľmi priaznivým dojmom .",
+    "spans": [
+      {
+        "text": "Srbov",
+        "label": "PER",
+        "start": 27,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Okrem P . J . Šafárika všetci profesori boli Srbi .",
+    "spans": [
+      {
+        "text": "P . J . Šafárika",
+        "label": "PER",
+        "start": 6,
+        "end": 22
+      },
+      {
+        "text": "Srbi",
+        "label": "PER",
+        "start": 45,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "P . J . Šafárik zastával funkciu riaditeľa päť rokov .",
+    "spans": [
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Počas prvých dvoch rokov novosadského účinkovania býval Šafárik v dome bohatého mešťana Servického .",
+    "spans": [
+      {
+        "text": "Šafárik",
+        "label": "PER",
+        "start": 56,
+        "end": 63
+      },
+      {
+        "text": "Servického",
+        "label": "PER",
+        "start": 88,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Narodila sa vo Veľkej Kikinde ( Maďarsko ) 19 . novembra 1803 .",
+    "spans": [
+      {
+        "text": "Veľkej Kikinde",
+        "label": "LOC",
+        "start": 15,
+        "end": 29
+      },
+      {
+        "text": "Maďarsko",
+        "label": "LOC",
+        "start": 32,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Jej otec pochádzal z Paludze ( okr . Liptovský Mikuláš ) a matka z Jasenovej na Orave .",
+    "spans": [
+      {
+        "text": "Paludze",
+        "label": "LOC",
+        "start": 21,
+        "end": 28
+      },
+      {
+        "text": "Liptovský Mikuláš",
+        "label": "LOC",
+        "start": 37,
+        "end": 54
+      },
+      {
+        "text": "Jasenovej",
+        "label": "LOC",
+        "start": 67,
+        "end": 76
+      },
+      {
+        "text": "Orave",
+        "label": "LOC",
+        "start": 80,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "text": "Manželka P . J . Šafárika - ako uvádzajú životopisci - bola inteligentná , neobyčajne sčítaná a temperamentná .",
+    "spans": [
+      {
+        "text": "P . J . Šafárika",
+        "label": "PER",
+        "start": 9,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Dňa 22 . decembra 1832 dal P . J . Šafárik patronátu gymnázia výpoveď s tým , že tu ostane do konca zimného semestra .",
+    "spans": [
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 27,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Po príchode do Prahy P . J . Šafárik koncentroval svoje úsilie predovšetkým na zabezpečenie svojej rodiny a na možnosti pokračovať vo vedeckej práci .",
+    "spans": [
+      {
+        "text": "Prahy",
+        "label": "LOC",
+        "start": 15,
+        "end": 20
+      },
+      {
+        "text": "P . J . Šafárik",
+        "label": "PER",
+        "start": 21,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Vyšiel vo Viedni roku 1850 so Šafárikovým krátkym predhovorom .",
+    "spans": [
+      {
+        "text": "Viedni",
+        "label": "LOC",
+        "start": 10,
+        "end": 16
+      },
+      {
+        "text": "Šafárikovým",
+        "label": "PER",
+        "start": 30,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Po jeho smrti , v rokoch 1862 - 63 bol pripravený III . diel Slovanských starožitností , ktorý vyšiel v Prahe roku 1865 .",
+    "spans": [
+      {
+        "text": "Prahe",
+        "label": "LOC",
+        "start": 104,
+        "end": 109
+      }
+    ]
+  },
+  {
+    "text": "Na začiatku októbra 1860 sa Šafárik definitívne vzdal miesta riaditeľa Univerzitnej knižnice .",
+    "spans": [
+      {
+        "text": "Šafárik",
+        "label": "PER",
+        "start": 28,
+        "end": 35
+      },
+      {
+        "text": "Univerzitnej knižnice",
+        "label": "ORG",
+        "start": 71,
+        "end": 92
+      }
+    ]
+  },
+  {
+    "text": "Šafárik bol na dôchodku len málo .",
+    "spans": [
+      {
+        "text": "Šafárik",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Zahynul pri leteckej katastrofe pri návrate na Slovensko .",
+    "spans": [
+      {
+        "text": "Slovensko",
+        "label": "LOC",
+        "start": 47,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Milan Rastislav Štefánik sa narodil v Košariskách ( od r . 1870 patrili Košariská ako osada do Brezovej pod Bradlom ) v rodine ev . farára Pavla Štefánika .",
+    "spans": [
+      {
+        "text": "Milan Rastislav Štefánik",
+        "label": "PER",
+        "start": 0,
+        "end": 24
+      },
+      {
+        "text": "Košariskách",
+        "label": "LOC",
+        "start": 38,
+        "end": 49
+      },
+      {
+        "text": "Košariská",
+        "label": "LOC",
+        "start": 72,
+        "end": 81
+      },
+      {
+        "text": "Brezovej pod Bradlom",
+        "label": "LOC",
+        "start": 95,
+        "end": 115
+      },
+      {
+        "text": "Pavla Štefánika",
+        "label": "PER",
+        "start": 139,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "Podľa svedectva učiteľa bol Milan Rastislav najlepším žiakom na košarištianskej škole .",
+    "spans": [
+      {
+        "text": "Milan Rastislav",
+        "label": "PER",
+        "start": 28,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Tu už študovali jeho dvaja bratia – Igor a Pavel .",
+    "spans": [
+      {
+        "text": "Igor",
+        "label": "PER",
+        "start": 36,
+        "end": 40
+      },
+      {
+        "text": "Pavel",
+        "label": "PER",
+        "start": 43,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "V tom čase však už bolo lýceum pomaďarčené a z vlasteneckých profesorov tu učil iba Ján Kvačala .",
+    "spans": [
+      {
+        "text": "Ján Kvačala",
+        "label": "PER",
+        "start": 84,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Štefánikovými obľúbenými profesormi boli učiteľ matematiky Ferdinand Hirschmann a triedny profesor Samuel Markusovszky .",
+    "spans": [
+      {
+        "text": "Štefánikovými",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "text": "Ferdinand Hirschmann",
+        "label": "PER",
+        "start": 59,
+        "end": 79
+      },
+      {
+        "text": "Samuel Markusovszky",
+        "label": "PER",
+        "start": 99,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "V marci 1898 sa Štefánik stal tajomníkom Detvana .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 16,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Na požiadanie Jana Herbena písal do realistického Času pravidelné pondelkové úvodníky o slovenskej kultúre a politike , ktorých cieľom bolo informovať českú verejnosť o Slovensku .",
+    "spans": [
+      {
+        "text": "Jana Herbena",
+        "label": "PER",
+        "start": 14,
+        "end": 26
+      },
+      {
+        "text": "Slovensku",
+        "label": "LOC",
+        "start": 169,
+        "end": 178
+      }
+    ]
+  },
+  {
+    "text": "Navštevoval aj historika Jaroslava Golla i básnika Jaroslava Vrchlického .",
+    "spans": [
+      {
+        "text": "Jaroslava Golla",
+        "label": "PER",
+        "start": 25,
+        "end": 40
+      },
+      {
+        "text": "Jaroslava Vrchlického",
+        "label": "PER",
+        "start": 51,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "Po príchode do Paríža bojoval dlho s existenčnými problémami .",
+    "spans": [
+      {
+        "text": "Paríža",
+        "label": "LOC",
+        "start": 15,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Potom sa Štefánik snažil vybudovať vlastné observatórium , no jeho finančná situácia mu to nedovoľovala .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 9,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "V tejto oblasti mu vtedy najviac pomohol senátor Émile Chautemps , s ktorého pomocou zorganizoval Štefánik výpravu do severnej Afriky .",
+    "spans": [
+      {
+        "text": "Émile Chautemps",
+        "label": "PER",
+        "start": 49,
+        "end": 64
+      },
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 98,
+        "end": 106
+      },
+      {
+        "text": "severnej Afriky",
+        "label": "LOC",
+        "start": 118,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Precestoval Alžírsko , Atlas , Saharu , Tunisko aj Kartágo , no cesta nemala úspech .",
+    "spans": [
+      {
+        "text": "Alžírsko",
+        "label": "LOC",
+        "start": 12,
+        "end": 20
+      },
+      {
+        "text": "Atlas",
+        "label": "LOC",
+        "start": 23,
+        "end": 28
+      },
+      {
+        "text": "Saharu",
+        "label": "LOC",
+        "start": 31,
+        "end": 37
+      },
+      {
+        "text": "Tunisko",
+        "label": "LOC",
+        "start": 40,
+        "end": 47
+      },
+      {
+        "text": "Kartágo",
+        "label": "LOC",
+        "start": 51,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "28 . apríla 1911 na ostrove Vavau pri pozorovaní úplného zatmenia slnka dosiahla práve Štefánikova výprava najlepšie výsledky a ocenila to aj francúzska Akadémia .",
+    "spans": [
+      {
+        "text": "Vavau",
+        "label": "LOC",
+        "start": 28,
+        "end": 33
+      },
+      {
+        "text": "Štefánikova",
+        "label": "PER",
+        "start": 87,
+        "end": 98
+      },
+      {
+        "text": "francúzska",
+        "label": "LOC",
+        "start": 142,
+        "end": 152
+      },
+      {
+        "text": "Akadémia",
+        "label": "ORG",
+        "start": 153,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Francúzska vláda mu potom na návrh ministerstva námorníctva udelila kríž Rytiera Čestnej légie .",
+    "spans": [
+      {
+        "text": "Francúzska",
+        "label": "LOC",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Po zotavení ho zastihla správa o vypuknutí vojny a 9 . augusta sa vojenským transportom vrátil do Francúzska .",
+    "spans": [
+      {
+        "text": "Francúzska",
+        "label": "LOC",
+        "start": 98,
+        "end": 108
+      }
+    ]
+  },
+  {
+    "text": "Pri evakuácii z letiska v Niši však na lietadle havaroval a na úteku potom Štefánika opäť prepadla žalúdočná choroba .",
+    "spans": [
+      {
+        "text": "Niši",
+        "label": "LOC",
+        "start": 26,
+        "end": 30
+      },
+      {
+        "text": "Štefánika",
+        "label": "PER",
+        "start": 75,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "text": "Štefánik sa vrátil do Paríža tu ho Jouvenel zoznámila s najvyššími politikmi : ministerským predsedom Aristidom Briandom a najvplyvnejším mužom franc . ministerstva zahraničia Philippom Berthelotom .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Paríža",
+        "label": "LOC",
+        "start": 22,
+        "end": 28
+      },
+      {
+        "text": "Jouvenel",
+        "label": "PER",
+        "start": 35,
+        "end": 43
+      },
+      {
+        "text": "Aristidom Briandom",
+        "label": "PER",
+        "start": 102,
+        "end": 120
+      },
+      {
+        "text": "Philippom Berthelotom",
+        "label": "PER",
+        "start": 176,
+        "end": 197
+      }
+    ]
+  },
+  {
+    "text": "O týchto plánoch informoval aj ministerského predsedu Aristida Brianda a dohodol stretnutie medzi ním a Masarykom .",
+    "spans": [
+      {
+        "text": "Aristida Brianda",
+        "label": "PER",
+        "start": 54,
+        "end": 70
+      },
+      {
+        "text": "Masarykom",
+        "label": "PER",
+        "start": 104,
+        "end": 113
+      }
+    ]
+  },
+  {
+    "text": "Strenutie Masaryka s Briandom bolo úspešné a Briand sa stal prívržencom Masarykovej koncepcie riešenia stredoeurópskej otázky .",
+    "spans": [
+      {
+        "text": "Masaryka",
+        "label": "PER",
+        "start": 10,
+        "end": 18
+      },
+      {
+        "text": "Briandom",
+        "label": "PER",
+        "start": 21,
+        "end": 29
+      },
+      {
+        "text": "Briand",
+        "label": "PER",
+        "start": 45,
+        "end": 51
+      },
+      {
+        "text": "Masarykovej",
+        "label": "PER",
+        "start": 72,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Štefánik medzitým neustále presadzoval vytvorenie ústredného reprezentatívneho orgánu zahraničného odboja .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Jej predsedom bol T . G . Masaryk , podpredsedami J . Durich a M . R . Štefánik a generálnym tajomníkom E . Beneš .",
+    "spans": [
+      {
+        "text": "T . G . Masaryk",
+        "label": "PER",
+        "start": 18,
+        "end": 33
+      },
+      {
+        "text": "J . Durich",
+        "label": "PER",
+        "start": 50,
+        "end": 60
+      },
+      {
+        "text": "M . R . Štefánik",
+        "label": "PER",
+        "start": 63,
+        "end": 79
+      },
+      {
+        "text": "E . Beneš",
+        "label": "PER",
+        "start": 104,
+        "end": 113
+      }
+    ]
+  },
+  {
+    "text": "Keď sa Štefánikov stav zlepšil , odišiel do Talianska .",
+    "spans": [
+      {
+        "text": "Štefánikov",
+        "label": "PER",
+        "start": 7,
+        "end": 17
+      },
+      {
+        "text": "Talianska",
+        "label": "LOC",
+        "start": 44,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "text": "Postoj Talianska k juhoslovanskej otázke bol však odmietavý .",
+    "spans": [
+      {
+        "text": "Talianska",
+        "label": "LOC",
+        "start": 7,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Po návrate do Paríža sa Štefánik intenzívne venoval otázke ustanovenia samostatného česko - slovenského vojska .",
+    "spans": [
+      {
+        "text": "Paríža",
+        "label": "LOC",
+        "start": 14,
+        "end": 20
+      },
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 24,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Za týmto účelom odcestoval do Ruska .",
+    "spans": [
+      {
+        "text": "Ruska",
+        "label": "LOC",
+        "start": 30,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Dňa 29 . augusta potom podpísali Durich a Štefánik tzv . Kyjevskú dohodu spolu s predstaviteľom amerických Slovákov G . Košíkom , ktorou spoločne uznali ČSNR za vedúci orgán českého a slovenského hnutia v zahraničí .",
+    "spans": [
+      {
+        "text": "Durich",
+        "label": "PER",
+        "start": 33,
+        "end": 39
+      },
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 42,
+        "end": 50
+      },
+      {
+        "text": "Slovákov",
+        "label": "PER",
+        "start": 107,
+        "end": 115
+      },
+      {
+        "text": "G . Košíkom",
+        "label": "PER",
+        "start": 116,
+        "end": 127
+      },
+      {
+        "text": "ČSNR",
+        "label": "ORG",
+        "start": 153,
+        "end": 157
+      }
+    ]
+  },
+  {
+    "text": "Začiatkom roka 1917 sa vrátil do Ruska .",
+    "spans": [
+      {
+        "text": "Ruska",
+        "label": "LOC",
+        "start": 33,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Dňa 2 . júna 1917 odplával Štefánik do USA .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 39,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Po návrate do Paríža sa Štefánik zapojil do diplomatických rokovaní o ustanovení samostatnej česko - slovenskej armády .",
+    "spans": [
+      {
+        "text": "Paríža",
+        "label": "LOC",
+        "start": 14,
+        "end": 20
+      },
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 24,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Výsledkom bol Dekrét o vytvorení Česko - slovenskej armády vo Francúzsku , ktorý vydala francúzska vláda 16 . decembra 1917 .",
+    "spans": [
+      {
+        "text": "Francúzsku",
+        "label": "LOC",
+        "start": 62,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "V polovici februára 1918 odišiel Štefánik do Talianska .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 33,
+        "end": 41
+      },
+      {
+        "text": "Talianska",
+        "label": "LOC",
+        "start": 45,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Nábor dobrovoľníkov pokračoval a 24 . mája 1918 sa pred pomníkom Viktora Emanuela v Ríme konala veľkolepá slávnosť : odovzdávanie plukových vlajok česko - slovenským jednotkám .",
+    "spans": [
+      {
+        "text": "Viktora Emanuela",
+        "label": "PER",
+        "start": 65,
+        "end": 81
+      },
+      {
+        "text": "Ríme",
+        "label": "LOC",
+        "start": 84,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "V máji roku 1918 preletela svetom správa o vystúpení Česko - slovenských légií v Rusku .",
+    "spans": [
+      {
+        "text": "Rusku",
+        "label": "LOC",
+        "start": 81,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Podpísanie mieru medzi sovietskou vládou a Ústrednými mocnosťami v marci 1918 však spôsobilo , že česko - slovenské vojsko v Rusku stratilo nepriateľa .",
+    "spans": [
+      {
+        "text": "Ústrednými mocnosťami",
+        "label": "ORG",
+        "start": 43,
+        "end": 64
+      },
+      {
+        "text": "Rusku",
+        "label": "LOC",
+        "start": 125,
+        "end": 130
+      }
+    ]
+  },
+  {
+    "text": "Najprv však navštívil USA , kde spolu s Masarykom a gen . Janinom preberali ďalšie plány .",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "text": "Masarykom",
+        "label": "PER",
+        "start": 40,
+        "end": 49
+      },
+      {
+        "text": "Janinom",
+        "label": "PER",
+        "start": 58,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Dňa 24 . septembra potom odcestoval do Tokia , kde ale pre opätovné problémy zo žalúdkom pobudol až mesiac a cesta na Sibír sa predlžovala .",
+    "spans": [
+      {
+        "text": "Tokia",
+        "label": "LOC",
+        "start": 39,
+        "end": 44
+      },
+      {
+        "text": "Sibír",
+        "label": "LOC",
+        "start": 118,
+        "end": 123
+      }
+    ]
+  },
+  {
+    "text": "Tá zapôsobila na americkú verejnosť i na prezidenta Wilsona .",
+    "spans": [
+      {
+        "text": "Wilsona",
+        "label": "PER",
+        "start": 52,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Došlo k vystúpeniu domáceho odboja a 28 . októbra k vyhláseniu Československej republiky .",
+    "spans": [
+      {
+        "text": "Československej republiky",
+        "label": "LOC",
+        "start": 63,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Zakrátko Nemecko kapitulovalo a vojna sa skončila .",
+    "spans": [
+      {
+        "text": "Nemecko",
+        "label": "LOC",
+        "start": 9,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Štefánik sa o všetkom dozvedel v Japonsku .",
+    "spans": [
+      {
+        "text": "Štefánik",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Japonsku",
+        "label": "LOC",
+        "start": 33,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Z rúk generála Janina prevzal Rád veliteľa Čestnej légie a 25 . januára 1919 opustil Rusko a odišiel do Paríža .",
+    "spans": [
+      {
+        "text": "Janina",
+        "label": "PER",
+        "start": 15,
+        "end": 21
+      },
+      {
+        "text": "Rusko",
+        "label": "LOC",
+        "start": 85,
+        "end": 90
+      },
+      {
+        "text": "Paríža",
+        "label": "LOC",
+        "start": 104,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Potom ešte odišiel do Talianska .",
+    "spans": [
+      {
+        "text": "Talianska",
+        "label": "LOC",
+        "start": 22,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "Lietadlo však nikdy nepristálo , pretože keď sa už blížilo k miestu pristátia , náhle sa zrútilo neďaleko Ivánky pri Dunaji .",
+    "spans": [
+      {
+        "text": "Ivánky pri Dunaji",
+        "label": "LOC",
+        "start": 106,
+        "end": 123
+      }
+    ]
+  },
+  {
+    "text": "Pangea mala tvar písmena C .",
+    "spans": [
+      {
+        "text": "Pangea",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Pangea pravdepodobne nebola prvý superkontinent .",
+    "spans": [
+      {
+        "text": "Pangea",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Jeho otcom bol cisár Konštantín IV . , matkou cisárovna Anastasia .",
+    "spans": [
+      {
+        "text": "Konštantín IV .",
+        "label": "PER",
+        "start": 21,
+        "end": 36
+      },
+      {
+        "text": "Anastasia",
+        "label": "PER",
+        "start": 56,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Justiánov mladší brat sa volal Herakleios .",
+    "spans": [
+      {
+        "text": "Justiánov",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Herakleios",
+        "label": "PER",
+        "start": 31,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Byzantské vojsko napadlo a vyplienilo Arméniu a potom vtrhlo do Gruzínska a Sýrie .",
+    "spans": [
+      {
+        "text": "Arméniu",
+        "label": "LOC",
+        "start": 38,
+        "end": 45
+      },
+      {
+        "text": "Gruzínska",
+        "label": "LOC",
+        "start": 64,
+        "end": 73
+      },
+      {
+        "text": "Sýrie",
+        "label": "LOC",
+        "start": 76,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Roku 688 požiadal kalifa Abdulmalik o obnovenie mierovej zmluvy s Konštantinopolom .",
+    "spans": [
+      {
+        "text": "Abdulmalik",
+        "label": "PER",
+        "start": 25,
+        "end": 35
+      },
+      {
+        "text": "Konštantinopolom",
+        "label": "LOC",
+        "start": 66,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Bulharom odstúpil Zagorje , ktoré malo dôležitý strategický význam na zabezpečenie hraníc ich krajiny .",
+    "spans": [
+      {
+        "text": "Bulharom",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Zagorje",
+        "label": "LOC",
+        "start": 18,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "On vytýčil ostrý kurz proti pohanom a herézam a došlo aj k vyostreniu vzťahov so západnou ríšou , kde namiesto neplnoletého Honoria vládol vojvodca Stilicho .",
+    "spans": [
+      {
+        "text": "Honoria",
+        "label": "PER",
+        "start": 124,
+        "end": 131
+      },
+      {
+        "text": "Stilicho",
+        "label": "PER",
+        "start": 148,
+        "end": 156
+      }
+    ]
+  },
+  {
+    "text": "Prvá historicky doložená zmienka o Berlíne pochádza z roku 1244 .",
+    "spans": [
+      {
+        "text": "Berlíne",
+        "label": "LOC",
+        "start": 35,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Tolerantnosť končí roku 1933 príchodom Hitlera k moci .",
+    "spans": [
+      {
+        "text": "Hitlera",
+        "label": "PER",
+        "start": 39,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Začiatkom studenej vojny sa Berlín dostáva do centra konfliktov medzi víťaznými mocnosťami .",
+    "spans": [
+      {
+        "text": "Berlín",
+        "label": "LOC",
+        "start": 28,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Spolková krajina Berlín je popri Hamburgu a Brémach jedným zo troch mestských štátov Spolkovej republiky Nemecko .",
+    "spans": [
+      {
+        "text": "Berlín",
+        "label": "LOC",
+        "start": 17,
+        "end": 23
+      },
+      {
+        "text": "Hamburgu",
+        "label": "LOC",
+        "start": 33,
+        "end": 41
+      },
+      {
+        "text": "Brémach",
+        "label": "LOC",
+        "start": 44,
+        "end": 51
+      },
+      {
+        "text": "Spolkovej republiky Nemecko",
+        "label": "LOC",
+        "start": 85,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "Už dlhú dobu sa uvažuje o zlúčení Berlína s Brandenburskom .",
+    "spans": [
+      {
+        "text": "Berlína",
+        "label": "LOC",
+        "start": 34,
+        "end": 41
+      },
+      {
+        "text": "Brandenburskom",
+        "label": "LOC",
+        "start": 44,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "V oboch \" krajinách \" sa dostali k moci ľudia , ktorý sa pokúšali o znovuobnovenie Uhorska .",
+    "spans": [
+      {
+        "text": "Uhorska",
+        "label": "LOC",
+        "start": 83,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "Nemecku však české pohraničie nestačilo a rozhodlo sa zaútočiť .",
+    "spans": [
+      {
+        "text": "Nemecku",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Slovensku Hitler pohrozil , že ak sa neosamostatní , bude rozdelené medzi Maďarsko a Poľsko .",
+    "spans": [
+      {
+        "text": "Slovensku",
+        "label": "LOC",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Hitler",
+        "label": "PER",
+        "start": 10,
+        "end": 16
+      },
+      {
+        "text": "Maďarsko",
+        "label": "LOC",
+        "start": 74,
+        "end": 82
+      },
+      {
+        "text": "Poľsko",
+        "label": "LOC",
+        "start": 85,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "text": "Vrakuňa je mestská časť Bratislavy ležiaca na oboch brehoch Malého Dunaja .",
+    "spans": [
+      {
+        "text": "Vrakuňa",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Bratislavy",
+        "label": "LOC",
+        "start": 24,
+        "end": 34
+      },
+      {
+        "text": "Malého Dunaja",
+        "label": "LOC",
+        "start": 60,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "Vrakuňa nemá na svojom územi žiadne priemyselné podniky , ale jej obyvatelia pocitujú nepriaznivý vplyv Slovnaftu , letiska aj Ústrednej čističky odpadových vôd .",
+    "spans": [
+      {
+        "text": "Vrakuňa",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Slovnaftu",
+        "label": "ORG",
+        "start": 104,
+        "end": 113
+      },
+      {
+        "text": "Ústrednej čističky odpadových vôd",
+        "label": "ORG",
+        "start": 127,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "text": "Od konca 14 . storočia obec postupne prechádzala do majetku mesta Bratislava .",
+    "spans": [
+      {
+        "text": "Bratislava",
+        "label": "LOC",
+        "start": 66,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Obyvatelia Vrakuňe boli prinútení v nepokojných časoch opustiť svoje príbytky a skrývať sa v lesoch na dunajských ostrovoch .",
+    "spans": [
+      {
+        "text": "Vrakuňe",
+        "label": "LOC",
+        "start": 11,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Tečie cez neho potok Cajloch .",
+    "spans": [
+      {
+        "text": "Cajloch",
+        "label": "LOC",
+        "start": 21,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "V Pezinku je dobré víno .",
+    "spans": [
+      {
+        "text": "Pezinku",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Nezabúdajme na Dom kultúry a Pezinský zámok .",
+    "spans": [
+      {
+        "text": "Dom kultúry",
+        "label": "LOC",
+        "start": 15,
+        "end": 26
+      },
+      {
+        "text": "Pezinský zámok",
+        "label": "LOC",
+        "start": 29,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Najznámejšia je Pinelova nemocnica na Cajle .",
+    "spans": [
+      {
+        "text": "Pinelova nemocnica na Cajle",
+        "label": "LOC",
+        "start": 16,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Pezinčania zase hovoria \" ísť na Cajlu \" , keď niekomu \" preskočilo \" .",
+    "spans": [
+      {
+        "text": "Pezinčania",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Najlepšie sú Krtinec , Karpatskí pastieri .",
+    "spans": [
+      {
+        "text": "Krtinec",
+        "label": "ORG",
+        "start": 13,
+        "end": 20
+      },
+      {
+        "text": "Karpatskí pastieri",
+        "label": "ORG",
+        "start": 23,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Územie , na ktorom sa dnes rozkladá mesto Pezinok , sa v písomných materiáloch prvýkrát spomína v listine z roku 1208 ako \" terra Bozin \" .",
+    "spans": [
+      {
+        "text": "Pezinok",
+        "label": "LOC",
+        "start": 42,
+        "end": 49
+      },
+      {
+        "text": "terra Bozin",
+        "label": "LOC",
+        "start": 124,
+        "end": 135
+      }
+    ]
+  },
+  {
+    "text": "Zenón svoj sľub dodržal : Uväznil svojich zajatcov do prázdnej vodnej nádrže , kde sa neskôr udusili .",
+    "spans": [
+      {
+        "text": "Zenón",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Spojenectvo s Turkami , ktorí mali napadnúť Peržanov zozadu , neprinieslo očakávaný výsledok .",
+    "spans": [
+      {
+        "text": "Turkami",
+        "label": "PER",
+        "start": 14,
+        "end": 21
+      },
+      {
+        "text": "Peržanov",
+        "label": "PER",
+        "start": 44,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Bola to do tých čias jedna z najťažších perzských porážok v bojoch s Rímanmi .",
+    "spans": [
+      {
+        "text": "Rímanmi",
+        "label": "PER",
+        "start": 69,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Od roku 574 sa prejavovali príznaky Justiniovej duševnej choroby .",
+    "spans": [
+      {
+        "text": "Justiniovej",
+        "label": "PER",
+        "start": 36,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Na radu svojej manželky Sofie Justinius 7 . decembra 574 ustanovil úspešného vojvodcu Tiberia za svojho spolucisára .",
+    "spans": [
+      {
+        "text": "Sofie",
+        "label": "PER",
+        "start": 24,
+        "end": 29
+      },
+      {
+        "text": "Justinius",
+        "label": "PER",
+        "start": 30,
+        "end": 39
+      },
+      {
+        "text": "Tiberia",
+        "label": "PER",
+        "start": 86,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "text": "Anastasios I . ( cisár )",
+    "spans": [
+      {
+        "text": "Anastasios I .",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Anastasios bol očividne vzdelaný muž , ktorý ovládal dva najdôležitejšie jazyky ríše , latinčinu a gréčtinu .",
+    "spans": [
+      {
+        "text": "Anastasios",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "V roku 510 Teodorich a cisár nakoniec uzavreli mier .",
+    "spans": [
+      {
+        "text": "Teodorich",
+        "label": "PER",
+        "start": 11,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Na Balkáne podnikali Bulhari lúpežné výpravy do Trácie , preto Anastasios nechal vybudovať západne od Konštantínopole opevnenie , nazývané dlhý múr .",
+    "spans": [
+      {
+        "text": "Balkáne",
+        "label": "LOC",
+        "start": 3,
+        "end": 10
+      },
+      {
+        "text": "Bulhari",
+        "label": "PER",
+        "start": 21,
+        "end": 28
+      },
+      {
+        "text": "Trácie",
+        "label": "LOC",
+        "start": 48,
+        "end": 54
+      },
+      {
+        "text": "Anastasios",
+        "label": "PER",
+        "start": 63,
+        "end": 73
+      },
+      {
+        "text": "Konštantínopole",
+        "label": "LOC",
+        "start": 102,
+        "end": 117
+      }
+    ]
+  },
+  {
+    "text": "Po začiatočných úspechoch Peržanov sa rímskej armáde sa podarilo situáciu stabilizovať .",
+    "spans": [
+      {
+        "text": "Peržanov",
+        "label": "PER",
+        "start": 26,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Za jeho nástupcou Anastasios vymenoval monofyzitského patriarchu z Antiochie .",
+    "spans": [
+      {
+        "text": "Anastasios",
+        "label": "PER",
+        "start": 18,
+        "end": 28
+      },
+      {
+        "text": "Antiochie",
+        "label": "LOC",
+        "start": 67,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "V samotnom Konštantínopole bol ustavený proticisár , ktorý bol však rýchlo odstránený .",
+    "spans": [
+      {
+        "text": "Konštantínopole",
+        "label": "LOC",
+        "start": 11,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "Kofola je sýtený nealkoholický nápoj vyrábaný v Česku a na Slovensku .",
+    "spans": [
+      {
+        "text": "Česku",
+        "label": "LOC",
+        "start": 48,
+        "end": 53
+      },
+      {
+        "text": "Slovensku",
+        "label": "LOC",
+        "start": 59,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "text": "Prepad Cremony",
+    "spans": [
+      {
+        "text": "Cremony",
+        "label": "LOC",
+        "start": 7,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Nažive zostal iba jediný majster ‐ Duk Ki Song .",
+    "spans": [
+      {
+        "text": "Duk Ki Song",
+        "label": "PER",
+        "start": 35,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Niekoľko ťažkých geometrických problémov týkajúcich sa konštrukcií pomocu pravítka a kružidla bolo vyriešených pomocou Galoisovej teórie .",
+    "spans": [
+      {
+        "text": "Galoisovej",
+        "label": "PER",
+        "start": 119,
+        "end": 129
+      }
+    ]
+  },
+  {
+    "text": "Je to listina ostrihomského arcibiskupa Jána o donácii príjmov miestneho kostola ostrihomskej kapitule .",
+    "spans": [
+      {
+        "text": "Jána",
+        "label": "PER",
+        "start": 40,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "text": "Udelil jej ich v roku 1238 uhorský kráľ Belo IV .",
+    "spans": [
+      {
+        "text": "Belo IV",
+        "label": "PER",
+        "start": 40,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "O dôležitom postavení mesta svedčí aj skutočnosť , že Trnava bola miestom stretnutí kráľov .",
+    "spans": [
+      {
+        "text": "Trnava",
+        "label": "LOC",
+        "start": 54,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "Bratislava sa stala administratívnym centrom krajiny a Trnava prevzala úlohu kultúrneho a náboženského centra krajiny .",
+    "spans": [
+      {
+        "text": "Bratislava",
+        "label": "LOC",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Trnava",
+        "label": "LOC",
+        "start": 55,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Do 18 . storočia vstupovala Trnava ako univerzitné mesto známe v celej Európe .",
+    "spans": [
+      {
+        "text": "Trnava",
+        "label": "LOC",
+        "start": 28,
+        "end": 34
+      },
+      {
+        "text": "Európe",
+        "label": "LOC",
+        "start": 71,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "V roku 1792 Anton Bernolák vytvoril v Trnave hlavný stánok Slovenského učeného tovarišstva .",
+    "spans": [
+      {
+        "text": "Anton Bernolák",
+        "label": "PER",
+        "start": 12,
+        "end": 26
+      },
+      {
+        "text": "Trnave",
+        "label": "LOC",
+        "start": 38,
+        "end": 44
+      },
+      {
+        "text": "Slovenského učeného tovarišstva",
+        "label": "ORG",
+        "start": 59,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "V stredovekej Európe astronómia poväčšine stagnovala , aj keď v Arabskom svete sa jej darilo .",
+    "spans": [
+      {
+        "text": "Európe",
+        "label": "LOC",
+        "start": 14,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "V neskorom 9 . storočí islamský astronóm al - Farghani rozsiahlo opísal pohyb nebeských telies .",
+    "spans": [
+      {
+        "text": "al - Farghani",
+        "label": "PER",
+        "start": 41,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Jeho prácu obhájil , rozšíril a opravil Galileo Galilei a Johannes Kepler .",
+    "spans": [
+      {
+        "text": "Galileo Galilei",
+        "label": "PER",
+        "start": 40,
+        "end": 55
+      },
+      {
+        "text": "Johannes Kepler",
+        "label": "PER",
+        "start": 58,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "Galileo pridal do svojich pozorovaní zlepšenie pomocou teleskopu .",
+    "spans": [
+      {
+        "text": "Galileo",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Kepler bol prvý , kto vymyslel systém , ktorý správne opisoval detaily pohybov planét okolo Slnka nachádzajúceho sa v strede .",
+    "spans": [
+      {
+        "text": "Kepler",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Slnka",
+        "label": "LOC",
+        "start": 92,
+        "end": 97
+      }
+    ]
+  },
+  {
+    "text": "Až Newtonov objav nebeskej dynamiky a jeho gravitačné zákony konečne vysvetlili pohyby planét .",
+    "spans": [
+      {
+        "text": "Newtonov",
+        "label": "PER",
+        "start": 3,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Newton tiež vymyslel reflekčný teleskop .",
+    "spans": [
+      {
+        "text": "Newton",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Kozmológia počas 20 . storočia urobila obrovské pokroky so svojím modelom Veľkého tresku , ktorý silno podporovali dôkazy poskytované astronómiou a fyzikou akými sú kozmické mikrovlné reliktové žiarenie , Hubblov zákon a kozmologická hojnosť prvkov .",
+    "spans": [
+      {
+        "text": "Hubblov",
+        "label": "PER",
+        "start": 205,
+        "end": 212
+      }
+    ]
+  },
+  {
+    "text": "Odhlásenia auta v Rakúsku stojí 0 EUR .",
+    "spans": [
+      {
+        "text": "Rakúsku",
+        "label": "LOC",
+        "start": 18,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Otáča sa okolo vlastnej osi ( raz za deň ) a obieha okolo Slnka ( raz za rok ) .",
+    "spans": [
+      {
+        "text": "Slnka",
+        "label": "LOC",
+        "start": 58,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Na druhej strane Zem je jediná planéta Slnečnej sústavy , o ktorej vieme , že sa na nej vyvinul život .",
+    "spans": [
+      {
+        "text": "Zem",
+        "label": "LOC",
+        "start": 17,
+        "end": 20
+      },
+      {
+        "text": "Slnečnej sústavy",
+        "label": "LOC",
+        "start": 39,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "Zem vznikla ako horúca žeravá guľa roztavených skál asi pred 4 , 6 miliardami rokov .",
+    "spans": [
+      {
+        "text": "Zem",
+        "label": "LOC",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "Súše , resp . kontinenty dnes zaberajú skoro 1 / 3 povrchu Zeme .",
+    "spans": [
+      {
+        "text": "Zeme",
+        "label": "LOC",
+        "start": 59,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Zem je telesom s druhou najväčšou sopečnou aktivitou v Slnečnej sústave .",
+    "spans": [
+      {
+        "text": "Zem",
+        "label": "LOC",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Slnečnej sústave",
+        "label": "LOC",
+        "start": 55,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "V roztavenej Zemi klesali hustejšie látky do hĺbky a menej husté vystupovali k povrchu .",
+    "spans": [
+      {
+        "text": "Zemi",
+        "label": "LOC",
+        "start": 13,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Súvislá vrstva oblačnosti sa trhala a na Zemi prvý raz zasvietilo Slnko .",
+    "spans": [
+      {
+        "text": "Zemi",
+        "label": "LOC",
+        "start": 41,
+        "end": 45
+      },
+      {
+        "text": "Slnko",
+        "label": "LOC",
+        "start": 66,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "Atmosféra Zeme je do značnej miery ovplyvnená biosférou ( živými organizmami ) .",
+    "spans": [
+      {
+        "text": "Zeme",
+        "label": "LOC",
+        "start": 10,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Povrch Zeme obklopuje atmosféra o hrúbke asi 200 kilometrov a hmotnosti 5700 biliónov ton .",
+    "spans": [
+      {
+        "text": "Zeme",
+        "label": "LOC",
+        "start": 7,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Atmosféra Zeme ochraňuje planétu Zem pred podstatnou časťou slnečného žiarenia .",
+    "spans": [
+      {
+        "text": "Zeme",
+        "label": "LOC",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "text": "Zem",
+        "label": "LOC",
+        "start": 33,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Atmosféra Zeme funguje tiež ako regulátor teploty .",
+    "spans": [
+      {
+        "text": "Zeme",
+        "label": "LOC",
+        "start": 10,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Počasie je na Zemi veľmi premenlivé .",
+    "spans": [
+      {
+        "text": "Zemi",
+        "label": "LOC",
+        "start": 14,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Transalbigen či Nordalbigen .",
+    "spans": [
+      {
+        "text": "Transalbigen",
+        "label": "LOC",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "text": "Nordalbigen",
+        "label": "LOC",
+        "start": 16,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "Wittenberg sa potom stal hlavným mestom Saského kurfirststva .",
+    "spans": [
+      {
+        "text": "Wittenberg",
+        "label": "LOC",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Ďalším významným prorokom je Eliáš , ktorý nezomrel , ale dostal sa k Bohu v ohnivom voze .",
+    "spans": [
+      {
+        "text": "Eliáš",
+        "label": "PER",
+        "start": 29,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Kresťania zaraďujú medzi prorokov ešte Daniela .",
+    "spans": [
+      {
+        "text": "Kresťania",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Daniela",
+        "label": "PER",
+        "start": 39,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Krista ) .",
+    "spans": [
+      {
+        "text": "Krista",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Židia majú Mojžiša a kresťania Ježiša .",
+    "spans": [
+      {
+        "text": "Židia",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Mojžiša",
+        "label": "PER",
+        "start": 11,
+        "end": 18
+      },
+      {
+        "text": "kresťania",
+        "label": "PER",
+        "start": 21,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Bernard Francis Law",
+    "spans": [
+      {
+        "text": "Bernard Francis Law",
+        "label": "PER",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Mahmúdov otec , sultán Abdulhamid I . ( 1774 – 1789 ) , poskytol svojmu synovi tradičné vzdelanie osmanského princa , ktoré spočívalo vo výučbe turečtiny , perštiny , arabčiny , náboženstva , práva , poézie a dejín .",
+    "spans": [
+      {
+        "text": "Mahmúdov",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Abdulhamid I .",
+        "label": "PER",
+        "start": 23,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Mahmúd bol výborným kaligrafom a básnikom , písal pod pseudonymom Adli .",
+    "spans": [
+      {
+        "text": "Mahmúd",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Adli",
+        "label": "PER",
+        "start": 66,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Nezískal však žiadne zvláštne vedomosti o Európe .",
+    "spans": [
+      {
+        "text": "Európe",
+        "label": "LOC",
+        "start": 42,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Nástup Mahmúda II . na trón a prvé pokusy o reformu",
+    "spans": [
+      {
+        "text": "Mahmúda II",
+        "label": "PER",
+        "start": 7,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Na trón sa dostal Mahmúd za dramatických okolností .",
+    "spans": [
+      {
+        "text": "Mahmúd",
+        "label": "PER",
+        "start": 18,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Vzbúrenci sa na vonkajšom prvom nádvorí paláca Topkapi zmocnili sultánovho osobného tajomníka a rozsekali ho na kusy .",
+    "spans": [
+      {
+        "text": "Topkapi",
+        "label": "LOC",
+        "start": 47,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Janičiari ovládli hlavné mesto a rozpútali všeobecný teror .",
+    "spans": [
+      {
+        "text": "Janičiari",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Mnohí sa vydali na sever a prešli bulharským územím do mesta Ruse ( Ruščuk ) , opevneného mesta , ležiaceho pri brehu Dunaja , kde mal hlavný stan schopný vojvodca Mustafa Paša Bajraktar .",
+    "spans": [
+      {
+        "text": "Ruse",
+        "label": "LOC",
+        "start": 61,
+        "end": 65
+      },
+      {
+        "text": "Ruščuk",
+        "label": "LOC",
+        "start": 68,
+        "end": 74
+      },
+      {
+        "text": "Dunaja",
+        "label": "LOC",
+        "start": 118,
+        "end": 124
+      },
+      {
+        "text": "Mustafa Paša Bajraktar",
+        "label": "PER",
+        "start": 164,
+        "end": 186
+      }
+    ]
+  },
+  {
+    "text": "Bajraktar do roka obnovil disciplínu v rozvrátenej osmanskej armáde a urobil ju schopnou boja .",
+    "spans": [
+      {
+        "text": "Bajraktar",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Bajraktar Mustafa Paša bol menovaný za veľkovezíra .",
+    "spans": [
+      {
+        "text": "Bajraktar Mustafa Paša",
+        "label": "PER",
+        "start": 0,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "Velením týchto vojsk poveril bývalých dôstojníkov Nového poriadku , čo rozhorčilo reakcionárov .",
+    "spans": [
+      {
+        "text": "Nového poriadku",
+        "label": "ORG",
+        "start": 50,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Janičiari počas noci pripravili sprisahanie a ráno 15 . novembra 1808 veľkovezíra prepadli v sídle Vysokej porty .",
+    "spans": [
+      {
+        "text": "Janičiari",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Vysokej porty",
+        "label": "LOC",
+        "start": 99,
+        "end": 112
+      }
+    ]
+  },
+  {
+    "text": "Bajraktar sa ukryl v susednej malej kamennej budove , ktorá sa zdala , že je pomerne dobre obranyschopná .",
+    "spans": [
+      {
+        "text": "Bajraktar",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Janičiari sľúbili zastaviť obliehanie a zaistiť voľný odchod odzbrojených vojakov .",
+    "spans": [
+      {
+        "text": "Janičiari",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Fatma nakoniec zomrela nasledujúci rok vo februári pri pôrode dcéry a malá princezná zomrela v útlom veku .",
+    "spans": [
+      {
+        "text": "Fatma",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Poučil sa z osudu reformátorov sultána Selima III . a veľkovezíra Bajraktara .",
+    "spans": [
+      {
+        "text": "Selima III .",
+        "label": "PER",
+        "start": 39,
+        "end": 51
+      },
+      {
+        "text": "Bajraktara",
+        "label": "PER",
+        "start": 66,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Prvé roky Mahmúdovho panovania plynuli v tieni spomienok na Selimov osud a v strachu z novej vlny násilia .",
+    "spans": [
+      {
+        "text": "Mahmúdovho",
+        "label": "PER",
+        "start": 10,
+        "end": 20
+      },
+      {
+        "text": "Selimov",
+        "label": "PER",
+        "start": 60,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Likvidácia Haleta Efendiho výrazne posilnila sultánovu autoritu .",
+    "spans": [
+      {
+        "text": "Haleta Efendiho",
+        "label": "PER",
+        "start": 11,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "V rokoch 1801 – 1803 bol miestodržiteľom Egypta , veľký vplyv získal ako veľkoadmirál v rokoch 1811 – 1818 a 1822 – 1827 .",
+    "spans": [
+      {
+        "text": "Egypta",
+        "label": "LOC",
+        "start": 41,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Ďalším cieľom centralizačných snáh sultána Mahmúda II . bolo odstránenie feudálnych separatistov .",
+    "spans": [
+      {
+        "text": "Mahmúda II .",
+        "label": "PER",
+        "start": 43,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "Mahmúd II . sa sústredil najprv na centralizáciu v Anatólie .",
+    "spans": [
+      {
+        "text": "Mahmúd II .",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "Anatólie",
+        "label": "LOC",
+        "start": 51,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Poslednou baštou balkánskeho feudálneho separatizmu bola doména Aliho Pašu z Janiny ( 1741 – 1822 ) .",
+    "spans": [
+      {
+        "text": "Aliho Pašu",
+        "label": "PER",
+        "start": 64,
+        "end": 74
+      },
+      {
+        "text": "Janiny",
+        "label": "LOC",
+        "start": 77,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Mahmúdova armáda tak oslávila triumf nad mužom , ktorý dokázal vzdorovať piatim sultánom .",
+    "spans": [
+      {
+        "text": "Mahmúdova",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Miloš Obrenović potom systematicky rozširoval srbskú autonómiu , svoje osobné postavenie a zaviedol celkom despotický režim .",
+    "spans": [
+      {
+        "text": "Miloš Obrenović",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Po skončení napoleonských vojen vzniklo medzi Grékmi žijúcimi v emigrácii hnutie proti sultánovej vláde .",
+    "spans": [
+      {
+        "text": "Grékmi",
+        "label": "PER",
+        "start": 46,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Od roku 1814 pôsobila tajná revolučná Spoločnosť priateľov ( Filiki Eteria ) , založená v Odese gréckymi vlastencami .",
+    "spans": [
+      {
+        "text": "Spoločnosť priateľov",
+        "label": "ORG",
+        "start": 38,
+        "end": 58
+      },
+      {
+        "text": "Filiki Eteria",
+        "label": "ORG",
+        "start": 61,
+        "end": 74
+      },
+      {
+        "text": "Odese",
+        "label": "LOC",
+        "start": 90,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Neskôr svoje sídlo presunula do Carihradu .",
+    "spans": [
+      {
+        "text": "Carihradu",
+        "label": "LOC",
+        "start": 32,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Cieľom organizácie bolo oslobodenie Grékov a ďalších pravoslávnych poddaných z tureckej nadvlády .",
+    "spans": [
+      {
+        "text": "Grékov",
+        "label": "PER",
+        "start": 36,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "V marci 1821 vstúpil Vladimirescu do Bukurešti a vzápätí ho nasledoval Ypsilanti .",
+    "spans": [
+      {
+        "text": "Vladimirescu",
+        "label": "PER",
+        "start": 21,
+        "end": 33
+      },
+      {
+        "text": "Bukurešti",
+        "label": "LOC",
+        "start": 37,
+        "end": 46
+      },
+      {
+        "text": "Ypsilanti",
+        "label": "PER",
+        "start": 71,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "Dobrodružná Ypsilantiho akcia onedlho stroskotala , pretože osmanské vojská ľahko porazili zostávajúcich povstalcov v bitke pri Drǎgǎsani .",
+    "spans": [
+      {
+        "text": "Ypsilantiho",
+        "label": "PER",
+        "start": 12,
+        "end": 23
+      },
+      {
+        "text": "Drǎgǎsani",
+        "label": "LOC",
+        "start": 128,
+        "end": 137
+      }
+    ]
+  },
+  {
+    "text": "Za prvého vládcu bol zvolený vzdelaný fanariot Alexandros Mavrokordatos ( 1791 – 1865 ) .",
+    "spans": [
+      {
+        "text": "Alexandros Mavrokordatos",
+        "label": "PER",
+        "start": 47,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "Svätá aliancia grécke povstanie jednoznačne odsúdila a Grékov označila za nelegitímnych vzbúrencov .",
+    "spans": [
+      {
+        "text": "Svätá aliancia",
+        "label": "ORG",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "Grékov",
+        "label": "PER",
+        "start": 55,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Toto stanovisko prinútilo Mahmúda II . uskutočniť rozhodné akcie .",
+    "spans": [
+      {
+        "text": "Mahmúda II .",
+        "label": "PER",
+        "start": 26,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Rusko sa rozhodlo grécky problém internacionalizovať .",
+    "spans": [
+      {
+        "text": "Rusko",
+        "label": "LOC",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Podľa Mahmúda bolo na jar 1826 grécke povstanie na konci .",
+    "spans": [
+      {
+        "text": "Mahmúda",
+        "label": "PER",
+        "start": 6,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Modernizovaná vojenská mašinéria Muhammada Alího dosiahla víťazstvo , ktoré tradičným osmanským plukom a janičiarom dlho unikalo .",
+    "spans": [
+      {
+        "text": "Muhammada Alího",
+        "label": "PER",
+        "start": 33,
+        "end": 48
+      },
+      {
+        "text": "janičiarom",
+        "label": "PER",
+        "start": 105,
+        "end": 115
+      }
+    ]
+  },
+  {
+    "text": "Zrušenie janičiarov",
+    "spans": [
+      {
+        "text": "janičiarov",
+        "label": "PER",
+        "start": 9,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Najväčšou prekážkou reforiem v ríši boli zbory janičiarov .",
+    "spans": [
+      {
+        "text": "janičiarov",
+        "label": "PER",
+        "start": 47,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Mahmúd odpočíval v paláci Besiktaş , keď sa dozvedel o dlho očakávanej príležitosti na zlikvidovanie janičiarov .",
+    "spans": [
+      {
+        "text": "Mahmúd",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Besiktaş",
+        "label": "LOC",
+        "start": 26,
+        "end": 34
+      },
+      {
+        "text": "janičiarov",
+        "label": "PER",
+        "start": 101,
+        "end": 111
+      }
+    ]
+  },
+  {
+    "text": "Sultán sa odobral do klenotnice a vztýčil Prorokov prápor .",
+    "spans": [
+      {
+        "text": "Prorokov",
+        "label": "PER",
+        "start": 42,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "text": "Ruský cár Mikuláš I . donútil sultána k ústupkom v akkermanskej konvencii podpísanej 7 . októbra 1826 .",
+    "spans": [
+      {
+        "text": "Mikuláš I .",
+        "label": "PER",
+        "start": 10,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Vytvorila sa mocná protiturecká koalícia Ruska , Veľkej Británie a Francúzska .",
+    "spans": [
+      {
+        "text": "Ruska",
+        "label": "LOC",
+        "start": 41,
+        "end": 46
+      },
+      {
+        "text": "Veľkej Británie",
+        "label": "LOC",
+        "start": 49,
+        "end": 64
+      },
+      {
+        "text": "Francúzska",
+        "label": "LOC",
+        "start": 67,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Katastrofálna porážka osmanského loďstva znamenala , že Ibrahím Paša zostal so svojou armádou celkom odrezaný od Egypta .",
+    "spans": [
+      {
+        "text": "Ibrahím Paša",
+        "label": "PER",
+        "start": 56,
+        "end": 68
+      },
+      {
+        "text": "Egypta",
+        "label": "LOC",
+        "start": 113,
+        "end": 119
+      }
+    ]
+  },
+  {
+    "text": "Cár Mikuláš I . vyhlásil sultánovi 26 . apríla 1828 vojnu .",
+    "spans": [
+      {
+        "text": "Mikuláš I .",
+        "label": "PER",
+        "start": 4,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "V roku 1829 Francúzsko a Egypt vypracovali spoločný plán na ovládnutie severnej Afriky .",
+    "spans": [
+      {
+        "text": "Francúzsko",
+        "label": "LOC",
+        "start": 12,
+        "end": 22
+      },
+      {
+        "text": "Egypt",
+        "label": "LOC",
+        "start": 25,
+        "end": 30
+      },
+      {
+        "text": "severnej Afriky",
+        "label": "LOC",
+        "start": 71,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Roku 1831 preto Muhammad Alí proti sultánovi povstal .",
+    "spans": [
+      {
+        "text": "Muhammad Alí",
+        "label": "PER",
+        "start": 16,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Medzitým v máji 1832 padla obliehaná Akka .",
+    "spans": [
+      {
+        "text": "Akka",
+        "label": "LOC",
+        "start": 37,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Obe veľmoci presadili uzavretie mieru medzi Mahmúdom a Muhammadom Alím .",
+    "spans": [
+      {
+        "text": "Mahmúdom",
+        "label": "PER",
+        "start": 44,
+        "end": 52
+      },
+      {
+        "text": "Muhammadom Alím",
+        "label": "PER",
+        "start": 55,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Sultán Mahmúd II . sa na britský nátlak musel s výsledkom rokovaní zmieriť .",
+    "spans": [
+      {
+        "text": "Mahmúd II",
+        "label": "PER",
+        "start": 7,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Egyptské vojská boli vzápätí evakuované z Anatólie a kríza sa skončila .",
+    "spans": [
+      {
+        "text": "Anatólie",
+        "label": "LOC",
+        "start": 42,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "text": "Šlo o veľkomyseľné ústupky v obchodnej sfére a Mahmúd dúfal , že Britániu zláka na vstup do formálneho spojenectva .",
+    "spans": [
+      {
+        "text": "Mahmúd",
+        "label": "PER",
+        "start": 47,
+        "end": 53
+      },
+      {
+        "text": "Britániu",
+        "label": "LOC",
+        "start": 65,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "Najprv vyzval Muhammada Alího , aby rešpektoval plnenie podmienok baltalimanskej dohody .",
+    "spans": [
+      {
+        "text": "Muhammada Alího",
+        "label": "PER",
+        "start": 14,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Muhammad Alí sa odmietol sultánovej výzve podriadiť a v máji 1838 vyhlásil svoj zámer stať sa nezávislým panovníkom .",
+    "spans": [
+      {
+        "text": "Muhammad Alí",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Nakoniec sultán vyslal svoje jednotky s pruskými vojenskými poradcami do Sýrie .",
+    "spans": [
+      {
+        "text": "Sýrie",
+        "label": "LOC",
+        "start": 73,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Nasledovalo druhé sýrske ťaženie Ibrahíma Pašu .",
+    "spans": [
+      {
+        "text": "Ibrahíma Pašu",
+        "label": "PER",
+        "start": 33,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Skoncentroval svoje sily a 24 . júna porazil v údolí medzi Nezibom a Birecikom osmanské vojsko .",
+    "spans": [
+      {
+        "text": "Nezibom",
+        "label": "LOC",
+        "start": 59,
+        "end": 66
+      },
+      {
+        "text": "Birecikom",
+        "label": "LOC",
+        "start": 69,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Bellerofontes alebo Bellerofón ( čo znamená Bellerov vrah ) bol syn korintského kráľa Glauka a Eurymédy .",
+    "spans": [
+      {
+        "text": "Bellerofontes",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "text": "Bellerofón",
+        "label": "PER",
+        "start": 20,
+        "end": 30
+      },
+      {
+        "text": "Bellerov",
+        "label": "PER",
+        "start": 44,
+        "end": 52
+      },
+      {
+        "text": "Glauka",
+        "label": "PER",
+        "start": 86,
+        "end": 92
+      },
+      {
+        "text": "Eurymédy",
+        "label": "PER",
+        "start": 95,
+        "end": 103
+      }
+    ]
+  },
+  {
+    "text": "Z neopatrnosti usmrtil svojho brata , a preto utiekol ku kráľovi Proitovi do Argosu .",
+    "spans": [
+      {
+        "text": "Proitovi",
+        "label": "PER",
+        "start": 65,
+        "end": 73
+      },
+      {
+        "text": "Argosu",
+        "label": "LOC",
+        "start": 77,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Bellerofontes jej lásku neopätoval .",
+    "spans": [
+      {
+        "text": "Bellerofontes",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Antea ho z pomsty udala kráľovi , že sa pokúšal pripraviť ju o česť .",
+    "spans": [
+      {
+        "text": "Antea",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Kráľ sa sám nechcel svojmu hosťovi pomstiť , ale poslal ho s listom ku kráľovninmu otcovi , kráľovi Iobatovi do Lýkie .",
+    "spans": [
+      {
+        "text": "Lýkie",
+        "label": "LOC",
+        "start": 112,
+        "end": 117
+      }
+    ]
+  },
+  {
+    "text": "List skrýval žiadosť , aby Iobates dal Bellerofonta popraviť .",
+    "spans": [
+      {
+        "text": "Bellerofonta",
+        "label": "PER",
+        "start": 39,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Bellerofontov koniec už nebol tak šťastný .",
+    "spans": [
+      {
+        "text": "Bellerofontov",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Filónoé mu porodila tri deti , Isandra , Hippolocha a Laodameiu .",
+    "spans": [
+      {
+        "text": "Filónoé",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Isandra",
+        "label": "PER",
+        "start": 31,
+        "end": 38
+      },
+      {
+        "text": "Hippolocha",
+        "label": "PER",
+        "start": 41,
+        "end": 51
+      },
+      {
+        "text": "Laodameiu",
+        "label": "PER",
+        "start": 54,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Hormizd , ktorý zdedil ríšu po svojom otcovi Narséovi , sa z politických dôvodov oženil s kušánskou princeznou .",
+    "spans": [
+      {
+        "text": "Hormizd",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Narséovi",
+        "label": "PER",
+        "start": 45,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "text": "Martin Luther",
+    "spans": [
+      {
+        "text": "Martin Luther",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Martin Luther sa narodil ako jedno z deviatich detí baníka .",
+    "spans": [
+      {
+        "text": "Martin Luther",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Tézy , ktoré sa bez vedomia Luthera rýchlo rozšírili , vyvolali kvôli vtedajšej všeobecnej nespokojnosti s cirkvou veľký ohlas .",
+    "spans": [
+      {
+        "text": "Luthera",
+        "label": "PER",
+        "start": 28,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Ten Lutherovi pohrozil kliatbou .",
+    "spans": [
+      {
+        "text": "Lutherovi",
+        "label": "PER",
+        "start": 4,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Luther vydáva reformačné spisy , v ktorých svoje názory ďalej obhajuje .",
+    "spans": [
+      {
+        "text": "Luther",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "V roku 1522 sa vracia do Wittenbergu , aby zastavil obrazoborectvo .",
+    "spans": [
+      {
+        "text": "Wittenbergu",
+        "label": "LOC",
+        "start": 25,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Preklad Starého zákona Luther dokončuje za spolupráce iných wittenberských teológov v roku 1534 .",
+    "spans": [
+      {
+        "text": "Luther",
+        "label": "PER",
+        "start": 23,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Luther bol veľmi plodný spisovateľ , celkové vydanie jeho spisov obsahuje viac ako 100 zväzkov .",
+    "spans": [
+      {
+        "text": "Luther",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "* Ezopove Bájky ( 1530 )",
+    "spans": [
+      {
+        "text": "Ezopove",
+        "label": "PER",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Jeho otcom bol kráľ Jazdkart II . , matkou kráľovná Dénak .",
+    "spans": [
+      {
+        "text": "Jazdkart II .",
+        "label": "PER",
+        "start": 20,
+        "end": 33
+      },
+      {
+        "text": "Dénak",
+        "label": "PER",
+        "start": 52,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Pérózova vláda",
+    "spans": [
+      {
+        "text": "Pérózova",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Sám Péróz v bitke zahynul .",
+    "spans": [
+      {
+        "text": "Péróz",
+        "label": "PER",
+        "start": 4,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Maltézsky rád je jeden z mníšskych rytierskych rádov , ktoré vznikli v 11 . storočí na území Jeruzalemského kráľovstva .",
+    "spans": [
+      {
+        "text": "Jeruzalemského kráľovstva",
+        "label": "LOC",
+        "start": 93,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "Sídlom rádu je dnes Rím .",
+    "spans": [
+      {
+        "text": "Rím",
+        "label": "LOC",
+        "start": 20,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Oficiálny názov rádu je : Suverénny vojenský hospitálny rád svätého Jána v Jeruzaleme , na Rhode a na Malte .",
+    "spans": [
+      {
+        "text": "Suverénny vojenský hospitálny rád svätého Jána v Jeruzaleme , na Rhode a na Malte",
+        "label": "ORG",
+        "start": 26,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "Rhodos a Malta",
+    "spans": [
+      {
+        "text": "Rhodos",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Malta",
+        "label": "LOC",
+        "start": 9,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Johaniti vybudovali správny aparát a Malta sa pod ich vedením stala suverénnym štátom .",
+    "spans": [
+      {
+        "text": "Johaniti",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Malta",
+        "label": "LOC",
+        "start": 37,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Lev II . ( cisár )",
+    "spans": [
+      {
+        "text": "Lev II .",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Ako najbližší mužský príbuzný cisára Leva I . bol určený za jeho nástupcu .",
+    "spans": [
+      {
+        "text": "Leva I .",
+        "label": "PER",
+        "start": 37,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "Ukázalo sa , že to bolo veľmi prezieravé rozhodnutie , lebo Lev po sotva ročnej vláde zomrel na neznámu chorobu .",
+    "spans": [
+      {
+        "text": "Lev",
+        "label": "PER",
+        "start": 60,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Po jeho smrti došlo k určitým dynastickým zmätkom , ktoré ukončil až nástup prostredného kráľovho syna Báhráma na trón .",
+    "spans": [
+      {
+        "text": "Báhráma",
+        "label": "PER",
+        "start": 103,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Okupačné zóny Nemecka",
+    "spans": [
+      {
+        "text": "Nemecka",
+        "label": "LOC",
+        "start": 14,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Pôvodne bol priateľom cisára Nera , jeho žena Poppaea Sabina však upútala Neronovu pozornosť a stala sa jeho milenkou .",
+    "spans": [
+      {
+        "text": "Nera",
+        "label": "PER",
+        "start": 29,
+        "end": 33
+      },
+      {
+        "text": "Poppaea Sabina",
+        "label": "PER",
+        "start": 46,
+        "end": 60
+      },
+      {
+        "text": "Neronovu",
+        "label": "PER",
+        "start": 74,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Nero nepohodlného Othona vymenoval za prétora vzdialenej Lusitanie .",
+    "spans": [
+      {
+        "text": "Nero",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Othona",
+        "label": "PER",
+        "start": 18,
+        "end": 24
+      },
+      {
+        "text": "Lusitanie",
+        "label": "LOC",
+        "start": 57,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "Galba sa stal cisárom , ale bol bezdetný a Otho dúfal , že sa stane jeho nástupcom .",
+    "spans": [
+      {
+        "text": "Galba",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Otho",
+        "label": "PER",
+        "start": 43,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "V germánskych provinciách medzitým prebiehala Vitelliova vzbura proti Galbovi .",
+    "spans": [
+      {
+        "text": "Vitelliova",
+        "label": "PER",
+        "start": 46,
+        "end": 56
+      },
+      {
+        "text": "Galbovi",
+        "label": "PER",
+        "start": 70,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Friedrich Spee",
+    "spans": [
+      {
+        "text": "Friedrich Spee",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Spee a hon na čarodejnice",
+    "spans": [
+      {
+        "text": "Spee",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "Gustáv Husák",
+    "spans": [
+      {
+        "text": "Gustáv Husák",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Bol podpredsedom povstaleckej Slovenskej národnej rady , poverencom vnútra a podpredsedom Komunistickej strany Slovenska .",
+    "spans": [
+      {
+        "text": "Slovenskej národnej rady",
+        "label": "ORG",
+        "start": 30,
+        "end": 54
+      },
+      {
+        "text": "Komunistickej strany Slovenska",
+        "label": "ORG",
+        "start": 90,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "text": "Husák sa stáva predsedom Zboru povereníkov .",
+    "spans": [
+      {
+        "text": "Husák",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Zboru povereníkov",
+        "label": "ORG",
+        "start": 25,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "V roku 1969 sa dostáva na čelo KSČ ‐ do mája roku 1971 bol jej prvým tajomníkom , potom až do roku 1987 jej generálnym tajomníkom .",
+    "spans": [
+      {
+        "text": "KSČ",
+        "label": "ORG",
+        "start": 31,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Po novembrových udalostiach roku 1989 Gustáv Husák vymenoval 10 . decembra Čalfovu \" vládu národného porozumenia \" a vzápätí abdikoval z funkcie prezidenta republiky .",
+    "spans": [
+      {
+        "text": "Gustáv Husák",
+        "label": "PER",
+        "start": 38,
+        "end": 50
+      },
+      {
+        "text": "Čalfovu",
+        "label": "PER",
+        "start": 75,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "V čase Vladislavovej smrti mal Ľudovít len desať rokov .",
+    "spans": [
+      {
+        "text": "Vladislavovej",
+        "label": "PER",
+        "start": 7,
+        "end": 20
+      },
+      {
+        "text": "Ľudovít",
+        "label": "PER",
+        "start": 31,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Vláda v Uhorsku",
+    "spans": [
+      {
+        "text": "Uhorsku",
+        "label": "LOC",
+        "start": 8,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Ľudovítovou manželkou bola Mária , sestra rakúskeho arcivojvodu Ferdinanda Habsburského , ženou Ferdinanda naopak Ľudovítova staršia sestra Anna .",
+    "spans": [
+      {
+        "text": "Ľudovítovou",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "Mária",
+        "label": "PER",
+        "start": 27,
+        "end": 32
+      },
+      {
+        "text": "Ferdinanda Habsburského",
+        "label": "PER",
+        "start": 64,
+        "end": 87
+      },
+      {
+        "text": "Ferdinanda",
+        "label": "PER",
+        "start": 96,
+        "end": 106
+      },
+      {
+        "text": "Ľudovítova",
+        "label": "PER",
+        "start": 114,
+        "end": 124
+      },
+      {
+        "text": "Anna",
+        "label": "PER",
+        "start": 140,
+        "end": 144
+      }
+    ]
+  },
+  {
+    "text": "Rudyard Kipling",
+    "spans": [
+      {
+        "text": "Rudyard Kipling",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Bol synom Přemysla Otakara II . a jeho druhej manželky uhorskej princeznej Kunhuty .",
+    "spans": [
+      {
+        "text": "Přemysla Otakara II",
+        "label": "PER",
+        "start": 10,
+        "end": 29
+      },
+      {
+        "text": "Kunhuty",
+        "label": "PER",
+        "start": 75,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Vzápätí obsadil Kladsko a snažil sa dosiahnuť poručníctvo nad Václavom .",
+    "spans": [
+      {
+        "text": "Kladsko",
+        "label": "LOC",
+        "start": 16,
+        "end": 23
+      },
+      {
+        "text": "Václavom",
+        "label": "PER",
+        "start": 62,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Nástup Václava II . ( vládol od roku 1283 ) na český trón však neznamenalo okamžité skľudnenie pomerov .",
+    "spans": [
+      {
+        "text": "Václava II .",
+        "label": "PER",
+        "start": 7,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Tri kráľovské koruny Přemyslovcov",
+    "spans": [
+      {
+        "text": "Přemyslovcov",
+        "label": "PER",
+        "start": 21,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Jeho súper , Piastovec Vladislav Lokietok , ktorý sa rovnako pokúšal zjednotiť poľské kniežatstvá pod svojou vládou , bol nútený utiecť z krajiny .",
+    "spans": [
+      {
+        "text": "Piastovec Vladislav Lokietok",
+        "label": "PER",
+        "start": 13,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Přemyslovci dosiahli neobyčajný úspech .",
+    "spans": [
+      {
+        "text": "Přemyslovci",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Jaroslav Vrchlický",
+    "spans": [
+      {
+        "text": "Jaroslav Vrchlický",
+        "label": "PER",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Pochádzal z Loun , jeho otec bol kupcom .",
+    "spans": [
+      {
+        "text": "Loun",
+        "label": "LOC",
+        "start": 12,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Detstvo strávil v Ovčároch pri Kolíne .",
+    "spans": [
+      {
+        "text": "Ovčároch pri Kolíne",
+        "label": "LOC",
+        "start": 18,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Od roku 1875 pracoval ako vychovávateľ a tajomník grófskej rodiny v Taliansku .",
+    "spans": [
+      {
+        "text": "Taliansku",
+        "label": "LOC",
+        "start": 68,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Inšpiráciu čerpal v Legende vekov od Victora Huga .",
+    "spans": [
+      {
+        "text": "Victora Huga",
+        "label": "PER",
+        "start": 37,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Dáva tu do súvislosti umenie a rozum , Staroveké Grécko je symbolom optimizmu .",
+    "spans": [
+      {
+        "text": "Staroveké Grécko",
+        "label": "LOC",
+        "start": 39,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "* Panteon",
+    "spans": [
+      {
+        "text": "Panteon",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Divadelné hry písal pre Národné divadlo",
+    "spans": [
+      {
+        "text": "Národné divadlo",
+        "label": "LOC",
+        "start": 24,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "* Drahomíra",
+    "spans": [
+      {
+        "text": "Drahomíra",
+        "label": "PER",
+        "start": 2,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "* V sudu Diogenově",
+    "spans": [
+      {
+        "text": "Diogenově",
+        "label": "PER",
+        "start": 9,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "* Smrt Odyssea",
+    "spans": [
+      {
+        "text": "Odyssea",
+        "label": "PER",
+        "start": 7,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "* O poezii Jana Nerudy",
+    "spans": [
+      {
+        "text": "Jana Nerudy",
+        "label": "PER",
+        "start": 11,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "Adoptoval ho cisár Tiberios II . , po ktorého smrti nastúpil na trón .",
+    "spans": [
+      {
+        "text": "Tiberios II . ,",
+        "label": "PER",
+        "start": 19,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Doba jeho vlády je veľmi dobre zdokumentovaným obdobím doznievajúcej neskorej antiky ( najdôležitejším prameňom je dielo alexandrijského historika Theofylakta Simokatta ) .",
+    "spans": [
+      {
+        "text": "Theofylakta Simokatta",
+        "label": "PER",
+        "start": 147,
+        "end": 168
+      }
+    ]
+  },
+  {
+    "text": "Rímanmi na perzský trón potom , ako bol porazený perzský uzurpátor Bahrám Čóvén .",
+    "spans": [
+      {
+        "text": "Rímanmi",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Bahrám Čóvén",
+        "label": "PER",
+        "start": 67,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "text": "V mierovej zmluve Husrav II . , ktorého adoptoval pravdepodobne Maurikios , odstúpil Rímanom za ich pomoc severnú Mezopotámiu , značnú časť Arménie a Ibériu ( východné Gruzínsko ) , dôsledkom čoho Maurikios donútil Arménov k cirkevnej únii s Konštantínopolom .",
+    "spans": [
+      {
+        "text": "Husrav II .",
+        "label": "PER",
+        "start": 18,
+        "end": 29
+      },
+      {
+        "text": "Maurikios",
+        "label": "PER",
+        "start": 64,
+        "end": 73
+      },
+      {
+        "text": "Rímanom",
+        "label": "PER",
+        "start": 85,
+        "end": 92
+      },
+      {
+        "text": "severnú Mezopotámiu",
+        "label": "LOC",
+        "start": 106,
+        "end": 125
+      },
+      {
+        "text": "Arménie",
+        "label": "LOC",
+        "start": 140,
+        "end": 147
+      },
+      {
+        "text": "Ibériu",
+        "label": "LOC",
+        "start": 150,
+        "end": 156
+      },
+      {
+        "text": "východné Gruzínsko",
+        "label": "LOC",
+        "start": 159,
+        "end": 177
+      },
+      {
+        "text": "Maurikios",
+        "label": "PER",
+        "start": 197,
+        "end": 206
+      },
+      {
+        "text": "Arménov",
+        "label": "PER",
+        "start": 215,
+        "end": 222
+      },
+      {
+        "text": "Konštantínopolom",
+        "label": "LOC",
+        "start": 242,
+        "end": 258
+      }
+    ]
+  },
+  {
+    "text": "Vojaci menovali dôstojníka Fokasa za exarchu a obsadili Konštantínopol .",
+    "spans": [
+      {
+        "text": "Fokasa",
+        "label": "PER",
+        "start": 27,
+        "end": 33
+      },
+      {
+        "text": "Konštantínopol",
+        "label": "LOC",
+        "start": 56,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Sovietska okupačná zóna a sovietsky sektor Berlína",
+    "spans": [
+      {
+        "text": "Berlína",
+        "label": "LOC",
+        "start": 43,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "text": "Zmluva s Gótmi",
+    "spans": [
+      {
+        "text": "Gótmi",
+        "label": "PER",
+        "start": 9,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Obdobie Theodosiovej vlády znamenalo pre rímske impérium obdobie veľkých a významných zmien .",
+    "spans": [
+      {
+        "text": "Theodosiovej",
+        "label": "PER",
+        "start": 8,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Cisár Valens podľahol zraneniam z bitky , a stal sa tak prvým rímskym imperátorom , ktorý zahynul v boji .",
+    "spans": [
+      {
+        "text": "Valens",
+        "label": "PER",
+        "start": 6,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Roku 380 vydal Theodosius I . edikt , ktorým povýšil kresťanstvo na jediné oficiálne uznávané náboženstvo v Rímskej ríši .",
+    "spans": [
+      {
+        "text": "Theodosius I .",
+        "label": "PER",
+        "start": 15,
+        "end": 29
+      },
+      {
+        "text": "Rímskej ríši",
+        "label": "LOC",
+        "start": 108,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "text": "Počítal s tým , že po jeho smrti sa o ňu podelia jeho synovia Arkadius a Honorius .",
+    "spans": [
+      {
+        "text": "Arkadius",
+        "label": "PER",
+        "start": 62,
+        "end": 70
+      },
+      {
+        "text": "Honorius",
+        "label": "PER",
+        "start": 73,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Pavel Bavor z Nečtin ( 1290 až 1332 ) ho odkúpil pre břevnovský kláštor .",
+    "spans": [
+      {
+        "text": "Pavel Bavor",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "Nečtin",
+        "label": "LOC",
+        "start": 14,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Na konci tridsaťročnej vojny , v roku 1648 , celú zbierka odviezli Švédi .",
+    "spans": [
+      {
+        "text": "Švédi",
+        "label": "PER",
+        "start": 67,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "Tí , ktorí nemali čím zaplatiť , museli putovať po brehoch Acherónu po celých sto rokov .",
+    "spans": [
+      {
+        "text": "Acherónu",
+        "label": "LOC",
+        "start": 59,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Weimarská republika",
+    "spans": [
+      {
+        "text": "Weimarská republika",
+        "label": "LOC",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Súčasne Nemecko stratilo všetky svoje kolónie .",
+    "spans": [
+      {
+        "text": "Nemecko",
+        "label": "LOC",
+        "start": 8,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Justin trpel v tom čase duševnou chorobou a sám už nebol schopný vládnuť .",
+    "spans": [
+      {
+        "text": "Justin",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Počas Tiberiovho regentstva bola situácia na východnom fronte stabilizovaná .",
+    "spans": [
+      {
+        "text": "Tiberiovho",
+        "label": "PER",
+        "start": 6,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Odvtedy vystupoval pod menom Konštantín .",
+    "spans": [
+      {
+        "text": "Konštantín",
+        "label": "PER",
+        "start": 29,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "Tiberios ešte silnejšie ako jeho predchodca začal vyprázdňovať štátnu kasu a vyzbrojovať rímske vojsko .",
+    "spans": [
+      {
+        "text": "Tiberios",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Ďalším príkladom je Ulysses , kozmická sonda ESA , ktorá študuje polárne oblasti Slnka .",
+    "spans": [
+      {
+        "text": "ESA",
+        "label": "ORG",
+        "start": 45,
+        "end": 48
+      },
+      {
+        "text": "Slnka",
+        "label": "LOC",
+        "start": 81,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Je potrebné iba palivo na poslatie sondy do blízkosti Jupitera , čo je celkom v možnostiach súčasných technológií .",
+    "spans": [
+      {
+        "text": "Jupitera",
+        "label": "LOC",
+        "start": 54,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "V rokoch 1489 ‐ 1491 študoval teológiu a cirkevné právo v Pise .",
+    "spans": [
+      {
+        "text": "Pise",
+        "label": "LOC",
+        "start": 58,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Po smrti pápeža Alexandra VI . začal získavať politický vplyv .",
+    "spans": [
+      {
+        "text": "Alexandra VI .",
+        "label": "PER",
+        "start": 16,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Lev X . bol typický renesančný panovník , pokrytecký politik a nepotista .",
+    "spans": [
+      {
+        "text": "Lev X",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "S Francúzskom uzavrel konkordát , ktorý , hoci ho rímska kúria prijala iba s ťažkosťami , bol platný až do Francúzskej revolúcie .",
+    "spans": [
+      {
+        "text": "Francúzskom",
+        "label": "LOC",
+        "start": 2,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Petra .",
+    "spans": [
+      {
+        "text": "Petra",
+        "label": "LOC",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Začiatkom roku 1518 Lev nariadil generálnemu predstavenému augustiniánskej rehole , aby Luthera umlčal .",
+    "spans": [
+      {
+        "text": "Lev",
+        "label": "PER",
+        "start": 20,
+        "end": 23
+      },
+      {
+        "text": "Luthera",
+        "label": "PER",
+        "start": 88,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Jazdkartovo osemnácťročné panovanie vypĺňa takmer nepretržitý sled vnútropolitických a zahraničnopolitických konfliktov , ktoré sásánovský štát do veľkej miery oslabili .",
+    "spans": [
+      {
+        "text": "Jazdkartovo",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "V tom čase sa podľa rôznych meraní odhadoval priemer Chárona v rozmedzí od 1182 do 1256 km .",
+    "spans": [
+      {
+        "text": "Chárona",
+        "label": "LOC",
+        "start": 53,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "Hmotnosť Chárona je približne osmina hmotnosti Pluta .",
+    "spans": [
+      {
+        "text": "Chárona",
+        "label": "LOC",
+        "start": 9,
+        "end": 16
+      },
+      {
+        "text": "Pluta",
+        "label": "LOC",
+        "start": 47,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Vznik Chárona",
+    "spans": [
+      {
+        "text": "Chárona",
+        "label": "LOC",
+        "start": 6,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Trosky , vyvrhnuté z povrchu Pluta pri samovražednom dopade toho telesa sa spolu s jeho pozostatkami stali materiálom , z ktorého potom akréciou vznikol Cháron .",
+    "spans": [
+      {
+        "text": "Pluta",
+        "label": "LOC",
+        "start": 29,
+        "end": 34
+      },
+      {
+        "text": "Cháron",
+        "label": "LOC",
+        "start": 153,
+        "end": 159
+      }
+    ]
+  },
+  {
+    "text": "Získal ich strhujúci príklad lyonského kupca Valdesa .",
+    "spans": [
+      {
+        "text": "Valdesa",
+        "label": "PER",
+        "start": 45,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Kronikár píše , že keď Valdes dal svojej manželke na výber medzi svojim hnuteľným a nehnuteľným majetkom , rozhodla sa pre jeho statky a vody , lesy a lúky , domy a vinice , pece a mlyny .",
+    "spans": [
+      {
+        "text": "Valdes",
+        "label": "PER",
+        "start": 23,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Dala prednosť životu v pohodlí a Valdes svoje peniaze rozdal .",
+    "spans": [
+      {
+        "text": "Valdes",
+        "label": "PER",
+        "start": 33,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "V kompaktnom spoločenstve sa trvalo udržali románski valdénci na stráňach a v údoliach Kottických Álp a začiatkom tridsiatych rokov 16 . storočia sa priklonili k ženevskej reformácií .",
+    "spans": [
+      {
+        "text": "Kottických Álp",
+        "label": "LOC",
+        "start": 87,
+        "end": 101
+      }
+    ]
+  },
+  {
+    "text": "Alexander III . ( pápež )",
+    "spans": [
+      {
+        "text": "Alexander III .",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Alexander III . sa narodil v Siene okolo roku 1105 .",
+    "spans": [
+      {
+        "text": "Alexander III .",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      },
+      {
+        "text": "Siene",
+        "label": "LOC",
+        "start": 29,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Bol slávnym doktorom práva v Bologni ( 1139 ‐ 1142 ) a potom kanonikom v Pise .",
+    "spans": [
+      {
+        "text": "Bologni",
+        "label": "LOC",
+        "start": 29,
+        "end": 36
+      },
+      {
+        "text": "Pise",
+        "label": "LOC",
+        "start": 73,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "text": "Veľká väčšina však , v ten istý deň , 7 . septembra 1159 , zvolila Orlanda .",
+    "spans": [
+      {
+        "text": "Orlanda",
+        "label": "PER",
+        "start": 67,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "text": "Petra .",
+    "spans": [
+      {
+        "text": "Petra",
+        "label": "LOC",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Zvolal vo februári 1160 snem do Pavie .",
+    "spans": [
+      {
+        "text": "Pavie",
+        "label": "LOC",
+        "start": 32,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Spor sa zdanlivo vyriešil , keď sa v októbri 1160 v Toulouse stretli biskupi a kláštorné rady viacerých západných krajín , vrátane Španielska .",
+    "spans": [
+      {
+        "text": "Toulouse",
+        "label": "LOC",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "text": "Španielska",
+        "label": "LOC",
+        "start": 131,
+        "end": 141
+      }
+    ]
+  },
+  {
+    "text": "Spor medzi pápežom a cisárom pokračoval , preto pápež Alexander III . v apríli 1162 premiestnil svoje sídlo do Francúzska .",
+    "spans": [
+      {
+        "text": "Alexander III .",
+        "label": "PER",
+        "start": 54,
+        "end": 69
+      },
+      {
+        "text": "Francúzska",
+        "label": "LOC",
+        "start": 111,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "text": "Čoskoro po Lateránskom sneme ľudová vzbura prinútila Alexandra III . opustiť Rím a posledné dva roky svojho života strávil v rozličných mestách vtedajšieho pápežského štátu .",
+    "spans": [
+      {
+        "text": "Lateránskom sneme",
+        "label": "ORG",
+        "start": 11,
+        "end": 28
+      },
+      {
+        "text": "Alexandra III .",
+        "label": "PER",
+        "start": 53,
+        "end": 68
+      },
+      {
+        "text": "Rím",
+        "label": "LOC",
+        "start": 77,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "Podľa cirkevného historika J . N . D . Kellyho občania ho zhanobili , no v skutočnosti bol veľkým pápežom , ktorý zanechal v cirkvi trvalé stopy .",
+    "spans": [
+      {
+        "text": "J . N . D . Kellyho",
+        "label": "PER",
+        "start": 27,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Ivan Martin Jirous",
+    "spans": [
+      {
+        "text": "Ivan Martin Jirous",
+        "label": "PER",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Dnes žije na Vysočine .",
+    "spans": [
+      {
+        "text": "Vysočine",
+        "label": "LOC",
+        "start": 13,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Autorom prezývky Magor je Eugen Brikcius .",
+    "spans": [
+      {
+        "text": "Magor",
+        "label": "PER",
+        "start": 17,
+        "end": 22
+      },
+      {
+        "text": "Eugen Brikcius",
+        "label": "PER",
+        "start": 26,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Tretia ríša",
+    "spans": [
+      {
+        "text": "Tretia ríša",
+        "label": "LOC",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Emil Hácha",
+    "spans": [
+      {
+        "text": "Emil Hácha",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Bol členom haagského rozhodcovského súdu a legislatívnej rady vlády ČSR .",
+    "spans": [
+      {
+        "text": "ČSR",
+        "label": "LOC",
+        "start": 68,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "text": "14 . marca 1939 bol pozvaný do Berlína na jednanie so špičkami Nemeckej ríše , na ktorom bol násilím a vyhrážkami prinútený k súhlasu so vznikom Protektorátu Čechy a Morava .",
+    "spans": [
+      {
+        "text": "Berlína",
+        "label": "LOC",
+        "start": 31,
+        "end": 38
+      },
+      {
+        "text": "Nemeckej ríše",
+        "label": "LOC",
+        "start": 63,
+        "end": 76
+      },
+      {
+        "text": "Protektorátu Čechy a Morava",
+        "label": "LOC",
+        "start": 145,
+        "end": 172
+      }
+    ]
+  },
+  {
+    "text": "Bol iniciátorom vzniku \" Národního souručenství \" , ktoré malo byť zastrešujúcou organizáciou českého obyvateľstva Protektorátu .",
+    "spans": [
+      {
+        "text": "Národního souručenství",
+        "label": "ORG",
+        "start": 25,
+        "end": 47
+      },
+      {
+        "text": "Protektorátu",
+        "label": "LOC",
+        "start": 115,
+        "end": 127
+      }
+    ]
+  },
+  {
+    "text": "Po príchode Reinharda Heydricha do Prahy a zatknutí protektorátneho premiéra Aloisa Eliáša sa Hácha dostal pod zvýšený tlak okupantov .",
+    "spans": [
+      {
+        "text": "Reinharda Heydricha",
+        "label": "PER",
+        "start": 12,
+        "end": 31
+      },
+      {
+        "text": "Prahy",
+        "label": "LOC",
+        "start": 35,
+        "end": 40
+      },
+      {
+        "text": "Aloisa Eliáša",
+        "label": "PER",
+        "start": 77,
+        "end": 90
+      },
+      {
+        "text": "Hácha",
+        "label": "PER",
+        "start": 94,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "text": "Osudovým zlomom v jeho živote sa stal atentát na Reinharda Heydricha , ktorý v júni 1942 vykonali českí výsadkári .",
+    "spans": [
+      {
+        "text": "Reinharda Heydricha",
+        "label": "PER",
+        "start": 49,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "text": "Hácha stratil nielen dôveru domáceho odboja a londýnskej exilovej vlády , ale aj okupantov a ich prisluhovačov .",
+    "spans": [
+      {
+        "text": "Hácha",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "13 . mája 1945 bol Emil Hácha zatknutý na lánskom zámku a dopravený do väzenskej nemocnice na Pankráci , kde 27 . júna 1945 zomrel .",
+    "spans": [
+      {
+        "text": "Emil Hácha",
+        "label": "PER",
+        "start": 19,
+        "end": 29
+      },
+      {
+        "text": "Pankráci",
+        "label": "LOC",
+        "start": 94,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "Tento pokrivený obraz Háchovej osobnosti prežíva u staršej generácie do dneška .",
+    "spans": [
+      {
+        "text": "Háchovej",
+        "label": "PER",
+        "start": 22,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Podľa jedného z nich vyskočil Pegasos z tela svojej matky Medúzy potom , čo jej Perseus usekol hlavu .",
+    "spans": [
+      {
+        "text": "Perseus",
+        "label": "PER",
+        "start": 80,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Franz Werfel",
+    "spans": [
+      {
+        "text": "Franz Werfel",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Kussiovej .",
+    "spans": [
+      {
+        "text": "Kussiovej",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Werfel patril ku generácii pražských nemeckých spisovateľov rovnako ako Franz Kafka či Max Brod .",
+    "spans": [
+      {
+        "text": "Werfel",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Franz Kafka",
+        "label": "PER",
+        "start": 72,
+        "end": 83
+      },
+      {
+        "text": "Max Brod",
+        "label": "PER",
+        "start": 87,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Werfel v mladosti postupne študoval v Lipsku a v Hamburgu , neskôr pracoval v nakladateľstve .",
+    "spans": [
+      {
+        "text": "Werfel",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Lipsku",
+        "label": "LOC",
+        "start": 38,
+        "end": 44
+      },
+      {
+        "text": "Hamburgu",
+        "label": "LOC",
+        "start": 49,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Počas prvej svetovej vojny bol v rokoch 1915 až 1917 nasadený na Východný front v Haliči .",
+    "spans": [
+      {
+        "text": "Východný front",
+        "label": "LOC",
+        "start": 65,
+        "end": 79
+      },
+      {
+        "text": "Haliči",
+        "label": "LOC",
+        "start": 82,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "V tom čase bola vydatá za architekta Waltera Gropia , s ktorým sa rozviedla a za Werfela sa vydala v roku 1929 .",
+    "spans": [
+      {
+        "text": "Waltera Gropia",
+        "label": "PER",
+        "start": 37,
+        "end": 51
+      },
+      {
+        "text": "Werfela",
+        "label": "PER",
+        "start": 81,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Po roku 1938 spolu emigrovali do Spojených štátov amerických .",
+    "spans": [
+      {
+        "text": "Spojených štátov amerických",
+        "label": "LOC",
+        "start": 33,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "Franz Wefel zomrel na infarkt v Beverly Hills v roku 1945 .",
+    "spans": [
+      {
+        "text": "Franz Wefel",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "Beverly Hills",
+        "label": "LOC",
+        "start": 32,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "Werfelovo dielo je veľmi obsiahle , obsahuje romány , kratšie prozaické diela , drámy aj básne .",
+    "spans": [
+      {
+        "text": "Werfelovo",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "* Hru Dům radosti uviedlo v roku 1993 Divadlo Na zábradlí ( réžia : Arnošt Goldflam ) .",
+    "spans": [
+      {
+        "text": "Divadlo Na zábradlí",
+        "label": "ORG",
+        "start": 38,
+        "end": 57
+      },
+      {
+        "text": "Arnošt Goldflam",
+        "label": "PER",
+        "start": 68,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Lev I . ( cisár )",
+    "spans": [
+      {
+        "text": "Lev I .",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Niekdajšie Hunom podrobené germánske a sarmatské kmene sa usadili v dunajských provinciách a začali ohrozovať tamojšiu rímsku správu .",
+    "spans": [
+      {
+        "text": "Hunom",
+        "label": "PER",
+        "start": 11,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "So Zenónovou pomocou nakoniec Aspara v roku 471 zbavili moci a popravili .",
+    "spans": [
+      {
+        "text": "Zenónovou",
+        "label": "PER",
+        "start": 3,
+        "end": 12
+      },
+      {
+        "text": "Aspara",
+        "label": "PER",
+        "start": 30,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "František Hrubín",
+    "spans": [
+      {
+        "text": "František Hrubín",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Roku 1939 sa Hrubín oženil , neskôr mal dva deti .",
+    "spans": [
+      {
+        "text": "Hrubín",
+        "label": "PER",
+        "start": 13,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Hrubín sa výrazne podieľal na založení detského časopisu Mateřídouška , v rokoch 1945 – 1950 ho redigoval .",
+    "spans": [
+      {
+        "text": "Hrubín",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Na II . zjazde Zväzu československých spisovateľov ( 1956 ) spolu s J . Seifertom odvážne kritizoval spojenie literatúry a politiky , zastali sa na ňom nielen perzekuovaných , ale aj väznených spisovateľov .",
+    "spans": [
+      {
+        "text": "Zväzu československých spisovateľov",
+        "label": "ORG",
+        "start": 15,
+        "end": 50
+      },
+      {
+        "text": "J . Seifertom",
+        "label": "PER",
+        "start": 68,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Po otcovi Hormizd zdedil vojnu s Byzantskou ríšou , ktorá s prestávkami trvala počas celej jeho vlády .",
+    "spans": [
+      {
+        "text": "Hormizd",
+        "label": "PER",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "text": "Byzantskou ríšou",
+        "label": "LOC",
+        "start": 33,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Či sa to stalo s Husravovým vedomím , je nejasné .",
+    "spans": [
+      {
+        "text": "Husravovým",
+        "label": "PER",
+        "start": 17,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "Americká okupačná zóna Nemecka",
+    "spans": [
+      {
+        "text": "Nemecka",
+        "label": "LOC",
+        "start": 23,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Jeho otcom bol kráľ Hormizd II . ( vládol 302 – 309 ) , matkou jedna z kráľových konkubín .",
+    "spans": [
+      {
+        "text": "Hormizd II .",
+        "label": "PER",
+        "start": 20,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Po smrti Šápúrovho otca Hormizda II . došlo v perzskej ríši k zmätkom .",
+    "spans": [
+      {
+        "text": "Šápúrovho",
+        "label": "PER",
+        "start": 9,
+        "end": 18
+      },
+      {
+        "text": "Hormizda II .",
+        "label": "PER",
+        "start": 24,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Veľmoži najskôr zvrhli a zavraždili najstaršieho Hormizdovho syna Ádhar Narséa ( vládol krátko v roku 309 ) , ďalšieho zo synov oslepili a tretieho , Hormizda , uvrhli do väzenia ( tomu sa po trináctich rokoch podarilo újsť k Rimanom ) .",
+    "spans": [
+      {
+        "text": "Hormizdovho",
+        "label": "PER",
+        "start": 49,
+        "end": 60
+      },
+      {
+        "text": "Ádhar Narséa",
+        "label": "PER",
+        "start": 66,
+        "end": 78
+      },
+      {
+        "text": "Hormizda",
+        "label": "PER",
+        "start": 150,
+        "end": 158
+      },
+      {
+        "text": "Rimanom",
+        "label": "PER",
+        "start": 226,
+        "end": 233
+      }
+    ]
+  },
+  {
+    "text": "Pri prenasledovaní zahynuli viaceré prominentné osobnosti , vrátane hlavy perzských kresťanov , seleukijského biskupa Šimona bar Sabbá ’ é .",
+    "spans": [
+      {
+        "text": "Šimona bar Sabbá ’ é",
+        "label": "PER",
+        "start": 118,
+        "end": 138
+      }
+    ]
+  },
+  {
+    "text": "Šápúrove vojny",
+    "spans": [
+      {
+        "text": "Šápúrove",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Chionitský kráľ Grumbatés sa medzitím stal jeho spojencom .",
+    "spans": [
+      {
+        "text": "Grumbatés",
+        "label": "PER",
+        "start": 16,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Tentokrát sa rozhodujúcemu stretnutiu vyhýbal Šápúr a Rimania tak udreli do prázdna .",
+    "spans": [
+      {
+        "text": "Šápúr",
+        "label": "PER",
+        "start": 46,
+        "end": 51
+      },
+      {
+        "text": "Rimania",
+        "label": "PER",
+        "start": 54,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Pápa .",
+    "spans": [
+      {
+        "text": "Pápa .",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Vládu Šápúra II . považujú Iránci za zlatý vek .",
+    "spans": [
+      {
+        "text": "Šápúra II .",
+        "label": "PER",
+        "start": 6,
+        "end": 17
+      },
+      {
+        "text": "Iránci",
+        "label": "PER",
+        "start": 27,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Ignácius odmietal odstúpiť .",
+    "spans": [
+      {
+        "text": "Ignácius",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Michala III . zavraždili roku 867 .",
+    "spans": [
+      {
+        "text": "Michala III .",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "John Ronald Reuel Tolkien",
+    "spans": [
+      {
+        "text": "John Ronald Reuel Tolkien",
+        "label": "PER",
+        "start": 0,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Tolkienova rodina pochádzala zo Saska , ale žila v Anglicku už od 18 . storočia .",
+    "spans": [
+      {
+        "text": "Tolkienova",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Saska",
+        "label": "LOC",
+        "start": 32,
+        "end": 37
+      },
+      {
+        "text": "Anglicku",
+        "label": "LOC",
+        "start": 51,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Meno profesora Rashbolda v The Notion Club Papers ( príbeh z IX . zväzku The History of Middle ‐ earth ) je vtipnou narážkou na túto skutočnosť , lebo v angličtine má ten istý význam .",
+    "spans": [
+      {
+        "text": "Rashbolda",
+        "label": "PER",
+        "start": 15,
+        "end": 24
+      },
+      {
+        "text": "The Notion Club Papers",
+        "label": "ORG",
+        "start": 27,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "Keď mal tri roky odcestoval do Anglicka spolu s matkou , ktorá si nemohla zvyknúť na africké podnebie .",
+    "spans": [
+      {
+        "text": "Anglicka",
+        "label": "LOC",
+        "start": 31,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "Najskôr bývali u príbuzných na farme Bag End vo Worcestershire , čo bolo pravdepodobne inšpiráciou pre názov Dno pytle v jeho knihách .",
+    "spans": [
+      {
+        "text": "Bag End",
+        "label": "LOC",
+        "start": 37,
+        "end": 44
+      },
+      {
+        "text": "Worcestershire",
+        "label": "LOC",
+        "start": 48,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Mabel učila svojich dvoch synov , a J . R . R . bol dychtivým žiakom .",
+    "spans": [
+      {
+        "text": "J . R . R .",
+        "label": "PER",
+        "start": 36,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Krátko navštevoval Školu svätého Filipa , absolvoval Školu kráľa Edwarda v Birminghame a Exeterskú Fakultu v Oxforde .",
+    "spans": [
+      {
+        "text": "Školu svätého Filipa",
+        "label": "ORG",
+        "start": 19,
+        "end": 39
+      },
+      {
+        "text": "Školu kráľa Edwarda v Birminghame",
+        "label": "ORG",
+        "start": 53,
+        "end": 86
+      },
+      {
+        "text": "Exeterskú Fakultu v Oxforde",
+        "label": "ORG",
+        "start": 89,
+        "end": 116
+      }
+    ]
+  },
+  {
+    "text": "Tolkienov zápal pre vieru možno doložiť listami C . S . Lewisovi počas jeho obrátenia na kresťanstvo , v ktorých vyjadril svoje kresťanské hodnoty .",
+    "spans": [
+      {
+        "text": "Tolkienov",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "C . S . Lewisovi",
+        "label": "PER",
+        "start": 48,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "Ako sirotu ho vychovával otec Francis Xavier Morgan z birminghamského Oratória vo štvrti Edgbaston .",
+    "spans": [
+      {
+        "text": "Francis Xavier Morgan",
+        "label": "PER",
+        "start": 30,
+        "end": 51
+      },
+      {
+        "text": "Oratória",
+        "label": "LOC",
+        "start": 70,
+        "end": 78
+      },
+      {
+        "text": "Edgbaston",
+        "label": "LOC",
+        "start": 89,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Na začiatku Prvej svetovej vojny narukoval do Britskej armády k Lancashirským strelcom ( Lancashiree Fusiliers ) , kde slúžil ako nadporučík .",
+    "spans": [
+      {
+        "text": "Lancashirským strelcom",
+        "label": "ORG",
+        "start": 64,
+        "end": 86
+      },
+      {
+        "text": "Lancashiree Fusiliers",
+        "label": "ORG",
+        "start": 89,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Tolkien výrazne ovplyvnil žáner fantasy , ktorého obľuba po úspechu Pána prsteňov významne stúpla .",
+    "spans": [
+      {
+        "text": "Tolkien",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Tolkien bol uznávaným znalcom Beowulfa a publikoval na túto tému niekoľko vedeckých prác .",
+    "spans": [
+      {
+        "text": "Tolkien",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Christopher Tolkien v ďalších rokoch pokračoval vo vydávaní materiálu použitého pri vytváraní Stredozeme .",
+    "spans": [
+      {
+        "text": "Christopher Tolkien",
+        "label": "PER",
+        "start": 0,
+        "end": 19
+      },
+      {
+        "text": "Stredozeme",
+        "label": "LOC",
+        "start": 94,
+        "end": 104
+      }
+    ]
+  },
+  {
+    "text": "Neskôr prepracoval celú kozmogóniu a históriu Stredozeme ako pozadie pre vývoj týchto jazykov .",
+    "spans": [
+      {
+        "text": "Stredozeme",
+        "label": "LOC",
+        "start": 46,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Hélium sa na Zemi vyskytuje iba veľmi vzácne .",
+    "spans": [
+      {
+        "text": "Zemi",
+        "label": "LOC",
+        "start": 13,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Konfrontácia s Rímom",
+    "spans": [
+      {
+        "text": "Rímom",
+        "label": "LOC",
+        "start": 15,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Nahrávalo mu , že Rímska ríša vtedy prechádzala obdobím vnútornej nestability , ktorému sa zvyčajne hovorí kríza 3 . storočia .",
+    "spans": [
+      {
+        "text": "Rímska ríša",
+        "label": "LOC",
+        "start": 18,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Potom jeho vojsko napadlo Rímsku ríšu priamo , porazilo pri Barbalisse v ohybe Eufratu cisárske légie a vpadlo do Sýrie .",
+    "spans": [
+      {
+        "text": "Rímsku ríšu",
+        "label": "LOC",
+        "start": 26,
+        "end": 37
+      },
+      {
+        "text": "Barbalisse",
+        "label": "LOC",
+        "start": 60,
+        "end": 70
+      },
+      {
+        "text": "Eufratu",
+        "label": "LOC",
+        "start": 79,
+        "end": 86
+      },
+      {
+        "text": "Sýrie",
+        "label": "LOC",
+        "start": 114,
+        "end": 119
+      }
+    ]
+  },
+  {
+    "text": "Spolu s inými zajatcami boli deportovaní do dnešních provincií Fárs a Chúzistán , kde podľa kronikára Tabarího museli pracovať na stavbe priehrady blízko Šúštaru ( tej sa potom vravelo „ cisárska priehrada “ ) .",
+    "spans": [
+      {
+        "text": "Fárs",
+        "label": "LOC",
+        "start": 63,
+        "end": 67
+      },
+      {
+        "text": "Chúzistán",
+        "label": "LOC",
+        "start": 70,
+        "end": 79
+      },
+      {
+        "text": "Tabarího",
+        "label": "PER",
+        "start": 102,
+        "end": 110
+      },
+      {
+        "text": "Šúštaru",
+        "label": "LOC",
+        "start": 154,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Záver Šápúrovej vlády priniesol jednak vojenské porážky od palmýrskeho vládcu Odaenatha ( v rokoch 262 – 266 ) , jednak kráľov zreteľný príklon k zoroastrizmu .",
+    "spans": [
+      {
+        "text": "Šápúrovej",
+        "label": "PER",
+        "start": 6,
+        "end": 15
+      },
+      {
+        "text": "Odaenatha",
+        "label": "PER",
+        "start": 78,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Báhrám Čóvén",
+    "spans": [
+      {
+        "text": "Báhrám Čóvén",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Svoje priezvisko Čóvén ( Drevený ) pravdpodobne získal pre svoju vysokú chudú postavu , natoľko odlišnú od výzoru väčšiny obyvateľov Iránu a Mezopotámie .",
+    "spans": [
+      {
+        "text": "Čóvén",
+        "label": "PER",
+        "start": 17,
+        "end": 22
+      },
+      {
+        "text": "Drevený",
+        "label": "PER",
+        "start": 25,
+        "end": 32
+      },
+      {
+        "text": "Iránu",
+        "label": "LOC",
+        "start": 133,
+        "end": 138
+      },
+      {
+        "text": "Mezopotámie",
+        "label": "LOC",
+        "start": 141,
+        "end": 152
+      }
+    ]
+  },
+  {
+    "text": "Jeho schopnosti si hneď všimol kráľ Husrav I . ( 531 – 579 ) a využil ich pri svojich výpravách do Arménie počas vojny s Byzantskou ríšou .",
+    "spans": [
+      {
+        "text": "Husrav I .",
+        "label": "PER",
+        "start": 36,
+        "end": 46
+      },
+      {
+        "text": "Arménie",
+        "label": "LOC",
+        "start": 99,
+        "end": 106
+      },
+      {
+        "text": "Byzantskou ríšou",
+        "label": "LOC",
+        "start": 121,
+        "end": 137
+      }
+    ]
+  },
+  {
+    "text": "Víťazstvo nad Turkami",
+    "spans": [
+      {
+        "text": "Turkami",
+        "label": "PER",
+        "start": 14,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Svoj triumf Báhrám spečatil vítazstvom nad Šávovým synom Parmúdom , ktorého spolu s bohatou korisťou poslal zajatého na Hormizdov dvor .",
+    "spans": [
+      {
+        "text": "Báhrám",
+        "label": "PER",
+        "start": 12,
+        "end": 18
+      },
+      {
+        "text": "Šávovým",
+        "label": "PER",
+        "start": 43,
+        "end": 50
+      },
+      {
+        "text": "Parmúdom",
+        "label": "PER",
+        "start": 57,
+        "end": 65
+      },
+      {
+        "text": "Hormizdov dvor",
+        "label": "LOC",
+        "start": 120,
+        "end": 134
+      }
+    ]
+  },
+  {
+    "text": "Väčšina vojska stála na jeho strane , a tak si mohol dovoliť prehlásiť kráľa za zosadeného a začať pochod na Ktésifón .",
+    "spans": [
+      {
+        "text": "Ktésifón",
+        "label": "LOC",
+        "start": 109,
+        "end": 117
+      }
+    ]
+  },
+  {
+    "text": "Tam pod dojmom udalostí došlo 6 . februára 590 k prevratu , ktorý vyniesol na trón princa Husrava , asi najschopnejšieho člena vládnuceho rodu ; samotného kráľa dali dvaja jeho švagri , Vistám a Vindóé , oslepiť a uväzniť .",
+    "spans": [
+      {
+        "text": "Husrava",
+        "label": "PER",
+        "start": 90,
+        "end": 97
+      },
+      {
+        "text": "Vistám",
+        "label": "PER",
+        "start": 186,
+        "end": 192
+      },
+      {
+        "text": "Vindóé",
+        "label": "PER",
+        "start": 195,
+        "end": 201
+      }
+    ]
+  },
+  {
+    "text": "Niektoré jeho jednotky prešli k nepriateľovi , mesto Seleukia nad Tigridom sa útočníkom vzdalo bez boja .",
+    "spans": [
+      {
+        "text": "Seleukia nad Tigridom",
+        "label": "LOC",
+        "start": 53,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "text": "Narséovu porážku úplne odčinil až Šápúr II . v šesťdesiatych rokoch 4 . storočia .",
+    "spans": [
+      {
+        "text": "Narséovu",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Šápúr II .",
+        "label": "PER",
+        "start": 34,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "text": "Vnútropoliticky sledoval Narsé umiernenejšiu náboženskú politiku ako králi Báhrám II . a III .",
+    "spans": [
+      {
+        "text": "Narsé",
+        "label": "PER",
+        "start": 25,
+        "end": 30
+      },
+      {
+        "text": "Báhrám II .",
+        "label": "PER",
+        "start": 75,
+        "end": 86
+      },
+      {
+        "text": "III .",
+        "label": "PER",
+        "start": 89,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "Pius V .",
+    "spans": [
+      {
+        "text": "Pius V .",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Ako protektor rehole barbanitov a ako biskup v Mondovi sa celým srdcom venoval reforme .",
+    "spans": [
+      {
+        "text": "Mondovi",
+        "label": "LOC",
+        "start": 47,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "V roku 1571 ustanovil kongregáciu zakázaných kníh , čo malo za následok útek stovky tlačiarov do Nemecka a Švajčiarska .",
+    "spans": [
+      {
+        "text": "Nemecka",
+        "label": "LOC",
+        "start": 97,
+        "end": 104
+      },
+      {
+        "text": "Švajčiarska",
+        "label": "LOC",
+        "start": 107,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "V Rímskokatolíckej cirkvi má sviatok 30 . apríla ( kedysi 5 . mája ) .",
+    "spans": [
+      {
+        "text": "Rímskokatolíckej cirkvi",
+        "label": "ORG",
+        "start": 2,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "V Šalamúnovom chráme chránili sochy dvoch cherubov archu úmluvy , ktorá stála vo velesvätyni , kde sa zdržiavala podľa viery Izraelitov Božia sláva .",
+    "spans": [
+      {
+        "text": "Šalamúnovom",
+        "label": "PER",
+        "start": 2,
+        "end": 13
+      },
+      {
+        "text": "Izraelitov",
+        "label": "PER",
+        "start": 125,
+        "end": 135
+      }
+    ]
+  },
+  {
+    "text": "Kresťania v tomto zobrazení vidia štyroch evanjelistov .",
+    "spans": [
+      {
+        "text": "Kresťania",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Ulrich ‐ muž bez vlastností",
+    "spans": [
+      {
+        "text": "Ulrich",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Prvý diel románu nám predstavuje hlavnú postavu knihy , Ulricha .",
+    "spans": [
+      {
+        "text": "Ulricha",
+        "label": "PER",
+        "start": 56,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Tábory v Osvienčime a Brezinke sú dnes prístupné verejnosti .",
+    "spans": [
+      {
+        "text": "Osvienčime",
+        "label": "LOC",
+        "start": 9,
+        "end": 19
+      },
+      {
+        "text": "Brezinke",
+        "label": "LOC",
+        "start": 22,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Holokaust je vyvrcholenie večnej iracionálnej nenávisti gójov ( vyznávačov iných vyznaní ) k Židom .",
+    "spans": [
+      {
+        "text": "Židom",
+        "label": "PER",
+        "start": 93,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Konštruktér Fred A . Leuchter vo svojom posudku tvrdí , že udávané počty popravených pomocou Zyklonu B sú príliš vysoké a technicky nezvládnuteľné .",
+    "spans": [
+      {
+        "text": "Fred A . Leuchter",
+        "label": "PER",
+        "start": 12,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Markian sa narodil v Trákii alebo v Ilýrii .",
+    "spans": [
+      {
+        "text": "Markian",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Trákii",
+        "label": "LOC",
+        "start": 21,
+        "end": 27
+      },
+      {
+        "text": "Ilýrii",
+        "label": "LOC",
+        "start": 36,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Prestal platiť hunskému náčelníkovi Attilovi každoročný tribút .",
+    "spans": [
+      {
+        "text": "Attilovi",
+        "label": "PER",
+        "start": 36,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "text": "Markian uskutočnil finančné reformy a nechal zaľudniť vydrancované oblasti na Balkáne .",
+    "spans": [
+      {
+        "text": "Markian",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Balkáne",
+        "label": "LOC",
+        "start": 78,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "text": "V roku 452 odrazil útoky na Sýriu a Egypt a potom stabilizoval aj front v Arménii .",
+    "spans": [
+      {
+        "text": "Sýriu",
+        "label": "LOC",
+        "start": 28,
+        "end": 33
+      },
+      {
+        "text": "Egypt",
+        "label": "LOC",
+        "start": 36,
+        "end": 41
+      },
+      {
+        "text": "Arménii",
+        "label": "LOC",
+        "start": 74,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Nijako nezasiahol počas Attilových kampaní na západe .",
+    "spans": [
+      {
+        "text": "Attilových",
+        "label": "PER",
+        "start": 24,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Rovnako nijako nebránil Geiserichovi vo vydrancovaní Ríma v roku 455 .",
+    "spans": [
+      {
+        "text": "Geiserichovi",
+        "label": "PER",
+        "start": 24,
+        "end": 36
+      },
+      {
+        "text": "Ríma",
+        "label": "LOC",
+        "start": 53,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "V roku 453 sa znova oživil konflikt medzi Attilom a Markianom .",
+    "spans": [
+      {
+        "text": "Attilom",
+        "label": "PER",
+        "start": 42,
+        "end": 49
+      },
+      {
+        "text": "Markianom",
+        "label": "PER",
+        "start": 52,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Po Attilovej smrti sa hunská ríša v následných zmätkoch rýchlo rozpadla a definitívne tak prestala predstavovať hrozbu pre východné cisárstvo .",
+    "spans": [
+      {
+        "text": "Attilovej",
+        "label": "PER",
+        "start": 3,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Aj napriek krátkej vláde sa Markian pokladá za najúspešnejšieho a najlepšieho neskoroantického cisára .",
+    "spans": [
+      {
+        "text": "Markian",
+        "label": "PER",
+        "start": 28,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Gary Snyder",
+    "spans": [
+      {
+        "text": "Gary Snyder",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Okrem akademickej dráhy na Kalifornskej univerzite sa podieľal na činnosti Kalifornského výboru pre umenie .",
+    "spans": [
+      {
+        "text": "Kalifornskej univerzite",
+        "label": "ORG",
+        "start": 27,
+        "end": 50
+      },
+      {
+        "text": "Kalifornského výboru pre umenie",
+        "label": "ORG",
+        "start": 75,
+        "end": 106
+      }
+    ]
+  },
+  {
+    "text": "Gary Sherman Snyder sa narodil v kalifornskom San Franciscu Heroldovi a Loise Snyderovým .",
+    "spans": [
+      {
+        "text": "Gary Sherman Snyder",
+        "label": "PER",
+        "start": 0,
+        "end": 19
+      },
+      {
+        "text": "San Franciscu",
+        "label": "LOC",
+        "start": 46,
+        "end": 59
+      },
+      {
+        "text": "Heroldovi",
+        "label": "PER",
+        "start": 60,
+        "end": 69
+      },
+      {
+        "text": "Loise Snyderovým",
+        "label": "PER",
+        "start": 72,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "V nasledujúcom roku Snyder pracoval v národnom parku , kde sa staral o prevenciu vzniku požiarov .",
+    "spans": [
+      {
+        "text": "Snyder",
+        "label": "PER",
+        "start": 20,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "V tom čase sa zoznámil so základnými myšlienkami budhizmu a prostredníctvom prejavov budhistických umelcov s niektorými tradičními postojmi Ďalekého východu voči prírode .",
+    "spans": [
+      {
+        "text": "Ďalekého východu",
+        "label": "LOC",
+        "start": 140,
+        "end": 156
+      }
+    ]
+  },
+  {
+    "text": "Štúdium antropológie na univerzite v Indiane Snyder ukončil po jedinom semestri a vrátil sa znova do San Francisca , aby sa pokúsil uchytiť ako básnik .",
+    "spans": [
+      {
+        "text": "Indiane",
+        "label": "LOC",
+        "start": 37,
+        "end": 44
+      },
+      {
+        "text": "Snyder",
+        "label": "PER",
+        "start": 45,
+        "end": 51
+      },
+      {
+        "text": "San Francisca",
+        "label": "LOC",
+        "start": 101,
+        "end": 114
+      }
+    ]
+  },
+  {
+    "text": "V San Franciscu naďalej rástol Snyderov záujem o zenbudhizmus .",
+    "spans": [
+      {
+        "text": "San Franciscu",
+        "label": "LOC",
+        "start": 2,
+        "end": 15
+      },
+      {
+        "text": "Snyderov",
+        "label": "PER",
+        "start": 31,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "V roku 1955 sa na niekoľko mesiacov zišiel v Mill Walley s Jackom Kerouacom .",
+    "spans": [
+      {
+        "text": "Mill Walley",
+        "label": "LOC",
+        "start": 45,
+        "end": 56
+      },
+      {
+        "text": "Jackom Kerouacom",
+        "label": "PER",
+        "start": 59,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "text": "Vďaka doporučeniu Kennetha Rexrotha sa Snyder zoznámil s Allenom Ginsbergom a toto obdobie dodalo Kerouacovi dostatok inšpirujúcich podnetov na napísanie Dharmových tulákov .",
+    "spans": [
+      {
+        "text": "Kennetha Rexrotha",
+        "label": "PER",
+        "start": 18,
+        "end": 35
+      },
+      {
+        "text": "Snyder",
+        "label": "PER",
+        "start": 39,
+        "end": 45
+      },
+      {
+        "text": "Allenom Ginsbergom",
+        "label": "PER",
+        "start": 57,
+        "end": 75
+      },
+      {
+        "text": "Kerouacovi",
+        "label": "PER",
+        "start": 98,
+        "end": 108
+      }
+    ]
+  },
+  {
+    "text": "Na začiatku 60 . rokov vycestoval spolu s Allenom Ginsbergom do Indie .",
+    "spans": [
+      {
+        "text": "Allenom Ginsbergom",
+        "label": "PER",
+        "start": 42,
+        "end": 60
+      },
+      {
+        "text": "Indie",
+        "label": "LOC",
+        "start": 64,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "text": "Snyder pokračoval v sebavzdelávaní , konkrétne ho zaujímala geomorfológia a lesníctvo .",
+    "spans": [
+      {
+        "text": "Snyder",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "V roku 1968 vydáva Snyder zbierku básni The back country , v ktorej zhŕňa tvorbu posledných dvadsiatich rokov .",
+    "spans": [
+      {
+        "text": "Snyder",
+        "label": "PER",
+        "start": 19,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Na konci 60 . rokov sa spolu so svojou ženou sťahuje do San Francisca , kde sa narodil ich prvý syn .",
+    "spans": [
+      {
+        "text": "San Francisca",
+        "label": "LOC",
+        "start": 56,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "text": "K Snyderovym literárnym vzorom patrili William Carlos Williams , David Herbert Lawrence , William Butler Yeats a niektorí z básnikov starej Číny .",
+    "spans": [
+      {
+        "text": "Snyderovym",
+        "label": "PER",
+        "start": 2,
+        "end": 12
+      },
+      {
+        "text": "William Carlos Williams",
+        "label": "PER",
+        "start": 39,
+        "end": 62
+      },
+      {
+        "text": "David Herbert Lawrence",
+        "label": "PER",
+        "start": 65,
+        "end": 87
+      },
+      {
+        "text": "William Butler Yeats",
+        "label": "PER",
+        "start": 90,
+        "end": 110
+      },
+      {
+        "text": "Číny",
+        "label": "LOC",
+        "start": 140,
+        "end": 144
+      }
+    ]
+  },
+  {
+    "text": "Snyder tvrdí , že básnici a ľudia všobecne sa potrebujú naučiť posudzovať veci z dlhodobého hľadiska , najmä v prípadoch , kedy je potrebné zhodnotiť dôsledky svojich činov .",
+    "spans": [
+      {
+        "text": "Snyder",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Ernst Zündel",
+    "spans": [
+      {
+        "text": "Ernst Zündel",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Mnoho svojich názorov publikoval pod pseudonymom Christof Friedrich .",
+    "spans": [
+      {
+        "text": "Christof Friedrich",
+        "label": "PER",
+        "start": 49,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "24 . októbra 1993 sa Zündel po druhý raz pokúšal získať kanadské občianstvo .",
+    "spans": [
+      {
+        "text": "Zündel",
+        "label": "PER",
+        "start": 21,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "Od roku 1994 sú Züdelove názory propagované aj na Internete .",
+    "spans": [
+      {
+        "text": "Züdelove",
+        "label": "PER",
+        "start": 16,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Vo februári 2005 kanadský súd rozhodol o možnosti jeho vydania a 1 . marca 2005 Zündela dopravili do Nemecka .",
+    "spans": [
+      {
+        "text": "Zündela",
+        "label": "PER",
+        "start": 80,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "\" Ak je Ernst Zündel utečenec , potom je Daffy Duck Albert Einstein . . .",
+    "spans": [
+      {
+        "text": "Ernst Zündel",
+        "label": "PER",
+        "start": 8,
+        "end": 20
+      },
+      {
+        "text": "Daffy Duck",
+        "label": "PER",
+        "start": 41,
+        "end": 51
+      },
+      {
+        "text": "Albert Einstein",
+        "label": "PER",
+        "start": 52,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "text": "Oidipov komplex .",
+    "spans": [
+      {
+        "text": "Oidipov",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Konštantín mal navyše z manželstva s Gregoriou zhruba jedenásťročného syna , neskoršieho cisára Konstanta II . , takže vznikali aj nejasnosti ohľadom následníctva .",
+    "spans": [
+      {
+        "text": "Konštantín",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Gregoriou",
+        "label": "PER",
+        "start": 37,
+        "end": 46
+      },
+      {
+        "text": "Konstanta II .",
+        "label": "PER",
+        "start": 96,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Zmätky v centre ríše mali potom negatívny dopad na byzantskú obranyschopnosť , predovšetkým vo vzťahu k Arabom , ktorí práve útočili na Egypt .",
+    "spans": [
+      {
+        "text": "Arabom",
+        "label": "PER",
+        "start": 104,
+        "end": 110
+      },
+      {
+        "text": "Egypt",
+        "label": "LOC",
+        "start": 136,
+        "end": 141
+      }
+    ]
+  },
+  {
+    "text": "Je to syn Krona a Rheiy .",
+    "spans": [
+      {
+        "text": "Krona",
+        "label": "PER",
+        "start": 10,
+        "end": 15
+      },
+      {
+        "text": "Rheiy",
+        "label": "PER",
+        "start": 18,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Rimania stotožnili Poseidóna s bohom Neptúnom .",
+    "spans": [
+      {
+        "text": "Rimania",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Poseidóna",
+        "label": "PER",
+        "start": 19,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Hormizd I .",
+    "spans": [
+      {
+        "text": "Hormizd I .",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Paul Dirac či Albert Einstein .",
+    "spans": [
+      {
+        "text": "Paul Dirac",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Albert Einstein",
+        "label": "PER",
+        "start": 14,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Leontios II .",
+    "spans": [
+      {
+        "text": "Leontios II .",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Revolta , organizovaná s podporou strany modrých a konštantínopolského patriarchu Kallinika , skončila úspešne a jej výsledkom bolo Justiniánovo zohavenie a poslanie do exilu .",
+    "spans": [
+      {
+        "text": "Kallinika",
+        "label": "PER",
+        "start": 82,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "text": "To , že cisára nepopravili , súviselo s dlhou vládou herakleiovskej dynastie v Byzancii a s ňou spojeným rešpektom , ktorý si u obyvateľstva získala .",
+    "spans": [
+      {
+        "text": "Byzancii",
+        "label": "LOC",
+        "start": 79,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Kartágo sa tak dostalo roku 697 definitívne do rúk Arabov .",
+    "spans": [
+      {
+        "text": "Kartágo",
+        "label": "LOC",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Arabov",
+        "label": "PER",
+        "start": 51,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Theodosius II .",
+    "spans": [
+      {
+        "text": "Theodosius II .",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Jeho otcom bol cisár Arkadius ( vládol 395 – 408 ) , matkou Eudoxia , dcéra magistra militum Bautona .",
+    "spans": [
+      {
+        "text": "Arkadius",
+        "label": "PER",
+        "start": 21,
+        "end": 29
+      },
+      {
+        "text": "Eudoxia",
+        "label": "PER",
+        "start": 60,
+        "end": 67
+      },
+      {
+        "text": "Bautona",
+        "label": "PER",
+        "start": 93,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "text": "V roku 421 sa oženil s poetkou Aeliou Eudociou .",
+    "spans": [
+      {
+        "text": "Aeliou Eudociou",
+        "label": "PER",
+        "start": 31,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Zákonník Theodosia II . zahŕňal všetky edikty vydané od uznania kresťanstva ako povoleného náboženstva a stal sa podkladom pre vznik Justiniánovho zákonníka v nasledujúcom storočí .",
+    "spans": [
+      {
+        "text": "Theodosia II .",
+        "label": "PER",
+        "start": 9,
+        "end": 23
+      },
+      {
+        "text": "Justiniánovho",
+        "label": "PER",
+        "start": 133,
+        "end": 146
+      }
+    ]
+  },
+  {
+    "text": "Za Theodosiovej vlády začali Východorímsku ríšu ohrozovať Huni , ktorých moc v Karpatskej kotline sa významne upevnila a počas vlády náčelníka Attilu dosiahla vrchol .",
+    "spans": [
+      {
+        "text": "Theodosiovej",
+        "label": "PER",
+        "start": 3,
+        "end": 15
+      },
+      {
+        "text": "Východorímsku ríšu",
+        "label": "LOC",
+        "start": 29,
+        "end": 47
+      },
+      {
+        "text": "Huni",
+        "label": "PER",
+        "start": 58,
+        "end": 62
+      },
+      {
+        "text": "Attilu",
+        "label": "PER",
+        "start": 143,
+        "end": 149
+      }
+    ]
+  },
+  {
+    "text": "Narodil sa v paláci Aojama v Tokiu .",
+    "spans": [
+      {
+        "text": "Aojama v Tokiu",
+        "label": "LOC",
+        "start": 20,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Elias Lönnrot",
+    "spans": [
+      {
+        "text": "Elias Lönnrot",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Navštevoval aj Laponsko a blízke časti ruskej Karélie .",
+    "spans": [
+      {
+        "text": "Laponsko",
+        "label": "LOC",
+        "start": 15,
+        "end": 23
+      },
+      {
+        "text": "Karélie",
+        "label": "LOC",
+        "start": 46,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "text": "Kniha obsahovala rastliny , ktoré Lönnrot zobral pri svojich cestách , poznámky o ich použití a opisy kvetov a listov .",
+    "spans": [
+      {
+        "text": "Lönnrot",
+        "label": "PER",
+        "start": 34,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Lönnrot zomrel 19 . marca 1884 v Sammatti v Južnom Fínsku .",
+    "spans": [
+      {
+        "text": "Lönnrot",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Sammatti",
+        "label": "LOC",
+        "start": 33,
+        "end": 41
+      },
+      {
+        "text": "Fínsku",
+        "label": "LOC",
+        "start": 51,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Fínsky grafik Erik Bruun použil Lönnrotovu podobizeň ako motív na päťstomarkovú bankovku .",
+    "spans": [
+      {
+        "text": "Erik Bruun",
+        "label": "PER",
+        "start": 14,
+        "end": 24
+      },
+      {
+        "text": "Lönnrotovu",
+        "label": "PER",
+        "start": 32,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Novoperzská ríša ( Ríša Sásánovcov )",
+    "spans": [
+      {
+        "text": "Novoperzská ríša",
+        "label": "LOC",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "text": "Ríša Sásánovcov",
+        "label": "LOC",
+        "start": 19,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Ceny boli založené v poslednej vôli švédskeho vedca a priemyselníka Alfreda Nobela , vynálezcu dynamitu .",
+    "spans": [
+      {
+        "text": "Alfreda Nobela",
+        "label": "PER",
+        "start": 68,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Prvýkrát boli Nobelove ceny udeľované v roku 1901 , ceremoniál sa uskutočnil v Štokholme .",
+    "spans": [
+      {
+        "text": "Štokholme",
+        "label": "LOC",
+        "start": 79,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "V roku 933 platby ukončil a trestnou výpravou Maďarov porazil v bitke na Riade .",
+    "spans": [
+      {
+        "text": "Maďarov",
+        "label": "PER",
+        "start": 46,
+        "end": 53
+      },
+      {
+        "text": "Riade",
+        "label": "LOC",
+        "start": 73,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Hermes ( po grécky Hermés ‐ ‛ Ερµης , po latinsky Mercurius , čiže Merkúr ) , syn Dia a nymfy Máie , je v starogréckej mytológii okrídlený posol bohov .",
+    "spans": [
+      {
+        "text": "Hermes",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Hermés",
+        "label": "PER",
+        "start": 19,
+        "end": 25
+      },
+      {
+        "text": "Ερµης",
+        "label": "PER",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "text": "Mercurius",
+        "label": "PER",
+        "start": 50,
+        "end": 59
+      },
+      {
+        "text": "Merkúr",
+        "label": "PER",
+        "start": 67,
+        "end": 73
+      },
+      {
+        "text": "Dia",
+        "label": "PER",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "text": "Máie",
+        "label": "PER",
+        "start": 94,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Hermov kult v gréckej mytológii",
+    "spans": [
+      {
+        "text": "Hermov",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Hermovi bola pripisovaná úloha vo veľa oblastiach :",
+    "spans": [
+      {
+        "text": "Hermovi",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Milan Uhde",
+    "spans": [
+      {
+        "text": "Milan Uhde",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Počas komunistickej vlády bol významným predstaviteľom disentu a po nežnej revolúcii sa stal ministrom kultúry a predsedom Poslaneckej snemovne Českej republiky .",
+    "spans": [
+      {
+        "text": "Poslaneckej snemovne Českej republiky",
+        "label": "ORG",
+        "start": 123,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "text": "Podpísal Chartu 77 , v roku 1988 sa stal aj signatárom Hnutia za občiansku slobodu .",
+    "spans": [
+      {
+        "text": "Chartu 77",
+        "label": "ORG",
+        "start": 9,
+        "end": 18
+      },
+      {
+        "text": "Hnutia za občiansku slobodu",
+        "label": "ORG",
+        "start": 55,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "V roku 1989 založil spolu s inými disidentami nakladateľstvo Atlantis a stal sa jeho šéfredaktorom .",
+    "spans": [
+      {
+        "text": "Atlantis",
+        "label": "ORG",
+        "start": 61,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "text": "Zákon sa snažil zrovnoprávniť nútené práce príslušníkov vojenských banských oddielov s nútenými prácami príslušníkov PTP .",
+    "spans": [
+      {
+        "text": "PTP",
+        "label": "ORG",
+        "start": 117,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "text": "Milan Uhde je autorom poviedok , divadelných a rozhlasových hier , scenárov a zbierok poézie .",
+    "spans": [
+      {
+        "text": "Milan Uhde",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Autor tu nadväzuje na K . H . Borovského .",
+    "spans": [
+      {
+        "text": "K . H . Borovského",
+        "label": "PER",
+        "start": 22,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Podľa tejto hry vznikol v roku 1978 aj rovnomenný film režiséra Vladimíra Sísa s Miroslavom Donutilom v hlavnej úlohe .",
+    "spans": [
+      {
+        "text": "Vladimíra Sísa",
+        "label": "PER",
+        "start": 64,
+        "end": 78
+      },
+      {
+        "text": "Miroslavom Donutilom",
+        "label": "PER",
+        "start": 81,
+        "end": 101
+      }
+    ]
+  },
+  {
+    "text": "Uhde tu bol spoluautorom spolu s Josefom Topolom a Václavom Havlom .",
+    "spans": [
+      {
+        "text": "Uhde",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Josefom Topolom",
+        "label": "PER",
+        "start": 33,
+        "end": 48
+      },
+      {
+        "text": "Václavom Havlom",
+        "label": "PER",
+        "start": 51,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "Šápúr III .",
+    "spans": [
+      {
+        "text": "Šápúr III .",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Šápúr bol nábožensky tolerantný panovník , ktorý zastavil dlhoročnú perzekúciu kresťanov , aj keď navonok asi zdôrazňoval skôr ekonomické dôvody , ktoré ho k tomu viedli ( z radov kresťanov sa najímali mnohí odborníci a remeslníci ) .",
+    "spans": [
+      {
+        "text": "Šápúr",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Šápúrovu vládu ukončili roku 388 perzskí veľmoži , ktorí proti nemu zorganizovali spiknutie ( údajne prerezali laná jeho stanu , ten na neho spadol a zabil ho ) .",
+    "spans": [
+      {
+        "text": "Šápúrovu",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "V historickej dobe tu pravdepodobne stálo elamské mesto , avšak skutočný rozkvet Stachru spadá až do achajmenovskej a hlavne sasánovskej epochy .",
+    "spans": [
+      {
+        "text": "Stachru",
+        "label": "LOC",
+        "start": 81,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Zakladateľ sasánovskej dynastie Sasán bol kňazom miestneho chrámu bohyne Anáhity a jeho potomkovia sa tu podľa všetkého dávali korunovať za perzských kráľov .",
+    "spans": [
+      {
+        "text": "Sasán",
+        "label": "PER",
+        "start": 32,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "V roku 640 po Kr .",
+    "spans": [
+      {
+        "text": "Kr",
+        "label": "PER",
+        "start": 14,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "David Irving",
+    "spans": [
+      {
+        "text": "David Irving",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "David Irving sa narodil roku 1938 v britskom Huttone .",
+    "spans": [
+      {
+        "text": "David Irving",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "text": "Huttone",
+        "label": "LOC",
+        "start": 45,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Po ukončení štúdia pracoval rok v Porúrí v koncerne Thyssen .",
+    "spans": [
+      {
+        "text": "Porúrí",
+        "label": "LOC",
+        "start": 34,
+        "end": 40
+      },
+      {
+        "text": "Thyssen",
+        "label": "ORG",
+        "start": 52,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "Od deväťdesiatych rokov sa angažoval v kalifornskom Institute for Historical Review .",
+    "spans": [
+      {
+        "text": "Institute for Historical Review",
+        "label": "ORG",
+        "start": 52,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Koncom osemdesiatych rokov a na začiatku deväťdesiatych rokov zastával názor , že v Osvienčime neexistovali plynové komory .",
+    "spans": [
+      {
+        "text": "Osvienčime",
+        "label": "LOC",
+        "start": 84,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "David Irving je známy ako kontroverzný historik , ktorý dokázal objaviť celý rad dovtedy neznámych prameňov a získať mnoho unikátnych svedectiev .",
+    "spans": [
+      {
+        "text": "David Irving",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Konštantín IV .",
+    "spans": [
+      {
+        "text": "Konštantín IV .",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Konstantin IV .",
+    "spans": [
+      {
+        "text": "Konstantin IV .",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Konstantina vymenovali za spoluvladára cisára Konstanta II . už roku 654 .",
+    "spans": [
+      {
+        "text": "Konstantina",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "Konstanta II .",
+        "label": "PER",
+        "start": 46,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "Tí poslali flotilu , ktorá mala roku 674 napadnúť Konštantinopol .",
+    "spans": [
+      {
+        "text": "Konštantinopol",
+        "label": "LOC",
+        "start": 50,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "Kým sa Konstantin venoval tomuto nebezpečenstvu , napadli Slovania Solún .",
+    "spans": [
+      {
+        "text": "Konstantin",
+        "label": "PER",
+        "start": 7,
+        "end": 17
+      },
+      {
+        "text": "Slovania",
+        "label": "PER",
+        "start": 58,
+        "end": 66
+      },
+      {
+        "text": "Solún",
+        "label": "LOC",
+        "start": 67,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "Konstantin uzatvoril s Arabmi mierovú zmluvu , ktorá bola roku 685 obnovená .",
+    "spans": [
+      {
+        "text": "Konstantin",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Arabmi",
+        "label": "PER",
+        "start": 23,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Tento čin zaručil nástupnictvo Justiniána II .",
+    "spans": [
+      {
+        "text": "Justiniána II .",
+        "label": "PER",
+        "start": 31,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "Konstantin zomrel na dyzentériu roku 685 .",
+    "spans": [
+      {
+        "text": "Konstantin",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Maxentius s pomocou svojho otca premohol Severa , ktorého Galerius prehlásil za západného cisára .",
+    "spans": [
+      {
+        "text": "Maxentius",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Severa",
+        "label": "PER",
+        "start": 41,
+        "end": 47
+      },
+      {
+        "text": "Galerius",
+        "label": "PER",
+        "start": 58,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "Roku 312 napadá Konštantín Itáliu a so svojim švagrom ( roku 307 sa oženil s Maximianovou dcérou Faustou ) sa 28 . októbra stretol pred bránami Ríma v bitke pri Milvijskom moste .",
+    "spans": [
+      {
+        "text": "Konštantín",
+        "label": "PER",
+        "start": 16,
+        "end": 26
+      },
+      {
+        "text": "Itáliu",
+        "label": "LOC",
+        "start": 27,
+        "end": 33
+      },
+      {
+        "text": "Maximianovou",
+        "label": "PER",
+        "start": 77,
+        "end": 89
+      },
+      {
+        "text": "Faustou",
+        "label": "PER",
+        "start": 97,
+        "end": 104
+      },
+      {
+        "text": "Ríma",
+        "label": "LOC",
+        "start": 144,
+        "end": 148
+      },
+      {
+        "text": "Milvijskom moste",
+        "label": "LOC",
+        "start": 161,
+        "end": 177
+      }
+    ]
+  },
+  {
+    "text": "Prevažne pohanské légie s Kristovými monogramami potom vybojovali veľké víťazstvo ; Maxentius sa na úteku utopil v Tibere .",
+    "spans": [
+      {
+        "text": "Kristovými",
+        "label": "PER",
+        "start": 26,
+        "end": 36
+      },
+      {
+        "text": "Maxentius",
+        "label": "PER",
+        "start": 84,
+        "end": 93
+      },
+      {
+        "text": "Tibere",
+        "label": "LOC",
+        "start": 115,
+        "end": 121
+      }
+    ]
+  },
+  {
+    "text": "Konštantín potom upevnil svoje už skôr dojednané spojenectvo s Liciniom a stal sa západným cisárom ; o Východ sa delil Licinius s Maximinom Daiom .",
+    "spans": [
+      {
+        "text": "Konštantín",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Liciniom",
+        "label": "PER",
+        "start": 63,
+        "end": 71
+      },
+      {
+        "text": "Východ",
+        "label": "LOC",
+        "start": 103,
+        "end": 109
+      },
+      {
+        "text": "Licinius",
+        "label": "PER",
+        "start": 119,
+        "end": 127
+      },
+      {
+        "text": "Maximinom Daiom",
+        "label": "PER",
+        "start": 130,
+        "end": 145
+      }
+    ]
+  },
+  {
+    "text": "Licinius potom Maximina porazil a stal sa jediným vladárom Východu .",
+    "spans": [
+      {
+        "text": "Licinius",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Maximina",
+        "label": "PER",
+        "start": 15,
+        "end": 23
+      },
+      {
+        "text": "Východu",
+        "label": "LOC",
+        "start": 59,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "Konštantínova vláda",
+    "spans": [
+      {
+        "text": "Konštantínova",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Rím tak stráca svoje postavení ako hlavné centrum ríše , ktoré mu patrilo veľa storočí .",
+    "spans": [
+      {
+        "text": "Rím",
+        "label": "LOC",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "Konštantín sa snažil reformovať správu ríše a zlepšit jej situáciu .",
+    "spans": [
+      {
+        "text": "Konštantín",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Nad hrobom apoštola Petra na Vatikánskom pahorku vyrástla bazilika sv .",
+    "spans": [
+      {
+        "text": "Petra",
+        "label": "PER",
+        "start": 20,
+        "end": 25
+      },
+      {
+        "text": "Vatikánskom pahorku",
+        "label": "LOC",
+        "start": 29,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Petra , pri paláci v Lateráne bazilika sv .",
+    "spans": [
+      {
+        "text": "Petra",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "Lateráne",
+        "label": "LOC",
+        "start": 21,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Jána a nad hrobom sv .",
+    "spans": [
+      {
+        "text": "Jána",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "Pavla bazilika sv .",
+    "spans": [
+      {
+        "text": "Pavla",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Pavla za hradbami .",
+    "spans": [
+      {
+        "text": "Pavla",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Ku koncu Konštantínovho života sa výrazne zhoršil vzťah medzi rímskou a perzskou ríšou .",
+    "spans": [
+      {
+        "text": "Konštantínovho",
+        "label": "PER",
+        "start": 9,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Počas neplnoletosti Šápúra II . bol na vzájomných hraniciach kľud a obe strany dodržiavali zmluvu z roku 298 .",
+    "spans": [
+      {
+        "text": "Šápúra II .",
+        "label": "PER",
+        "start": 20,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "Hodnotenie Konštantína",
+    "spans": [
+      {
+        "text": "Konštantína",
+        "label": "PER",
+        "start": 11,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "Ďalšie negatívne hodnotenie vniesli novovekí historici , najmä E . Gibbon a J . Borckhardt .",
+    "spans": [
+      {
+        "text": "E . Gibbon",
+        "label": "PER",
+        "start": 63,
+        "end": 73
+      },
+      {
+        "text": "J . Borckhardt",
+        "label": "PER",
+        "start": 76,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "Tí označujú Konštantína za despotu , ktorý svojmu sobectvu podriadil spravodlivosť aj vieru a ku kresťanstvu sa priklonil z číreho prospechárstva .",
+    "spans": [
+      {
+        "text": "Konštantína",
+        "label": "PER",
+        "start": 12,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Konstans II .",
+    "spans": [
+      {
+        "text": "Konstans II .",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Jeho otcom bol cisár Konštantín III . , dedom zakladateľ herakleiovskej dynastie Herakleios .",
+    "spans": [
+      {
+        "text": "Konštantín III .",
+        "label": "PER",
+        "start": 21,
+        "end": 37
+      },
+      {
+        "text": "Herakleios",
+        "label": "LOC",
+        "start": 81,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "text": "Aj keď sa Konstans najprv energicky snažil ochrániť hranice ríše a osobne sa zúčastnil na vojenských ťaženiach , dobyli Arabi v jeho dobe Arméniu a Cyprus .",
+    "spans": [
+      {
+        "text": "Konstans",
+        "label": "PER",
+        "start": 10,
+        "end": 18
+      },
+      {
+        "text": "Arabi",
+        "label": "PER",
+        "start": 120,
+        "end": 125
+      },
+      {
+        "text": "Arméniu",
+        "label": "LOC",
+        "start": 138,
+        "end": 145
+      },
+      {
+        "text": "Cyprus",
+        "label": "LOC",
+        "start": 148,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "Povesť o neporaziteľnosti byzantského loďstva bola vtedy ohrozená , pretože Arabi dosiahli v námornej bitke pri Finike ( 655 ) jednoznačné víťazstvo .",
+    "spans": [
+      {
+        "text": "Arabi",
+        "label": "PER",
+        "start": 76,
+        "end": 81
+      },
+      {
+        "text": "Finike",
+        "label": "LOC",
+        "start": 112,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "Je otázné , či práve do Konstantovej doby spadá vytvorenie novej správnej štruktúry ‐ systému tzv . thém .",
+    "spans": [
+      {
+        "text": "Konstantovej",
+        "label": "PER",
+        "start": 24,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Stabilizácia pomerov sa tak stala hlavnou úlohou Konstantových nástupcov .",
+    "spans": [
+      {
+        "text": "Konstantových",
+        "label": "PER",
+        "start": 49,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Samotný obsah robili chlapci , ktorí sa potulovali po Terezíne a hľadali témy .",
+    "spans": [
+      {
+        "text": "Terezíne",
+        "label": "LOC",
+        "start": 54,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Iba jeden z nich , Zdeněk Taussig , zostal v Terezíne až do jeho oslobodenia v máji 1945 .",
+    "spans": [
+      {
+        "text": "Zdeněk Taussig",
+        "label": "PER",
+        "start": 19,
+        "end": 33
+      },
+      {
+        "text": "Terezíne",
+        "label": "LOC",
+        "start": 45,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "text": "V tom istom roku vyšla aj v Československu strojopisová samizdatová verzia a potom znova v 80 . rokoch .",
+    "spans": [
+      {
+        "text": "Československu",
+        "label": "LOC",
+        "start": 28,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Václav Hrabě",
+    "spans": [
+      {
+        "text": "Václav Hrabě",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Na strednú školu chodil v Hořoviciach ( ukončil ju maturitou v roku 1957 ) .",
+    "spans": [
+      {
+        "text": "Hořoviciach",
+        "label": "LOC",
+        "start": 26,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Študoval český jazyk a dejepis na Vysokej škole pedagogickej v Prahe , ktorú absolvoval v roku 1961 .",
+    "spans": [
+      {
+        "text": "Vysokej škole pedagogickej v Prahe",
+        "label": "ORG",
+        "start": 34,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "text": "Tvorba Václava Hraběte , rovnako ako ostatných beatnikov , úzko súvisela s jazzovou a bluesovou hudbou .",
+    "spans": [
+      {
+        "text": "Václava Hraběte",
+        "label": "PER",
+        "start": 7,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "Osobne sa stretol s americkým básnikom Allenom Ginsbergom a napísal s ním rozhovor ( v roku 1965 pri príležitosti jeho vystúpenia v Prahe ) .",
+    "spans": [
+      {
+        "text": "Allenom Ginsbergom",
+        "label": "PER",
+        "start": 39,
+        "end": 57
+      },
+      {
+        "text": "Prahe",
+        "label": "LOC",
+        "start": 132,
+        "end": 137
+      }
+    ]
+  },
+  {
+    "text": "Ako kňaz výraznou mierou prispel k zavedeniu Asklépiovho kultu do Atén .",
+    "spans": [
+      {
+        "text": "Asklépiovho kultu",
+        "label": "ORG",
+        "start": 45,
+        "end": 62
+      },
+      {
+        "text": "Atén",
+        "label": "LOC",
+        "start": 66,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "text": "Sofokles patrí spolu so starším Aischylom a mladším Euripidom medzi najvýznamnejších starovekých dramatikov .",
+    "spans": [
+      {
+        "text": "Sofokles",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Aischylom",
+        "label": "PER",
+        "start": 32,
+        "end": 41
+      },
+      {
+        "text": "Euripidom",
+        "label": "PER",
+        "start": 52,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Francúzska okupačná zóna Nemecka",
+    "spans": [
+      {
+        "text": "Francúzska okupačná zóna Nemecka",
+        "label": "LOC",
+        "start": 0,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Francúzska okupačná zóna Nemecka bola jedným zo štyroch okupačných útvarov , ktoré boli v júli 1945 zriadené víťaznými spojencami v povojnovom Nemecku .",
+    "spans": [
+      {
+        "text": "Francúzska okupačná zóna Nemecka",
+        "label": "LOC",
+        "start": 0,
+        "end": 32
+      },
+      {
+        "text": "Nemecku",
+        "label": "LOC",
+        "start": 143,
+        "end": 150
+      }
+    ]
+  },
+  {
+    "text": "V roku 1952 sa spojili Bádensko a Württembersko ‐ Hohenzollernsko s američanmi okupovaným Württemberskom ‐ Bádenskom a vytvorili krajinu Bádensko ‐ Württembersko .",
+    "spans": [
+      {
+        "text": "Bádensko",
+        "label": "LOC",
+        "start": 23,
+        "end": 31
+      },
+      {
+        "text": "Württembersko ‐ Hohenzollernsko",
+        "label": "LOC",
+        "start": 34,
+        "end": 65
+      },
+      {
+        "text": "Württemberskom ‐ Bádenskom",
+        "label": "LOC",
+        "start": 90,
+        "end": 116
+      },
+      {
+        "text": "Bádensko ‐ Württembersko",
+        "label": "LOC",
+        "start": 137,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "text": "Bitka pri Maratóne",
+    "spans": [
+      {
+        "text": "Maratóne",
+        "label": "LOC",
+        "start": 10,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Bitka pri Maratóne ( 12 . september 490 pred Kr . ) bola výsledkom snahy Dareia I . o pripojenie Grécka k Perzskej ríši .",
+    "spans": [
+      {
+        "text": "Maratóne",
+        "label": "LOC",
+        "start": 10,
+        "end": 18
+      },
+      {
+        "text": "Kr",
+        "label": "PER",
+        "start": 45,
+        "end": 47
+      },
+      {
+        "text": "Dareia I .",
+        "label": "PER",
+        "start": 73,
+        "end": 83
+      },
+      {
+        "text": "Grécka",
+        "label": "LOC",
+        "start": 97,
+        "end": 103
+      },
+      {
+        "text": "Perzskej ríši",
+        "label": "LOC",
+        "start": 106,
+        "end": 119
+      }
+    ]
+  },
+  {
+    "text": "Veliteľom gréckych vojsk bol Kallimachos , plán bitky vypracoval Miltiades .",
+    "spans": [
+      {
+        "text": "Kallimachos",
+        "label": "PER",
+        "start": 29,
+        "end": 40
+      },
+      {
+        "text": "Miltiades",
+        "label": "PER",
+        "start": 65,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "text": "Vo vnútri hrobky Dareia I . je rad postranných chodieb a miestností , ktoré by poskytli priestor prinajmenšom trom sarkofágom .",
+    "spans": [
+      {
+        "text": "Dareia I .",
+        "label": "PER",
+        "start": 17,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "V pozadí stojí popredný predstaviteľ zarathuštrovskej „ štátnej “ cirkvi , kňaz Kartír .",
+    "spans": [
+      {
+        "text": "Kartír",
+        "label": "PER",
+        "start": 80,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Faradayove zákony elektrolýzy",
+    "spans": [
+      {
+        "text": "Faradayove",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Faradayov zákon",
+    "spans": [
+      {
+        "text": "Faradayov",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Faradayov zákon",
+    "spans": [
+      {
+        "text": "Faradayov",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Horst Mahler",
+    "spans": [
+      {
+        "text": "Horst Mahler",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Horst Mahler ( * 23 . január 1936 , Haynau ) je nemecký právnik a obhajca .",
+    "spans": [
+      {
+        "text": "Horst Mahler",
+        "label": "PER",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "text": "Haynau",
+        "label": "LOC",
+        "start": 36,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Neskôr zastupoval stranu aj v rôznych procesoch a pri rôznych príležitostiach sa zasadzoval za obnovu Veľkonemeckej ríše .",
+    "spans": [
+      {
+        "text": "Veľkonemeckej ríše",
+        "label": "LOC",
+        "start": 102,
+        "end": 120
+      }
+    ]
+  },
+  {
+    "text": "Roku 2002 rozdával novinárom na straníckej konferencii NPD neonacistické letáky , ktoré označovali nenávisť voči Židom za niečo celkom obvyklé .",
+    "spans": [
+      {
+        "text": "NPD",
+        "label": "ORG",
+        "start": 55,
+        "end": 58
+      },
+      {
+        "text": "Židom",
+        "label": "PER",
+        "start": 113,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "text": "Následne roku 543 / 544 Justinián odsúdil spisy troch významných antiochijských teológov ( pozri Spor o Tri kapitoly ) .",
+    "spans": [
+      {
+        "text": "Justinián",
+        "label": "PER",
+        "start": 24,
+        "end": 33
+      },
+      {
+        "text": "Tri kapitoly",
+        "label": "ORG",
+        "start": 104,
+        "end": 116
+      }
+    ]
+  },
+  {
+    "text": "Proti tomuto výnosu , ktorý zároveň spochybňoval autoritu Chalcedonského koncilu , sa však postavili západní biskupi a Vigilius , ktorí odmietli Tri kapitoly odsúdiť .",
+    "spans": [
+      {
+        "text": "Chalcedonského koncilu",
+        "label": "ORG",
+        "start": 58,
+        "end": 80
+      },
+      {
+        "text": "Vigilius",
+        "label": "PER",
+        "start": 119,
+        "end": 127
+      },
+      {
+        "text": "Tri kapitoly",
+        "label": "ORG",
+        "start": 145,
+        "end": 157
+      }
+    ]
+  },
+  {
+    "text": "Vigilius odcestoval do Carihradu , kde v roku 548 pod nátlakom a na zdesenie západných biskupov vo svojom Iudicatum podpísal odsúdenie Troch kapitol .",
+    "spans": [
+      {
+        "text": "Vigilius",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Carihradu",
+        "label": "LOC",
+        "start": 23,
+        "end": 32
+      },
+      {
+        "text": "Troch kapitol",
+        "label": "ORG",
+        "start": 135,
+        "end": 148
+      }
+    ]
+  },
+  {
+    "text": "Justinián aj napriek tomu roku 551 znova Tri kapitoly odsúdil , proti čomu Vigilius protestoval a nakoniec sa uchýlil do baziliky sv .",
+    "spans": [
+      {
+        "text": "Justinián",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Tri kapitoly",
+        "label": "ORG",
+        "start": 41,
+        "end": 53
+      },
+      {
+        "text": "Vigilius",
+        "label": "PER",
+        "start": 75,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "Vigilius sa v tzv . druhom protokole vyjadril v súlade s týmto koncilom .",
+    "spans": [
+      {
+        "text": "Vigilius",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Vigilius zomrel na ceste domov 7 . júla 555 v Syrakúzach .",
+    "spans": [
+      {
+        "text": "Vigilius",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Syrakúzach",
+        "label": "LOC",
+        "start": 46,
+        "end": 56
+      }
+    ]
+  }
+]

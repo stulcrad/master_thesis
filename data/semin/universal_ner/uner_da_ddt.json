@@ -1,0 +1,3928 @@
+[
+  {
+    "text": "To kendte russiske historikere Andronik Mirganjan og Igor Klamkin tror ikke , at Rusland kan udvikles uden en \" jernnæve \" .",
+    "spans": [
+      {
+        "text": "Andronik Mirganjan",
+        "label": "PER",
+        "start": 31,
+        "end": 49
+      },
+      {
+        "text": "Igor Klamkin",
+        "label": "PER",
+        "start": 53,
+        "end": 65
+      },
+      {
+        "text": "Rusland",
+        "label": "LOC",
+        "start": 81,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "De hævder , at Ruslands vej til demokrati går gennem diktatur .",
+    "spans": [
+      {
+        "text": "Ruslands",
+        "label": "LOC",
+        "start": 15,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Og de tilføjede : \" Netop fordi vi end ikke har et kim af civilt samfund , var vi imod Folkekongressen .",
+    "spans": [
+      {
+        "text": "Folkekongressen",
+        "label": "ORG",
+        "start": 87,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "De mener , at Folkekongressen skal give præsidenten diktatoriske beføjelser .",
+    "spans": [
+      {
+        "text": "Folkekongressen",
+        "label": "ORG",
+        "start": 14,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Af Vibeke Scheibel",
+    "spans": [
+      {
+        "text": "Vibeke Scheibel",
+        "label": "PER",
+        "start": 3,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Debatten om udlændinge i Danmark må ikke føre til fremmedhad og racisme .",
+    "spans": [
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 25,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Det mener Socialdemokratiets næstformand Birte Weiss og foreslår , at de politiske ledere kommer med i det ligebehandlingsnævn , som Folketinget kort før sommerferien besluttede at nedsætte .",
+    "spans": [
+      {
+        "text": "Socialdemokratiets",
+        "label": "ORG",
+        "start": 10,
+        "end": 28
+      },
+      {
+        "text": "Birte Weiss",
+        "label": "PER",
+        "start": 41,
+        "end": 52
+      },
+      {
+        "text": "Folketinget",
+        "label": "ORG",
+        "start": 133,
+        "end": 144
+      }
+    ]
+  },
+  {
+    "text": "Birte Weiss henviser til Tyskland , hvor dialogen kortsluttes af brandbomber og dramatiske sammenstød .",
+    "spans": [
+      {
+        "text": "Birte Weiss",
+        "label": "PER",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "text": "Tyskland",
+        "label": "LOC",
+        "start": 25,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "\" Vi vil ikke finde os i , at det samme skal ske i Danmark , \" siger hun .",
+    "spans": [
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 51,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Informationssekretær i Danmarks Socialdemokratiske Ungdom ( DSU ) , Hans Stavnsager , er positivt overrasket over ideen .",
+    "spans": [
+      {
+        "text": "Danmarks Socialdemokratiske Ungdom",
+        "label": "ORG",
+        "start": 23,
+        "end": 57
+      },
+      {
+        "text": "DSU",
+        "label": "ORG",
+        "start": 60,
+        "end": 63
+      },
+      {
+        "text": "Hans Stavnsager",
+        "label": "PER",
+        "start": 68,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "DSU har nemlig længe ment , at Socialdemokratiet deltog alt for lidt i debatten om udlændinge .",
+    "spans": [
+      {
+        "text": "DSU",
+        "label": "ORG",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "text": "Socialdemokratiet",
+        "label": "ORG",
+        "start": 31,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Derfor kører DSU i disse måneder en kampagne mod fremmedhad og racisme , hvor de unge blandt andet via plakater opfordrer folk til at tage stilling : \" Hvem støtter du \" , er teksten over billederne af Mogens Glistrup og en lille jugoslavisk pige .",
+    "spans": [
+      {
+        "text": "DSU",
+        "label": "ORG",
+        "start": 13,
+        "end": 16
+      },
+      {
+        "text": "Mogens Glistrup",
+        "label": "PER",
+        "start": 202,
+        "end": 217
+      }
+    ]
+  },
+  {
+    "text": "\" Det er første gang , jeg har hørt så klar en melding fra Socialdemokratiet , \" siger Hans Stavnsager .",
+    "spans": [
+      {
+        "text": "Socialdemokratiet",
+        "label": "ORG",
+        "start": 59,
+        "end": 76
+      },
+      {
+        "text": "Hans Stavnsager",
+        "label": "PER",
+        "start": 87,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "For første gang i 100 år tabte Indre Mission menighedsrådsvalget i Skjern .",
+    "spans": [
+      {
+        "text": "Indre Mission",
+        "label": "ORG",
+        "start": 31,
+        "end": 44
+      },
+      {
+        "text": "Skjern",
+        "label": "LOC",
+        "start": 67,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "Nu rykker social-grundtvigianerne ind",
+    "spans": [
+      {
+        "text": "social-grundtvigianerne",
+        "label": "PER",
+        "start": 10,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Af Steffen Borch",
+    "spans": [
+      {
+        "text": "Steffen Borch",
+        "label": "PER",
+        "start": 3,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "I 1972 fik Skjern sit første værtshus .",
+    "spans": [
+      {
+        "text": "Skjern",
+        "label": "LOC",
+        "start": 11,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Det hed Kontorets Bodega , og det var ikke et sted , man lod sig se , hvis man ville være velset i byens herskende indremissionske kredse .",
+    "spans": [
+      {
+        "text": "Kontorets Bodega",
+        "label": "LOC",
+        "start": 8,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "Det var samme år , at Poul-Erik Billeskov kom til byen .",
+    "spans": [
+      {
+        "text": "Poul-Erik Billeskov",
+        "label": "PER",
+        "start": 22,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "20 år senere tabte Indre Mission menighedsrådsvalget i Skjern .",
+    "spans": [
+      {
+        "text": "Indre Mission",
+        "label": "ORG",
+        "start": 19,
+        "end": 32
+      },
+      {
+        "text": "Skjern",
+        "label": "LOC",
+        "start": 55,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Og denne gang kan Poul-Erik Billeskov ikke sige sig fri for at have haft en finger med i spillet .",
+    "spans": [
+      {
+        "text": "Poul-Erik Billeskov",
+        "label": "PER",
+        "start": 18,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Han var nemlig kandidat for og en af initiativtagerne til det grundtvigianske-socialdemokratiske samarbejde , der har vundet flertallet i Skjerns menighedsråd .",
+    "spans": [
+      {
+        "text": "grundtvigianske-socialdemokratiske",
+        "label": "PER",
+        "start": 62,
+        "end": 96
+      },
+      {
+        "text": "Skjerns",
+        "label": "LOC",
+        "start": 138,
+        "end": 145
+      }
+    ]
+  },
+  {
+    "text": "2 ) I bekræftende fald findes der da en hemmelig agentvirksomhed ved siden af FET ?",
+    "spans": [
+      {
+        "text": "FET",
+        "label": "ORG",
+        "start": 78,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Statsministeren har nu bedt sin departementschef , Peter Wiese , undersøge sagen ?",
+    "spans": [
+      {
+        "text": "Peter Wiese",
+        "label": "PER",
+        "start": 51,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Det er ligeledes interessant , hvad regeringen vil med redegørelsen i det udenrigspolitiske nævn : Om den vil søge at lave en dækmanøvre , eller om det er begyndelsen til en egentlig gennemgang af , hvad FET går og laver , \" siger Pelle Voigt .",
+    "spans": [
+      {
+        "text": "det udenrigspolitiske nævn",
+        "label": "ORG",
+        "start": 70,
+        "end": 96
+      },
+      {
+        "text": "FET",
+        "label": "ORG",
+        "start": 204,
+        "end": 207
+      },
+      {
+        "text": "Pelle Voigt",
+        "label": "PER",
+        "start": 231,
+        "end": 242
+      }
+    ]
+  },
+  {
+    "text": "Hvis vi ikke var gået i arbejde , var arbejdet blevet stillet frit , og så ville mindst 150 kritiske folk ikke være kommet ind igen , og de 42 på fyringslisten ville have mistet deres opsigelsesfrist , \" sagde Bjarne og Max , umiddelbart efter morgenens fællesmøde .",
+    "spans": [
+      {
+        "text": "Bjarne",
+        "label": "PER",
+        "start": 210,
+        "end": 216
+      },
+      {
+        "text": "Max",
+        "label": "PER",
+        "start": 220,
+        "end": 223
+      }
+    ]
+  },
+  {
+    "text": "Bjarne og Max er sikre på at ryge ud under alle omstændigheder , så de er ikke længere tilbageholdende med at udtale sig .",
+    "spans": [
+      {
+        "text": "Bjarne",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Max",
+        "label": "PER",
+        "start": 10,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Det vil næppe volde rivalerne i Dansk Supermarked og Aldi finansielle problemer at komme med et modspil i samme størrelsesorden .",
+    "spans": [
+      {
+        "text": "Dansk Supermarked",
+        "label": "ORG",
+        "start": 32,
+        "end": 49
+      },
+      {
+        "text": "Aldi",
+        "label": "ORG",
+        "start": 53,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Det kan betyde priskrig , bekræfter P. E. Pedersen .",
+    "spans": [
+      {
+        "text": "P. E. Pedersen",
+        "label": "PER",
+        "start": 36,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "text": "Går konkurrenterne ned i pris , følger vi med , \" siger FDBchefen .",
+    "spans": [
+      {
+        "text": "FDBchefen",
+        "label": "ORG",
+        "start": 56,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "text": "Også i FDB's egne rækker .",
+    "spans": [
+      {
+        "text": "FDB's",
+        "label": "ORG",
+        "start": 7,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "Desuden forudser FDB , at 200 job af sparehensyn skæres bort i de nye Super-Brugser .",
+    "spans": [
+      {
+        "text": "FDB",
+        "label": "ORG",
+        "start": 17,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Hans Uffe Christensen",
+    "spans": [
+      {
+        "text": "Hans Uffe Christensen",
+        "label": "PER",
+        "start": 0,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "En ny aggressiv linje præger Super-Brugsen .",
+    "spans": [
+      {
+        "text": "Super-Brugsen",
+        "label": "ORG",
+        "start": 29,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Her morer Super-Pedersen sig over Nettos priser",
+    "spans": [
+      {
+        "text": "Super-Pedersen",
+        "label": "PER",
+        "start": 10,
+        "end": 24
+      },
+      {
+        "text": "Nettos",
+        "label": "ORG",
+        "start": 34,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Finansmininister Henning Dyremose gør nu en heldig gennemførelse af finansloven for 1991 til murbrækker for , at der kan opnås resultater på de andre , sprængfarlige politiske områder - uddannelse , arbejdsmarked og skat .",
+    "spans": [
+      {
+        "text": "Henning Dyremose",
+        "label": "PER",
+        "start": 17,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "En fornuftig finanslov skal føre til , at de øvrige initiativer gennemføres , så der sikres en lav løn- og omkostningsudvikling ved overenskomsterne , \" siger Henning Dyremose til B.T. .",
+    "spans": [
+      {
+        "text": "Henning Dyremose",
+        "label": "PER",
+        "start": 159,
+        "end": 175
+      },
+      {
+        "text": "B.T.",
+        "label": "ORG",
+        "start": 180,
+        "end": 184
+      }
+    ]
+  },
+  {
+    "text": "KV-regeringen har udover finansloven , som kommer til førstebehandling på torsdag , fremlagt 22 lovforslag , som dækker alt fra nedsættelse af akassekontingent til afskaffelse af 6 pct.-skatten for indtægter op til 200.000 kroner .",
+    "spans": [
+      {
+        "text": "KV-regeringen",
+        "label": "ORG",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Henning Dyremose mener ikke , at en nedsættelse af moms og afgifter kan være med til at sikre et mere afdæmpet overenskomstresultat .",
+    "spans": [
+      {
+        "text": "Henning Dyremose",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "\" Jeg tvivler oprigtig talt på , at virksomheder og forretningerne vil nedsætte priserne i samme omfang , som vi ville nedsætte moms og afgifter , \" siger Henning Dyremose .",
+    "spans": [
+      {
+        "text": "Henning Dyremose",
+        "label": "PER",
+        "start": 155,
+        "end": 171
+      }
+    ]
+  },
+  {
+    "text": "Sæsonen indledes som nævnt 16. marts med opgøret mellem AGF og Brøndby , og dagen efter følger kampene : Ikast-Lyngby , B-1903-Silkeborg , AaB-Vejle og FremOB .",
+    "spans": [
+      {
+        "text": "AGF",
+        "label": "ORG",
+        "start": 56,
+        "end": 59
+      },
+      {
+        "text": "Brøndby",
+        "label": "ORG",
+        "start": 63,
+        "end": 70
+      },
+      {
+        "text": "Ikast-Lyngby",
+        "label": "ORG",
+        "start": 105,
+        "end": 117
+      },
+      {
+        "text": "B-1903-Silkeborg",
+        "label": "ORG",
+        "start": 120,
+        "end": 136
+      },
+      {
+        "text": "AaB-Vejle",
+        "label": "ORG",
+        "start": 139,
+        "end": 148
+      },
+      {
+        "text": "FremOB",
+        "label": "ORG",
+        "start": 152,
+        "end": 158
+      }
+    ]
+  },
+  {
+    "text": "De 10 hold i Superligaen skal mødes to gange i løbet af foråret , og det giver således 18 runder med afslutning den 23. juni , hvor programmet ser således ud : Lyngby-Brøndby , Silkeborg-AGF , Vejle-Ikast , Frem-B 1903 og AaB-OB .",
+    "spans": [
+      {
+        "text": "Superligaen",
+        "label": "ORG",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "text": "Lyngby-Brøndby",
+        "label": "ORG",
+        "start": 160,
+        "end": 174
+      },
+      {
+        "text": "Silkeborg-AGF",
+        "label": "ORG",
+        "start": 177,
+        "end": 190
+      },
+      {
+        "text": "Vejle-Ikast",
+        "label": "ORG",
+        "start": 193,
+        "end": 204
+      },
+      {
+        "text": "Frem-B 1903",
+        "label": "ORG",
+        "start": 207,
+        "end": 218
+      },
+      {
+        "text": "AaB-OB",
+        "label": "ORG",
+        "start": 222,
+        "end": 228
+      }
+    ]
+  },
+  {
+    "text": "Hvad der skal ske efter sommerferien tager Divisionsforeningen først stilling til på generalforsamlingen den 26. januar .",
+    "spans": [
+      {
+        "text": "Divisionsforeningen",
+        "label": "ORG",
+        "start": 43,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Uden dog at opnå meget mere end æren , fordi DM-guldet mod sædvane ikke vil give adgang til Europa Cup turneringerne .",
+    "spans": [
+      {
+        "text": "DM-guldet",
+        "label": "ORG",
+        "start": 45,
+        "end": 54
+      },
+      {
+        "text": "Europa Cup",
+        "label": "ORG",
+        "start": 92,
+        "end": 102
+      }
+    ]
+  },
+  {
+    "text": "Skulle et flertal i Divisionsforeningen mod forventning imidlertid ønske at bibeholde turneringen forår/efterår rykker to hold ud af Superligaen .",
+    "spans": [
+      {
+        "text": "Divisionsforeningen",
+        "label": "ORG",
+        "start": 20,
+        "end": 39
+      },
+      {
+        "text": "Superligaen",
+        "label": "ORG",
+        "start": 133,
+        "end": 144
+      }
+    ]
+  },
+  {
+    "text": "\" Jeg forsøgte at tale til en soldat og sagde : Lad os afgøre dette på en fredelig måde , \" sagde en kvæstet litauer , Atansa Stokus .",
+    "spans": [
+      {
+        "text": "Atansa Stokus",
+        "label": "PER",
+        "start": 119,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "En medarbejder på TV- og radiostationen fulgte chokeret massakren fra et vindue i TV-byen .",
+    "spans": [
+      {
+        "text": "TV-byen",
+        "label": "LOC",
+        "start": 82,
+        "end": 89
+      }
+    ]
+  },
+  {
+    "text": "De slår løs på kvinder , \" sagde Eduardas Potashinskas .",
+    "spans": [
+      {
+        "text": "Eduardas Potashinskas",
+        "label": "PER",
+        "start": 33,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "To spanske TV-folk blev gennembanket af Sovjet-soldater , fordi de havde filmet en såret litauer , der blev hjulpet væk fra slagmarken .",
+    "spans": [
+      {
+        "text": "Sovjet-soldater",
+        "label": "LOC",
+        "start": 40,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "text": "En rystet journalist fra avisen Respublica i Litauen fortalte , at sovjetiske soldater efter massakren havde forsøgt at klæde civile dødsofre i militært tøj for at få dem til at se ud som dræbte soldater .",
+    "spans": [
+      {
+        "text": "Respublica",
+        "label": "ORG",
+        "start": 32,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Klokken 00.32 dansk tid faldt de første bomber over Bagdad .",
+    "spans": [
+      {
+        "text": "Bagdad",
+        "label": "LOC",
+        "start": 52,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Klokken 01.38 var Bagdad en død by .",
+    "spans": [
+      {
+        "text": "Bagdad",
+        "label": "LOC",
+        "start": 18,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "En kølig brise blæser gennem byen , \" rapporterede CNN-journalisterne fra Bagdad .",
+    "spans": [
+      {
+        "text": "CNN-journalisterne",
+        "label": "ORG",
+        "start": 51,
+        "end": 69
+      },
+      {
+        "text": "Bagdad",
+        "label": "LOC",
+        "start": 74,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "Det kunne tyde på , at angrebet skal ses som en alvorlig forskrækkelse til Irak .",
+    "spans": [
+      {
+        "text": "Irak",
+        "label": "LOC",
+        "start": 75,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "text": "Hvis USA ville , kunne man sagtens have bombet det meste af byen i stykker . \"",
+    "spans": [
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 5,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Kl. 01.44 , dansk tid , brød helvede løs igen over Bagdad .",
+    "spans": [
+      {
+        "text": "Bagdad",
+        "label": "LOC",
+        "start": 51,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Bomberne faldt en halv mil fra hotellet , \" rapporterede John Hollimann , Bernard Shaw og veteranen fra Vietnam , krigsreporter Peter Arnett .",
+    "spans": [
+      {
+        "text": "John Hollimann",
+        "label": "PER",
+        "start": 57,
+        "end": 71
+      },
+      {
+        "text": "Bernard Shaw",
+        "label": "PER",
+        "start": 74,
+        "end": 86
+      },
+      {
+        "text": "Vietnam",
+        "label": "LOC",
+        "start": 104,
+        "end": 111
+      },
+      {
+        "text": "Peter Arnett",
+        "label": "PER",
+        "start": 128,
+        "end": 140
+      }
+    ]
+  },
+  {
+    "text": "Hun bad sin mand kontakte Københavns Kommune , der havde godkendt den nu tiltalte som dagplejefar , for at få sønnen anbragt under mere betryggende forhold .",
+    "spans": [
+      {
+        "text": "Københavns Kommune",
+        "label": "ORG",
+        "start": 26,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "text": "H.'s forklaring i grundlovsforhøret :",
+    "spans": [
+      {
+        "text": "H.'s",
+        "label": "PER",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "\" Anders var helt anderledes af sind end min egen søn .",
+    "spans": [
+      {
+        "text": "Anders",
+        "label": "PER",
+        "start": 2,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Hvis jeg siger ja til at forlænge , forventer jeg , at Brøndbys ledelse vil \" forgylde \" mig på en måde , der i hvert fald delvis vil kunne konkurrere med de penge , som jeg ellers skulle have skrabet sammen i udlandet . \"",
+    "spans": [
+      {
+        "text": "Brøndbys",
+        "label": "ORG",
+        "start": 55,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "På linie med de fleste af omklædningsrummets øvrige festberuste Brøndby'ere var Bjarne Jensen villig til at indrømme , at Superliga-finalen aldrig rigtig formåede at fænge rent underholdningsmæssigt .",
+    "spans": [
+      {
+        "text": "Bjarne Jensen",
+        "label": "PER",
+        "start": 80,
+        "end": 93
+      },
+      {
+        "text": "Superliga-finalen",
+        "label": "ORG",
+        "start": 122,
+        "end": 139
+      }
+    ]
+  },
+  {
+    "text": "\" Vi skal slutte ballet for Lyngby allerede i første halvleg .",
+    "spans": [
+      {
+        "text": "Lyngby",
+        "label": "ORG",
+        "start": 28,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "At Emeka Ezeugo går hen og dummer sig både på egne og hans kollegers vegne , er både uheldigt , men også temmelig dumt .",
+    "spans": [
+      {
+        "text": "Emeka Ezeugo",
+        "label": "PER",
+        "start": 3,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Steen Uno",
+    "spans": [
+      {
+        "text": "Steen Uno",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Alle ville ha' fat i Brøndbys 500-kampsjubilar Bjarne Jensen efter kampen i Lyngby .",
+    "spans": [
+      {
+        "text": "Brøndbys",
+        "label": "ORG",
+        "start": 21,
+        "end": 29
+      },
+      {
+        "text": "Bjarne Jensen",
+        "label": "PER",
+        "start": 47,
+        "end": 60
+      },
+      {
+        "text": "Lyngby",
+        "label": "LOC",
+        "start": 76,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "text": "Foto : Palle Hedemann",
+    "spans": [
+      {
+        "text": "Palle Hedemann",
+        "label": "PER",
+        "start": 7,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "På samme tidspunkt - i tidsrummet mellem klokken 11.50 og 12.50 den 12. december 81 - skulle Ove Hansen nemlig ifølge politiet have dræbt sin kone og skaffet sig af med liget ved at kaste det i havnen .",
+    "spans": [
+      {
+        "text": "Ove Hansen",
+        "label": "PER",
+        "start": 93,
+        "end": 103
+      }
+    ]
+  },
+  {
+    "text": "\" Alligevel blev oplysningen aldrig skrevet ned , \" fastslog DR-Dokumentar gruppen i sin sønderlemmende kritik af Frederikshavns politis efterforskningsarbejde i Pedal-Ove-sagen .",
+    "spans": [
+      {
+        "text": "DR-Dokumentar",
+        "label": "ORG",
+        "start": 61,
+        "end": 74
+      },
+      {
+        "text": "Frederikshavns politis",
+        "label": "ORG",
+        "start": 114,
+        "end": 136
+      },
+      {
+        "text": "Pedal-Ove-sagen",
+        "label": "PER",
+        "start": 162,
+        "end": 177
+      }
+    ]
+  },
+  {
+    "text": "\" Rapporten med nummeret 0-22 fik Jane Nielsen aldrig forelagt . \"",
+    "spans": [
+      {
+        "text": "Jane Nielsen",
+        "label": "PER",
+        "start": 34,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "text": "TVs Sten Baadsgaard viste hende den før interviewet , men efter aftale skulle hun på skærmen lade som om , hun ikke havde set den før og spørge : \" Hvor er anden del ? \"",
+    "spans": [
+      {
+        "text": "Sten Baadsgaard",
+        "label": "PER",
+        "start": 4,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Underforstået , at der måtte mangle en side - den med hendes forklaring om Ove .",
+    "spans": [
+      {
+        "text": "Ove",
+        "label": "PER",
+        "start": 75,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Afhørt under vidneansvar afviste kriminalassistent Villy Nielsen , Frederikshavn politi , som sammen med kollegaen Frank B. Madsen foretog afhøringen den 30. december 1981 af Jane Nielsen på hendes bopæl under overværelse af hendes mand , imidlertid , at hun skulle have nævnt noget om , at hun så Ove på drabsdagen .",
+    "spans": [
+      {
+        "text": "Villy Nielsen",
+        "label": "PER",
+        "start": 51,
+        "end": 64
+      },
+      {
+        "text": "Frederikshavn politi",
+        "label": "ORG",
+        "start": 67,
+        "end": 87
+      },
+      {
+        "text": "Frank B. Madsen",
+        "label": "PER",
+        "start": 115,
+        "end": 130
+      },
+      {
+        "text": "Jane Nielsen",
+        "label": "PER",
+        "start": 175,
+        "end": 187
+      },
+      {
+        "text": "Ove",
+        "label": "PER",
+        "start": 298,
+        "end": 301
+      }
+    ]
+  },
+  {
+    "text": "Rapporten , der har kostet 800.000 , er bestilt og betalt af Københavns Amtsråd efter en voldsom debat om , hvorvidt stavepladen var fup eller et værdifuldt middel til at kommunikere med de såkaldt \" vidtgående fysisk og psykisk handicappede \" .",
+    "spans": [
+      {
+        "text": "Københavns Amtsråd",
+        "label": "ORG",
+        "start": 61,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "text": "Brugen af staveplader begyndte i M-huset i Københavns Amts sygehusafdeling for multihandicappede , Vangedehuse , og bredte sig efterhånden til andre institutioner .",
+    "spans": [
+      {
+        "text": "M-huset",
+        "label": "ORG",
+        "start": 33,
+        "end": 40
+      },
+      {
+        "text": "Københavns Amts",
+        "label": "LOC",
+        "start": 43,
+        "end": 58
+      },
+      {
+        "text": "Vangedehuse",
+        "label": "ORG",
+        "start": 99,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "Jeg har ikke set større udvalg af sko i denne specielle stil uden for Paris og London , hvor dejlige damer allerede kravlede op på plateau'erne i vinterkulden .",
+    "spans": [
+      {
+        "text": "Paris",
+        "label": "LOC",
+        "start": 70,
+        "end": 75
+      },
+      {
+        "text": "London",
+        "label": "LOC",
+        "start": 79,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "text": "Sarah-langben-Koch viser 60'ere for B.T. i dag , og jeg garanterer , at sko stilen så længe det unikke varelager haves fås fra str. 36 til 41 - eller i hvert fald til str. 40 .",
+    "spans": [
+      {
+        "text": "Sarah-langben-Koch",
+        "label": "PER",
+        "start": 0,
+        "end": 18
+      },
+      {
+        "text": "B.T.",
+        "label": "ORG",
+        "start": 36,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "text": "Psykedelisk-mønstret klokkehat 149 kr. og Marilyn Monroe badedragt i kulørt Lycra med Marilyn fotografier på numsen 299 kr. - som også er prisen for mange af husets andre badedragter .",
+    "spans": [
+      {
+        "text": "Marilyn Monroe",
+        "label": "PER",
+        "start": 42,
+        "end": 56
+      },
+      {
+        "text": "Lycra",
+        "label": "ORG",
+        "start": 76,
+        "end": 81
+      },
+      {
+        "text": "Marilyn",
+        "label": "PER",
+        "start": 86,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "text": "Nedslidte Levi's jeans til snøre-støvletter fra dengang mor var ung koster 399 kr. - støvletterne 499 kr. .",
+    "spans": [
+      {
+        "text": "Levi's",
+        "label": "ORG",
+        "start": 10,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Men der er et par hundrede at spare på andre af sko-modens sællerter hos Eddie .",
+    "spans": [
+      {
+        "text": "Eddie",
+        "label": "ORG",
+        "start": 73,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Flere gange har Brian Sand været ledsaget af sin hund , når turen gik til Polen for at stå på ski .",
+    "spans": [
+      {
+        "text": "Brian Sand",
+        "label": "PER",
+        "start": 16,
+        "end": 26
+      },
+      {
+        "text": "Polen",
+        "label": "LOC",
+        "start": 74,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "text": "Og der vakte hunden også opsigt , blandt andet fordi Brian iklædte den halstørklæde og en gammel vindjakke med opsmøgede ærmer .",
+    "spans": [
+      {
+        "text": "Brian",
+        "label": "PER",
+        "start": 53,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "Så for at mildne det bastante udseende og tage brodden af eventuelle aggressioner , kalder jeg altid den forhåndenværende hund Pølse , når vi møder fremmede .",
+    "spans": [
+      {
+        "text": "Pølse",
+        "label": "PER",
+        "start": 127,
+        "end": 132
+      }
+    ]
+  },
+  {
+    "text": "Brian Sand mindes en anden pudsig episode angående bull terrierens udseende : \" I en strøgbutik mødte jeg en lille dreng , der næppe var højere end hunden .",
+    "spans": [
+      {
+        "text": "Brian Sand",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Hans navn er John Lee Hooker , født 22. august 1917 i bluesmusikkens hjemstat Mississippi .",
+    "spans": [
+      {
+        "text": "John Lee Hooker",
+        "label": "PER",
+        "start": 13,
+        "end": 28
+      },
+      {
+        "text": "Mississippi",
+        "label": "LOC",
+        "start": 78,
+        "end": 89
+      }
+    ]
+  },
+  {
+    "text": "Og nok fik han først det afgørende gennembrud i 1989 , hvor han fik en Grammy for \" The Healer \" , men elskere af eksempelvis Johnny Winter , Status Quo , Animals , Georgia Satellites , ZZ Top , The Black Crowes og Rolling Stones' guitarist Keith Richards kan roligt lige nu kaste sig i støvet og takke inderligt og intenst for , at John Lee Hooker kom til verden dengang i 1917 .",
+    "spans": [
+      {
+        "text": "Johnny Winter",
+        "label": "PER",
+        "start": 126,
+        "end": 139
+      },
+      {
+        "text": "Status Quo",
+        "label": "ORG",
+        "start": 142,
+        "end": 152
+      },
+      {
+        "text": "Animals",
+        "label": "ORG",
+        "start": 155,
+        "end": 162
+      },
+      {
+        "text": "Georgia Satellites",
+        "label": "ORG",
+        "start": 165,
+        "end": 183
+      },
+      {
+        "text": "ZZ Top",
+        "label": "ORG",
+        "start": 186,
+        "end": 192
+      },
+      {
+        "text": "The Black Crowes",
+        "label": "ORG",
+        "start": 195,
+        "end": 211
+      },
+      {
+        "text": "Rolling Stones'",
+        "label": "ORG",
+        "start": 215,
+        "end": 230
+      },
+      {
+        "text": "Keith Richards",
+        "label": "PER",
+        "start": 241,
+        "end": 255
+      },
+      {
+        "text": "John Lee Hooker",
+        "label": "PER",
+        "start": 333,
+        "end": 348
+      }
+    ]
+  },
+  {
+    "text": "John Lee Hookers indflydelse på andre musikere som sanger og især som guitarist har været intet mindre end monumental .",
+    "spans": [
+      {
+        "text": "John Lee Hookers",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Lee Hooker opfandt den sejt , swingende boogie-guitarstil , som Keith Richards og guitaristerne Francis Rossi og Rick Parfitt i Status Quo har levet fedt og fremragende af gennem fire årtier .",
+    "spans": [
+      {
+        "text": "Lee Hooker",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Keith Richards",
+        "label": "PER",
+        "start": 64,
+        "end": 78
+      },
+      {
+        "text": "Francis Rossi",
+        "label": "PER",
+        "start": 96,
+        "end": 109
+      },
+      {
+        "text": "Rick Parfitt",
+        "label": "PER",
+        "start": 113,
+        "end": 125
+      },
+      {
+        "text": "Status Quo",
+        "label": "ORG",
+        "start": 128,
+        "end": 138
+      }
+    ]
+  },
+  {
+    "text": "I debatten tordnes der løs mod Det kgl. Teaters repertoire .",
+    "spans": [
+      {
+        "text": "Det kgl. Teaters",
+        "label": "ORG",
+        "start": 31,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Det er der for så vidt ikke noget nyt i , bortset fra at kulturkrigen efterhånden har fået mere karakter af Røde-Kro-løjer end af seriøs debat .",
+    "spans": [
+      {
+        "text": "Røde-Kro-løjer",
+        "label": "ORG",
+        "start": 108,
+        "end": 122
+      }
+    ]
+  },
+  {
+    "text": "Selvfølgelig har den barokke udnævnelse af en ny skuespilchef på Det Kgl. en vis underholdningsværdi , og sladder er jo heller ikke at foragte i et provinsielt samfund .",
+    "spans": [
+      {
+        "text": "Det Kgl.",
+        "label": "ORG",
+        "start": 65,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "text": "\" HVERKEN digtende eller malende kunstnere ville stå model til en tilsvarende udgave af selvros og rygklapperi i medierne , \" skriver Anders Rou Jensen .",
+    "spans": [
+      {
+        "text": "Anders Rou Jensen",
+        "label": "PER",
+        "start": 134,
+        "end": 151
+      }
+    ]
+  },
+  {
+    "text": "Den måde , hvorpå rocken sejrer sig til døde ved at vinde så megen overfladeopmærksomhed , at ingen længere er i stand til overhovedet at huske , hvad der fra begyndelsen var målet og meningen med musikken , \" skriver Jensen .",
+    "spans": [
+      {
+        "text": "Jensen",
+        "label": "PER",
+        "start": 218,
+        "end": 224
+      }
+    ]
+  },
+  {
+    "text": "VI citerer en sidste opsang : \" ROCKMUSIK i Danmark defineres ved det navn , som på et givet tidspunkt via sit blikfang , sit privatliv og sin popularitet kan sælge flest aviser og trække flest seere til skærmen .",
+    "spans": [
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 44,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "C. V. Jørgensen er altså en lousy rockmusiker .",
+    "spans": [
+      {
+        "text": "C. V. Jørgensen",
+        "label": "PER",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Men Anne Linnet - oh la la . \"",
+    "spans": [
+      {
+        "text": "Anne Linnet",
+        "label": "PER",
+        "start": 4,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Efter over en uges flugt fra politi og sociale myndigheder er den lille tre-årige Pernille atter helt legalt sammen med sin mor , Yvonne Sølyst , 22 , og bedsteforældre , Ulla og Leif Nielsen .",
+    "spans": [
+      {
+        "text": "Pernille",
+        "label": "PER",
+        "start": 82,
+        "end": 90
+      },
+      {
+        "text": "Yvonne Sølyst",
+        "label": "PER",
+        "start": 130,
+        "end": 143
+      },
+      {
+        "text": "Ulla",
+        "label": "PER",
+        "start": 171,
+        "end": 175
+      },
+      {
+        "text": "Leif Nielsen",
+        "label": "PER",
+        "start": 179,
+        "end": 191
+      }
+    ]
+  },
+  {
+    "text": "Pernille får nemlig alligevel lov at bo hjemme hos sin mor , selvom Ejby kommune for en måned siden besluttede , at hun skulle fjernes med tvang .",
+    "spans": [
+      {
+        "text": "Pernille",
+        "label": "PER",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Ejby kommune",
+        "label": "ORG",
+        "start": 68,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "I går omstødte Odense kommune kort og godt beslutningen .",
+    "spans": [
+      {
+        "text": "Odense kommune",
+        "label": "ORG",
+        "start": 15,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "\" Vi vandt , og Ejby kommune tabte kampen om Pernille .",
+    "spans": [
+      {
+        "text": "Ejby kommune",
+        "label": "ORG",
+        "start": 16,
+        "end": 28
+      },
+      {
+        "text": "Pernille",
+        "label": "PER",
+        "start": 45,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "text": "Det var sandelig godt , vi ikke bare afleverede Pernille og opførte os som lovlydige borgere , \" siger Leif Nielsen , 43 .",
+    "spans": [
+      {
+        "text": "Pernille",
+        "label": "PER",
+        "start": 48,
+        "end": 56
+      },
+      {
+        "text": "Leif Nielsen",
+        "label": "PER",
+        "start": 103,
+        "end": 115
+      }
+    ]
+  },
+  {
+    "text": "I sidste uge sad bedstefaderen ellers to dage i Kolding arrest , efter at være blevet anholdt under mistanke for at vide , hvor barnebarnet var skjult for myndighederne .",
+    "spans": [
+      {
+        "text": "Kolding arrest",
+        "label": "ORG",
+        "start": 48,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "Men tre enige dommere i Østre Landsret underkendte hurtigt varetægtsfængslingen .",
+    "spans": [
+      {
+        "text": "Østre Landsret",
+        "label": "ORG",
+        "start": 24,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Og onsdag led det offentlige i Ejby altså endnu et nederlag i den meget debatterede sag fra Fyn .",
+    "spans": [
+      {
+        "text": "Ejby",
+        "label": "LOC",
+        "start": 31,
+        "end": 35
+      },
+      {
+        "text": "Fyn",
+        "label": "LOC",
+        "start": 92,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "På grund af Yvonne Sølysts nye adresse i Odense skulle børneværnet i byen afprøve tvangsfjernelsen ud fra det samme materiale , som socialudvalget i Ejby havde vurderet ud fra .",
+    "spans": [
+      {
+        "text": "Yvonne Sølysts",
+        "label": "PER",
+        "start": 12,
+        "end": 26
+      },
+      {
+        "text": "Odense",
+        "label": "LOC",
+        "start": 41,
+        "end": 47
+      },
+      {
+        "text": "Ejby",
+        "label": "LOC",
+        "start": 149,
+        "end": 153
+      }
+    ]
+  },
+  {
+    "text": "\" Henning Dyremose er vores mand .",
+    "spans": [
+      {
+        "text": "Henning Dyremose",
+        "label": "PER",
+        "start": 2,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Han er dygtig og sympatisk , men om han er finansminister , eller det er Mogens Lykketoft fra Socialdemokratiet , svarer til forskellen mellem en Hof og en Tuborg .",
+    "spans": [
+      {
+        "text": "Mogens Lykketoft",
+        "label": "PER",
+        "start": 73,
+        "end": 89
+      },
+      {
+        "text": "Socialdemokratiet",
+        "label": "ORG",
+        "start": 94,
+        "end": 111
+      },
+      {
+        "text": "Tuborg",
+        "label": "ORG",
+        "start": 156,
+        "end": 162
+      }
+    ]
+  },
+  {
+    "text": "Vi har hidtil støttet Schlüter og vil fortsat gøre det .",
+    "spans": [
+      {
+        "text": "Schlüter",
+        "label": "PER",
+        "start": 22,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Vi vil hellere have borgerlige regeringer end socialdemokratiske , men KV-regeringen regerer helt på Socialdemokratiets nåde .",
+    "spans": [
+      {
+        "text": "KV-regeringen",
+        "label": "ORG",
+        "start": 71,
+        "end": 84
+      },
+      {
+        "text": "Socialdemokratiets",
+        "label": "ORG",
+        "start": 101,
+        "end": 119
+      }
+    ]
+  },
+  {
+    "text": "Vi har derfor få stærke følelser specielt forbundet med at holde liv i den nuværende regering , \" siger Fremskridtspartiets gruppeformand , Aage Brusgaard .",
+    "spans": [
+      {
+        "text": "Fremskridtspartiets",
+        "label": "ORG",
+        "start": 104,
+        "end": 123
+      },
+      {
+        "text": "Aage Brusgaard",
+        "label": "PER",
+        "start": 140,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "I den situation , hvor Schlüter vælger at gå , vil Aage Brusgaard ikke pege på Dyremose : \" Sandsynligvis vil vi henholde os til en tidligere beslutning om , at vi altid peger på lederen af det største borgerlige parti .",
+    "spans": [
+      {
+        "text": "Schlüter",
+        "label": "PER",
+        "start": 23,
+        "end": 31
+      },
+      {
+        "text": "Aage Brusgaard",
+        "label": "PER",
+        "start": 51,
+        "end": 65
+      },
+      {
+        "text": "Dyremose",
+        "label": "PER",
+        "start": 79,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Men industriminister Anne Birgitte Lundholt kunne da være en mulighed .",
+    "spans": [
+      {
+        "text": "Anne Birgitte Lundholt",
+        "label": "PER",
+        "start": 21,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "Hun kunne være en fin chef for en kommende borgerlig regering , der dermed ville få en langt skarpere profil , \" siger Aage Brusgaard .",
+    "spans": [
+      {
+        "text": "Aage Brusgaard",
+        "label": "PER",
+        "start": 119,
+        "end": 133
+      }
+    ]
+  },
+  {
+    "text": "Senere på dagen var der hold-tidskørsel , og her triumferede Ariostea med sejr i 41,23 minut for 36,5 km. .",
+    "spans": [
+      {
+        "text": "Ariostea",
+        "label": "ORG",
+        "start": 61,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "text": "På andenpladsen kom Castorama med Laurent Fignon og Bjarne Riis på 41,31 .",
+    "spans": [
+      {
+        "text": "Castorama",
+        "label": "ORG",
+        "start": 20,
+        "end": 29
+      },
+      {
+        "text": "Laurent Fignon",
+        "label": "PER",
+        "start": 34,
+        "end": 48
+      },
+      {
+        "text": "Bjarne Riis",
+        "label": "PER",
+        "start": 52,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "text": "Så fulgte Panasonic , PDM , Clas , Buckler og overraskende kun som nr. syv \" Z \" med Lemond .",
+    "spans": [
+      {
+        "text": "Panasonic",
+        "label": "ORG",
+        "start": 10,
+        "end": 19
+      },
+      {
+        "text": "PDM",
+        "label": "ORG",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "text": "Clas",
+        "label": "ORG",
+        "start": 28,
+        "end": 32
+      },
+      {
+        "text": "Buckler",
+        "label": "ORG",
+        "start": 35,
+        "end": 42
+      },
+      {
+        "text": "Z",
+        "label": "ORG",
+        "start": 77,
+        "end": 78
+      },
+      {
+        "text": "Lemond",
+        "label": "PER",
+        "start": 85,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "text": "De næste var Motorola , Gatorade-Chateau-d'Ax , Banesto og Amaya med Per Pedersen .",
+    "spans": [
+      {
+        "text": "Motorola",
+        "label": "ORG",
+        "start": 13,
+        "end": 21
+      },
+      {
+        "text": "Gatorade-Chateau-d'Ax",
+        "label": "ORG",
+        "start": 24,
+        "end": 45
+      },
+      {
+        "text": "Banesto",
+        "label": "ORG",
+        "start": 48,
+        "end": 55
+      },
+      {
+        "text": "Amaya",
+        "label": "ORG",
+        "start": 59,
+        "end": 64
+      },
+      {
+        "text": "Per Pedersen",
+        "label": "PER",
+        "start": 69,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "text": "Man havde endda troet , at TVM med Jesper Skibby kunne klare en topplacering , hvorved Skibby var kommet langt op i den samlede stilling , men holdet havde uheld og fandt aldrig rytmen .",
+    "spans": [
+      {
+        "text": "TVM",
+        "label": "ORG",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "text": "Jesper Skibby",
+        "label": "PER",
+        "start": 35,
+        "end": 48
+      },
+      {
+        "text": "Skibby",
+        "label": "PER",
+        "start": 87,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "text": "Alcala havde punktering efter fem kilometer , og Greg Lemond punkterede efter kun 10 meters kørsel .",
+    "spans": [
+      {
+        "text": "Alcala",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "text": "Greg Lemond",
+        "label": "PER",
+        "start": 49,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "Ariostea-mandskabet fik melding om , at de førte holdløbet .",
+    "spans": [
+      {
+        "text": "Ariostea-mandskabet",
+        "label": "ORG",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "Her gled Rolf Sørensens baghjul , så han styrtede og rev både Moreno Argentin og Cassani med .",
+    "spans": [
+      {
+        "text": "Rolf Sørensens",
+        "label": "PER",
+        "start": 9,
+        "end": 23
+      },
+      {
+        "text": "Moreno Argentin",
+        "label": "PER",
+        "start": 62,
+        "end": 77
+      },
+      {
+        "text": "Cassani",
+        "label": "PER",
+        "start": 81,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "text": "Maskinchef på Ask var Ole Rønnow , som også var maskinchef på Peder Paars .",
+    "spans": [
+      {
+        "text": "Ole Rønnow",
+        "label": "PER",
+        "start": 22,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Han har været med til over for DSB at fastslå , at både Ask og Urd var gode skibe .",
+    "spans": [
+      {
+        "text": "DSB",
+        "label": "ORG",
+        "start": 31,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "DSBs omstridte Kalundborg-Århus-rute forfølges af problemer : Urd måtte i går eftermiddags have Århus Havns bugserbåd , Hermes , til at skubbe sig fra reparationskaj til lastekaj .",
+    "spans": [
+      {
+        "text": "DSBs",
+        "label": "ORG",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "Kalundborg-Århus-rute",
+        "label": "LOC",
+        "start": 15,
+        "end": 36
+      },
+      {
+        "text": "Århus Havns",
+        "label": "LOC",
+        "start": 96,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "Rutechef Ivan Madsen : \" Jeg ved ikke hvorfor .",
+    "spans": [
+      {
+        "text": "Ivan Madsen",
+        "label": "PER",
+        "start": 9,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Forklaringen , som rutechefen ikke kendte , er , at Urd i går havde vovet sig mod Kalundborg .",
+    "spans": [
+      {
+        "text": "Kalundborg",
+        "label": "LOC",
+        "start": 82,
+        "end": 92
+      }
+    ]
+  },
+  {
+    "text": "Den ene maskine brød sammen , hvorefter Urd vendte om og humpede til Århus , fordi DSB her har reservedele .",
+    "spans": [
+      {
+        "text": "Århus",
+        "label": "LOC",
+        "start": 69,
+        "end": 74
+      },
+      {
+        "text": "DSB",
+        "label": "ORG",
+        "start": 83,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Imens bankede Ask i kajen i Kalundborg , hvorefter enhver kunne se , at nu skulle Urd i rute som Ask .",
+    "spans": [
+      {
+        "text": "Kalundborg",
+        "label": "LOC",
+        "start": 28,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "text": "Forslaget om fælles gruppemøder mellem V og K er ikke helt nyt .",
+    "spans": [
+      {
+        "text": "V",
+        "label": "ORG",
+        "start": 39,
+        "end": 40
+      },
+      {
+        "text": "K",
+        "label": "ORG",
+        "start": 44,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "Faktisk blev der holdt et historisk fælles gruppemøde forud for lanceringen af KV-planen i 1964 , og i 1965 kostede det Venstres daværende leder , tidl. statsminister Erik Eriksen , rollen som sit partis frontfigur , at han direkte gik ind for en sammenslutning af de to partier .",
+    "spans": [
+      {
+        "text": "KV-planen",
+        "label": "ORG",
+        "start": 79,
+        "end": 88
+      },
+      {
+        "text": "Venstres",
+        "label": "ORG",
+        "start": 120,
+        "end": 128
+      },
+      {
+        "text": "Erik Eriksen",
+        "label": "PER",
+        "start": 167,
+        "end": 179
+      }
+    ]
+  },
+  {
+    "text": "Efter en weekend hos familien på Fanø har han mandag været i Bruxelles til EF-fiskeriministermøde .",
+    "spans": [
+      {
+        "text": "Fanø",
+        "label": "LOC",
+        "start": 33,
+        "end": 37
+      },
+      {
+        "text": "Bruxelles",
+        "label": "LOC",
+        "start": 61,
+        "end": 70
+      },
+      {
+        "text": "EF-fiskeriministermøde",
+        "label": "ORG",
+        "start": 75,
+        "end": 97
+      }
+    ]
+  },
+  {
+    "text": "Alligevel sidder vi møde efter møde og giver bindende mandat til ministre , som skal forhandle Danmarks synspunkt i EFs ministerråd , \" siger Peter Duetoft .",
+    "spans": [
+      {
+        "text": "Danmarks",
+        "label": "LOC",
+        "start": 95,
+        "end": 103
+      },
+      {
+        "text": "EFs",
+        "label": "ORG",
+        "start": 116,
+        "end": 119
+      },
+      {
+        "text": "Peter Duetoft",
+        "label": "PER",
+        "start": 142,
+        "end": 155
+      }
+    ]
+  },
+  {
+    "text": "Han henviser bl.a. til B.T.s afsløring af et EF-direktiv , som af hensyn til folkesundheden forbyder private slagtehuse at slagte mere end 12 kreaturer om ugen .",
+    "spans": [
+      {
+        "text": "B.T.s",
+        "label": "ORG",
+        "start": 23,
+        "end": 28
+      },
+      {
+        "text": "EF-direktiv",
+        "label": "ORG",
+        "start": 45,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Duetoft redegør for sit kontroversielle synspunkt i en ny bog om EFunionerne , som udkommer på mandag .",
+    "spans": [
+      {
+        "text": "Duetoft",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "EFunionerne",
+        "label": "ORG",
+        "start": 65,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "Peter Duetoft , der er erklæret supereuropæer og har en fortid i EF-parlamentet , har skrevet bogen sammen med Jens Peter Bonde fra Folkebevægelsen mod EF .",
+    "spans": [
+      {
+        "text": "Peter Duetoft",
+        "label": "PER",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "text": "supereuropæer",
+        "label": "LOC",
+        "start": 32,
+        "end": 45
+      },
+      {
+        "text": "EF-parlamentet",
+        "label": "ORG",
+        "start": 65,
+        "end": 79
+      },
+      {
+        "text": "Jens Peter Bonde",
+        "label": "PER",
+        "start": 111,
+        "end": 127
+      },
+      {
+        "text": "Folkebevægelsen mod EF",
+        "label": "ORG",
+        "start": 132,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "ODENSE : De er begge fædre , 31 år gamle og med begyndende tendens til \" høj pande \" .",
+    "spans": [
+      {
+        "text": "ODENSE",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Og så er de i øvrigt to af Odense Teaters mest talentfulde skuespillere .",
+    "spans": [
+      {
+        "text": "Odense Teaters",
+        "label": "ORG",
+        "start": 27,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Nu skal de spille Tvebak og Jonathan i dramatiseringen af Astrid Lindgrens eventyr \" Brødrene Løvehjerte \" .",
+    "spans": [
+      {
+        "text": "Tvebak",
+        "label": "PER",
+        "start": 18,
+        "end": 24
+      },
+      {
+        "text": "Astrid Lindgrens",
+        "label": "PER",
+        "start": 58,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "text": "Kim Harris og Henrik Prip knokler i disse dage med at genfinde deres barndommelige sindelag .",
+    "spans": [
+      {
+        "text": "Kim Harris",
+        "label": "PER",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "Henrik Prip",
+        "label": "PER",
+        "start": 14,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "\" Ja , for vi har nemlig kendt hinanden siden vi var otte-ti år gamle , \" siger Kim Harris .",
+    "spans": [
+      {
+        "text": "Kim Harris",
+        "label": "PER",
+        "start": 80,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "\" Dengang kom vi på samme fodbold-hold i Vedbæk Boldklub .",
+    "spans": [
+      {
+        "text": "Vedbæk Boldklub",
+        "label": "ORG",
+        "start": 41,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "text": "Vi tilbragte mange år sammen på det hold , \" siger Henrik Prip .",
+    "spans": [
+      {
+        "text": "Henrik Prip",
+        "label": "PER",
+        "start": 51,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "text": "\" Det var dengang , vi røg vores første smøger sammen , \" husker Kim og bakker på piben - man er vel blevet voksen .",
+    "spans": [
+      {
+        "text": "Kim",
+        "label": "PER",
+        "start": 65,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "text": "Simon Wiesenthal er 83 og minsandten i sin høje alder stadig aktiv i sin jagt på tidligere nazister , der gemmer sig verden over .",
+    "spans": [
+      {
+        "text": "Simon Wiesenthal",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Han er også stadig aktiv som forfatter : Munksgaards forlag har netop udsendt andet oplag af bogen \" Retfærdighed - ikke hævn \" , der af forfatteren regnes som hans sidste bog .",
+    "spans": [
+      {
+        "text": "Munksgaards forlag",
+        "label": "ORG",
+        "start": 41,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "text": "At Wiesenthal overlevede krigen , er et under .",
+    "spans": [
+      {
+        "text": "Wiesenthal",
+        "label": "PER",
+        "start": 3,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Han var anbragt i 12 forskellige koncentrationslejre i alt , heriblandt Lvov , hvor kun 34 af 149.000 jøder var i live efter krigen .",
+    "spans": [
+      {
+        "text": "Lvov",
+        "label": "LOC",
+        "start": 72,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "text": "\" Når boligministeren ikke vil , så må jeg gøre det , \" siger Kirsten Jacobsen med henvisning til , at boligminister Svend Erik Hovmand ( V ) har afvist at foretage sig noget , før kammeradvokaten har vurderet sagen .",
+    "spans": [
+      {
+        "text": "Kirsten Jacobsen",
+        "label": "PER",
+        "start": 62,
+        "end": 78
+      },
+      {
+        "text": "Svend Erik Hovmand",
+        "label": "PER",
+        "start": 117,
+        "end": 135
+      },
+      {
+        "text": "V",
+        "label": "ORG",
+        "start": 138,
+        "end": 139
+      }
+    ]
+  },
+  {
+    "text": "Dermed tager hun bogstavelig talt Ungbos tidligere formand , Torben Lund på ordet , idet næstformanden i den socialdemokratiske gruppe i aftes udtalte til TV-2-Nyhederne , at \" det er op til en dommer at afgøre , om der er foregået ulovligheder i Ungbos administration . \"",
+    "spans": [
+      {
+        "text": "Ungbos",
+        "label": "ORG",
+        "start": 34,
+        "end": 40
+      },
+      {
+        "text": "Torben Lund",
+        "label": "PER",
+        "start": 61,
+        "end": 72
+      },
+      {
+        "text": "Ungbos",
+        "label": "ORG",
+        "start": 247,
+        "end": 253
+      }
+    ]
+  },
+  {
+    "text": "Kirsten Jacobsen vil i anmeldelsen bede politidirektøren undersøge , om Landsforeningen Ungbo har begået mandatsvig , underslæb og bedrageri i forbindelse med statens milliontilskud til Ungbos virksomhed .",
+    "spans": [
+      {
+        "text": "Kirsten Jacobsen",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "text": "Landsforeningen Ungbo",
+        "label": "ORG",
+        "start": 72,
+        "end": 93
+      },
+      {
+        "text": "Ungbos",
+        "label": "ORG",
+        "start": 186,
+        "end": 192
+      }
+    ]
+  },
+  {
+    "text": "Siden Ungbo for tre uger siden gik konkurs med et underskud på 44,1 mill. kroner , er der næppe gået en dag uden nye belastende afsløringer af Ungbos måde at drive almennyttig udlejningsvirksomhed på er dukket op .",
+    "spans": [
+      {
+        "text": "Ungbo",
+        "label": "ORG",
+        "start": 6,
+        "end": 11
+      },
+      {
+        "text": "Ungbos",
+        "label": "ORG",
+        "start": 143,
+        "end": 149
+      }
+    ]
+  },
+  {
+    "text": "En stor del af Ungbos 1.600 ungdomsboliger og 2.200 hybler er truet af tvangsauktion .",
+    "spans": [
+      {
+        "text": "Ungbos",
+        "label": "ORG",
+        "start": 15,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "I går hævdede de to tiltalte , at computermanden blot ringede for at fortælle , at han skulle i lag med nogle damer .",
+    "spans": [
+      {
+        "text": "computermanden",
+        "label": "PER",
+        "start": 34,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Det er en dum telefon , \" sagde \" Mercedesmanden \" .",
+    "spans": [
+      {
+        "text": "Mercedesmanden",
+        "label": "PER",
+        "start": 34,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "\" Havde I mistanke om , at telefonen blev aflyttet ? \" spurgte anklager Annette Vester .",
+    "spans": [
+      {
+        "text": "Annette Vester",
+        "label": "PER",
+        "start": 72,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "text": "Computermanden : \" Hvorfor skulle den det ?",
+    "spans": [
+      {
+        "text": "Computermanden",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Så kunne min kone måske få mistanke , og det ragede ikke andre , at jeg var på bordel i Holland . \"",
+    "spans": [
+      {
+        "text": "Holland",
+        "label": "LOC",
+        "start": 88,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "\" Mercedes-manden \" : \" Jeg skulle gå til en anden telefon , fordi han skulle fortælle om sine udskejelser i Holland . \"",
+    "spans": [
+      {
+        "text": "Mercedes-manden",
+        "label": "PER",
+        "start": 2,
+        "end": 17
+      },
+      {
+        "text": "Holland",
+        "label": "LOC",
+        "start": 109,
+        "end": 116
+      }
+    ]
+  },
+  {
+    "text": "Inden computermanden kørte mod Holland , lyttede politiet også på en samtale fra \" Mercedes-manden \" til én af hans venner .",
+    "spans": [
+      {
+        "text": "computermanden",
+        "label": "PER",
+        "start": 6,
+        "end": 20
+      },
+      {
+        "text": "Mercedes-manden",
+        "label": "PER",
+        "start": 83,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "\" Jeg fik jo nogle bank af Anders Myralf i havneugen i København .",
+    "spans": [
+      {
+        "text": "Anders Myralf",
+        "label": "PER",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "text": "København",
+        "label": "LOC",
+        "start": 55,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "\" Der findes heldigvis kun en kopi , og den er låst væk på et hemmeligt sted , \" fortæller Peter Gren Larsen , som fik alle vennerne til at agere skuespillere i den film , han helst ikke vil mindes om .",
+    "spans": [
+      {
+        "text": "Peter Gren Larsen",
+        "label": "PER",
+        "start": 91,
+        "end": 108
+      }
+    ]
+  },
+  {
+    "text": "Hun bar godt som vi plejer at sige hjemme i Danmark .",
+    "spans": [
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 44,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "text": "Nanna Bisp Büchert , inspirerende fotograf , blænder på fredag op for sine nye \" Anderledes Familiebilleder \" .",
+    "spans": [
+      {
+        "text": "Nanna Bisp Büchert",
+        "label": "PER",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Oven i købet har Ricardo det problem , at han i forårets tre testkampe ikke disponerer over de olympiske spillere fra U-21 holdet .",
+    "spans": [
+      {
+        "text": "Ricardo",
+        "label": "PER",
+        "start": 17,
+        "end": 24
+      },
+      {
+        "text": "U-21",
+        "label": "ORG",
+        "start": 118,
+        "end": 122
+      }
+    ]
+  },
+  {
+    "text": "Susanne , Østrup",
+    "spans": [
+      {
+        "text": "Susanne",
+        "label": "PER",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Østrup",
+        "label": "LOC",
+        "start": 10,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Overfarten på Storebælt åbnedes for almindelig trafik den 1. december 1883 .",
+    "spans": [
+      {
+        "text": "Storebælt",
+        "label": "LOC",
+        "start": 14,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Ligesom Italiens politichef Vincenzo Parisi måtte statens overhoved finde sig i vrede tilråb , og dukke sig for folk , der slog ud efter og sparkede efter ham .",
+    "spans": [
+      {
+        "text": "Italiens",
+        "label": "LOC",
+        "start": 8,
+        "end": 16
+      },
+      {
+        "text": "Vincenzo Parisi",
+        "label": "PER",
+        "start": 28,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "text": "\" Det har bankerne erkendt , og derfor går Østlandepuljen ind med individuel støtte til danske rådgiveres forundersøgelser for både Verdensbanken og EBRD , \" siger Jens Erik Staalby .",
+    "spans": [
+      {
+        "text": "Østlandepuljen",
+        "label": "ORG",
+        "start": 43,
+        "end": 57
+      },
+      {
+        "text": "Verdensbanken",
+        "label": "ORG",
+        "start": 132,
+        "end": 145
+      },
+      {
+        "text": "EBRD",
+        "label": "ORG",
+        "start": 149,
+        "end": 153
+      },
+      {
+        "text": "Jens Erik Staalby",
+        "label": "PER",
+        "start": 164,
+        "end": 181
+      }
+    ]
+  },
+  {
+    "text": "En af landets juridiske eksperter i bofællesskabets jungle er ejendomsmægler , cand.-jur. Svend Trangeled fra advokatfirmaet Niels Gesner , København .",
+    "spans": [
+      {
+        "text": "Svend Trangeled",
+        "label": "PER",
+        "start": 90,
+        "end": 105
+      },
+      {
+        "text": "Niels Gesner",
+        "label": "ORG",
+        "start": 125,
+        "end": 137
+      },
+      {
+        "text": "København",
+        "label": "LOC",
+        "start": 140,
+        "end": 149
+      }
+    ]
+  },
+  {
+    "text": "Det serbisk dominerede nyhedsbureau Tanjug har tidligere rapporteret , at omkring 1.700 artillierigranater er havnet inden for de serbisk dominerede områder inden for et døgn .",
+    "spans": [
+      {
+        "text": "Tanjug",
+        "label": "ORG",
+        "start": 36,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Den danske kvinde får sin store chance med en ny TV-serie , som David Lynch har skabt .",
+    "spans": [
+      {
+        "text": "David Lynch",
+        "label": "PER",
+        "start": 64,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "text": "STEVEN SPIELBERG måtte iscenesætte sit eget private eventyr her for nylig .",
+    "spans": [
+      {
+        "text": "STEVEN SPIELBERG",
+        "label": "PER",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Papin fik lønforhøjelse , og succes'en ventede lige rundt om hjørnet .",
+    "spans": [
+      {
+        "text": "Papin",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "De har været i Sverige , siden de kom hertil i 1986 som flygtninge .",
+    "spans": [
+      {
+        "text": "Sverige",
+        "label": "LOC",
+        "start": 15,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "\" Vi ses i Helvede ! \" svarede han hende og tog op på skolen for at tale med hende .",
+    "spans": [
+      {
+        "text": "Helvede",
+        "label": "LOC",
+        "start": 11,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Det er det , fordi Rushdie åbenbart læser Orwell gennem den britiske venstreorienterede tradition .",
+    "spans": [
+      {
+        "text": "Rushdie",
+        "label": "PER",
+        "start": 19,
+        "end": 26
+      },
+      {
+        "text": "Orwell",
+        "label": "PER",
+        "start": 42,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Oprindelig havde hans bekendte Steen Olsen , der arbejder i et kontorvarefirma i København , bestilt programmet for prisen på 100 programmørtimer .",
+    "spans": [
+      {
+        "text": "Steen Olsen",
+        "label": "PER",
+        "start": 31,
+        "end": 42
+      },
+      {
+        "text": "København",
+        "label": "LOC",
+        "start": 81,
+        "end": 90
+      }
+    ]
+  },
+  {
+    "text": "Så langt ned i brønden faldt Morten : 25 m. .",
+    "spans": [
+      {
+        "text": "Morten",
+        "label": "PER",
+        "start": 29,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Og Lotte løber ikke med sladder , er jeg sikker på . \"",
+    "spans": [
+      {
+        "text": "Lotte",
+        "label": "PER",
+        "start": 3,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Ikke desto mindre havde general Augusto Pinochet for få år siden store planer for øen .",
+    "spans": [
+      {
+        "text": "Augusto Pinochet",
+        "label": "PER",
+        "start": 32,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Med pistolen rettet mod hovedet blev postchaufføren dirigeret ud ad Enghavevej , forbi Sydhavn S-station mod Sjællandsbroen .",
+    "spans": [
+      {
+        "text": "Enghavevej",
+        "label": "LOC",
+        "start": 68,
+        "end": 78
+      },
+      {
+        "text": "Sydhavn",
+        "label": "LOC",
+        "start": 87,
+        "end": 94
+      },
+      {
+        "text": "S-station",
+        "label": "LOC",
+        "start": 95,
+        "end": 104
+      },
+      {
+        "text": "Sjællandsbroen",
+        "label": "LOC",
+        "start": 109,
+        "end": 123
+      }
+    ]
+  },
+  {
+    "text": "Serbiens præsident Slobodan Milosevic appellerede også i går til USA og Rusland om at bruge deres indflydelse til at hjælpe med at bringe konflikten i Bosnien-Hercegovina til ophør , sagde Serbiens udenrigsminister .",
+    "spans": [
+      {
+        "text": "Serbiens",
+        "label": "LOC",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "text": "Slobodan Milosevic",
+        "label": "PER",
+        "start": 19,
+        "end": 37
+      },
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 65,
+        "end": 68
+      },
+      {
+        "text": "Rusland",
+        "label": "LOC",
+        "start": 72,
+        "end": 79
+      },
+      {
+        "text": "Bosnien-Hercegovina",
+        "label": "LOC",
+        "start": 151,
+        "end": 170
+      },
+      {
+        "text": "Serbiens",
+        "label": "LOC",
+        "start": 189,
+        "end": 197
+      }
+    ]
+  },
+  {
+    "text": "Måske skyldes det ændringer i de elektriske strømme i Jordens flydende ydre kerne .",
+    "spans": [
+      {
+        "text": "Jordens",
+        "label": "LOC",
+        "start": 54,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Oluf Terp har et svar på de spørgsmål , mange gode mænd stiller ham i disse tider .",
+    "spans": [
+      {
+        "text": "Oluf Terp",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "ODENSE : \" Det er totalt meningsløst og uforståeligt . \"",
+    "spans": [
+      {
+        "text": "ODENSE",
+        "label": "LOC",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "I fælledklubben Heimdal blev de første fodboldstøvler løbet skæve .",
+    "spans": [
+      {
+        "text": "Heimdal",
+        "label": "ORG",
+        "start": 16,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Palle Kreiberg var lærer , men i sin fritid arbejdede han som luftfotograf med firmanavnet Gy-Kort .",
+    "spans": [
+      {
+        "text": "Palle Kreiberg",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "Gy-Kort",
+        "label": "ORG",
+        "start": 91,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "text": "Den danske importør , Vilh. Nellemann Autoimport , har besluttet at satse på markedet for jobbiler frem for at sprede sig for meget .",
+    "spans": [
+      {
+        "text": "Vilh. Nellemann Autoimport",
+        "label": "ORG",
+        "start": 22,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "text": "Tværtimod er det en af ruslands få succeshistorier , der optræder når rockgruppen Gorky Park indleder deres Danmarks-turné i de smukke søers by .",
+    "spans": [
+      {
+        "text": "ruslands",
+        "label": "PER",
+        "start": 23,
+        "end": 31
+      },
+      {
+        "text": "Gorky Park",
+        "label": "ORG",
+        "start": 82,
+        "end": 92
+      },
+      {
+        "text": "Danmarks-turné",
+        "label": "LOC",
+        "start": 108,
+        "end": 122
+      }
+    ]
+  },
+  {
+    "text": "Selv havde han sneget sig ind i mængden foran det tidligere kejserslot og hørt Karl Liebknecht udråbe den socialistiske republik baseret på arbejder- og soldaterråd .",
+    "spans": [
+      {
+        "text": "Karl Liebknecht",
+        "label": "PER",
+        "start": 79,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "To midaldrende kvinder i den forreste af to nævninge-rækker knugede hinandens hænder , mens kendelserne blev læst højt af distriktsdommer , Stanley Marcus' sekretær .",
+    "spans": [
+      {
+        "text": "Stanley Marcus'",
+        "label": "PER",
+        "start": 140,
+        "end": 155
+      }
+    ]
+  },
+  {
+    "text": "\" Danmark har et godt kollektiv .",
+    "spans": [
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "\" Man kan gå flere veje nu , og på mange måder føler jeg , at vi har større albuerum , end man for eksempel havde i 1950'erne , \" siger Jesper Termansen , der har søgt om at komme et år til USA og lære matematik .",
+    "spans": [
+      {
+        "text": "Jesper Termansen",
+        "label": "PER",
+        "start": 136,
+        "end": 152
+      },
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 190,
+        "end": 193
+      }
+    ]
+  },
+  {
+    "text": "\" Men Færøerne tilhører dog det danske rigsfællesskab , \" siger Erik Hjorth Nielsen .",
+    "spans": [
+      {
+        "text": "Færøerne",
+        "label": "LOC",
+        "start": 6,
+        "end": 14
+      },
+      {
+        "text": "Erik Hjorth Nielsen",
+        "label": "PER",
+        "start": 64,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "text": "\" Vi har erkendt , at for at få en bedre kvalitet på det almene stof , må stiftstidenderne gå sammen , \" siger Aalborg Stiftstidendes ansvarshavende chefredaktør og administrerende direktør , Erling Brøndum .",
+    "spans": [
+      {
+        "text": "Aalborg Stiftstidendes",
+        "label": "ORG",
+        "start": 111,
+        "end": 133
+      },
+      {
+        "text": "Erling Brøndum",
+        "label": "PER",
+        "start": 192,
+        "end": 206
+      }
+    ]
+  },
+  {
+    "text": "Han pegede ud over de forblæste græstoppe på vidderne i de tidligere Sovjetrepublikker Uzbekistan og Kazakstan - mindre end 350 km fra den afghanske grænse .",
+    "spans": [
+      {
+        "text": "Sovjetrepublikker",
+        "label": "LOC",
+        "start": 69,
+        "end": 86
+      },
+      {
+        "text": "Uzbekistan",
+        "label": "LOC",
+        "start": 87,
+        "end": 97
+      },
+      {
+        "text": "Kazakstan",
+        "label": "LOC",
+        "start": 101,
+        "end": 110
+      }
+    ]
+  },
+  {
+    "text": "I 225 år har der været smykke- og ur-industri i Pforzheim .",
+    "spans": [
+      {
+        "text": "Pforzheim",
+        "label": "LOC",
+        "start": 48,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "text": "Kun Frigodan , producent af dybfrosne grøntsager , trak sektorens regnskabsresultat i den forkerte retning som følge af sidste års fejlslagne ærtehøst i Danmark .",
+    "spans": [
+      {
+        "text": "Frigodan",
+        "label": "ORG",
+        "start": 4,
+        "end": 12
+      },
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 153,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "text": "Det samme vil Bank .",
+    "spans": [
+      {
+        "text": "Bank",
+        "label": "PER",
+        "start": 14,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Gøngehøvdingen stred sig i aftes igennem sjette af de tretten afsnit på Danmarks Radios tv .",
+    "spans": [
+      {
+        "text": "Gøngehøvdingen",
+        "label": "PER",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "Danmarks Radios",
+        "label": "ORG",
+        "start": 72,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "text": "Der ligger fire skodder plus en hel Camel .",
+    "spans": [
+      {
+        "text": "Camel",
+        "label": "ORG",
+        "start": 36,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Artiklen blev sidst i maj sendt til Jyllands-Posten , Berlingske Tidende og Århus Stiftstidende .",
+    "spans": [
+      {
+        "text": "Jyllands-Posten",
+        "label": "ORG",
+        "start": 36,
+        "end": 51
+      },
+      {
+        "text": "Berlingske Tidende",
+        "label": "ORG",
+        "start": 54,
+        "end": 72
+      },
+      {
+        "text": "Århus Stiftstidende",
+        "label": "ORG",
+        "start": 76,
+        "end": 95
+      }
+    ]
+  },
+  {
+    "text": "Søværnets auktion omfatter fire patruljebåde af Daphne-klassen , bygget i begyndelsen af tresserne på Orlogsværftet , fem gasturbine-torpedobåde af Søløveklassen , alle afleveret fra orlogsværftet i 1965-67 .",
+    "spans": [
+      {
+        "text": "Søværnets",
+        "label": "ORG",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Daphne-klassen",
+        "label": "PER",
+        "start": 48,
+        "end": 62
+      },
+      {
+        "text": "Orlogsværftet",
+        "label": "ORG",
+        "start": 102,
+        "end": 115
+      },
+      {
+        "text": "orlogsværftet",
+        "label": "ORG",
+        "start": 183,
+        "end": 196
+      }
+    ]
+  },
+  {
+    "text": "Det er kræfter , som går ind for lovliggørelse af Christiania , og som indser , at fristaden ikke kan bygge sin fremtid og sin økonomi på hashhandel .",
+    "spans": [
+      {
+        "text": "Christiania",
+        "label": "LOC",
+        "start": 50,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "text": "Begge domme er anket til landsretten af henholdsvis Den Danske Forening og af direktør Jens Sejersen , der var sagsøgt i begge sager .",
+    "spans": [
+      {
+        "text": "Den Danske Forening",
+        "label": "ORG",
+        "start": 52,
+        "end": 71
+      },
+      {
+        "text": "Jens Sejersen",
+        "label": "PER",
+        "start": 87,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "text": "Gunnar trak den øverste skuffe ud og lagde brevet på bordet .",
+    "spans": [
+      {
+        "text": "Gunnar",
+        "label": "PER",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Kampen afslørede med røntgen-blik , hvor vigtige Peter Schmeichel , Flemming Povlsen , Kim Vilfort og Kim Christofte er for Danmark .",
+    "spans": [
+      {
+        "text": "Peter Schmeichel",
+        "label": "PER",
+        "start": 49,
+        "end": 65
+      },
+      {
+        "text": "Flemming Povlsen",
+        "label": "PER",
+        "start": 68,
+        "end": 84
+      },
+      {
+        "text": "Kim Vilfort",
+        "label": "PER",
+        "start": 87,
+        "end": 98
+      },
+      {
+        "text": "Kim Christofte",
+        "label": "PER",
+        "start": 102,
+        "end": 116
+      },
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 124,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "text": "Vinteren har været barsk og drøj for Brøndby-ledelsens ellers så velplejede image .",
+    "spans": [
+      {
+        "text": "Brøndby-ledelsens",
+        "label": "ORG",
+        "start": 37,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "text": "Det er situationen i Varde Bank , som i går - med en for branchen usædvanlig åbenhed - lancerede den plan , der skal redde bankens selvstændighed .",
+    "spans": [
+      {
+        "text": "Varde Bank",
+        "label": "ORG",
+        "start": 21,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "Her er det tre gøglere fra Die Onkels , som jo kommer fra en helt anden verden end dansens med et umiddelbart , mere naturligt , fysisk og meget kraftfuldt udtryk , som danserne savner , \" siger hun .",
+    "spans": [
+      {
+        "text": "Die Onkels",
+        "label": "ORG",
+        "start": 27,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Kort før invasionen bestilte han en graveret , schweizisk , guldpistol vurderet til 7.000 pund fra Asprey's , der er den engelske dronnings juvelér i London .",
+    "spans": [
+      {
+        "text": "Asprey's",
+        "label": "ORG",
+        "start": 99,
+        "end": 107
+      },
+      {
+        "text": "London",
+        "label": "LOC",
+        "start": 150,
+        "end": 156
+      }
+    ]
+  },
+  {
+    "text": "\" Den går lige præcis der , hvor politiske dispositioner træffes af private årsager , \" mener Tage Kaarsted .",
+    "spans": [
+      {
+        "text": "Tage Kaarsted",
+        "label": "PER",
+        "start": 94,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "I bidende kulde og sne har omkring hundrede fotografer og journalister fra en lang række lande i flere dage formeligt besat Glienicke broen i Vest-Berlins sydvestlige hjørne .",
+    "spans": [
+      {
+        "text": "Glienicke broen",
+        "label": "LOC",
+        "start": 124,
+        "end": 139
+      },
+      {
+        "text": "Vest-Berlins",
+        "label": "LOC",
+        "start": 142,
+        "end": 154
+      }
+    ]
+  },
+  {
+    "text": "Skuespilhuset er også på dagsordenen i et nyt udvalg på tværs af Kulturministeriet , Finansministeriet , Forsvarsministeriet og Miljøministeriet , med depertementschef Michael Christiansen fra Forsvarsministeriet som formand .",
+    "spans": [
+      {
+        "text": "Skuespilhuset",
+        "label": "ORG",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "text": "Kulturministeriet",
+        "label": "ORG",
+        "start": 65,
+        "end": 82
+      },
+      {
+        "text": "Finansministeriet",
+        "label": "ORG",
+        "start": 85,
+        "end": 102
+      },
+      {
+        "text": "Forsvarsministeriet",
+        "label": "ORG",
+        "start": 105,
+        "end": 124
+      },
+      {
+        "text": "Miljøministeriet",
+        "label": "ORG",
+        "start": 128,
+        "end": 144
+      },
+      {
+        "text": "Michael Christiansen",
+        "label": "PER",
+        "start": 168,
+        "end": 188
+      },
+      {
+        "text": "Forsvarsministeriet",
+        "label": "ORG",
+        "start": 193,
+        "end": 212
+      }
+    ]
+  },
+  {
+    "text": "\" Det var Beatles , der satte mig i gang i rockmusikken , og jeg syntes stadigvæk i dag , at Beatles' samlede produktion er det bedste musik , der nogensinde er lavet , \" siger Nils Lofgren .",
+    "spans": [
+      {
+        "text": "Beatles",
+        "label": "ORG",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "text": "Beatles'",
+        "label": "ORG",
+        "start": 93,
+        "end": 101
+      },
+      {
+        "text": "Nils Lofgren",
+        "label": "PER",
+        "start": 177,
+        "end": 189
+      }
+    ]
+  },
+  {
+    "text": "Til gengæld viser Poul Schlüter en af sine blødere sider ved med omhu at sende blomsterhilsner og håndskrevne kort til mærkedage for mere eller mindre kendte borgere landet over .",
+    "spans": [
+      {
+        "text": "Poul Schlüter",
+        "label": "PER",
+        "start": 18,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "Odd-Catla betragtede ham smilende - han var hendes yngste page , og Kay-Siff's erklærede yndling .",
+    "spans": [
+      {
+        "text": "Odd-Catla",
+        "label": "PER",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "Kay-Siff's",
+        "label": "PER",
+        "start": 68,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "text": "Dolly , de er væk !",
+    "spans": [
+      {
+        "text": "Dolly",
+        "label": "PER",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Depeche har det selv morsomt mens de indspiller pladen , hvor Martin f.eks. går på \" Jungle Club \" og ser på mandestrip , men bortset fra en samplet optagelse af Dave der drejer tændingsnøglen i sin nyindkøbte Porsche , er der ikke meget at grine af på \" Black Celebration \" .",
+    "spans": [
+      {
+        "text": "Depeche",
+        "label": "ORG",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "Martin",
+        "label": "PER",
+        "start": 62,
+        "end": 68
+      },
+      {
+        "text": "Jungle",
+        "label": "ORG",
+        "start": 85,
+        "end": 91
+      },
+      {
+        "text": "Club",
+        "label": "ORG",
+        "start": 92,
+        "end": 96
+      },
+      {
+        "text": "Dave",
+        "label": "PER",
+        "start": 162,
+        "end": 166
+      },
+      {
+        "text": "Porsche",
+        "label": "ORG",
+        "start": 210,
+        "end": 217
+      }
+    ]
+  },
+  {
+    "text": "Helt unødvendigt , tænkte Lars , og blodigt uretfærdigt .",
+    "spans": [
+      {
+        "text": "Lars",
+        "label": "PER",
+        "start": 26,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Den tidligere kontorchef i Miljøministeriet er egentlig uddannet cand.-polyt. og gik fra en stilling som konsulent i firmaet Merciri Urval til Det Kgl. Teater .",
+    "spans": [
+      {
+        "text": "Miljøministeriet",
+        "label": "ORG",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "text": "Merciri Urval",
+        "label": "ORG",
+        "start": 125,
+        "end": 138
+      },
+      {
+        "text": "Det Kgl. Teater",
+        "label": "ORG",
+        "start": 143,
+        "end": 158
+      }
+    ]
+  },
+  {
+    "text": "Supersværvægteren Brian Nielsen kunne ligeledes med en sejr bane sig vej til Barcelona , men hans kvartfinale-kamp mod svenskeren Peter Jaako blev bokset efter redaktionens slutning .",
+    "spans": [
+      {
+        "text": "Brian Nielsen",
+        "label": "PER",
+        "start": 18,
+        "end": 31
+      },
+      {
+        "text": "Barcelona",
+        "label": "LOC",
+        "start": 77,
+        "end": 86
+      },
+      {
+        "text": "Peter Jaako",
+        "label": "PER",
+        "start": 130,
+        "end": 141
+      }
+    ]
+  },
+  {
+    "text": "Men hvidløg , der ligget i kølige tanke i 20 måneder , er endnu bedre , mener lægerne B. Lau , H. Sumiyoshi og R. Lin , der tre forskellige steder i USA forsker i hvidløgets virkninger :",
+    "spans": [
+      {
+        "text": "B. Lau",
+        "label": "PER",
+        "start": 86,
+        "end": 92
+      },
+      {
+        "text": "H. Sumiyoshi",
+        "label": "PER",
+        "start": 95,
+        "end": 107
+      },
+      {
+        "text": "R. Lin",
+        "label": "PER",
+        "start": 111,
+        "end": 117
+      },
+      {
+        "text": "USA",
+        "label": "LOC",
+        "start": 149,
+        "end": 152
+      }
+    ]
+  },
+  {
+    "text": "\" Ih , hvor jeg glæder mig til et lille glas , \" lød det fra Lykke .",
+    "spans": [
+      {
+        "text": "Lykke",
+        "label": "PER",
+        "start": 61,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "Denne gang i følgeskab med Jørn Middelhede , ligeledes fra Kolding .",
+    "spans": [
+      {
+        "text": "Jørn Middelhede",
+        "label": "PER",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "text": "Kolding",
+        "label": "LOC",
+        "start": 59,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "text": "Denne globale bevidsthed har siden haft en betydelig indflydelse på næsten alt , hvad Kim Fupz har rørt ved .",
+    "spans": [
+      {
+        "text": "Kim Fupz",
+        "label": "PER",
+        "start": 86,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "text": "Sættet rummer blandt mange andre godbidder den første , sensationelle optagelse på vinyl , som Elvis indspillede i Sun Records studiet .",
+    "spans": [
+      {
+        "text": "Elvis",
+        "label": "PER",
+        "start": 95,
+        "end": 100
+      },
+      {
+        "text": "Sun Records",
+        "label": "ORG",
+        "start": 115,
+        "end": 126
+      }
+    ]
+  },
+  {
+    "text": "\" Da jeg var lille drømte jeg om at være prinsesse i taft og tyl , og jeg har gået til jazzballet i mange år , \" siger Helle , der til hverdag leder Studio \" Better Bodies \" i Køge , hvor man både kan gå til work-out , aerobic og bodybuilding .",
+    "spans": [
+      {
+        "text": "Helle",
+        "label": "PER",
+        "start": 119,
+        "end": 124
+      },
+      {
+        "text": "Studio \" Better Bodies",
+        "label": "ORG",
+        "start": 149,
+        "end": 171
+      },
+      {
+        "text": "Køge",
+        "label": "LOC",
+        "start": 176,
+        "end": 180
+      }
+    ]
+  },
+  {
+    "text": "- Jeg har skrevet det om tusind gange , sagde Gunnar .",
+    "spans": [
+      {
+        "text": "Gunnar",
+        "label": "PER",
+        "start": 46,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Desuden er SF \" ikke forpligtet \" , som det hedder , til at støtte et forslag om privat byfornyelse .",
+    "spans": [
+      {
+        "text": "SF",
+        "label": "ORG",
+        "start": 11,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Det er glædeligt , siger Annemette Møller , som kalder hashen for fristadens \" egentlige svøbe \" .",
+    "spans": [
+      {
+        "text": "Annemette Møller",
+        "label": "PER",
+        "start": 25,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Den modtog han i øvrigt Kulturministeriets børnebogspris for i 1990 .",
+    "spans": [
+      {
+        "text": "Kulturministeriets",
+        "label": "ORG",
+        "start": 24,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "I Danmark har vi fremstillet en rødgrødsfarvet sag , der anviser hvordan danske hundeejere fjerner en hundelort fra fortovet .",
+    "spans": [
+      {
+        "text": "Danmark",
+        "label": "LOC",
+        "start": 2,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "Otte udvalgte Danfoss-lærlinge har styret de 12 folkeskoleelever igennem produktionen af vejrstationen .",
+    "spans": [
+      {
+        "text": "Danfoss-lærlinge",
+        "label": "ORG",
+        "start": 14,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Jeg vil helt klart opfordre fremtidige trænere i BMS til at forlange en bankgaranti .",
+    "spans": [
+      {
+        "text": "BMS",
+        "label": "ORG",
+        "start": 49,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "I \" normale \" satellitter fylder tilsvarende instrumenter mere end hele \" Ørsted \" .",
+    "spans": [
+      {
+        "text": "Ørsted",
+        "label": "ORG",
+        "start": 74,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "text": "OB havde vundet rub og stub , syv sejre i træk , men i går styrtede det hele sammen .",
+    "spans": [
+      {
+        "text": "OB",
+        "label": "ORG",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "- Berlin , sir han , men - du godeste - jeg troede ikke at -",
+    "spans": [
+      {
+        "text": "Berlin",
+        "label": "LOC",
+        "start": 2,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "Paul Berg Steffensen er Ridder af Dannebrog .",
+    "spans": [
+      {
+        "text": "Paul Berg Steffensen",
+        "label": "PER",
+        "start": 0,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Den dystre prognose bygger på konsekvenserne af de faste forbindelser over Storebælt , Øresund og Østersøen .",
+    "spans": [
+      {
+        "text": "Storebælt",
+        "label": "LOC",
+        "start": 75,
+        "end": 84
+      },
+      {
+        "text": "Øresund",
+        "label": "LOC",
+        "start": 87,
+        "end": 94
+      },
+      {
+        "text": "Østersøen",
+        "label": "LOC",
+        "start": 98,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "text": "Under broerne i Paris sover der ikke vagabonder , umuligt , sådan som polakkerne ellers kunne se det i en tv-udsendelse .",
+    "spans": [
+      {
+        "text": "Paris",
+        "label": "LOC",
+        "start": 16,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Derefter slog han alarm over sin radio til hovedkvarteret i Tietgensgade , hvor man slog alarm til politiet klokken 17.48 .",
+    "spans": [
+      {
+        "text": "Tietgensgade",
+        "label": "LOC",
+        "start": 60,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "text": "Den 42-årige borgmester fra provinsbyen Cluj er en af grundlæggerne af den ultra-nationalistiske bevægelse Vatra Romanesca .",
+    "spans": [
+      {
+        "text": "Cluj",
+        "label": "LOC",
+        "start": 40,
+        "end": 44
+      },
+      {
+        "text": "Vatra Romanesca",
+        "label": "ORG",
+        "start": 107,
+        "end": 122
+      }
+    ]
+  },
+  {
+    "text": "Men ikke desto mindre vrimler aviserne med forlydender om , at landsholdets anfører skulle være på vej til en af Istanbuls tre topklubber , Besiktas , Fenerbache eller Galatasaray .",
+    "spans": [
+      {
+        "text": "Istanbuls",
+        "label": "LOC",
+        "start": 113,
+        "end": 122
+      },
+      {
+        "text": "Besiktas",
+        "label": "ORG",
+        "start": 140,
+        "end": 148
+      },
+      {
+        "text": "Fenerbache",
+        "label": "ORG",
+        "start": 151,
+        "end": 161
+      },
+      {
+        "text": "Galatasaray",
+        "label": "ORG",
+        "start": 168,
+        "end": 179
+      }
+    ]
+  },
+  {
+    "text": "Nørrebro Bibliotek introducerede for et par år siden NU-bøgerne - hvilket vil sige , helt aktuelle bøger med en udlånstid på 7 dage .",
+    "spans": [
+      {
+        "text": "Nørrebro Bibliotek",
+        "label": "ORG",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Det vurderer ledelsen i Accumulator Invest og henviser til en bekræftelse fra advokat Ebbe Mogensen af 17. september , hvori det bekræftes , at anmodningen er trukket tilbage .",
+    "spans": [
+      {
+        "text": "Accumulator",
+        "label": "ORG",
+        "start": 24,
+        "end": 35
+      },
+      {
+        "text": "Ebbe Mogensen",
+        "label": "PER",
+        "start": 86,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "text": "Det medførte , at Joe Cocker fik flere tilbud om at levere sange til film .",
+    "spans": [
+      {
+        "text": "Joe Cocker",
+        "label": "PER",
+        "start": 18,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Unix' rolle er i serveren .",
+    "spans": [
+      {
+        "text": "Unix'",
+        "label": "ORG",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "Alle som én er en hyldest til Bakken .",
+    "spans": [
+      {
+        "text": "Bakken",
+        "label": "ORG",
+        "start": 30,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Men det var ikke alene Ninn-Hansens forklaring i retten , som havde overrasket departementschefen .",
+    "spans": [
+      {
+        "text": "Ninn-Hansens",
+        "label": "PER",
+        "start": 23,
+        "end": 35
+      }
+    ]
+  }
+]

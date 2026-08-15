@@ -1,0 +1,948 @@
+[
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "Vprostřed výzev k jeho rezignaci kvůli naprostému selhání plánu obnovy NHS od SNP Matheson hovořil o tom, jak „zvýšený zimní tlak“ nebyl „unikátní pro Skotsko“. Místo „obviňování Westminsteru“ byla obranná linie tentokrát „Westminster je stejně špatný“, jako by to byla nějaká útěcha pro legie pacientů nucených čekat nekonečné hodiny v bolestech a strádání.",
+    "spans": [
+      {
+        "text": "zvýšený zimní tlak",
+        "label": "MAJOR",
+        "start": 111,
+        "end": 129
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Společnost FTSE 250, proslulá svými klobásovými rolkami a pečenou steakovou náplní, plánuje rozšířit síť poboček, ale ne ceny.",
+    "spans": [
+      {
+        "text": "pečenou",
+        "label": "MAJOR",
+        "start": 58,
+        "end": 65
+      },
+      {
+        "text": "rozšířit",
+        "label": "MAJOR",
+        "start": 92,
+        "end": 100
+      },
+      {
+        "text": "steakovou",
+        "label": "MAJOR",
+        "start": 66,
+        "end": 75
+      },
+      {
+        "text": "náplní",
+        "label": "MAJOR",
+        "start": 76,
+        "end": 82
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "Uprostřed výzev k jeho rezignaci kvůli naprostému selhání plánu SNP na obnovu NHS Matheson hovořil o tom, jak „zvýšený zimní tlak“ není „jedinečný pro Skotsko“. Namísto „obviňování Westminsteru“ se tentokrát pokusil o obranu v podobě „Westminster je stejně špatný“, jako by to poskytovalo jakoukoli útěchu legiím pacientů nucených čekat celé hodiny v bolestech a úzkosti.",
+    "spans": [
+      {
+        "text": "zvýšený zimní tlak",
+        "label": "MAJOR",
+        "start": 111,
+        "end": 129
+      },
+      {
+        "text": "legiím",
+        "label": "MINOR",
+        "start": 306,
+        "end": 312
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "V době výzev k jeho rezignaci kvůli naprostému selhání plánu SNP na zotavení NHS Matheson hovořil o tom, jak „zvýšený zimní tlak“ není pro Skotsko jedinečný. Místo „vinit Westminster“ byla tentokrát pokusu o obhajobu „Westminster je stejně špatný“, jako by to nějak utěšilo legie pacientů, kteří jsou nuceni hodiny čekat v bolesti a strádání.",
+    "spans": [
+      {
+        "text": "V dob",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "text": "ě",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 6
+      },
+      {
+        "text": "SNP",
+        "label": "MAJOR",
+        "start": 61,
+        "end": 64
+      },
+      {
+        "text": "NHS",
+        "label": "MAJOR",
+        "start": 77,
+        "end": 80
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "V době, kdy se zvýšená pozornost obracela k Mathesonově rezignaci kvůli naprostému selhání plánu SNP na obnovu NHS, mluvil premiér o tom, že „zvýšený tlak zimního období není problémem pouze Skotska“. Místo aby se obhajoval tím, že „Westminster je stejně špatný jako my“, tentokrát se pokusil argumentovat tím, že „Westminster je stejně špatný jako my“, jako by to mělo poskytnout útěchu legiím pacientů, kteří museli čekat celé hodiny v bolestech a utrpení.",
+    "spans": [
+      {
+        "text": "zvýšený tlak zimního období ",
+        "label": "MAJOR",
+        "start": 142,
+        "end": 170
+      },
+      {
+        "text": "Westminster je stejně špatný jako my",
+        "label": "MAJOR",
+        "start": 315,
+        "end": 351
+      },
+      {
+        "text": "legiím pacientů",
+        "label": "MAJOR",
+        "start": 388,
+        "end": 403
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Společnost FTSE 250, která je proslulá roládami s klobásami a steaky, plánuje zvýšit síť poboček, ale ne ceny.",
+    "spans": [
+      {
+        "text": "roládami s klobásami a steaky",
+        "label": "MINOR",
+        "start": 39,
+        "end": 68
+      },
+      {
+        "text": "zvýšit síť",
+        "label": "MAJOR",
+        "start": 78,
+        "end": 88
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Firma FTSE 250 známá svými párkovými rohlíky a steakovými pečivy plánuje rozšířit síť poboček, ale nezvýšit ceny.",
+    "spans": [
+      {
+        "text": "steakovými pečivy",
+        "label": "MAJOR",
+        "start": 47,
+        "end": 64
+      },
+      {
+        "text": "párkovými rohlíky",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "text": "nezvýšit",
+        "label": "MAJOR",
+        "start": 99,
+        "end": 107
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Firma FTSE 250, známá svými klobáskami a pečenými steaky, plánuje rozšířit síť poboček, ale ne ceny.",
+    "spans": [
+      {
+        "text": "pečenými",
+        "label": "MAJOR",
+        "start": 41,
+        "end": 49
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Společnost FTSE 250, známá pro své klobásy a steaky, plánuje rozšířit síť poboček, ale ne zvýšit ceny.",
+    "spans": [
+      {
+        "text": "klobásy",
+        "label": "MAJOR",
+        "start": 35,
+        "end": 42
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Firma FTSE 250, která se proslavila klobásovými rolkami a pečením steaků, plánuje růst sítě poboček, ale nikoli růst cen.",
+    "spans": [
+      {
+        "text": "pečením steaků,",
+        "label": "MINOR",
+        "start": 58,
+        "end": 73
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "Uprostřed volání po své rezignaci kvůli ubohému selhání ozdravného plánu SNP NHS Matheson hovořil o tom, že „zvýšený zimní tlak“ není „jediný ve Skotsku“. Místo „obviňování Westminsteru“ byl pokus o obhajobu tentokrát „stejně špatný ve Westminsteru“, jako by to poskytlo jakoukoli útěchu zástupům pacientů, kteří byli nuceni čekat celé hodiny v bolestech a tísni.",
+    "spans": [
+      {
+        "text": "Uprostřed",
+        "label": "MINOR",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "ozdravného plánu",
+        "label": "MAJOR",
+        "start": 56,
+        "end": 72
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Společnost z indexu FTSE 250, proslulá jehněčími roládami a steaky, plánuje rozšíření pobočkové sítě, nikoliv však zdražení.",
+    "spans": [
+      {
+        "text": "ehněčím",
+        "label": "MAJOR",
+        "start": 40,
+        "end": 47
+      },
+      {
+        "text": "pobočkové sítě",
+        "label": "MAJOR",
+        "start": 86,
+        "end": 100
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Společnost FTSE 250 známá svými klobásovými rohlíky a steakovými koláči plánuje rozšířit síť poboček, ale ne zvýšit ceny.",
+    "spans": [
+      {
+        "text": "klobásovými rohlík",
+        "label": "MAJOR",
+        "start": 32,
+        "end": 50
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "V době, kdy se objevily výzvy k jeho rezignaci kvůli naprostému selhání plánu SNP na zotavení NHS, Matheson hovořil o tom, že „zvýšený zimní tlak“ není „výhradně skotským problémem“. Místo toho, aby „vinil Westminster“, byla tato snaha o obhajobu tentokrát „Westminster je stejně špatný“, jako by to poskytlo jakoukoli útěchu legionům pacientů, kteří museli čekat hodiny v bolestech a utrpení.",
+    "spans": [
+      {
+        "text": "výhradně",
+        "label": "MINOR",
+        "start": 153,
+        "end": 161
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "FTSE 250 firm famous for sausage rolls and steak bakes plans to rise branch network but not prices.",
+    "text": "Společnost FTSE 250 známá svými koláči se sádlem a steakovými pečivými plány zvýšit síť poboček, ale ne ceny.",
+    "spans": [
+      {
+        "text": "koláči se sádlem",
+        "label": "MINOR",
+        "start": 32,
+        "end": 48
+      },
+      {
+        "text": "pečivými",
+        "label": "MINOR",
+        "start": 62,
+        "end": 70
+      },
+      {
+        "text": "plány",
+        "label": "MAJOR",
+        "start": 71,
+        "end": 76
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Amid calls for his resignation over the abject failure of the SNP's NHS recovery plan, Matheson spoke of how the \"heightened winter pressure\" was \"not unique to Scotland.\" Instead of \"blame Westminster,\" the attempted defence this time was \"Westminster's just as bad,\" as if that provided any comfort to the legions of patients forced to wait for hours on end in pain and distress.",
+    "text": "Uprostřed výzev k jeho rezignaci kvůli naprostému selhání plánu SNP na zotavení NHS hovořil Matheson o tom, jak „zvýšený zimní tlak“ „není jedinečný pro Skotsko“. Místo toho, aby „obviňoval Westminster“, byla tentokrát pokusná obrana „Westminster je stejně špatný“, jako by to přinášelo nějakou útěchu legiím pacientů, kteří byli nuceni čekat hodiny v bolesti a úzkosti.",
+    "spans": [
+      {
+        "text": "Uprostřed",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "text": "zotavení",
+        "label": "MAJOR",
+        "start": 71,
+        "end": 79
+      },
+      {
+        "text": "zimní tlak“",
+        "label": "MAJOR",
+        "start": 121,
+        "end": 132
+      },
+      {
+        "text": "pokusná",
+        "label": "MAJOR",
+        "start": 219,
+        "end": 226
+      },
+      {
+        "text": "legiím",
+        "label": "MAJOR",
+        "start": 302,
+        "end": 308
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Změny v myšlení jsou těžší kvantifikovat než bankovní půjčky pro venkovské ženy nebo zápis dívek do škol. Přesto je mnoho důkazů, že ženská agentura dokáže přenést hory. V Íránu například ženy vedly největší hrozbu pro islámskou vládu za 40 let prostě tím, že odmítly dodržovat zákony, které je nutí zakrývat si vlasy. V některých z 130 zemí s minimálními kvótami pro zastoupení žen ve vládě, jako je Indie, se mužský odpor vůči ženskému hlasování a politickému aktivismu uvolnil.",
+    "spans": [
+      {
+        "text": "jsou těžší kvantifikovat",
+        "label": "MAJOR",
+        "start": 16,
+        "end": 40
+      },
+      {
+        "text": "venkovské ženy",
+        "label": "MAJOR",
+        "start": 65,
+        "end": 79
+      },
+      {
+        "text": "dokáže přenést hory",
+        "label": "MAJOR",
+        "start": 149,
+        "end": 168
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The SEC rejected applications for similar funds for years. Last year, however, the U.S. Court of Appeals for the District of Columbia ruled against the SEC's refusal to approve an application from Grayscale to convert a derivative fund into one that would directly bitcoin, calling the SEC's position \"",
+    "text": "SEC odmítal žádosti o podobné fondy po léta. Loni však Odvolací soud Spojených států pro okres Columbie rozhodl proti SEC's odmítnutí schválit žádost společnosti Grayscale na převod derivátového fondu na fond, který by přímo investoval do bitcoinu, a označil SEC's postoje za \"",
+    "spans": [
+      {
+        "text": "SEC's",
+        "label": "MAJOR",
+        "start": 118,
+        "end": 123
+      },
+      {
+        "text": " SEC's",
+        "label": "MAJOR",
+        "start": 258,
+        "end": 264
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The problems at the EPA are distinct but not unrelated to those at the Department of Justice, which handles environmental crimes via its Environment and Natural Resources Division, or ENRD. Prior to joining the EPA, Uhlmann - the EPA assistant secretary for enforcement - had served as the longtime head of that division's Environmental Crimes Section, from 1990 through 2007. The EPA sends its most serious civil and criminal cases to ENRD, which - as a relatively underfunded office - often relies on other agencies in helping to choose which fights to take on. In fiscal year 2022, the EPA deferred fewer cases to DOJ (88) than at any point since 2000 and concluded fewer civil judicial cases than it had since that time, as well. As the Environmental Integrity Project notes, even Trump's EPA concluded 94 civil cases and deferred 106 cases per year to the DOJ per year, on average.",
+    "text": "Problémy v EPA jsou odlišné, ale nikoli nesouvisející s problémům v ministerstvu spravedlnosti, které řeší trestné zločiny proti životnímu prostředí prostřednictvím svého odboru životního prostředí a přírodních zdrojů (ENRD). Před nástupem do EPA působil Uhlmann – asistent tajemníka EPA pro vymáhání – jako dlouholetý šéf sekce ekologických zločinů této divize, a to v letech 1990 až 2007. EPA posílá své nejzávažnější občanskoprávní a trestněprávní případy ENRD, která – jako relativně nedostatečně financovaný úřad – často spoléhá na to, že jí ostatní agentury pomohou vybrat, do jakých bojů se pustit. V fiskálním roce 2022 EPA odložila méně případů k ÚOHS (88) než kdykoli od roku 2000, a uzavřela také méně občanskoprávních soudních případů, než tomu bylo od té doby. Jak poznamenává Environmental Integrity Project, dokonce i Trumpova EPA uzavřela 94 občanskoprávních případů a ročně v průměru odložila 106 případů na ministerstvo spravedlnosti.",
+    "spans": [
+      {
+        "text": "s problémům v m",
+        "label": "MINOR",
+        "start": 54,
+        "end": 69
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "For most travelers, the aircraft model isn't a deciding factor when booking a flight. But with the majority of Boeing 737 MAX 9 jets grounded around the country after an Alaska Airlines fuselage blowout on Jan. 6, some prospective passengers may want to know how to tell what type of plane they'll be on and which models are the safest. The first is easy enough to answer - the second is a little more complicated.",
+    "text": "Pro většinu cestujících model letadla není rozhodujícím faktorem při rezervaci letu. Ale vzhledem Airlines tomu, že většina letadel 737 MAX 9 přistála po celé zemi po havárii trupu letadla Alaska Airlines 6. ledna, někteří potenciální cestující by mohli chtít vědět, jak poznat, v jakém typu letadla budou sedět a které modely jsou nejbezpečnější. Na první otázku se dá celkem snadno odpovědět, druhá je o trochu složitější.",
+    "spans": [
+      {
+        "text": "Airlines tomu",
+        "label": "MAJOR",
+        "start": 98,
+        "end": 111
+      },
+      {
+        "text": "vzhledem ",
+        "label": "MAJOR",
+        "start": 89,
+        "end": 98
+      },
+      {
+        "text": "etade",
+        "label": "MAJOR",
+        "start": 125,
+        "end": 130
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Perry Cooper, a media representative from the Port of Seattle, which oversees Seattle-Tacoma International Airport, said in an email that there are a wide variety of reasons accidents occur, ranging from equipment to human error. So while it's easy enough to determine what type of plane you'll be on, it's more complicated to determine what that means from a safety perspective.",
+    "text": "Perry Cooper, mediální zástupce z přístavu Seattlu, který dohlíží na mezinárodní letiště Seattle-Tacoma, v e-mailu uvedl, že existuje řada důvodů, proč dochází k nehodám, od selhání vybavení až po lidskou chybu. I když je dost snadné určit, jakým typem letadla poletíte, je složitější určit, co to znamená z hlediska hlediska bezpečnosti.",
+    "spans": [
+      {
+        "text": "hlediska",
+        "label": "MAJOR",
+        "start": 317,
+        "end": 325
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Přesuny myšlení je obtížnější kvantifikovat než bankovní půjčky pro venkovské ženy nebo školní přijetí pro dívky. Přesto existuje dostatek důkazů, že ženská agentura dokáže pohnout hory. Například v Íránu ženy vedou největší hrozbu pro islámskou vládu jen tím, že se odmítají řídit zákony, které jim nařizují zakrývat si vlasy. V některých z 130 zemí s minimálními kvótami pro zastoupení žen ve vládě, jako je Indie, se odpor mužů vůči ženskému hlasování a politické aktivitě zmírnil.",
+    "spans": [
+      {
+        "text": "školní přijetí pro dívk",
+        "label": "MAJOR",
+        "start": 88,
+        "end": 111
+      },
+      {
+        "text": "dokáže pohnout hory",
+        "label": "MINOR",
+        "start": 166,
+        "end": 185
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The problems at the EPA are distinct but not unrelated to those at the Department of Justice, which handles environmental crimes via its Environment and Natural Resources Division, or ENRD. Prior to joining the EPA, Uhlmann - the EPA assistant secretary for enforcement - had served as the longtime head of that division's Environmental Crimes Section, from 1990 through 2007. The EPA sends its most serious civil and criminal cases to ENRD, which - as a relatively underfunded office - often relies on other agencies in helping to choose which fights to take on. In fiscal year 2022, the EPA deferred fewer cases to DOJ (88) than at any point since 2000 and concluded fewer civil judicial cases than it had since that time, as well. As the Environmental Integrity Project notes, even Trump's EPA concluded 94 civil cases and deferred 106 cases per year to the DOJ per year, on average.",
+    "text": "Problémy v EPA jsou odlišné, ale ne nepodobné problémům na ministerstvu spravedlnosti, které se zabývá ekologickými trestnými činy prostřednictvím své divize životního prostředí a přírodních zdrojů, neboli ENRD. Před nástupem do EPA byl Uhlmann, asistent tajemníka EPA pro prosazování práva, v letech 1990 až 2007 dlouholetým vedoucím sekce ekologických trestných činů této divize. EPA zasílá své nejzávažnější občanské a trestní případy ENRD, která – jako relativně nedostatečně financovaný úřad – se často spoléhá na pomoc jiných agentur při rozhodování, které spory má řešit. Ve fiskálním roce 2022 EPA odložila méně případů ministerstvu spravedlnosti (88) než v jakémkoli roce od roku 2000 a uzavřela méně občanskoprávních soudních případů než kdykoli od té doby. Jak projekt Environmentální integrity Project upozorňuje, i Trumpovo EPA uzavřelo v průměru 94 občanskoprávních případů a ročně odložilo ministerstvu spravedlnosti 106 případů.",
+    "spans": [
+      {
+        "text": "ekologickými",
+        "label": "MINOR",
+        "start": 103,
+        "end": 115
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "For most travelers, the aircraft model isn't a deciding factor when booking a flight. But with the majority of Boeing 737 MAX 9 jets grounded around the country after an Alaska Airlines fuselage blowout on Jan. 6, some prospective passengers may want to know how to tell what type of plane they'll be on and which models are the safest. The first is easy enough to answer - the second is a little more complicated.",
+    "text": "Pro většinu cestujících není model letadla rozhodujícím faktorem při rezervaci letu. Ale s většinou letadel Boeing 737 MAX 9, která byla po výbuchu křídla Aljašských aerolinek 6. ledna na zemi, někteří potenciální cestující možná budou chtít vědět, jak určit typ letadla, ve kterém poletí, a které modely jsou nejbezpečnější. První je snadné odpovědět – druhé je trochu složitější.",
+    "spans": [
+      {
+        "text": "na zemi",
+        "label": "MAJOR",
+        "start": 185,
+        "end": 192
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Move will also help transform land at the derelict Gartshore Works site.",
+    "text": "Tento krok také pomůže transformovat pozemky na opuštěném místě Gartshore Works.",
+    "spans": [
+      {
+        "text": "opuštěném místě ",
+        "label": "MAJOR",
+        "start": 48,
+        "end": 64
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Move will also help transform land at the derelict Gartshore Works site.",
+    "text": "Krok také pomůže přeměnit půdu na místě zchátralých Gartshore Works.",
+    "spans": [
+      {
+        "text": "k",
+        "label": "MAJOR",
+        "start": 3,
+        "end": 4
+      },
+      {
+        "text": "o",
+        "label": "MAJOR",
+        "start": 2,
+        "end": 3
+      },
+      {
+        "text": "r",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 2
+      },
+      {
+        "text": "K",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Gensler also added that the approval of the bitcoin funds did not imply the SEC would approve funds or exchange-traded products (ETPs) based on other digital currencies or assets.",
+    "text": "Gensler také dodal, že schválení bitcoinových fondů neznamená, že by SEC schválila fondy nebo burzovně obchodované produkty (ETP) založené na jiných digitálních měnách nebo aktivech.",
+    "spans": [
+      {
+        "text": "SEC",
+        "label": "MAJOR",
+        "start": 69,
+        "end": 72
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The SEC rejected applications for similar funds for years. Last year, however, the U.S. Court of Appeals for the District of Columbia ruled against the SEC's refusal to approve an application from Grayscale to convert a derivative fund into one that would directly bitcoin, calling the SEC's position \"",
+    "text": "SEC po léta odmítala žádosti o podobné fondy. Loni však Soud pro odvolání USA pro obvod Kolumbie rozhodl proti odmítnutí SEC schválit žádost společnosti Grayscale o převod derivátového fondu na fond, který by přímo bitcoinoval, a označil postoj SEC za „",
+    "spans": [
+      {
+        "text": "S",
+        "label": "MAJOR",
+        "start": 56,
+        "end": 57
+      },
+      {
+        "text": "odvolání",
+        "label": "MAJOR",
+        "start": 65,
+        "end": 73
+      },
+      {
+        "text": "oud pro",
+        "label": "MAJOR",
+        "start": 57,
+        "end": 64
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "For most travelers, the aircraft model isn't a deciding factor when booking a flight. But with the majority of Boeing 737 MAX 9 jets grounded around the country after an Alaska Airlines fuselage blowout on Jan. 6, some prospective passengers may want to know how to tell what type of plane they'll be on and which models are the safest. The first is easy enough to answer - the second is a little more complicated.",
+    "text": "Pro většinu cestovatelů není typ letadla rozhodujícím faktorem při rezervaci letu. Ale vzhledem k tomu, že většina letadel Boeing 737 MAX 9 je po výbuchu trupu Aljašských aerolinií 6. ledna v zemi, někteří potenciální cestující se možná budou chtít dozvědět, jak poznat typ letadla, na kterém budou cestovat, a které modely jsou nejbezpečnější. Odpověď na první otázku je celkem jednoduchá - odpověď na druhou otázku je trochu složitější.",
+    "spans": [
+      {
+        "text": "v zemi",
+        "label": "MINOR",
+        "start": 190,
+        "end": 196
+      },
+      {
+        "text": "na kterém budou cestovat,",
+        "label": "MAJOR",
+        "start": 283,
+        "end": 308
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Perry Cooper, a media representative from the Port of Seattle, which oversees Seattle-Tacoma International Airport, said in an email that there are a wide variety of reasons accidents occur, ranging from equipment to human error. So while it's easy enough to determine what type of plane you'll be on, it's more complicated to determine what that means from a safety perspective.",
+    "text": "V e-mailu Perry Cooper, zástupce médií z přístavu v Seattlu, který dohlíží na mezinárodní letiště Seattle-Tacoma, uvedl, že existuje celá řada důvodů, proč k nehodám dochází, od technické závady po lidskou chybu. Proto je snadné určit, jaký typ letadla budete letět, ale složitější je určit, co to znamená z hlediska bezpečnosti.",
+    "spans": [
+      {
+        "text": "budete letět",
+        "label": "MAJOR",
+        "start": 253,
+        "end": 265
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Změny v myšlení jsou těžší kvantifikovat než bankovní půjčky pro venkovské ženy nebo zápis do školy pro dívky. Přesto existuje spousta důkazů, že ženská agentura dokáže hory přenášet. V Íránu například ženy vedly největší hrozbu pro islámskou vládu za posledních 40 let jednoduše tím, že odmítly dodržovat zákony, které je nutí zakrývat si vlasy. V některých z 130 zemí s minimální kvótou pro zastoupení žen ve vládě, jako je Indie, se mužská rezistence vůči hlasování a politické aktivitě žen zmírnila.",
+    "spans": [
+      {
+        "text": "agentura",
+        "label": "MAJOR",
+        "start": 153,
+        "end": 161
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The problems at the EPA are distinct but not unrelated to those at the Department of Justice, which handles environmental crimes via its Environment and Natural Resources Division, or ENRD. Prior to joining the EPA, Uhlmann - the EPA assistant secretary for enforcement - had served as the longtime head of that division's Environmental Crimes Section, from 1990 through 2007. The EPA sends its most serious civil and criminal cases to ENRD, which - as a relatively underfunded office - often relies on other agencies in helping to choose which fights to take on. In fiscal year 2022, the EPA deferred fewer cases to DOJ (88) than at any point since 2000 and concluded fewer civil judicial cases than it had since that time, as well. As the Environmental Integrity Project notes, even Trump's EPA concluded 94 civil cases and deferred 106 cases per year to the DOJ per year, on average.",
+    "text": "Problémy v EPA jsou odlišné, ale nesouvisejí s problémy na Ministerstvu spravedlnosti, které se zabývá environmentálními zločiny prostřednictvím svého oddělení pro životní prostředí a přírodní zdroje (ENRD). Před nástupem do EPA působil Uhlmann, náměstek ministra pro vymáhání práva v EPA, jako dlouholetý vedoucí oddělení pro environmentální zločiny v tomto oddělení od roku 1990 do roku 2007. EPA předává své nejzávažnější občanskoprávní a trestní případy ENRD, které - jako relativně nedostatečně financované úřady - často spoléhají na pomoc jiných agentur při rozhodování, které případy přijmout. V fiskálním roce 2022 EPA předala méně případů Ministerstvu spravedlnosti (88) než kdykoli dříve od roku 2000 a uzavřela méně občanskoprávních soudních případů než kdykoli dříve od té doby. Jak poznamenává Environmental Integrity Project, i Trumpova EPA uzavřela v průměru 94 občanskoprávních případů a předala 106 případů ročně Ministerstvu spravedlnosti.",
+    "spans": [
+      {
+        "text": "odlišné, ale nesouvisejí s problémy na Ministerstvu spravedlnosti",
+        "label": "MINOR",
+        "start": 20,
+        "end": 85
+      },
+      {
+        "text": "které",
+        "label": "MINOR",
+        "start": 464,
+        "end": 469
+      },
+      {
+        "text": "úřady ",
+        "label": "MINOR",
+        "start": 512,
+        "end": 518
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The SEC rejected applications for similar funds for years. Last year, however, the U.S. Court of Appeals for the District of Columbia ruled against the SEC's refusal to approve an application from Grayscale to convert a derivative fund into one that would directly bitcoin, calling the SEC's position \"",
+    "text": "SEC roky odmítala žádosti o podobné fondy. Loni však odvolací soud USA pro District of Columbia rozhodl proti odmítnutí SEC schválit žádost společnosti Grayscale o přeměnu derivativního fondu na fond, který by přímo investoval do bitcoinu, a označil postoj SEC za",
+    "spans": [
+      {
+        "text": "District of Columbia",
+        "label": "MAJOR",
+        "start": 75,
+        "end": 95
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "As part of a £6 million-plus expansion of the business, Brewster has now opened its second recycling site, regenerating the old Gartshore Works near Cumbernauld. The new plant will serve construction sites, housing and utilities developments in the western part of the Central Belt. The plant near Livingston, which currently employs 39 people, will continue to provide sustainable waste management services and recycled aggregates to businesses in Edinburgh, Fife and the Lothians.",
+    "text": "V rámci rozšíření podniku o více než 6 milionů liber otevřela společnost Brewster svůj druhý recyklační závod, který regeneruje starou továrnu Gartshore Works nedaleko Cumbernauldu. Nový závod bude sloužit staveništím, bytové výstavbě a inženýrským sítím v západní části centrálního pásu. Závod nedaleko Livingstonu, který v současné době zaměstnává 39 lidí, bude i nadále poskytovat služby udržitelného nakládání s odpady a recyklované kamenivo podnikům v Edinburghu, Fife a Lothians.",
+    "spans": [
+      {
+        "text": "regeneruje",
+        "label": "MAJOR",
+        "start": 117,
+        "end": 127
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "As part of a £6 million-plus expansion of the business, Brewster has now opened its second recycling site, regenerating the old Gartshore Works near Cumbernauld. The new plant will serve construction sites, housing and utilities developments in the western part of the Central Belt. The plant near Livingston, which currently employs 39 people, will continue to provide sustainable waste management services and recycled aggregates to businesses in Edinburgh, Fife and the Lothians.",
+    "text": "V rámci expanze firmy za více než 6 milionů liber společnost Brewster otevřela své druhé recyklační středisko, které regeneruje starou továrnu Gartshore Works poblíž Cumbernauld. Nový podnik bude obsluhovat stavební plochy, bytová a energetická zařízení na západní straně centrální pásma. Závod poblíž Livingstonu, který v současné době zaměstnává 39 lidí, bude nadále poskytovat služby udržitelného nakládání s odpady a recyklované drtě podnikům v Edinburghu, Fife a Lothians.",
+    "spans": [
+      {
+        "text": "centrální pásma.",
+        "label": "MAJOR",
+        "start": 272,
+        "end": 288
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Myšlenkové posuny se kvantifikují obtížněji než půjčky venkovským ženám nebo zápis dívek do škol. Existuje spousta důkazů, že ženská agentura dokáže hory přenést. V Íránu například ženy představují největší hrozbu pro islámskou vládu za posledních 40 let, jednoduše proto, že se odmítají podřídit zákonům, které je nutí zakrývat si vlasy V některých ze 130 zemí s minimálními kvótami pro zastoupení žen ve vládě, jako je například Indie, se odpor mužů vůči ženskému hlasování a politickému aktivismu snížil.",
+    "spans": [
+      {
+        "text": "agentura",
+        "label": "MAJOR",
+        "start": 133,
+        "end": 141
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Posuny v myšlení jsou těžší kvantifikovat než bankovní půjčky pro venkovské ženy nebo docházka dívek do škol. Existuje však mnoho důkazů o tom, že ženská agentura může pohnout horami. V Íránu například ženy vedly největší hrozbu pro islámskou vládu za 40 let jednoduše tím, že odmítly dodržovat zákony, které je nutí zakrývat si vlasy. V některých ze 130 zemí s minimálními kvótami pro zastoupení žen ve vládě, jako je Indie, se mužský odpor vůči ženskému hlasování a politickému aktivismu zmírnil.",
+    "spans": [
+      {
+        "text": "kvantifikovat",
+        "label": "MAJOR",
+        "start": 28,
+        "end": 41
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The problems at the EPA are distinct but not unrelated to those at the Department of Justice, which handles environmental crimes via its Environment and Natural Resources Division, or ENRD. Prior to joining the EPA, Uhlmann - the EPA assistant secretary for enforcement - had served as the longtime head of that division's Environmental Crimes Section, from 1990 through 2007. The EPA sends its most serious civil and criminal cases to ENRD, which - as a relatively underfunded office - often relies on other agencies in helping to choose which fights to take on. In fiscal year 2022, the EPA deferred fewer cases to DOJ (88) than at any point since 2000 and concluded fewer civil judicial cases than it had since that time, as well. As the Environmental Integrity Project notes, even Trump's EPA concluded 94 civil cases and deferred 106 cases per year to the DOJ per year, on average.",
+    "text": "Problémy v EPA jsou odlišné, ale ne nesouvisející s těmi na ministerstvu spravedlnosti, které se zabývá environmentálními trestnými činy prostřednictvím své divize pro životní prostředí a přírodní zdroje, nebo ENRD. Předtím, než se připojil k EPA, Uhlmann - zástupce tajemníka EPA pro vymáhání - sloužil jako dlouholetý šéf sekce environmentálních trestných činů této divize, od roku 1990 do roku 2007. EPA zasílá své nejvážnější civilní a trestní případy do ENRD, které - jako relativně nedostatečně financované kanceláře - často spoléhá na jiné agentury při výběru, které boje přijmout. V rozpočtovém roce 2022 EPA odložila méně případů k DOJ (88) než v kterémkoli bodě od roku 2000 a uzavřela méně civilních soudních případů, než měla v té době, také. Jak poznamenává Projekt environmentální integrity, dokonce Trumpova EPA uzavřela 94 civilních případů a odložila 106 případů ročně k DOJ ročně, v průměru.",
+    "spans": [
+      {
+        "text": " DOJ",
+        "label": "MAJOR",
+        "start": 887,
+        "end": 891
+      },
+      {
+        "text": " k DOJ ",
+        "label": "MAJOR",
+        "start": 638,
+        "end": 645
+      },
+      {
+        "text": "této divize",
+        "label": "MAJOR",
+        "start": 363,
+        "end": 374
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "For most travelers, the aircraft model isn't a deciding factor when booking a flight. But with the majority of Boeing 737 MAX 9 jets grounded around the country after an Alaska Airlines fuselage blowout on Jan. 6, some prospective passengers may want to know how to tell what type of plane they'll be on and which models are the safest. The first is easy enough to answer - the second is a little more complicated.",
+    "text": "Pro většinu cestujících není model letadla rozhodujícím faktorem při rezervaci letu. Ale s většinou letadel Boeing 737 MAX 9 uzemněných po celé zemi kvůli protržení trupu u Alaska Airlines 6. ledna se někteří potenciální pasažéři mohou chtít dozvědět, jak zjistit, na jakém typu letadla budou letět, a které modely jsou nejbezpečnější. První otázka je snadno zodpověditelná - druhá je trochu složitější.",
+    "spans": [
+      {
+        "text": "rozhodujícím faktorem",
+        "label": "MAJOR",
+        "start": 43,
+        "end": 64
+      },
+      {
+        "text": "uzemněných po celé zem",
+        "label": "MAJOR",
+        "start": 125,
+        "end": 147
+      },
+      {
+        "text": ", a",
+        "label": "MAJOR",
+        "start": 298,
+        "end": 301
+      },
+      {
+        "text": " -",
+        "label": "MAJOR",
+        "start": 373,
+        "end": 375
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "For most travelers, the aircraft model isn't a deciding factor when booking a flight. But with the majority of Boeing 737 MAX 9 jets grounded around the country after an Alaska Airlines fuselage blowout on Jan. 6, some prospective passengers may want to know how to tell what type of plane they'll be on and which models are the safest. The first is easy enough to answer - the second is a little more complicated.",
+    "text": "Pro většinu cestujících není model letadla rozhodujícím faktorem při rezervaci letu. Ale vzhledem k tomu, že většina letadel Boeing 737 MAX 9 byla po explozi trupu letadla společnosti Alaska Airlines 6. ledna odstavena po celé zemi, někteří potenciální cestující by mohli chtít vědět, jak poznat, na jakém typu letadla budou cestovat a které modely jsou nejbezpečnější. První otázka je snadno zodpověditelná, druhá je trochu složitější.",
+    "spans": [
+      {
+        "text": "letu",
+        "label": "MAJOR",
+        "start": 79,
+        "end": 83
+      },
+      {
+        "text": "zodpověditelná",
+        "label": "MAJOR",
+        "start": 393,
+        "end": 407
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Posuny v myšlení se vyčíslují hůře než bankovní půjčky pro venkovské ženy nebo zápisy do škol pro dívky. Přesto existuje spousta důkazů, že ženská agentura může pohnout horami. Například v Íránu ženy vedly největší hrozbu pro islámskou vládu za posledních 40 let jen tím, že odmítly dodržovat zákony, které je nutí zakrývat si vlasy. V některých ze 130 zemí s minimálními kvótami pro zastoupení žen ve vládě, jako je Indie, se odpor mužů vůči ženskému hlasování a politickému aktivismu zmírnil.",
+    "spans": [
+      {
+        "text": "agentura",
+        "label": "MAJOR",
+        "start": 147,
+        "end": 155
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "The SEC rejected applications for similar funds for years. Last year, however, the U.S. Court of Appeals for the District of Columbia ruled against the SEC's refusal to approve an application from Grayscale to convert a derivative fund into one that would directly bitcoin, calling the SEC's position \"",
+    "text": "Komise pro cenné papíry a burzy (SEC) odmítala žádosti o podobné fondy po léta. Loni však odvolací soud Spojených států pro obvod Columbia rozhodl proti odmítnutí SEC schválit žádost společnosti Grayscale o převod derivátového fondu na fond, který by přímo obchodoval s bitcoiny, a označil postoj SEC za „nesmyslný“.",
+    "spans": [
+      {
+        "text": "odvolací",
+        "label": "MAJOR",
+        "start": 90,
+        "end": 98
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Shifts in thought are harder to quantify than bank loans for rural women or school enrollment for girls. Yet there is plenty of evidence that female agency can move mountains. In Iran, for example, women have led the greatest threat to the Islamic government in 40 years simply by refusing to comply with laws that force them to cover their hair. In some of the 130 countries with minimum quotas for female representation in government, such as India, male resistance to female voting and political activism has eased.",
+    "text": "Změny v myšlení jsou těžší kvantifikovat než bankovní půjčky pro venkovské ženy nebo školní docházka dívek. Přesto existuje spousta důkazů, že ženská agentura může přesunout hory. V Íránu například ženy vedly největší hrozbu islámské vládě za 40 let prostě tím, že odmítly dodržovat zákony, které je nutily zakrývat si vlasy. V některých z 130 zemí s minimálními kvótami pro ženskou reprezentaci ve vládě, jako je Indie, se mužský odpor vůči ženskému volebnímu právu a politické aktivitě uvolnil.",
+    "spans": [
+      {
+        "text": "může přesunout hory.",
+        "label": "MAJOR",
+        "start": 159,
+        "end": 179
+      },
+      {
+        "text": "vedly",
+        "label": "MAJOR",
+        "start": 203,
+        "end": 208
+      },
+      {
+        "text": "největší hrozbu",
+        "label": "MAJOR",
+        "start": 209,
+        "end": 224
+      },
+      {
+        "text": "za",
+        "label": "MAJOR",
+        "start": 240,
+        "end": 242
+      },
+      {
+        "text": "z",
+        "label": "MAJOR",
+        "start": 338,
+        "end": 339
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Move will also help transform land at the derelict Gartshore Works site.",
+    "text": "Krok bude také pomoci transformovat pozemky na opuštěném místě Gartshore Works.",
+    "spans": [
+      {
+        "text": "Krok",
+        "label": "MINOR",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "text": "bude také pomoci",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 21
+      },
+      {
+        "text": "místě",
+        "label": "MAJOR",
+        "start": 57,
+        "end": 62
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "As part of a £6 million-plus expansion of the business, Brewster has now opened its second recycling site, regenerating the old Gartshore Works near Cumbernauld. The new plant will serve construction sites, housing and utilities developments in the western part of the Central Belt. The plant near Livingston, which currently employs 39 people, will continue to provide sustainable waste management services and recycled aggregates to businesses in Edinburgh, Fife and the Lothians.",
+    "text": "V rámci expanze podniku za 6 milionů liber a více otevřel Brewster své druhé recyklační středisko, regenerující staré Gartshore Works poblíž Cumbernauldu. Nová továrna bude sloužit staveništním lokalitám, bytovým a utilitním rozvojům v západní části Středního pásu. Továrna poblíž Livingstonu, která目前 zaměstnává 39 lidí, bude nadále poskytovat udržitelné služby řízení odpadů a recyklovaných agregátů podnikům v Edinburghu, Fife a Lothians.",
+    "spans": [
+      {
+        "text": "za 6 milionů liber a více",
+        "label": "MAJOR",
+        "start": 24,
+        "end": 49
+      },
+      {
+        "text": "regenerující",
+        "label": "MAJOR",
+        "start": 99,
+        "end": 111
+      },
+      {
+        "text": "目前",
+        "label": "MINOR",
+        "start": 299,
+        "end": 301
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Perry Cooper, a media representative from the Port of Seattle, which oversees Seattle-Tacoma International Airport, said in an email that there are a wide variety of reasons accidents occur, ranging from equipment to human error. So while it's easy enough to determine what type of plane you'll be on, it's more complicated to determine what that means from a safety perspective.",
+    "text": "Perry Cooper, mediální zástupce přístavu Seattle, který dohlíží na mezinárodní letiště Seattle-Tacoma, napsal v e-mailu, že existuje široká škála důvodů, proč k nehodám dochází, od zařízení až po lidské chyby. Takže i když je snadné zjistit, jaký typ letadla budete mít, je složitější určit, co to znamená z hlediska bezpečnosti.",
+    "spans": [
+      {
+        "text": "přístavu ",
+        "label": "MINOR",
+        "start": 32,
+        "end": 41
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "As part of a £6 million-plus expansion of the business, Brewster has now opened its second recycling site, regenerating the old Gartshore Works near Cumbernauld. The new plant will serve construction sites, housing and utilities developments in the western part of the Central Belt. The plant near Livingston, which currently employs 39 people, will continue to provide sustainable waste management services and recycled aggregates to businesses in Edinburgh, Fife and the Lothians.",
+    "text": "Jako součást rozšíření podniku za více než 6 milionů liber nyní společnost Brewster otevřela druhé recyklační středisko, regenerující staré Gartshore Works nedaleko Cumbernauldu. Nový závod bude obsluhovat staveniště, bytovou výstavbu a inženýrské sítě v západní části Ústředního pásu Závod poblíž Livingstonu, který v současné době zaměstnává 39 lidí, bude i nadále poskytovat podnikům v Edinburghu, Fife a oblasti Lothians služby udržitelného nakládání s odpady i recyklované kamenivo.",
+    "spans": [
+      {
+        "text": "Ústředního pásu",
+        "label": "MAJOR",
+        "start": 269,
+        "end": 284
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  }
+]

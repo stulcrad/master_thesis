@@ -1,0 +1,540 @@
+[
+  {
+    "source": "anatomically accurate green M&M",
+    "text": "anatomicky správný zelený M&M",
+    "spans": [
+      {
+        "text": "anatomicky",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "my hedges are getting big.",
+    "text": "moje živý ploty se rozrostly.",
+    "spans": [
+      {
+        "text": "živý",
+        "label": "MAJOR",
+        "start": 5,
+        "end": 9
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "anatomically accurate green M&M",
+    "text": "anatomicky přesný zelený bonbón M&M",
+    "spans": [
+      {
+        "text": "bonbón",
+        "label": "MAJOR",
+        "start": 25,
+        "end": 31
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Got some somewhere but exactly where?",
+    "text": "Nějaké mám někde, ale přesně kde?",
+    "spans": [
+      {
+        "text": "Nějaké mám někde",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 16
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "my hedges are getting big.",
+    "text": "mé ploty jsou velké.",
+    "spans": [
+      {
+        "text": "ploty",
+        "label": "MAJOR",
+        "start": 3,
+        "end": 8
+      },
+      {
+        "text": "mé",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "text": "sou velké",
+        "label": "MAJOR",
+        "start": 10,
+        "end": 19
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "my hedges are getting big.",
+    "text": "Mé keře rostou do výšky.",
+    "spans": [
+      {
+        "text": "keře ",
+        "label": "MAJOR",
+        "start": 3,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Got some somewhere but exactly where?",
+    "text": "Někde je, ale přesně kde?",
+    "spans": [
+      {
+        "text": "Někde je",
+        "label": "MINOR",
+        "start": 0,
+        "end": 8
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Got some somewhere but exactly where?",
+    "text": "Někde někde je ale máš, ale kde přesně?",
+    "spans": [
+      {
+        "text": "Někde někde je ale máš",
+        "label": "MINOR",
+        "start": 0,
+        "end": 22
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "my hedges are getting big.",
+    "text": "naše živé ploty rostou velké.",
+    "spans": [
+      {
+        "text": "rostou velké",
+        "label": "MAJOR",
+        "start": 16,
+        "end": 28
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "my hedges are getting big.",
+    "text": "moje hedge se zvětšuje.",
+    "spans": [
+      {
+        "text": "hedge",
+        "label": "MINOR",
+        "start": 5,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "my hedges are getting big.",
+    "text": "Mé živé ploty rostou velké.",
+    "spans": [
+      {
+        "text": "rostou velké",
+        "label": "MINOR",
+        "start": 14,
+        "end": 26
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "anatomically accurate green M&M",
+    "text": "anatomicky přesné zelené M&M",
+    "spans": [
+      {
+        "text": "zelené",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "anatomically accurate green M&M",
+    "text": "anatomicky přesný zelený M&M",
+    "spans": [
+      {
+        "text": " zelený",
+        "label": "MAJOR",
+        "start": 17,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Got some somewhere but exactly where?",
+    "text": "Někde něco mám, ale kde přesně?",
+    "spans": [
+      {
+        "text": "něco",
+        "label": "MINOR",
+        "start": 6,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it’s why so many of us are still obsessively watching shows like The Office, or movies like Anchorman that provided endless one-line references in a meme-like fashion.",
+    "text": "Proto tolik z nás stále obsesivně sleduje seriály jako Kancl nebo filmy jako Zprávař, které poskytly nekonečné množství jednovětých referencí v memovitém stylu.",
+    "spans": [
+      {
+        "text": "Kancl",
+        "label": "MAJOR",
+        "start": 55,
+        "end": 60
+      },
+      {
+        "text": "Zprávař",
+        "label": "MAJOR",
+        "start": 77,
+        "end": 84
+      },
+      {
+        "text": "jednovětých referencí",
+        "label": "MAJOR",
+        "start": 120,
+        "end": 141
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "@user10 makes sense to me",
+    "text": "@user10 pro mě to dává smysl",
+    "spans": [
+      {
+        "text": "pro mě",
+        "label": "MAJOR",
+        "start": 8,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Ready for the plasterer next week",
+    "text": "Připraven na omítku příští týden",
+    "spans": [
+      {
+        "text": "omítku",
+        "label": "MINOR",
+        "start": 13,
+        "end": 19
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Permission to relax. 📺",
+    "text": "Dovolte mi odpočinout si. 📺",
+    "spans": [
+      {
+        "text": "Dovolte mi",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "So, my life kind of sucks right now.",
+    "text": "Takže moje život je teď taková sračka.",
+    "spans": [
+      {
+        "text": "moje",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 10
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A couple of extra other stickers I had on me too",
+    "text": "Dva další nálepky, které jsem měl na sobě",
+    "spans": [
+      {
+        "text": "Dva",
+        "label": "MINOR",
+        "start": 0,
+        "end": 3
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Ready for the plasterer next week",
+    "text": "Stěny jsou připravené na omítkáře příští týden",
+    "spans": [
+      {
+        "text": "omítkáře",
+        "label": "MAJOR",
+        "start": 25,
+        "end": 33
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "So, my life kind of sucks right now.",
+    "text": "Takže můj život teď trochu šije.",
+    "spans": [
+      {
+        "text": "teď trochu šije.",
+        "label": "MAJOR",
+        "start": 16,
+        "end": 32
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it’s why so many of us are still obsessively watching shows like The Office, or movies like Anchorman that provided endless one-line references in a meme-like fashion.",
+    "text": "Proto tak mnoho z nás stále posedle sleduje seriály jako The Office nebo filmy jako Anchorman, které poskytují nekonečné jednořádkové odkazy v memovitém stylu.",
+    "spans": [
+      {
+        "text": "jednořádkové",
+        "label": "MAJOR",
+        "start": 121,
+        "end": 133
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it’s why so many of us are still obsessively watching shows like The Office, or movies like Anchorman that provided endless one-line references in a meme-like fashion.",
+    "text": "Proto je tak mnoho z nás stále posedlých sledováním seriálů jako The Office nebo filmů jako Anchorman, které poskytovaly nekonečné odkazy v memovém stylu.",
+    "spans": [
+      {
+        "text": "které poskytovaly nekonečné odkazy v memovém stylu",
+        "label": "MAJOR",
+        "start": 103,
+        "end": 153
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "So, my life kind of sucks right now.",
+    "text": "Takže, můj život teď trochu trpí.",
+    "spans": [
+      {
+        "text": "trpí.",
+        "label": "MAJOR",
+        "start": 28,
+        "end": 33
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it seems like even iMessage over WiFi isn't working, which doesn't quite make sense to me",
+    "text": "vypadá to, že ani iMessage přes WiFi nefunguje, což mi nedává úplně smysl",
+    "spans": [
+      {
+        "text": "mi nedává úplně smysl",
+        "label": "MAJOR",
+        "start": 52,
+        "end": 73
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "Permission to relax. 📺",
+    "text": "Svolení k odpočinku. 📺",
+    "spans": [
+      {
+        "text": "📺",
+        "label": "MINOR",
+        "start": 21,
+        "end": 22
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it seems like even iMessage over WiFi isn't working, which doesn't quite make sense to me",
+    "text": "je to tak, že iMessage přes WiFi nefunguje, což mi nepřijde moc logické",
+    "spans": [
+      {
+        "text": "je to tak, že ",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "text": "což mi nepřijde moc logické",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 71
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "@user10 makes sense to me",
+    "text": "Pro mě @user10 dává smysl",
+    "spans": [
+      {
+        "text": "Pro mě ",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "@user10 dává smys",
+        "label": "MINOR",
+        "start": 7,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "@user10 makes sense to me",
+    "text": "@user10 To má pro mě smysl",
+    "spans": [
+      {
+        "text": "má pro mě smysl",
+        "label": "MAJOR",
+        "start": 11,
+        "end": 26
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "@user10 makes sense to me",
+    "text": "@user10 mi dává smysl",
+    "spans": [
+      {
+        "text": "user",
+        "label": "MINOR",
+        "start": 1,
+        "end": 5
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "A couple of extra other stickers I had on me too",
+    "text": "Měl jsem u sebe ještě pár dalších nalepek taky",
+    "spans": [
+      {
+        "text": "taky",
+        "label": "MAJOR",
+        "start": 42,
+        "end": 46
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "@user10 makes sense to me",
+    "text": "@user10 má pro mě smysl",
+    "spans": [
+      {
+        "text": "má pro mě",
+        "label": "MAJOR",
+        "start": 8,
+        "end": 17
+      },
+      {
+        "text": "user",
+        "label": "MINOR",
+        "start": 1,
+        "end": 5
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it’s why so many of us are still obsessively watching shows like The Office, or movies like Anchorman that provided endless one-line references in a meme-like fashion.",
+    "text": "to je důvod, proč tolik z nás stále posedle sleduje pořady jako Kancelář, nebo filmy jako Ankerman, které poskytly nekonečné odkazy na jednu řádku v podobě meme.",
+    "spans": [
+      {
+        "text": " Kancelář",
+        "label": "MAJOR",
+        "start": 63,
+        "end": 72
+      },
+      {
+        "text": "odkazy na jednu řádku",
+        "label": "MAJOR",
+        "start": 125,
+        "end": 146
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  },
+  {
+    "source": "it’s why so many of us are still obsessively watching shows like The Office, or movies like Anchorman that provided endless one-line references in a meme-like fashion.",
+    "text": "proto tolik z nás stále posedle sleduje pořady jako Kancl nebo filmy jako Anchorman, které poskytovaly nekonečné jednořádkové odkazy v memovém stylu.",
+    "spans": [
+      {
+        "text": "jednořádkové odkazy",
+        "label": "MAJOR",
+        "start": 113,
+        "end": 132
+      }
+    ],
+    "source_language": "en",
+    "target_language": "cs"
+  }
+]

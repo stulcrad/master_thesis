@@ -1,0 +1,546 @@
+[
+  {
+    "source": "Greggs has also revealed plans to debut up to another 160 stores in the year ahead, and cheered a strong end to 2023. The group opened a record 220 new shops over 2023, with 33 closures and 42 relocations, leaving it with 145 new sites on a net basis and taking its total estate to 2,473.",
+    "text": "Греггс також розкрив плани відкрити ще до 160 магазинів у наступному році, і закликав до сильного завершення 2023 року. Група відкрила рекордні 220 нових магазинів у 2023 році, з 33 закриттями та 42 переїздами, що залишило її з 145 нових точок продажів на чистому балансі та збільшило її загальну власність до 2,473.",
+    "spans": [
+      {
+        "text": "зак",
+        "label": "MINOR",
+        "start": 77,
+        "end": 80
+      },
+      {
+        "text": "ика",
+        "label": "MINOR",
+        "start": 81,
+        "end": 84
+      },
+      {
+        "text": "в д",
+        "label": "MINOR",
+        "start": 84,
+        "end": 87
+      },
+      {
+        "text": "си",
+        "label": "MAJOR",
+        "start": 89,
+        "end": 91
+      },
+      {
+        "text": "ль",
+        "label": "MAJOR",
+        "start": 91,
+        "end": 93
+      },
+      {
+        "text": "но",
+        "label": "MAJOR",
+        "start": 93,
+        "end": 95
+      },
+      {
+        "text": "го",
+        "label": "MAJOR",
+        "start": 95,
+        "end": 97
+      },
+      {
+        "text": " ї",
+        "label": "MINOR",
+        "start": 222,
+        "end": 224
+      },
+      {
+        "text": "ї",
+        "label": "MINOR",
+        "start": 224,
+        "end": 225
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The FTSE 250 firm is to open between 140 and 160 outlets on a net basis in 2024 as it looks to give customers more convenient access to its stores. It will keep looking at expanding across retail parks, travel sites, and roadside locations, plus industrial estates. Currie said: \"Where there's any location where you can't currently access a Greggs easily, we want to try and get into that location.\"",
+    "text": "Компанія FTSE 250 планує відкрити від 140 до 160 нових точок продажу в 2024 році, щоб забезпечити більш зручний доступ клієнтів до своїх магазинів. Вона продовжуватиме розширювати мережу в торгових центрах, на транспортних вузлах, вздовж доріг та на промислових територіях. Керрі заявив: «Ми прагнемо відкривати магазини в усіх локаціях, де зараз складно знайти Greggs».",
+    "spans": [
+      {
+        "text": "Ми прагнемо відкривати магазини в усіх локаціях, де зараз складно знайти Greggs",
+        "label": "MAJOR",
+        "start": 289,
+        "end": 368
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The FTSE 250 firm is to open between 140 and 160 outlets on a net basis in 2024 as it looks to give customers more convenient access to its stores. It will keep looking at expanding across retail parks, travel sites, and roadside locations, plus industrial estates. Currie said: \"Where there's any location where you can't currently access a Greggs easily, we want to try and get into that location.\"",
+    "text": "Компанія FTSE 250 планує відкрити від 140 до 160 магазинів у 2024 році, оскільки прагне забезпечити клієнтам зручний доступ до своїх магазинів. Вона продовжуватиме розширюватися в торгових центрах, місцях відпочинку та на узбіччях, а також на промислових підприємствах. Керрі заявив: «Де б ви не знаходилися, якщо ви не можете легко дістатися до магазину Greggs, ми хочемо спробувати зайти туди».",
+    "spans": [
+      {
+        "text": "Керрі",
+        "label": "MAJOR",
+        "start": 270,
+        "end": 275
+      },
+      {
+        "text": "зайти туди",
+        "label": "MAJOR",
+        "start": 384,
+        "end": 394
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Greggs has also revealed plans to debut up to another 160 stores in the year ahead, and cheered a strong end to 2023. The group opened a record 220 new shops over 2023, with 33 closures and 42 relocations, leaving it with 145 new sites on a net basis and taking its total estate to 2,473.",
+    "text": "Greggs також розкрила плани щодо відкриття ще 160 магазинів у наступному році та повідомила про сильні показники на кінець 2023 року. Протягом 2023 року група відкрила рекордні 220 нових магазинів, 33 закрила і 42 переїхала, в результаті чого у неї з'явилося 145 нових об'єктів на чистій основі, а загальна кількість об'єктів нерухомості зросла до 2 473.",
+    "spans": [
+      {
+        "text": "переїхала",
+        "label": "MAJOR",
+        "start": 214,
+        "end": 223
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The FTSE 250 firm is to open between 140 and 160 outlets on a net basis in 2024 as it looks to give customers more convenient access to its stores. It will keep looking at expanding across retail parks, travel sites, and roadside locations, plus industrial estates. Currie said: \"Where there's any location where you can't currently access a Greggs easily, we want to try and get into that location.\"",
+    "text": "У 2024 році компанія, що входить до списку FTSE 250, планує відкрити від 140 до 160 торгових точок на нетто-основі, оскільки вона прагне забезпечити покупцям більш зручний доступ до своїх магазинів. Вона продовжуватиме розширювати свою присутність у торговельних парках, туристичних центрах та придорожніх зонах, а також на промислових територіях. Каррі сказав: \"Якщо є місце, де наразі неможливо легко дістатися до магазину Greggs, ми хочемо спробувати потрапити туди\".",
+    "spans": [
+      {
+        "text": " нетто-основі",
+        "label": "MINOR",
+        "start": 101,
+        "end": 114
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The number of complaints to authorities in Ukraine of a person speaking in Russian increased by 30% last year. Kiev actively encourages the population to report such cases in a bid to allegedly 'protect' the country from Russian influence.",
+    "text": "Кількість скарг до органів влади в Україні від осіб, які розмовляють російською мовою, торік зросла на 30%. Київ активно заохочує населення повідомляти про такі випадки, намагаючись нібито «захистити» країну від російського впливу.",
+    "spans": [
+      {
+        "text": "в",
+        "label": "MINOR",
+        "start": 43,
+        "end": 44
+      },
+      {
+        "text": "д",
+        "label": "MINOR",
+        "start": 45,
+        "end": 46
+      },
+      {
+        "text": "і",
+        "label": "MINOR",
+        "start": 44,
+        "end": 45
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Washington state briefly had a statewide jail oversight office from 1981-87, which the United States Department of Justice once trumpeted as a model for systems around the country. Unfortunately, the Legislature eliminated statewide jail oversight over the objections of jail administrators, civil rights groups, and others.",
+    "text": "У штаті Вашингтон у 1981-87 роках недовго існувало Управління нагляду за в'язницями на рівні штату, про яке Міністерство юстиції США колись говорило як про зразок для систем по всій країні. На жаль, законодавчі збори штату ліквідували нагляд за в'язницями через заперечення адміністрацій в'язниць, груп із захисту громадянських прав та інших.",
+    "spans": [
+      {
+        "text": "недовго",
+        "label": "MAJOR",
+        "start": 34,
+        "end": 41
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Greggs has also revealed plans to debut up to another 160 stores in the year ahead, and cheered a strong end to 2023. The group opened a record 220 new shops over 2023, with 33 closures and 42 relocations, leaving it with 145 new sites on a net basis and taking its total estate to 2,473.",
+    "text": "Греггс також розкрив плани щодо відкриття ще до 160 магазинів у наступному році та привітав сильний кінець 2023 року. Група відкрила рекордні 220 нових магазинів у 2023 році, закривши 33 магазини та перенісши 42 магазини, що залишило їй 145 нових місць на чистій основі та збільшило загальну кількість магазинів до 2473.",
+    "spans": [
+      {
+        "text": "привітав сильний",
+        "label": "MINOR",
+        "start": 83,
+        "end": 99
+      },
+      {
+        "text": "залишило",
+        "label": "MINOR",
+        "start": 225,
+        "end": 233
+      },
+      {
+        "text": "їй",
+        "label": "MINOR",
+        "start": 234,
+        "end": 236
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The FTSE 250 firm is to open between 140 and 160 outlets on a net basis in 2024 as it looks to give customers more convenient access to its stores. It will keep looking at expanding across retail parks, travel sites, and roadside locations, plus industrial estates. Currie said: \"Where there's any location where you can't currently access a Greggs easily, we want to try and get into that location.\"",
+    "text": "У 2024 році компанія FTSE 250 відкриє від 140 до 160 магазинів на чистій основі, оскільки вона прагне надати клієнтам зручніший доступ до своїх магазинів. Вона продовжить розширюватися в роздрібних парках, туристичних місцях, на узбіччях доріг та промислових ділянках. Керрі сказав: \"Де б не було місця, де ви зараз не можете легко дістатися до Greggs, ми хочемо спробувати потрапити в це місце\".",
+    "spans": [
+      {
+        "text": "ми хочемо спробувати потрапити в це місце",
+        "label": "MAJOR",
+        "start": 353,
+        "end": 394
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "As the latest tranche of NHS figures reveals more bad news, we should be outraged",
+    "text": "Оскільки останній транш даних NHS розкриває ще більше поганих новин, ми повинні бути обурені",
+    "spans": [
+      {
+        "text": "транш даних",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 29
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Over the past decade, our lives have changed through technology, with many working from home, and Sydney has gained an impressive network of metro and light rail systems. Our ability to purchase online has changed the way we shop, and friends and family seem closer because of smartphone communication. All of these adaptations from one system to another can also occur in our built environment through a planning focus on adaptive reuse rather than preferencing heritage preservation.",
+    "text": "За останні десять років наше життя змінилося завдяки технологіям і багато людей працюють віддаленою роботи та в Сіднеї побудована неймовірний мережа метрополітену й легкорельсових транспортних систем; можливості купувати онлайн також кардинально перевернули спосіб шопінгу у свідоцтву того що друзі ставали близькішими через комуникацію зі смартфона ; а планова фокусування більшого значення саме реадптивному використання будівельного сектору може призводи до створення інших типах архітектурі для міських районів , які б",
+    "spans": [
+      {
+        "text": "віддаленою",
+        "label": "MAJOR",
+        "start": 89,
+        "end": 99
+      },
+      {
+        "text": "роботи",
+        "label": "MAJOR",
+        "start": 100,
+        "end": 106
+      },
+      {
+        "text": "планова",
+        "label": "MINOR",
+        "start": 354,
+        "end": 361
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The number of complaints to authorities in Ukraine of a person speaking in Russian increased by 30% last year. Kiev actively encourages the population to report such cases in a bid to allegedly 'protect' the country from Russian influence.",
+    "text": "Кількість скарг до українських владних структур про людей, які розмовляють російською мовою, зросла на 30% минулого року. Київ активно заохочує населення повідомляти про такі випадки в спробі боротьби з так званим 'захистом' країни від російського впливу.",
+    "spans": [
+      {
+        "text": "владних",
+        "label": "MINOR",
+        "start": 31,
+        "end": 38
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Washington state briefly had a statewide jail oversight office from 1981-87, which the United States Department of Justice once trumpeted as a model for systems around the country. Unfortunately, the Legislature eliminated statewide jail oversight over the objections of jail administrators, civil rights groups, and others.",
+    "text": "У штаті Вашингтон з 1981 по 1987 рік діяв офіс нагляду за в'язницями в масштабах усього штату, який Міністерство юстиції США колись називало моделлю для систем по всій країні. На жаль, законодавча влада ліквідувала нагляд за в'язницями в масштабах штату, незважаючи на заперечення адміністраторів в'язниць, груп з захисту громадянських прав та інших організацій.",
+    "spans": [
+      {
+        "text": "адміні",
+        "label": "MAJOR",
+        "start": 281,
+        "end": 287
+      },
+      {
+        "text": "страторів",
+        "label": "MAJOR",
+        "start": 287,
+        "end": 296
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Washington state briefly had a statewide jail oversight office from 1981-87, which the United States Department of Justice once trumpeted as a model for systems around the country. Unfortunately, the Legislature eliminated statewide jail oversight over the objections of jail administrators, civil rights groups, and others.",
+    "text": "У Вашингтоні з 1981 по 1987 рік існувала загальнодержавна служба нагляду за в'язницями, яку Міністерство юстиції Сполучених Штатів одного разу оголосило зразком для систем по всій країні. На жаль, законодавча влада скасувала загальнодержавний нагляд за в'язницями за запереченнями адміністрації в'язниць, громадських правозахисних організацій та інших.",
+    "spans": [
+      {
+        "text": "зразком",
+        "label": "MAJOR",
+        "start": 153,
+        "end": 160
+      },
+      {
+        "text": "за",
+        "label": "MINOR",
+        "start": 264,
+        "end": 266
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "На рівні виборчих дільниць нам достатньо лише подивитися на центральний діловий район Сіднея як приклад району, який виріс зі свого доєвропейського ландшафту до двоповерхового міста, від максимальної висоти 150 футів до сьогоднішніх хмарочосів. У набагато менших масштабах те саме може статися в міських центрах Сіднея, розташованих навколо транспортних вузлів. Внутрішні передмістя також повинні розвиватися, з переходом до більш доступного квартирного життя на висотах нижче крон дерев у ключових місцях. Звичайно, нове житлове будівництво має бути добре спроєктованим, а дерева, ландшафтний дизайн і парки повинні бути включені разом з іншою необхідною інфраструктурою.",
+    "spans": [
+      {
+        "text": "квартирного життя",
+        "label": "MAJOR",
+        "start": 442,
+        "end": 459
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Over the past decade, our lives have changed through technology, with many working from home, and Sydney has gained an impressive network of metro and light rail systems. Our ability to purchase online has changed the way we shop, and friends and family seem closer because of smartphone communication. All of these adaptations from one system to another can also occur in our built environment through a planning focus on adaptive reuse rather than preferencing heritage preservation.",
+    "text": "За останнє десятиліття наше життя змінилося завдяки технологіям, багато хто працює вдома, а Сідней отримав вражаючу мережу метрополітену та трамвайних систем. Наша здатність купувати товари онлайн змінила спосіб, у який ми робимо покупки, а друзі та родина здаються ближчими завдяки смартфонам. Усі ці адаптації від однієї системи до іншої також можуть відбутися у нашому навколишньому середовищі завдяки плануванню, зосередженому на адаптивному повторному використанні, а не на збереженні спадщини.",
+    "spans": [
+      {
+        "text": "вдома",
+        "label": "MAJOR",
+        "start": 83,
+        "end": 88
+      },
+      {
+        "text": "використанні",
+        "label": "MAJOR",
+        "start": 457,
+        "end": 469
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "The number of complaints to authorities in Ukraine of a person speaking in Russian increased by 30% last year. Kiev actively encourages the population to report such cases in a bid to allegedly 'protect' the country from Russian influence.",
+    "text": "Кількість скарг до органів влади в Україні на людину, яка розмовляє російською, минулого року зросла на 30%. Київ активно заохочує населення повідомляти про такі випадки, намагаючись, як стверджується, «захистити» країну від впливу Росії.",
+    "spans": [
+      {
+        "text": "людину",
+        "label": "MAJOR",
+        "start": 46,
+        "end": 52
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "На рівні округу нам просто потрібно подивитися на Сіднейський центральний бізнес-дистрикт як приклад території, яка зросла з ландшафту, що існував до заселення, у двоповерхове місто, з максимальною висотою 150 футів до сьогоднішніх висотних будівель. На значно меншому рівні те саме може відбуватися в центральних районах Сіднея, розташованих навколо транспортних вузлів. Внутрішні передмістя також повинні розвиватися, з тенденцією до більш доступного житла на висотах нижче верхівок дерев на ключових ділянках. Звичайно, нове будівництво житла має бути добре спланованим, а дерева, ландшафт і парки мають бути включені разом із іншими важливими інфраструктурними об’єктами.",
+    "spans": [
+      {
+        "text": "бізнес-дистрикт",
+        "label": "MINOR",
+        "start": 74,
+        "end": 89
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Greggs has also revealed plans to debut up to another 160 stores in the year ahead, and cheered a strong end to 2023. The group opened a record 220 new shops over 2023, with 33 closures and 42 relocations, leaving it with 145 new sites on a net basis and taking its total estate to 2,473.",
+    "text": "Greggs також оголосив про плани відкрити ще до 160 магазинів у наступному році та відзначив сильний кінець 2023 року. Група відкрила рекордну кількість нових магазинів - 220 протягом 2023 року, при цьому було закрито 33 та перенесено 42, що залишило їй 145 нових місць на чистій основі та збільшило загальну кількість до 2,473.",
+    "spans": [
+      {
+        "text": "сильний",
+        "label": "MAJOR",
+        "start": 92,
+        "end": 99
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Our planning system also needs to adapt so that planners in suburban councils, who seem to be less supportive of change, are not the only determinants of the future shape of their suburbs. A way forward could be to have an independent decision-making body that championed quality design as long as it fitted below the tree tops and incorporated family living, large balconies, common gardens and presented a friendly appearance. This could be a role for the current NSW government architect working within a carefully crafted complying code.",
+    "text": "Наша система планування також потребує змін, щоб планувальники в міських радах передмість, які, здається, менше підтримують зміни, не були єдиними, хто визначає майбутню форму своїх передмість. Шляхом вперед може бути створення незалежного органу прийняття рішень, який би ставив на перше місце якісний дизайн, що включав би житло для сімей, великі балкони, загальні сади та привабливий вигляд, за умови, що усе це відповідало б встановленим стандартам. Цю роль міг би виконувати теперішній головний архітектор уряду Нового Південного Уельсу, працюючи в межах ретельно розробленого кодексу.",
+    "spans": [
+      {
+        "text": "за умови, що усе це відповідало б встановленим стандартам",
+        "label": "MINOR",
+        "start": 395,
+        "end": 452
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Over the past decade, our lives have changed through technology, with many working from home, and Sydney has gained an impressive network of metro and light rail systems. Our ability to purchase online has changed the way we shop, and friends and family seem closer because of smartphone communication. All of these adaptations from one system to another can also occur in our built environment through a planning focus on adaptive reuse rather than preferencing heritage preservation.",
+    "text": "Протягом останнього десятиліття наше життя змінилося завдяки технологіям; багато хто з нас почав працювати з дому, а Сідней отримав вражаючу мережу метрополітену та легкорейкових систем. Наша здатність здійснювати покупки онлайн змінила спосіб нашого шопінгу, а друзі та родина стали ближчими завдяки спілкуванню через смартфони. Всі ці адаптації з однієї системи до іншої також можуть відбуватися в нашому побутовому середовищі завдяки плануванню, орієнтованому на адаптивне повторне використання, а не на збереження спадщини.",
+    "spans": [
+      {
+        "text": "систем",
+        "label": "MAJOR",
+        "start": 179,
+        "end": 185
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Washington state briefly had a statewide jail oversight office from 1981-87, which the United States Department of Justice once trumpeted as a model for systems around the country. Unfortunately, the Legislature eliminated statewide jail oversight over the objections of jail administrators, civil rights groups, and others.",
+    "text": "У 1981–1987 роках у штаті Вашингтон існував офіс з нагляду за всіма в'язницями штату, який американський Міністерство юстиції колись пишалося як прикладом для систем по всій країні. На жаль, законодавчий орган скасував офіс з нагляду за всіма в'язницями за протестами адміністраторів в'язниць, громадських організацій та інших.",
+    "spans": [
+      {
+        "text": " пишалос",
+        "label": "MAJOR",
+        "start": 132,
+        "end": 140
+      },
+      {
+        "text": "я",
+        "label": "MAJOR",
+        "start": 140,
+        "end": 141
+      },
+      {
+        "text": "за ",
+        "label": "MINOR",
+        "start": 254,
+        "end": 257
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "At the precinct level, we just need to look at the Sydney CBD as an example of an area which has grown from its pre-settlement landscape into a two-storey city, from a maximum height of 150 feet to the soaring towers of today. At a much scaled-down level, the same can occur across Sydney's town centres located around transport nodes. Inner suburbs must also evolve, with a swing to more affordable apartment living at heights below the tree tops on key sites. Of course, the new growth in housing needs to be well-designed and trees, landscaping and parks need to be included along with other essential infrastructure.",
+    "text": "На рівні окремого району нам достатньо поглянути на Сіднейський CBD як приклад території, яка виросла з дозаселеного ландшафту до двоповерхового міста, з максимальною висотою 150 футів до сьогоднішніх хмарочосів, що здіймаються в повітря. У значно меншому масштабі те ж саме може відбуватися в центрах Сіднея, розташованих навколо транспортних вузлів. Внутрішні передмістя також повинні розвиватися, з переходом до більш доступного житла на висоті нижче верхівок дерев на ключових ділянках. Звісно, нове зростання житла має бути добре продуманим, а дерева, ландшафтний дизайн і парки повинні бути включені в нього разом з іншими важливими елементами інфраструктури.",
+    "spans": [
+      {
+        "text": "дозаселеного ландшафту",
+        "label": "MAJOR",
+        "start": 104,
+        "end": 126
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Our planning system also needs to adapt so that planners in suburban councils, who seem to be less supportive of change, are not the only determinants of the future shape of their suburbs. A way forward could be to have an independent decision-making body that championed quality design as long as it fitted below the tree tops and incorporated family living, large balconies, common gardens and presented a friendly appearance. This could be a role for the current NSW government architect working within a carefully crafted complying code.",
+    "text": "Наша система планування також потребує адаптації, щоб планувальники в приміських радах, які, здається, менш прихильно ставляться до змін, не були єдиними, хто визначає майбутній вигляд своїх передмість. Шляхом вперед може стати створення незалежного органу, який би відстоював якісний дизайн, якщо він не виходить за межі верхівок дерев і передбачає сімейне життя, великі балкони, спільні сади та дружній зовнішній вигляд. Таку роль міг би виконувати нинішній державний архітектор Нового Південного Уельсу, який працює в рамках ретельно розробленого відповідного кодексу.",
+    "spans": [
+      {
+        "text": "приміських",
+        "label": "MAJOR",
+        "start": 70,
+        "end": 80
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Over the past decade, our lives have changed through technology, with many working from home, and Sydney has gained an impressive network of metro and light rail systems. Our ability to purchase online has changed the way we shop, and friends and family seem closer because of smartphone communication. All of these adaptations from one system to another can also occur in our built environment through a planning focus on adaptive reuse rather than preferencing heritage preservation.",
+    "text": "За останнє десятиліття наше життя змінилося завдяки технологіям: багато хто працює з дому, а в Сіднеї з'явилася вражаюча мережа метро і легкого рейкового транспорту. Можливість купувати товари онлайн змінила спосіб здійснення покупок, а друзі та сім'я стали ближчими завдяки спілкуванню за допомогою смартфонів. Всі ці адаптації від однієї системи до іншої можуть також відбуватися в нашому забудованому середовищі через планування, орієнтоване на адаптивне повторне використання, замість того, щоб надавати перевагу збереженню спадщини.",
+    "spans": [
+      {
+        "text": "легкого рейкового транспорту",
+        "label": "MAJOR",
+        "start": 136,
+        "end": 164
+      },
+      {
+        "text": "забудованому середовищі",
+        "label": "MAJOR",
+        "start": 391,
+        "end": 414
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Based on these expert arguments, it can be inferred that there exists a discord in financial laws between the federal government and other government parastatals. The situation escalated when the leaked document became public, with Betta Edu emerging as a scapegoat for a dysfunctional political system.",
+    "text": "На основі цих аргументів експертів можна зробити висновок, що існує розбіжність у фінансових законах між федеральним урядом та іншими урядовими парастатальними структурами. Ситуація загострилася, коли витік документа став громадським надбанням, і Бетта Еду опинилася цапом-відбувайлом для дисфункціональної політичної системи.",
+    "spans": [
+      {
+        "text": "громадським надбанням",
+        "label": "MAJOR",
+        "start": 222,
+        "end": 243
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Based on these expert arguments, it can be inferred that there exists a discord in financial laws between the federal government and other government parastatals. The situation escalated when the leaked document became public, with Betta Edu emerging as a scapegoat for a dysfunctional political system.",
+    "text": "На основі цих експертних аргументів можна зробити висновок, що існує розбіжність у фінансових законах між федеральним урядом та іншими урядовими структурами. Ситуація загострилася, коли витік документу став публічним, а Бетта Еду стала козлом відпущення для неефективної політичної системи.",
+    "spans": [
+      {
+        "text": "козлом відпущення",
+        "label": "MAJOR",
+        "start": 236,
+        "end": 253
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Based on these expert arguments, it can be inferred that there exists a discord in financial laws between the federal government and other government parastatals. The situation escalated when the leaked document became public, with Betta Edu emerging as a scapegoat for a dysfunctional political system.",
+    "text": "З огляду на ці аргументи експертів можна зробити висновок, що існує розбіжність у фінансовому законодавстві між федеральним урядом та іншими урядовими парастатальними установами. Ситуація загострилася, коли документ, що просочився, став публічним, а Бетта Еду виступив у ролі жертви неефективної політичної системи.",
+    "spans": [
+      {
+        "text": "парастатальними",
+        "label": "MINOR",
+        "start": 151,
+        "end": 166
+      },
+      {
+        "text": "став публічним",
+        "label": "MAJOR",
+        "start": 232,
+        "end": 246
+      },
+      {
+        "text": "просочився",
+        "label": "MAJOR",
+        "start": 220,
+        "end": 230
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  },
+  {
+    "source": "Based on these expert arguments, it can be inferred that there exists a discord in financial laws between the federal government and other government parastatals. The situation escalated when the leaked document became public, with Betta Edu emerging as a scapegoat for a dysfunctional political system.",
+    "text": "Виходячи з цих експертних аргументів, можна зробити висновок, що у фінансовому законодавстві існують розбіжності між федеральним урядом та іншими урядовими відомствами. Ситуація загострилася, коли витік документа став публічним, а Бетта Еду стала козлом відпущення дисфункціональної політичної системи.",
+    "spans": [
+      {
+        "text": "витік документа",
+        "label": "MINOR",
+        "start": 197,
+        "end": 212
+      }
+    ],
+    "source_language": "en",
+    "target_language": "uk"
+  }
+]

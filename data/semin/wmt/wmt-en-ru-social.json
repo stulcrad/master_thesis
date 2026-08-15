@@ -1,0 +1,568 @@
+[
+  {
+    "source": "Next week Saturday: Picocon @ London",
+    "text": "На следующей неделе, в субботу: Picocon @ Лондон.",
+    "spans": [
+      {
+        "text": "Picocon @ Лондон.",
+        "label": "MAJOR",
+        "start": 32,
+        "end": 49
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Next week Saturday: Picocon @ London",
+    "text": "На следующей неделе, в субботу: Picocon @ Лондон",
+    "spans": [
+      {
+        "text": "Picocon @ Лондон",
+        "label": "MAJOR",
+        "start": 32,
+        "end": 48
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец, аккумулятор удалось извлечь. Удалось вытолкнуть его без удаления последней необходимой винта, но с этим винтом придется разобраться. Задача на завтрашнее утро.",
+    "spans": [
+      {
+        "text": "далось вытолкнуть его без удаления последней необходимой винта",
+        "label": "MAJOR",
+        "start": 39,
+        "end": 101
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец, аккумулятор разрядился. Мне удалось извлечь его, не снимая последний винт, но с этим винтом еще придется разобраться. Задачка на завтрашнее утро.",
+    "spans": [
+      {
+        "text": "разрядился",
+        "label": "MINOR",
+        "start": 21,
+        "end": 31
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user40 https://fedi.simonwillison.net/@user41/112130028394563476",
+    "text": "https://fedi.simonwillison.net/@user41/112130028394563476 @user40",
+    "spans": [
+      {
+        "text": "https://fedi.simonwillison.net/@user41/112130028394563476 @user40",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 65
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец, батарея вышла. Удалось выкрутить ее, не снимая последнего винта, но этот винт нужно будет отремонтировать. Задача на завтра.",
+    "spans": [
+      {
+        "text": "вышла",
+        "label": "MAJOR",
+        "start": 17,
+        "end": 22
+      },
+      {
+        "text": "отремонтировать",
+        "label": "MAJOR",
+        "start": 99,
+        "end": 114
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец-то батарея разрядилась. Мне удалось вытащить ее, не откручивая последний необходимый винт, но с этим винтом придется повозиться. Задача на завтрашнее утро.",
+    "spans": [
+      {
+        "text": "разрядила",
+        "label": "MINOR",
+        "start": 19,
+        "end": 28
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user40 https://fedi.simonwillison.net/@user41/112130028394563476",
+    "text": "@пользователь40 https://fedi.simonwillison.net/@user41/112130028394563476",
+    "spans": [
+      {
+        "text": "пользователь",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 13
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user13 Holy shit, that's delusional",
+    "text": "@user13 Святилище, это галлюцинации",
+    "spans": [
+      {
+        "text": "Святилище",
+        "label": "MINOR",
+        "start": 8,
+        "end": 17
+      },
+      {
+        "text": "это галлюцинации",
+        "label": "MINOR",
+        "start": 19,
+        "end": 35
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Me, wearing a johnston plaid kilt and reading The Elders of Ireland: No, I just don't see how that would fit into my life.",
+    "text": "Я, одетый в шотландскую юбку Джонстона и читающий \"Старики Ирландии\": Нет, просто не вижу, как это могло бы вписаться в мою жизнь.",
+    "spans": [
+      {
+        "text": "\"Старики Ирландии\"",
+        "label": "MAJOR",
+        "start": 50,
+        "end": 68
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Me, wearing a johnston plaid kilt and reading The Elders of Ireland: No, I just don't see how that would fit into my life.",
+    "text": "Я, одетый в клетчатый килт Джонстона и читающий «Эльдеры Ирландии: нет, я просто не вижу, как это впишется в мою жизнь.",
+    "spans": [
+      {
+        "text": "Эльдеры Ирландии: не",
+        "label": "MINOR",
+        "start": 49,
+        "end": 69
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user13 Holy shit, that's delusional",
+    "text": "@user13 Да уж, это бред!",
+    "spans": [
+      {
+        "text": "Да уж",
+        "label": "MAJOR",
+        "start": 8,
+        "end": 13
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user13 Holy shit, that's delusional",
+    "text": "@user13 О, боже, это же паранойя.",
+    "spans": [
+      {
+        "text": "паранойя.",
+        "label": "MAJOR",
+        "start": 24,
+        "end": 33
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Next week Saturday: Picocon @ London",
+    "text": "Следующая суббота: Пикокон @ Лондон",
+    "spans": [
+      {
+        "text": " Пикокон @",
+        "label": "MINOR",
+        "start": 18,
+        "end": 28
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец-то аккумулятор разрядился. Удалось вытащить его без снятия последней необходимой винтовки, но с этой винтовкой нужно будет разобраться. Завтра утром задача.",
+    "spans": [
+      {
+        "text": " разрядился",
+        "label": "MINOR",
+        "start": 22,
+        "end": 33
+      },
+      {
+        "text": "винтовки",
+        "label": "MINOR",
+        "start": 89,
+        "end": 97
+      },
+      {
+        "text": "винтовкой н",
+        "label": "MINOR",
+        "start": 109,
+        "end": 120
+      },
+      {
+        "text": "Завтра утром задач",
+        "label": "MINOR",
+        "start": 144,
+        "end": 162
+      },
+      {
+        "text": "Удалось вытащить его без снятия последней необходимо",
+        "label": "MAJOR",
+        "start": 35,
+        "end": 87
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user13 Holy shit, that's delusional",
+    "text": "@user13 Чёрт возьми, это иллюзорно",
+    "spans": [
+      {
+        "text": " иллюзорно",
+        "label": "MINOR",
+        "start": 24,
+        "end": 34
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Me, wearing a johnston plaid kilt and reading The Elders of Ireland: No, I just don't see how that would fit into my life.",
+    "text": "Я, одетый в килт с пледом Джонстона и читающий «Старейшины Ирландии»: Нет, я просто не понимаю, как это могло бы уместиться в моей жизни.",
+    "spans": [
+      {
+        "text": "уместиться",
+        "label": "MAJOR",
+        "start": 113,
+        "end": 123
+      },
+      {
+        "text": "с пледом",
+        "label": "MINOR",
+        "start": 17,
+        "end": 25
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец, батарея вышла. Удалось вытащить ее, не снимая последнюю необходимую винт, но с этим винтом придется разбираться. Задача на завтра утром.",
+    "spans": [
+      {
+        "text": "вышла",
+        "label": "MINOR",
+        "start": 17,
+        "end": 22
+      },
+      {
+        "text": "последнюю необходимую",
+        "label": "MAJOR",
+        "start": 55,
+        "end": 76
+      },
+      {
+        "text": "на завтра утром",
+        "label": "MAJOR",
+        "start": 129,
+        "end": 144
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Next week Saturday: Picocon @ London",
+    "text": "Следующая неделя, суббота: Picocon @ Лондон",
+    "spans": [
+      {
+        "text": "@",
+        "label": "MAJOR",
+        "start": 35,
+        "end": 36
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец, достал батарею. С трудом вытащил ее, не выкручивая последнюю нужную винт, но с этой винтом еще нужно будет что-то делать. Завтра утром займусь.",
+    "spans": [
+      {
+        "text": "нужную",
+        "label": "MAJOR",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "text": " этой",
+        "label": "MAJOR",
+        "start": 87,
+        "end": 92
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "@user40 https://fedi.simonwillison.net/@user41/112130028394563476",
+    "text": "@пользователь40 https://fedi.simonwillison.net/@пользователь41/112130028394563476",
+    "spans": [
+      {
+        "text": "@пользователь40",
+        "label": "MINOR",
+        "start": 0,
+        "end": 15
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Finally the battery is out. Managed to wiggle it out w/o removing the last screw needed, but that screw will need dealing with. Tomorrow morning's task.",
+    "text": "Наконец, батарея вышла из строя. Удалось вытащить ее, не снимая последнюю гайку, но эта гайка будет нуждаться в ремонте. Завтра утром предстоит выполнить эту задачу.",
+    "spans": [
+      {
+        "text": "батарея вышла из строя",
+        "label": "MINOR",
+        "start": 9,
+        "end": 31
+      },
+      {
+        "text": "нуждаться в ремонте",
+        "label": "MINOR",
+        "start": 100,
+        "end": 119
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Imagine a very long web page with lots of sections (e.g., single-page HTML spec). If the user requests a specific section (e.g. page.html#section7), what if the web server streamed that section first and the other sections after that?",
+    "text": "Представьте очень длинную веб-страницу с большим количеством разделов (например, одностраничный HTML-спецификация). Если пользователь запросит конкретный раздел (например, page.html#section7), что если веб-сервер сначала передаст этот раздел, а затем другие?",
+    "spans": [
+      {
+        "text": "одностраничный HTML-спецификация",
+        "label": "MAJOR",
+        "start": 81,
+        "end": 113
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "My brother came and ripped it all out and I’ve been putting off starting to work to put it all back together",
+    "text": "Мой брат приехал и все разбил, я откладывал начать работать, чтобы все это собрать",
+    "spans": [
+      {
+        "text": "начать работать",
+        "label": "MAJOR",
+        "start": 44,
+        "end": 59
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I hotboxed half my lettuce and arugula to death with a plastic tray cover but other than that seedlings are doing pretty good!",
+    "text": "Я удушила половину своей салатной зелени и rukoly в пластиковой крышке для подноса, но кроме того сеянцы развиваются довольно хорошо!",
+    "spans": [
+      {
+        "text": "rukoly",
+        "label": "MINOR",
+        "start": 43,
+        "end": 49
+      },
+      {
+        "text": "удушила",
+        "label": "MINOR",
+        "start": 2,
+        "end": 9
+      },
+      {
+        "text": "в пластиковой крышке для подноса",
+        "label": "MINOR",
+        "start": 50,
+        "end": 82
+      },
+      {
+        "text": "кроме того",
+        "label": "MAJOR",
+        "start": 87,
+        "end": 97
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I hotboxed half my lettuce and arugula to death with a plastic tray cover but other than that seedlings are doing pretty good!",
+    "text": "Я загерметизировал половину салата и шпината пластиковой тарелкой, но в остальном всходы делают неплохую работу!",
+    "spans": [
+      {
+        "text": "загерметизировал",
+        "label": "MINOR",
+        "start": 2,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I hotboxed half my lettuce and arugula to death with a plastic tray cover but other than that seedlings are doing pretty good!",
+    "text": "я накрыл половину своего салата и рукколы пластиковым контейнером, но в остальном рассада чувствует себя хорошо!",
+    "spans": [
+      {
+        "text": "ером, ",
+        "label": "MINOR",
+        "start": 61,
+        "end": 67
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I guess I should find a job, but I'm quite lazy. Hire me now, I'll drink all your beer.",
+    "text": "Думаю, мне надо найти работу, но я довольно ленивый. Наемте меня сейчас, я выпью все ваше пиво.",
+    "spans": [
+      {
+        "text": "Наемте",
+        "label": "MINOR",
+        "start": 53,
+        "end": 59
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I guess I should find a job, but I'm quite lazy. Hire me now, I'll drink all your beer.",
+    "text": "Думаю, мне стоит найти работу, но я довольно ленив. Нанятите меня сейчас, и я выпью все ваше пиво.",
+    "spans": [
+      {
+        "text": "Нанятите",
+        "label": "MINOR",
+        "start": 52,
+        "end": 60
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "Imagine a very long web page with lots of sections (e.g., single-page HTML spec). If the user requests a specific section (e.g. page.html#section7), what if the web server streamed that section first and the other sections after that?",
+    "text": "Представьте себе очень длинную веб-страницу с множеством разделов (например, одиночный HTML-спецификацию на одной странице). Если пользователь запросит конкретный раздел (например, page.html#section7), что если веб-сервер будет передавать сначала этот раздел, а затем другие разделы?",
+    "spans": [
+      {
+        "text": " одиночный HTML-спецификацию н",
+        "label": "MAJOR",
+        "start": 76,
+        "end": 106
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I hotboxed half my lettuce and arugula to death with a plastic tray cover but other than that seedlings are doing pretty good!",
+    "text": "Я придушил половину своего салата и рукколы пластиковой крышкой для поддонa, но кроме этого саженцы выглядят неплохо!",
+    "spans": [
+      {
+        "text": "но кроме этого саженцы выглядят неплохо",
+        "label": "MAJOR",
+        "start": 77,
+        "end": 116
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "My brother came and ripped it all out and I’ve been putting off starting to work to put it all back together",
+    "text": "Мой брат пришел и вырвал все это, и я откладывал начало работы над сборкой всего этого обратно",
+    "spans": [
+      {
+        "text": "над сборкой",
+        "label": "MAJOR",
+        "start": 63,
+        "end": 74
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "I hotboxed half my lettuce and arugula to death with a plastic tray cover but other than that seedlings are doing pretty good!",
+    "text": "Я накрыла половину салата и руколы пластиковой крышкой, но помимо этого сеянцы чувствуют себя неплохо!",
+    "spans": [
+      {
+        "text": "ы п",
+        "label": "MINOR",
+        "start": 33,
+        "end": 36
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  },
+  {
+    "source": "My brother came and ripped it all out and I’ve been putting off starting to work to put it all back together",
+    "text": "Мой брат пришел и все разрушил, а я все откладывал начало работ по восстановлению этого.",
+    "spans": [
+      {
+        "text": "разрушил",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 30
+      },
+      {
+        "text": "начало работ по восстановлению этого",
+        "label": "MAJOR",
+        "start": 51,
+        "end": 87
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ru"
+  }
+]

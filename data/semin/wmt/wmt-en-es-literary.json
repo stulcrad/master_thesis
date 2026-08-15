@@ -1,0 +1,442 @@
+[
+  {
+    "source": "“Please!” Queen Eirwen begged, “don’t send her away! She’s just a child!” The Ice King looked down at his wife from his throne, his royal advisor next to him. She had given birth to a girl. He scowled at the thought.",
+    "text": "\"¡Por favor!\" suplicó la Reina Eirwen, \"¡no la envíes lejos! ¡Es solo una niña!\" El Rey de Hielo miró a su esposa desde su trono, con su consejero real a su lado. Había dado a luz a una niña. Frunció el ceño ante la idea.",
+    "spans": [
+      {
+        "text": "lejos",
+        "label": "MAJOR",
+        "start": 54,
+        "end": 59
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“Yup” Cohren responded.",
+    "text": "\"Yup\" Cohren respondió.",
+    "spans": [
+      {
+        "text": "\"Yup\"",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 5
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "After around an hour, one of the new recruits, Cohren, remembered his name being Orson, spoke up. “Lieutenant, you’ve been here since the start of the war, right?”",
+    "text": "Después de aproximadamente una hora, uno de los nuevos reclutas, Cohren, recordó que se llamaba Orson y habló. &quot;Teniente, ha estado aquí desde el comienzo de la guerra, ¿verdad?&quot;",
+    "spans": [
+      {
+        "text": "&quot",
+        "label": "MAJOR",
+        "start": 111,
+        "end": 116
+      },
+      {
+        "text": "&quot",
+        "label": "MAJOR",
+        "start": 182,
+        "end": 187
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“Reviewing old memories?” Ivory inquired, looking at the old notebook. Kari nodded. “Do you think that they will let you out for Christmas? It’s only a few days away.”",
+    "text": "“¿Revisas viejos recuerdos?”, preguntó Ivory, mirando el viejo cuaderno. Kari asintió. “¿Crees que te dejarán salir en Navidad? Ya casi es Navidad.”",
+    "spans": [
+      {
+        "text": "Revisas",
+        "label": "MAJOR",
+        "start": 2,
+        "end": 9
+      },
+      {
+        "text": "Ya casi es Navidad",
+        "label": "MAJOR",
+        "start": 128,
+        "end": 146
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“It’s your birthday soon, isn’t it?” Ivory asked, remembering that the princess’ birthday was in a few days. Kari nodded, a sad glint in her light blue eyes.",
+    "text": "«Tu cumpleaños es pronto, ¿no es así?» preguntó Ivory, recordando que el cumpleaños de la princesa era en unos días. Kari asintió, con un triste brillo en sus ojos azules claros.",
+    "spans": [
+      {
+        "text": "no es así",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 36
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“The only options you have are to kill the child or send it out to the wilderness. This is her punishment for your wrongdoing, Eirwen .” He spat out her name as if it was poison. He always did.",
+    "text": "\"Las únicas opciones que tienes son matar al niño o enviarlo a la intemperie. Este es su castigo por tu mala acción, Eirwen\". Él pronunció su nombre como si fuera veneno. Siempre lo hacía.",
+    "spans": [
+      {
+        "text": "intemperie",
+        "label": "MAJOR",
+        "start": 66,
+        "end": 76
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“The only options you have are to kill the child or send it out to the wilderness. This is her punishment for your wrongdoing, Eirwen .” He spat out her name as if it was poison. He always did.",
+    "text": "\"Las únicas opciones que tienes son matar al niño o enviarlo al desierto. Este es su castigo por su infracción, Eirwen.” Él llamó a su nombre como si fuera veneno. Siempre lo hizo.",
+    "spans": [
+      {
+        "text": "desierto.",
+        "label": "MAJOR",
+        "start": 64,
+        "end": 73
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“Reviewing old memories?” Ivory inquired, looking at the old notebook. Kari nodded. “Do you think that they will let you out for Christmas? It’s only a few days away.”",
+    "text": "“Examen de los viejos recuerdos?” Ivory preguntó, mirando al viejo cuaderno. Kari nodó. ¿Cree que te dejarán salir a Navidad? Está a sólo unos días de distancia.”",
+    "spans": [
+      {
+        "text": "Examen",
+        "label": "MAJOR",
+        "start": 1,
+        "end": 7
+      },
+      {
+        "text": "nodó",
+        "label": "MINOR",
+        "start": 82,
+        "end": 86
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“It’s your birthday soon, isn’t it?” Ivory asked, remembering that the princess’ birthday was in a few days. Kari nodded, a sad glint in her light blue eyes.",
+    "text": "“¿Es su cumpleaños pronto, no lo es?” Ivory le preguntó, recordando que el cumpleaños de la princesa era en unos días. Kari nodó, un deslumbramiento triste en sus ojos azules claros.",
+    "spans": [
+      {
+        "text": "no lo es",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "text": "nodó",
+        "label": "MINOR",
+        "start": 124,
+        "end": 128
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“Please!” Queen Eirwen begged, “don’t send her away! She’s just a child!” The Ice King looked down at his wife from his throne, his royal advisor next to him. She had given birth to a girl. He scowled at the thought.",
+    "text": "¡Por favor! Suplicó la Reina Eirwen. ¡No la mandes lejos! ¡Ella es solo una niña! El Rey de Hielo miró hacia abajo a su esposa desde su trono, con su asesor real al lado. Ella había dado a luz a una niña. El frunció el ceño ante ese pensamiento.",
+    "spans": [
+      {
+        "text": "E",
+        "label": "MAJOR",
+        "start": 205,
+        "end": 206
+      },
+      {
+        "text": "l",
+        "label": "MAJOR",
+        "start": 206,
+        "end": 207
+      },
+      {
+        "text": "hacia abajo",
+        "label": "MINOR",
+        "start": 103,
+        "end": 114
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“The only options you have are to kill the child or send it out to the wilderness. This is her punishment for your wrongdoing, Eirwen .” He spat out her name as if it was poison. He always did.",
+    "text": "\"Las únicas opciones que tienes son matar a la niña o abandonarla en el bosque. Esta es su castigo por tu mala acción, Eirwen\". Escupió su nombre como si fuera veneno. Siempre lo hacía.",
+    "spans": [
+      {
+        "text": "a",
+        "label": "MINOR",
+        "start": 83,
+        "end": 84
+      },
+      {
+        "text": "s",
+        "label": "MINOR",
+        "start": 88,
+        "end": 89
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "“Please!” Queen Eirwen begged, “don’t send her away! She’s just a child!” The Ice King looked down at his wife from his throne, his royal advisor next to him. She had given birth to a girl. He scowled at the thought.",
+    "text": "&quot;¡Por favor!&quot; La reina Eirwen suplicó: “¡No la despidas! ¡Es sólo una niña! El Rey Helado miró a su esposa desde su trono, con su consejero real a su lado. Había dado a luz a una niña. Frunció el ceño ante la idea.",
+    "spans": [
+      {
+        "text": "&quot;¡",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "text": "&quot;",
+        "label": "MAJOR",
+        "start": 17,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "Nyssi blinked and turned back to Tenuk. \"Of course he can drive.\"",
+    "text": "Nyssi parpadeó y se volvió hacia Tenuk. &quot;Por supuesto que sabe conducir&quot;.",
+    "spans": [
+      {
+        "text": "&quot;Por supuesto que sabe conducir&quot;.",
+        "label": "MAJOR",
+        "start": 40,
+        "end": 83
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura simplemente gruñó y se dirigió directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin fue lo suficientemente ágil como para alejarse de su camino, pero Nyssi no pudo evitar gritar al casi perder el agarre de las escalas demasiado suaves de Thassalin.",
+    "spans": [
+      {
+        "text": "escalas demasiado suaves",
+        "label": "MINOR",
+        "start": 267,
+        "end": 291
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura simplemente siseó e intentó volar directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin fue lo suficientemente ágil para apartarse del camino, pero Nyssi no pudo evitar gritar cuando casi perdió su agarre en las escamas excesivamente lisas de Thassalin.",
+    "spans": [
+      {
+        "text": "casi perdió su agarre",
+        "label": "MAJOR",
+        "start": 239,
+        "end": 260
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura siseó e intentó volar directamente hacia Thassalin. Por suerte, a pesar de su tamaño, Thassalin era lo bastante ágil para esquivarlo, pero Nyssi no pudo evitar gritar cuando casi pierde el agarre de las escamas demasiado lisas de Thassalin.",
+    "spans": [
+      {
+        "text": "era lo bastante ágil para esquivarlo",
+        "label": "MAJOR",
+        "start": 127,
+        "end": 163
+      },
+      {
+        "text": "demasiado",
+        "label": "MAJOR",
+        "start": 242,
+        "end": 251
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claro que no. La criatura solo silbó y trató de volar directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin era lo suficientemente ágil como para esquivarla, pero Nyssi no pudo evitar gritar cuando estuvo a punto de perder el agarre sobre las escamas de Thassalin, demasiado suaves.",
+    "spans": [
+      {
+        "text": "solo",
+        "label": "MINOR",
+        "start": 30,
+        "end": 34
+      },
+      {
+        "text": "claro que no",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 16
+      },
+      {
+        "text": "trató de volar directamente",
+        "label": "MAJOR",
+        "start": 43,
+        "end": 70
+      },
+      {
+        "text": "suaves",
+        "label": "MINOR",
+        "start": 304,
+        "end": 310
+      },
+      {
+        "text": "silbó ",
+        "label": "MINOR",
+        "start": 35,
+        "end": 41
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, sin duda, no. La criatura solo litigó y trató de volar directamente a Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin era lo suficientemente ágil como para salir del camino, pero Nyssi no podía ayudar, pero gritó, ya que casi perdió su control sobre las escamas demasiado suaves de Thassalin.",
+    "spans": [
+      {
+        "text": "era",
+        "label": "MAJOR",
+        "start": 134,
+        "end": 137
+      },
+      {
+        "text": "podía ayudar, pero",
+        "label": "MINOR",
+        "start": 204,
+        "end": 222
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura solo hissó e intentó volar directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin fue lo suficientemente ágil como para esquivarla, pero Nyssi no pudo evitar gritar mientras casi perdía el agarre en las escamas excesivamente lisas de Thassalin.",
+    "spans": [
+      {
+        "text": "hissó",
+        "label": "MINOR",
+        "start": 36,
+        "end": 41
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura solo siseó e intentó volar directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin fue lo suficientemente ágil para esquivarlo, pero Nyssi no pudo evitar gritar cuando casi perdió su agarre en las escamas excesivamente lisas de Thassalin.",
+    "spans": [
+      {
+        "text": "o",
+        "label": "MAJOR",
+        "start": 179,
+        "end": 180
+      },
+      {
+        "text": "solo",
+        "label": "MAJOR",
+        "start": 31,
+        "end": 35
+      },
+      {
+        "text": "su",
+        "label": "MAJOR",
+        "start": 234,
+        "end": 236
+      },
+      {
+        "text": "esquivarl",
+        "label": "MAJOR",
+        "start": 170,
+        "end": 179
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura simplemente silbó y trató de volar directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin fue lo suficientemente ágil para salir del camino, pero Nyssi no pudo evitar gritar mientras casi perdía su agarre en las escamas excesivamente lisas de Thassalin.",
+    "spans": [
+      {
+        "text": "simplemente",
+        "label": "MAJOR",
+        "start": 31,
+        "end": 42
+      },
+      {
+        "text": "silbó",
+        "label": "MINOR",
+        "start": 43,
+        "end": 48
+      },
+      {
+        "text": "salir del camino",
+        "label": "MINOR",
+        "start": 178,
+        "end": 194
+      },
+      {
+        "text": "gritar",
+        "label": "MAJOR",
+        "start": 222,
+        "end": 228
+      },
+      {
+        "text": "casi perdía su agarre en las escamas excesivamente",
+        "label": "MAJOR",
+        "start": 238,
+        "end": 288
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  },
+  {
+    "source": "No, clearly not. The creature just hissed and tried to fly directly into Thassalin. Thankfully, despite his size, Thassalin was nimble enough to get out of the way, but Nyssi couldn't help but scream as she very nearly lost her grip on Thassalin's overly smooth scales.",
+    "text": "No, claramente no. La criatura simplemente siseó e intentó volar directamente hacia Thassalin. Afortunadamente, a pesar de su tamaño, Thassalin fue lo suficientemente ágil como para apartarse del camino, pero Nyssi no pudo evitar gritar cuando estuvo a punto de perder el control de las escamas demasiado suaves de Thassalin.",
+    "spans": [
+      {
+        "text": "de las escamas",
+        "label": "MINOR",
+        "start": 280,
+        "end": 294
+      },
+      {
+        "text": "apartarse del camino",
+        "label": "MAJOR",
+        "start": 182,
+        "end": 202
+      }
+    ],
+    "source_language": "en",
+    "target_language": "es"
+  }
+]

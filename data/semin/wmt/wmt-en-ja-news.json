@@ -1,0 +1,218 @@
+[
+  {
+    "source": "In 2019, Ukraine adopted a law that makes using the Ukrainian language obligatory in all spheres of public life, including government, medicine, science, education, and the media. Failure to comply can result in fines. Since 2022, when the military conflict with Russia began, Ukraine has undertaken a campaign of total de-Russification, with MPs saying it is necessary in order to defend against Russian influence. Local authorities have introduced complete bans on Russian-language works of art, performances, books, films, songs, and its study in schools and universities, and recommended that schoolchildren communicate in Ukrainian even during breaks.",
+    "text": "2019年、ウクライナは公的生活のあらゆる分野、政府、医療、科学、教育、メディアでウクライナ語の使用を義務付ける法律を制定しました。遵守しない場合は罰金が科される可能性があります。2022年にロシアとの軍事紛争が始まって以来、ウクライナはロシアの影響力に対する防衛のために必要であるとして、完全な脱ロシア化キャンペーンを行ってきました。地方自治体は、芸術作品、公演、書籍、映画、歌、学校や大学での研究におけるロシア語作品やその研究の完全な禁止を導入し、生徒たちが休憩時間でもウクライナ語でコミュニケーションを取ることを推奨してきました。",
+    "spans": [
+      {
+        "text": "以来",
+        "label": "MAJOR",
+        "start": 110,
+        "end": 112
+      },
+      {
+        "text": "であるとし",
+        "label": "MAJOR",
+        "start": 138,
+        "end": 143
+      },
+      {
+        "text": "て",
+        "label": "MAJOR",
+        "start": 143,
+        "end": 144
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "There is always the temptation for politicians to intervene in situations where they think they can make a difference. Of course, if there was an obvious simple solution to a problem somebody with more knowledge and understanding of the problems would already have implemented it.",
+    "text": "政治家には、状況を変えられると思うと介入したくなる誘惑が常にあります。もちろん、問題に対する明白で簡単な解決策があれば、その問題についてより知識と理解のある誰かがすでにそれを実行していたでしょう。",
+    "spans": [
+      {
+        "text": "常にあります",
+        "label": "MAJOR",
+        "start": 28,
+        "end": 34
+      },
+      {
+        "text": "より",
+        "label": "MAJOR",
+        "start": 68,
+        "end": 70
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "House Speaker Mike Johnson is pictured in the U.S. Capitol on December 12, 2023, in Washington, D.C. Johnson faces an unruly Republican conference that cannot reach an agreement on government spending levels. Photo by Kevin Dietsch/Getty Images",
+    "text": "マイク・ジョンソン下院議長は、2023年12月12日にワシントンD.C.の米国議会議事堂で写真に収められています。ジョンソンは、政府支出水準について合意できない乱暴な共和党会議に直面しています。写真：ケビン・ディーツ/ゲッティイメージズ",
+    "spans": [
+      {
+        "text": "乱暴な",
+        "label": "MAJOR",
+        "start": 80,
+        "end": 83
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Matt Britzman, equity analyst at Hargreaves Lansdown, said Greggs \"can tick off 2023 as a year of real progress\" on the back of extended opening hours, more delivery options, improving supply-chain capacity, and \"a fresh new suite of tasty treats.\" He added: \"Festive bakes and chocolate orange muffins lead the way over Christmas, but bears may point to sales growth slowing over the year, and the fourth quarter was the lowest of 2023. That's largely because Greggs was able to limit price hikes as inflation cooled. Longer-term, that's a net positive.",
+    "text": "Hargreaves Lansdownの株式アナリスト、マット・ブリッツマンは、グレッグスが「2023年を実質的な進歩の年としてチェックすることができる」と述べた。彼は、延長された営業時間、より多くのデリバリーオプション、改善されたサプライチェーンの能力、および「新しいおいしいトレートのスイート」のおかげで言った。彼はさらに付け加えた：「クリスマス期間中はフェスティブ・ベイクスとチョコレート・オレンジ・マフィンが人気を博したが、ベアーズは年間の売り上げの伸び率が遅れたと指摘するかもしれない。第四四半期は2023年の最低水準だった。那はグレッグスがインフレーションの冷え込みに伴って価格上昇を制限することができたためである。長期的には、それはネット・ポジティブである。」",
+    "spans": [
+      {
+        "text": "ネット・ポジティブ",
+        "label": "MAJOR",
+        "start": 323,
+        "end": 332
+      },
+      {
+        "text": "：",
+        "label": "MAJOR",
+        "start": 168,
+        "end": 169
+      },
+      {
+        "text": "那",
+        "label": "MAJOR",
+        "start": 268,
+        "end": 269
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "There is always the temptation for politicians to intervene in situations where they think they can make a difference. Of course, if there was an obvious simple solution to a problem somebody with more knowledge and understanding of the problems would already have implemented it.",
+    "text": "政治家たちは、自分たちが差し支えられると考える状況に介入する誘惑に常にさらされています。もちろん、問題に対する明確な簡単な解決策があったら、問題に対するより深い知識や理解を持つ誰かが既に実施していたはずです。",
+    "spans": [
+      {
+        "text": "差し支えられる",
+        "label": "MAJOR",
+        "start": 12,
+        "end": 19
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Matt Britzman, equity analyst at Hargreaves Lansdown, said Greggs \"can tick off 2023 as a year of real progress\" on the back of extended opening hours, more delivery options, improving supply-chain capacity, and \"a fresh new suite of tasty treats.\" He added: \"Festive bakes and chocolate orange muffins lead the way over Christmas, but bears may point to sales growth slowing over the year, and the fourth quarter was the lowest of 2023. That's largely because Greggs was able to limit price hikes as inflation cooled. Longer-term, that's a net positive.",
+    "text": "Hargreaves Lansdownの株式アナリストであるMatt Britzman氏は、Greggsが「2023年は実際の進歩の年」であったことを「延長営業時間、より多くの配送オプション、サプライチェーン能力の改善、そして「美味しいお菓子の新しいスイート」の提供によって」達成できると述べています。彼はさらに、「クリスマスにはFestive Bakesとチョコレートオレンジマフィンが人気でしたが、ベアは2023年の販売成長が遅くなり、第4四半期が2023年で最も低かったことを指摘するかもしれません。主にGreggsがインフレが冷却されたときに価格引き上げを制限できたからです。長期的には、それは純粋にプラスの要因です。」と付け加えました。",
+    "spans": [
+      {
+        "text": "ベア",
+        "label": "MINOR",
+        "start": 201,
+        "end": 203
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Brewers froth over winemakers\" exemption from anti-waste rules",
+    "text": "醸造業者、ワイン製造業者の廃棄物処理規制免除に激怒",
+    "spans": [
+      {
+        "text": "に激怒",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 25
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Matt Britzman, equity analyst at Hargreaves Lansdown, said Greggs \"can tick off 2023 as a year of real progress\" on the back of extended opening hours, more delivery options, improving supply-chain capacity, and \"a fresh new suite of tasty treats.\" He added: \"Festive bakes and chocolate orange muffins lead the way over Christmas, but bears may point to sales growth slowing over the year, and the fourth quarter was the lowest of 2023. That's largely because Greggs was able to limit price hikes as inflation cooled. Longer-term, that's a net positive.",
+    "text": "ハーグリーブス・ランダウンの株式アナリスト、マット・ブリッツマンは、グレッグスの「2023年を本当に実りある年とすることができる」と述べ、延長営業時間、配達オプションの増加、サプライチェーンの能力の向上、そして「おいしいお菓子の新しいバラエティ」を背景に、営業時間の延長、配達オプションの増加、サプライチェーンの能力の向上、そして「おいしいお菓子の新しいバラエティ」を背景に、営業時間の延長、配達オプションの増加、サプライチェーンの能力の向上、そして「お祝いの焼き菓子とチョコレートオレンジのマフィンがクリスマスシーズンをリードするが、クリスマス期間中の売り上げが年間で減少する可能性がある。これは、インフレが落ち着いたため価格の上昇を抑えることができたためである。長期的には、それは純粋にプラスである。",
+    "spans": [
+      {
+        "text": "そして「おいしいお菓子の新しいバラエティ」を背景に、営業時間の延長、配達オプションの増加、サプライチェーンの能力の向上",
+        "label": "MAJOR",
+        "start": 162,
+        "end": 221
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "The airplane model is typically noted in the booking information for a flight. On Google Flights, it's included in the flight details when a listing is expanded, and it's usually listed on individual airlines\" reservation pages. If, for some reason, the plane type isn't apparent on Google Flights or the reservation page, sites like Expert Flyer and Seat Guru aggregate flight information like seat maps and aircraft type.",
+    "text": "飛行機のモデルは、通常、フライトの予約情報に記載されています。Google フライトでは、リストを展開するとフライトの詳細に含まれ、通常は各航空会社の予約ページにも記載されています。何らかの理由で、飛行機の種類が Google フライトや予約ページに表示されない場合は、Expert Flyer や Seat Guru などのサイトで、座席図や航空機の種類などのフライト情報を集約しています。",
+    "spans": [
+      {
+        "text": "Expert Flyer",
+        "label": "MAJOR",
+        "start": 135,
+        "end": 147
+      },
+      {
+        "text": "Seat Guru",
+        "label": "MAJOR",
+        "start": 150,
+        "end": 159
+      },
+      {
+        "text": "Google ",
+        "label": "MAJOR",
+        "start": 31,
+        "end": 38
+      },
+      {
+        "text": "Google",
+        "label": "MAJOR",
+        "start": 107,
+        "end": 113
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "The airplane model is typically noted in the booking information for a flight. On Google Flights, it's included in the flight details when a listing is expanded, and it's usually listed on individual airlines\" reservation pages. If, for some reason, the plane type isn't apparent on Google Flights or the reservation page, sites like Expert Flyer and Seat Guru aggregate flight information like seat maps and aircraft type.",
+    "text": "飛行機のモデルは、通常、フライトの予約情報に記載されています。Google Flights では、リストが拡張されたときにフライトの詳細に含まれており、通常は個々の航空会社の予約ページに記載されています。なぜか Google Flights または予約ページで飛行機の種類が明らかでない場合は、Expert Flyer や Seat Guru などのサイトがシートマップや航空機の種類などのフライト情報を集約しています。",
+    "spans": [
+      {
+        "text": "モデル",
+        "label": "MAJOR",
+        "start": 4,
+        "end": 7
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Speaking on behalf of Edu, Rasheed Zubair, her media aide, asserts that the act is legal within the framework of the Nigerian civil service. However, it is crucial to note that the request violates various sections of Nigeria's Financial Regulations 2009, which explicitly prohibit fraud and other forms of corruption in government business. Additionally, Chapter Seven, Section 713 of Nigeria's Financial Regulations 2009 explicitly states, \"Personal money shall in no circumstances be paid into a government bank account, nor shall any public money be paid into a private account.\" It further stipulates, \"Any officer who pays public money into a private account is deemed to have done so with fraudulent intention.\"",
+    "text": "エドの代理で発言したラシッド・ズバイール氏は、この行為はナイジェリアの公務員の枠組み内で法的であるが、同行為はナイジェリアの財政規則2009に明確に規定されている詐欺やその他の不正行為に関する規定に違反していることを強調した。 また、ナイジェリアの財政規則2009第七章第713節には、「政府の銀行口座に個人資金を入金したり、公的資金を私的口座に入金したりしてはならない」と明確に規定されている。さらに、「公的資金を私的口座に入金した者は詐害の意図で入金したものとみなされる」と規定されている。",
+    "spans": [
+      {
+        "text": "エド",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 2
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  },
+  {
+    "source": "Speaking on behalf of Edu, Rasheed Zubair, her media aide, asserts that the act is legal within the framework of the Nigerian civil service. However, it is crucial to note that the request violates various sections of Nigeria's Financial Regulations 2009, which explicitly prohibit fraud and other forms of corruption in government business. Additionally, Chapter Seven, Section 713 of Nigeria's Financial Regulations 2009 explicitly states, \"Personal money shall in no circumstances be paid into a government bank account, nor shall any public money be paid into a private account.\" It further stipulates, \"Any officer who pays public money into a private account is deemed to have done so with fraudulent intention.\"",
+    "text": "エドゥのメディア担当であるラシード・ズベイアは、この行為はナイジェリア公務員制度の枠組みの中で合法であると述べています。しかし、この要求は、政府業務における詐欺や汚職を明確に禁止しているナイジェリア財務規則2009年のさまざまな条項に違反していることが重要です。さらに、ナイジェリア財務規則2009年の第7章第713条には、「個人の金銭はいかなる場合も政府系銀行口座に振り込まれてはならず、また、公金はいかなる場合も私設口座に振り込まれてはならない」と明確に規定しています。また、同規則はさらに、「公金を私設口座に振り込んだ公務員は、詐欺的な意図があったものとみなされる」と規定しています。",
+    "spans": [
+      {
+        "text": "重要です",
+        "label": "MAJOR",
+        "start": 126,
+        "end": 130
+      }
+    ],
+    "source_language": "en",
+    "target_language": "ja"
+  }
+]

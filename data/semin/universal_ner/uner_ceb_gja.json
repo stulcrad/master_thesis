@@ -1,0 +1,501 @@
+[
+  {
+    "text": "Tua sa Cebu ang ako -ng ginikanan .",
+    "spans": [
+      {
+        "text": "Cebu",
+        "label": "LOC",
+        "start": 7,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Gitawag ni Maria ang bata .",
+    "spans": [
+      {
+        "text": "Maria",
+        "label": "PER",
+        "start": 11,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Kang Alicia ang libro .",
+    "spans": [
+      {
+        "text": "Alicia",
+        "label": "PER",
+        "start": 5,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "Putlon ni Undo ang kahoy alang kang Ruben .",
+    "spans": [
+      {
+        "text": "Undo",
+        "label": "PER",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "text": "Ruben",
+        "label": "PER",
+        "start": 36,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "text": "Silhigan ni Ditang ang kusina para ni Tonying .",
+    "spans": [
+      {
+        "text": "Ditang",
+        "label": "PER",
+        "start": 12,
+        "end": 18
+      },
+      {
+        "text": "Tonying",
+        "label": "PER",
+        "start": 38,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "text": "Silhigan ni Ditang ang kusina para sa iya -ng igsoon -g lalake .",
+    "spans": [
+      {
+        "text": "Ditang",
+        "label": "PER",
+        "start": 12,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Dili Maria ang iya -ng ngalan .",
+    "spans": [
+      {
+        "text": "Maria",
+        "label": "PER",
+        "start": 5,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Wala paliti ni Carmen si Adot .",
+    "spans": [
+      {
+        "text": "Carmen",
+        "label": "PER",
+        "start": 15,
+        "end": 21
+      },
+      {
+        "text": "Adot",
+        "label": "PER",
+        "start": 25,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Paingon siya sa balay ni Inday .",
+    "spans": [
+      {
+        "text": "Inday",
+        "label": "PER",
+        "start": 25,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Gitawag si Ben sa iya -ng amigo kay may bisita kini .",
+    "spans": [
+      {
+        "text": "Ben",
+        "label": "PER",
+        "start": 11,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Ang ting-init sa Pilipinas gikan sa Marso hangtud sa Mayo .",
+    "spans": [
+      {
+        "text": "Pilipinas",
+        "label": "LOC",
+        "start": 17,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "Mulakaw si Pedro .",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 11,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Si Ana nitan-aw sa sine .",
+    "spans": [
+      {
+        "text": "Ana",
+        "label": "PER",
+        "start": 3,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Si Rolando muinom .",
+    "spans": [
+      {
+        "text": "Rolando",
+        "label": "PER",
+        "start": 3,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "Nagkitaay si Pedro ug si Juan sa dalan .",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 13,
+        "end": 18
+      },
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 25,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Si Lito , ang estudyante , hawod ug gwapo .",
+    "spans": [
+      {
+        "text": "Lito",
+        "label": "PER",
+        "start": 3,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Tigdala man siya diri ug mga TNT .",
+    "spans": [
+      {
+        "text": "TNT",
+        "label": "ORG",
+        "start": 29,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "Kato -ng usa ka Taiwanese , kaila pud sila -ng Josie ato .",
+    "spans": [
+      {
+        "text": "Josie",
+        "label": "PER",
+        "start": 47,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "text": "Nakalimtan ni Nanay Dionesia nga mokaon ug moinom ug tubig .",
+    "spans": [
+      {
+        "text": "Nanay Dionesia",
+        "label": "PER",
+        "start": 14,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Naglalis si Juan ug si Pedro .",
+    "spans": [
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 12,
+        "end": 16
+      },
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 23,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Daghan kuno nawad-an ug trabaho karon sa Manila .",
+    "spans": [
+      {
+        "text": "Manila",
+        "label": "LOC",
+        "start": 41,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "Si Toto -ng giila nga labi -ng hawod sa dama .",
+    "spans": [
+      {
+        "text": "Toto",
+        "label": "PER",
+        "start": 3,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Nasuka siya kay Pedro .",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 16,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Ang Burj Khalifa ang pinakataas nga edipisyo sa kalibutan .",
+    "spans": [
+      {
+        "text": "Burj Khalifa",
+        "label": "LOC",
+        "start": 4,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "May mga nagtuo -ng gihiloan si Mary .",
+    "spans": [
+      {
+        "text": "Mary",
+        "label": "PER",
+        "start": 31,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "Moabot ra man ju- -ng moadto ko -g Pransya , wala lang kabalo kanus-a .",
+    "spans": [
+      {
+        "text": "Pransya",
+        "label": "LOC",
+        "start": 35,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "Gikinahanglan ni Tom ang kwarta .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 17,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "Kinahanglan may buhaton si Tom .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 27,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Nakahukom si Tom nga magpaabot .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 13,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Ngano -ng gipatay man ni Tom si Mary ?",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 25,
+        "end": 28
+      },
+      {
+        "text": "Mary",
+        "label": "PER",
+        "start": 32,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "text": "Gibuhat ni Tom suma sa gibahad .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 11,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Gisulayan ug buhat ni Tom apan pakyas .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 22,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Gidungog nga adis - adis si Tom .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 28,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "Akoy makighinabi ni Tom .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 20,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "Gibilanggo si Tom .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 14,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "Nadato si Tom nga iya ra -ng paningkamot .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 10,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Si Tom ang mipasiugda -ng patyon ang iya -ng amahan .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 3,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "Molarga mi ugma paadto sa Cebu .",
+    "spans": [
+      {
+        "text": "Cebu",
+        "label": "LOC",
+        "start": 26,
+        "end": 30
+      }
+    ]
+  },
+  {
+    "text": "Dili to inusara -ng gibuhat ni Tom .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 31,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "Gisuginlan ni Tom si Mary bahin sa kawat .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 14,
+        "end": 17
+      },
+      {
+        "text": "Mary",
+        "label": "PER",
+        "start": 21,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Gipakabasura ni Tom si Mary .",
+    "spans": [
+      {
+        "text": "Tom",
+        "label": "PER",
+        "start": 16,
+        "end": 19
+      },
+      {
+        "text": "Mary",
+        "label": "PER",
+        "start": 23,
+        "end": 27
+      }
+    ]
+  }
+]

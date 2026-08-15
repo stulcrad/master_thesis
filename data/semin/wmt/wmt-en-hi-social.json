@@ -1,0 +1,414 @@
+[
+  {
+    "source": "it must suck to be these people. i can't imagine how awful their inner life must be",
+    "text": "यह इन लोगों के लिए बुरा होना चाहिए। मैं नहीं सोच सकता कि उनका आंतरिक जीवन कितना भयानक होगा",
+    "spans": [
+      {
+        "text": "यह इन लोगों के लिए बुरा होना चाहिए",
+        "label": "MINOR",
+        "start": 0,
+        "end": 34
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "@user36 I like both the glasses you posted, these are a really nice colour...makes me want new ones 😂",
+    "text": "@user36 मुझे आपके द्वारा पोस्ट किए गए दोनों चश्मे पसंद हैं, ये एक बहुत ही अच्छा रंग है... मुझे नए चश्मे चाहिए 😂",
+    "spans": [
+      {
+        "text": "मुझे नए चश्मे चाहिए",
+        "label": "MAJOR",
+        "start": 90,
+        "end": 109
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Well it looks like I have a GDPR complaint to file",
+    "text": "हाँ यह तो ऐसा लगता है कि मुझे एक जीडीपीआर शिकायत दर्ज़ करनी है।",
+    "spans": [
+      {
+        "text": "ह",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 1
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Well it looks like I have a GDPR complaint to file",
+    "text": "ऐसा लगता है कि मुझे GDPR शिकायत दर्ज करनी होगी",
+    "spans": [
+      {
+        "text": "GD",
+        "label": "MAJOR",
+        "start": 20,
+        "end": 22
+      },
+      {
+        "text": "PR",
+        "label": "MAJOR",
+        "start": 22,
+        "end": 24
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "@user36 I like both the glasses you posted, these are a really nice colour...makes me want new ones 😂",
+    "text": "@user36 मुझे आपके द्वारा पोस्ट किए गए दोनों चश्मों में से दोनों पसंद हैं... ये वाकई बहुत सुंदर रंग हैं... मुझे नए चश्मों की जरूरत महसूस हो रही है 😂",
+    "spans": [
+      {
+        "text": "जर",
+        "label": "MAJOR",
+        "start": 124,
+        "end": 126
+      },
+      {
+        "text": "रत",
+        "label": "MAJOR",
+        "start": 127,
+        "end": 129
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "ps - i hope we are past the point of being apologetic about liking her novels or defending them as average.",
+    "text": "पी.एस. - मुझे आशा है कि हम उनके उपन्यासों को पसंद करने के बारे में खेद प्रकट करने या उन्हें औसत बताकर उनका बचाव करने के बिंदु से आगे निकल गए हैं।",
+    "spans": [
+      {
+        "text": "उनके उपन्यासों को पसंद करने के बारे में खेद प्रकट करन",
+        "label": "MAJOR",
+        "start": 27,
+        "end": 80
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I really want to go back to bed, but I can't until he's gone.",
+    "text": "मैं वास्तव में बिस्तर पर वापस जाना चाहता हूं, लेकिन वह चले जाने तक नहीं जा सकता।",
+    "spans": [
+      {
+        "text": "वह",
+        "label": "MAJOR",
+        "start": 52,
+        "end": 54
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "ps - i hope we are past the point of being apologetic about liking her novels or defending them as average.",
+    "text": "पीएस - मुझे उम्मीद है कि हम उस बिंदु से गुजर चुके हैं जहां हम उसके नاول्स को पसंद करने के लिए माफी मांगते हैं या उन्हें औसत दर्जे का बताने का बचाव करते हैं।",
+    "spans": [
+      {
+        "text": "नاول",
+        "label": "MAJOR",
+        "start": 67,
+        "end": 71
+      },
+      {
+        "text": "्स",
+        "label": "MAJOR",
+        "start": 71,
+        "end": 73
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "ps - i hope we are past the point of being apologetic about liking her novels or defending them as average.",
+    "text": "ps - मुझे उम्मीद है कि हम उसके उपन्यासों को पसंद करने के लिए माफ़ी मांगने या उन्हें औसत मानने के लिए माफ़ी मांगने के स्तर से आगे निकल गए हैं।",
+    "spans": [
+      {
+        "text": "माफ़",
+        "label": "MAJOR",
+        "start": 100,
+        "end": 103
+      },
+      {
+        "text": "मांग",
+        "label": "MAJOR",
+        "start": 105,
+        "end": 109
+      },
+      {
+        "text": "न",
+        "label": "MAJOR",
+        "start": 109,
+        "end": 110
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "Well it looks like I have a GDPR complaint to file",
+    "text": "ठीक है, ऐसा लग रहा है कि मुझे एक जीडीपीआर शिकायत दर्ज करनी है",
+    "spans": [
+      {
+        "text": "डीप",
+        "label": "MAJOR",
+        "start": 35,
+        "end": 38
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "@user36 I like both the glasses you posted, these are a really nice colour...makes me want new ones 😂",
+    "text": "@user36 मुझे आपके द्वारा पोस्ट किए गए दोनों चश्मे पसंद हैं, इनका रंग वाकई बहुत अच्छा है... मुझे नया चाहिए 😂",
+    "spans": [
+      {
+        "text": "se",
+        "label": "MAJOR",
+        "start": 2,
+        "end": 4
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "ps - i hope we are past the point of being apologetic about liking her novels or defending them as average.",
+    "text": "ps - मुझे उम्मीद है कि हम उस बिंदु से आगे निकल चुके हैं जहाँ हमें उसके उपन्यासों को पसंद करने या उन्हें औसत बताने के लिए माफ़ी माँगनी पड़ती थी।",
+    "spans": [
+      {
+        "text": "ps",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 2
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "@user36 I like both the glasses you posted, these are a really nice colour...makes me want new ones 😂",
+    "text": "@user36 मुझे आपके द्वारा पोस्ट किए गए दोनों चश्मे पसंद हैं, इनका रंग बहुत अच्छा है... मुझे नए चश्मे लेने का मन करता है 😂",
+    "spans": [
+      {
+        "text": "@user36",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 7
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I really want to go back to bed, but I can't until he's gone.",
+    "text": "मुझे वाकई नींद की गहराई में जाना है, लेकिन जब तक वह नहीं जाता तब तक मैं नहीं जा सकती।",
+    "spans": [
+      {
+        "text": "गहराई",
+        "label": "MAJOR",
+        "start": 18,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "tbf, the beer is was fikn awesome",
+    "text": "ईमानदारी से, बियर सच में बहुत अच्छा था",
+    "spans": [
+      {
+        "text": "ईमानदारी स",
+        "label": "MINOR",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "text": "सच म",
+        "label": "MINOR",
+        "start": 18,
+        "end": 22
+      },
+      {
+        "text": "थ",
+        "label": "MAJOR",
+        "start": 36,
+        "end": 37
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "this year's seed order",
+    "text": "इस वर्ष का बीज ऑर्डर",
+    "spans": [
+      {
+        "text": "ऑर्डर",
+        "label": "MAJOR",
+        "start": 15,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "this year's seed order",
+    "text": "इस साल का बीज आदेश",
+    "spans": [
+      {
+        "text": "आद",
+        "label": "MINOR",
+        "start": 14,
+        "end": 16
+      },
+      {
+        "text": "श",
+        "label": "MINOR",
+        "start": 17,
+        "end": 18
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The other one will need some more work to get online.",
+    "text": "दूसरे को ऑनलाइन होने के लिए कुछ और काम करने की आवश्यकता होगी।",
+    "spans": [
+      {
+        "text": "कुछ और काम करन",
+        "label": "MAJOR",
+        "start": 28,
+        "end": 42
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I was pushing for 100k meters this month and I ought to get there.",
+    "text": "मैं इस महीने 100k मीटर के लिए प्रयास कर रहा था और मुझे वहां पहुंचना चाहिए।",
+    "spans": [
+      {
+        "text": "k",
+        "label": "MINOR",
+        "start": 16,
+        "end": 17
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "The other one will need some more work to get online.",
+    "text": "दूसरा कुछ और काम करने की ज़रूरत होगी ताकि वह ऑनलाइन हो सके.",
+    "spans": [
+      {
+        "text": "कुछ और काम करने क",
+        "label": "MAJOR",
+        "start": 6,
+        "end": 23
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I was pushing for 100k meters this month and I ought to get there.",
+    "text": "मैं इस महीने 100 किमी मीटर के लिए प्रयास कर रहा था और मुझे वहां पहुंचना चाहिए।",
+    "spans": [
+      {
+        "text": "किम",
+        "label": "MINOR",
+        "start": 17,
+        "end": 20
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "This is the state of my upstairs bathroom right now.",
+    "text": "यह मेरी ऊपरी बाथरूम की स्थिति है.",
+    "spans": [
+      {
+        "text": "मेर",
+        "label": "MAJOR",
+        "start": 3,
+        "end": 6
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "tbf, the beer is was fikn awesome",
+    "text": "tbf, बीयर बहुत अच्छी थी",
+    "spans": [
+      {
+        "text": "tbf",
+        "label": "MAJOR",
+        "start": 0,
+        "end": 3
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I was pushing for 100k meters this month and I ought to get there.",
+    "text": "इस महीने मैं 100k मीटर तक पहुँचने के लिए प्रयास कर रहा था और मुझे वहाँ पहुँचना चाहिए।",
+    "spans": [
+      {
+        "text": "k",
+        "label": "MINOR",
+        "start": 16,
+        "end": 17
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I was pushing for 100k meters this month and I ought to get there.",
+    "text": "इस महीने मैं 100k मीटर का लक्ष्य लेकर चल रहा था और मुझे वहां पहुंचना चाहिए था।",
+    "spans": [
+      {
+        "text": "लक्ष्य लेकर चल रहा थ",
+        "label": "MAJOR",
+        "start": 26,
+        "end": 46
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  },
+  {
+    "source": "I was pushing for 100k meters this month and I ought to get there.",
+    "text": "मैं इस महीने 1 लाख मीटर के लिए प्रयास कर रहा था और मुझे वहां पहुंचना चाहिए।",
+    "spans": [
+      {
+        "text": "1",
+        "label": "MAJOR",
+        "start": 13,
+        "end": 14
+      }
+    ],
+    "source_language": "en",
+    "target_language": "hi"
+  }
+]

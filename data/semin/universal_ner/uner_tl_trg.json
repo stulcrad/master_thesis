@@ -1,0 +1,230 @@
+[
+  {
+    "text": "Siya ang Amerikano .",
+    "spans": [
+      {
+        "text": "Amerikano",
+        "label": "PER",
+        "start": 9,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Si Juan ang bunso .",
+    "spans": [
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 3,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "Binalikan niya ang Maynila .",
+    "spans": [
+      {
+        "text": "Maynila",
+        "label": "LOC",
+        "start": 19,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "Komika si Linda .",
+    "spans": [
+      {
+        "text": "Linda",
+        "label": "PER",
+        "start": 10,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "Malapit kay Maria si Juan .",
+    "spans": [
+      {
+        "text": "Maria",
+        "label": "PER",
+        "start": 12,
+        "end": 17
+      },
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 21,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "Malapit sa Maynila ang Pasay City .",
+    "spans": [
+      {
+        "text": "Maynila",
+        "label": "LOC",
+        "start": 11,
+        "end": 18
+      },
+      {
+        "text": "Pasay City",
+        "label": "LOC",
+        "start": 23,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Hindi nakita ni Pedro si Juan .",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 16,
+        "end": 21
+      },
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 25,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "Inahit ni John ang sarili niya .",
+    "spans": [
+      {
+        "text": "John",
+        "label": "PER",
+        "start": 10,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "Inahit ni John mismo si Bill .",
+    "spans": [
+      {
+        "text": "John",
+        "label": "PER",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "text": "Bill",
+        "label": "PER",
+        "start": 24,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Ipinansulat ni John ng liham kay Mary ang makinilya .",
+    "spans": [
+      {
+        "text": "John",
+        "label": "PER",
+        "start": 15,
+        "end": 19
+      },
+      {
+        "text": "Mary",
+        "label": "PER",
+        "start": 33,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "Darating daw si Pedro bukas .",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 16,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "Hindi daw darating si Pedro bukas .",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 22,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "Bakit daw hindi darating si Pedro bukas ?",
+    "spans": [
+      {
+        "text": "Pedro",
+        "label": "PER",
+        "start": 28,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "Tumanggap ang Rosa ng sulat para sa bata sa kaniyang sarili .",
+    "spans": [
+      {
+        "text": "Rosa",
+        "label": "PER",
+        "start": 14,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "Gusto ni Juan suriin siya ng doktor .",
+    "spans": [
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 9,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "Ayaw kong mamatay sa Maynila .",
+    "spans": [
+      {
+        "text": "Maynila",
+        "label": "LOC",
+        "start": 21,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "Binisita ni Juan ang hari nang nagiisa .",
+    "spans": [
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 12,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "Bumisita si Juan sa hari nang nagiisa .",
+    "spans": [
+      {
+        "text": "Juan",
+        "label": "PER",
+        "start": 12,
+        "end": 16
+      }
+    ]
+  }
+]

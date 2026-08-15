@@ -40,6 +40,7 @@ parser.add_argument("--min-p", type=float, default=None, help="Minimum probabili
 parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means all examples.")
 parser.add_argument("--max-new-tokens", type=int, default=32578, help="Maximum number of new tokens to generate.")
 
+
 # -------------------------
 # Parse arguments
 # -------------------------
@@ -126,9 +127,9 @@ sampling_strategy = "sampling" if DO_SAMPLE else "greedy"
 
 def config_tag():
     parts = [f"think{int(args.enable_thinking)}"]
-    if args.reasoning_effort: parts.append(f"effort{args.reasoning_effort}")
-    if args.repetition_penalty: parts.append(f"rep{args.repetition_penalty}")
-    if args.temperature is not None: parts.append(f"temp{args.temperature}")
+    if args.reasoning_effort: parts.append(f"effort_{args.reasoning_effort}")
+    if args.repetition_penalty: parts.append(f"rep_{args.repetition_penalty}")
+    if args.temperature is not None: parts.append(f"temp_{args.temperature}")
     return "_".join(parts)
 
 for eval_mode in EVAL_MODES:
@@ -138,8 +139,9 @@ for eval_mode in EVAL_MODES:
         exp_metrics = []
         config_label = processor_class if processor_class is not None else "n|a"
         print(
-            f"\nEvaluating model={model_name}, strategy={sampling_strategy}, "
-            f"mode={eval_mode}, processor_class={config_label}, batch_size={batch_size}"
+            f"\nEvaluating model={model_name}, reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
+            f"repetition_penalty={repetition_penalty}, sampling_strategy={sampling_strategy}, eval_mode={eval_mode}, "
+            f"processor_class={config_label}, batch_size={batch_size}, max_examples={MAX_EXAMPLES}, max_new_tokens={MAX_NEW_TOKENS}, n_iters={N_ITERS}"
         )
 
         model_short = model_name.split("/")[-1]
@@ -147,7 +149,7 @@ for eval_mode in EVAL_MODES:
         #     f"{PRED_DIR}/conll_{model_short}_{sampling_strategy}_{eval_mode}_{config_label}_bs{batch_size}.jsonl"
         # )
         pred_fh = open_jsonl_writer(
-            f"{PRED_DIR}/conll_{model_short}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
+            f"{PRED_DIR}/conll_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
         )
 
         for exp_id in range(N_ITERS):

@@ -1,20 +1,38 @@
+"""Constrained generation evaluation for NER, on CoNLL-2003 or UniversalNER.
+
+Semin et al. hard/soft F1   reported next to seqeval, from their metrics.py
+
+Metrics
+-------
+seqeval strict IOB2 entity F1, as before, and Semin et al.'s pooled
+character-overlap F1 (hard and soft) so our rows can sit beside their.
+
+Note on UNER aggregation: with --uner-subset all, the Semin F1 below is pooled
+over all 18 treebanks (micro). Their headline number is the MACRO average of
+the 18 per-treebank F1s. Each prediction line records `dataset_names` and its
+own overlap/predicted/gold counts, so the macro number is computed downstream
+from the JSONL without re-running.
+"""
+
+import argparse
+import os
+import random
 import sys
 import time
-import os
-import evaluate
-import torch
-import pandas as pd
 
-from typing import List
-from datasets import load_dataset
+import evaluate
+import pandas as pd
 from tqdm import tqdm
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, set_seed
+
 from utils.utils_functions import (
     generate_markup, validate_reconstruction,
     spans_to_bio_tags, parse_spans_from_tagged_output,
     mean_std, to_pct, format_pm,
     open_jsonl_writer, log_jsonl,
 )
+from utils.span_datasets import load_ner_dataset, bio_tags_to_char_spans
+from utils.semin_metrics import compute_overlap_counts, f1_from_counts
 from utils.TokTrie import build_toktrie_from_tokenizer
 from utils.TrieSpanConstrainedProcessor import TrieSpanConstrainedProcessor
 from utils.TrieSpanConstrainedProcessorTokenAware import TrieSpanConstrainedProcessorTokenAware
@@ -22,14 +40,14 @@ from utils.system_prompts import SYSTEM_PROMPT_CONSTR_GEN
 from utils.model_reasoning_utils import reasoning_ended
 from utils.model_registry import get, resolve_sampling
 
-import argparse
-
 # -------------------------
 # Model configuration
 # -------------------------
-parser = argparse.ArgumentParser("Evaluate constrained generation for NER on CoNLL-2003.")
+parser = argparse.ArgumentParser("Evaluate constrained generation for NER.")
 parser.add_argument("--batch_size", type=int, default=1, help="Batch size for evaluation.")
 parser.add_argument("--model", required=True, type=str, help="Model name or ID to evaluate.")
+parser.add_argument("--dataset", choices=["conll2003", "uner"], default="conll2003", help="Which NER benchmark to evaluate on.")
+parser.add_argument("--uner-subset", type=str, default="all", help="UniversalNER treebank (e.g. en_ewt) or 'all' for all 18 (7,523 examples).")
 parser.add_argument("--enable-thinking", action=argparse.BooleanOptionalAction, default=True, help="Whether to enable reasoning in the model's prompt.")
 parser.add_argument("--reasoning-effort", choices=['low', 'medium', 'high'], default=None, help="Reasoning effort level for the model (if it is supported).")
 parser.add_argument("--repetition-penalty", type=float, default=None, help="Repetition penalty for the model.")
@@ -37,8 +55,9 @@ parser.add_argument("--temperature", type=float, default=None, help="Temperature
 parser.add_argument("--top-p", type=float, default=None, help="Top-p for sampling.")
 parser.add_argument("--top-k", type=int, default=None, help="Top-k for sampling.")
 parser.add_argument("--min-p", type=float, default=None, help="Minimum probability for sampling.")
-parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means all examples.")
-parser.add_argument("--max-new-tokens", type=int, default=32578, help="Maximum number of new tokens to generate.")
+parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means all examples, which is what Semin et al. ran.")
+parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate. Semin et al. used max_completion_tokens=16384 for thinking runs.")
+parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over. Semin et al. used 42 43 44 45 46.")
 
 
 # -------------------------
@@ -71,20 +90,17 @@ model = AutoModelForCausalLM.from_pretrained(
 batch_size = args.batch_size
 print(f"Batch size: {batch_size}")
 reasoning_end_marker = tokenizer(spec.reasoning_end_marker, add_special_tokens=False).input_ids if spec.reasoning else None
-sampling = resolve_sampling(spec, reasoning_model, 
-                            temperature=args.temperature, top_p=args.top_p, 
+sampling = resolve_sampling(spec, reasoning_model,
+                            temperature=args.temperature, top_p=args.top_p,
                             top_k=args.top_k, min_p=args.min_p)
 DO_SAMPLE = sampling.pop("do_sample", False)
 
-N_ITERS = 1
+SEEDS = args.seeds
 MAX_EXAMPLES = args.max_examples
 MAX_NEW_TOKENS = args.max_new_tokens
 repetition_penalty = args.repetition_penalty
 
 EVAL_INTERVAL = 10
-
-# if BATCH_SIZE > 5:
-#     EVAL_INTERVAL = 5
 
 # Evaluate both decoding modes in one run.
 EVAL_MODES = ["unconstrained", "constrained"]
@@ -93,35 +109,24 @@ EVAL_MODES = ["unconstrained", "constrained"]
 # thesis); publication runs go here so the two are trivially separable by eye.
 RESULTS_ROOT = "/home/stulcrad/master_thesis/Experiment_results_publication"
 
-# Per-example predictions (JSONL, one line per generation) -- required for
-# paired significance tests and post-hoc metrics without re-running.
-PRED_DIR = f"{RESULTS_ROOT}/CoNLL/Constrained-Gen/Predictions"
-
 # Processor class is only used for constrained mode.
-PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
+# PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
+PROCESSOR_CLASSES = ["token_aware"] # Use only token_aware for publication runs, since it is the better-performing one.
 
 # Load the seqeval metric for span-level evaluation
 seqeval = evaluate.load("seqeval")
 
-dataset = load_dataset("lhoestq/conll2003", split="test")
+# Dataset: a plain list of {"tokens", "tags", "dataset_name", "example_id"} dicts.
+dataset, labels_for_constrained, results_dir = load_ner_dataset(args.dataset, args.uner_subset)
+print(f"Dataset: {args.dataset}"
+      f"{'/' + args.uner_subset if args.dataset == 'uner' else ''}"
+      f" -- {len(dataset):,} examples, labels {labels_for_constrained}")
+
+# Per-example predictions (JSONL, one line per generation) -- required for
+# paired significance tests and post-hoc metrics without re-running.
+PRED_DIR = f"{RESULTS_ROOT}/{results_dir}/Constrained-Gen/Predictions"
 
 results = []
-
-# Define label mappings
-label2id = {
-  'O': 0, 
-  'B-PER': 1, 
-  'I-PER': 2, 
-  'B-ORG': 3, 
-  'I-ORG': 4, 
-  'B-LOC': 5, 
-  'I-LOC': 6, 
-  'B-MISC': 7, 
-  'I-MISC': 8
-}
-id2label = {v: k for k, v in label2id.items()}
-
-labels_for_constrained = ["PER", "LOC", "ORG", "MISC"]
 
 sampling_strategy = "sampling" if DO_SAMPLE else "greedy"
 
@@ -132,6 +137,9 @@ def config_tag():
     if args.temperature is not None: parts.append(f"temp_{args.temperature}")
     return "_".join(parts)
 
+def dataset_tag():
+    return args.dataset if args.dataset != "uner" else f"uner_{args.uner_subset}"
+
 for eval_mode in EVAL_MODES:
     processor_class_options = PROCESSOR_CLASSES if eval_mode == "constrained" else [None]
 
@@ -139,52 +147,62 @@ for eval_mode in EVAL_MODES:
         exp_metrics = []
         config_label = processor_class if processor_class is not None else "n|a"
         print(
-            f"\nEvaluating model={model_name}, reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
+            f"\nEvaluating model={model_name}, dataset={dataset_tag()}, reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
             f"repetition_penalty={repetition_penalty}, sampling_strategy={sampling_strategy}, eval_mode={eval_mode}, "
-            f"processor_class={config_label}, batch_size={batch_size}, max_examples={MAX_EXAMPLES}, max_new_tokens={MAX_NEW_TOKENS}, n_iters={N_ITERS}"
+            f"processor_class={config_label}, batch_size={batch_size}, max_examples={MAX_EXAMPLES}, max_new_tokens={MAX_NEW_TOKENS}, seeds={SEEDS}"
         )
 
         model_short = model_name.split("/")[-1]
-        # pred_fh = open_jsonl_writer(
-        #     f"{PRED_DIR}/conll_{model_short}_{sampling_strategy}_{eval_mode}_{config_label}_bs{batch_size}.jsonl"
-        # )
         pred_fh = open_jsonl_writer(
-            f"{PRED_DIR}/conll_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
+            f"{PRED_DIR}/{dataset_tag()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
         )
 
-        for exp_id in range(N_ITERS):
-            if MAX_EXAMPLES is None:
+        for seed in SEEDS:
+            # Seeds generation. Without this the vendor presets (do_sample=True)
+            # make every run non-reproducible.
+            set_seed(seed)
+
+            if MAX_EXAMPLES is None or MAX_EXAMPLES >= len(dataset):
                 sampled_dataset = dataset
             else:
-                sampled_dataset = dataset.shuffle(seed=42 + exp_id).select(range(MAX_EXAMPLES))
+                sampled_dataset = random.Random(seed).sample(dataset, MAX_EXAMPLES)
 
             start_time = time.time()
-            gold_sequences: List[List[str]] = []
-            pred_sequences: List[List[str]] = []
+            gold_sequences = []
+            pred_sequences = []
             wrong_text_count = 0
             reasoning_unterminated_count = 0
-            reasoning_token_counts: List[int] = []
+            reasoning_token_counts = []
             all_entities_wrongly_unaligned = 0
             unaligned_entity_count = 0
             total_predictions = 0
             total_batches = (len(sampled_dataset) + batch_size - 1) // batch_size
 
+            # Semin et al.'s metric is micro: sum these six counters over the run,
+            # then call f1_from_counts once at the end.
+            hard_overlap = hard_predicted = hard_gold = 0
+            soft_overlap = soft_predicted = soft_gold = 0
+
             toktrie = None
             if eval_mode == "constrained":
                 toktrie = build_toktrie_from_tokenizer(tokenizer)
 
-            for batch_idx in tqdm(range(total_batches), desc=f"exp {exp_id + 1}/{N_ITERS}", file=sys.stdout):
+            for batch_idx in tqdm(range(total_batches), desc=f"seed {seed}", file=sys.stdout):
                 start_idx = batch_idx * batch_size
                 end_idx = min((batch_idx + 1) * batch_size, len(sampled_dataset))
-                batch = sampled_dataset.select(range(start_idx, end_idx))
+                batch = sampled_dataset[start_idx:end_idx]
 
                 batch_tokens = []
                 batch_gold_tags = []
                 for example in batch:
                     batch_tokens.extend(example["tokens"])
-                    batch_gold_tags.extend([id2label[tag_id] for tag_id in example["ner_tags"]])
+                    batch_gold_tags.extend(example["tags"])
 
                 input_text = " ".join(batch_tokens)
+                # Gold character spans for Semin's metric, derived from the same
+                # tags seqeval scores, so the two metrics share one gold.
+                batch_gold_spans = bio_tags_to_char_spans(batch_tokens, batch_gold_tags)
+
                 processor = None
                 if eval_mode == "constrained":
                     if processor_class == "token_aware":
@@ -237,7 +255,7 @@ for eval_mode in EVAL_MODES:
                     reasoning_token_counts.append(num_reasoning_tokens)
                     if not gen_stats.get("found_reasoning_end", False):
                         reasoning_unterminated_count += 1
-                
+
                 parsed = parse_spans_from_tagged_output(generated, set(labels_for_constrained))
                 total_predictions += parsed["span_count"]
                 exact_copy_ok = validate_reconstruction(parsed["reconstructed_text"], input_text)
@@ -245,11 +263,17 @@ for eval_mode in EVAL_MODES:
                 if not exact_copy_ok:
                     wrong_text_count += 1
                     if eval_mode == "constrained":
-                        print(f"\n\n===== Warning in exp {exp_id + 1}, batch {batch_idx + 1} =====")
+                        print(f"\n\n===== Warning at seed {seed}, batch {batch_idx + 1} =====")
                         print(f"Original text: \n{input_text}")
                         print(f"Reconstructed text: \n{parsed['reconstructed_text']}")
                         print(f"Generated markup: \n{generated}\n\n")
+                        if reasoning_model:
+                            print(f"Reasoning was on, so the maximum number of new generated tokens was hit\n")
                     pred_tags = ["O"] * len(batch_tokens)
+                    # Reconstruction failed, so the predicted offsets index into the
+                    # model's own text, not ours, and cannot be located in the input.
+                    # Credit nothing, matching the all-O fallback for seqeval.
+                    pred_spans = []
                     all_entities_wrongly_unaligned += parsed["span_count"]
                 else:
                     pred_tags, unalign_count = spans_to_bio_tags(
@@ -259,13 +283,29 @@ for eval_mode in EVAL_MODES:
                     )
                     unaligned_entity_count += unalign_count
                     all_entities_wrongly_unaligned += unalign_count
+                    # Raw character spans, not the token-snapped ones: Semin et al.
+                    # never touch tokenization, so snapping would change their metric.
+                    pred_spans = [
+                        {"start": e["start"], "end": e["end"], "label": e["label"]}
+                        for e in parsed["entities"] if e["label"] in set(labels_for_constrained)
+                    ]
 
                 gold_sequences.append(batch_gold_tags)
                 pred_sequences.append(pred_tags)
 
+                hard_counts = compute_overlap_counts(pred_spans, batch_gold_spans, hard_matching=True)
+                soft_counts = compute_overlap_counts(pred_spans, batch_gold_spans, hard_matching=False)
+                hard_overlap += hard_counts["overlap_chars"]
+                hard_predicted += hard_counts["predicted_chars"]
+                hard_gold += hard_counts["gold_chars"]
+                soft_overlap += soft_counts["overlap_chars"]
+                soft_predicted += soft_counts["predicted_chars"]
+                soft_gold += soft_counts["gold_chars"]
+
                 log_jsonl(pred_fh, {
-                    "key": f"{42 + exp_id}:{batch_idx}",
-                    "dataset": "conll2003",
+                    "key": f"{seed}:{batch_idx}",
+                    "dataset": dataset_tag(),
+                    "dataset_names": [ex["dataset_name"] for ex in batch],
                     "method": "constrained_gen",
                     "model": model_name,
                     "reasoning_enabled": reasoning_model,
@@ -276,12 +316,20 @@ for eval_mode in EVAL_MODES:
                     "eval_mode": eval_mode,
                     "processor_class": config_label,
                     "batch_size": batch_size,
-                    "seed": 42 + exp_id,
+                    "seed": seed,
                     "batch_idx": batch_idx,
-                    "example_ids": [ex["id"] for ex in batch] if "id" in batch.column_names else list(range(start_idx, end_idx)),
+                    "example_ids": [ex["example_id"] for ex in batch],
                     "input_text": input_text,
                     "gold_tags": batch_gold_tags,
                     "pred_tags": pred_tags,
+                    "gold_spans": batch_gold_spans,
+                    "pred_spans": pred_spans,
+                    "semin_hard_overlap": hard_counts["overlap_chars"],
+                    "semin_hard_predicted": hard_counts["predicted_chars"],
+                    "semin_hard_gold": hard_counts["gold_chars"],
+                    "semin_soft_overlap": soft_counts["overlap_chars"],
+                    "semin_soft_predicted": soft_counts["predicted_chars"],
+                    "semin_soft_gold": soft_counts["gold_chars"],
                     "raw_output": generated,
                     "wrong_text": 0 if exact_copy_ok else 1,
                     "span_count": parsed["span_count"],
@@ -300,11 +348,13 @@ for eval_mode in EVAL_MODES:
                         mode="strict",
                         zero_division=0,
                     )
+                    partial_hard = f1_from_counts(hard_overlap, hard_predicted, hard_gold)
                     elapsed = (time.time() - start_time) / 60.0
                     tqdm.write(
-                        f"[{model_name} | {sampling_strategy} | {eval_mode} | {config_label} | bs={batch_size}] "
-                        f"exp {exp_id + 1}/{N_ITERS}, batch {batch_idx + 1}/{total_batches} "
-                        f"F1={partial['overall_f1']:.4f}, wrong_text={wrong_text_count}, unaligned_ent_count={unaligned_entity_count}, elapsed={elapsed:.1f}m"
+                        f"[{model_name} | {dataset_tag()} | {sampling_strategy} | {eval_mode} | {config_label} | bs={batch_size}] "
+                        f"seed {seed}, batch {batch_idx + 1}/{total_batches} "
+                        f"F1={partial['overall_f1']:.4f}, hardF1={partial_hard['f1']:.4f}, "
+                        f"wrong_text={wrong_text_count}, unaligned_ent_count={unaligned_entity_count}, elapsed={elapsed:.1f}m"
                     )
 
             metrics = seqeval.compute(
@@ -314,6 +364,8 @@ for eval_mode in EVAL_MODES:
                 mode="strict",
                 zero_division=0,
             )
+            hard = f1_from_counts(hard_overlap, hard_predicted, hard_gold)
+            soft = f1_from_counts(soft_overlap, soft_predicted, soft_gold)
 
             elapsed_min = (time.time() - start_time) / 60.0
             exp_metrics.append({
@@ -321,6 +373,12 @@ for eval_mode in EVAL_MODES:
                 "recall": metrics["overall_recall"],
                 "f1": metrics["overall_f1"],
                 "accuracy": metrics["overall_accuracy"],
+                "semin_hard_precision": hard["precision"],
+                "semin_hard_recall": hard["recall"],
+                "semin_hard_f1": hard["f1"],
+                "semin_soft_precision": soft["precision"],
+                "semin_soft_recall": soft["recall"],
+                "semin_soft_f1": soft["f1"],
                 "wrong_text_count": wrong_text_count,
                 "wrong_text_rate": wrong_text_count / max(total_batches, 1),
                 "unaligned_entity_count": unaligned_entity_count,
@@ -340,6 +398,12 @@ for eval_mode in EVAL_MODES:
         recall_mean, recall_std = mean_std([m["recall"] for m in exp_metrics])
         f1_mean, f1_std = mean_std([m["f1"] for m in exp_metrics])
         accuracy_mean, accuracy_std = mean_std([m["accuracy"] for m in exp_metrics])
+        hard_p_mean, hard_p_std = mean_std([m["semin_hard_precision"] for m in exp_metrics])
+        hard_r_mean, hard_r_std = mean_std([m["semin_hard_recall"] for m in exp_metrics])
+        hard_f1_mean, hard_f1_std = mean_std([m["semin_hard_f1"] for m in exp_metrics])
+        soft_p_mean, soft_p_std = mean_std([m["semin_soft_precision"] for m in exp_metrics])
+        soft_r_mean, soft_r_std = mean_std([m["semin_soft_recall"] for m in exp_metrics])
+        soft_f1_mean, soft_f1_std = mean_std([m["semin_soft_f1"] for m in exp_metrics])
         wrong_text_count_mean, wrong_text_count_std = mean_std([m["wrong_text_count"] for m in exp_metrics])
         wrong_text_rate_mean, wrong_text_rate_std = mean_std([m["wrong_text_rate"] for m in exp_metrics])
         unaligned_entity_count_mean, unaligned_entity_count_std = mean_std([m["unaligned_entity_count"] for m in exp_metrics])
@@ -353,6 +417,7 @@ for eval_mode in EVAL_MODES:
 
         results.append({
             "model": model_name,
+            "dataset": dataset_tag(),
             "reasoning_enabled": reasoning_model,
             "reasoning_effort": args.reasoning_effort if args.reasoning_effort else "n|a",
             "repetition_penalty": repetition_penalty,
@@ -363,11 +428,18 @@ for eval_mode in EVAL_MODES:
             "batch_size": batch_size,
             "max_examples": MAX_EXAMPLES,
             "max_new_tokens": MAX_NEW_TOKENS,
-            "n_iters": N_ITERS,
+            "seeds": ",".join(str(s) for s in SEEDS),
+            "n_iters": len(SEEDS),
             "precision_report": format_pm(to_pct(precision_mean), to_pct(precision_std)),
             "recall_report": format_pm(to_pct(recall_mean), to_pct(recall_std)),
             "f1_report": format_pm(to_pct(f1_mean), to_pct(f1_std)),
             "accuracy_report": format_pm(to_pct(accuracy_mean), to_pct(accuracy_std)),
+            "semin_hard_precision_report": format_pm(to_pct(hard_p_mean), to_pct(hard_p_std)),
+            "semin_hard_recall_report": format_pm(to_pct(hard_r_mean), to_pct(hard_r_std)),
+            "semin_hard_f1_report": format_pm(to_pct(hard_f1_mean), to_pct(hard_f1_std)),
+            "semin_soft_precision_report": format_pm(to_pct(soft_p_mean), to_pct(soft_p_std)),
+            "semin_soft_recall_report": format_pm(to_pct(soft_r_mean), to_pct(soft_r_std)),
+            "semin_soft_f1_report": format_pm(to_pct(soft_f1_mean), to_pct(soft_f1_std)),
             "wrong_text_count_avg": round(wrong_text_count_mean, 3),
             "wrong_text_count_std": round(wrong_text_count_std, 3),
             "wrong_text_rate_report": format_pm(to_pct(wrong_text_rate_mean), to_pct(wrong_text_rate_std)),
@@ -388,7 +460,7 @@ for eval_mode in EVAL_MODES:
 
 # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
 intermediate_results_df = pd.DataFrame(results)
-intermediate_results_path = f"{RESULTS_ROOT}/CoNLL/Constrained-Gen/Csv/{model_name.split('/')[-1]}_{batch_size}_BS_{config_tag()}_{sampling_strategy}.csv"
+intermediate_results_path = f"{RESULTS_ROOT}/{results_dir}/Constrained-Gen/Csv/{dataset_tag()}_{model_name.split('/')[-1]}_{batch_size}_BS_{config_tag()}_{sampling_strategy}.csv"
 intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
 os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)

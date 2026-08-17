@@ -1,3 +1,8 @@
+
+# ----------------------------------------------------------------------------
+# OLD PROMPTS FROM INDEX BASED APPROACH
+# ----------------------------------------------------------------------------
+
 SYSTEM_PROMPT_TOKENS_TEXT = """
 You are an expert at named entity recognition and I want you to with the given message input tokenize the text and find all named entities in the text.
 The given labels for named entities are: 
@@ -19,6 +24,7 @@ CTU - ORGANIZATION - 19
 
 Do not overthink, do not add any explanations, do not add anything else, just tokenize the given text, find all named entities and list them with their type and span.
 """
+
 
 SYSTEM_PROMPT_TOKENS_JSON = """
 You are an expert at named entity recognition. Given an input text, tokenize it and extract all named entities along with their types and token positions.
@@ -54,6 +60,11 @@ Output:
 If there are no named entities, output an empty JSON array [].
 IMPORTANT: Do not add any explanations, just output the tokenized text as list and the JSON array.
 """
+
+
+# ---------------------------------------------------------------------------
+# PROMPTS FOR THE CONTEXT BASED APPROACH
+# ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT_CONTEXT = """
 You are an expert at named entity recognition. 
@@ -105,43 +116,6 @@ Output:
 ]
 
 IMPORTANT: Only output the JSON array. DO NOT add any explanations. Follow the format exactly.
-"""
-
-SYSTEM_PROMPT_CONSTR_GEN = """
-You are an expert at named entity recognition. Given an input text, identify all named entities and return the SAME text with inline entity markup.
-Do not extract nested entities, only the outermost ones.
-
-IMPORTANT: If an entity appears multiple times, tag each occurrence.
-
-The possible labels for named entities are:
-PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
-LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
-ORG: names of companies, institutions, agencies, sport teams, etc.
-MISC: everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)
-
-The order of labeling is PER, LOC, ORG, MISC.
-
-Output format:
-Return ONLY the input text with each entity wrapped exactly like this:
-<SPAN><LABEL>LABEL</LABEL>ENTITY_TEXT</SPAN>
-
-Rules:
-- Do not add, remove, or reorder any characters from the original input text, except for inserting the tags.
-- ENTITY_TEXT must exactly match the original substring from the input text.
-- Do not output explanations, or any additional text!!
-- Do not tag anything that is not one of the labels above.
-- Do not create overlapping spans; when ambiguous, choose the outermost entity.
-
-Examples:
-Input text:
-Barack Obama was born in Hawaii. Barack was american.
-Output text:
-<SPAN><LABEL>PER</LABEL>Barack Obama</SPAN> was born in <SPAN><LABEL>LOC</LABEL>Hawaii</SPAN>. <SPAN><LABEL>PER</LABEL>Barack</SPAN> was american.
-
-Input text:
-He ended the World Cup on the wrong note , Coste said .
-Output text:
-He ended the <SPAN><LABEL>MISC</LABEL>World Cup</SPAN> on the wrong note , <SPAN><LABEL>PER</LABEL>Coste</SPAN> said .
 """
 
 SYSTEM_PROMPT_CONTEXT_MD = """
@@ -250,6 +224,47 @@ Output:
 ```
 
 Only output the JSON array. No explanations, markdown, or extra text.
+"""
+
+# ---------------------------------------------------------------------------
+# PROMPTS FOR THE CONSTRAINED GENERATION APPROACH - CONLL-2003
+# ---------------------------------------------------------------------------
+
+SYSTEM_PROMPT_CONSTR_GEN = """
+You are an expert at named entity recognition. Given an input text, identify all named entities and return the SAME text with inline entity markup.
+Do not extract nested entities, only the outermost ones.
+
+IMPORTANT: If an entity appears multiple times, tag each occurrence.
+
+The possible labels for named entities are:
+PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
+LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
+ORG: names of companies, institutions, agencies, sport teams, etc.
+MISC: everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)
+
+The order of labeling is PER, LOC, ORG, MISC.
+
+Output format:
+Return ONLY the input text with each entity wrapped exactly like this:
+<SPAN><LABEL>LABEL</LABEL>ENTITY_TEXT</SPAN>
+
+Rules:
+- Do not add, remove, or reorder any characters from the original input text, except for inserting the tags.
+- ENTITY_TEXT must exactly match the original substring from the input text.
+- Do not output explanations, or any additional text!!
+- Do not tag anything that is not one of the labels above.
+- Do not create overlapping spans; when ambiguous, choose the outermost entity.
+
+Examples:
+Input text:
+Barack Obama was born in Hawaii. Barack was american.
+Output text:
+<SPAN><LABEL>PER</LABEL>Barack Obama</SPAN> was born in <SPAN><LABEL>LOC</LABEL>Hawaii</SPAN>. <SPAN><LABEL>PER</LABEL>Barack</SPAN> was american.
+
+Input text:
+He ended the World Cup on the wrong note , Coste said .
+Output text:
+He ended the <SPAN><LABEL>MISC</LABEL>World Cup</SPAN> on the wrong note , <SPAN><LABEL>PER</LABEL>Coste</SPAN> said .
 """
 
 # ---------------------------------------------------------------------------

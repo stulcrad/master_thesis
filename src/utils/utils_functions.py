@@ -1,4 +1,4 @@
-from typing import List, Dict, Tuple
+from typing import List, Dict, Optional, Tuple
 import re, ast
 import json
 import os
@@ -362,9 +362,20 @@ def build_token_char_spans(tokens: List[str]) -> List[Tuple[int, int]]:
     return spans
 
 
-def spans_to_bio_tags(tokens: List[str], entities: List[Dict], valid_labels: set) -> Tuple[List[str], int]:
-    """Convert entity char spans to token-level BIO tags for the same tokenization as input text."""
-    token_spans = build_token_char_spans(tokens)
+def spans_to_bio_tags(tokens: List[str], entities: List[Dict], valid_labels: set,
+                      token_spans: Optional[List[Tuple[int, int]]] = None) -> Tuple[List[str], int]:
+    """Convert entity char spans to token-level BIO tags for the same tokenization as input text.
+
+    `token_spans` are the tokens' character offsets in the text the spans index
+    into. Left as None it defaults to `build_token_char_spans(tokens)`, i.e. the
+    offsets of `" ".join(tokens)` -- correct for CoNLL/UNER and for every caller
+    that existed before. Tasks that feed the model the ORIGINAL text (Toxic
+    Spans, LegalQAEval, where runs of whitespace are preserved) must pass the
+    true offsets from `tokenize_with_offsets`, otherwise every offset after a
+    repeated space or newline is wrong.
+    """
+    if token_spans is None:
+        token_spans = build_token_char_spans(tokens)
     tags = ["O"] * len(tokens)
     unaligned_count = 0
 

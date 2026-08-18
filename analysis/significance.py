@@ -15,6 +15,12 @@ entity_f1  Micro entity-level F1 recomputed from BIO tags. Entities are
            the identical procedure, so the paired comparison is self-consistent.
 char_f1    Mean of the per-example `char_f1` field (macro char-level F1, the
            ToxicSpans/LegalQAEval metric).
+semin_hard_f1, semin_soft_f1
+           Semin et al.'s pooled character-overlap F1, recomputed from the
+           per-example `semin_*_overlap/predicted/gold` counts written by the
+           eval scripts. Because the metric is micro, each bootstrap resample
+           SUMS the three counters over the resampled keys and computes F1
+           once -- averaging per-example F1 would be a different statistic.
 
 Procedure
 ---------
@@ -108,7 +114,8 @@ def main() -> None:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--a", required=True, help="predictions JSONL for system A")
     ap.add_argument("--b", required=True, help="predictions JSONL for system B")
-    ap.add_argument("--metric", required=True, choices=["entity_f1", "char_f1"])
+    ap.add_argument("--metric", required=True,
+                    choices=["entity_f1", "char_f1", "semin_hard_f1", "semin_soft_f1"])
     ap.add_argument("--n-boot", type=int, default=10_000)
     ap.add_argument("--boot-seed", type=int, default=0)
     ap.add_argument("--pred-field-a", default="pred_tags")
@@ -146,6 +153,36 @@ def main() -> None:
             return micro_f1(ta, pa, na) - micro_f1(tb, pb, nb)
 
         metric_a, metric_b = observed(counts_a), observed(counts_b)
+
+    elif args.metric in ("semin_hard_f1", "semin_soft_f1"):
+        # Micro metric: pool (overlap, predicted, gold) over the resampled keys,
+        # then compute F1 once. Averaging per-example F1 here would silently
+        # turn Semin et al.'s metric into a macro one.
+        variant = "hard" if args.metric == "semin_hard_f1" else "soft"
+        fields = [f"semin_{variant}_{part}" for part in ("overlap", "predicted", "gold")]
+
+        def counts_of(records):
+            try:
+                return np.array([[records[k][f] for f in fields] for k in keys], dtype=float)
+            except KeyError:
+                sys.exit(f"{fields} not found in the prediction files — these counts are "
+                         f"written by the current eval scripts; re-run or recompute them "
+                         f"from the logged gold_spans/pred_spans.")
+
+        counts_a, counts_b = counts_of(rec_a), counts_of(rec_b)
+
+        def pooled_f1(counts):
+            overlap, predicted, gold = counts.sum(axis=0)
+            if predicted == 0 and gold == 0:
+                return 1.0
+            prec = overlap / predicted if predicted > 0 else 0.0
+            rec = overlap / gold if gold > 0 else 0.0
+            return 2 * prec * rec / (prec + rec) if prec + rec else 0.0
+
+        def delta_on(idx):
+            return pooled_f1(counts_a[idx]) - pooled_f1(counts_b[idx])
+
+        metric_a, metric_b = pooled_f1(counts_a), pooled_f1(counts_b)
 
     else:  # char_f1
         vals_a = np.array([rec_a[k]["char_f1"] for k in keys], dtype=float)

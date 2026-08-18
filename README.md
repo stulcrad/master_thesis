@@ -55,6 +55,19 @@ pip install -r requirements.txt
 
 ---
 
+## Installing the project
+
+The scripts and notebooks import from `src/utils/`. Install the repository
+once per environment so `utils` is importable everywhere:
+
+    python -m pip install -e . --no-deps
+
+This is an *editable* install: it records a pointer to `src/` in the
+environment, so source edits take effect immediately with no reinstall.
+Add `--no-build-isolation` if the machine has no internet access.
+
+---
+
 ## Constrained generation approach
 
 No additional setup is required beyond the Python environment above. Model weights are loaded directly from Hugging Face via the `transformers` library.
@@ -111,19 +124,3 @@ python scripts/evaluationNER_context_batch.py
 `Notebooks/Empty_prediction_ablation.ipynb` computes the char-F1 achieved by always predicting the empty set on ToxicSpans and LegalQAEval.
 
 ---
-
-## Adding `src` to the Python path
-
-The scripts and notebooks import from `src/utils/`. If you run them from the repository root, add `src` to `PYTHONPATH`:
-
-```bash
-export PYTHONPATH="$PWD/src:$PYTHONPATH"
-jupyter notebook
-```
-
-Or, from inside a notebook:
-
-```python
-import sys
-sys.path.insert(0, "../src")
-```

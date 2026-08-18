@@ -6,6 +6,7 @@ thesis-latex
 publication-latex
 PUBLICATION_PLAN.md
 __pycache__
+*.egg-info/
 
 # Third-party checkouts + raw downloads rebuilt by scripts/data/prepare_semin_data.py.
 # The converted JSON under data/semin/{universal_ner,wmt,...} is kept.

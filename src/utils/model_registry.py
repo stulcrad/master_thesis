@@ -34,7 +34,7 @@ Batch scripts should read the list from here instead of duplicating it in bash:
     MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID")
 """
 from dataclasses import dataclass, asdict
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 
 @dataclass(frozen=True)
@@ -78,25 +78,55 @@ class ModelSpec:
     Fields
     ------
     - model_id: HuggingFace repo id, as passed to `from_pretrained`.
+
     - reasoning_end_marker: the STRING marking the reasoning->answer boundary. It is
       tokenized per-model at runtime and matched by token IDs, never by string search --
       several of these are special tokens and vanish under `skip_special_tokens=True`.
       None means the model has no reasoning mode; `reasoning` is derived from it.
+    
+    - reasoning_start_marker: the STRING that OPENS the reasoning block, but only for
+      families where the MODEL has to emit it. Leave None when the chat template
+      already opens the block (Qwen3.5+ ends its generation prompt with `<think>\n`)
+      or when the end marker doubles as the answer opener (Harmony's
+      `<|channel|>final<|message|>`). 
+      This is per MODEL, not per family: Qwen3-8B ends its prompt at
+      `<|im_start|>assistant\n` with no `<think>`, so it DOES need one, while
+      Qwen3.5 must not have one. Verify with the diagnostic cells in
+      Notebooks/CG_publication/reasoning_aware_CG.ipynb before setting it.
+      Gemma-4's E2B/E4B prompt ends at `<|turn>model\n` and the model must emit `<|channel>`
+      itself; they sometimes skip the thought block entirely and answer
+      directly. Without this marker that case is indistinguishable from truncation,
+      and a perfectly good answer gets discarded as reasoning (see `_split_reasoning_answer`).
+    
     - reasoning_off_supported: whether the reasoning phase can actually be disabled, for
       the reasoning-ON/OFF ablation. Default False -- only set True once verified for that
       model.
-    - supports_reasoning_effort: whether the chat template accepts a `reasoning_effort`
-      kwarg. True only for the GPT-OSS/Harmony family; passing it elsewhere is an error.
+    
+    - reasoning_effort_levels: the values this model's chat template accepts for
+      `reasoning_effort`, or () when it takes none. This must be data rather than a
+      boolean because the families disagree: GPT-OSS/Harmony uses low/medium/high,
+      Qwen3.8 uses low/medium/**xhigh** (xhigh is its default). A single
+      low|medium|high choice list would silently reject Qwen's default and let
+      `high` through to a model that does not know it.
+      `supports_reasoning_effort` is derived from this so the two cannot drift.
+    
     - sampling_thinking / sampling_instruct: vendor presets, selected by thinking mode.
+    
     - notes: free text; includes which hardware the model has actually been run on.
     """
     model_id: str
     reasoning_end_marker: Optional[str] = None
+    reasoning_start_marker: Optional[str] = None
     reasoning_off_supported: bool = False
-    supports_reasoning_effort: bool = False
+    reasoning_effort_levels: Tuple[str, ...] = ()
     sampling_thinking: SamplingPreset = SamplingPreset()
     sampling_instruct: SamplingPreset = SamplingPreset()
     notes: str = ""
+
+    @property
+    def supports_reasoning_effort(self) -> bool:
+        """Derived, so the flag and the accepted values cannot disagree."""
+        return bool(self.reasoning_effort_levels)
 
     @property
     def reasoning(self) -> bool:
@@ -120,103 +150,143 @@ _QWEN_MARKER = "</think>"
 _GEMMA4_MARKER = "<channel|>"
 _HARMONY_MARKER = "<|channel|>final<|message|>"
 
+# Opening marker -- only needed where the MODEL emits it (see ModelSpec docs).
+# Verified by rendering each chat template (Notebooks/CG_publication/reasoning_aware_CG.ipynb,
+# "reasoning_start_marker diagnostic" cells):
+#
+#   gemma-4     prompt ends `<|turn>model\n`             -> model emits <|channel>
+#   Qwen3-8B    prompt ends `<|im_start|>assistant\n`    -> model emits <think>
+#   Qwen3.5+    prompt ends `<|im_start|>assistant\n<think>\n` -> template opens it
+#   Harmony     end marker IS the answer opener          -> cannot be skipped
+#
+# So this is NOT a per-family constant: Qwen3-8B needs a start marker while
+# Qwen3.5 must not have one. Check per model before setting it.
+_GEMMA4_START = "<|channel>"
+_QWEN_START = "<think>"
+
 
 #: Publication run set. Index == SLURM_ARRAY_TASK_ID.
+#:
+#: Cut from 10 models to 5 on 2026-08-18. Reasoning effort turned out to be the
+#: knob that matters, so the repetition-penalty sweep is dropped and the model set
+#: is chosen to cover the three families that expose it (or deliberately do not).
 MODELS: List[ModelSpec] = [
-    # -- Gemma 4 -----------------------------------------------------------------------
+    # -- Gemma 4 -------------------------------------------------------------------------
+    # Neither Gemma-4 model exposes reasoning_effort, so they carry the ON/OFF axis.
     ModelSpec(
-        model_id="google/gemma-4-E4B-it",
+        model_id="google/gemma-4-E2B-it",
         reasoning_end_marker=_GEMMA4_MARKER,
+        reasoning_start_marker=_GEMMA4_START,
         reasoning_off_supported=True,
         sampling_thinking=_GEMMA_SAMPLING,
         sampling_instruct=_GEMMA_SAMPLING,
-        notes="Smoke-tested on A100 (g12).",
-    ),
-    ModelSpec(
-        model_id="google/gemma-4-26B-A4B-it",
-        reasoning_end_marker=_GEMMA4_MARKER,
-        reasoning_off_supported=True,
-        sampling_thinking=_GEMMA_SAMPLING,
-        sampling_instruct=_GEMMA_SAMPLING,
-        notes="Smoke-tested on A100 (g12).",
+        notes="5.1B total / 2.3B effective. Cheap enough to run BOTH reasoning arms. "
+              "Like E4B it must emit <|channel> itself and sometimes skips the thought "
+              "block entirely -- hence reasoning_start_marker.",
     ),
     ModelSpec(
         model_id="google/gemma-4-31B-it",
         reasoning_end_marker=_GEMMA4_MARKER,
+        reasoning_start_marker=_GEMMA4_START,
         reasoning_off_supported=True,
         sampling_thinking=_GEMMA_SAMPLING,
         sampling_instruct=_GEMMA_SAMPLING,
-        notes="Smoke-tested on A100 (g12).",
+        notes="Run reasoning-OFF only: this is the row that sits beside Semin et al.'s "
+              "Gemma-4-31B column (they disabled reasoning by default).",
     ),
 
-    # -- Qwen 3.5 / 3.6 ------------------------------------------------------------------
-    # Linear-attention kernels (flash-linear-attention + causal-conv1d); our causal-conv1d
-    # build targets sm_75/80/87/90/100/120.
+    # -- Qwen 3.8 ------------------------------------------------------------------------
+    # First Qwen generation with reasoning_effort.
     ModelSpec(
-        model_id="Qwen/Qwen3.5-4B",
+        model_id="Qwen/Qwen3.8-27B",
         reasoning_end_marker=_QWEN_MARKER,
+        # Verified in Notebooks/CG_publication/reasoning_aware_CG.ipynb: prompt ends at
+        # `<|im_start|>assistant<think>\n`, so the cannot have a start marker.
+        reasoning_start_marker=None,
         reasoning_off_supported=True,
+        reasoning_effort_levels=("low", "medium", "xhigh"),
         sampling_thinking=_QWEN_SAMPLING_THINKING,
         sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-        notes="Smoke-tested on A100 (g08).",
-    ),
-    ModelSpec(
-        model_id="Qwen/Qwen3.5-9B",
-        reasoning_end_marker=_QWEN_MARKER,
-        reasoning_off_supported=True,
-        sampling_thinking=_QWEN_SAMPLING_THINKING,
-        sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-        notes="Smoke-tested on A100 (g06).",
-    ),
-    ModelSpec(
-        model_id="Qwen/Qwen3.5-27B",
-        reasoning_end_marker=_QWEN_MARKER,
-        reasoning_off_supported=True,
-        sampling_thinking=_QWEN_SAMPLING_THINKING,
-        sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-    ),
-    ModelSpec(
-        model_id="Qwen/Qwen3.6-27B",
-        reasoning_end_marker=_QWEN_MARKER,
-        reasoning_off_supported=True,
-        sampling_thinking=_QWEN_SAMPLING_THINKING,
-        sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-        notes="Smoke-tested on A100 (g12).",
-    ),
-    ModelSpec(
-        model_id="Qwen/Qwen3.6-35B-A3B",
-        reasoning_end_marker=_QWEN_MARKER,
-        reasoning_off_supported=True,
-        sampling_thinking=_QWEN_SAMPLING_THINKING,
-        sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-        notes="Smoke-tested on A100 (g12).",
+        notes="27B dense, BF16 (~54GB weights). Thinking CAN be disabled here, unlike "
+              "the 2.4T variant, so an OFF arm is available if wanted.",
     ),
 
     # -- GPT-OSS / Harmony ---------------------------------------------------------------
-    # Reasoning cannot be disabled: Harmony always emits a reasoning channel, and
-    # `reasoning_effort` (low/medium/high) is the only verbosity control -- hence
-    # reasoning_off_supported=False and supports_reasoning_effort=True.
-    # No sampling preset: gpt-oss ships its own generation_config.json and we do not
-    # override it, which is the closest thing to "the vendor recommendation" here.
+    # Reasoning cannot be disabled: Harmony always emits a reasoning channel, so
+    # reasoning_effort is the only verbosity control.
     ModelSpec(
         model_id="openai/gpt-oss-20b",
         reasoning_end_marker=_HARMONY_MARKER,
         reasoning_off_supported=False,
-        supports_reasoning_effort=True,
+        reasoning_effort_levels=("low", "medium", "high"),
         notes="Smoke-tested on H200. Falls back to bf16 on A100.",
     ),
     ModelSpec(
         model_id="openai/gpt-oss-120b",
         reasoning_end_marker=_HARMONY_MARKER,
         reasoning_off_supported=False,
-        supports_reasoning_effort=True,
+        reasoning_effort_levels=("low", "medium", "high"),
         notes="Smoke-tested on H200; H200 in practice.",
     ),
+
+    # -- Qwen 3 (the matched-comparison row) ---------------------------------------------
+    # Appended LAST on purpose: adding it anywhere else would renumber the SLURM
+    # array indices that the submit scripts hardcode.
+    ModelSpec(
+        model_id="Qwen/Qwen3-8B",
+        reasoning_end_marker=_QWEN_MARKER,
+        # Verified: with enable_thinking=True the prompt ends at
+        # `<|im_start|>assistant\n` with NO <think>, so the model emits the opener
+        # itself and can skip the block.
+        reasoning_start_marker=_QWEN_START,
+        # Verified: enable_thinking=False changes the prompt and pre-fills an empty
+        # `<think>\n\n</think>` block, which is Qwen3's documented way of disabling.
+        reasoning_off_supported=True,
+        sampling_thinking=_QWEN_SAMPLING_THINKING,
+        sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
+        notes="Semin et al.'s main open model. Run REASONING-OFF to sit beside their "
+              "Qwen3-8B column; they disabled reasoning by default and reported "
+              "Qwen3-8B-Think only in Appendix B.3. Also a thesis model, so its frozen "
+              "results live in Experiment_results/.",
+    ),
+]
+
+
+#: Registered so `get()` resolves them, but deliberately OUT of the run set.
+RETIRED_MODELS: List[ModelSpec] = [
+    # Publication candidates dropped on 2026-08-18: too slow for the seed budget
+    # (Qwen3.5-4B needed ~5h for 15 examples x 3 seeds) or superseded by Qwen3.8.
+    ModelSpec(model_id="google/gemma-4-E4B-it", reasoning_end_marker=_GEMMA4_MARKER,
+              reasoning_start_marker=_GEMMA4_START, reasoning_off_supported=True,
+              sampling_thinking=_GEMMA_SAMPLING, sampling_instruct=_GEMMA_SAMPLING,
+              notes="Dropped from the run set; pilot results exist in Experiment_results_publication."),
+    ModelSpec(model_id="google/gemma-4-26B-A4B-it", reasoning_end_marker=_GEMMA4_MARKER,
+              reasoning_start_marker=_GEMMA4_START, reasoning_off_supported=True,
+              sampling_thinking=_GEMMA_SAMPLING, sampling_instruct=_GEMMA_SAMPLING,
+              notes="Dropped: >3h for 15 examples x 3 seeds."),
+    ModelSpec(model_id="Qwen/Qwen3.5-4B", reasoning_end_marker=_QWEN_MARKER,
+              reasoning_off_supported=True, sampling_thinking=_QWEN_SAMPLING_THINKING,
+              sampling_instruct=_QWEN_SAMPLING_INSTRUCT, notes="Dropped: ~5h for 15 examples x 3 seeds."),
+    ModelSpec(model_id="Qwen/Qwen3.5-9B", reasoning_end_marker=_QWEN_MARKER,
+              reasoning_off_supported=True, sampling_thinking=_QWEN_SAMPLING_THINKING,
+              sampling_instruct=_QWEN_SAMPLING_INSTRUCT, notes="Dropped: superseded by Qwen3.8."),
+    ModelSpec(model_id="Qwen/Qwen3.5-27B", reasoning_end_marker=_QWEN_MARKER,
+              reasoning_off_supported=True, sampling_thinking=_QWEN_SAMPLING_THINKING,
+              sampling_instruct=_QWEN_SAMPLING_INSTRUCT, notes="Dropped: superseded by Qwen3.8-27B."),
+    ModelSpec(model_id="Qwen/Qwen3.6-27B", reasoning_end_marker=_QWEN_MARKER,
+              reasoning_off_supported=True, sampling_thinking=_QWEN_SAMPLING_THINKING,
+              sampling_instruct=_QWEN_SAMPLING_INSTRUCT, notes="Dropped: superseded by Qwen3.8-27B."),
+    ModelSpec(model_id="Qwen/Qwen3.6-35B-A3B", reasoning_end_marker=_QWEN_MARKER,
+              reasoning_off_supported=True, sampling_thinking=_QWEN_SAMPLING_THINKING,
+              sampling_instruct=_QWEN_SAMPLING_INSTRUCT, notes="Dropped: superseded by Qwen3.8."),
 ]
 
 
 #: Thesis models -- already evaluated, results frozen in `Experiment_results/`.
 #: Not re-run, so deliberately excluded from `MODELS` and the SLURM array.
+#:
+#: Qwen/Qwen3-8B is NOT here any more: it was promoted into MODELS for the matched
+#: Semin comparison. Keeping a copy in this list would shadow it.
 LEGACY_MODELS: List[ModelSpec] = [
     ModelSpec(
         model_id="google/gemma-3-4b-it",
@@ -226,19 +296,12 @@ LEGACY_MODELS: List[ModelSpec] = [
         model_id="meta-llama/Llama-3.1-8B-Instruct",
         notes="Thesis model. No reasoning mode.",
     ),
-    ModelSpec(
-        model_id="Qwen/Qwen3-8B",
-        reasoning_end_marker=_QWEN_MARKER,
-        sampling_thinking=_QWEN_SAMPLING_THINKING,
-        sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-        notes="Thesis model. Ran with no reasoning in thesis.",
-    ),
 ]
 
 
 MODEL_IDS: List[str] = [m.model_id for m in MODELS]
 #: Lookups resolve both sets, so `get()` still works for thesis models.
-BY_ID: Dict[str, ModelSpec] = {m.model_id: m for m in (*MODELS, *LEGACY_MODELS)}
+BY_ID: Dict[str, ModelSpec] = {m.model_id: m for m in (*MODELS, *RETIRED_MODELS, *LEGACY_MODELS)}
 
 
 def get(model_id: str) -> ModelSpec:

@@ -41,6 +41,7 @@ def generate_markup(
     reasoning_model: bool = False,
     reasoning_effort: str = None,
     reasoning_end_marker=None,
+    reasoning_start_marker=None,
     stats_out: dict = None,
     repetition_penalty: float = None,
     temperature: float = None,
@@ -98,7 +99,7 @@ def generate_markup(
 
     if eval_model == "constrained":
         (full_text, total_tokens, generation_seconds, n_reason, n_answer,
-         reasoning_text, answer_text, marker_seen) = generate_constrained_markup(
+         reasoning_text, answer_text, reasoning_skipped, marker_seen) = generate_constrained_markup(
             model=model,
             tokenizer=tokenizer,
             processor=processor,
@@ -108,11 +109,12 @@ def generate_markup(
             temperature=temperature,
             reasoning_model=reasoning_model,
             reasoning_end_marker=reasoning_end_marker,
+            reasoning_start_marker=reasoning_start_marker,
             **sampling_kwargs,
         )
     else:
         (full_text, total_tokens, generation_seconds, n_reason, n_answer,
-         reasoning_text, answer_text, marker_seen) = generate_unconstrained_markup(
+         reasoning_text, answer_text, reasoning_skipped, marker_seen) = generate_unconstrained_markup(
             model=model,
             tokenizer=tokenizer,
             inputs=inputs,
@@ -121,6 +123,7 @@ def generate_markup(
             temperature=temperature,
             reasoning_model=reasoning_model,
             reasoning_end_marker=reasoning_end_marker,
+            reasoning_start_marker=reasoning_start_marker,
             **sampling_kwargs,
         )
 
@@ -135,8 +138,12 @@ def generate_markup(
         stats_out["num_answer_tokens"] = n_answer
         stats_out["reasoning_text"] = reasoning_text
         stats_out["answer_text"] = answer_text
-        # answer produced => the end marker/boundary was actually found this run.
-        stats_out["found_reasoning_end"] = bool(reasoning_model and n_answer > 0)
+        # The end marker was genuinely found: an answer exists AND the block was not
+        # merely skipped. Kept distinct from `reasoning_skipped` so the termination
+        # study can separate "ran out of budget" from "never started thinking".
+        stats_out["found_reasoning_end"] = bool(reasoning_model and n_answer > 0
+                                                and not reasoning_skipped)
+        stats_out["reasoning_skipped"] = bool(reasoning_skipped)
         stats_out["reasoning_marker_seen"] = marker_seen
 
     return text, total_tokens, generation_seconds
@@ -169,29 +176,43 @@ def _build_gen_kwargs(max_new_tokens, do_sample, temperature,
     return gen_kwargs
 
 
-def _split_reasoning_answer(tokenizer, new_ids, generation_seconds, boundary, is_reasoning):
+def _split_reasoning_answer(tokenizer, new_ids, generation_seconds, boundary, is_reasoning,
+                            reasoning_opened=True):
     """Split generated ids into (reasoning, answer) at `boundary` (an index into
     new_ids, or None). Returns
-    (full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text, answer_text).
+    (full_text, total_tokens, generation_seconds, n_reason, n_answer, reasoning_text,
+     answer_text, reasoning_skipped).
 
     - not a reasoning model: everything is the answer (n_reason=0).
-    - reasoning model, boundary is None: the end marker never appeared (truncated
-      mid-reasoning) -> no valid answer; everything counts as reasoning, answer empty.
     - reasoning model, boundary found: split there; the answer is decoded WITHOUT
       special tokens (drops </think> / <|return|> / EOS), leaving clean tagged text.
+    - reasoning model, no boundary: TWO cases, distinguished by `reasoning_opened`.
+        * opened but never closed -> truncated mid-reasoning. No valid answer;
+          everything counts as reasoning, answer empty.
+        * never opened -> the model skipped the thought block and answered directly.
+          The whole output IS the answer (n_reason=0, reasoning_skipped=True).
+
+    Gemma-4 E2B/E4B must emit `<|channel>` themselves and sometimes go straight to 
+    the answer on short inputs. Qwen (template opens `<think>`) and Harmony (end marker is the answer
+    opener) cannot hit it, so their specs leave reasoning_start_marker=None and
+    `reasoning_opened` stays True -- for them a missing marker still means truncation.
     """
     total_tokens = int(new_ids.shape[0])
     full_text = tokenizer.decode(
-        new_ids, 
-        skip_special_tokens=True, 
+        new_ids,
+        skip_special_tokens=True,
         clean_up_tokenization_spaces=False,
     )
 
     if not is_reasoning:
-        return full_text, total_tokens, generation_seconds, 0, total_tokens, "", full_text
+        return full_text, total_tokens, generation_seconds, 0, total_tokens, "", full_text, False
 
     if boundary is None:
-        return full_text, total_tokens, generation_seconds, total_tokens, 0, full_text, ""
+        if reasoning_opened:
+            # Truncated mid-reasoning: no answer was produced.
+            return full_text, total_tokens, generation_seconds, total_tokens, 0, full_text, "", False
+        # Thought block never opened: the model answered directly.
+        return full_text, total_tokens, generation_seconds, 0, total_tokens, "", full_text, True
 
     boundary = int(boundary)
     reasoning_ids = new_ids[:boundary]
@@ -202,7 +223,22 @@ def _split_reasoning_answer(tokenizer, new_ids, generation_seconds, boundary, is
     answer_text = tokenizer.decode(
         answer_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False,
     ).strip()
-    return full_text, total_tokens, generation_seconds, boundary, total_tokens - boundary, reasoning_text, answer_text
+    return (full_text, total_tokens, generation_seconds, boundary, total_tokens - boundary,
+            reasoning_text, answer_text, False)
+
+
+def _reasoning_was_opened(new_ids, reasoning_start_marker) -> bool:
+    """Did the model actually open its reasoning block?
+
+    True when no start marker is registered: those families have the block opened
+    by the chat template (Qwen) or use the end marker as the answer opener
+    (Harmony), so it is open by construction and a missing end marker can only mean
+    truncation. Where a start marker IS registered (Gemma-4), the model has to emit
+    it, so its absence means the thought block was skipped entirely.
+    """
+    if not reasoning_start_marker:
+        return True
+    return find_answer_start(new_ids.tolist(), list(reasoning_start_marker)) is not None
 
 
 def generate_unconstrained_markup(
@@ -214,6 +250,7 @@ def generate_unconstrained_markup(
     temperature: float,
     reasoning_model: bool = False,
     reasoning_end_marker=None,
+    reasoning_start_marker=None,
     repetition_penalty: float = None,
     top_p: float = None,
     top_k: int = None,
@@ -246,7 +283,8 @@ def generate_unconstrained_markup(
     boundary = marker_at if reasoning_model else None
 
     return (*_split_reasoning_answer(
-        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+        tokenizer, new_ids, generation_seconds, boundary, reasoning_model,
+        reasoning_opened=_reasoning_was_opened(new_ids, reasoning_start_marker),
     ), marker_at is not None)
 
 
@@ -260,6 +298,7 @@ def generate_constrained_markup(
     temperature: float,
     reasoning_model: bool = False,
     reasoning_end_marker=None,
+    reasoning_start_marker=None,
     repetition_penalty: float = None,
     top_p: float = None,
     top_k: int = None,
@@ -301,7 +340,8 @@ def generate_constrained_markup(
     )
 
     return (*_split_reasoning_answer(
-        tokenizer, new_ids, generation_seconds, boundary, reasoning_model
+        tokenizer, new_ids, generation_seconds, boundary, reasoning_model,
+        reasoning_opened=_reasoning_was_opened(new_ids, reasoning_start_marker),
     ), marker_seen)
 
 # -------------------------

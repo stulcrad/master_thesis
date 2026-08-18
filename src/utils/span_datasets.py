@@ -13,24 +13,24 @@ TOKEN TASKS -- CoNLL-2003, UniversalNER
     UniversalNERParser builds UNER text.
 
 CHARACTER TASKS -- Toxic Spans, LegalQAEval
-    {"text": str, "tokens": [...], "token_spans": [(start, end), ...],
+    {"text": str,
      "gold_spans": [{"start": int, "end": int, "label": str}],
      "example_id": str, "question": str (LegalQA only)}
 
     `text` is the ORIGINAL string, newlines and repeated spaces included --
-    the model copies it verbatim. `gold_spans` therefore keep the dataset's
-    own character offsets with no remapping, and `token_spans` holds each
-    token's true offsets into that text (from `tokenize_with_offsets`), which
-    is what `spans_to_bio_tags` needs when the text is not single-space joined.
+    the model copies it verbatim, so `gold_spans` keep the dataset's own
+    character offsets with no remapping.
 
-    Gold here can be sub-token (Toxic Spans annotates parts of words), so
-    character spans are primary and BIO is derived, never the reverse.
+    There is deliberately NO token view here. Gold can be sub-token (Toxic
+    Spans annotates parts of words) and both metrics are character-based, so
+    tokens would be decoration: the earlier version carried them only to build
+    BIO tags, and rebuilding the text as `" ".join(tokens)` would have been lossy and wrong.
 """
 
 import json
 from pathlib import Path
 
-from utils.utils_functions import build_token_char_spans, tokenize_with_offsets, parse_position, chars_to_spans
+from utils.utils_functions import build_token_char_spans, parse_position, chars_to_spans
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SEMIN_DATA = REPO_ROOT / "data" / "semin"
@@ -165,12 +165,8 @@ def load_ner_dataset(name, uner_subset="all"):
 
 def _character_example(text, gold_spans, example_id, extra=None):
     """Shared shape for Toxic Spans / LegalQAEval."""
-    text = text or ""
-    tokens, token_spans = tokenize_with_offsets(text)
     example = {
-        "text": text,
-        "tokens": tokens,
-        "token_spans": token_spans,
+        "text": text or "",
         "gold_spans": gold_spans,
         "example_id": example_id,
     }
@@ -209,4 +205,3 @@ def load_legalqa(split="test"):
             row["text"], gold_spans, str(idx), extra={"question": row["question"]}
         ))
     return examples
-    

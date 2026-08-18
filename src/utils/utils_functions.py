@@ -67,8 +67,11 @@ def generate_markup(
     generation_config.json apply instead of being overridden with a null.
 
     If `stats_out` (a dict) is passed, it is filled with num_reasoning_tokens,
-    num_answer_tokens, reasoning_text, answer_text, found_reasoning_end and
-    reasoning_marker_seen. Callers that don't pass it get the unchanged 3-tuple behavior.
+    num_answer_tokens, reasoning_text, answer_text, found_reasoning_end,
+    reasoning_marker_seen, and raw_token_ids (the full list of generated token IDs,
+    reasoning + answer -- kept because decode() with errors='replace' is destructive,
+    so a corrupted decoded string alone cannot be traced back to the token that
+    produced it). Callers that don't pass it get the unchanged 3-tuple behavior.
     """
 
     messages = [
@@ -99,7 +102,8 @@ def generate_markup(
 
     if eval_model == "constrained":
         (full_text, total_tokens, generation_seconds, n_reason, n_answer,
-         reasoning_text, answer_text, reasoning_skipped, marker_seen) = generate_constrained_markup(
+         reasoning_text, answer_text, reasoning_skipped, marker_seen,
+         raw_token_ids) = generate_constrained_markup(
             model=model,
             tokenizer=tokenizer,
             processor=processor,
@@ -114,7 +118,8 @@ def generate_markup(
         )
     else:
         (full_text, total_tokens, generation_seconds, n_reason, n_answer,
-         reasoning_text, answer_text, reasoning_skipped, marker_seen) = generate_unconstrained_markup(
+         reasoning_text, answer_text, reasoning_skipped, marker_seen,
+         raw_token_ids) = generate_unconstrained_markup(
             model=model,
             tokenizer=tokenizer,
             inputs=inputs,
@@ -145,6 +150,7 @@ def generate_markup(
                                                 and not reasoning_skipped)
         stats_out["reasoning_skipped"] = bool(reasoning_skipped)
         stats_out["reasoning_marker_seen"] = marker_seen
+        stats_out["raw_token_ids"] = raw_token_ids
 
     return text, total_tokens, generation_seconds
 
@@ -258,8 +264,11 @@ def generate_unconstrained_markup(
 ):
     """Generate unconstrained tagged text using a HF model + tokenizer.
 
-    Returns the 7-tuple produced by _split_reasoning_answer, plus an 8th element:
-    `reasoning_marker_seen` (see generate_markup).
+    Returns the 7-tuple produced by _split_reasoning_answer, plus two more:
+    `reasoning_marker_seen` (see generate_markup) and the raw generated token IDs
+    (`new_ids.tolist()`) -- kept for post-hoc debugging of decode-level artifacts
+    (e.g. U+FFFD in multi-byte scripts) that a decoded string alone can't diagnose,
+    since decode() with errors='replace' destroys the original bytes.
     """
     gen_kwargs = _build_gen_kwargs(
         max_new_tokens, do_sample, temperature, repetition_penalty, top_p, top_k, min_p,
@@ -285,7 +294,7 @@ def generate_unconstrained_markup(
     return (*_split_reasoning_answer(
         tokenizer, new_ids, generation_seconds, boundary, reasoning_model,
         reasoning_opened=_reasoning_was_opened(new_ids, reasoning_start_marker),
-    ), marker_at is not None)
+    ), marker_at is not None, new_ids.tolist())
 
 
 def generate_constrained_markup(
@@ -306,8 +315,11 @@ def generate_constrained_markup(
 ):
     """Generate constrained tagged text using the trie processor.
 
-    Returns the 7-tuple produced by _split_reasoning_answer, plus an 8th element:
-    `reasoning_marker_seen` (see generate_markup).
+    Returns the 7-tuple produced by _split_reasoning_answer, plus two more:
+    `reasoning_marker_seen` (see generate_markup) and the raw generated token IDs
+    (`new_ids.tolist()`) -- kept for post-hoc debugging of decode-level artifacts
+    (e.g. U+FFFD in multi-byte scripts) that a decoded string alone can't diagnose,
+    since decode() with errors='replace' destroys the original bytes.
     """
     gen_kwargs = _build_gen_kwargs(
         max_new_tokens, do_sample, temperature, repetition_penalty, top_p, top_k, min_p,
@@ -342,7 +354,7 @@ def generate_constrained_markup(
     return (*_split_reasoning_answer(
         tokenizer, new_ids, generation_seconds, boundary, reasoning_model,
         reasoning_opened=_reasoning_was_opened(new_ids, reasoning_start_marker),
-    ), marker_seen)
+    ), marker_seen, new_ids.tolist())
 
 # -------------------------
 # Evaluation helpers for text

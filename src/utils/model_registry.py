@@ -70,6 +70,8 @@ _GEMMA_SAMPLING = SamplingPreset(do_sample=True, temperature=1.0, top_p=0.95, to
 _QWEN_SAMPLING_THINKING = SamplingPreset(do_sample=True, temperature=0.6, top_p=0.95, top_k=20, min_p=0.0)
 _QWEN_SAMPLING_INSTRUCT = SamplingPreset(do_sample=True, temperature=0.7, top_p=0.80, top_k=20, min_p=0.0)
 
+_GPT_OSS_SAMPLING = SamplingPreset(do_sample=True, temperature=1.0, top_p=1.0, top_k=0)
+
 
 @dataclass(frozen=True)
 class ModelSpec:
@@ -216,6 +218,7 @@ MODELS: List[ModelSpec] = [
     # reasoning_effort is the only verbosity control.
     ModelSpec(
         model_id="openai/gpt-oss-20b",
+        sampling_thinking=_GPT_OSS_SAMPLING,
         reasoning_end_marker=_HARMONY_MARKER,
         reasoning_off_supported=False,
         reasoning_effort_levels=("low", "medium", "high"),
@@ -223,6 +226,7 @@ MODELS: List[ModelSpec] = [
     ),
     ModelSpec(
         model_id="openai/gpt-oss-120b",
+        sampling_thinking=_GPT_OSS_SAMPLING,
         reasoning_end_marker=_HARMONY_MARKER,
         reasoning_off_supported=False,
         reasoning_effort_levels=("low", "medium", "high"),

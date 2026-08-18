@@ -1,7 +1,6 @@
 echo "initializing Python environment..."
 uname -a
 
-export PYTHONPATH=~/master_thesis/src:$PYTHONPATH
 export PYTHONUNBUFFERED=1
 
 ml Python/3.12.3-GCCcore-13.3.0

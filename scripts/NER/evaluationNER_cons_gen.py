@@ -382,6 +382,7 @@ for eval_mode in EVAL_MODES:
                     "num_reasoning_tokens": num_reasoning_tokens,
                     "num_answer_tokens": num_answer_tokens,
                     "reasoning_text": gen_stats.get("reasoning_text", ""),
+                    "raw_token_ids": gen_stats.get("raw_token_ids", []),
                     "generation_seconds": generation_seconds,
                 })
 

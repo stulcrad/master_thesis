@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Set
 from transformers import AutoTokenizer
+from transformers.convert_slow_tokenizer import bytes_to_unicode
+from tokenizers import decoders
 
 @dataclass
 class TokTrieNode:
@@ -92,6 +94,43 @@ class TokTrie:
 
         return out
 
+# Byte-level tokenizers use a special decoder that maps bytes to unicode characters.
+# We create a reverse mapping from unicode characters back to their original byte values for decoding.
+# This is necessary for accurately reconstructing the original byte strings of tokens when using byte-level tokenizers.
+_BYTE_DECODER = {v: k for k, v in bytes_to_unicode().items()}
+
+def _is_byte_level(tokenizer) -> bool:
+    """Vocabulary family, decided ONCE from the decoder -- never guessed per token."""
+    dec = getattr(getattr(tokenizer, "backend_tokenizer", None), "decoder", None)
+    if dec is None:
+        return False
+    if isinstance(dec, decoders.ByteLevel):
+        return True
+    if isinstance(dec, decoders.Sequence):
+        return "ByteLevel" in str(dec)
+    return False
+
+def true_token_bytes(tokenizer, token_id, byte_level):
+    """A token's real bytes, with no bytes -> str -> bytes round-trip."""
+    # Convert the token ID to its corresponding tokens -> List[str]
+    s = tokenizer.convert_ids_to_tokens(token_id)
+    if s is None:
+        return None # Return None if the token ID is invalid or not found in the tokenizer's vocabulary.
+    if byte_level:
+        # Token string is raw bytes re-encoded into printable unicode; invert it.
+        try:
+            return bytes(_BYTE_DECODER[c] for c in s)
+        except KeyError:
+            return s.encode("utf-8") # Fallback for any characters not in the byte decoder mapping; encode them as UTF-8 bytes.
+    # SentencePiece: '<0xNN>' byte fallback carries exactly one raw byte.
+    if len(s) == 6 and s.startswith("<0x") and s.endswith(">"):
+        try:
+            return bytes([int(s[3:5], 16)]) # Convert the hex string to a single byte.
+        except ValueError:
+            pass
+    # SentencePiece: '▁' is a special marker for whitespace; replace it with a space and encode as UTF-8.
+    return s.replace("▁", " ").encode("utf-8")
+
 def build_toktrie_from_tokenizer(tokenizer: AutoTokenizer) -> TokTrie:
     """
     Build a toktrie structure from the given tokenizer and his vocabulary
@@ -100,22 +139,20 @@ def build_toktrie_from_tokenizer(tokenizer: AutoTokenizer) -> TokTrie:
     ----
     - tokenizer: AutoTokenizer -> the tokenizer from which to build the toktrie
     """
+
     toktrie = TokTrie()
 
     vocab = tokenizer.get_vocab()
 
+    byte_level = _is_byte_level(tokenizer)
+
     # For each token in the tokenizer's vocabulary, convert it to its byte string and insert it into the trie.
     for token, token_id in vocab.items():
-        try:
-            # surface = tokenizer.convert_tokens_to_string([token]) # convert token to surface form (string)
-            surface = tokenizer.decode([token_id], clean_up_tokenization_spaces=False) # decode token ID to surface form (string)
-        except Exception:
-            # Fallback for tokenizers that may fail conversion on some special tokens.
-            continue
 
-        # Encode the surface string to bytes using UTF-8 encoding, which is the standard encoding for tokenizers.
-        # This is done because the different tokens with or without 
-        token_bytes = surface.encode("utf-8")
+        # For each token in the tokenizer's vocabulary, convert it to its byte form and insert it into the trie.
+        token_bytes = true_token_bytes(tokenizer, token_id, byte_level)
+        if token_bytes is None:
+            continue # Skip tokens that cannot be converted to bytes.
         toktrie.insert(token_bytes, token_id)
 
     return toktrie

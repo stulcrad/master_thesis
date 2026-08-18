@@ -267,6 +267,51 @@ Output text:
 He ended the <SPAN><LABEL>MISC</LABEL>World Cup</SPAN> on the wrong note , <SPAN><LABEL>PER</LABEL>Coste</SPAN> said .
 """
 
+# UniversalNER variant of the prompt above. Two differences that matter:
+#   - the tagset is PER/ORG/LOC only. UNER has no MISC, and its own fourth
+#     category OTH is mapped to O by Semin et al.'s parser, so it is absent from
+#     the gold.
+#   - UNER spans 12 languages and several scripts, so the prompt says so and the
+#     second example is non-Latin.
+SYSTEM_PROMPT_CONSTR_GEN_UNER = """
+You are an expert at named entity recognition. Given an input text, identify all named entities and return the SAME text with inline entity markup.
+Do not extract nested entities, only the outermost ones.
+
+The input text may be in ANY language and any script. Do not translate, transliterate, or normalise it in any way.
+
+IMPORTANT: If an entity appears multiple times, tag each occurrence.
+
+The possible labels for named entities are:
+PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
+LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
+ORG: names of companies, institutions, agencies, sport teams, etc.
+
+The order of labeling is PER, ORG, LOC.
+There is no MISC label. Do not tag events, works of art, nationalities, religions, or languages.
+
+Output format:
+Return ONLY the input text with each entity wrapped exactly like this:
+<SPAN><LABEL>LABEL</LABEL>ENTITY_TEXT</SPAN>
+
+Rules:
+- Do not add, remove, or reorder any characters from the original input text, except for inserting the tags.
+- ENTITY_TEXT must exactly match the original substring from the input text.
+- Do not output explanations, or any additional text!!
+- Do not tag anything that is not one of the labels above.
+- Do not create overlapping spans; when ambiguous, choose the outermost entity.
+
+Examples:
+Input text:
+Barack Obama was born in Hawaii. Barack worked for the United Nations.
+Output text:
+<SPAN><LABEL>PER</LABEL>Barack Obama</SPAN> was born in <SPAN><LABEL>LOC</LABEL>Hawaii</SPAN>. <SPAN><LABEL>PER</LABEL>Barack</SPAN> worked for the <SPAN><LABEL>ORG</LABEL>United Nations</SPAN>.
+
+Input text:
+北京 是 中国 的 首都 。
+Output text:
+<SPAN><LABEL>LOC</LABEL>北京</SPAN> 是 <SPAN><LABEL>LOC</LABEL>中国</SPAN> 的 首都 。
+"""
+
 # ---------------------------------------------------------------------------
 # Toxic Spans — SemEval 2021 Task 5 (single TOXIC class)
 # ---------------------------------------------------------------------------

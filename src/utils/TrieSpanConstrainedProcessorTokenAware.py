@@ -64,6 +64,22 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         self.input_token_ptr = 0
         self.input_token_byte_ptr = 0
 
+        # Byte offsets that fall BETWEEN complete characters. A tag may only open or close
+        # at one of these -> never inside a multi-byte character's own bytes.
+        offset = 0
+        self._char_boundary_offsets: Set[int] = {0}
+        for ch in input_text:
+            offset += len(ch.encode("utf-8"))
+            self._char_boundary_offsets.add(offset)
+
+        # Store the start offsets of each token in the input text for quick global byte offset calculations.
+        self._token_start_offsets: List[int] = []
+        _acc = 0
+        for b in self.input_token_bytes:
+            self._token_start_offsets.append(_acc)
+            _acc += len(b)
+        self._token_start_offsets.append(_acc)  # add the end offset for the last token
+
         self.reasoning_model = reasoning_model
         if reasoning_model:
             self.reasoning_ended = reasoning_ended
@@ -168,6 +184,19 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
                 break
             self.input_token_ptr += 1
             self.input_token_byte_ptr = 0
+
+    def _global_byte_offset(self) -> int:
+        """
+        Get the current global byte offset in the input text based on the current input position.
+        """
+        return self._token_start_offsets[self.input_token_ptr] + self.input_token_byte_ptr
+
+    def _at_char_boundary(self) -> bool:
+        """
+        Check if the current global byte offset is at a character boundary in the input text.
+        This ensures that tags are only opened or closed at valid character boundaries, not inside multi-byte
+        """
+        return self._global_byte_offset() in self._char_boundary_offsets
     
     def _current_remaining_bytes(self) -> bytes:
         """
@@ -311,7 +340,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             # Allow all tokens that can copy the next part of the input text based on the current token-level position
             allowed = self._allowed_copy_tokens()
             # Additionally, allow the tokens that can start any of the label blocks, unless the next part of the input text starts with '<'
-            if not self._prefer_literal_angle_bracket():
+            if not self._prefer_literal_angle_bracket() and self._at_char_boundary():
                 remaining = self._current_remaining_bytes()
                 can_copy_after_space = bool(remaining[1:]) and bool(self.toktrie.prefix_search(remaining[1:]))
                 if remaining.startswith(b" ") and can_copy_after_space:
@@ -338,7 +367,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         if self.STATE == "SPAN_TEXT":
             # We allow all tokens that can copy the next part of the input text
             allowed = self._allowed_copy_tokens()
-            if self.span_text_has_content:
+            if self.span_text_has_content and self._at_char_boundary():
                 # Span close at index 0 is '</', which is a very specific token
                 allowed.add(self.SPAN_CLOSE[0])
             return allowed

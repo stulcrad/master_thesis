@@ -21,7 +21,7 @@ class TokTrie:
     """
     Byte-level token trie inspired by llguidance toktrie.
 
-    Each path from root to a terminal stores token IDs whose decoded byte string
+    Each path from root to a terminal stores token IDs whose byte string
     matches that exact path. This enables fast lookup of all tokens that are a prefix of a target byte suffix.
     """
     def __init__(self):
@@ -146,7 +146,6 @@ def build_toktrie_from_tokenizer(tokenizer: AutoTokenizer) -> TokTrie:
 
     byte_level = _is_byte_level(tokenizer)
 
-    # For each token in the tokenizer's vocabulary, convert it to its byte string and insert it into the trie.
     for token, token_id in vocab.items():
 
         # For each token in the tokenizer's vocabulary, convert it to its byte form and insert it into the trie.

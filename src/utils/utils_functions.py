@@ -490,6 +490,36 @@ def tokenize_with_offsets(text: str) -> Tuple[List[int], List[Tuple[int, int]]]:
 # -------------------------
 # Evaluation helpers for entity-level metrics
 # -------------------------
+def spans_to_char_set(spans: List[Dict]) -> set:
+    """Character-offset set for `compute_character_f1`, insertion points included.
+
+    A normal span contributes one element per character it covers. A ZERO-LENGTH
+    span (`start == end` -- MultiGEC's `M`, "a word is missing here") covers no
+    characters at all, so the obvious `range(start, end)` is EMPTY and the span
+    disappears from the comparison entirely. On MultiGEC that silently discards
+    22.5% of the gold.
+
+    Such a span instead contributes one sentinel element `("ins", start)`, which:
+
+    - cannot collide with a plain character index, because it is a different
+      type -- so an insertion point before offset k and the real character at
+      offset k stay distinct, and marking one never credits the other;
+    - weighs exactly 1, an insertion point costs the same as a one-character span in both
+      metrics rather than more in one than the other.
+
+    Tasks whose spans are never zero-length (NER, Toxic Spans, LegalQAEval,
+    WMT24 ESA) produce a plain set of ints, identical to the previous inline
+    comprehension -- this is a no-op for them.
+    """
+    chars = set()
+    for s in spans:
+        if s["end"] > s["start"]:
+            chars.update(range(s["start"], s["end"]))
+        else:
+            chars.add(("ins", s["start"]))
+    return chars
+
+
 def compute_character_f1(
         gold_chars: set,
         pred_chars: set,
@@ -503,6 +533,11 @@ def compute_character_f1(
 
     Special case (Pavlopoulos et al.): if gold is empty,
       F1 = 1.0 when pred is also empty, F1 = 0.0 otherwise.
+
+    Operates on opaque set elements, so it does not care whether an element is a
+    plain character index or an insertion-point sentinel. Build both sets with
+    `spans_to_char_set` on any task that has zero-length spans, otherwise those
+    spans contribute to neither side and vanish from the score.
 
     Returns (precision, recall, f1).
     """
@@ -561,3 +596,15 @@ def chars_to_spans(char_indices: List[int]) -> List[Tuple[int, int]]:
 def example_to_tokens(text: str) -> List[str]:
     tokens = text.split() if text else []
     return tokens
+
+
+if __name__ == "__main__":
+    # Quick test of test of the spans to char set
+    gold = [{"start": 0, "end": 5}, {"start": 10, "end": 10}, {"start": 15, "end": 20}]
+    pred = [{"start": 0, "end": 5}, {"start": 10, "end": 10}, {"start": 18, "end": 22}]
+    gold_chars = spans_to_char_set(gold)
+    print(f"Gold chars: {gold_chars}")
+    pred_chars = spans_to_char_set(pred)
+    print(f"Pred chars: {pred_chars}")
+    p, r, f1 = compute_character_f1(gold_chars, pred_chars)
+    print(f"Precision: {p:.2f}, Recall: {r:.2f}, F1: {f1:.2f}")

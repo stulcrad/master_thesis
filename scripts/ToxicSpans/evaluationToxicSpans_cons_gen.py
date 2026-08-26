@@ -45,7 +45,8 @@ from utils.model_registry import get, resolve_sampling
 # -------------------------
 parser = argparse.ArgumentParser("Evaluate constrained generation on Toxic Spans.")
 parser.add_argument("--model", required=True, type=str, help="Model name or ID to evaluate.")
-parser.add_argument("--enable-thinking", action=argparse.BooleanOptionalAction, default=True, help="Whether to enable reasoning in the model's prompt.")
+parser.add_argument("--enable-thinking", action=argparse.BooleanOptionalAction, default=True, 
+                    help="Whether to enable reasoning in the model's prompt.")
 parser.add_argument("--reasoning-effort", choices=['low', 'medium', 'high', 'xhigh'], default=None,
                     help="Reasoning effort. The union of both families' levels: Harmony/GPT-OSS takes "
                          "low|medium|high, Qwen3.8 takes low|medium|xhigh (xhigh is its default). "
@@ -55,7 +56,8 @@ parser.add_argument("--temperature", type=float, default=None, help="Temperature
 parser.add_argument("--top-p", type=float, default=None, help="Top-p for sampling.")
 parser.add_argument("--top-k", type=int, default=None, help="Top-k for sampling.")
 parser.add_argument("--min-p", type=float, default=None, help="Minimum probability for sampling.")
-parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means all examples.")
+parser.add_argument("--max-examples", type=int, default=None, 
+                    help="Maximum number of examples to evaluate. None means all examples.")
 parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate.")
 parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over.")
 
@@ -75,7 +77,7 @@ if args.reasoning_effort and not spec.supports_reasoning_effort:
     raise SystemExit(f"{args.model} does not support reasoning effort (no levels registered)")
 if args.reasoning_effort and args.reasoning_effort not in spec.reasoning_effort_levels:
     raise SystemExit(
-        f"{args.model} does not accept --reasoning-effort {args.reasoning_effort!r}; "
+        f"{args.model} does not accept --,reasoning-effort {args.reasoning_effort!r}; "
         f"valid levels for this model: {', '.join(spec.reasoning_effort_levels)}"
     )
 reasoning_model = args.enable_thinking and spec.reasoning
@@ -203,6 +205,7 @@ for eval_mode in EVAL_MODES:
                             tokenizer, toktrie,
                             reasoning_model=reasoning_model,
                             reasoning_end_marker=reasoning_end_marker,
+                            reasoning_start_marker=reasoning_start_marker,
                             reasoning_ended=reasoning_ended,
                             model_eos_token_id=model.generation_config.eos_token_id,
                             tokenizer_eos_token_id=tokenizer.eos_token_id,
@@ -215,6 +218,7 @@ for eval_mode in EVAL_MODES:
                             toktrie,
                             reasoning_model=reasoning_model,
                             reasoning_end_marker=reasoning_end_marker,
+                            reasoning_start_marker=reasoning_start_marker,
                             reasoning_ended=reasoning_ended,
                             model_eos_token_id=model.generation_config.eos_token_id,
                             tokenizer_eos_token_id=tokenizer.eos_token_id,
@@ -270,12 +274,15 @@ for eval_mode in EVAL_MODES:
                         for e in parsed["entities"] if e["label"] in set(labels_for_constrained)
                     ]
 
+                # Compute character-level F1 for this post
                 pred_chars = {i for s in pred_spans for i in range(s["start"], s["end"])}
                 cp, cr, cf = compute_character_f1(gold_chars, pred_chars)
                 char_f1_per_post.append(cf)
                 char_p_per_post.append(cp)
                 char_r_per_post.append(cr)
 
+                # Compute Semin et al.'s micro counts for hard and soft overlap F1. 
+                # For Toxic Spans, hard and soft coincide, but we compute both for completeness.
                 hard_counts = compute_overlap_counts(pred_spans, gold_spans, hard_matching=True)
                 soft_counts = compute_overlap_counts(pred_spans, gold_spans, hard_matching=False)
                 hard_overlap += hard_counts["overlap_chars"]
@@ -336,6 +343,7 @@ for eval_mode in EVAL_MODES:
                         f"elapsed={elapsed:.1f}m"
                     )
 
+            # Compute micro F1 for the entire seed run for Semin et al.'s metrics
             hard = f1_from_counts(hard_overlap, hard_predicted, hard_gold)
             soft = f1_from_counts(soft_overlap, soft_predicted, soft_gold)
 

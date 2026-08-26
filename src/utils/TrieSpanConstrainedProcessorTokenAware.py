@@ -25,9 +25,10 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
                  toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
                  reasoning_ended: Optional[Callable[[torch.LongTensor, List[int], bool], bool]] = None,
-                 reasoning_end_marker: Optional[List[int]] = None,
+                 reasoning_end_marker: Optional[List[int]] = None, reasoning_start_marker: Optional[List[int]] = None,
                  model_eos_token_id=None,
                  tokenizer_eos_token_id=None,
+                 allow_empty_span_labels: Optional[Set[str]] = None
                 ):
         """
         Initialize the TrieSpanConstrainedProcessorTokenAware processor.
@@ -40,9 +41,12 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             reasoning_model (bool): Whether the model is a reasoning model that allows unconstrained reasoning tokens before the first output token.
             reasoning_ended (Optional[Callable[[torch.LongTensor, List[int], bool], bool]]): Optional callable to determine if reasoning has ended based on the generated tokens.
             reasoning_end_marker (Optional[List[int]]): Optional list of token IDs that mark the end of reasoning.
+            reasoning_start_marker (Optional[List[int]]): Optional list of token IDs that mark the start of reasoning 
+                                                          (is important for Gemma, which can skip reasoning, 
+                                                          and the processor must know this)
             model_eos_token_id (int | list[int] | None): The model's own generation_config.eos_token_id(s)
             tokenizer_eos_token_id (int | list[int] | None): The tokenizer's own eos_token_id(s), passed in
-                explicitly by the caller (e.g. tokenizer.eos_token_id).
+                                                             explicitly by the caller (e.g. tokenizer.eos_token_id).
         """
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
@@ -60,6 +64,12 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             self.toktrie.token_id_to_bytes[tok_id]
             for tok_id in self.input_token_ids
         ]
+
+        # Ensure that the tokenizer did not alter the input text (e.g. normalization) 
+        # by checking that the concatenated token bytes match the original input text.
+        assert b"".join(self.input_token_bytes) == input_text.encode("utf-8"), \
+            "Tokenizer altered the input text (normalization); copy source is not the original"
+        
         # Pointers to track how much of the input has been copied so far at the token level.
         self.input_token_ptr = 0
         self.input_token_byte_ptr = 0
@@ -73,6 +83,7 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             self._char_boundary_offsets.add(offset)
 
         # Store the start offsets of each token in the input text for quick global byte offset calculations.
+        # Is used so the check is O(1) instead of O(n) when checking if the current byte offset is at a character boundary.
         self._token_start_offsets: List[int] = []
         _acc = 0
         for b in self.input_token_bytes:
@@ -81,11 +92,14 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         self._token_start_offsets.append(_acc)  # add the end offset for the last token
 
         self.reasoning_model = reasoning_model
-        if reasoning_model:
-            self.reasoning_ended = reasoning_ended
-            self.found_reasoning_end = False
-            self.reasoning_end_marker = reasoning_end_marker
-            self.output_start_index = None # will be set to the index of the first output token after reasoning
+        # Set unconditionally: __call__ reads these on every path, including the
+        # reasoning-OFF one, where reasoning_model is False.
+        self.reasoning_ended = reasoning_ended
+        self.found_reasoning_end = False
+        self.reasoning_started = False
+        self.reasoning_start_marker = reasoning_start_marker
+        self.reasoning_end_marker = reasoning_end_marker
+        self.output_start_index = None # will be set to the index of the first output token after reasoning
 
         self.prompt_len = None # will be set to the length of the prompt (input_ids) when generation starts
 
@@ -102,6 +116,12 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
 
         # Tracks whether at least one copy token was emitted in the current span body.
         self.span_text_has_content = False
+
+        # Labels permitted to close a span with NO copied text -> MultiGEC's 'M', meaning
+        # a word is missing here, is a zero len insertion point.
+        self.allow_empty_span_labels: Set[str] = set(allow_empty_span_labels or ())
+        # set to the global byte offset of the last empty span, to prevent consecutive empty spans
+        self._last_empty_span_offset: Optional[int] = None  
 
         # Structural token sequences.
         self.SPAN_CLOSE = self.tokenizer.encode("</SPAN>", add_special_tokens=False)
@@ -148,14 +168,15 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         self.live_blocks = None
         
         self.span_text_has_content = False
+        self._last_empty_span_offset = None
         
         self.prev_len = 0
         self._active_blocks = None
 
         self.prompt_len = None
-        if self.reasoning_model:
-            self.found_reasoning_end = False
-            self.output_start_index = None
+        self.found_reasoning_end = False
+        self.reasoning_started = False
+        self.output_start_index = None
 
     def _mask_except(self, scores: torch.FloatTensor, allowed_tokens: Set[int]) -> torch.FloatTensor:
         """
@@ -326,6 +347,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             if self.seq_pos < len(self.SPAN_CLOSE) and token_id == self.SPAN_CLOSE[self.seq_pos]:
                 self.seq_pos += 1
                 if self.seq_pos == len(self.SPAN_CLOSE):
+                    if not self.span_text_has_content:
+                        self._last_empty_span_offset = self._global_byte_offset()
                     self.STATE = "OUTSIDE"
                     self.seq_pos = 0
                     self.span_text_has_content = False
@@ -367,7 +390,11 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         if self.STATE == "SPAN_TEXT":
             # We allow all tokens that can copy the next part of the input text
             allowed = self._allowed_copy_tokens()
-            if self.span_text_has_content and self._at_char_boundary():
+            can_close_empty = (
+                self.selected_label in self.allow_empty_span_labels
+                and self._last_empty_span_offset != self._global_byte_offset()
+            )
+            if (self.span_text_has_content or can_close_empty) and self._at_char_boundary():
                 # Span close at index 0 is '</', which is a very specific token
                 allowed.add(self.SPAN_CLOSE[0])
             return allowed
@@ -384,6 +411,29 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         """
         if self.prompt_len is None:
             self.prompt_len = input_ids.shape[1] # Set the prompt length on the first call
+
+        # Reasoning-skip detection, for families where the MODEL emits the opener
+        # (Gemma-4). If it never opens the block it never emits the end marker either,
+        # so reasoning_ended() below would stay False forever and the whole generation
+        # would run UNCONSTRAINED.
+        if (self.reasoning_model and self.reasoning_start_marker
+                and not self.reasoning_started and not self.found_reasoning_end):
+            if input_ids.shape[1] == self.prompt_len:
+                # On first step, allow the reasoning start marker to be emitted alongised constrained copy tokens.
+                # Depending on this, the FSM may either enter reasoning (if the opener is emitted) or skip reasoning.
+                allowed = self._allowed_tokens() | {self.reasoning_start_marker[0]}
+                self.prev_len = input_ids.shape[1]
+                return self._mask_except(scores, allowed)
+            if int(input_ids[0, -1]) == self.reasoning_start_marker[0]:
+                # Opener taken: normal reasoning path. Rewind prev_len so the FSM stays
+                # idle until reasoning actually ends (as it does when there is no opener).
+                self.reasoning_started = True
+                self.prev_len = 0
+            else:
+                # Reasoning skipped: the answer starts at the very first generated token,
+                # which was already constrained above and must now advance the FSM.
+                self.found_reasoning_end = True
+                self.output_start_index = self.prompt_len
 
         # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original scores.
         if self.reasoning_model and not self.reasoning_ended(

@@ -193,8 +193,8 @@ MODELS: List[ModelSpec] = [
         reasoning_off_supported=True,
         sampling_thinking=_GEMMA_SAMPLING,
         sampling_instruct=_GEMMA_SAMPLING,
-        notes="Run reasoning-OFF only: this is the row that sits beside Semin et al.'s "
-              "Gemma-4-31B column (they disabled reasoning by default).",
+        notes="Run reasoning-OFF only -- this is the directly comparable published row "
+              "for this model size.",
     ),
 
     # -- Qwen 3.8 ------------------------------------------------------------------------
@@ -248,8 +248,8 @@ MODELS: List[ModelSpec] = [
         reasoning_off_supported=True,
         sampling_thinking=_QWEN_SAMPLING_THINKING,
         sampling_instruct=_QWEN_SAMPLING_INSTRUCT,
-        notes="Semin et al.'s main open model. Run REASONING-OFF to sit beside their "
-              "Qwen3-8B column; they disabled reasoning by default and reported "
+        notes="Open mid-size baseline with a published comparison row. Run REASONING-OFF; "
+              "the published numbers use reasoning disabled and report "
               "Qwen3-8B-Think only in Appendix B.3. Also a thesis model, so its frozen "
               "results live in Experiment_results/.",
     ),
@@ -289,8 +289,8 @@ RETIRED_MODELS: List[ModelSpec] = [
 #: Thesis models -- already evaluated, results frozen in `Experiment_results/`.
 #: Not re-run, so deliberately excluded from `MODELS` and the SLURM array.
 #:
-#: Qwen/Qwen3-8B is NOT here any more: it was promoted into MODELS for the matched
-#: Semin comparison. Keeping a copy in this list would shadow it.
+#: Qwen/Qwen3-8B is NOT here any more: it was promoted into MODELS as a main model.
+#: Keeping a copy in this list would shadow it.
 LEGACY_MODELS: List[ModelSpec] = [
     ModelSpec(
         model_id="google/gemma-3-4b-it",

@@ -5,9 +5,7 @@ Constrained generation evaluation on isaacus/LegalQAEval, with two types of cons
 
 The model is shown the ORIGINAL passage verbatim -- newlines and repeated
 spaces included -- so gold answer offsets from the dataset are used exactly as
-they come, with no remapping. The previous version fed `" ".join(text.split())`,
-which collapses whitespace runs and shifted the gold off the characters the
-annotators marked on 15.3% of passages.
+they come, with no remapping.
 
 One passage per prompt: the system prompt embeds this example's question, so
 concatenating passages would ask one question of several passages.
@@ -210,6 +208,7 @@ for eval_mode in EVAL_MODES:
                             toktrie,
                             reasoning_model=reasoning_model,
                             reasoning_end_marker=reasoning_end_marker,
+                            reasoning_start_marker=reasoning_start_marker,
                             reasoning_ended=reasoning_ended,
                             model_eos_token_id=model.generation_config.eos_token_id,
                             tokenizer_eos_token_id=tokenizer.eos_token_id,
@@ -222,6 +221,7 @@ for eval_mode in EVAL_MODES:
                             toktrie,
                             reasoning_model=reasoning_model,
                             reasoning_end_marker=reasoning_end_marker,
+                            reasoning_start_marker=reasoning_start_marker,
                             reasoning_ended=reasoning_ended,
                             model_eos_token_id=model.generation_config.eos_token_id,
                             tokenizer_eos_token_id=tokenizer.eos_token_id,
@@ -277,12 +277,14 @@ for eval_mode in EVAL_MODES:
                         for e in parsed["entities"] if e["label"] in set(labels_for_constrained)
                     ]
 
+                # Compute character-level F1 for this example
                 pred_chars = {i for s in pred_spans for i in range(s["start"], s["end"])}
                 cp, cr, cf = compute_character_f1(gold_chars, pred_chars)
                 char_f1_per_post.append(cf)
                 char_p_per_post.append(cp)
                 char_r_per_post.append(cr)
 
+                # Compute Semin et al.'s pooled character-overlap F1, hard and soft, for this example
                 hard_counts = compute_overlap_counts(pred_spans, gold_spans, hard_matching=True)
                 soft_counts = compute_overlap_counts(pred_spans, gold_spans, hard_matching=False)
                 hard_overlap += hard_counts["overlap_chars"]
@@ -344,6 +346,7 @@ for eval_mode in EVAL_MODES:
                         f"elapsed={elapsed:.1f}m"
                     )
 
+            # Compute micro-averaged Semin et al.'s metrics
             hard = f1_from_counts(hard_overlap, hard_predicted, hard_gold)
             soft = f1_from_counts(soft_overlap, soft_predicted, soft_gold)
 

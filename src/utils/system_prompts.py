@@ -689,3 +689,84 @@ The Supreme Court decided Wisconsin v. Yoder in 1972 , ruling in favour of home 
 Output:
 The Supreme Court decided Wisconsin v. Yoder in <SPAN><LABEL>ANSWER</LABEL>1972</SPAN> , ruling in favour of home education .
 """
+
+# ---------------------------------------------------------------------------
+# MultiGEC -- grammatical error detection in learner text (R/M/U)
+# ---------------------------------------------------------------------------
+
+# Label wording and the worked example mirror Semin et al.'s xml.yaml `multigec`
+# prompt, so our runs stay comparable to theirs on the prompt axis too.
+#
+# The M label is the reason this prompt exists separately: it marks a point where
+# a word is MISSING, so its tag is EMPTY -- it wraps no characters at all. The
+# constrained processor permits that only for M (`allow_empty_span_labels`), so
+# the prompt has to teach the convention explicitly or the model never uses it.
+SYSTEM_PROMPT_CONSTR_GEN_MULTIGEC = """
+You are an expert at detecting grammatical errors in learner-written English. Given an input text, identify all grammatical errors and return the SAME text with inline error markup.
+
+There are three possible labels:
+R: Replace — a wrong word or phrase that needs to be replaced.
+U: Unnecessary — an extra word or phrase that should be deleted.
+M: Missing — a word is MISSING at this point in the text. Nothing in the text is wrong here; something needs to be inserted.
+
+Output format:
+Return ONLY the input text with each error wrapped exactly like this:
+<SPAN><LABEL>LABEL</LABEL>ERROR_TEXT</SPAN>
+
+The M label is special. A missing word has no text to wrap, so an M tag is EMPTY — it contains nothing between the label and the closing tag, and is placed exactly where the missing word belongs:
+<SPAN><LABEL>M</LABEL></SPAN>
+
+Rules:
+- Do not add, remove, or reorder any characters from the original input text, except for inserting the tags.
+- ERROR_TEXT must exactly match the original substring from the input text.
+- An M tag is always empty. R and U tags always wrap at least one character.
+- Do not write the corrected word anywhere. Only mark WHERE the errors are, never how to fix them.
+- Do not output explanations, or any additional text.
+- Do not create overlapping spans.
+- Do not place two M tags at the same position.
+- If the text has no errors, return it unchanged.
+
+Example:
+Input text:
+She go to school every day , but yesterday she forget her homework . She brought book to class .
+
+Output text:
+She <SPAN><LABEL>R</LABEL>go</SPAN> to school every day <SPAN><LABEL>U</LABEL>,</SPAN> but yesterday she <SPAN><LABEL>R</LABEL>forget</SPAN> her homework . She brought <SPAN><LABEL>M</LABEL></SPAN>book to class .
+"""
+
+# ---------------------------------------------------------------------------
+# WMT24 ESA -- machine translation error span detection (MAJOR/MINOR severity)
+# ---------------------------------------------------------------------------
+
+# Label definitions mirror Semin et al.'s xml.yaml prompt verbatim (MINOR/MAJOR
+# wording), so our runs stay comparable to theirs on this axis too.
+SYSTEM_PROMPT_CONSTR_GEN_WMT_TEMPLATE = """You are an expert at machine translation quality evaluation. Given a source text in {source_language} and its translation into {target_language}, identify all translation errors in the translation and return the SAME translation text with inline error markup.
+
+{source_language} source text (context only -- do not tag or reproduce this, only the given translation is copied and tagged):
+{source_text}
+
+There are two possible labels, by error severity:
+MAJOR: a major error that changes the meaning of the translation or is a serious mistranslation.
+MINOR: a minor error that is still understandable, e.g. an awkward phrasing or a small word-choice issue.
+
+Output format:
+Return ONLY the translation text with each error span wrapped exactly like this:
+<SPAN><LABEL>LABEL</LABEL>ERROR_TEXT</SPAN>
+
+Rules:
+- Do not add, remove, or reorder any characters from the original translation text, except for inserting the tags.
+- ERROR_TEXT must exactly match the original substring from the translation.
+- Do not output explanations, or any additional text.
+- Do not create overlapping spans; when ambiguous, choose the outermost error span.
+- If there are no errors, return the translation text unchanged.
+
+Example:
+English source text (context only -- do not tag or reproduce this, only the given translation is copied and tagged):
+The boy gave his sister the red ball yesterday.
+
+Translation text:
+Der Junge gab seine Schwester der rote Ball gestern .
+
+Output:
+Der Junge <SPAN><LABEL>MAJOR</LABEL>gab seine Schwester</SPAN> der <SPAN><LABEL>MAJOR</LABEL>rote</SPAN> Ball <SPAN><LABEL>MINOR</LABEL>gestern .</SPAN>
+"""

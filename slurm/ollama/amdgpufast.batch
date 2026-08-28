@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --time=4:00:00
+#SBATCH --nodes=1 --ntasks-per-node=1
+#SBATCH --partition=amdgpufast --gres=gpu:1
+#SBATCH --no-requeue
+#SBATCH --mem=64G
+#SBATCH --job-name=ollama_serve
+#SBATCH --out=/home/stulcrad/master_thesis/logs/ollama/ollama.out
+
+export OLLAMA_HOST=0.0.0.0:9069
+echo "OLLAMA_HOST=${OLLAMA_HOST}"
+
+cd ~/master_thesis
+source init_environment_python.sh
+
+ollama serve

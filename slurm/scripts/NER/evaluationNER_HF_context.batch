@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:2
+#SBATCH --mem=64G
+#SBATCH --time=24:00:00
+#SBATCH --job-name=NER_HF_context_eval
+#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/evaluationNER_HF_context%j.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/evaluationNER_HF_context%j.err
+
+cd ~/master_thesis
+source init_environment_python.sh
+
+
+echo "Starting NER Context Based HF evaluation on node $(hostname -s)"
+
+python scripts/NER/evaluationNER_HF_context.py

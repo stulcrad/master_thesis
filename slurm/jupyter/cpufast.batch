@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --partition cpufast
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 1
+#SBATCH --mem-per-cpu 8G
+#SBATCH --time 4:00:00
+#SBATCH --job-name jupyter
+#SBATCH --output /home/stulcrad/master_thesis/logs/jupyter/cpufast.out
+
+ENV_SEL="${1:-python}" # default to python environment
+
+cd ~/master_thesis
+
+case "$ENV_SEL" in 
+    python)
+        source init_environment_python.sh
+        ;;
+    vllm_*)
+        source init_environment_vllm.sh "$ENV_SEL"
+        ;;
+    *)
+        echo "Unknown environment selection: $ENV_SEL"
+        echo "Use 'vllm_0_12' or 'vllm_0_8_5' or 'python'"
+        exit 1
+        ;;
+esac
+
+jupyter notebook --no-browser --port=$(shuf -i8000-9999 -n1) --ip=$(hostname -s)

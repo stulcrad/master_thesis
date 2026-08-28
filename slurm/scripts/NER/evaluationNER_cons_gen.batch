@@ -1,0 +1,45 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=96G
+#SBATCH --cpus-per-task=16
+#SBATCH --job-name=ner_uner_cg_eval
+#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/ner/%x_%N_%a_%A.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/ner/%x_%N_%a_%A.err
+
+cd ~/master_thesis
+source init_environment_python.sh
+
+echo "Starting Constrained Generation evaluation on node $(hostname -s)"
+
+MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
+
+SHARDS="${SHARDS:-1}"
+NGPU="${SLURM_GPUS_ON_NODE:-$(nvidia-smi -L 2>/dev/null | wc -l)}"
+NGPU="${NGPU:-1}"
+
+export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / SHARDS ))
+[ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
+
+if [ "$SHARDS" -le 1 ]; then
+    echo "Running evaluation on 1 shard"
+    python scripts/NER/evaluationNER_cons_gen.py --model "$MODEL_NAME" "$@"
+else
+    pids=()
+    for i in $(seq 0 $((SHARDS - 1))); do
+        # Pin each process to one GPU. Only safe when wharding, because the big
+        # models rely on device_map="auto" spreading across every visible GPU.
+        CUDA_VISIBLE_DEVICES=$((i % NGPU)) \
+            python scripts/NER/evaluationNER_cons_gen.py --model "$MODEL_NAME" --shard "$i/$SHARDS" "$@" &
+        pids+=($!)
+        sleep 20 # stagger the checkpoint loads, host RAM spikes otherwise
+    done
+    rc=0
+    for p in "${pids[@]}"; do
+        wait "$p" || rc=$?
+    done
+    exit $rc
+fi
+
+
+

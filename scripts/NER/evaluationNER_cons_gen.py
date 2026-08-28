@@ -64,13 +64,18 @@ parser.add_argument("--temperature", type=float, default=None, help="Temperature
 parser.add_argument("--top-p", type=float, default=None, help="Top-p for sampling.")
 parser.add_argument("--top-k", type=int, default=None, help="Top-k for sampling.")
 parser.add_argument("--min-p", type=float, default=None, help="Minimum probability for sampling.")
-parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means the full test split.")
-parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate. Must be generous for reasoning models: the answer has to reproduce the ENTIRE input after the reasoning trace.")
-parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over. One seed (42) is the reported protocol -- nothing is trained, so there is no training variance to average over.")
+parser.add_argument("--max-examples", type=int, default=None, 
+                    help="Maximum number of examples to evaluate. None means the full test split.")
+parser.add_argument("--max-new-tokens", type=int, default=16384, 
+                    help="Maximum number of new tokens to generate.")
+parser.add_argument("--seeds", type=int, nargs="+", default=[42], 
+                    help="Seeds to run and average over.")
 parser.add_argument("--brevity-hint", action="store_true",
                     help="Append a brevity instruction to the system prompt for reasoning models, "
                          "to curb runaway self-verification. OFF by default so that the termination "
                          "study (task 10) has a control arm; logged per run so its effect is measurable.")
+parser.add_argument("--shard", type=str, default=None,
+                    help="Optional: i/N - shard the dataset into N shards and run only shard i.")
 
 
 # -------------------------
@@ -171,6 +176,18 @@ if brevity_hint_applied:
 elif args.brevity_hint:
     print("[warn] --brevity-hint ignored: it only applies when reasoning is enabled.")
 
+shard_i, shard_N = None, None
+if args.shard is not None:
+    try:
+        shard_i, shard_N = map(int, args.shard.split("/"))
+        if not (0 <= shard_i < shard_N):
+            raise ValueError
+        if args.dataset != "conll2003":
+            raise SystemExit(f"--shard is only supported for --dataset conll2003, got {args.dataset!r}")
+    except ValueError:
+        raise SystemExit(f"--shard must be of the form i/N with 0 <= i < N, got {args.shard!r}")
+    print(f"Sharding dataset into {shard_N} shards, running only shard {shard_i}.")
+
 # Per-example predictions (JSONL, one line per generation) -- required for
 # paired significance tests and post-hoc metrics without re-running.
 PRED_DIR = f"{RESULTS_ROOT}/{results_dir}/Constrained-Gen/Predictions"
@@ -190,10 +207,15 @@ def config_tag():
 def dataset_tag(subset):
     return f"{args.dataset}_{subset}"
 
+def shard_suffix():
+    return f"_shard{shard_i}of{shard_N}" if shard_i is not None else ""
+
 def run_tag():
     """Names the CSV for this JOB, which may cover several subsets."""
     if len(subsets_to_run) == 1:
-        return dataset_tag(subsets_to_run[0])
+        tag = f"{args.dataset}_{subsets_to_run[0]}"
+        tag += shard_suffix()
+        return tag
     return f"{args.dataset}_{len(subsets_to_run)}subsets_{subsets_to_run[0]}_to_{subsets_to_run[-1]}"
 
 def save_results():
@@ -221,7 +243,7 @@ for subset in subsets_to_run:
     # Dataset: a plain list of {"tokens", "tags", "dataset_name", "example_id"} dicts.
     dataset = load_ner_dataset(args.dataset, subset)[0]
     print(f"\n{'=' * 70}")
-    print(f"=== subset {subset}: {len(dataset):,} examples ===")
+    print(f"=== dataset {dataset}, subset {subset}: {len(dataset):,} examples, shard {shard_suffix() or 'all'}")
     print(f"{'=' * 70}")
 
     for eval_mode in EVAL_MODES:
@@ -231,14 +253,15 @@ for subset in subsets_to_run:
             exp_metrics = []
             config_label = processor_class if processor_class is not None else "n|a"
             print(
-                f"\nEvaluating model={model_name}, dataset={dataset_tag(subset)}, reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
+                f"\nEvaluating model={model_name}, dataset={dataset_tag(subset)}, shard={shard_suffix()}, "
+                f"reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
                 f"repetition_penalty={repetition_penalty}, sampling_strategy={sampling_strategy}, eval_mode={eval_mode}, hint={brevity_hint_applied}, "
                 f"processor_class={config_label}, batch_size={batch_size}, max_examples={MAX_EXAMPLES}, max_new_tokens={MAX_NEW_TOKENS}, seeds={SEEDS}"
             )
 
             model_short = model_name.split("/")[-1]
             pred_fh = open_jsonl_writer(
-                f"{PRED_DIR}/{dataset_tag(subset)}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
+                f"{PRED_DIR}/{dataset_tag(subset)}{shard_suffix()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
             )
 
             for seed in SEEDS:
@@ -250,6 +273,15 @@ for subset in subsets_to_run:
                     sampled_dataset = dataset
                 else:
                     sampled_dataset = random.Random(seed).sample(dataset, MAX_EXAMPLES)
+
+                if shard_i is not None and shard_N is not None:
+                    # Shard the dataset into N shards and take only shard i.
+                    total_examples = len(sampled_dataset)
+                    shard_size = (total_examples + shard_N - 1) // shard_N
+                    start_idx = shard_i * shard_size
+                    end_idx = min(start_idx + shard_size, total_examples)
+                    sampled_dataset = sampled_dataset[start_idx:end_idx]
+                    print(f"Sharding: {total_examples} examples -> {shard_N} shards of ~{shard_size} each, running shard {shard_i}: {len(sampled_dataset)} examples")
 
                 start_time = time.time()
                 gold_sequences = []

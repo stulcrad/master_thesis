@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --time=4:00:00
+#SBATCH --nodes=1 --ntasks-per-node=1 --cpus-per-task=4
+#SBATCH --partition=amdgpufast --gres=gpu:1
+#SBATCH --no-requeue
+#SBATCH --mem=64G
+#SBATCH --job-name=vllm_serve
+#SBATCH --out=/home/stulcrad/master_thesis/logs/vllm/vllm.out
+
+# if PROJECT_DIR is not defined, then expect we are in ${PROJECT_DIR}/slurm
+
+# export OUTLINES_CACHE_DIR=/tmp/.drchajan.vlll.outlines
+
+# export CUDA_VISIBLE_DEVICES=`/home/drchajan/bin/query_empty_gpus,py`
+# echo CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}
+
+VLLM_HOST=9079
+echo "VLLM_HOST=${VLLM_HOST}"
+
+SELECTOR="${1:-vllm_0_12}"
+
+cd ~/master_thesis
+source init_environment_vllm.sh "$SELECTOR"
+
+export LLM_DIR="Qwen/Qwen3-8B"
+export MAX_MODEL_LEN=10240
+
+export NGPUS=1
+# see https://github.com/vllm-project/vllm/discussions/15644
+#export VLLM_USE_V1=0
+
+vllm serve $LLM_DIR --port "${VLLM_HOST}" --gpu-memory-utilization 0.9 --tensor-parallel-size ${NGPUS} \
+                    --no-enable-prefix-caching --async-scheduling

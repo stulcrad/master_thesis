@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=64G
+#SBATCH --time=3:00:00
+#SBATCH --job-name=smoke_test_cg
+#SBATCH --output=/home/stulcrad/master_thesis/logs/smoke_test/out/%x_%N_%A_%a.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/smoke_test/error/%x_%N_%A_%a.err
+
+cd ~/master_thesis
+source init_environment_python.sh
+
+
+MODELS=(
+  "google/gemma-3-4b-it"
+  "google/gemma-4-E4B-it"
+  "google/gemma-4-26B-A4B-it"
+  "google/gemma-4-31B-it"
+  "Qwen/Qwen3.5-4B"
+  "Qwen/Qwen3.5-9B"
+  "Qwen/Qwen3.5-27B" 
+  "Qwen/Qwen3.6-35B-A3B"
+  "Qwen/Qwen3.6-27B"
+  "openai/gpt-oss-20b"
+  "openai/gpt-oss-120b"
+)
+MODEL_NAME="${MODELS[$SLURM_ARRAY_TASK_ID]}"
+
+python -u scripts/Smoke_Tests/smoke_test_reasoning_cg.py --model "$MODEL_NAME"

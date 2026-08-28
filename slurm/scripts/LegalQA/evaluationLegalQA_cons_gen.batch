@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=92G
+#SBATCH --cpus-per-task=16
+#SBATCH --job-name=LegalQA_cons_gen_eval
+#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/legalqa/%x_%N_%a_%A.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/legalqa/%x_%N_%a_%A.err
+
+cd ~/master_thesis
+source init_environment_python.sh
+
+echo "Starting Constrained Generation evaluation on node $(hostname -s)"
+
+# SHARDS must be defined before it is used as a divisor below: unset expands
+# to 0 in arithmetic, which is a division-by-zero error.
+SHARDS="${SHARDS:-1}"
+if [ "$SHARDS" -gt 1 ]; then
+    echo "ERROR: evaluationLegalQA_cons_gen.py has no --shard support -- add --shard to evaluationLegalQA_cons_gen.py first." >&2
+    exit 1
+fi
+
+export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / SHARDS ))
+[ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
+
+MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
+python scripts/LegalQA/evaluationLegalQA_cons_gen.py --model "$MODEL_NAME" "$@"

@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH --partition=amdgpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --mem=64G
+#SBATCH --time=24:00:00
+#SBATCH --job-name=ollama_eval
+#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/evaluationLegalQA_context_batch_%j.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/evaluationLegalQA_context_batch_%j.err
+
+cd ~/master_thesis
+source init_environment_python.sh
+
+NODE_NAME=$(hostname -s)
+export CLUSTER_NODE=$NODE_NAME
+export OLLAMA_HOST=0.0.0.0:9069
+
+# Start ollama serve in the background
+export GIN_MODE=release
+ollama serve > logs/ollama/ollama.out 2>&1 &
+
+OLLAMA_PID=$!
+
+# Wait for the server to be ready
+sleep 15
+
+echo "Starting evaluation on node $NODE_NAME"
+# Run evaluation on the same node
+python scripts/evaluationLegalQA_context.py
+
+kill $OLLAMA_PID

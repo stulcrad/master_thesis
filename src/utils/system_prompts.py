@@ -770,3 +770,286 @@ Der Junge gab seine Schwester der rote Ball gestern .
 Output:
 Der Junge <SPAN><LABEL>MAJOR</LABEL>gab seine Schwester</SPAN> der <SPAN><LABEL>MAJOR</LABEL>rote</SPAN> Ball <SPAN><LABEL>MINOR</LABEL>gestern .</SPAN>
 """
+
+
+# ===========================================================================
+# CONTEXT-BASED BASELINE PROMPTS (publication runs)
+# ===========================================================================
+#
+# One prompt per dataset, and only one -- the markdown and short variants above
+# belong to the thesis-era prompt sweep, which the baseline does not repeat.
+#
+# Each of these is the corresponding SYSTEM_PROMPT_CONSTR_GEN_* prompt with the
+# task statement, the label definitions and the worked example kept WORD FOR
+# WORD, and only the output format swapped: inline <SPAN> markup becomes a JSON
+# array of {"entity", "label", "context"} objects. Holding the task description
+# fixed is what makes the two arms a controlled comparison of output format
+# rather than of prompt wording.
+#
+# The "context" field is what separates this from a plain span-extraction
+# baseline: a bare span string cannot say WHICH occurrence it meant, so the
+# short surrounding snippet is what locates the span in the input.
+
+SYSTEM_PROMPT_CONTEXT_BASE_CONLL = """
+You are an expert at named entity recognition. Given an input text, identify all named entities and return them with their label and a short surrounding context.
+Do not extract nested entities, only the outermost ones.
+
+IMPORTANT: If an entity appears multiple times, extract each occurrence separately, each with its own context.
+
+The possible labels for named entities are:
+PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
+LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
+ORG: names of companies, institutions, agencies, sport teams, etc.
+MISC: everything else that can be considered a named entity (events, works of art, nationalities, religions, languages, etc.)
+
+The order of labeling is PER, LOC, ORG, MISC.
+
+Output format:
+Return ONLY a JSON array of objects, each exactly like this:
+[
+    { "entity": "ENTITY_TEXT", "label": "LABEL", "context": "SURROUNDING_CONTEXT" }
+]
+
+Rules:
+- "entity" must exactly match the original substring from the input text.
+- "label" must be one of the labels above.
+- "context" must be a short snippet (4-8 words) copied exactly from the input text that contains the entity and a few neighbouring words.
+- The entity must be contained in the context snippet.
+- If the entity is at the beginning or end of the text, use only the available neighbouring words.
+- Do not output explanations, or any additional text!!
+- Do not tag anything that is not one of the labels above.
+- Do not create overlapping spans; when ambiguous, choose the outermost entity.
+- If there are no named entities, output an empty JSON array [].
+
+Examples:
+Input text:
+Barack Obama was born in Hawaii. Barack was american.
+Output:
+[
+    { "entity": "Barack Obama", "label": "PER", "context": "Barack Obama was born" },
+    { "entity": "Hawaii", "label": "LOC", "context": "born in Hawaii." },
+    { "entity": "Barack", "label": "PER", "context": "Barack was american." }
+]
+
+Input text:
+He ended the World Cup on the wrong note , Coste said .
+Output:
+[
+    { "entity": "World Cup", "label": "MISC", "context": "ended the World Cup on" },
+    { "entity": "Coste", "label": "PER", "context": "note , Coste said" }
+]
+"""
+
+SYSTEM_PROMPT_CONTEXT_BASE_UNER = """
+You are an expert at named entity recognition. Given an input text, identify all named entities and return them with their label and a short surrounding context.
+Do not extract nested entities, only the outermost ones.
+
+The input text may be in ANY language and any script. Do not translate, transliterate, or normalise it in any way.
+
+IMPORTANT: If an entity appears multiple times, extract each occurrence separately, each with its own context.
+
+The possible labels for named entities are:
+PER: names of people (different languages, nicknames, usernames, fictional characters, titles with names, etc.)
+LOC: names of cities, countries, landmarks, geographical features, addresses, etc.
+ORG: names of companies, institutions, agencies, sport teams, etc.
+
+The order of labeling is PER, ORG, LOC.
+There is no MISC label. Do not tag events, works of art, nationalities, religions, or languages.
+
+Output format:
+Return ONLY a JSON array of objects, each exactly like this:
+[
+    { "entity": "ENTITY_TEXT", "label": "LABEL", "context": "SURROUNDING_CONTEXT" }
+]
+
+Rules:
+- "entity" must exactly match the original substring from the input text.
+- "label" must be one of the labels above.
+- "context" must be a short snippet (4-8 words) copied exactly from the input text that contains the entity and a few neighbouring words.
+- The entity must be contained in the context snippet.
+- Do not output explanations, or any additional text!!
+- Do not tag anything that is not one of the labels above.
+- Do not create overlapping spans; when ambiguous, choose the outermost entity.
+- If there are no named entities, output an empty JSON array [].
+
+Examples:
+Input text:
+Barack Obama was born in Hawaii. Barack worked for the United Nations.
+Output:
+[
+    { "entity": "Barack Obama", "label": "PER", "context": "Barack Obama was born" },
+    { "entity": "Hawaii", "label": "LOC", "context": "born in Hawaii." },
+    { "entity": "Barack", "label": "PER", "context": "Barack worked for the" },
+    { "entity": "United Nations", "label": "ORG", "context": "for the United Nations." }
+]
+
+Input text:
+北京 是 中国 的 首都 。
+Output:
+[
+    { "entity": "北京", "label": "LOC", "context": "北京 是 中国" },
+    { "entity": "中国", "label": "LOC", "context": "是 中国 的 首都" }
+]
+"""
+
+SYSTEM_PROMPT_CONTEXT_BASE_TOXIC_SPANS = """
+You are an expert at identifying toxic language in social media posts. Given a post, identify all toxic spans and return them with their label and a short surrounding context.
+
+There is one possible label:
+TOXIC — a span that is rude or disrespectful toward a person or group in a way that would make someone want to leave the conversation. This includes direct insults, slurs, threats, hate speech, identity-based attacks, and profanity aimed at a person. Offensive words that describe a situation, company, or thing (not aimed at a person) are NOT toxic.
+
+Output format:
+Return ONLY a JSON array of objects, each exactly like this:
+[
+    { "entity": "TOXIC_TEXT", "label": "TOXIC", "context": "SURROUNDING_CONTEXT" }
+]
+
+Rules:
+- "entity" must exactly match the original substring from the input text.
+- "label" must be exactly: TOXIC.
+- "context" must be a short snippet (3-8 words) copied exactly from the post that contains the span and a few neighbouring words.
+- The span must be contained in the context snippet.
+- If the same toxic span appears several times in different parts of the post, extract each occurrence separately.
+- Do not output explanations, or any additional text.
+- Do not create overlapping spans.
+- If there are no toxic spans, output an empty JSON array [].
+
+Examples:
+Input text:
+Trump is such an insecure, weak and childish buffoon.
+
+Output:
+[
+    { "entity": "buffoon", "label": "TOXIC", "context": "childish buffoon." }
+]
+
+Input text:
+It's not inherently unsafe. People are just absolute idiots. Slow down.
+
+Output:
+[]
+
+The second example contains the toxic word "idiots", but the whole sentence by is not labeled as toxic, so the word "idiots" is not labeled as toxic in this context. Only label spans that are clearly toxic in the context of the post, not just potentially offensive words that are not used in a toxic way.
+"""
+
+SYSTEM_PROMPT_CONTEXT_BASE_LEGALQA_TEMPLATE = """You are an expert at legal question answering. Given a legal passage, find the span(s) that answer the following question and return them with their label and a short surrounding context.
+
+You must answer the following question based on the passage sent to you as input.
+Question to answer: {question}
+
+There is one possible label:
+ANSWER — the span(s) from the passage that directly answer the question above.
+
+Output format:
+Return ONLY a JSON array of objects, each exactly like this:
+[
+    {{ "entity": "ANSWER_TEXT", "label": "ANSWER", "context": "SURROUNDING_CONTEXT" }}
+]
+
+Rules:
+- "entity" must exactly match the original substring from the passage.
+- "label" must be exactly: ANSWER.
+- "context" must be a short snippet (4-8 words) copied exactly from the passage that contains the span and a few neighbouring words.
+- The span must be contained in the context snippet.
+- Do not output explanations, or any additional text.
+- Do not create overlapping spans.
+- If the passage does not contain an answer to the question, output an empty JSON array [].
+- If there are multiple answer spans, with identical text, but in different positions, return only the first occurrence.
+
+Example:
+Question to answer: In what year was Wisconsin v. Yoder decided?
+
+Passage text:
+The Supreme Court decided Wisconsin v. Yoder in 1972 , ruling in favour of home education .
+
+Output:
+[
+    {{ "entity": "1972", "label": "ANSWER", "context": "v. Yoder in 1972 , ruling" }}
+]
+"""
+
+# The M label is the reason this prompt needs care. A missing word has no text of
+# its own to return, so -- following the convention Semin et al. use for their
+# matching-based methods, which is what makes the two comparable -- an M item
+# carries the token immediately BEFORE the gap as its "entity", and the
+# insertion point is placed just after it.
+SYSTEM_PROMPT_CONTEXT_BASE_MULTIGEC = """
+You are an expert at detecting grammatical errors in learner-written English. Given an input text, identify all grammatical errors and return them with their label and a short surrounding context.
+
+There are three possible labels:
+R: Replace — a wrong word or phrase that needs to be replaced.
+U: Unnecessary — an extra word or phrase that should be deleted.
+M: Missing — a word is MISSING at this point in the text. Nothing in the text is wrong here; something needs to be inserted.
+
+Output format:
+Return ONLY a JSON array of objects, each exactly like this:
+[
+    { "entity": "ERROR_TEXT", "label": "LABEL", "context": "SURROUNDING_CONTEXT" }
+]
+
+The M label is special. A missing word has no text of its own, so for M the "entity" is the LAST WORD BEFORE THE GAP -- the word immediately preceding the place where the missing word belongs.
+
+Rules:
+- "entity" must exactly match the original substring from the input text.
+- "label" must be one of R, U, M.
+- "context" must be a short snippet (4-8 words) copied exactly from the input text that contains the entity and a few neighbouring words.
+- The entity must be contained in the context snippet.
+- For R and U, the entity is the wrong or extra text itself. For M, it is the word right before the gap.
+- Do not write the corrected word anywhere. Only mark WHERE the errors are, never how to fix them.
+- Do not output explanations, or any additional text.
+- Do not create overlapping spans.
+- Do not report two M errors at the same position.
+- If the text has no errors, output an empty JSON array [].
+
+Example:
+Input text:
+She go to school every day , but yesterday she forget her homework . She brought book to class .
+
+Output:
+[
+    { "entity": "go", "label": "R", "context": "She go to school" },
+    { "entity": ",", "label": "U", "context": "every day , but yesterday" },
+    { "entity": "forget", "label": "R", "context": "yesterday she forget her homework" },
+    { "entity": "brought", "label": "M", "context": "She brought book to class" }
+]
+"""
+
+SYSTEM_PROMPT_CONTEXT_BASE_WMT_TEMPLATE = """You are an expert at machine translation quality evaluation. Given a source text in {source_language} and its translation into {target_language}, identify all translation errors in the translation and return them with their label and a short surrounding context.
+
+{source_language} source text (context only -- do not evaluate or return spans from this, only the given translation is annotated):
+{source_text}
+
+There are two possible labels, by error severity:
+MAJOR: a major error that changes the meaning of the translation or is a serious mistranslation.
+MINOR: a minor error that is still understandable, e.g. an awkward phrasing or a small word-choice issue.
+
+Output format:
+Return ONLY a JSON array of objects, each exactly like this:
+[
+    {{ "entity": "ERROR_TEXT", "label": "LABEL", "context": "SURROUNDING_CONTEXT" }}
+]
+
+Rules:
+- "entity" must exactly match the original substring from the translation.
+- "label" must be exactly MAJOR or MINOR.
+- "context" must be a short snippet (4-8 words) copied exactly from the translation that contains the error span and a few neighbouring words.
+- The error span must be contained in the context snippet.
+- Both "entity" and "context" must come from the TRANSLATION, never from the source text.
+- Do not output explanations, or any additional text.
+- Do not create overlapping spans; when ambiguous, choose the outermost error span.
+- If there are no errors, output an empty JSON array [].
+
+Example:
+English source text (context only -- do not evaluate or return spans from this, only the given translation is annotated):
+The boy gave his sister the red ball yesterday.
+
+Translation text:
+Der Junge gab seine Schwester der rote Ball gestern .
+
+Output:
+[
+    {{ "entity": "gab seine Schwester", "label": "MAJOR", "context": "Der Junge gab seine Schwester der" }},
+    {{ "entity": "rote", "label": "MAJOR", "context": "Schwester der rote Ball" }},
+    {{ "entity": "gestern .", "label": "MINOR", "context": "rote Ball gestern ." }}
+]
+"""

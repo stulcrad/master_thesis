@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=92G
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=32
 #SBATCH --job-name=gec_cg_eval
 #SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/gec/%x_%N_%a_%A.out
 #SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/gec/%x_%N_%a_%A.err
@@ -12,16 +12,39 @@ source init_environment_python.sh
 
 echo "Starting Constrained Generation evaluation on node $(hostname -s)"
 
-# SHARDS must be defined before it is used as a divisor below: unset expands
-# to 0 in arithmetic, which is a division-by-zero error.
-SHARDS="${SHARDS:-1}"
-if [ "$SHARDS" -gt 1 ]; then
-    echo "ERROR: evaluationMultiGEC_CG.py has no --shard support -- add --shard to evaluationMultiGEC_CG.py first." >&2
-    exit 1
-fi
+MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
 
+SHARDS="${SHARDS:-1}"
+
+NGPU="${SLURM_GPUS_ON_NODE:-$(nvidia-smi -L 2>/dev/null | wc -l)}"
+NGPU="${NGPU:-1}"
+
+# Split the CPU allocation across the concurrent processes, otherwise each one
+# sizes its own thread pool to the full core count and they oversubscribe.
 export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / SHARDS ))
 [ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
 
-MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
-python scripts/GEC/evaluationMultiGEC_CG.py --model "$MODEL_NAME" "$@"
+if [ "$SHARDS" -le 1 ]; then
+    echo "Running unsharded (1 process)"
+    python scripts/GEC/evaluationMultiGEC_CG.py --model "$MODEL_NAME" "$@"
+else
+    echo "Running $SHARDS shards across $NGPU GPU(s)"
+    pids=()
+    # Zero-based, exactly like the NER batch script. The eval script writes the
+    # filename tag one-based, so shard 0 lands in "_shard1ofN".
+    for i in $(seq 0 $((SHARDS - 1))); do
+        # Pin each process to a single GPU. Safe only when sharding: an unsharded
+        # big model relies on device_map="auto" spreading across every visible GPU.
+        CUDA_VISIBLE_DEVICES=$(( i % NGPU )) \
+            python scripts/GEC/evaluationMultiGEC_CG.py --model "$MODEL_NAME" --shard "$i/$SHARDS" "$@" &
+        pids+=($!)
+        sleep 20   # stagger the checkpoint loads, host RAM spikes otherwise
+    done
+    rc=0
+    # wait on each PID individually: a bare `wait` returns 0 even if a child failed,
+    # which would mark the job COMPLETED with a shard's results missing.
+    for p in "${pids[@]}"; do
+        wait "$p" || rc=$?
+    done
+    exit $rc
+fi

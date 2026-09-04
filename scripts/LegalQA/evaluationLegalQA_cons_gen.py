@@ -62,6 +62,8 @@ parser.add_argument("--min-p", type=float, default=None, help="Minimum probabili
 parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means all examples.")
 parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate.")
 parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over.")
+parser.add_argument("--shard", type=str, default=None,
+                    help="Optional: i/N -- split the dataset into N shards and run only shard i.")
 
 args = parser.parse_args()
 
@@ -92,6 +94,9 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype='auto',
 )
 
+# Build a token trie from the tokenizer for constrained decoding. This is only used for the "constrained" eval mode.
+toktrie = build_toktrie_from_tokenizer(tokenizer)
+
 reasoning_end_marker = tokenizer(spec.reasoning_end_marker, add_special_tokens=False).input_ids if spec.reasoning else None
 # Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere,
 # which means the block is open by construction -- see model_registry.ModelSpec.
@@ -103,6 +108,17 @@ DO_SAMPLE = sampling.pop("do_sample", False)
 
 SEEDS = args.seeds
 MAX_EXAMPLES = args.max_examples
+
+# --shard i/N
+shard_i, shard_N = None, None
+if args.shard is not None:
+    try:
+        shard_i, shard_N = map(int, args.shard.split("/"))
+    except ValueError:
+        raise SystemExit(f"--shard must be of the form i/N, got {args.shard!r}")
+    if not (0 <= shard_i < shard_N):
+        raise SystemExit(f"--shard must satisfy 0 <= i < N, got {args.shard!r}")
+    print(f"Sharding into {shard_N} shards, running shard {shard_i} (file tag: shard{shard_i + 1}of{shard_N}).")
 MAX_NEW_TOKENS = args.max_new_tokens
 repetition_penalty = args.repetition_penalty
 
@@ -130,6 +146,9 @@ results = []
 
 sampling_strategy = "sampling" if DO_SAMPLE else "greedy"
 
+def shard_suffix():
+    return f"_shard{shard_i + 1}of{shard_N}" if shard_i is not None else ""
+
 def config_tag():
     parts = [f"think{int(args.enable_thinking)}"]
     if args.reasoning_effort: parts.append(f"effort_{args.reasoning_effort}")
@@ -152,7 +171,7 @@ for eval_mode in EVAL_MODES:
         model_short = model_name.split("/")[-1]
         pred_fh = open_jsonl_writer(
             f"{RESULTS_ROOT}/LegalQAEval/Constrained-Gen/Predictions/"
-            f"legalqa_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}.jsonl"
+            f"legalqa{shard_suffix()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}.jsonl"
         )
 
         for seed in SEEDS:
@@ -162,6 +181,15 @@ for eval_mode in EVAL_MODES:
                 sampled = raw
             else:
                 sampled = random.Random(seed).sample(raw, MAX_EXAMPLES)
+
+            if shard_i is not None:
+                total_examples = len(sampled)
+                shard_size = (total_examples + shard_N - 1) // shard_N
+                start_idx = shard_i * shard_size
+                end_idx = min(start_idx + shard_size, total_examples)
+                sampled = sampled[start_idx:end_idx]
+                print(f"Sharding: {total_examples} examples -> {shard_N} shards of "
+                      f"~{shard_size}, running shard {shard_i}: {len(sampled)} examples")
 
             start_time = time.time()
             wrong_text_count = 0
@@ -174,11 +202,7 @@ for eval_mode in EVAL_MODES:
             char_r_per_post = []
             hard_overlap = hard_predicted = hard_gold = 0
             soft_overlap = soft_predicted = soft_gold = 0
-
-            toktrie = None
-            if eval_mode == "constrained":
-                toktrie = build_toktrie_from_tokenizer(tokenizer)
-
+                
             for idx in tqdm(range(len(sampled)), desc=f"seed {seed}", file=sys.stdout):
                 example = sampled[idx]
                 # The ORIGINAL passage, copied verbatim -- no whitespace rebuild.
@@ -436,7 +460,7 @@ for eval_mode in EVAL_MODES:
 
 # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
 intermediate_results_df = pd.DataFrame(results)
-intermediate_results_path = f"{RESULTS_ROOT}/LegalQAEval/Constrained-Gen/Csv/legalqa_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv"
+intermediate_results_path = f"{RESULTS_ROOT}/LegalQAEval/Constrained-Gen/Csv/legalqa{shard_suffix()}_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv"
 intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
 os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)

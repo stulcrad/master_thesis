@@ -1,18 +1,57 @@
 #!/bin/bash
-#SBATCH --partition=gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu:2
-#SBATCH --mem=64G
-#SBATCH --time=24:00:00
-#SBATCH --job-name=LegalQA_HF_context_eval
-#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/evaluationLegalQA_HF_context_%j.out
-#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/evaluationLegalQA_HF_context_%j.err
+#SBATCH --mem=92G
+#SBATCH --cpus-per-task=32
+#SBATCH --job-name=LegalQA_context_eval
+#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/legalqa/%x_%N_%a_%A.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/legalqa/%x_%N_%a_%A.err
+#
+# Context-based (prompting) BASELINE runner. Structurally identical to the
+# constrained-generation batch script next to it -- same model registry lookup,
+# same SHARDS process split, same GPU pinning -- so the two arms are submitted
+# and split the same way and their runtimes are comparable.
 
 cd ~/master_thesis
 source init_environment_python.sh
 
+echo "Starting Context-Based (prompting) baseline evaluation on node $(hostname -s)"
 
-echo "Starting NER Context Based HF evaluation on node $(hostname -s)"
+MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
 
-python scripts/LegalQA/evaluationLegalQA_HF_context.py
+SHARDS="${SHARDS:-1}"
+
+NGPU="${SLURM_GPUS_ON_NODE:-$(nvidia-smi -L 2>/dev/null | wc -l)}"
+# ":-1" only catches UNSET/empty. `nvidia-smi | wc -l` on a node without it returns
+# the string "0", which survives that and makes `i % NGPU` a division by zero.
+[ "${NGPU:-0}" -gt 0 ] || NGPU=1
+
+# Split the CPU allocation across the concurrent processes, otherwise each one
+# sizes its own thread pool to the full core count and they oversubscribe.
+export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / SHARDS ))
+[ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
+
+if [ "$SHARDS" -le 1 ]; then
+    echo "Running unsharded (1 process)"
+    python scripts/LegalQA/evaluationLegalQA_HF_context.py --model "$MODEL_NAME" "$@"
+else
+    echo "Running $SHARDS shards across $NGPU GPU(s)"
+    pids=()
+    # Zero-based on the CLI. The eval script writes the filename tag one-based,
+    # so shard 0 lands in "_shard1ofN".
+    for i in $(seq 0 $((SHARDS - 1))); do
+        # Pin each process to a single GPU. Safe only when sharding: an unsharded
+        # big model relies on device_map="auto" spreading across every visible GPU.
+        CUDA_VISIBLE_DEVICES=$(( i % NGPU )) \
+            python scripts/LegalQA/evaluationLegalQA_HF_context.py --model "$MODEL_NAME" --shard "$i/$SHARDS" "$@" &
+        pids+=($!)
+        sleep 20   # stagger the checkpoint loads, host RAM spikes otherwise
+    done
+    rc=0
+    # wait on each PID individually: a bare `wait` returns 0 even if a child failed,
+    # which would mark the job COMPLETED with a shard's results missing.
+    for p in "${pids[@]}"; do
+        wait "$p" || rc=$?
+    done
+    exit $rc
+fi

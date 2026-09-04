@@ -1,18 +1,93 @@
 #!/bin/bash
-#SBATCH --partition=gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu:2
-#SBATCH --mem=64G
-#SBATCH --time=24:00:00
-#SBATCH --job-name=NER_HF_context_eval
-#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/evaluationNER_HF_context%j.out
-#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/evaluationNER_HF_context%j.err
+#SBATCH --mem=96G
+#SBATCH --cpus-per-task=32
+#SBATCH --job-name=ner_uner_context_eval
+#SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/ner/%x_%N_%a_%A.out
+#SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/ner/%x_%N_%a_%A.err
+#
+# Context-based (prompting) BASELINE runner for CoNLL-2003 / UniversalNER. Structurally identical to
+# evaluationNER_cons_gen.batch -- same model registry lookup, same SHARDS process split, same UNER bin-packing -- so the
+# two arms are submitted and split the same way and their runtimes are comparable.
 
 cd ~/master_thesis
 source init_environment_python.sh
 
+echo "Starting Context-Based (prompting) baseline evaluation on node $(hostname -s)"
 
-echo "Starting NER Context Based HF evaluation on node $(hostname -s)"
+MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
 
-python scripts/NER/evaluationNER_HF_context.py
+SHARDS="${SHARDS:-1}"
+NGPU="${SLURM_GPUS_ON_NODE:-$(nvidia-smi -L 2>/dev/null | wc -l)}"
+# ":-1" only catches UNSET/empty. `nvidia-smi | wc -l` on a node without it returns
+# the string "0", which survives that and makes `i % NGPU` a division by zero.
+[ "${NGPU:-0}" -gt 0 ] || NGPU=1
+
+# Which dataset this job is running decides HOW the work is split:
+#   conll2003 -> by example index   (--shard i/N)
+#   uner      -> by treebank group  (--subset a b c), greedy bin-packed on size, and split into
+#                --chunk i/N windows for each job.
+DATASET=""; _prev=""
+for _a in "$@"; do [ "$_prev" = "--dataset" ] && DATASET="$_a"; _prev="$_a"; done
+
+# A100-40GB models that need 2 GPUs for a SINGLE process (gpt-oss-20b, Qwen3.8-27B, gemma-4-31B)
+# are stuck at SHARDS=1 -- one process cannot be split further within a job. Splitting THOSE UNER
+# arms across multiple JOBS still has to go through bin_packing (UNER_CHUNK), so "unsharded" must
+# mean "SHARDS<=1 AND no real chunk requested", not just "SHARDS<=1" -- otherwise a submitter
+# trying to chunk a SHARDS=1 arm would have every job silently run every treebank instead of its
+# slice (CoNLL is unaffected: it splits by --shard i/N, which this branch always forwards via "$@").
+CHUNK_N="${UNER_CHUNK#*/}"; CHUNK_N="${CHUNK_N:-1}"
+
+if [ "$SHARDS" -le 1 ] && { [ "$DATASET" != "uner" ] || [ "$CHUNK_N" -le 1 ]; }; then
+    export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-1}"
+    echo "Running unsharded (1 process), dataset=$DATASET"
+    python scripts/NER/evaluationNER_HF_context.py --model "$MODEL_NAME" "$@"
+else
+    # One entry per process: the extra argument(s) selecting that process's slice.
+    # Both forms are plain strings, so a single launch loop covers both datasets.
+    SPLIT_ARGS=()
+    if [ "$DATASET" = "uner" ]; then
+        # UNER_CHUNK ("i/N") is set by the submitter when an arm is split over
+        # several jobs. The packing itself is global: bin_packing packs into
+        # N*SHARDS groups once and returns only this job's window, so the split
+        # is balanced across the whole arm rather than within each job.
+        mapfile -t SPLIT_ARGS < <(python -m utils.bin_packing uner "$SHARDS" \
+                                  ${UNER_CHUNK:+--chunk "$UNER_CHUNK"} "$@")
+        if [ "${#SPLIT_ARGS[@]}" -eq 0 ]; then
+            echo "No treebanks fall in chunk ${UNER_CHUNK:-0/1} at SHARDS=$SHARDS -- nothing to do."
+            exit 0
+        fi
+    else
+        for i in $(seq 0 $((SHARDS - 1))); do
+            SPLIT_ARGS+=("--shard $i/$SHARDS")
+        done
+    fi
+
+    # bin_packing can return FEWER groups than SHARDS (more shards than treebanks),
+    # so size the thread split and the loop off the real process count.
+    NPROC="${#SPLIT_ARGS[@]}"
+    export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / NPROC ))
+    [ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
+
+    echo "Running $NPROC processes across $NGPU GPU(s), dataset=$DATASET"
+    pids=()
+    for i in "${!SPLIT_ARGS[@]}"; do
+        echo "  process $i -> GPU $(( i % NGPU )) : ${SPLIT_ARGS[$i]}"
+        # ${SPLIT_ARGS[$i]} is deliberately UNQUOTED so it word-splits back into
+        # separate argv entries. It goes AFTER "$@": for UNER that makes argparse
+        # take this group over any earlier --subset (last occurrence wins).
+        CUDA_VISIBLE_DEVICES=$(( i % NGPU )) \
+            python scripts/NER/evaluationNER_HF_context.py --model "$MODEL_NAME" \
+                   "$@" ${SPLIT_ARGS[$i]} &
+        pids+=($!)
+        sleep 20   # stagger the checkpoint loads, host RAM spikes otherwise
+    done
+    rc=0
+    # wait per PID: a bare `wait` returns 0 even when a child failed, which would
+    # mark the job COMPLETED with one process's results missing.
+    for p in "${pids[@]}"; do
+        wait "$p" || rc=$?
+    done
+    exit $rc
+fi

@@ -77,6 +77,8 @@ parser.add_argument("--min-p", type=float, default=None, help="Minimum probabili
 parser.add_argument("--max-examples", type=int, default=None, help="Maximum number of examples to evaluate. None means all examples.")
 parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate.")
 parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over.")
+parser.add_argument("--shard", type=str, default=None,
+                    help="Optional: i/N - shard the dataset into N shards and run only shard i.")
 
 args = parser.parse_args()
 
@@ -107,6 +109,9 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype='auto',
 )
 
+# Create a token trie from the tokenizer for constrained generation
+toktrie = build_toktrie_from_tokenizer(tokenizer)
+
 reasoning_end_marker = tokenizer(spec.reasoning_end_marker, add_special_tokens=False).input_ids if spec.reasoning else None
 # Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere,
 # which means the block is open by construction -- see model_registry.ModelSpec.
@@ -123,7 +128,7 @@ repetition_penalty = args.repetition_penalty
 
 # One learner text per prompt for now, may experiment with batching later.
 BATCH_SIZE = 1
-EVAL_INTERVAL = 100
+EVAL_INTERVAL = 20
 
 EVAL_MODES = ["unconstrained", "constrained"]
 
@@ -134,7 +139,7 @@ PROCESSOR_CLASSES = ["token_aware"] # Use only token_aware for publication runs,
 labels_for_constrained = MULTIGEC_LABELS
 # The M label is a zero-length insertion point, so its span closes with no copied
 # text. This is the ONLY task that relaxes the processor's non-empty rule.
-ALLOW_EMPTY_SPAN_LABELS = {"M"}
+FORCE_EMPTY_SPAN_LABELS = {"M"}
 
 # -------------------------
 # Load dataset
@@ -147,6 +152,20 @@ print(f"Max examples per iteration: {MAX_EXAMPLES}")
 results = []
 
 sampling_strategy = "sampling" if DO_SAMPLE else "greedy"
+
+# --shard i/N
+shard_i, shard_N = None, None
+if args.shard is not None:
+    try:
+        shard_i, shard_N = map(int, args.shard.split("/"))
+        if not (0 <= shard_i < shard_N):
+            raise ValueError
+    except ValueError:
+        raise SystemExit(f"Invalid --shard value: {args.shard}. Must be in the form i/N with 0 <= i < N.")
+    print(f"Sharded dataset: {len(raw)} examples (shard {shard_i}/{shard_N})")
+
+def shard_suffix():
+    return f"_shard{shard_i+1}of{shard_N}" if shard_i is not None else ""
 
 def config_tag():
     parts = [f"think{int(args.enable_thinking)}"]
@@ -162,7 +181,8 @@ for eval_mode in EVAL_MODES:
         exp_metrics = []
         config_label = processor_class if processor_class is not None else "n|a"
         print(
-            f"\nEvaluating model={model_name}, dataset=multigec, reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
+            f"\nEvaluating model={model_name}, dataset=multigec, shard={shard_suffix()}, "
+            f"reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
             f"repetition_penalty={repetition_penalty}, sampling_strategy={sampling_strategy}, "
             f"mode={eval_mode}, processor_class={config_label}, max_examples={MAX_EXAMPLES}, seeds={SEEDS}"
         )
@@ -170,7 +190,7 @@ for eval_mode in EVAL_MODES:
         model_short = model_name.split("/")[-1]
         pred_fh = open_jsonl_writer(
             f"{RESULTS_ROOT}/GEC/Constrained-Gen/Predictions/"
-            f"multigec_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}.jsonl"
+            f"multigec{shard_suffix()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}.jsonl"
         )
 
         for seed in SEEDS:
@@ -180,6 +200,15 @@ for eval_mode in EVAL_MODES:
                 sampled = raw
             else:
                 sampled = random.Random(seed).sample(raw, MAX_EXAMPLES)
+
+            if shard_i is not None and shard_N is not None:
+                total_examples = len(sampled)
+                shard_size = (total_examples + shard_N - 1) // shard_N
+                start_idx = shard_i * shard_size
+                end_idx = min(start_idx + shard_size, total_examples)
+                sampled = sampled[start_idx:end_idx]
+                print(f"Sharding: {total_examples} examples -> {shard_N} shards of "
+                      f"~{shard_size}, running shard {shard_i+1}/{shard_N} with {len(sampled)} examples.")
 
             start_time = time.time()
             wrong_text_count = 0
@@ -198,10 +227,7 @@ for eval_mode in EVAL_MODES:
             hard_r_per_ex = []
             hard_overlap = hard_predicted = hard_gold = 0
             soft_overlap = soft_predicted = soft_gold = 0
-
-            toktrie = None
-            if eval_mode == "constrained":
-                toktrie = build_toktrie_from_tokenizer(tokenizer)
+                
 
             for idx in tqdm(range(len(sampled)), desc=f"seed {seed}", file=sys.stdout):
                 example = sampled[idx]
@@ -236,7 +262,7 @@ for eval_mode in EVAL_MODES:
                             model_eos_token_id=model.generation_config.eos_token_id,
                             tokenizer_eos_token_id=tokenizer.eos_token_id,
                             # The one task that needs empty spans -- see module docstring.
-                            allow_empty_span_labels=ALLOW_EMPTY_SPAN_LABELS,
+                            force_empty_span_labels=FORCE_EMPTY_SPAN_LABELS
                         )
                     else:
                         processor = TrieSpanConstrainedProcessor(
@@ -250,7 +276,7 @@ for eval_mode in EVAL_MODES:
                             model_eos_token_id=model.generation_config.eos_token_id,
                             tokenizer_eos_token_id=tokenizer.eos_token_id,
                             # The one task that needs empty spans -- see module docstring.
-                            allow_empty_span_labels=ALLOW_EMPTY_SPAN_LABELS,
+                            force_empty_span_labels=FORCE_EMPTY_SPAN_LABELS
                         )
 
                 gen_stats = {}
@@ -494,7 +520,7 @@ for eval_mode in EVAL_MODES:
 
 # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
 intermediate_results_df = pd.DataFrame(results)
-intermediate_results_path = f"{RESULTS_ROOT}/GEC/Constrained-Gen/Csv/multigec_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv"
+intermediate_results_path = f"{RESULTS_ROOT}/GEC/Constrained-Gen/Csv/multigec{shard_suffix()}_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv"
 intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
 os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)

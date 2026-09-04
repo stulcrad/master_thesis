@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=92G
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=32
 #SBATCH --job-name=wmt_cg_eval
 #SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/wmt/%x_%N_%a_%A.out
 #SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/wmt/%x_%N_%a_%A.err
@@ -12,16 +12,59 @@ source init_environment_python.sh
 
 echo "Starting Constrained Generation evaluation on node $(hostname -s)"
 
-# SHARDS must be defined before it is used as a divisor below: unset expands
-# to 0 in arithmetic, which is a division-by-zero error.
-SHARDS="${SHARDS:-1}"
-if [ "$SHARDS" -gt 1 ]; then
-    echo "ERROR: evaluationWMT_CG.py has no --shard support -- split the work with --wmt-subset instead." >&2
-    exit 1
-fi
-
-export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / SHARDS ))
-[ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
-
 MODEL_NAME=$(python -m utils.model_registry --id "$SLURM_ARRAY_TASK_ID") || exit 1
-python scripts/ESA-MT/evaluationWMT_CG.py --model "$MODEL_NAME" "$@"
+
+SHARDS="${SHARDS:-1}"
+NGPU="${SLURM_GPUS_ON_NODE:-$(nvidia-smi -L 2>/dev/null | wc -l)}"
+
+# ":-1" only catches UNSET/empty. `nvidia-smi | wc -l` on a node without it returns
+# the string "0", which survives that and makes `i % NGPU` a division by zero.
+[ "${NGPU:-0}" -gt 0 ] || NGPU=1
+
+# evaluationWMT_CG.py has no --shard: WMT24 ESA is 24 source-target-domain files, each already reported as its own CSV
+# row (the headline is the macro average over them), so the work is split by SUBSET GROUP (--wmt-subset a b c) rather
+# than by example index. Same mechanism as UNER in slurm/scripts/NER/evaluationNER_cons_gen.batch.
+if [ "$SHARDS" -le 1 ]; then
+    export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-1}"
+    echo "Running unsharded (1 process)"
+    python scripts/ESA-MT/evaluationWMT_CG.py --model "$MODEL_NAME" "$@"
+else
+    # WMT_CHUNK ("i/N") is set by the submitter when an arm is split over several
+    # jobs. The packing itself is global: bin_packing packs into N*SHARDS groups
+    # once and returns only this job's window, so the split is balanced across the
+    # whole arm rather than within each job, allowing for more jobs to be used
+    # without unbalancing the work.
+    mapfile -t SPLIT_ARGS < <(python -m utils.bin_packing wmt "$SHARDS" \
+                              ${WMT_CHUNK:+--chunk "$WMT_CHUNK"} "$@")
+    if [ "${#SPLIT_ARGS[@]}" -eq 0 ]; then
+        echo "No subsets fall in chunk ${WMT_CHUNK:-0/1} at SHARDS=$SHARDS -- nothing to do."
+        exit 0
+    fi
+
+    # bin_packing can return FEWER groups than SHARDS (more shards than subsets),
+    # so size the thread split and the loop off the real process count.
+    NPROC="${#SPLIT_ARGS[@]}"
+    export OMP_NUM_THREADS=$(( ${SLURM_CPUS_PER_TASK:-1} / NPROC ))
+    [ "$OMP_NUM_THREADS" -lt 1 ] && OMP_NUM_THREADS=1
+
+    echo "Running $NPROC processes across $NGPU GPU(s)"
+    pids=()
+    for i in "${!SPLIT_ARGS[@]}"; do
+        echo "  process $i -> GPU $(( i % NGPU )) : ${SPLIT_ARGS[$i]}"
+        # ${SPLIT_ARGS[$i]} is deliberately UNQUOTED so it word-splits back into
+        # separate argv entries. It goes AFTER "$@" so argparse takes this group
+        # over any earlier --wmt-subset (last occurrence wins).
+        CUDA_VISIBLE_DEVICES=$(( i % NGPU )) \
+            python scripts/ESA-MT/evaluationWMT_CG.py --model "$MODEL_NAME" \
+                   "$@" ${SPLIT_ARGS[$i]} &
+        pids+=($!)
+        sleep 20   # stagger the checkpoint loads, host RAM spikes otherwise
+    done
+    rc=0
+    # wait per PID: a bare `wait` returns 0 even when a child failed, which would
+    # mark the job COMPLETED with one process's results missing.
+    for p in "${pids[@]}"; do
+        wait "$p" || rc=$?
+    done
+    exit $rc
+fi

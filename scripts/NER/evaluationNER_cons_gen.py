@@ -1,20 +1,18 @@
-"""Constrained generation evaluation for NER, on CoNLL-2003 or UniversalNER.
+"""
+Constrained generation evaluation for NER, on CoNLL-2003 or UniversalNER.
 
 Semin et al. hard/soft F1   reported next to seqeval, from their metrics.py
 
 Metrics
 -------
-seqeval strict IOB2 entity F1, as before, and Semin et al.'s pooled
-character-overlap F1 (hard and soft) so our rows can sit beside their.
+seqeval strict IOB2 entity F1, as before, and Semin et al.'s pooled character-overlap F1 (hard and soft) so our rows can
+sit beside their.
 
-Note on UNER aggregation: `--subset` always resolves to one or more NAMED
-treebanks (never a single pooled "all" run, see `ner_subsets()`), so each CSV
-row is already per-treebank. Semin et al.'s headline number is still the MACRO
-average of the 18 per-treebank F1s, which is a downstream step over the CSVs
-this script writes, not something computed in-script -- see the reminder
-printed at the end of a `--dataset uner` run.
+Note on UNER aggregation: `--subset` always resolves to one or more NAMED treebanks (never a single pooled "all" run,
+see `ner_subsets()`), so each CSV row is already per-treebank. Semin et al.'s headline number is still the MACRO average
+of the 18 per-treebank F1s, which is a downstream step over the CSVs this script writes, not something computed
+in-script -- see the reminder printed at the end of a `--dataset uner` run.
 """
-
 import argparse
 import os
 import random
@@ -110,15 +108,15 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype="auto",
 )
 
-# Create a token trie for the constrained generation processor.
-# Can create it once here instead of once every, it will not change for the same tokenizer.
+# Create a token trie for the constrained generation processor. Can create it once here instead of once every, it will
+# not change for the same tokenizer.
 toktrie = build_toktrie_from_tokenizer(tokenizer)
 
 batch_size = args.batch_size
 print(f"Batch size: {batch_size}")
 reasoning_end_marker = tokenizer(spec.reasoning_end_marker, add_special_tokens=False).input_ids if spec.reasoning else None
-# Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere,
-# which means the block is open by construction -- see model_registry.ModelSpec.
+# Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere, which means the block is open by
+# construction -- see model_registry.ModelSpec.
 reasoning_start_marker = tokenizer(spec.reasoning_start_marker, add_special_tokens=False).input_ids if spec.reasoning_start_marker else None
 sampling = resolve_sampling(spec, reasoning_model,
                             temperature=args.temperature, top_p=args.top_p,
@@ -135,24 +133,22 @@ EVAL_INTERVAL = 100
 # Evaluate both decoding modes in one run.
 EVAL_MODES = ["unconstrained", "constrained"]
 
-# Results root. Thesis runs live in Experiment_results/ and are FROZEN (cited in the
-# thesis); publication runs go here so the two are trivially separable by eye.
+# Results root. Thesis runs live in Experiment_results/ and are FROZEN (cited in the thesis); publication runs go here
+# so the two are trivially separable by eye.
 RESULTS_ROOT = "/home/stulcrad/master_thesis/Experiment_results_publication"
 
-# Processor class is only used for constrained mode.
-# PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
+# Processor class is only used for constrained mode. PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
 PROCESSOR_CLASSES = ["token_aware"] # Use only token_aware for publication runs, since it is the better-performing one.
 
 # Load the seqeval metric for span-level evaluation
 seqeval = evaluate.load("seqeval")
 
-# labels/results_dir depend only on --dataset, not --subset, so this is free --
-# no data load needed to resolve them.
+# labels/results_dir depend only on --dataset, not --subset, so this is free -- no data load needed to resolve them.
 labels_for_constrained, results_dir = ner_dataset_info(args.dataset)
 
-# One job per subset would need 380 submissions for a 10-arm sweep (1 CoNLL +
-# 18 UNER treebanks); the cluster caps SUBMITTED jobs at 200. Looping subsets here keeps
-# the model resident, which also removes redundant weight loads per arm.
+# One job per subset would need 380 submissions for a 10-arm sweep (1 CoNLL + 18 UNER treebanks); the cluster caps
+# SUBMITTED jobs at 200. Looping subsets here keeps the model resident, which also removes redundant weight loads per
+# arm.
 subsets_to_run = ner_subsets(args.dataset) if "all" in args.subset else list(args.subset)
 print(f"Dataset: {args.dataset}, subsets to run ({len(subsets_to_run)}): {', '.join(subsets_to_run)}")
 print(f"labels: {labels_for_constrained}")
@@ -160,14 +156,12 @@ print(f"labels: {labels_for_constrained}")
 # UNER needs its own prompt
 SYSTEM_PROMPT = SYSTEM_PROMPT_CONSTR_GEN_UNER if args.dataset == "uner" else SYSTEM_PROMPT_CONSTR_GEN
 
-# Optional mitigation for runaway self-verification in the reasoning phase, where
-# the model re-checks its own labels until the token budget is gone and the answer
-# never starts. Kept OFF by default.
+# Optional mitigation for runaway self-verification in the reasoning phase, where the model re-checks its own labels
+# until the token budget is gone and the answer never starts. Kept OFF by default.
 BREVITY_HINT = """
-IMPORTANT: Keep your reasoning brief and save your token budget for the answer -- the
-tagged output has to reproduce the ENTIRE input text, which is long.
-Work through the text once, in order: find an entity -> label it -> move on to the next.
-Do not re-check entities you have already labelled.
+IMPORTANT: Keep your reasoning brief and save your token budget for the answer -- the tagged output has to reproduce the
+ENTIRE input text, which is long. Work through the text once, in order: find an entity -> label it -> move on to the
+next. Do not re-check entities you have already labelled.
 """
 
 brevity_hint_applied = args.brevity_hint and reasoning_model
@@ -176,6 +170,7 @@ if brevity_hint_applied:
 elif args.brevity_hint:
     print("[warn] --brevity-hint ignored: it only applies when reasoning is enabled.")
 
+# --shard i/N
 shard_i, shard_N = None, None
 if args.shard is not None:
     try:
@@ -188,8 +183,8 @@ if args.shard is not None:
         raise SystemExit(f"--shard must be of the form i/N with 0 <= i < N, got {args.shard!r}")
     print(f"Sharding dataset into {shard_N} shards, running only shard {shard_i}.")
 
-# Per-example predictions (JSONL, one line per generation) -- required for
-# paired significance tests and post-hoc metrics without re-running.
+# Per-example predictions (JSONL, one line per generation) -- required for paired significance tests and post-hoc
+# metrics without re-running.
 PRED_DIR = f"{RESULTS_ROOT}/{results_dir}/Constrained-Gen/Predictions"
 
 results = []
@@ -208,7 +203,7 @@ def dataset_tag(subset):
     return f"{args.dataset}_{subset}"
 
 def shard_suffix():
-    return f"_shard{shard_i}of{shard_N}" if shard_i is not None else ""
+    return f"_shard{shard_i+1}of{shard_N}" if shard_i is not None else ""
 
 def run_tag():
     """Names the CSV for this JOB, which may cover several subsets."""
@@ -221,9 +216,8 @@ def run_tag():
 def save_results():
     """Write the CSV/TXT for everything finished so far.
 
-    Called after EVERY subset, not just at the end: one job now covers up to
-    18 (UNER) or 2 (CoNLL) subsets, so a crash or a wall-clock kill partway
-    through would otherwise throw away every completed subset with it.
+    Called after EVERY subset, not just at the end: one job now covers up to 18 (UNER) or 2 (CoNLL) subsets, so a crash
+    or a wall-clock kill partway through would otherwise throw away every completed subset with it.
     """
     df = pd.DataFrame(results)
     csv_path = (f"{RESULTS_ROOT}/{results_dir}/Constrained-Gen/Csv/"
@@ -261,12 +255,12 @@ for subset in subsets_to_run:
 
             model_short = model_name.split("/")[-1]
             pred_fh = open_jsonl_writer(
-                f"{PRED_DIR}/{dataset_tag(subset)}{shard_suffix()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
+                f"{PRED_DIR}/{dataset_tag(subset)}{shard_suffix()}_{model_short}_think_{args.enable_thinking}"
+                f"_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}_bs{batch_size}.jsonl"
             )
 
             for seed in SEEDS:
-                # Seeds generation. Without this the vendor presets (do_sample=True)
-                # make every run non-reproducible.
+                # Seeds generation. Without this the vendor presets (do_sample=True) make every run non-reproducible.
                 set_seed(seed)
 
                 if MAX_EXAMPLES is None or MAX_EXAMPLES >= len(dataset):
@@ -281,7 +275,8 @@ for subset in subsets_to_run:
                     start_idx = shard_i * shard_size
                     end_idx = min(start_idx + shard_size, total_examples)
                     sampled_dataset = sampled_dataset[start_idx:end_idx]
-                    print(f"Sharding: {total_examples} examples -> {shard_N} shards of ~{shard_size} each, running shard {shard_i}: {len(sampled_dataset)} examples")
+                    print(f"Sharding: {total_examples} examples -> {shard_N} shards of "
+                          f"~{shard_size} each, running shard {shard_i}: {len(sampled_dataset)} examples")
 
                 start_time = time.time()
                 gold_sequences = []
@@ -298,8 +293,8 @@ for subset in subsets_to_run:
                 # Compute the number of batches needed
                 total_batches = (len(sampled_dataset) + batch_size - 1) // batch_size
 
-                # Semin et al.'s metric is micro: sum these six counters over the run,
-                # then call f1_from_counts once at the end.
+                # Semin et al.'s metric is micro: sum these six counters over the run, then call f1_from_counts once at
+                # the end.
                 hard_overlap = hard_predicted = hard_gold = 0
                 soft_overlap = soft_predicted = soft_gold = 0
 
@@ -315,8 +310,8 @@ for subset in subsets_to_run:
                         batch_gold_tags.extend(example["tags"])
 
                     input_text = " ".join(batch_tokens)
-                    # Gold character spans for Semin's metric, derived from the same
-                    # tags seqeval scores, so the two metrics share one gold.
+                    # Gold character spans for Semin's metric, derived from the same tags seqeval scores, so the two
+                    # metrics share one gold.
                     batch_gold_spans = bio_tags_to_char_spans(batch_tokens, batch_gold_tags)
 
                     processor = None
@@ -373,8 +368,8 @@ for subset in subsets_to_run:
                     if reasoning_model:
                         reasoning_token_counts.append(num_reasoning_tokens)
                         if gen_stats.get("reasoning_skipped", False):
-                            # Answered directly without ever opening a thought block. NOT a
-                            # termination failure -- the answer is valid and is scored.
+                            # Answered directly without ever opening a thought block. NOT a termination failure -- the
+                            # answer is valid and is scored.
                             reasoning_skipped_count += 1
                         elif not gen_stats.get("found_reasoning_end", False):
                             reasoning_unterminated_count += 1
@@ -393,9 +388,8 @@ for subset in subsets_to_run:
                             if reasoning_model and not gen_stats.get("reasoning_skipped", False) and not gen_stats.get("found_reasoning_end", False):
                                 print(f"Reasoning block was unterminated (no end marker found).")
                         pred_tags = ["O"] * len(batch_tokens)
-                        # Reconstruction failed, so the predicted offsets index into the
-                        # model's own text, not ours, and cannot be located in the input.
-                        # Credit nothing, matching the all-O fallback for seqeval.
+                        # Reconstruction failed, so the predicted offsets index into the model's own text, not ours, and
+                        # cannot be located in the input. Credit nothing, matching the all-O fallback for seqeval.
                         pred_spans = []
                         all_entities_wrongly_unaligned += parsed["span_count"]
                     else:
@@ -406,8 +400,8 @@ for subset in subsets_to_run:
                         )
                         unaligned_entity_count += unalign_count
                         all_entities_wrongly_unaligned += unalign_count
-                        # Raw character spans, not the token-snapped ones: Semin et al.
-                        # never touch tokenization, so snapping would change their metric.
+                        # Raw character spans, not the token-snapped ones: Semin et al. never touch tokenization, so
+                        # snapping would change their metric.
                         pred_spans = [
                             {"start": e["start"], "end": e["end"], "label": e["label"]}
                             for e in parsed["entities"] if e["label"] in set(labels_for_constrained)
@@ -522,16 +516,16 @@ for subset in subsets_to_run:
 
             pred_fh.close()
 
-            precision_mean, precision_std = mean_std([m["precision"] for m in exp_metrics])
-            recall_mean, recall_std = mean_std([m["recall"] for m in exp_metrics])
-            f1_mean, f1_std = mean_std([m["f1"] for m in exp_metrics])
-            accuracy_mean, accuracy_std = mean_std([m["accuracy"] for m in exp_metrics])
-            hard_p_mean, hard_p_std = mean_std([m["semin_hard_precision"] for m in exp_metrics])
-            hard_r_mean, hard_r_std = mean_std([m["semin_hard_recall"] for m in exp_metrics])
-            hard_f1_mean, hard_f1_std = mean_std([m["semin_hard_f1"] for m in exp_metrics])
-            soft_p_mean, soft_p_std = mean_std([m["semin_soft_precision"] for m in exp_metrics])
-            soft_r_mean, soft_r_std = mean_std([m["semin_soft_recall"] for m in exp_metrics])
-            soft_f1_mean, soft_f1_std = mean_std([m["semin_soft_f1"] for m in exp_metrics])
+            precision_mean, precision_std   = mean_std([m["precision"] for m in exp_metrics])
+            recall_mean,    recall_std      = mean_std([m["recall"] for m in exp_metrics])
+            f1_mean,        f1_std          = mean_std([m["f1"] for m in exp_metrics])
+            accuracy_mean,  accuracy_std    = mean_std([m["accuracy"] for m in exp_metrics])
+            hard_p_mean,    hard_p_std      = mean_std([m["semin_hard_precision"] for m in exp_metrics])
+            hard_r_mean,    hard_r_std      = mean_std([m["semin_hard_recall"] for m in exp_metrics])
+            hard_f1_mean,   hard_f1_std     = mean_std([m["semin_hard_f1"] for m in exp_metrics])
+            soft_p_mean,    soft_p_std      = mean_std([m["semin_soft_precision"] for m in exp_metrics])
+            soft_r_mean,    soft_r_std      = mean_std([m["semin_soft_recall"] for m in exp_metrics])
+            soft_f1_mean,   soft_f1_std     = mean_std([m["semin_soft_f1"] for m in exp_metrics])
             wrong_text_count_mean, wrong_text_count_std = mean_std([m["wrong_text_count"] for m in exp_metrics])
             wrong_text_rate_mean, wrong_text_rate_std = mean_std([m["wrong_text_rate"] for m in exp_metrics])
             unaligned_entity_count_mean, unaligned_entity_count_std = mean_std([m["unaligned_entity_count"] for m in exp_metrics])
@@ -599,8 +593,8 @@ full_time_end = time.time()
 full_time_elapsed = full_time_end - full_time_start
 print(f"\nTotal evaluation time: {full_time_elapsed / 60:.2f} minutes")
 
-# Everything is already on disk -- save_results() ran after each subset. This is
-# just the final confirmation line for the job log.
+# Everything is already on disk -- save_results() ran after each subset. This is just the final confirmation line for
+# the job log.
 csv_path, txt_path = save_results()
 print(f"\nDone: {len(subsets_to_run)} subset(s), {len(results)} result rows")
 print(f"Results saved to {csv_path} and {txt_path}")

@@ -28,7 +28,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
                  reasoning_end_marker: Optional[List[int]] = None, reasoning_start_marker: Optional[List[int]] = None,
                  model_eos_token_id=None,
                  tokenizer_eos_token_id=None,
-                 allow_empty_span_labels: Optional[Set[str]] = None
+                 allow_empty_span_labels: Optional[Set[str]] = None,
+                 force_empty_span_labels: Optional[Set[str]] = None
                 ):
         """
         Initialize the TrieSpanConstrainedProcessorTokenAware processor.
@@ -47,6 +48,8 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
             model_eos_token_id (int | list[int] | None): The model's own generation_config.eos_token_id(s)
             tokenizer_eos_token_id (int | list[int] | None): The tokenizer's own eos_token_id(s), passed in
                                                              explicitly by the caller (e.g. tokenizer.eos_token_id).
+            allow_empty_span_labels (Optional[Set[str]]): Set of labels that are allowed to close a span with no copied text.
+            force_empty_span_labels (Optional[Set[str]]): Set of labels that are forced to close a span with no copied text.
         """
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
@@ -120,6 +123,9 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
         # Labels permitted to close a span with NO copied text -> MultiGEC's 'M', meaning
         # a word is missing here, is a zero len insertion point.
         self.allow_empty_span_labels: Set[str] = set(allow_empty_span_labels or ())
+        # Labels that are forced to close a span with NO copied text -> MultiGEC's 'M', meaning
+        # a word is missing here, is a zero len insertion point.
+        self.force_empty_span_labels: Set[str] = set(force_empty_span_labels or ())
         # set to the global byte offset of the last empty span, to prevent consecutive empty spans
         self._last_empty_span_offset: Optional[int] = None  
 
@@ -389,13 +395,20 @@ class TrieSpanConstrainedProcessorTokenAware(LogitsProcessor):
 
         if self.STATE == "SPAN_TEXT":
             # We allow all tokens that can copy the next part of the input text
-            allowed = self._allowed_copy_tokens()
-            can_close_empty = (
+            at_boundary = self._at_char_boundary()
+            may_close_empty = (
                 self.selected_label in self.allow_empty_span_labels
-                and self._last_empty_span_offset != self._global_byte_offset()
-            )
-            if (self.span_text_has_content or can_close_empty) and self._at_char_boundary():
-                # Span close at index 0 is '</', which is a very specific token
+                or self.selected_label in self.force_empty_span_labels
+            ) and self._last_empty_span_offset != self._global_byte_offset()
+
+            if (self.selected_label in self.force_empty_span_labels
+                    and may_close_empty and at_boundary):
+                # Force empty span close: if the active label is in force_empty_span_labels, we must allow the span
+                # close token even if there is no content copied yet.
+                return {self.SPAN_CLOSE[0]}
+            
+            allowed = self._allowed_copy_tokens()
+            if (self.span_text_has_content or may_close_empty) and at_boundary:
                 allowed.add(self.SPAN_CLOSE[0])
             return allowed
 

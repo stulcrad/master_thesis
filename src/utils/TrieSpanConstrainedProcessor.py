@@ -10,14 +10,14 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
     Behavior
     --------
     1. Outside tags, generation must copy the input text exactly (byte-wise) using the token trie
-    to find all possible prefix tokens for the remaining byte suffix of the now generated token.
-    2. The model may open a span and emit <SPAN><LABEL>...</LABEL>...</SPAN>.
-    3. Text inside the spans is still constrained to copy the input text exactly.
-    4. For reasoning models, the processor can optionally allow unconstrained reasoning tokens to be emitted before 
+    to find all possible prefix tokens for the remaining byte suffix of the now generated token. 2. The model may open a
+    span and emit <SPAN><LABEL>...</LABEL>...</SPAN>. 3. Text inside the spans is still constrained to copy the input
+    text exactly. 4. For reasoning models, the processor can optionally allow unconstrained reasoning tokens to be
+    emitted before 
        the first output token, and then enforce the span constraints after reasoning has ended.
 
-    This gives probabilistic token choices while guaranteeing that removing tags reconstructs the 
-    original input text exactly.
+    This gives probabilistic token choices while guaranteeing that removing tags reconstructs the original input text
+    exactly.
     """
     def __init__(self, labels: list[str],  input_text: str, tokenizer: AutoTokenizer,
                  toktrie: Optional[TokTrie] = None, reasoning_model: bool = False,
@@ -25,7 +25,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
                  reasoning_end_marker: Optional[List[int]] = None, reasoning_start_marker: Optional[List[int]] = None,
                  model_eos_token_id=None,
                  tokenizer_eos_token_id=None,
-                 allow_empty_span_labels: Optional[Set[str]] = None
+                 allow_empty_span_labels: Optional[Set[str]] = None,
+                 force_empty_span_labels: Optional[Set[str]] = None
                 ):
         """
         Initialize the processor.
@@ -34,16 +35,24 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         ----
         - labels: list[str] -> list of all possible span labels, e.g. ["PER", "LOC", "ORG"] for NER
         - input_text: str -> the input text to be classified; used for building the token trie constraints
-        - tokenizer: AutoTokenizer -> the tokenizer corresponding to the model being used; needed to build the token trie
-        - toktrie: TokTrie -> pre-built token trie for the tokenizer; if not provided, it will be built from the tokenizer
+        - tokenizer: AutoTokenizer -> the tokenizer corresponding to the model being used; needed to build the token
+          trie
+        - toktrie: TokTrie -> pre-built token trie for the tokenizer; if not provided, it will be built from the
+          tokenizer
         - reasoning_model: bool -> whether the model is a reasoning model that may emit reasoning tokens
-        - reasoning_ended: Callable[[torch.LongTensor, List[int], bool], bool] -> a function that determines if reasoning has ended based on the input_ids, reasoning_end_marker, and found_reasoning_end flag
-        - reasoning_end_marker: List[int] -> the token IDs that indicate the end of reasoning; used by the reasoning_ended function
-        - reasoning_start_marker: List[int] -> the token IDs that indicate the start of reasoning; used to handle models that may skip reasoning
+        - reasoning_ended: Callable[[torch.LongTensor, List[int], bool], bool] -> a function that determines if
+          reasoning has ended based on the input_ids, reasoning_end_marker, and found_reasoning_end flag
+        - reasoning_end_marker: List[int] -> the token IDs that indicate the end of reasoning; used by the
+          reasoning_ended function
+        - reasoning_start_marker: List[int] -> the token IDs that indicate the start of reasoning; used to handle models
+          that may skip reasoning
         - model_eos_token_id: int | list[int] | None -> the model's own generation_config.eos_token_id(s)
-        - tokenizer_eos_token_id: int | list[int] | None -> the tokenizer's own eos_token_id(s), passed in
-          explicitly by the caller (e.g. tokenizer.eos_token_id).
-        - allow_empty_span_labels: Optional[Set[str]] -> set of labels that are allowed to close a span with no copied text (zero-length spans)
+        - tokenizer_eos_token_id: int | list[int] | None -> the tokenizer's own eos_token_id(s), passed in explicitly by
+          the caller (e.g. tokenizer.eos_token_id).
+        - allow_empty_span_labels: Optional[Set[str]] -> set of labels that are allowed to close a span with no copied
+          text (zero-length spans)
+        - force_empty_span_labels: Optional[Set[str]] -> set of labels that are forced to close a span with no copied
+          text (zero-length spans)
         """
         # Store the labels for constructing the control tokens for opening spans.
         self.labels = labels
@@ -55,8 +64,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         # Store the input text and its byte representation for tracking how much of the input has been copied so far.
         self.input_text = input_text
 
-        # Byte offsets that fall BETWEEN complete characters. A tag may only open or close
-        # at one of these -> never inside a multi-byte character's own bytes.
+        # Byte offsets that fall BETWEEN complete characters. A tag may only open or close at one of these -> never
+        # inside a multi-byte character's own bytes.
         offset = 0
         self._char_boundary_offsets = {0}
         for ch in input_text:
@@ -64,8 +73,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
             self._char_boundary_offsets.add(offset)
             
         self.input_tokens = tokenizer.encode(input_text, add_special_tokens=False)
-        # Some input bytes may not be in the vocab, so we need to first encode the input text to tokens,
-        # then convert those tokens back to bytes and concatenate to get the full byte string of the input text.
+        # Some input bytes may not be in the vocab, so we need to first encode the input text to tokens, then convert
+        # those tokens back to bytes and concatenate to get the full byte string of the input text.
         self.input_bytes = b""
         for token_id in self.input_tokens:
             token_bytes = self.toktrie.token_id_to_bytes.get(token_id)
@@ -78,8 +87,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         self.input_pos = 0 # to track the current byte position in the input text
 
         self.reasoning_model = reasoning_model
-        # Set unconditionally: __call__ reads these on every path, including the
-        # reasoning-OFF one, where reasoning_model is False.
+        # Set unconditionally: __call__ reads these on every path, including the reasoning-OFF one, where
+        # reasoning_model is False.
         self.reasoning_ended = reasoning_ended
         self.found_reasoning_end = False
         self.reasoning_started = False
@@ -94,18 +103,20 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         self.seq_pos = 0  # used only for SPAN_CLOSE sequencing
         self.prev_len = 0 # track the len of the generated seq
 
-        # Per-label position tracking for TAG_BLOCK disambiguation.
-        # Maps label -> current position within that label's open block token sequence.
-        # Blocks whose token doesn't match the emitted token are dropped immediately,
+        # Per-label position tracking for TAG_BLOCK disambiguation. Maps label -> current position within that label's
+        # open block token sequence. Blocks whose token doesn't match the emitted token are dropped immediately,
         # preventing tokens from eliminated blocks from polluting the allowed set.
         self.live_blocks: Optional[dict] = None
 
         # Tracks whether at least one copy token was emitted in the current span body.
         self.span_text_has_content = False
 
-        # Labels permitted to close a span with no copied text -> MultiGEC's 'M', meaning
-        # a word is missing here, is a zero len insertion point.
+        # Labels permitted to close a span with no copied text -> MultiGEC's 'M', meaning a word is missing here, is a
+        # zero len insertion point.
         self.allow_empty_span_labels: Set[str] = set(allow_empty_span_labels or ())
+        # Labels that are forced to close a span with no copied text -> MultiGEC's 'M', meaning a word is missing here, is
+        # a zero len insertion point.
+        self.force_empty_span_labels: Set[str] = set(force_empty_span_labels or ())
         # set to the global byte offset of the last empty span, to prevent consecutive empty spans
         self._last_empty_span_offset: Optional[int] = None
 
@@ -141,8 +152,7 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
                 self.eos_token_ids.add(tok_id)
 
     def reset(self):
-        """"
-        Reset the processor state for a new generation sequence.
+        """" Reset the processor state for a new generation sequence.
         """
         self.STATE = "OUTSIDE"
         self.seq_pos = 0
@@ -182,29 +192,29 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
     
     def _at_char_boundary(self) -> bool:
         """
-        Check if the current global byte offset is at a character boundary in the input text.
-        This ensures that tags are only opened or closed at valid character boundaries, not inside multi-byte
+        Check if the current global byte offset is at a character boundary in the input text. This ensures that tags are
+        only opened or closed at valid character boundaries, not inside multi-byte
         """
         return self._global_byte_offset() in self._char_boundary_offsets
     
     def _remaining_bytes(self) -> bytes:
         """
-        Get the remaining byte suffix of the input text that has not been copied yet, 
-        starting from the current input position.
+        Get the remaining byte suffix of the input text that has not been copied yet, starting from the current input
+        position.
         """
         return self.input_bytes[self.input_pos:]
     
     def _allowed_copy_tokens(self) -> Set[int]:
         """
-        Get the set of token IDs that can be emitted to copy the next part of the input text, 
-        based on the remaining byte suffix and the token trie.
+        Get the set of token IDs that can be emitted to copy the next part of the input text, based on the remaining
+        byte suffix and the token trie.
         """
         return self.toktrie.prefix_search(self._remaining_bytes())
 
     def _prefer_literal_angle_bracket(self) -> bool:
         """
-        If the source text currently starts with '<', prevent starting a control tag at this step.
-        This avoids confusing literal '<' in text with control token '<SPAN>'.
+        If the source text currently starts with '<', prevent starting a control tag at this step. This avoids confusing
+        literal '<' in text with control token '<SPAN>'.
         """
         return self._remaining_bytes().startswith(b"<")
     
@@ -216,8 +226,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
     
     def _consume_copy_token(self, token_id: int) -> bool:
         """
-        Consume a copy token and advance the input position 
-        if the given token ID corresponds to a token that can copy the next part of the input text.
+        Consume a copy token and advance the input position if the given token ID corresponds to a token that can copy
+        the next part of the input text.
         """
         if self._all_input_consumed():
             return False
@@ -231,11 +241,12 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
     
     def _advance_state(self, token_id: int) -> None:
         """
-        Advance the FSM state based on the emitted token ID, updating the current state, sequence position, selected label, 
-        and span text content flag as needed according to the constrained generation logic.
+        Advance the FSM state based on the emitted token ID, updating the current state, sequence position, selected
+        label, and span text content flag as needed according to the constrained generation logic.
         """
         if self.STATE == "OUTSIDE":
-            # First check if the last emitted token is a copy token, and if so, consume it and advance the input position accordingly.
+            # First check if the last emitted token is a copy token, and if so, consume it and advance the input
+            # position accordingly.
             if self._consume_copy_token(token_id):
                 return
             # Enter atomic tag block once any block-start token is emitted
@@ -260,10 +271,9 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
             return
 
         if self.STATE == "TAG_BLOCK":
-            # Advance each live block if its next expected token matches the emitted token,
-            # and drop blocks that do not match. This prevents tokens from eliminated blocks
-            # (e.g. "ISC" from the MISC block after ">" was chosen instead of ">M") from
-            # appearing in the allowed set at subsequent steps.
+            # Advance each live block if its next expected token matches the emitted token, and drop blocks that do not
+            # match. This prevents tokens from eliminated blocks (e.g. "ISC" from the MISC block after ">" was chosen
+            # instead of ">M") from appearing in the allowed set at subsequent steps.
             new_live = {}
             for label, pos in self.live_blocks.items():
                 block = self._active_blocks[label]
@@ -282,7 +292,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
             return
         
         if self.STATE == "SPAN_TEXT":
-            # First check if the last emitted token is a copy token, and if so, consume it and advance the input position accordingly.
+            # First check if the last emitted token is a copy token, and if so, consume it and advance the input
+            # position accordingly.
             if self._consume_copy_token(token_id):
                 self.span_text_has_content = True
                 return
@@ -308,13 +319,15 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
 
     def _allowed_tokens(self) -> Set[int]:
         """
-        Get the set of allowed token IDs for the next generation step based on the current FSM state and seq position, 
-        using the token trie to find valid copy tokens for the remaining input bytes, and allowing the appropriate special tokens
+        Get the set of allowed token IDs for the next generation step based on the current FSM state and seq position,
+        using the token trie to find valid copy tokens for the remaining input bytes, and allowing the appropriate
+        special tokens
         """
         if self.STATE == "OUTSIDE":
             # Allow all tokens that can copy the next part of the input text
             allowed = self._allowed_copy_tokens()
-            # Additionally, allow the tokens that can start any of the label blocks, unless the next part of the input text starts with '<'
+            # Additionally, allow the tokens that can start any of the label blocks, unless the next part of the input
+            # text starts with '<'
             if not self._prefer_literal_angle_bracket() and self._at_char_boundary():
                 if self._remaining_bytes().startswith(b" "):
                     allowed.update(tok[0] for tok in self.label_open_blocks.values())
@@ -328,8 +341,8 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
             return allowed
         
         if self.STATE == "TAG_BLOCK":
-            # Only allow the next token from blocks that are still live (consistent with
-            # tokens emitted so far). Eliminated blocks are already absent from live_blocks.
+            # Only allow the next token from blocks that are still live (consistent with tokens emitted so far).
+            # Eliminated blocks are already absent from live_blocks.
             allowed = set()
             for label, pos in self.live_blocks.items():
                 block = self._active_blocks[label]
@@ -339,13 +352,20 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         
         if self.STATE == "SPAN_TEXT":
             # We allow all tokens that can copy the next part of the input text
+            at_boundary = self._at_char_boundary()
+            may_close_empty = (
+                self.selected_label in self.allow_empty_span_labels
+                or self.selected_label in self.force_empty_span_labels
+            ) and self._last_empty_span_offset != self._global_byte_offset()
+
+            if (self.selected_label in self.force_empty_span_labels
+                    and may_close_empty and at_boundary):
+                # Force empty span close: if the active label is in force_empty_span_labels, we must allow the span
+                # close token even if there is no content copied yet.
+                return {self.SPAN_CLOSE[0]}
+            
             allowed = self._allowed_copy_tokens()
-            can_close_empty = (
-                self.selected_label in self.allow_empty_span_labels and
-                self._last_empty_span_offset != self._global_byte_offset()
-            )
-            if (self.span_text_has_content or can_close_empty) and self._at_char_boundary():
-                # Span close at index 0 is '</', which is a very specific token
+            if (self.span_text_has_content or may_close_empty) and at_boundary:
                 allowed.add(self.SPAN_CLOSE[0])
             return allowed
         
@@ -361,10 +381,9 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
         if self.prompt_len is None:
             self.prompt_len = input_ids.shape[1] # Set the prompt length on the first call
 
-        # Reasoning-skip detection, for families where the MODEL emits the opener
-        # (Gemma-4). If it never opens the block it never emits the end marker either,
-        # so reasoning_ended() below would stay False forever and the whole generation
-        # would run UNCONSTRAINED.
+        # Reasoning-skip detection, for families where the MODEL emits the opener (Gemma-4). If it never opens the block
+        # it never emits the end marker either, so reasoning_ended() below would stay False forever and the whole
+        # generation would run UNCONSTRAINED.
         if (self.reasoning_model and self.reasoning_start_marker
                 and not self.reasoning_started and not self.found_reasoning_end):
             if input_ids.shape[1] == self.prompt_len:
@@ -374,17 +393,18 @@ class TrieSpanConstrainedProcessor(LogitsProcessor):
                 self.prev_len = input_ids.shape[1]
                 return self._mask_except(scores, allowed)
             if int(input_ids[0, -1]) == self.reasoning_start_marker[0]:
-                # Opener taken: normal reasoning path. Rewind prev_len so the FSM stays
-                # idle until reasoning actually ends (as it does when there is no opener).
+                # Opener taken: normal reasoning path. Rewind prev_len so the FSM stays idle until reasoning actually
+                # ends (as it does when there is no opener).
                 self.reasoning_started = True
                 self.prev_len = 0
             else:
-                # Reasoning skipped: the answer starts at the very first generated token,
-                # which was already constrained above and must now advance the FSM.
+                # Reasoning skipped: the answer starts at the very first generated token, which was already constrained
+                # above and must now advance the FSM.
                 self.found_reasoning_end = True
                 self.output_start_index = self.prompt_len
 
-        # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original scores.
+        # If this is a reasoning model and reasoning has not ended, do not apply any constraints and return the original
+        # scores.
         if self.reasoning_model and not self.reasoning_ended(
             input_ids[:, self.prompt_len:], self.reasoning_end_marker, self.found_reasoning_end
             ):

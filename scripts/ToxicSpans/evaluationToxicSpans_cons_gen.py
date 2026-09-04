@@ -1,17 +1,14 @@
 """
 Constrained generation evaluation on Toxic Spans
 
-The model is shown the ORIGINAL post verbatim -- newlines and repeated spaces
-included -- so gold character offsets from the dataset are used exactly as they
-come, with no remapping.
+The model is shown the ORIGINAL post verbatim -- newlines and repeated spaces included -- so gold character offsets from
+the dataset are used exactly as they come, with no remapping.
 
-Evaluation metrics, reported side by side:
-- character-level F1 averaged over examples (the thesis metric):
-    P = |pred ∩ gold| / |pred|, R = |pred ∩ gold| / |gold|, F1 = 2PR/(P+R)
-    Empty gold + empty pred -> F1=1.0; empty gold + non-empty pred -> F1=0.0.
-- Semin et al.'s pooled character-overlap F1, hard and soft, from their
-  metrics.py. Micro: counts are summed over the run, then F1 computed once.
-  Toxic Spans has one label, so hard and soft coincide.
+Evaluation metrics, reported side by side: - character-level F1 averaged over examples (the thesis metric):
+    P = |pred ∩ gold| / |pred|, R = |pred ∩ gold| / |gold|, F1 = 2PR/(P+R) Empty gold + empty pred -> F1=1.0; empty gold
+    + non-empty pred -> F1=0.0.
+- Semin et al.'s pooled character-overlap F1, hard and soft, from their metrics.py. Micro: counts are summed over the
+  run, then F1 computed once. Toxic Spans has one label, so hard and soft coincide.
 """
 import argparse
 import os
@@ -60,6 +57,8 @@ parser.add_argument("--max-examples", type=int, default=None,
                     help="Maximum number of examples to evaluate. None means all examples.")
 parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate.")
 parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over.")
+parser.add_argument("--shard", type=str, default=None,
+                    help="Optional: i/N -- split the dataset into N shards and run only shard i.")
 
 args = parser.parse_args()
 
@@ -90,9 +89,14 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype="auto",
 )
 
+# Create a token trie for the constrained generation processor, if needed. This is only used for the "constrained" eval
+# mode.
+toktrie = build_toktrie_from_tokenizer(tokenizer)
+
+
 reasoning_end_marker = tokenizer(spec.reasoning_end_marker, add_special_tokens=False).input_ids if spec.reasoning else None
-# Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere,
-# which means the block is open by construction -- see model_registry.ModelSpec.
+# Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere, which means the block is open by
+# construction -- see model_registry.ModelSpec.
 reasoning_start_marker = tokenizer(spec.reasoning_start_marker, add_special_tokens=False).input_ids if spec.reasoning_start_marker else None
 sampling = resolve_sampling(spec, reasoning_model,
                             temperature=args.temperature, top_p=args.top_p,
@@ -101,11 +105,21 @@ DO_SAMPLE = sampling.pop("do_sample", False)
 
 SEEDS = args.seeds
 MAX_EXAMPLES = args.max_examples
+
+# --shard i/N
+shard_i, shard_N = None, None
+if args.shard is not None:
+    try:
+        shard_i, shard_N = map(int, args.shard.split("/"))
+    except ValueError:
+        raise SystemExit(f"--shard must be of the form i/N, got {args.shard!r}")
+    if not (0 <= shard_i < shard_N):
+        raise SystemExit(f"--shard must satisfy 0 <= i < N, got {args.shard!r}")
+    print(f"Sharding into {shard_N} shards, running shard {shard_i} (file tag: shard{shard_i + 1}of{shard_N}).")
 MAX_NEW_TOKENS = args.max_new_tokens
 repetition_penalty = args.repetition_penalty
 
-# One post per prompt: posts are independent, so concatenating them would only
-# test long-input robustness, not the task.
+# One post per prompt: posts are independent, so concatenating them would only test long-input robustness, not the task.
 BATCH_SIZE = 1
 EVAL_INTERVAL = 100
 
@@ -130,6 +144,9 @@ results = []
 
 sampling_strategy = "sampling" if DO_SAMPLE else "greedy"
 
+def shard_suffix():
+    return f"_shard{shard_i + 1}of{shard_N}" if shard_i is not None else ""
+
 def config_tag():
     parts = [f"think{int(args.enable_thinking)}"]
     if args.reasoning_effort: parts.append(f"effort_{args.reasoning_effort}")
@@ -144,7 +161,8 @@ for eval_mode in EVAL_MODES:
         exp_metrics = []
         config_label = processor_class if processor_class is not None else "n|a"
         print(
-            f"\nEvaluating model={model_name}, reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
+            f"\nEvaluating model={model_name}, shard={shard_suffix()}, "
+            f"reasoning_enabled={reasoning_model}, reasoning_effort={args.reasoning_effort}, "
             f"repetition_penalty={repetition_penalty}, sampling_strategy={sampling_strategy}, "
             f"mode={eval_mode}, processor_class={config_label}, max_examples={MAX_EXAMPLES}, seeds={SEEDS}"
         )
@@ -152,7 +170,7 @@ for eval_mode in EVAL_MODES:
         model_short = model_name.split("/")[-1]
         pred_fh = open_jsonl_writer(
             f"{RESULTS_ROOT}/ToxicSpans/Constrained-Gen/Predictions/"
-            f"toxic_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}.jsonl"
+            f"toxic{shard_suffix()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}_{eval_mode}_{config_tag()}_{config_label}.jsonl"
         )
 
         for seed in SEEDS:
@@ -162,6 +180,15 @@ for eval_mode in EVAL_MODES:
                 sampled = raw
             else:
                 sampled = random.Random(seed).sample(raw, MAX_EXAMPLES)
+
+            if shard_i is not None:
+                total_examples = len(sampled)
+                shard_size = (total_examples + shard_N - 1) // shard_N
+                start_idx = shard_i * shard_size
+                end_idx = min(start_idx + shard_size, total_examples)
+                sampled = sampled[start_idx:end_idx]
+                print(f"Sharding: {total_examples} examples -> {shard_N} shards of "
+                      f"~{shard_size}, running shard {shard_i}: {len(sampled)} examples")
 
             start_time = time.time()
             # Metrics for counting generation errors
@@ -177,10 +204,6 @@ for eval_mode in EVAL_MODES:
             # Semin et al.'s micro counters
             hard_overlap = hard_predicted = hard_gold = 0
             soft_overlap = soft_predicted = soft_gold = 0
-
-            toktrie = None
-            if eval_mode == "constrained":
-                toktrie = build_toktrie_from_tokenizer(tokenizer)
 
             for idx in tqdm(range(len(sampled)), desc=f"seed {seed}", file=sys.stdout):
                 example = sampled[idx]
@@ -249,8 +272,8 @@ for eval_mode in EVAL_MODES:
                 if reasoning_model:
                     reasoning_token_counts.append(num_reasoning_tokens)
                     if gen_stats.get("reasoning_skipped", False):
-                        # Answered directly without ever opening a thought block. NOT a
-                        # termination failure -- the answer is valid and is scored.
+                        # Answered directly without ever opening a thought block. NOT a termination failure -- the
+                        # answer is valid and is scored.
                         reasoning_skipped_count += 1
                     elif not gen_stats.get("found_reasoning_end", False):
                         reasoning_unterminated_count += 1
@@ -265,8 +288,11 @@ for eval_mode in EVAL_MODES:
                         print(f"\n\n===== Warning at seed {seed}, example {idx+1} =====")
                         print(f"Original:      {input_text[:120]!r}")
                         print(f"Reconstructed: {parsed['reconstructed_text'][:120]!r}")
-                    # Reconstruction failed: the predicted offsets index the model's
-                    # own text, not the input, so nothing can be credited.
+                        if (reasoning_model and not gen_stats.get("reasoning_skipped", False) 
+                            and not gen_stats.get("found_reasoning_end", False)):
+                            print(f"Reasoning block was unterminated (no end marker found).")
+                    # Reconstruction failed: the predicted offsets index the model's own text, not the input, so nothing
+                    # can be credited.
                     pred_spans = []
                 else:
                     pred_spans = [
@@ -281,8 +307,8 @@ for eval_mode in EVAL_MODES:
                 char_p_per_post.append(cp)
                 char_r_per_post.append(cr)
 
-                # Compute Semin et al.'s micro counts for hard and soft overlap F1. 
-                # For Toxic Spans, hard and soft coincide, but we compute both for completeness.
+                # Compute Semin et al.'s micro counts for hard and soft overlap F1. For Toxic Spans, hard and soft
+                # coincide, but we compute both for completeness.
                 hard_counts = compute_overlap_counts(pred_spans, gold_spans, hard_matching=True)
                 soft_counts = compute_overlap_counts(pred_spans, gold_spans, hard_matching=False)
                 hard_overlap += hard_counts["overlap_chars"]
@@ -433,7 +459,7 @@ for eval_mode in EVAL_MODES:
 
 # Save intermediate results to CSV after each model evaluation to avoid data loss in case of interruptions
 intermediate_results_df = pd.DataFrame(results)
-intermediate_results_path = f"{RESULTS_ROOT}/ToxicSpans/Constrained-Gen/Csv/toxic_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv"
+intermediate_results_path = f"{RESULTS_ROOT}/ToxicSpans/Constrained-Gen/Csv/toxic{shard_suffix()}_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv"
 intermediate_results_txt_path = intermediate_results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 
 os.makedirs(os.path.dirname(intermediate_results_path), exist_ok=True)

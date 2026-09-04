@@ -1,34 +1,26 @@
 """Constrained generation evaluation on WMT24 ESA (error span annotation).
 
-The model is shown the ORIGINAL translation verbatim -- newlines and repeated
-spaces included -- so gold error-span offsets from the dataset are used
-exactly as they come, with no remapping. The source-language text is context
-only: it is embedded in the (per-example) system prompt, the same role the
-question plays in evaluationLegalQA_cons_gen.py, and is never copied or
-tagged by the model.
+The model is shown the ORIGINAL translation verbatim -- newlines and repeated spaces included -- so gold error-span
+offsets from the dataset are used exactly as they come, with no remapping. The source-language text is context only: it
+is embedded in the (per-example) system prompt, the same role the question plays in evaluationLegalQA_cons_gen.py, and
+is never copied or tagged by the model.
 
-One translation per prompt, like LegalQA/Toxic Spans: the system prompt
-embeds this example's source text and language pair, so batching translations
-would ask about several source texts at once.
+One translation per prompt, like LegalQA/Toxic Spans: the system prompt embeds this example's source text and language
+pair, so batching translations would ask about several source texts at once.
 
-Two severity labels here (MAJOR, MINOR), unlike Toxic Spans/LegalQAEval's
-single label. That matters for which metrics are meaningful:
+Two severity labels here (MAJOR, MINOR), unlike Toxic Spans/LegalQAEval's single label. That matters for which metrics
+are meaningful:
 
 - character-level F1 averaged over examples (the thesis metric, `char_f1`):
-    P = |pred ∩ gold| / |pred|, R = |pred ∩ gold| / |gold|, F1 = 2PR/(P+R)
-    Computed over character OFFSETS only, ignoring the label -- so this is
-    the macro-averaged analogue of Semin et al.'s SOFT F1, not their hard F1.
-- Semin et al.'s pooled character-overlap F1, hard and soft, from their
-  metrics.py (micro: counts summed over the run, F1 computed once). Hard
-  requires the label (MAJOR/MINOR) to match; soft does not.
-- `macro_hard_f1`: the missing corner of the 2x2 grid. Every other script in
-  this repo has one label, so hard and soft coincide and macro-hard was never
-  worth computing separately from `char_f1`. With two severities that are
-  genuinely hard to tell apart, a model can get the SPAN right and the
-  SEVERITY wrong, which soft/`char_f1` cannot see. Computed the same way as
-  `char_f1` (per-example F1, then averaged) but from Semin's hard-matching
-  per-example counts instead of raw offsets, so it sits next to `char_f1`
-  (macro) and `semin_hard_f1` (micro) as the macro/label-sensitive corner.
+    P = |pred ∩ gold| / |pred|, R = |pred ∩ gold| / |gold|, F1 = 2PR/(P+R) Computed over character OFFSETS only,
+    ignoring the label -- so this is the macro-averaged analogue of Semin et al.'s SOFT F1, not their hard F1.
+- Semin et al.'s pooled character-overlap F1, hard and soft, from their metrics.py (micro: counts summed over the run,
+  F1 computed once). Hard requires the label (MAJOR/MINOR) to match; soft does not.
+- `macro_hard_f1`: the missing corner of the 2x2 grid. Every other script in this repo has one label, so hard and soft
+  coincide and macro-hard was never worth computing separately from `char_f1`. With two severities that are genuinely
+  hard to tell apart, a model can get the SPAN right and the SEVERITY wrong, which soft/`char_f1` cannot see. Computed
+  the same way as `char_f1` (per-example F1, then averaged) but from Semin's hard-matching per-example counts instead of
+  raw offsets, so it sits next to `char_f1` (macro) and `semin_hard_f1` (micro) as the macro/label-sensitive corner.
 """
 import argparse
 import os
@@ -108,8 +100,8 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 reasoning_end_marker = tokenizer(spec.reasoning_end_marker, add_special_tokens=False).input_ids if spec.reasoning else None
-# Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere,
-# which means the block is open by construction -- see model_registry.ModelSpec.
+# Only set for families where the MODEL emits the opener (Gemma-4). None elsewhere, which means the block is open by
+# construction -- see model_registry.ModelSpec.
 reasoning_start_marker = tokenizer(spec.reasoning_start_marker, add_special_tokens=False).input_ids if spec.reasoning_start_marker else None
 sampling = resolve_sampling(spec, reasoning_model,
                             temperature=args.temperature, top_p=args.top_p,
@@ -121,11 +113,10 @@ MAX_EXAMPLES = args.max_examples
 MAX_NEW_TOKENS = args.max_new_tokens
 repetition_penalty = args.repetition_penalty
 
-# One translation per prompt: the system prompt embeds this example's source
-# text and language pair, so concatenating translations would ask about
-# several source texts of one prompt.
+# One translation per prompt: the system prompt embeds this example's source text and language pair, so concatenating
+# translations would ask about several source texts of one prompt.
 BATCH_SIZE = 1
-EVAL_INTERVAL = 100
+EVAL_INTERVAL = 50
 
 EVAL_MODES = ["unconstrained", "constrained"]
 
@@ -170,9 +161,8 @@ def run_tag():
 def save_results():
     """Write the CSV/TXT for everything finished so far.
 
-    Called after EVERY subset, not just at the end: one job now covers up to 24
-    subsets, so a crash or a wall-clock kill partway through would otherwise
-    throw away every completed subset with it.
+    Called after EVERY subset, not just at the end: one job now covers up to 24 subsets, so a crash or a wall-clock kill
+    partway through would otherwise throw away every completed subset with it.
     """
     df = pd.DataFrame(results)
     csv_path = (f"{RESULTS_ROOT}/ESA-MT/Constrained-Gen/Csv/"
@@ -226,17 +216,18 @@ for subset in subsets_to_run:
                 reasoning_skipped_count = 0
                 reasoning_token_counts = []
                 total_predictions = 0
-                # Metrics for quantitative evaluation of the predictions
-                # Macro soft F1: per-example F1 averaged over examples, label-agnostic
+                # Metrics for quantitative evaluation of the predictions Macro soft F1: per-example F1 averaged over
+                # examples, label-agnostic
                 char_f1_per_ex = []
                 char_p_per_ex = []
                 char_r_per_ex = []
-                # Macro-hard F1: same per-example-then-average aggregation as char_f1
-                # above, but label-sensitive -- see module docstring.
+                # Macro-hard F1: same per-example-then-average aggregation as char_f1 above, but label-sensitive -- see
+                # module docstring.
                 hard_f1_per_ex = []
                 hard_p_per_ex = []
                 hard_r_per_ex = []
-                # Semin et al.'s micro-hard and micro-soft F1: counts pooled across the run, F1 computed once at the end.
+                # Semin et al.'s micro-hard and micro-soft F1: counts pooled across the run, F1 computed once at the
+                # end.
                 hard_overlap = hard_predicted = hard_gold = 0
                 soft_overlap = soft_predicted = soft_gold = 0
 
@@ -258,8 +249,8 @@ for subset in subsets_to_run:
                         hard_r_per_ex.append(hf1["recall"])
                         continue
 
-                    # Build per-example system prompt embedding the source text and
-                    # language pair -- the same role `question` plays for LegalQA.
+                    # Build per-example system prompt embedding the source text and language pair -- the same role
+                    # `question` plays for LegalQA.
                     source_language = WMT_LANG_NAMES.get(example["source_language"], example["source_language"])
                     target_language = WMT_LANG_NAMES.get(example["target_language"], example["target_language"])
                     system_prompt = SYSTEM_PROMPT_CONSTR_GEN_WMT_TEMPLATE.format(
@@ -322,8 +313,8 @@ for subset in subsets_to_run:
                     if reasoning_model:
                         reasoning_token_counts.append(num_reasoning_tokens)
                         if gen_stats.get("reasoning_skipped", False):
-                            # Answered directly without ever opening a thought block. NOT a
-                            # termination failure -- the answer is valid and is scored.
+                            # Answered directly without ever opening a thought block. NOT a termination failure -- the
+                            # answer is valid and is scored.
                             reasoning_skipped_count += 1
                         elif not gen_stats.get("found_reasoning_end", False):
                             reasoning_unterminated_count += 1
@@ -338,8 +329,8 @@ for subset in subsets_to_run:
                             print(f"\n\n===== Warning at seed {seed}, example {idx+1} =====")
                             print(f"Original:      {input_text[:120]!r}")
                             print(f"Reconstructed: {parsed['reconstructed_text'][:120]!r}")
-                        # Reconstruction failed: the predicted offsets index the model's
-                        # own text, not the input, so nothing can be credited.
+                        # Reconstruction failed: the predicted offsets index the model's own text, not the input, so
+                        # nothing can be credited.
                         pred_spans = []
                     else:
                         pred_spans = [
@@ -347,8 +338,8 @@ for subset in subsets_to_run:
                             for e in parsed["entities"] if e["label"] in set(labels_for_constrained)
                         ]
 
-                    # Compute character-level F1 for this example (label-agnostic --
-                    # the macro analogue of Semin et al.'s soft F1, see docstring).
+                    # Compute character-level F1 for this example (label-agnostic -- the macro analogue of Semin et
+                    # al.'s soft F1, see docstring).
                     pred_chars = {i for s in pred_spans for i in range(s["start"], s["end"])}
                     cp, cr, cf = compute_character_f1(gold_chars, pred_chars)
                     char_f1_per_ex.append(cf)
@@ -365,9 +356,8 @@ for subset in subsets_to_run:
                     soft_predicted += soft_counts["predicted_chars"]
                     soft_gold += soft_counts["gold_chars"]
 
-                    # Macro-hard F1: this example's own hard-matching F1, averaged
-                    # over examples at the end -- unlike semin_hard_f1 below, which
-                    # pools the counts across the whole run (micro).
+                    # Macro-hard F1: this example's own hard-matching F1, averaged over examples at the end -- unlike
+                    # semin_hard_f1 below, which pools the counts across the whole run (micro).
                     ex_hard = f1_from_counts(
                         hard_counts["overlap_chars"], hard_counts["predicted_chars"], hard_counts["gold_chars"]
                     )
@@ -536,8 +526,8 @@ for subset in subsets_to_run:
     csv_path, txt_path = save_results()
     print(f"\n[{subset}] results so far saved to {csv_path}")
 
-# Everything is already on disk -- save_results() ran after each subset. This is
-# just the final confirmation line for the job log.
+# Everything is already on disk -- save_results() ran after each subset. This is just the final confirmation line for
+# the job log.
 csv_path, txt_path = save_results()
 print(f"\nDone: {len(subsets_to_run)} subset(s), {len(results)} result rows")
 print(f"Results saved to {csv_path} and {txt_path}")

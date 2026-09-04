@@ -1,4 +1,5 @@
 #!/bin/bash
+#SBATCH --partition=amd
 #SBATCH --output=/home/stulcrad/master_thesis/logs/pilot_scripts/out/%x_%N_%A.out
 #SBATCH --error=/home/stulcrad/master_thesis/logs/pilot_scripts/err/%x_%N_%A.err
 # Pilot for the LegalQAEval constrained-generation line. Same model set and
@@ -35,20 +36,27 @@ if [ "$PILOT" -eq 1 ]; then
   SEEDS="42"
   MAX_EX_FLAG="--max-examples 25"
 else
-  # SEEDS="42 43 44"
-  SEEDS="42"
+  SEEDS="42 43 44"
   MAX_EX_FLAG=""
 fi
 
 n_jobs=0
 
-# submit <partition> <gpus> <array_idx> <max_new_tokens> <time> [extra args...]
+# submit <partition> <gpus> <array_idx> <max_new_tokens> <time> <shards> [extra args...]
 #
 # $1 $2 $3 ... are this function's positional arguments (like argv). `local`
 # copies them into named variables; `shift 5` then drops the first 5 so that
 # "$@" (below) is just whatever extra flags were passed after them, e.g.
 submit() {
-  local part=$1 gpus=$2 idx=$3 mnt=$4 wtime=$5; shift 5
+  local part=$1 gpus=$2 idx=$3 mnt=$4 wtime=$5 shards=$6; shift 6
+  case "$shards" in ''|*[!0-9]*)
+    echo "submit: shards must be a number, got '$shards' -- a positional arg is missing" >&2
+    exit 1 ;; esac
+  case "$wtime" in
+    [0-9]*:[0-9][0-9]:[0-9][0-9]|[0-9]-[0-9]*:[0-9][0-9]:[0-9][0-9]) ;;
+    *) echo "submit: wtime must be HH:MM:SS, got '$wtime' -- a positional arg is missing" >&2
+       exit 1 ;; 
+  esac
   case "$gpus" in ''|*[!0-9]*)
     echo "submit: gpus must be a number, got '$gpus' -- a positional arg is missing" >&2
     exit 1 ;; esac
@@ -58,12 +66,13 @@ submit() {
   case "$mnt" in ''|*[!0-9]*)
     echo "submit: mnt must be a number, got '$mnt' -- a positional arg is missing" >&2
     exit 1 ;; esac
-  echo "submit: legalqa array=${idx} part=${part} time=${wtime}  $*"
+  echo "submit: legalqa array=${idx} part=${part} time=${wtime} shards=${shards}  $*"
   n_jobs=$((n_jobs + 1))
   if [ "$DRY_RUN" -eq 1 ]; then
     return 0
   fi
   sbatch --partition="$part" --gres=gpu:"$gpus" --array="$idx" --time="$wtime" \
+    --export=ALL,SHARDS="$shards" \
     slurm/scripts/LegalQA/evaluationLegalQA_cons_gen.batch \
     $MAX_EX_FLAG --max-new-tokens "$mnt" --seeds $SEEDS "$@"
 }
@@ -76,27 +85,36 @@ submit() {
 #   idx 4  gpt-oss-120b      -> effort low|medium
 #   idx 5  Qwen3-8B          -> reasoning OFF only
 
-# -- gemma-4-E2B (idx 0): 2.3B effective, cheap enough for both arms --------------
-submit amdgpufast 1 0 18000 4:00:00  --no-enable-thinking
-submit amdgpu     1 0 18000 24:00:00 --enable-thinking
+# -- gemma-4-E2B (idx 0): 12 GiB/proc, packs well ------------------------------
+# submit h200fast   1 0 18000 4:00:00    6  --no-enable-thinking
+#   -> [Claude est.] recommend --time 4:30:00 (currently 4:00:00) -- ~3.2h raw, measured 2.3s+11.9s/ex (uncon+constr), 1206ex x3 seeds  ** EXCEEDS 4h h200fast WALL, consider a *long partition or more shards/chunks **
+# submit h200         2 0 18000 24:00:00   12  --enable-thinking
+#   -> [Claude est.] no reasoning-ON data for gemma-4-E2B-it on LegalQAEval yet -- size cautiously (its CoNLL ON/OFF ratio is ~27x, so do not assume this is close to the OFF-arm line above)
 
-# -- Rows with a published comparison number: reasoning OFF ----------------------
-submit amdgpu     2 1 18000 12:00:00 --no-enable-thinking
+# -- gemma-4-31B (idx 1): 72 GiB/proc -> one process per H200 ------------------
+# submit h200       2 1 18000 20:00:00   2  --no-enable-thinking
+#   -> [Claude est.] recommend --time 6:30:00 (currently 20:00:00) -- ~4.9h raw, measured 4.8s+4.9s/ex (uncon+constr), 1206ex x3 seeds
 
-# -- Qwen3-8B -> has a published comparison row, reasoning OFF only ---------------
-submit amdgpu     1 5 18000 5:00:00  --no-enable-thinking
+# -- Qwen3-8B (idx 5): Semin-comparable, reasoning OFF only --------------------
+# submit h200fast    2 5 18000 4:00:00  12  --no-enable-thinking
+#   -> [Claude est.] recommend --time 3:30:00 (currently 4:00:00) -- ~2.3h raw, measured 9.8s+10.6s/ex (uncon+constr), 1206ex x3 seeds
 
-# -- Qwen3.8-27B (idx 2): reasoning ON (low) vs OFF -------------------------------
-# --reasoning-effort goes ONLY on the ON arm -- see the NER pilot's comment for why.
-submit amdgpu     2 2 18000 11:00:00 --no-enable-thinking
-submit amdgpu     2 2 18000 24:00:00 --enable-thinking --reasoning-effort low
+# -- Qwen3.8-27B (idx 2): 65 GiB/proc ------------------------------------------
+# submit h200       1 2 18000 20:00:00   2  --no-enable-thinking
+#   -> [Claude est.] recommend --time 11:00:00 (currently 20:00:00) -- ~8.2h raw, measured 7.6s+7.7s/ex (uncon+constr), 1206ex x3 seeds
+# submit h200       2 2 18000 22:00:00   4  --enable-thinking --reasoning-effort low
+#   -> [Claude est.] recommend --time 13:30:00 (currently 22:00:00) -- ~10.4h raw, measured 19.7s+19.1s/ex (uncon+constr), 1206ex x3 seeds
 
-# -- gpt-oss (idx 3, 4): effort sweep --------------------------------------------
-# No OFF arm -- Harmony always emits a reasoning channel (reasoning_off_supported=False).
-submit h200       1 3 18000 6:00:00  --reasoning-effort low
-submit h200       1 3 18000 12:00:00 --reasoning-effort medium
-submit h200       2 4 18000 8:00:00  --reasoning-effort low
-submit h200       2 4 18000 24:00:00 --reasoning-effort medium
+# -- gpt-oss (idx 3, 4). No OFF arm -- Harmony always emits a reasoning channel. 
+submit h200       2 3 18000 5:00:00    12  --reasoning-effort low
+#   -> [Claude est.] recommend --time 3:30:00 (currently 5:00:00) -- ~2.6h raw, measured 11.2s+11.6s/ex (uncon+constr), 1206ex x3 seeds
+submit h200       2 3 18000 8:00:00    12  --reasoning-effort medium
+#   -> [Claude est.] recommend --time 3:30:00 (currently 8:00:00) -- ~2.6h raw, measured 11.2s+11.6s/ex (uncon+constr), 1206ex x3 seeds; no exact effort match, borrowed low
+
+# submit h200       2 4 18000 14:00:00   2  --reasoning-effort low
+#   -> [Claude est.] recommend --time 11:00:00 (currently 14:00:00) -- ~8.6h raw, measured 8.3s+8.7s/ex (uncon+constr), 1206ex x3 seeds
+# submit h200       4 4 18000 14:00:00   4  --reasoning-effort medium
+#   -> [Claude est.] recommend --time 6:00:00 (currently 14:00:00) -- ~4.3h raw, measured 8.3s+8.7s/ex (uncon+constr), 1206ex x3 seeds; no exact effort match, borrowed low
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

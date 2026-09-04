@@ -269,3 +269,139 @@ def assign_spans_from_context(full_text_tokens: list, entities: list, fuzzy: boo
     if return_stats:
         return tags, stats
     return tags
+
+
+# ---------------------------------------------------------------------------
+# Character-level context matching -- the publication baseline
+# ---------------------------------------------------------------------------
+#
+# `assign_spans_from_context` above returns BIO tags over whitespace tokens, which is lossy for every task whose gold is
+# sub-token (Toxic Spans) or zero-length (MultiGEC's M), and it forces the model's input to be rebuilt as `"
+# ".join(tokens)` rather than the original string the constrained-generation arm copies verbatim. The function below
+# returns CHARACTER spans against the original text instead, so the baseline is scored by exactly the same metric code,
+# on exactly the same input, as the constrained arm.
+
+ERROR_TYPES = (
+    "success",
+    "empty_response",
+    "empty_prediction",
+    "format_error",
+    "format_max_tokens_exceeded",
+    "span_not_found",
+    "partial_span_not_found",
+    "invalid_label",
+    "partial_invalid_label",
+    "empty_label",
+    "partial_empty_label",
+)
+
+
+def assign_char_spans_from_context(full_text: str, entities: list, valid_labels: set,
+                                   json_parse_ok: bool = True,
+                                   insertion_labels: set = frozenset()):
+    """Locate each predicted {entity, label, context} item in `full_text`.
+
+    Returns `(spans, stats)`. `spans` are `{"start", "end", "label"}` dicts with character offsets into `full_text`,
+    end-exclusive -- the same shape `parse_spans_from_tagged_output` yields for the constrained arm, so both feed
+    `compute_overlap_counts` and `spans_to_char_set` unchanged.
+
+    Matching is two-stage and case-insensitive, mirroring the exact arm of `assign_spans_from_context`: the context
+    snippet is located in the full text first, then the entity is located inside that matched window. The snippet is
+    what disambiguates repeated occurrences -- an entity string on its own cannot say which occurrence it meant.
+
+    `insertion_labels` (MultiGEC's `{"M"}`) marks labels whose gold is a ZERO-LENGTH insertion point. For those the
+    located entity is the token before the gap, and the emitted span is empty and sits at `entity_end + 1`, i.e. at the
+    start of the following token.
+
+    Label validity is checked AFTER location, not before, so an item that could not be found is counted as a location
+    failure rather than being hidden behind a label failure. Spans carrying a label outside `valid_labels` are counted
+    in `stats['invalid_label_count']` and then DROPPED, which is what the constrained arm does with the same filter; the
+    rate is reported separately as the error the constraint removes.
+    """
+    stats = {
+        'processed_entities': 0,
+        'successful_entities': 0,
+        'invalid_entity_format': 0,
+        'format_invalid': 0,
+        'context_not_in_input': 0,
+        'entity_not_in_context': 0,
+        'exact_match': 0,
+        'invalid_label_count': 0,
+        'located_entities': 0,
+        'unlocated_entities': 0,
+    }
+
+    spans = []
+    lowered = full_text.lower()
+
+    for ent in entities:
+        if not isinstance(ent, dict) or 'entity' not in ent or 'label' not in ent or 'context' not in ent:
+            stats['invalid_entity_format'] += 1
+            continue
+        stats['processed_entities'] += 1
+
+        entity_text = str(ent['entity'])
+        entity_label = str(ent['label'])
+        context_text = str(ent['context'])
+
+        context_start = lowered.find(context_text.lower())
+        if context_start == -1:
+            stats['context_not_in_input'] += 1
+            stats['unlocated_entities'] += 1
+            continue
+        context_end = context_start + len(context_text)
+
+        matched_context = full_text[context_start:context_end]
+        entity_offset = matched_context.lower().find(entity_text.lower())
+        if entity_offset == -1:
+            stats['entity_not_in_context'] += 1
+            stats['unlocated_entities'] += 1
+            continue
+
+        stats['located_entities'] += 1
+
+        if entity_label not in valid_labels:
+            stats['invalid_label_count'] += 1
+            continue
+
+        start = context_start + entity_offset
+        end = start + len(entity_text)
+        if entity_label in insertion_labels:
+            # Zero-length insertion point just after the preceding token.
+            start = end = end + 1
+
+        spans.append({"start": start, "end": end, "label": entity_label})
+        stats['successful_entities'] += 1
+        stats['exact_match'] += 1
+
+    stats['format_invalid'] = 1 if (not json_parse_ok or stats['invalid_entity_format'] > 0) else 0
+    return spans, stats
+
+
+def classify_generation_error(raw_output: str, json_parse_ok: bool, n_items: int,
+                              stats: dict, hit_token_cap: bool = False) -> str:
+    """
+    One error label per generation, to know what type of error happened for each example.
+    """
+    if not (raw_output or "").strip():
+        return "empty_response"
+    if json_parse_ok and n_items == 0:
+        return "empty_prediction"
+
+    located = stats['located_entities']
+    unlocated = stats['unlocated_entities']
+
+    if located == 0 and unlocated == 0:
+        # Nothing parseable came back at all.
+        return "format_max_tokens_exceeded" if hit_token_cap else "format_error"
+    if located == 0:
+        return "span_not_found"
+    if unlocated > 0:
+        return "partial_span_not_found"
+
+    invalid = stats['invalid_label_count']
+    if invalid == located:
+        return "invalid_label"
+    if invalid > 0:
+        return "partial_invalid_label"
+    return "success"

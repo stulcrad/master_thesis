@@ -87,29 +87,51 @@ submit() {
 # idx1 gemma-4-31B-it, idx5 Qwen3-8B, gpt-oss-20b medium and any reasoning-ON arm for
 # Qwen3.8-27B stay commented-out reference lines below -- bigger models are CG-only
 # for now, decide later.
-#
-#   idx 0 OFF  0.3h (1 job)  | idx 0 ON   9.5h (1 job)  | idx 5 OFF  0.4h (1 job)
-#   idx 3 low  5.6h (1 job)  | idx 3 med 12.1h/job (3 jobs)  | idx 2 OFF 1.3h (1 job)  | idx 2 ON(low) 11.9h/job (2 jobs)
+
 
 submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
+#   -> [Claude est. v2] --time 1:00:00 (currently 4:00:00) | ~0.6h + 25% margin.
+#      Measured: job 11481017_0 (0.64h) at 3 shards = 334 ex/shard.
 submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking
+#   -> [Claude est. v2] --time 6:30:00 (currently 14:00:00) | ~2.4h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no toxic run of this arm -- from job 11477957_0 (4.36h) on conll2003, x0.64 (toxic/conll2003 ratio on the OFF arm) at 1 shard = 1000 ex/shard; this line is 6 shards = 167 ex/shard.
 
 # submit amdgpufast 1 5 18000 4:00:00   2   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on toxic. This line is
+#      2 shards = ~500 ex/shard; run one seed first rather than guessing.
 
 submit amdgpu     2 3 18000  8:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] --time 19:30:00 (currently 8:00:00) | ~7.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no toxic run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x0.64 (toxic/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 1000 ex/shard.
 
 # submit amdgpu     2 3 18000 14:00:00  1   --reasoning-effort medium --shard 0/3
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on toxic. This line is
+#      1 shards, --shard x/3 = ~334 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 3 18000 14:00:00  1   --reasoning-effort medium --shard 1/3
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on toxic. This line is
+#      1 shards, --shard x/3 = ~334 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 3 18000 14:00:00  1   --reasoning-effort medium --shard 2/3
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on toxic. This line is
+#      1 shards, --shard x/3 = ~334 ex/shard; run one seed first rather than guessing.
 
 submit amdgpufast 2 2 18000 4:00:00   1   --no-enable-thinking
+#   -> [Claude est. v2] --time 8:00:00 (currently 4:00:00) | ~3.1h + 150% margin.  ** over the 4h amdgpufast wall: use *long, or more shards/chunks **
+#      ROUGH transfer (+/-3x on back-test): no toxic run of this arm -- from job 11477959_2 (5.20h) (geometric mean of 2 transfers) on conll2003, x0.64 (toxic/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 1000 ex/shard.
 
 # submit amdgpu     2 2 18000 14:00:00  1   --enable-thinking --reasoning-effort low --shard 0/2
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on toxic. This line is
+#      1 shards, --shard x/2 = ~500 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 2 18000 14:00:00  1   --enable-thinking --reasoning-effort low --shard 1/2
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on toxic. This line is
+#      1 shards, --shard x/2 = ~500 ex/shard; run one seed first rather than guessing.
 
 # submit amdgpu     2 1 18000 4:00:00   1   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for gemma-4-31B-it OFF on toxic. This line is
+#      1 shards = ~1000 ex/shard; run one seed first rather than guessing.
 
 # submit h200       1 4 18000 18:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-120b ON/low on toxic. This line is
+#      1 shards = ~1000 ex/shard; run one seed first rather than guessing.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

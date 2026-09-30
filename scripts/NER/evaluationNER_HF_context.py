@@ -53,6 +53,7 @@ from utils.context_matching_utils import (
 )
 from utils.system_prompts import SYSTEM_PROMPT_CONTEXT_BASE_CONLL, SYSTEM_PROMPT_CONTEXT_BASE_UNER
 from utils.model_registry import get, resolve_sampling
+from utils.xgrammar_utils import compile_entity_grammar, new_grammar_processor
 
 # -------------------------
 # Model configuration
@@ -84,6 +85,9 @@ parser.add_argument("--seeds", type=int, nargs="+", default=[42],
                     help="Seeds to run and average over.")
 parser.add_argument("--shard", type=str, default=None,
                     help="Optional: i/N - shard the dataset into N shards and run only shard i.")
+parser.add_argument("--xgrammar", action="store_true",
+                    help="Grammar-constrained baseline: force the JSON output format and the label set with xgrammar. "
+                         "Reasoning-off only. Results go to Xgrammar/ instead of Context-Based/.")
 
 args = parser.parse_args()
 
@@ -105,6 +109,12 @@ if args.reasoning_effort and args.reasoning_effort not in spec.reasoning_effort_
         f"valid levels for this model: {', '.join(spec.reasoning_effort_levels)}"
     )
 reasoning_model = args.enable_thinking and spec.reasoning
+if args.xgrammar and reasoning_model:
+    raise SystemExit("--xgrammar constrains from the first token, which blocks the reasoning block: use --no-enable-thinking")
+
+# Same script, two baselines: plain prompting, or prompting with the output format forced by a grammar.
+APPROACH_DIR = "Xgrammar" if args.xgrammar else "Context-Based"
+METHOD = "xgrammar_json_schema" if args.xgrammar else "context_hf"
 
 print(f"\nLoading model/tokenizer: {model_name}")
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -146,6 +156,7 @@ seqeval = evaluate.load("seqeval")
 # labels/results_dir depend only on --dataset, not --subset, so this is free -- no data load needed to resolve them.
 valid_labels_list, results_dir = ner_dataset_info(args.dataset)
 valid_labels = set(valid_labels_list)
+compiled_grammar = compile_entity_grammar(tokenizer, model, valid_labels) if args.xgrammar else None
 
 subsets_to_run = ner_subsets(args.dataset) if "all" in args.subset else list(args.subset)
 print(f"Dataset: {args.dataset}, subsets to run ({len(subsets_to_run)}): {', '.join(subsets_to_run)}")
@@ -166,7 +177,7 @@ if args.shard is not None:
         raise SystemExit(f"--shard must be of the form i/N with 0 <= i < N, got {args.shard!r}")
     print(f"Sharding dataset into {shard_N} shards, running only shard {shard_i}.")
 
-PRED_DIR = f"{RESULTS_ROOT}/{results_dir}/Context-Based/Predictions"
+PRED_DIR = f"{RESULTS_ROOT}/{results_dir}/{APPROACH_DIR}/Predictions"
 
 results = []
 
@@ -203,7 +214,7 @@ def save_results():
     kill partway through would otherwise throw away every completed subset with it.
     """
     df = pd.DataFrame(results)
-    csv_path = (f"{RESULTS_ROOT}/{results_dir}/Context-Based/Csv/"
+    csv_path = (f"{RESULTS_ROOT}/{results_dir}/{APPROACH_DIR}/Csv/"
                 f"{run_tag()}_{model_name.split('/')[-1]}_{batch_size}_BS_{config_tag()}_{sampling_strategy}.csv")
     txt_path = csv_path.replace("Csv", "Txt").replace(".csv", ".txt")
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
@@ -307,8 +318,8 @@ for subset in subsets_to_run:
                 generated, num_output_tokens, generation_seconds = generate_markup(
                     model=model,
                     tokenizer=tokenizer,
-                    processor=None,
-                    eval_model="unconstrained",
+                    processor=new_grammar_processor(compiled_grammar) if args.xgrammar else None,
+                    eval_model="constrained" if args.xgrammar else "unconstrained",
                     input_text=input_text,
                     system_prompt=SYSTEM_PROMPT,
                     max_new_tokens=MAX_NEW_TOKENS,
@@ -389,7 +400,7 @@ for subset in subsets_to_run:
                 "key": f"{seed}:{batch_idx}",
                 "dataset": dataset_tag(subset),
                 "dataset_names": [ex["dataset_name"] for ex in batch],
-                "method": "context_hf",
+                "method": METHOD,
                 "matching": MATCHING,
                 "model": model_name,
                 "reasoning_enabled": reasoning_model,
@@ -541,7 +552,7 @@ for subset in subsets_to_run:
     row = {
         "model": model_name,
         "dataset": dataset_tag(subset),
-        "method": "context_hf",
+        "method": METHOD,
         "matching": MATCHING,
         "reasoning_enabled": reasoning_model,
         "reasoning_effort": args.reasoning_effort if args.reasoning_effort else "n|a",
@@ -625,7 +636,7 @@ if args.dataset == "uner":
         "REMINDER -- the semin_*_f1 numbers above are PER TREEBANK (this script\n"
         "never pools UNER into one run). Semin et al.'s headline figure is the\n"
         "MACRO average of the 18 per-treebank F1s -- a downstream step over every\n"
-        f"uner_*.csv in {RESULTS_ROOT}/{results_dir}/Context-Based/Csv/ for this\n"
+        f"uner_*.csv in {RESULTS_ROOT}/{results_dir}/{APPROACH_DIR}/Csv/ for this\n"
         "model/config, not something this script computes.\n"
         + "=" * 78
     )

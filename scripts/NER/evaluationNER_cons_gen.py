@@ -136,6 +136,9 @@ EVAL_MODES = ["unconstrained", "constrained"]
 # Results root. Thesis runs live in Experiment_results/ and are FROZEN (cited in the thesis); publication runs go here
 # so the two are trivially separable by eye.
 RESULTS_ROOT = "/home/stulcrad/master_thesis/Experiment_results_publication"
+# Full UNER (7,523 examples, no --max-examples) for the Semin et al. comparison, own root so the capped runs survive.
+# Comment out once jobs 11722791 and 11722792 are RUNNING -- the script is read when a job starts, not at submit.
+RESULTS_ROOT = "/home/stulcrad/master_thesis/Experiment_results_publication_full"
 
 # Processor class is only used for constrained mode. PROCESSOR_CLASSES = ["whole_sequence", "token_aware"]
 PROCESSOR_CLASSES = ["token_aware"] # Use only token_aware for publication runs, since it is the better-performing one.

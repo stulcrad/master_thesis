@@ -77,34 +77,42 @@ submit() {
 
 # -- gemma-4-E2B (idx 0): 12 GiB/proc, packs well ------------------------------
 # submit h200fast   1 0 18000 4:00:00    5   --no-enable-thinking
-#   -> [Claude est.] recommend --time 2:00:00 (currently 4:00:00) -- ~1.3h raw, measured 2.5s+3.6s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 2:00:00 (currently 4:00:00) | ~1.5h + 25% margin.
+#      Measured: job 11442018_0 (1.46h) at 5 shards = 200 ex/shard.
 # submit h200       2 0 18000 8:00:00   12  --enable-thinking
-#   -> [Claude est.] recommend --time 11:30:00 (currently 8:00:00) -- ~8.8h raw, measured 47.4s+47.0s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 9:00:00 (currently 8:00:00) | ~7.1h + 25% margin.
+#      Measured: job 11458384_0 (7.11h) at 12 shards = 84 ex/shard.
 
 # -- gemma-4-31B (idx 1): 72 GiB/proc -> one process per H200 ------------------
 # submit h200       1 1 18000 14:00:00   1  --no-enable-thinking
-#   -> [Claude est.] recommend --time 4:30:00 (currently 14:00:00) -- ~3.3h raw, measured 1.9s+2.0s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 5:30:00 (currently 14:00:00) | ~4.3h + 25% margin.
+#      Measured: job 11442022_1 (4.28h) at 1 shard = 1000 ex/shard.
 
 # -- Qwen3-8B (idx 5): Semin-comparable, reasoning OFF only --------------------
 # submit h200fast   1 5 18000 4:00:00    5  --no-enable-thinking
-#   -> [Claude est.] recommend --time 2:30:00 (currently 4:00:00) -- ~1.6h raw, measured 3.6s+3.7s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 2:30:00 (currently 4:00:00) | ~1.7h + 25% margin.
+#      Measured: job 11442024_5 (1.69h) at 5 shards = 200 ex/shard.
 
 # -- Qwen3.8-27B (idx 2): 65 GiB/proc ------------------------------------------
 # submit h200       1 2 18000 14:00:00   2  --no-enable-thinking
-#   -> [Claude est.] recommend --time 3:30:00 (currently 14:00:00) -- ~2.5h raw, measured 2.6s+2.9s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 4:30:00 (currently 14:00:00) | ~3.2h + 25% margin.
+#      Measured: job 11442026_2 (3.20h) at 2 shards = 500 ex/shard.
 # submit h200       2 2 18000 24:00:00   4  --enable-thinking --reasoning-effort low
-#   -> [Claude est.] recommend --time 13:30:00 (currently 24:00:00) -- ~10.4h raw, measured 23.6s+23.1s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 14:30:00 (currently 24:00:00) | ~11.2h + 25% margin.
+#      Measured: job 11442028_2 (11.24h) at 4 shards = 250 ex/shard.
 
 # -- gpt-oss (idx 3, 4). No OFF arm -- Harmony always emits a reasoning channel. 
 # submit h200fast   1 3 18000 4:00:00    5  --reasoning-effort low
-#   -> [Claude est.] recommend --time 4:30:00 (currently 4:00:00) -- ~3.1h raw, measured 7.1s+7.3s/ex (uncon+constr), 1000ex x3 seeds  ** EXCEEDS 4h h200fast WALL, consider a *long partition or more shards/chunks **
+#   -> [Claude est. v2] --time 4:00:00 (currently 4:00:00) | ~2.9h + 25% margin.
+#      Measured: job 11442030_3 (2.88h) at 5 shards = 200 ex/shard.
 submit h200       3 3 18000 12:00:00    12  --reasoning-effort medium
-#   -> [Claude est.] recommend --time 7:30:00 (currently 12:00:00) -- ~5.8h raw, measured 34.5s+34.5s/ex (uncon+constr), 1000ex x3 seeds
 
 # submit h200       2 4 18000 14:00:00   2  --reasoning-effort low
-#   -> [Claude est.] recommend --time 7:30:00 (currently 14:00:00) -- ~5.7h raw, measured 6.7s+6.9s/ex (uncon+constr), 1000ex x3 seeds
+#   -> [Claude est. v2] --time 9:00:00 (currently 14:00:00) | ~6.8h + 25% margin.
+#      Measured: job 11450188_4 (6.81h) at 2 shards = 500 ex/shard.
 # submit h200       4 4 18000 14:00:00   4  --reasoning-effort medium
-#   -> [Claude est.] recommend --time 4:00:00 (currently 14:00:00) -- ~2.8h raw, measured 6.7s+6.9s/ex (uncon+constr), 1000ex x3 seeds; no exact effort match, borrowed low
+#   -> [Claude est. v2] --time 15:30:00 (currently 14:00:00) | ~10.2h + 50% margin.
+#      Scaled: job 11450188_4 (6.81h at effort=low) x3 for medium at 2 shards = 500 ex/shard; this line is 4 shards = 250 ex/shard.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

@@ -87,45 +87,79 @@ submit() {
 # Qwen3.8-27B stay commented-out reference lines below -- bigger models are CG-only
 # for now, decide later.
 #
-#   idx 0 OFF   6.6h (1 job)  | idx 0 ON  12.4h/job (3 jobs)  | idx 5 OFF  8.6h (1 job)
-#   idx 3 low  13.9h/job (4 jobs)  | idx 3 med 17.8h/job (21 jobs -- 374h total, do NOT run)
-#   idx 2 OFF   9.1h/job (2 jobs)  | idx 2 ON(low) 15.5h/job (5 jobs)
-#
 # MultiGEC is the expensive dataset for THIS arm specifically: it is the only one where the
 # baseline's answer is long. ~14 gold spans per essay means a ~340-token JSON array, where every
 # other dataset asks for 18-107 tokens. Budget accordingly and shard it.
 
 submit amdgpu     1 0 18000 8:00:00   3   --no-enable-thinking
+#   -> [Claude est. v2] --time 2:30:00 (currently 8:00:00) | ~1.9h + 25% margin.
+#      Measured: job 11481075_0 (1.91h) at 3 shards = 168 ex/shard.
 
 submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 0/3
+#   -> [Claude est. v2] --time 6:30:00 (currently 14:00:00) | ~2.4h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11477957_0 (4.36h) on conll2003, x3.80 (gec/conll2003 ratio on the OFF arm) at 1 shard = 504 ex/shard; this line is 6 shards x --shard x/3 = 28 ex/shard.
 submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 1/3
+#   -> [Claude est. v2] --time 6:30:00 (currently 14:00:00) | ~2.4h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11477957_0 (4.36h) on conll2003, x3.80 (gec/conll2003 ratio on the OFF arm) at 1 shard = 504 ex/shard; this line is 6 shards x --shard x/3 = 28 ex/shard.
 submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 2/3
+#   -> [Claude est. v2] --time 6:30:00 (currently 14:00:00) | ~2.4h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11477957_0 (4.36h) on conll2003, x3.80 (gec/conll2003 ratio on the OFF arm) at 1 shard = 504 ex/shard; this line is 6 shards x --shard x/3 = 28 ex/shard.
 
 # submit amdgpu     1 5 18000 10:00:00  2   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on gec. This line is
+#      2 shards = ~252 ex/shard; run one seed first rather than guessing.
 
 # gpt-oss-20b needs 2 GPUs for its one process (SHARDS stuck at 1), so splitting the corpus
 # across jobs is the ONLY lever -- 4 jobs of ~14h each, comfortably under the 24h amdgpu wall.
 submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low --shard 0/4
+#   -> [Claude est. v2] --time 14:30:00 (currently 16:00:00) | ~5.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x3.80 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 1 shard x --shard x/4 = 126 ex/shard.
 submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low --shard 1/4
+#   -> [Claude est. v2] --time 14:30:00 (currently 16:00:00) | ~5.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x3.80 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 1 shard x --shard x/4 = 126 ex/shard.
 submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low --shard 2/4
+#   -> [Claude est. v2] --time 14:30:00 (currently 16:00:00) | ~5.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x3.80 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 1 shard x --shard x/4 = 126 ex/shard.
 submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low --shard 3/4
+#   -> [Claude est. v2] --time 14:30:00 (currently 16:00:00) | ~5.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x3.80 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 1 shard x --shard x/4 = 126 ex/shard.
 
 # 374h total across the arm even at 21-way sharding -- not worth running for a baseline row.
 # submit amdgpu     2 3 18000 18:00:00  1   --reasoning-effort medium --shard i/21   # (i = 0..20)
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on gec. This line is
+#      1 shards = ~504 ex/shard; run one seed first rather than guessing.
 
 submit amdgpu     2 2 18000 10:00:00  1   --no-enable-thinking --shard 0/2
+#   -> [Claude est. v2] --time 11:30:00 (currently 10:00:00) | ~4.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11477959_2 (5.20h) (geometric mean of 2 transfers) on conll2003, x3.80 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 1 shard x --shard x/2 = 252 ex/shard.
 submit amdgpu     2 2 18000 10:00:00  1   --no-enable-thinking --shard 1/2
+#   -> [Claude est. v2] --time 11:30:00 (currently 10:00:00) | ~4.6h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11477959_2 (5.20h) (geometric mean of 2 transfers) on conll2003, x3.80 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 1 shard x --shard x/2 = 252 ex/shard.
 
 # 5 jobs of ~15.5h each.
 # submit amdgpu     2 2 18000 17:00:00  1   --enable-thinking --reasoning-effort low --shard 0/5
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on gec. This line is
+#      1 shards, --shard x/5 = ~101 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 2 18000 17:00:00  1   --enable-thinking --reasoning-effort low --shard 1/5
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on gec. This line is
+#      1 shards, --shard x/5 = ~101 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 2 18000 17:00:00  1   --enable-thinking --reasoning-effort low --shard 2/5
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on gec. This line is
+#      1 shards, --shard x/5 = ~101 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 2 18000 17:00:00  1   --enable-thinking --reasoning-effort low --shard 3/5
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on gec. This line is
+#      1 shards, --shard x/5 = ~101 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 2 18000 17:00:00  1   --enable-thinking --reasoning-effort low --shard 4/5
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on gec. This line is
+#      1 shards, --shard x/5 = ~101 ex/shard; run one seed first rather than guessing.
 
 # submit amdgpu     2 1 18000 10:00:00  1   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for gemma-4-31B-it OFF on gec. This line is
+#      1 shards = ~504 ex/shard; run one seed first rather than guessing.
 
 # submit h200       1 4 18000 18:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-120b ON/low on gec. This line is
+#      1 shards = ~504 ex/shard; run one seed first rather than guessing.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

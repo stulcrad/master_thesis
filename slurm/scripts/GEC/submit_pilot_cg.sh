@@ -80,35 +80,43 @@ submit() {
 
 # -- gemma-4-E2B (idx 0): 2.3B effective, cheap enough for both arms ------
 # submit h200       1 0 18000  8:00:00  8  --no-enable-thinking
-#   -> [Claude est.] recommend --time 4:30:00 (currently 8:00:00) -- ~3.4h raw, measured 22.7s+20.9s/ex (uncon+constr), 504ex x3 seeds
+#   -> [Claude est. v2] --time 3:30:00 (currently 8:00:00) | ~2.5h + 25% margin.
+#      Measured: job 11456075_0 (2.51h) at 8 shards = 63 ex/shard.
 # submit h200       1 0 18000 18:00:00 10  --enable-thinking
-#   -> [Claude est.] recommend --time 35:00:00 (currently 18:00:00) -- ~27.7h raw, measured 208.5s+198.1s/ex (uncon+constr), 504ex x3 seeds  ** EXCEEDS 24h h200 WALL, consider a *long partition or more shards/chunks **
+#   -> [Claude est. v2] --time 22:00:00 (currently 18:00:00) | ~17.6h + 25% margin.
+#      Measured: job 11456076_0 (17.55h) at 10 shards = 51 ex/shard.
 
 # -- gemma-4-31B (idx 1): 72 GiB/proc -> one process per H200 ------------------
 # submit h200       2 1 18000 12:00:00  2  --no-enable-thinking
-#   -> [Claude est.] recommend --time 7:00:00 (currently 12:00:00) -- ~5.1h raw, measured 12.1s+12.2s/ex (uncon+constr), 504ex x3 seeds
+#   -> [Claude est. v2] --time 7:30:00 (currently 12:00:00) | ~5.8h + 25% margin.
+#      Measured: job 11456077_1 (5.81h) at 2 shards = 252 ex/shard.
 
 # -- Qwen3-8B (idx 5): Semin-comparable, reasoning OFF only --------------------
-# submit h200       1 5 18000 12:00:00  8  --no-enable-thinking   # Qwen3-8B, 1 GPU
-#   -> [Claude est.] recommend --time 4:30:00 (currently 12:00:00) -- ~3.2h raw, measured 24.0s+17.7s/ex (uncon+constr), 504ex x3 seeds
+submit h200         1 5 18000 7:00:00  8  --no-enable-thinking   # Qwen3-8B, 1 GPU -- was OOM-killed on h03
+#   -> [Claude est. v2] --time 7:00:00 (currently 12:00:00) | ~2.7h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11437687_5 (3.39h) (geometric mean of 23 transfers) on conll2003, x10.51 (gec/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 504 ex/shard; this line is 8 shards = 63 ex/shard.
 
 # -- Qwen3.8-27B (idx 2): reasoning ON (low) vs OFF -----------------------
 # submit h200       1 2 18000 24:00:00  2  --no-enable-thinking
-#   -> [Claude est.] recommend --time 9:00:00 (currently 24:00:00) -- ~6.9h raw, measured 15.9s+14.9s/ex (uncon+constr), 504ex x3 seeds
+#   -> [Claude est. v2] --time 9:00:00 (currently 24:00:00) | ~6.8h + 25% margin.
+#      Measured: job 11456079_2 (6.84h) at 2 shards = 252 ex/shard.
 # submit h200       2 2 18000 20:00:00  4  --enable-thinking --reasoning-effort low
-#   -> [Claude est.] recommend --time 37:30:00 (currently 20:00:00) -- ~29.6h raw, measured 131.4s+132.3s/ex (uncon+constr), 504ex x3 seeds  ** EXCEEDS 24h h200 WALL, consider a *long partition or more shards/chunks **
+#   -> [Claude est. v2] --time 36:30:00 (currently 20:00:00) | ~14.4h + 150% margin.  ** over the 24h h200 wall: use *long, or more shards/chunks **
+#      ROUGH transfer (+/-3x on back-test): no gec run of this arm -- from job 11437682_2 (6.17h) (geometric mean of 3 transfers) on conll2003, x5.87 (gec/conll2003 ratio on the OFF arm) at 1 shard = 504 ex/shard; this line is 4 shards = 126 ex/shard.
 
 # -- gpt-oss (idx 3, 4): effort sweep -------------------------------------
 # submit h200       1 3 18000 10:00:00  8  --reasoning-effort low
-#   -> [Claude est.] recommend --time 11:00:00 (currently 10:00:00) -- ~8.4h raw, measured 54.5s+53.8s/ex (uncon+constr), 504ex x3 seeds
-# submit h200       1 3 18000 12:00:00  9  --reasoning-effort medium
-#   -> [Claude est.] recommend --time 54:00:00 (currently 12:00:00) -- ~43.0h raw, measured 378.1s+215.6s/ex (uncon+constr), 504ex x3 seeds  ** EXCEEDS 24h h200 WALL, consider a *long partition or more shards/chunks **
+#   -> [Claude est. v2] --time 8:30:00 (currently 10:00:00) | ~6.5h + 25% margin.
+#      Measured: job 11456081_3 (6.47h) at 8 shards = 63 ex/shard.
+submit h200       3 3 18000 20:00:00  18  --reasoning-effort medium
 
-# submit h200       2 4 18000 16:00:00   2  --reasoning-effort low
-#   -> [Claude est.] recommend --time 21:00:00 (currently 16:00:00) -- ~16.5h raw, measured 39.2s+39.5s/ex (uncon+constr), 504ex x3 seeds
+submit h200       2 4 18000 20:00:00   2  --reasoning-effort low
+#   -> [Claude est. v2] --time 22:30:00 (currently 20:00:00) | ~17.7h + 25% margin.
+#      Measured: timeout 11456083_4 (16.0h = 90.5% of rows) at 2 shards = 252 ex/shard.
 
-submit h200       5 4 18000 24:00:00  5  --reasoning-effort medium
-#   -> [Claude est.] recommend --time 9:00:00 (currently 24:00:00) -- ~6.6h raw, measured 39.2s+39.5s/ex (uncon+constr), 504ex x3 seeds; no exact effort match, borrowed low
+# submit h200       5 4 18000 24:00:00  5  --reasoning-effort medium
+#   -> [Claude est. v2] --time 32:00:00 (currently 24:00:00) | ~21.3h + 50% margin.  ** over the 24h h200 wall: use *long, or more shards/chunks **
+#      Scaled: timeout 11456083_4 (16.0h = 90.5% of rows) at effort=low, x3 for medium at 2 shards = 252 ex/shard; this line is 5 shards = 101 ex/shard.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

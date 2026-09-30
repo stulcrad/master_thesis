@@ -86,32 +86,56 @@ submit() {
 # idx1 gemma-4-31B-it, idx5 Qwen3-8B, gpt-oss-20b medium and any reasoning-ON arm for
 # Qwen3.8-27B stay commented-out reference lines below -- bigger models are CG-only
 # for now, decide later.
-#
-#   idx 0 OFF  0.6h (1 job)  | idx 0 ON  12.4h/job (2 jobs)  | idx 5 OFF  1.3h (1 job)
-#   idx 3 low 10.7h (1 job)  | idx 3 med 18.0h/job (5 jobs)  | idx 2 OFF 2.4h (1 job)  | idx 2 ON(low) 16.4h (1 job)
 
-submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
 
-submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 0/2
-submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 1/2
+# submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
+#   -> [Claude est. v2] --time 2:00:00 (currently 4:00:00) | ~1.2h + 25% margin.
+#      Measured: job 11481025_0 (1.23h) at 3 shards = 402 ex/shard.
+
+# submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 0/2
+#   -> [Claude est. v2] --time 6:00:00 (currently 14:00:00) | ~2.3h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no legalqa run of this arm -- from job 11477957_0 (4.36h) on conll2003, x1.02 (legalqa/conll2003 ratio on the OFF arm) at 1 shard = 1206 ex/shard; this line is 6 shards x --shard x/2 = 101 ex/shard.
+# submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking --shard 1/2
+#   -> [Claude est. v2] --time 6:00:00 (currently 14:00:00) | ~2.3h + 150% margin.
+#      ROUGH transfer (+/-3x on back-test): no legalqa run of this arm -- from job 11477957_0 (4.36h) on conll2003, x1.02 (legalqa/conll2003 ratio on the OFF arm) at 1 shard = 1206 ex/shard; this line is 6 shards x --shard x/2 = 101 ex/shard.
 
 # submit amdgpufast 1 5 18000 4:00:00   2   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on legalqa. This line is
+#      2 shards = ~603 ex/shard; run one seed first rather than guessing.
 
-submit amdgpu     2 3 18000 15:00:00  1   --reasoning-effort low
+# submit amdgpu     2 3 18000 15:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] --time 36:30:00 (currently 15:00:00) | ~14.5h + 150% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+#      ROUGH transfer (+/-3x on back-test): no legalqa run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x1.02 (legalqa/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 1206 ex/shard.
 
 # 5 jobs of ~18h each -- 89.8h total, expensive for a baseline row; consider skipping.
 # submit amdgpu     2 3 18000 20:00:00  1   --reasoning-effort medium --shard 0/5
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on legalqa. This line is
+#      1 shards, --shard x/5 = ~242 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 3 18000 20:00:00  1   --reasoning-effort medium --shard 1/5
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on legalqa. This line is
+#      1 shards, --shard x/5 = ~242 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 3 18000 20:00:00  1   --reasoning-effort medium --shard 2/5
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on legalqa. This line is
+#      1 shards, --shard x/5 = ~242 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 3 18000 20:00:00  1   --reasoning-effort medium --shard 3/5
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on legalqa. This line is
+#      1 shards, --shard x/5 = ~242 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 3 18000 20:00:00  1   --reasoning-effort medium --shard 4/5
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on legalqa. This line is
+#      1 shards, --shard x/5 = ~242 ex/shard; run one seed first rather than guessing.
 
-submit amdgpufast  2 18000 4:00:00   1   --no-enable-thinking
+submit amdgpu 2 2 18000 10:00:00   1   --no-enable-thinking
 # submit amdgpu     2 2 18000 18:00:00  1   --enable-thinking --reasoning-effort low
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on legalqa. This line is
+#      1 shards = ~1206 ex/shard; run one seed first rather than guessing.
 
 # submit amdgpu     2 1 18000 4:00:00   1   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for gemma-4-31B-it OFF on legalqa. This line is
+#      1 shards = ~1206 ex/shard; run one seed first rather than guessing.
 
 # submit h200       4 4 18000 18:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-120b ON/low on legalqa. This line is
+#      1 shards = ~1206 ex/shard; run one seed first rather than guessing.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

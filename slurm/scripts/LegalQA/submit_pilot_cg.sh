@@ -87,34 +87,45 @@ submit() {
 
 # -- gemma-4-E2B (idx 0): 12 GiB/proc, packs well ------------------------------
 # submit h200fast   1 0 18000 4:00:00    6  --no-enable-thinking
-#   -> [Claude est.] recommend --time 4:30:00 (currently 4:00:00) -- ~3.2h raw, measured 2.3s+11.9s/ex (uncon+constr), 1206ex x3 seeds  ** EXCEEDS 4h h200fast WALL, consider a *long partition or more shards/chunks **
+#   -> [Claude est. v2] --time 4:30:00 (currently 4:00:00) | ~3.2h + 25% margin.  ** over the 4h h200fast wall: use *long, or more shards/chunks **
+#      Measured: job 11442017_0 (3.22h) at 6 shards = 201 ex/shard.
 # submit h200         2 0 18000 24:00:00   12  --enable-thinking
-#   -> [Claude est.] no reasoning-ON data for gemma-4-E2B-it on LegalQAEval yet -- size cautiously (its CoNLL ON/OFF ratio is ~27x, so do not assume this is close to the OFF-arm line above)
+#   -> [Claude est. v2] --time 48:00:00 (currently 24:00:00) | ~19.0h + 150% margin.  ** over the 24h h200 wall: use *long, or more shards/chunks **
+#      ROUGH transfer (+/-3x on back-test): no legalqa run of this arm -- from timeout 11437679_0 (8.0h = 64.5% of rows) (geometric mean of 4 transfers) on conll2003, x4.22 (legalqa/conll2003 ratio on the OFF arm) at 1 shard = 1206 ex/shard; this line is 12 shards = 101 ex/shard.
 
 # -- gemma-4-31B (idx 1): 72 GiB/proc -> one process per H200 ------------------
 # submit h200       2 1 18000 20:00:00   2  --no-enable-thinking
-#   -> [Claude est.] recommend --time 6:30:00 (currently 20:00:00) -- ~4.9h raw, measured 4.8s+4.9s/ex (uncon+constr), 1206ex x3 seeds
+#   -> [Claude est. v2] --time 8:30:00 (currently 20:00:00) | ~6.8h + 25% margin.
+#      Measured: job 11442021_1 (6.79h) at 2 shards = 603 ex/shard.
 
 # -- Qwen3-8B (idx 5): Semin-comparable, reasoning OFF only --------------------
 # submit h200fast    2 5 18000 4:00:00  12  --no-enable-thinking
-#   -> [Claude est.] recommend --time 3:30:00 (currently 4:00:00) -- ~2.3h raw, measured 9.8s+10.6s/ex (uncon+constr), 1206ex x3 seeds
+#   -> [Claude est. v2] --time 3:00:00 (currently 4:00:00) | ~2.3h + 25% margin.
+#      Measured: job 11457717_5 (2.34h) at 12 shards = 101 ex/shard.
 
 # -- Qwen3.8-27B (idx 2): 65 GiB/proc ------------------------------------------
 # submit h200       1 2 18000 20:00:00   2  --no-enable-thinking
-#   -> [Claude est.] recommend --time 11:00:00 (currently 20:00:00) -- ~8.2h raw, measured 7.6s+7.7s/ex (uncon+constr), 1206ex x3 seeds
+#   -> [Claude est. v2] --time 12:30:00 (currently 20:00:00) | ~10.0h + 25% margin.
+#      Measured: job 11442025_2 (9.96h) at 2 shards = 603 ex/shard.
 # submit h200       2 2 18000 22:00:00   4  --enable-thinking --reasoning-effort low
-#   -> [Claude est.] recommend --time 13:30:00 (currently 22:00:00) -- ~10.4h raw, measured 19.7s+19.1s/ex (uncon+constr), 1206ex x3 seeds
+#   -> [Claude est. v2] --time 14:30:00 (currently 22:00:00) | ~11.6h + 25% margin.
+#      Measured: job 11442027_2 (11.56h) at 4 shards = 302 ex/shard.
 
 # -- gpt-oss (idx 3, 4). No OFF arm -- Harmony always emits a reasoning channel. 
-submit h200       2 3 18000 5:00:00    12  --reasoning-effort low
-#   -> [Claude est.] recommend --time 3:30:00 (currently 5:00:00) -- ~2.6h raw, measured 11.2s+11.6s/ex (uncon+constr), 1206ex x3 seeds
-submit h200       2 3 18000 8:00:00    12  --reasoning-effort medium
-#   -> [Claude est.] recommend --time 3:30:00 (currently 8:00:00) -- ~2.6h raw, measured 11.2s+11.6s/ex (uncon+constr), 1206ex x3 seeds; no exact effort match, borrowed low
+# submit h200       2 3 18000 5:00:00    12  --reasoning-effort low
+#   -> [Claude est. v2] --time 3:00:00 (currently 5:00:00) | ~2.3h + 25% margin.
+#      Measured: job 11458424_3 (2.31h) at 12 shards = 101 ex/shard.
+
+submit h200       3 3 18000 10:00:00    12  --reasoning-effort medium
+#   -> [Claude est. v2] --time 7:00:00 (currently 8:00:00) | ~5.5h + 25% margin.
+#      Measured: timeout 11458425_3 (5.0h = 90.4% of rows) at 12 shards = 101 ex/shard.
 
 # submit h200       2 4 18000 14:00:00   2  --reasoning-effort low
-#   -> [Claude est.] recommend --time 11:00:00 (currently 14:00:00) -- ~8.6h raw, measured 8.3s+8.7s/ex (uncon+constr), 1206ex x3 seeds
+#   -> [Claude est. v2] --time 12:30:00 (currently 14:00:00) | ~9.8h + 25% margin.
+#      Measured: job 11450195_4 (9.82h) at 2 shards = 603 ex/shard.
 # submit h200       4 4 18000 14:00:00   4  --reasoning-effort medium
-#   -> [Claude est.] recommend --time 6:00:00 (currently 14:00:00) -- ~4.3h raw, measured 8.3s+8.7s/ex (uncon+constr), 1206ex x3 seeds; no exact effort match, borrowed low
+#   -> [Claude est. v2] --time 22:30:00 (currently 14:00:00) | ~14.8h + 50% margin.
+#      Scaled: job 11450195_4 (9.82h at effort=low) x3 for medium at 2 shards = 603 ex/shard; this line is 4 shards = 302 ex/shard.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  seeds='$SEEDS'"

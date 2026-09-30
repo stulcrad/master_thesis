@@ -54,6 +54,7 @@ from utils.context_matching_utils import (
 )
 from utils.system_prompts import SYSTEM_PROMPT_CONTEXT_BASE_WMT_TEMPLATE
 from utils.model_registry import get, resolve_sampling
+from utils.xgrammar_utils import compile_entity_grammar, new_grammar_processor
 
 # -------------------------
 # Model configuration
@@ -78,6 +79,9 @@ parser.add_argument("--max-examples", type=int, default=None,
                     help="Maximum number of examples to evaluate. None means all examples.")
 parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum number of new tokens to generate.")
 parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over.")
+parser.add_argument("--xgrammar", action="store_true",
+                    help="Grammar-constrained baseline: force the JSON output format and the label set with xgrammar. "
+                         "Reasoning-off only. Results go to Xgrammar/ instead of Context-Based/.")
 
 args = parser.parse_args()
 
@@ -99,6 +103,12 @@ if args.reasoning_effort and args.reasoning_effort not in spec.reasoning_effort_
         f"valid levels for this model: {', '.join(spec.reasoning_effort_levels)}"
     )
 reasoning_model = args.enable_thinking and spec.reasoning
+if args.xgrammar and reasoning_model:
+    raise SystemExit("--xgrammar constrains from the first token, which blocks the reasoning block: use --no-enable-thinking")
+
+# Same script, two baselines: plain prompting, or prompting with the output format forced by a grammar.
+APPROACH_DIR = "Xgrammar" if args.xgrammar else "Context-Based"
+METHOD = "xgrammar_json_schema" if args.xgrammar else "context_hf"
 
 print(f"\nLoading model/tokenizer: {model_name}")
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -135,6 +145,7 @@ MATCHING = "exact"
 RESULTS_ROOT = os.environ.get("RESULTS_ROOT", "/home/stulcrad/master_thesis/Experiment_results_publication")
 
 valid_labels = set(WMT_LABELS)
+compiled_grammar = compile_entity_grammar(tokenizer, model, valid_labels) if args.xgrammar else None
 
 # -------------------------
 # Load dataset
@@ -174,7 +185,7 @@ def save_results():
     partway through would otherwise throw away every completed subset with it.
     """
     df = pd.DataFrame(results)
-    csv_path = (f"{RESULTS_ROOT}/ESA-MT/Context-Based/Csv/"
+    csv_path = (f"{RESULTS_ROOT}/ESA-MT/{APPROACH_DIR}/Csv/"
                 f"{run_tag()}_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv")
     txt_path = csv_path.replace("Csv", "Txt").replace(".csv", ".txt")
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
@@ -201,7 +212,7 @@ for subset in subsets_to_run:
 
     model_short = model_name.split("/")[-1]
     pred_fh = open_jsonl_writer(
-        f"{RESULTS_ROOT}/ESA-MT/Context-Based/Predictions/"
+        f"{RESULTS_ROOT}/ESA-MT/{APPROACH_DIR}/Predictions/"
         f"{dataset_tag(subset)}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}"
         f"_context_{MATCHING}_{config_tag()}.jsonl"
     )
@@ -281,8 +292,8 @@ for subset in subsets_to_run:
                 generated, num_output_tokens, generation_seconds = generate_markup(
                     model=model,
                     tokenizer=tokenizer,
-                    processor=None,
-                    eval_model="unconstrained",
+                    processor=new_grammar_processor(compiled_grammar) if args.xgrammar else None,
+                    eval_model="constrained" if args.xgrammar else "unconstrained",
                     input_text=input_text,
                     system_prompt=system_prompt,
                     max_new_tokens=MAX_NEW_TOKENS,
@@ -367,7 +378,7 @@ for subset in subsets_to_run:
                 "key": f"{seed}:{idx}",
                 "dataset": dataset_tag(subset),
                 "dataset_name": example["dataset_name"],
-                "method": "context_hf",
+                "method": METHOD,
                 "matching": MATCHING,
                 "model": model_name,
                 "reasoning_enabled": reasoning_model,
@@ -518,7 +529,7 @@ for subset in subsets_to_run:
     row = {
         "model": model_name,
         "dataset": dataset_tag(subset),
-        "method": "context_hf",
+        "method": METHOD,
         "matching": MATCHING,
         "reasoning_enabled": reasoning_model,
         "reasoning_effort": args.reasoning_effort if args.reasoning_effort else "n|a",
@@ -596,7 +607,7 @@ print(
     "\n" + "=" * 78 + "\n"
     "REMINDER -- the numbers above are PER SUBSET (one row per source-target-domain\n"
     "file). Semin et al.'s headline figure is the MACRO average over the 24 files --\n"
-    f"a downstream step over every wmt_*.csv in\n{RESULTS_ROOT}/ESA-MT/Context-Based/Csv/\n"
+    f"a downstream step over every wmt_*.csv in\n{RESULTS_ROOT}/ESA-MT/{APPROACH_DIR}/Csv/\n"
     "for this model/config, not something this script computes.\n"
     + "=" * 78
 )

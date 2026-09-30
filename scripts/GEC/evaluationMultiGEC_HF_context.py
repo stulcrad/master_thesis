@@ -49,6 +49,7 @@ from utils.context_matching_utils import (
 )
 from utils.system_prompts import SYSTEM_PROMPT_CONTEXT_BASE_MULTIGEC
 from utils.model_registry import get, resolve_sampling
+from utils.xgrammar_utils import compile_entity_grammar, new_grammar_processor
 
 # -------------------------
 # Model configuration
@@ -72,6 +73,9 @@ parser.add_argument("--max-new-tokens", type=int, default=16384, help="Maximum n
 parser.add_argument("--seeds", type=int, nargs="+", default=[42], help="Seeds to run and average over.")
 parser.add_argument("--shard", type=str, default=None,
                     help="Optional: i/N -- split the dataset into N shards and run only shard i.")
+parser.add_argument("--xgrammar", action="store_true",
+                    help="Grammar-constrained baseline: force the JSON output format and the label set with xgrammar. "
+                         "Reasoning-off only. Results go to Xgrammar/ instead of Context-Based/.")
 
 args = parser.parse_args()
 
@@ -93,6 +97,12 @@ if args.reasoning_effort and args.reasoning_effort not in spec.reasoning_effort_
         f"valid levels for this model: {', '.join(spec.reasoning_effort_levels)}"
     )
 reasoning_model = args.enable_thinking and spec.reasoning
+if args.xgrammar and reasoning_model:
+    raise SystemExit("--xgrammar constrains from the first token, which blocks the reasoning block: use --no-enable-thinking")
+
+# Same script, two baselines: plain prompting, or prompting with the output format forced by a grammar.
+APPROACH_DIR = "Xgrammar" if args.xgrammar else "Context-Based"
+METHOD = "xgrammar_json_schema" if args.xgrammar else "context_hf"
 
 print(f"\nLoading model/tokenizer: {model_name}")
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -139,6 +149,7 @@ MATCHING = "exact"
 RESULTS_ROOT = os.environ.get("RESULTS_ROOT", "/home/stulcrad/master_thesis/Experiment_results_publication")
 
 valid_labels = set(MULTIGEC_LABELS)
+compiled_grammar = compile_entity_grammar(tokenizer, model, valid_labels) if args.xgrammar else None
 #: `M` is a zero-length insertion point, and the only label that ever is. See the module docstring.
 INSERTION_LABELS = {"M"}
 
@@ -176,7 +187,7 @@ print(
 
 model_short = model_name.split("/")[-1]
 pred_fh = open_jsonl_writer(
-    f"{RESULTS_ROOT}/GEC/Context-Based/Predictions/"
+    f"{RESULTS_ROOT}/GEC/{APPROACH_DIR}/Predictions/"
     f"multigec{shard_suffix()}_{model_short}_think_{args.enable_thinking}_{sampling_strategy}"
     f"_context_{MATCHING}_{config_tag()}.jsonl"
 )
@@ -258,8 +269,8 @@ for seed in SEEDS:
             generated, num_output_tokens, generation_seconds = generate_markup(
                 model=model,
                 tokenizer=tokenizer,
-                processor=None,
-                eval_model="unconstrained",
+                processor=new_grammar_processor(compiled_grammar) if args.xgrammar else None,
+                eval_model="constrained" if args.xgrammar else "unconstrained",
                 input_text=input_text,
                 system_prompt=SYSTEM_PROMPT_CONTEXT_BASE_MULTIGEC,
                 max_new_tokens=MAX_NEW_TOKENS,
@@ -343,7 +354,7 @@ for seed in SEEDS:
         log_jsonl(pred_fh, {
             "key": f"{seed}:{idx}",
             "dataset": "multigec",
-            "method": "context_hf",
+            "method": METHOD,
             "matching": MATCHING,
             "model": model_name,
             "reasoning_enabled": reasoning_model,
@@ -493,7 +504,7 @@ elapsed_mean, elapsed_std = agg("elapsed_minute")
 row = {
     "model": model_name,
     "dataset": "multigec",
-    "method": "context_hf",
+    "method": METHOD,
     "matching": MATCHING,
     "reasoning_enabled": reasoning_model,
     "reasoning_effort": args.reasoning_effort if args.reasoning_effort else "n|a",
@@ -561,7 +572,7 @@ for name in ERROR_TYPES:
 results.append(row)
 
 results_df = pd.DataFrame(results)
-results_path = (f"{RESULTS_ROOT}/GEC/Context-Based/Csv/"
+results_path = (f"{RESULTS_ROOT}/GEC/{APPROACH_DIR}/Csv/"
                 f"multigec{shard_suffix()}_{model_name.split('/')[-1]}_{BATCH_SIZE}_BS_{config_tag()}_{sampling_strategy}.csv")
 results_txt_path = results_path.replace("Csv", "Txt").replace(".csv", ".txt")
 

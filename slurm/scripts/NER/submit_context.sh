@@ -93,6 +93,8 @@ DATASET="conll2003"
 TAG="conll2003"
 SUBSET_FLAG=""
 
+# NOTE: inside the chunk loop the estimates assume UNER_CHUNKS=1, i.e. one job carrying the
+# whole subset list. Divide by the chunk count you actually pass.
 # ---------------------------------------------------------------------------
 # CURRENT SCOPE (pending supervisor sign-off on whether this is enough of a baseline):
 # only idx0 gemma-4-E2B-it (ON+OFF), idx2 Qwen3.8-27B (OFF), idx3 gpt-oss-20b (low).
@@ -112,40 +114,72 @@ SUBSET_FLAG=""
 # submit <partition> <gpus> <array_idx> <max_new_tokens> <time> <shards> [extra args...]
 BS=1; if [ "$PILOT" -eq 1 ]; then MAX_EX_FLAG="--max-examples 25"; else MAX_EX_FLAG="--max-examples 1152"; fi
 # submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
+#   -> [Claude est. v2] --time 1:30:00 (currently 4:00:00) | ~1.1h + 25% margin.
+#      Measured: job 11477956_0 (1.15h) at 3 shards = 384 ex/shard.
 # submit amdgpu     2 0 18000 15:00:00  6   --enable-thinking
+#   -> [Claude est. v2] --time 5:30:00 (currently 15:00:00) | ~4.4h + 25% margin.
+#      Measured: job 11477957_0 (4.36h) at 6 shards = 192 ex/shard.
 
-# submit amdgpu     2 3 18000 12:00:00  1   --reasoning-effort low
+submit h200fast     2 3 18000 4:00:00  10   --reasoning-effort low
 
 # submit amdgpu     2 2 18000 8:00:00   1   --no-enable-thinking
+#   -> [Claude est. v2] --time 6:30:00 (currently 8:00:00) | ~5.2h + 25% margin.
+#      Measured: job 11477959_2 (5.20h) at 1 shard = 1152 ex/shard.
 
 
 # submit amdgpufast 1 5 18000 4:00:00   2   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on conll2003. This line is
+#      2 shards = ~576 ex/shard; run one seed first rather than guessing.
 
 
 # 23.2h in one job (Qwen3.8-27B needs 2 GPUs for its single process, so no in-job packing is
 # possible) -- split across 2 jobs by example index instead, each ~11.6h.
 # submit amdgpu     2 2 18000 13:00:00  1   --reasoning-effort low --shard 0/2
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on conll2003. This line is
+#      1 shards, --shard x/2 = ~576 ex/shard; run one seed first rather than guessing.
 # submit amdgpu     2 2 18000 13:00:00  1   --reasoning-effort low --shard 1/2
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on conll2003. This line is
+#      1 shards, --shard x/2 = ~576 ex/shard; run one seed first rather than guessing.
 
 # 40.1h in one job -- split across 3 jobs by example index, each ~13.4h.
 # submit amdgpu     2 3 18000 14:00:00  1   --reasoning-effort medium --shard 0/3
+#   -> [Claude est. v2] --time 27:30:00 (currently 14:00:00) | ~18.1h + 50% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+#      Scaled: timeout 11477958_3 (12.0h = 88.4% of rows) at effort=low, x4 for medium at 1 shard = 1152 ex/shard; this line is 1 shard x --shard x/3 = 384 ex/shard.
 # submit amdgpu     2 3 18000 14:00:00  1   --reasoning-effort medium --shard 1/3
+#   -> [Claude est. v2] --time 27:30:00 (currently 14:00:00) | ~18.1h + 50% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+#      Scaled: timeout 11477958_3 (12.0h = 88.4% of rows) at effort=low, x4 for medium at 1 shard = 1152 ex/shard; this line is 1 shard x --shard x/3 = 384 ex/shard.
 # submit amdgpu     2 3 18000 14:00:00  1   --reasoning-effort medium --shard 2/3
+#   -> [Claude est. v2] --time 27:30:00 (currently 14:00:00) | ~18.1h + 50% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+#      Scaled: timeout 11477958_3 (12.0h = 88.4% of rows) at effort=low, x4 for medium at 1 shard = 1152 ex/shard; this line is 1 shard x --shard x/3 = 384 ex/shard.
 
 
 # submit amdgpu     2 1 18000 4:00:00   1   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for gemma-4-31B-it OFF on conll2003. This line is
+#      1 shards = ~1152 ex/shard; run one seed first rather than guessing.
 
 # submit h200       1 4 18000 18:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] NO TIMING DATA for gpt-oss-120b ON/low on conll2003. This line is
+#      1 shards = ~1152 ex/shard; run one seed first rather than guessing.
 
 BS=64; if [ "$PILOT" -eq 1 ]; then MAX_EX_FLAG="--max-examples 128"; else MAX_EX_FLAG="--max-examples 1152"; fi
 # submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
+#   -> [Claude est. v2] --time 1:00:00 (currently 4:00:00) | ~0.7h + 25% margin.
+#      Measured: job 11477960_0 (0.68h) at 3 shards = 384 ex/shard.
 # submit amdgpu     1 0 18000 8:00:00   3   --enable-thinking
+#   -> [Claude est. v2] --time 2:00:00 (currently 8:00:00) | ~1.5h + 25% margin.
+#      Measured: job 11477961_0 (1.49h) at 3 shards = 384 ex/shard.
 # submit amdgpu     2 3 18000 8:00:00   1   --reasoning-effort low
+#   -> [Claude est. v2] --time 1:30:00 (currently 8:00:00) | ~1.0h + 25% margin.
+#      Measured: job 11477962_3 (1.02h) at 1 shard = 1152 ex/shard.
 
 # submit amdgpu     2 2 18000 6:00:00   1   --no-enable-thinking
+#   -> [Claude est. v2] --time 6:30:00 (currently 6:00:00) | ~5.2h + 25% margin.
+#      Measured: job 11477963_2 (5.16h) at 1 shard = 1152 ex/shard.
 
 
 # submit amdgpufast 1 5 18000 4:00:00   2   --no-enable-thinking
+#   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on conll2003. This line is
+#      2 shards = ~576 ex/shard; run one seed first rather than guessing.
 
 # ---------------------------------------------------------------------------
 # UniversalNER. Cap 250 per treebank, identical to the constrained runs.
@@ -167,30 +201,44 @@ for i in $(seq 0 $((UNER_CHUNKS - 1))); do
 
   BS=1; if [ "$PILOT" -eq 1 ]; then MAX_EX_FLAG="--max-examples 25"; else MAX_EX_FLAG="--max-examples 250"; fi
   # submit amdgpu     2 0 18000 4:00:00   6   --no-enable-thinking
+  #   -> [Claude est. v2] --time 3:00:00 (currently 4:00:00) | ~2.2h + 25% margin.
+  #      Measured: job 11477964_0 (2.20h) at 6 shards = 617 ex/shard.
 
   # Qwen3.8-27B OFF: 1 job, ~10.4h.
-  # submit amdgpu     2 2 18000 12:00:00  1   --no-enable-thinking
+  submit h200fast     2 2 18000 4:00:00  4   --no-enable-thinking
 
   # Reasoning ON: needs UNER_CHUNKS=3 (~12.7h/job). Run separately:
   #   UNER_CHUNKS=3 PILOT=0 bash slurm/scripts/NER/submit_context.sh
   # (then comment out the OFF-arm lines above for that invocation, or accept they
   # split into 3 needless-but-harmless extra jobs).
-  submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking
+  # submit amdgpu     2 0 18000 14:00:00  6   --enable-thinking
+  #   -> [Claude est. v2] --time 42:00:00 (currently 14:00:00) | ~16.7h + 150% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+  #      ROUGH transfer (+/-3x on back-test): no uner run of this arm -- from job 11477957_0 (4.36h) on conll2003, x1.19 (uner/conll2003 ratio on the OFF arm) at 1 shard = 3702 ex/shard; this line is 6 shards = 617 ex/shard.
 
   # gpt-oss-20b low: needs UNER_CHUNKS=3 (~14.9h/job).
-  submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low
+  # submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low
+    # -> [Claude est. v2] --time 138:00:00 (currently 16:00:00) | ~55.0h + 150% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+  #      ROUGH transfer (+/-3x on back-test): no uner run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) (geometric mean of 2 transfers) on conll2003, x1.19 (uner/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 3702 ex/shard.
 
   # gpt-oss-20b medium: needs UNER_CHUNKS=13 (~17.1h/job, 811 GPU-job-h total -- consider skipping).
   # submit amdgpu     2 3 18000 18:00:00  1   --reasoning-effort medium
+  #   -> [Claude est. v2] --time 524:30:00 (currently 18:00:00) | ~209.8h + 150% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+  #      ROUGH transfer (+/-3x on back-test): timeout 11477958_3 (12.0h = 88.4% of rows) at effort=low, x4 for medium on conll2003 x1.2 (no uner run yet) at 1 shard = 1152 ex/shard; this line is 1 shard = 3702 ex/shard.
 
 
   # Qwen3.8-27B low: needs UNER_CHUNKS=4 (~15.8h/job).
   # submit amdgpu     2 2 18000 17:00:00  1   --reasoning-effort low
+  #   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on uner. This line is
+  #      1 shards = ~3702 ex/shard; run one seed first rather than guessing.
   
   # gemma-4-31B-it OFF: 1 job, ~9.3h.
   # submit amdgpu     2 1 18000 11:00:00  1   --no-enable-thinking
+  #   -> [Claude est. v2] NO TIMING DATA for gemma-4-31B-it OFF on uner. This line is
+  #      1 shards = ~3702 ex/shard; run one seed first rather than guessing.
 
   # submit amdgpu     2 5 18000 6:00:00   4   --no-enable-thinking
+  #   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on uner. This line is
+  #      4 shards = ~926 ex/shard; run one seed first rather than guessing.
 done
 
 # ---------------------------------------------------------------------------
@@ -205,11 +253,19 @@ UNER_CHUNK_SPEC="0/1"
 TAG="uner_bs64"
 BS=64; if [ "$PILOT" -eq 1 ]; then MAX_EX_FLAG="--max-examples 25"; else MAX_EX_FLAG="--max-examples 250"; fi
 # submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
+#   -> [Claude est. v2] --time 3:30:00 (currently 4:00:00) | ~2.5h + 25% margin.
+#      Measured: job 11477966_0 (2.47h) at 3 shards = 1234 ex/shard.
 # submit amdgpu     1 0 18000 10:00:00  3   --enable-thinking
+#   -> [Claude est. v2] --time 9:00:00 (currently 10:00:00) | ~6.9h + 25% margin.
+#      Measured: job 11477967_0 (6.89h) at 3 shards = 1234 ex/shard.
 
 # submit amdgpu     2 2 18000 18:00:00  1   --no-enable-thinking
+#   -> [Claude est. v2] --time 45:30:00 (currently 18:00:00) | ~18.1h + 150% margin.  ** over the 24h amdgpu wall: use *long, or more shards/chunks **
+#      ROUGH transfer (+/-3x on back-test): no uner run of this arm -- from job 11477963_2 (5.16h) (geometric mean of 3 transfers) on conll2003, x1.13 (uner/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 3702 ex/shard.
 
 # submit amdgpu     2 3 18000 10:00:00  1   --reasoning-effort low
+#   -> [Claude est. v2] --time 3:30:00 (currently 10:00:00) | ~2.7h + 25% margin.
+#      Measured: job 11477969_3 (2.66h) at 1 shard = 3702 ex/shard.
 
 echo
 echo "PILOT=$PILOT  DRY_RUN=$DRY_RUN  UNER_CHUNKS=$UNER_CHUNKS  seeds='$SEEDS'"

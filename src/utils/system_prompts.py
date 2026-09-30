@@ -15,12 +15,12 @@ it can be words, punctuation marks, special characters, etc.
 Keep the original token only split the text token by token like a tokenizer would, so "I'm" is split into ['I', ''', 'am'], so it is three tokens,
 and ""What is wrong with Robert?" he said", the sentence has tokens: ['"', 'What', 'is', 'Wrong', 'with', 'Robert', '?', '"', 'he', 'said'], so the sentence has 10 tokens.
 Example:
-Input: I'm Radek Stulc, I was born in Prague, and I am currently studying at CTU.
-Tokens: ['I', ''', 'm', 'Radek', 'Stulc', ',', 'I', 'was', 'born', 'in', 'Prague', ',', 'and', 'I', 'am', 'currently', 'studying', 'at', 'CTU', '.']
+Input: I'm John Smith, I was born in Dublin, and I am currently studying at MIT.
+Tokens: ['I', ''', 'm', 'John', 'Smith', ',', 'I', 'was', 'born', 'in', 'Dublin', ',', 'and', 'I', 'am', 'currently', 'studying', 'at', 'MIT', '.']
 Output:
-Radek Stulc - PERSON - 4-5
-Prague - LOCATION - 11
-CTU - ORGANIZATION - 19
+John Smith - PERSON - 4-5
+Dublin - LOCATION - 11
+MIT - ORGANIZATION - 19
 
 Do not overthink, do not add any explanations, do not add anything else, just tokenize the given text, find all named entities and list them with their type and span.
 """

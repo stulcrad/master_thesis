@@ -105,20 +105,25 @@ submit() {
 # too -- it needs its own WMT_CHUNKS=2 invocation (see below), which would also
 # needlessly re-split the cheap OFF arms above if folded into this default run.
 #
-#   idx0 OFF   3.5h (WMT_CHUNKS=1)   | idx0 ON  13.2h (WMT_CHUNKS=1)
-#   idx2 OFF   6.4h (WMT_CHUNKS=1)
-#   idx3 low  15.4h/job (WMT_CHUNKS=2, own invocation)
 # ---------------------------------------------------------------------------
 for i in $(seq 0 $((WMT_CHUNKS - 1))); do
   WMT_CHUNK_SPEC="$i/$WMT_CHUNKS"
   TAG="wmt/chunk$((i + 1))of${WMT_CHUNKS}"
 
   # submit amdgpufast 1 0 18000 4:00:00   3   --no-enable-thinking
+  #   -> [Claude est. v2] --time 1:00:00 (currently 4:00:00) | ~0.7h + 25% margin.
+  #      Measured: job 11481101_0 (0.65h) at 3 shards = 289 ex/shard.
   # submit amdgpu     2 0 18000 15:00:00  6   --enable-thinking
+  #   -> [Claude est. v2] --time 6:30:00 (currently 15:00:00) | ~2.5h + 150% margin.
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from job 11477957_0 (4.36h) on conll2003, x0.75 (wmt/conll2003 ratio on the OFF arm) at 1 shard = 867 ex/shard; this line is 6 shards = 145 ex/shard.
 
   # submit amdgpufast 1 5 18000 4:00:00   2   --no-enable-thinking
+  #   -> [Claude est. v2] NO TIMING DATA for Qwen3-8B OFF on wmt. This line is
+  #      2 shards = ~434 ex/shard; run one seed first rather than guessing.
 
   # submit amdgpu     2 2 18000 8:00:00   1   --no-enable-thinking
+  #   -> [Claude est. v2] --time 8:00:00 (currently 8:00:00) | ~3.1h + 150% margin.
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from job 11477959_2 (5.20h) (geometric mean of 2 transfers) on conll2003, x0.75 (wmt/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 867 ex/shard.
 
   # gpt-oss-20b needs 2 GPUs for its one process, so SHARDS is stuck at 1 -- the
   # fix from Sep 3 lets --chunk still apply at SHARDS=1, so WMT_CHUNKS genuinely
@@ -127,12 +132,20 @@ for i in $(seq 0 $((WMT_CHUNKS - 1))); do
   # WMT_CHUNKS is one knob for the whole script:
   #   WMT_CHUNKS=2 PILOT=0 bash slurm/scripts/ESA-MT/submit_context.sh
   submit amdgpu     2 3 18000 16:00:00  1   --reasoning-effort low
+  #   -> [Claude est. v2] --time 19:30:00 (currently 16:00:00) | ~7.7h + 150% margin.
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from timeout 11477958_3 (12.0h = 88.4% of rows) on conll2003, x0.75 (wmt/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 867 ex/shard.
 
   # gpt-oss-20b medium: not wanted for now, needs WMT_CHUNKS=3 if it is later.
   # submit amdgpu     2 3 18000 17:00:00  1   --reasoning-effort medium
+  #   -> [Claude est. v2] NO TIMING DATA for gpt-oss-20b ON/medium on wmt. This line is
+  #      1 shards = ~867 ex/shard; run one seed first rather than guessing.
 
   # submit amdgpu     2 2 18000 20:00:00  1   --reasoning-effort low
+  #   -> [Claude est. v2] NO TIMING DATA for Qwen3.8-27B ON/low on wmt. This line is
+  #      1 shards = ~867 ex/shard; run one seed first rather than guessing.
   # submit amdgpu     2 1 18000 7:00:00   1   --no-enable-thinking
+  #   -> [Claude est. v2] NO TIMING DATA for gemma-4-31B-it OFF on wmt. This line is
+  #      1 shards = ~867 ex/shard; run one seed first rather than guessing.
 done
 
 echo

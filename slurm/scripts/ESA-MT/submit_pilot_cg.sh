@@ -115,33 +115,41 @@ for i in $(seq 0 $((CHUNKS - 1))); do
 
   # -- gemma-4-E2B (idx 0): 2.3B effective, cheap enough for both arms ------
   # submit h200fast   1 0 18000  4:00:00 9  --no-enable-thinking
-  #   -> [Claude est.] recommend --time 3:00:00 (currently 4:00:00) -- ~2.1h raw, measured 8.6s+8.6s/ex (uncon+constr), 867ex x3 seeds
+  #   -> [Claude est. v2] --time 2:30:00 (currently 4:00:00) | ~1.9h + 25% margin.
+  #      Measured: job 11469349_0 (1.91h) at 9 shards = 97 ex/shard.
   # submit h200       2 0 18000 16:00:00 12 --enable-thinking
-  #   -> [Claude est.] no reasoning-ON data for gemma-4-E2B-it on WMT24 ESA yet -- size cautiously (its CoNLL ON/OFF ratio is ~27x, so do not assume this is close to the OFF-arm line above)
+  #   -> [Claude est. v2] --time 15:30:00 (currently 16:00:00) | ~12.1h + 25% margin.
+  #      Measured: job 11469350_0 (12.11h) at 12 shards = 73 ex/shard.
 
   # -- Rows with a published comparison number: reasoning OFF ---------------
   # submit h200       3 1 18000 9:00:00 3 --no-enable-thinking   # gemma-4-31B, 2x A100-40
-  #   -> [Claude est.] no timing data for gemma-4-31B-it here (NO DATA); size cautiously
+  #   -> [Claude est. v2] --time 8:30:00 (currently 9:00:00) | ~3.2h + 150% margin.
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from job 11437680_1 (3.21h) (geometric mean of 18 transfers) on conll2003, x5.19 (wmt/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 867 ex/shard; this line is 3 shards = 289 ex/shard.
 
   # submit h200fast   1 5 18000 4:00:00 6 --no-enable-thinking   # Qwen3-8B, 1 GPU
-  #   -> [Claude est.] recommend --time 4:00:00 (currently 4:00:00) -- ~2.9h raw, measured 8.7s+9.5s/ex (uncon+constr), 867ex x3 seeds
+  #   -> [Claude est. v2] --time 4:00:00 (currently 4:00:00) | ~2.9h + 25% margin.
+  #      Measured: job 11469352_5 (2.91h) at 6 shards = 145 ex/shard.
 
   # -- Qwen3.8-27B (idx 2): reasoning ON (low) vs OFF -----------------------
   # submit h200       2 2 18000 10:00:00 4 --no-enable-thinking
-  #   -> [Claude est.] no timing data for Qwen3.8-27B here (NO DATA); size cautiously
-  submit h200       3 2 18000 24:00:00  6 --enable-thinking --reasoning-effort low
-  #   -> [Claude est.] no timing data for Qwen3.8-27B here (NO DATA); size cautiously
+  #   -> [Claude est. v2] --time 4:00:00 (currently 10:00:00) | ~2.9h + 25% margin.
+  #      Measured: job 11469353_2 (2.86h) at 4 shards = 217 ex/shard.
+  # submit h200       3 2 18000 24:00:00  6 --enable-thinking --reasoning-effort low
+  #   -> [Claude est. v2] --time 20:30:00 (currently 24:00:00) | ~8.1h + 150% margin.
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from job 11437682_2 (6.17h) (geometric mean of 3 transfers) on conll2003, x2.85 (wmt/conll2003 ratio on the OFF arm) at 1 shard = 867 ex/shard; this line is 6 shards = 145 ex/shard.
 
   # -- gpt-oss (idx 3, 4): effort sweep -------------------------------------
   # submit h200fast   2 3 18000 4:00:00  12   --reasoning-effort low
-  #   -> [Claude est.] recommend --time 4:30:00 (currently 4:00:00) -- ~3.2h raw, measured 20.1s+19.9s/ex (uncon+constr), 867ex x3 seeds  ** EXCEEDS 4h h200fast WALL, consider a *long partition or more shards/chunks **
-  # submit h200       2 3 18000 16:00:00 12   --reasoning-effort medium
-  #   -> [Claude est.] recommend --time 4:30:00 (currently 16:00:00) -- ~3.2h raw, measured 20.1s+19.9s/ex (uncon+constr), 867ex x3 seeds; no exact effort match, borrowed low
+  submit h200       2 3 18000 18:00:00 12   --reasoning-effort medium
+  #   -> [Claude est. v2] --time 20:30:00 (currently 16:00:00) | ~13.3h + 50% margin.
+  #      Scaled: job 11469355_3 (3.33h at effort=low) x4 for medium at 12 shards = 73 ex/shard.
 
   # submit h200       3 4 18000 14:00:00  3  --reasoning-effort low
-  #   -> [Claude est.] no timing data for gpt-oss-120b here (NO DATA); size cautiously
-  submit h200       3 4 18000 20:00:00  3  --reasoning-effort medium
-  #   -> [Claude est.] no timing data for gpt-oss-120b here (NO DATA); size cautiously
+  #   -> [Claude est. v2] --time 22:30:00 (currently 14:00:00) | ~8.9h + 150% margin.
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from job 11437685_4 (12.38h) (geometric mean of 18 transfers) on conll2003, x5.19 (wmt/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 867 ex/shard; this line is 3 shards = 289 ex/shard.
+  # submit h200       3 4 18000 20:00:00  3  --reasoning-effort medium
+  #   -> [Claude est. v2] --time 66:30:00 (currently 20:00:00) | ~26.5h + 150% margin.  ** over the 24h h200 wall: use *long, or more shards/chunks **
+  #      ROUGH transfer (+/-3x on back-test): no wmt run of this arm -- from job 11437686_4 (6.93h) (geometric mean of 5 transfers) on conll2003, x5.19 (wmt/conll2003 ratio on the gemma-4-E2B-it OFF arm) at 1 shard = 867 ex/shard; this line is 3 shards = 289 ex/shard.
 done
 
 echo

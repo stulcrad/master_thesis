@@ -2,7 +2,9 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=92G
-#SBATCH --cpus-per-task=32
+#SBATCH --cpus-per-task=4
+# 4 CPUs is the cluster default for one process. Each SHARDS process keeps ~1 core busy (measured 0.8-0.96), so a
+# job with SHARDS > 3 should pass --cpus-per-task=$((SHARDS + 1)) on the sbatch line.
 #SBATCH --job-name=gec_context_eval
 #SBATCH --output=/home/stulcrad/master_thesis/logs/scripts/out/gec/%x_%N_%a_%A.out
 #SBATCH --error=/home/stulcrad/master_thesis/logs/scripts/err/gec/%x_%N_%a_%A.err

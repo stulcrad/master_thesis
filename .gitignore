@@ -22,6 +22,7 @@ Notebooks/CG_publication/cache/
 # Per-generation prediction files (~700 MB) are kept out of git: they made every clone take hours, and the MultiGEC
 # ones embed Write & Improve 2024 essays, whose licence forbids redistribution. Result CSVs and Txt summaries stay.
 Experiment_results_publication/**/Predictions/
+Experiment_results_publication_full/**/Predictions/
 # Write & Improve 2024 (MultiGEC English): licence-restricted, rebuilt locally by
 # scripts/data/prepare_semin_data.py --with-multigec.
 data/semin/multigec/

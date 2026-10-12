@@ -26,3 +26,4 @@ Experiment_results_publication_full/**/Predictions/
 # Write & Improve 2024 (MultiGEC English): licence-restricted, rebuilt locally by
 # scripts/data/prepare_semin_data.py --with-multigec.
 data/semin/multigec/
+Experiment_results/**/Predictions/

@@ -8,9 +8,6 @@ __pycache__
 *.egg-info/
 acl-style-files/
 paper/
-scripts/analysis
-scripts/publication
-scripts/data
 
 # Third-party checkouts + raw downloads rebuilt by scripts/data/prepare_semin_data.py.
 # The converted JSON under data/semin/{universal_ner,wmt,...} is kept.
